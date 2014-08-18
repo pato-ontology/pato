@@ -1,18 +1,18 @@
 format-version: 1.2
-date: 09:04:2014 12:42
-saved-by: gkoutos
-auto-generated-by: OBO-Edit 2.1-beta19
+date: 26:05:2014 13:22
+saved-by: haendel
+auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
 subsetdef: cell_quality "cell_quality"
 subsetdef: disposition_slim "Disposition slim"
+subsetdef: hpo_slim "Human phenotype slim"
 subsetdef: mpath_slim "Pathology slim"
 subsetdef: relational_slim "Relational slim: types of quality that require an additional entity in order to exist"
 subsetdef: scalar_slim "Scalar slim"
 subsetdef: value_slim "Value slim"
 default-namespace: quality
-namespace-id-rule: * UO:$sequence(7,0,9999999)$
 ontology: pato
 
 [Term]
@@ -336,6 +336,7 @@ id: PATO:0000049
 name: intensity
 def: "A quality inhering in a bearer by virtue of the bearer's possessing or displaying a distinctive feature in type or degree or effect or force." [PATOC:GVG]
 subset: attribute_slim
+subset: hpo_slim
 is_a: PATO:0000068 ! qualitative
 
 [Term]
@@ -383,13 +384,14 @@ is_a: PATO:0001995 ! organismal quality
 
 [Term]
 id: PATO:0000057
-name: occurrence quality
+name: occurrence
 alt_id: PATO:0000156
 alt_id: PATO:0000158
 def: "A quality of a single process inhering in a bearer by virtue of the bearer's occurrence." [PATOC:GVG]
 subset: attribute_slim
+subset: hpo_slim
 synonym: "incidence" EXACT []
-synonym: "temporal" EXACT []
+synonym: "temporal" BROAD []
 is_a: PATO:0002323 ! temporal distribution quality
 
 [Term]
@@ -414,6 +416,7 @@ alt_id: PATO:0000132
 alt_id: PATO:0001565
 def: "A spatial quality inhering in a bearer by virtue of the bearer's exhibiting repetition of placement of its parts." [PATOC:GVG]
 subset: attribute_slim
+subset: hpo_slim
 synonym: "distribution" EXACT []
 synonym: "pattern" RELATED []
 is_a: PATO:0000140 ! position
@@ -1712,7 +1715,7 @@ comment: TODO: the definition is incorrect. See absent.
 subset: value_slim
 synonym: "abolished" EXACT []
 synonym: "incomplete" RELATED []
-is_a: PATO:0000057 ! occurrence quality
+is_a: PATO:0000057 ! occurrence
 is_a: PATO:0002052 ! decreased occurrence
 is_a: PATO:0002324 ! offset quality
 relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
@@ -2315,9 +2318,10 @@ is_obsolete: true
 id: PATO:0000389
 name: acute
 def: "A quality of a process inhering in a bearer by virtue of the bearer's having a sudden onset, sharp rise, and short course." [dictionary:reference]
+subset: hpo_slim
 subset: mpath_slim
 subset: value_slim
-is_a: PATO:0001309 ! duration quality of a process
+is_a: PATO:0001309 ! duration
 
 [Term]
 id: PATO:0000390
@@ -2341,24 +2345,27 @@ is_obsolete: true
 
 [Term]
 id: PATO:0000394
-name: mild
+name: mild intensity
 def: "An intensity which is less than moderate in type or degree or effect or force." [PATOC:GVG]
+subset: hpo_slim
 subset: mpath_slim
 subset: value_slim
 is_a: PATO:0000049 ! intensity
 
 [Term]
 id: PATO:0000395
-name: moderate
+name: moderate intensity
 def: "An intensity which is less than extreme in type or degree or effect or force." [Merriam-Webster:Merriam-Webster]
+subset: hpo_slim
 subset: mpath_slim
 subset: value_slim
 is_a: PATO:0000049 ! intensity
 
 [Term]
 id: PATO:0000396
-name: severe
+name: severe intensity
 def: "An intensity which is extremely bad or unpleasant in type or degree or effect or force." [WordNet:WordNet]
+subset: hpo_slim
 subset: mpath_slim
 subset: value_slim
 is_a: PATO:0000049 ! intensity
@@ -2563,17 +2570,19 @@ is_obsolete: true
 id: PATO:0000427
 name: recurrent
 def: "A quality of a single process inhering in a bearer by virtue of the bearer's occurring or appearing again or repeatedly." [thefreedictionary.com:thefreedictionary.com]
+subset: hpo_slim
 subset: mpath_slim
 subset: value_slim
-is_a: PATO:0000057 ! occurrence quality
+is_a: PATO:0000057 ! occurrence
 
 [Term]
 id: PATO:0000428
 name: sporadic
-def: "A quality of a single process inhering in a bearer by virtue of the bearer's recurring in scattered and irregular or unpredictable instances." [WordNet:WordNet]
+def: "A quality of a single process inhering in a bearer by virtue of the bearer's once or in or a few unpredictable instances." [PATO:MAH, WordNet:WordNet]
+subset: hpo_slim
 subset: mpath_slim
 subset: value_slim
-is_a: PATO:0000057 ! occurrence quality
+is_a: PATO:0000057 ! occurrence
 
 [Term]
 id: PATO:0000430
@@ -2647,7 +2656,7 @@ id: PATO:0000441
 name: repetitive
 def: "A quality of a single process inhering in a bearer by virtue of the bearer's marked by tedious repetition." [thefreedictionary.com:thefreedictionary.com]
 subset: value_slim
-is_a: PATO:0000057 ! occurrence quality
+is_a: PATO:0000057 ! occurrence
 
 [Term]
 id: PATO:0000442
@@ -3013,9 +3022,9 @@ synonym: "increased period" EXACT []
 synonym: "increased time" EXACT []
 synonym: "prolonged period" RELATED []
 synonym: "slow time" RELATED []
-is_a: PATO:0001309 ! duration quality of a process
+is_a: PATO:0001309 ! duration
 is_a: PATO:0002304 ! increased process quality
-intersection_of: PATO:0001309 ! duration quality of a process
+intersection_of: PATO:0001309 ! duration
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 
 [Term]
@@ -3029,9 +3038,9 @@ synonym: "decreased time" EXACT []
 synonym: "fast time" RELATED []
 synonym: "low period" EXACT []
 synonym: "shortened period" EXACT []
-is_a: PATO:0001309 ! duration quality of a process
+is_a: PATO:0001309 ! duration
 is_a: PATO:0002302 ! decreased process quality
-intersection_of: PATO:0001309 ! duration quality of a process
+intersection_of: PATO:0001309 ! duration
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 
 [Term]
@@ -3869,11 +3878,13 @@ is_a: PATO:0000140 ! position
 
 [Term]
 id: PATO:0000627
-name: localised
+name: localized
 def: "A spatial pattern quality inhering in a bearer by virtue of the bearer's being confined or restricted to a particular location." [WordNet:WordNet]
+subset: hpo_slim
 subset: mpath_slim
 subset: value_slim
 synonym: "focal" EXACT []
+synonym: "localised" EXACT []
 is_a: PATO:0000060 ! spatial pattern
 
 [Term]
@@ -4032,6 +4043,7 @@ subset: value_slim
 synonym: "hypoplasia" EXACT []
 synonym: "underdeveloped" RELATED []
 is_a: PATO:0002290 ! aplastic/hypoplastic
+is_a: PATO:0000587 ! decreased size
 
 [Term]
 id: PATO:0000646
@@ -4245,7 +4257,7 @@ id: PATO:0000688
 name: asynchronous
 def: "A quality of a single process inhering in a bearer by virtue of the bearer's not occurring or existing at the same time or having the same period or phase." [WordNet:WordNet]
 subset: value_slim
-is_a: PATO:0000057 ! occurrence quality
+is_a: PATO:0000057 ! occurrence
 
 [Term]
 id: PATO:0000689
@@ -4254,7 +4266,7 @@ alt_id: PATO:0000429
 def: "A quality of a single process inhering in a bearer by virtue of the bearer's being uninterrupted in time, sequence, substance, or extent." [thefreedictionary.com:thefreedictionary.com]
 subset: value_slim
 synonym: "uninterrupted" EXACT []
-is_a: PATO:0000057 ! occurrence quality
+is_a: PATO:0000057 ! occurrence
 
 [Term]
 id: PATO:0000690
@@ -4264,14 +4276,14 @@ def: "A quality of a single process inhering in a bearer by virtue of the bearer
 subset: value_slim
 synonym: "intermittent" RELATED []
 synonym: "interrupted" EXACT []
-is_a: PATO:0000057 ! occurrence quality
+is_a: PATO:0000057 ! occurrence
 
 [Term]
 id: PATO:0000692
 name: heterochronic
 def: "A quality of a single process inhering in a bearer by virtue of the bearer's origin or development at an unusual time or out of the regular sequence." [answers.com:answers.com]
 subset: value_slim
-is_a: PATO:0000057 ! occurrence quality
+is_a: PATO:0000057 ! occurrence
 
 [Term]
 id: PATO:0000693
@@ -4295,7 +4307,7 @@ id: PATO:0000695
 name: synchronous
 def: "A quality of a single process inhering in a bearer by virtue of the bearer's occurring or existing at the same time or having the same period or phase." [PATOC:GVG]
 subset: value_slim
-is_a: PATO:0000057 ! occurrence quality
+is_a: PATO:0000057 ! occurrence
 
 [Term]
 id: PATO:0000696
@@ -6061,7 +6073,7 @@ id: PATO:0000999
 name: alternation
 def: "A quality of a single process inhering in a bearer by virtue of the bearer's successive change from one thing or state to another and back again." [WordNet:WordNet]
 subset: value_slim
-is_a: PATO:0000057 ! occurrence quality
+is_a: PATO:0000057 ! occurrence
 
 [Term]
 id: PATO:0001000
@@ -8013,10 +8025,11 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 
 [Term]
 id: PATO:0001309
-name: duration quality of a process
+name: duration
 alt_id: PATO:0000081
 def: "A process quality inhering in a bearer by virtue of the bearer's magnitude of the temporal extent between the starting and ending point." [PATOC:mellybelly]
 subset: attribute_slim
+subset: hpo_slim
 synonym: "period" EXACT []
 synonym: "time" RELATED []
 is_a: PATO:0002062 ! physical quality of a process
@@ -8027,7 +8040,7 @@ name: duration of temperature
 def: "A duration quality of a process inhering in a bearer by virtue of the bearer's duration of exhibition of thermal energy." [PATOC:GVG]
 comment: TODO: obsolete? I don't know what this means.
 subset: attribute_slim
-is_a: PATO:0001309 ! duration quality of a process
+is_a: PATO:0001309 ! duration
 
 [Term]
 id: PATO:0001311
@@ -8881,14 +8894,14 @@ id: PATO:0001416
 name: regular duration
 def: "A duration which has regular start and/or end times." [PATOC:GVG]
 subset: value_slim
-is_a: PATO:0001309 ! duration quality of a process
+is_a: PATO:0001309 ! duration
 
 [Term]
 id: PATO:0001417
 name: irregular duration
 def: "A duration quality of a process inhering in a bearer by virtue of the bearer's duration which has irregular start and/or end times." [PATOC:melissa]
 subset: value_slim
-is_a: PATO:0001309 ! duration quality of a process
+is_a: PATO:0001309 ! duration
 
 [Term]
 id: PATO:0001418
@@ -9627,7 +9640,7 @@ name: disrupted
 def: "A quality of a single process inhering in a bearer by virtue of the bearer's being interrupted of its normal course." [PATOC:GVG]
 subset: mpath_slim
 subset: value_slim
-is_a: PATO:0000057 ! occurrence quality
+is_a: PATO:0000057 ! occurrence
 
 [Term]
 id: PATO:0001509
@@ -12329,9 +12342,10 @@ intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 id: PATO:0001818
 name: progressive
 def: "A quality of a single process inhering in a bearer by virtue of the bearer's increasing over time." [PATOC:GVG]
+subset: hpo_slim
 subset: mpath_slim
 subset: value_slim
-is_a: PATO:0000057 ! occurrence quality
+is_a: PATO:0000057 ! occurrence
 
 [Term]
 id: PATO:0001819
@@ -12522,8 +12536,9 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 
 [Term]
 id: PATO:0001841
-name: remittent
+name: remittent intensity
 def: "An intensity which is characterized by temporary abatement in severity." [answers.com:answers.com]
+subset: hpo_slim
 subset: mpath_slim
 subset: value_slim
 is_a: PATO:0000049 ! intensity
@@ -12725,9 +12740,10 @@ is_a: PATO:0000274 ! fertility
 id: PATO:0001863
 name: chronic
 def: "A duration quality of a process inhering in a bearer by virtue of the bearer's having slow progressive course of indefinite duration." [PATOC:cjm]
+subset: hpo_slim
 subset: mpath_slim
 subset: value_slim
-is_a: PATO:0001309 ! duration quality of a process
+is_a: PATO:0001309 ! duration
 
 [Term]
 id: PATO:0001865
@@ -13739,7 +13755,8 @@ is_a: PATO:0001591 ! curvature
 id: PATO:0001990
 name: duration of disease
 def: "A duration quality of a process inhering in a disease by virtue of the bearer's duration of an impairment of health or of a condition of abnormal functioning." [PATOC:GVG]
-is_a: PATO:0001309 ! duration quality of a process
+comment: MAH: I think this term should be obsoleted. Is it used?
+is_a: PATO:0001309 ! duration
 
 [Term]
 id: PATO:0001991
@@ -14025,9 +14042,10 @@ is_a: PATO:0001053 ! convex angle to
 id: PATO:0002026
 name: non-progressive
 def: "A quality of a single process inhering in a bearer by virtue of the bearer's not increasing over time." [PATOC:GVG]
+subset: hpo_slim
 subset: mpath_slim
 subset: value_slim
-is_a: PATO:0000057 ! occurrence quality
+is_a: PATO:0000057 ! occurrence
 created_by: george gkoutos
 creation_date: 2008-12-18T12:49:19Z
 
@@ -14283,9 +14301,9 @@ id: PATO:0002051
 name: increased occurrence
 def: "An occurrence which is relatively high." [PATOC:GVG]
 synonym: "increased incidence" EXACT []
-is_a: PATO:0000057 ! occurrence quality
+is_a: PATO:0000057 ! occurrence
 is_a: PATO:0002304 ! increased process quality
-intersection_of: PATO:0000057 ! occurrence quality
+intersection_of: PATO:0000057 ! occurrence
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 created_by: George Gkoutos
 creation_date: 2009-03-26T11:10:11Z
@@ -14295,9 +14313,9 @@ id: PATO:0002052
 name: decreased occurrence
 def: "An occurrence which is relatively low." [PATOC:GVG]
 synonym: "decreased incidence" EXACT []
-is_a: PATO:0000057 ! occurrence quality
+is_a: PATO:0000057 ! occurrence
 is_a: PATO:0002302 ! decreased process quality
-intersection_of: PATO:0000057 ! occurrence quality
+intersection_of: PATO:0000057 ! occurrence
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 created_by: George Gkoutos
 creation_date: 2009-03-26T11:12:35Z
@@ -14678,9 +14696,10 @@ creation_date: 2009-10-05T11:25:52Z
 id: PATO:0002091
 name: subacute
 def: "A quality of a single process inhering in a bearer by virtue of the bearer's having an onset and time course between acute and chronic." [PATOC:GVG]
+subset: hpo_slim
 subset: mpath_slim
 subset: value_slim
-is_a: PATO:0001309 ! duration quality of a process
+is_a: PATO:0001309 ! duration
 created_by: george
 creation_date: 2009-10-05T11:31:35Z
 
@@ -16686,7 +16705,7 @@ creation_date: 2011-04-04T08:44:10Z
 [Term]
 id: PATO:0002290
 name: aplastic/hypoplastic
-is_a: PATO:0000587 ! decreased size
+is_a: PATO:0001241 ! physical object quality
 created_by: George Gkoutos
 creation_date: 2011-04-18T05:11:33Z
 
@@ -17775,8 +17794,10 @@ creation_date: 2012-12-17T10:40:18Z
 id: PATO:0002403
 name: generalized
 def: "Affecting all regions without specificity of distribution." [PATOC:MPTH]
+subset: hpo_slim
 subset: mpath_slim
 subset: value_slim
+synonym: "generalised" EXACT []
 is_a: PATO:0000060 ! spatial pattern
 created_by: gkoutos
 creation_date: 2012-12-17T10:41:37Z
@@ -17893,7 +17914,7 @@ name: focally extensive
 def: "Single lesion with expansion into surrounding tissue." [PATOC:MPATH]
 subset: mpath_slim
 subset: value_slim
-is_a: PATO:0000627 ! localised
+is_a: PATO:0000627 ! localized
 created_by: gkoutos
 creation_date: 2012-12-17T11:01:31Z
 
@@ -18967,6 +18988,51 @@ synonym: "postero-distal orientation" EXACT []
 is_a: PATO:0000133 ! orientation
 created_by: segerdel
 creation_date: 2014-03-11T11:29:22Z
+
+[Term]
+id: PATO:0002528
+name: borderline intensity
+def: "An intensity which is borderline in it its effect or force as compared to baseline or normal." []
+subset: hpo_slim
+is_a: PATO:0000049 ! intensity
+created_by: haendel
+creation_date: 2014-05-26T06:42:21Z
+
+[Term]
+id: PATO:0002529
+name: profound intensity
+def: "An intensity which is characterized by being very severe." [PATO:MAH]
+subset: hpo_slim
+is_a: PATO:0000049 ! intensity
+created_by: haendel
+creation_date: 2014-05-26T06:44:11Z
+
+[Term]
+id: PATO:0002530
+name: episodic
+def: "An occurrence quality inhering in a bearer by virtue of the bearer's having a course that occurs occasionally." [PATO:MAH]
+subset: hpo_slim
+is_a: PATO:0000057 ! occurrence
+created_by: haendel
+creation_date: 2014-05-26T06:50:16Z
+
+[Term]
+id: PATO:0002531
+name: refractory
+def: "An occurrence of a process during which time there is an inability to change the course, extent, or repetition of the process." [PATO:MAH]
+subset: hpo_slim
+is_a: PATO:0000057 ! occurrence
+created_by: haendel
+creation_date: 2014-05-26T13:09:29Z
+
+[Term]
+id: PATO:0002532
+name: secondary
+def: "A quality in which the effect or outcome is not primary or the focus of the observation." [PATO:MAH]
+subset: hpo_slim
+is_a: PATO:0000068 ! qualitative
+created_by: haendel
+creation_date: 2014-05-26T13:17:45Z
 
 [Typedef]
 id: correlates_with
