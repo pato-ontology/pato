@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 26:05:2014 13:22
-saved-by: haendel
+date: 09:09:2014 13:05
+saved-by: wasila.dahdul
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
@@ -2820,6 +2820,7 @@ name: inconspicuous
 def: "A quality inhering in a bearer by virtue of not being clearly visible." [thefreedictionary:thefreedictionary]
 subset: mpath_slim
 subset: value_slim
+synonym: "faint" RELATED []
 is_a: PATO:0001998 ! conspicuousness
 
 [Term]
@@ -3574,6 +3575,7 @@ name: decreased size
 def: "A size quality which is relatively low." [PATOC:GVG]
 subset: value_slim
 synonym: "hypoplasia" NARROW []
+synonym: "reduced" RELATED []
 synonym: "small" RELATED []
 synonym: "tiny" RELATED []
 synonym: "underdeveloped" NARROW []
@@ -4042,8 +4044,8 @@ subset: mpath_slim
 subset: value_slim
 synonym: "hypoplasia" EXACT []
 synonym: "underdeveloped" RELATED []
-is_a: PATO:0002290 ! aplastic/hypoplastic
 is_a: PATO:0000587 ! decreased size
+is_a: PATO:0002290 ! aplastic/hypoplastic
 
 [Term]
 id: PATO:0000646
@@ -10788,6 +10790,7 @@ name: protruding out of
 def: "A quality inhering into a bearer by virtue of the bearer's extending out above or beyond its surface or boundary and outwards in relation to the physical space occupied by another entity." [PATOC:nc]
 subset: relational_slim
 subset: value_slim
+synonym: "exits through" RELATED []
 synonym: "exposed" RELATED []
 synonym: "extruding from" EXACT []
 is_a: PATO:0001598 ! protruding
@@ -18718,7 +18721,7 @@ id: PATO:0002499
 name: posterior orientation
 def: "An orientation quality inhering in a bearer by virtue of the bearer having a position that is directed posteriorly." [PATOC:WD]
 subset: value_slim
-synonym: "<new synonym>" EXACT []
+synonym: "posteriorly directed" EXACT []
 is_a: PATO:0000133 ! orientation
 created_by: gkoutos
 creation_date: 2013-10-10T05:18:21Z
@@ -18992,37 +18995,37 @@ creation_date: 2014-03-11T11:29:22Z
 [Term]
 id: PATO:0002528
 name: obsolete borderline intensity
+comment: obsoleted because the ID was accidentally reused
 is_obsolete: true
 replaced_by: PATO:0002628
-comment: obsoleted because the ID was accidentally reused
 
 [Term]
 id: PATO:0002529
 name: obsolete profound intensity
+comment: obsoleted because the ID was accidentally reused
 is_obsolete: true
 replaced_by: PATO:0002629
-comment: obsoleted because the ID was accidentally reused
 
 [Term]
 id: PATO:0002530
 name: obsolete episodic
+comment: obsoleted because the ID was accidentally reused
 is_obsolete: true
 replaced_by: PATO:0002630
-comment: obsoleted because the ID was accidentally reused
 
 [Term]
 id: PATO:0002531
 name: obsolete refractory
+comment: obsoleted because the ID was accidentally reused
 is_obsolete: true
 replaced_by: PATO:0002631
-comment: obsoleted because the ID was accidentally reused
 
 [Term]
 id: PATO:0002532
 name: obsolete secondary
+comment: obsoleted because the ID was accidentally reused
 is_obsolete: true
 replaced_by: PATO:0002632
-comment: obsoleted because the ID was accidentally reused
 
 [Term]
 id: PATO:0002533
@@ -19144,6 +19147,101 @@ is_a: PATO:0000068 ! qualitative
 created_by: haendel
 creation_date: 2014-05-26T13:17:45Z
 
+[Term]
+id: PATO:0005000
+name: hemispheroid
+def: "A 3-D shape that is half of a sphere." [PATOC:WD]
+subset: value_slim
+is_a: PATO:0002007 ! convex 3-D shape
+created_by: wasila.dahdul
+creation_date: 2014-09-09T12:25:08Z
+
+[Term]
+id: PATO:0005001
+name: variability of count
+def: "A variability quality inhering in the bearer by virtue of the bearer having a variable number or count of an entity." [PATOC:WD]
+subset: value_slim
+synonym: "variable number" RELATED []
+is_a: PATO:0001303 ! variability
+relationship: towards PATO:0000070 ! count
+created_by: wasila.dahdul
+creation_date: 2014-09-09T12:27:33Z
+
+[Term]
+id: PATO:0005002
+name: pear shaped
+def: "Having the shape of a pear; tapering near the top and bulging toward the base or bottom. From thefreedictionary.com" [PATOC:WD]
+subset: value_slim
+is_a: PATO:0002007 ! convex 3-D shape
+created_by: wasila.dahdul
+creation_date: 2014-09-09T12:30:02Z
+
+[Term]
+id: PATO:0005003
+name: paddle shaped
+def: "A quality inhering in a bearer by virtue of the bearer's resembling the form of a paddle." [PATOC:WD]
+subset: value_slim
+is_a: PATO:0000052 ! shape
+created_by: wasila.dahdul
+creation_date: 2014-09-09T12:34:45Z
+
+[Term]
+id: PATO:0005004
+name: subelliptical
+def: "A shape that is almost an ellipse." [PATOC:WD]
+subset: value_slim
+is_a: PATO:0002318 ! superelliptic
+created_by: wasila.dahdul
+creation_date: 2014-09-09T12:36:15Z
+
+[Term]
+id: PATO:0005005
+name: radiating
+def: "Shape quality inhering in a bearer expanding outward, or having parts expanding outward, from a center point." [PATOC:WD]
+subset: value_slim
+is_a: PATO:0000052 ! shape
+created_by: wasila.dahdul
+creation_date: 2014-09-09T12:37:27Z
+
+[Term]
+id: PATO:0005006
+name: differentiated from
+def: "A morphology quality inhering in a bearer by virtue of the bearer's being morphologically distinguishable from another entity." [PATOC:WD]
+subset: relational_slim
+subset: value_slim
+synonym: "distinct from" EXACT []
+is_a: PATO:0000051 ! morphology
+created_by: wasila.dahdul
+creation_date: 2014-09-09T12:40:57Z
+
+[Term]
+id: PATO:0005007
+name: hypsodont
+def: "A 3-D shape inhering in a bearer by virtue of the bearer's having dentition characterized by high-crowned teeth and enamel which extends far past the gum line, which provides extra material for wear and tear." [DOI:10.1111/j.1469-185X.2011.00176.x]
+comment: Need to include axiom: hypsodont inheres_in some ('tooth crown' and bearer_of 'increased \nheight').
+subset: value_slim
+is_a: PATO:0002266 ! 3-D shape
+created_by: wasila.dahdul
+creation_date: 2014-09-09T12:58:01Z
+
+[Term]
+id: PATO:0005008
+name: brachydont
+def: "A 3-D shape inhering in a bearer by virtue of the bearer's having dentition characterized by low-crowned teeth. Human teeth are brachydont." [DOI:10.1111/j.1469-185X.2011.00176.x]
+comment: Need to include axiom: brachydont inheres_in some ('tooth crown' and bearer_of 'decreased \nheight').
+subset: value_slim
+is_a: PATO:0002266 ! 3-D shape
+created_by: wasila.dahdul
+creation_date: 2014-09-09T12:59:35Z
+
+[Term]
+id: PATO:0005009
+name: molariform
+def: "A 3-D shape inhering in a bearer by virtue of the bearer's having an entity in the form of a molar tooth." [PATOC:WD]
+subset: value_slim
+is_a: PATO:0002266 ! 3-D shape
+created_by: wasila.dahdul
+creation_date: 2014-09-09T13:03:00Z
 
 [Typedef]
 id: correlates_with
