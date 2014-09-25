@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 25:09:2014 15:08
+date: 25:09:2014 15:41
 saved-by: wasila.dahdul
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -10692,6 +10692,7 @@ name: aggregated
 def: "A spatial pattern inhering in a bearer by virtue of the bearer's being gathered or tending to gather into a mass or whole." [WordNet:WordNet]
 subset: mpath_slim
 subset: value_slim
+synonym: "clumped" EXACT []
 synonym: "clustered" EXACT []
 is_a: PATO:0000330 ! irregular spatial pattern
 disjoint_from: PATO:0001566 ! distributed
@@ -11916,9 +11917,11 @@ is_a: PATO:0000169 ! viability
 id: PATO:0001772
 name: surrounding
 def: "A spatial quality inhering in a bearer by virtue of the bearer's being extended on all sides of another entity simultaneously." [thefreedictionary.com:thefreedictionary.com]
+comment: Nedd to add reciprocal of relationship to 'surrounded by' PATO:0005016.
 subset: relational_slim
 subset: value_slim
 synonym: "encircling" EXACT []
+synonym: "enclosing" EXACT []
 is_a: PATO:0000140 ! position
 
 [Term]
@@ -19262,6 +19265,54 @@ subset: value_slim
 is_a: PATO:0000140 ! position
 created_by: wasila.dahdul
 creation_date: 2014-09-25T15:07:34Z
+
+[Term]
+id: PATO:0005012
+name: complete structure
+def: "A structural quality inhering in a bearer by virtue of the bearer being fully formed compared to entities lacking parts." [PATOC:WD]
+subset: value_slim
+is_a: PATO:0000141 ! structure
+created_by: wasila.dahdul
+creation_date: 2014-09-25T15:11:47Z
+
+[Term]
+id: PATO:0005013
+name: incomplete structure
+def: "A structural quality inhering in a bearer by virtue of the bearer's lacking parts or having a reduced form compared to fully formed entities." [PATOC:WD]
+subset: value_slim
+is_a: PATO:0000141 ! structure
+created_by: wasila.dahdul
+creation_date: 2014-09-25T15:12:35Z
+
+[Term]
+id: PATO:0005014
+name: subspherical
+def: "A spheroid shape quality inhering in a bearer by virtue of the bearer's being nearly, but not perfectly, spherical." [PATOC:WD]
+subset: value_slim
+is_a: PATO:0001865 ! spheroid
+created_by: wasila.dahdul
+creation_date: 2014-09-25T15:16:25Z
+
+[Term]
+id: PATO:0005015
+name: tapered size
+def: "A size quality inhering in an entity or set of entities in which size increases or decreases along the extent of the entity or set." [PATOC:WD]
+subset: value_slim
+synonym: "gradient of size" EXACT []
+is_a: PATO:0000117 ! size
+created_by: wasila.dahdul
+creation_date: 2014-09-25T15:17:51Z
+
+[Term]
+id: PATO:0005016
+name: surrounded by
+def: "A positional quality inhering in a bearer by virtue of the bearer's being enclosed on all sides by another entity." [PATOC:WD]
+subset: relational_slim
+subset: value_slim
+synonym: "enclosed by" EXACT []
+is_a: PATO:0000140 ! position
+created_by: wasila.dahdul
+creation_date: 2014-09-25T15:20:55Z
 
 [Typedef]
 id: correlates_with
