@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 09:09:2014 13:05
+date: 25:09:2014 15:08
 saved-by: wasila.dahdul
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -182,6 +182,7 @@ def: "A single physical entity inhering in an bearer by virtue of the bearer's q
 comment: For example calcium composition (which may inhere in bone), haemoglobin composition (which may inhere in blood).
 subset: attribute_slim
 subset: scalar_slim
+synonym: "composed of" EXACT []
 synonym: "compositionality" EXACT []
 synonym: "content" EXACT []
 synonym: "structure, composition" EXACT []
@@ -19242,6 +19243,25 @@ subset: value_slim
 is_a: PATO:0002266 ! 3-D shape
 created_by: wasila.dahdul
 creation_date: 2014-09-09T13:03:00Z
+
+[Term]
+id: PATO:0005010
+name: plumose
+def: "A branched quality inhering in a bearer by virtue of the bearer's having many fine filaments or branches that give a feathery appearance: for example, resembling a feather." [www.oxforddictionaries.com:http\://www.oxforddictionaries.com/us/definition/american_english/plumose]
+subset: value_slim
+is_a: PATO:0000402 ! branched
+created_by: wasila.dahdul
+creation_date: 2014-09-25T15:03:17Z
+
+[Term]
+id: PATO:0005011
+name: continuous with
+def: "A positional quality inhering in a bearer by virtue of the bearer possessing an uninterrupted or unbroken connection or spatial distribution relative to the position of another entity." [PATOC:WD]
+subset: relational_slim
+subset: value_slim
+is_a: PATO:0000140 ! position
+created_by: wasila.dahdul
+creation_date: 2014-09-25T15:07:34Z
 
 [Typedef]
 id: correlates_with
