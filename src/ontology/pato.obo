@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 25:09:2014 15:41
+date: 02:10:2014 12:02
 saved-by: wasila.dahdul
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: abnormal_slim "Abnormal/normal slim"
@@ -12997,6 +12997,7 @@ def: "A concave 3-D shape quality inhering in a bearer by virtue of the bearer's
 subset: cell_quality
 subset: value_slim
 synonym: "trifurcate" EXACT []
+is_a: PATO:0000402 ! branched
 is_a: PATO:0002008 ! concave 3-D shape
 
 [Term]
@@ -19313,6 +19314,33 @@ synonym: "enclosed by" EXACT []
 is_a: PATO:0000140 ! position
 created_by: wasila.dahdul
 creation_date: 2014-09-25T15:20:55Z
+
+[Term]
+id: PATO:0005017
+name: labiolingually compressed
+def: "A quality inhering in a bearer by virtue of the bearer's being compressed from the side facing the lips to the side facing the tongue." [PATOC:WD]
+subset: value_slim
+is_a: PATO:0002254 ! flattened
+created_by: wasila.dahdul
+creation_date: 2014-10-02T11:52:09Z
+
+[Term]
+id: PATO:0005018
+name: mesiodistally compressed
+def: "A quality inhering in a bearer by virtue of the bearer's being compressed from the side facing the midline of the jaw to the side opposite the midline." [PATOC:WD]
+subset: value_slim
+is_a: PATO:0002254 ! flattened
+created_by: wasila.dahdul
+creation_date: 2014-10-02T11:53:52Z
+
+[Term]
+id: PATO:0005019
+name: curved lingually
+def: "A curvature quality inhering in a bearer by virtue of the bearer's being curved towards the tongue." [PATOC:WD]
+subset: value_slim
+is_a: PATO:0000406 ! curved
+created_by: wasila.dahdul
+creation_date: 2014-10-02T12:01:16Z
 
 [Typedef]
 id: correlates_with
