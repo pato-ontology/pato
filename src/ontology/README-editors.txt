@@ -2,7 +2,7 @@ PRE-EDIT CHECKLIST
 ------------------
 
 Do you have an ID range in the idranges file (caro-idranges.owl),
-in this directory). If not, get one from the head curator.
+in this directory). If not, get one from the head curator. 
 
 Ensure that you have Protege configured to generate new URIs in your
 own range. Note that if you edit multiple files, you need to check this every time to ensure that the proper settings are in place. CARO URIs should look like this:
