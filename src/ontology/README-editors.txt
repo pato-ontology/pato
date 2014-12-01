@@ -1,175 +1,88 @@
-PRE-EDIT CHECKLIST
-------------------
+These notes are for the EDITORS of pato
 
-Do you have an ID range in the idranges file (caro-idranges.owl),
-in this directory). If not, get one from the head curator.
+## Editors Version
 
-Ensure that you have Protege configured to generate new URIs in your
-own range. Note that if you edit multiple files, you need to check this every time to ensure that the proper settings are in place. CARO URIs should look like this:
-http://purl.obolibrary.org/obo/CARO_0000473
-Do a test to ensure that the ID generator is working properly.
+The editors version is pato-edit.obo
 
-A word of caution about protege auto-id functionality. Protege will allow reuse of a URI in your range according to the numbering scheme. It will keep track of what you did during last session, but *does not check* for use of the URI before assigning it (doh!!). Therefore, if you added any IDs in your range prior to the switch to OWL, protege will not know not to start from the beginning. Some tips to check to see where you are in your range: Go to the view menu, click "render by label (rdf:id)", and then use the search box to search for things starting within your range, such as CARO_0007 for Melissa's range. If you have IDs in your range already, you may wish to set Protege at the next unused ID in your range rather than the beginning of the range. It should then remember it for next time, though you should double check.
+** DO NOT EDIT pato.obo OR pato.owl **
 
-(You can ignore this if you do not intend to create new classes)
+pato.obo is the release version
 
-Get Jim's awesome obsolescence plugin here:
-https://github.com/balhoff/obo-actions/downloads
-To add plugins to Protege, navigate to the application, open the application contents, navigate to contents/Resources/Java/plugins and put the jar file in there. Your plugin should be installed next time you start protege.
+## ID Ranges
 
-Get Elk here:
-http://code.google.com/p/elk-reasoner/downloads/list
-perform same operation as above to install.
+TODO - these are not set up
 
-Setting up: Obtain ontology from svn (one time only):
+These are stored in the file
 
-See instructions here:
-https://code.google.com/p/cell-ontology/source/checkout
+  pato-idranges.owl
 
-  svn checkout https://cell-ontology.googlecode.com/svn/trunk/src/ontology 	cell-ontology --username <USERNAME>
+** ONLY USE IDs WITHIN YOUR RANGE!! **
 
+## Setting ID ranges in OBO-Edit
 
-GETTING STARTED
----------------
+ In the Metadata menu, select the ID manager option. You can set the ID range of any 
+ profile you create here by clicking on the settings icon (cog wheels) next to the profile 
+ name. In the window that appears, you can set the ID range by editing the default rule: 
+ "ID:$sequence(<number of digits>,<minimum of range>,<maximum of range>)$"
+ Thus, "PATO:$sequence(8,2000000,2999999)$" will set a range of 8 digit IDs from 200000 
+ to 2999999.  
+ 
+## Git Quick Guide
 
-TODO - locking?
+TODO add instructions here
 
-svn update
+## Release Manager notes
 
-Then, open the file cl-edit.owl in Protege
+to release:
 
-NOTE: If you get an error in the opening that says "org.xml.sax.SAXParseException: XML document structures must start and end within the same entity." this is an error in reading files from the web. Don't worry about it, just simply wait a few minutes and try again with a fresh opening of Protege.
+    cd src/ontology
+    make
 
-Switch on the Elk reasoner (see how to get plugins above). If you are making changes, be sure to synchronize the reasoner.
+If this looks good:
 
-Edit the ontology in protege:
+    git commit -a
 
-Find parent term in Protégé by searching (at top of screen)
-Double check that term is not already there
-Add subclass
-Add label (URI should be auto-generated)
-Under annotations, add definition, click OK
-Annotation on definition (see below)
-database_cross_reference
-GOC:initials
-Under annotations, add synonyms, if necessary (has_exact_synonym, etc)
+And type a brief description of the release in the editor window
 
-Save
+# How to release the ontology
 
-**do not edit any other files!!!**
+The -edit file is generally not visible to the public (of course they
+can find it in github if they try). The editors are free to make
+changes they are not yet comfortable releasing.
 
-Commit your changes
+When ready for release, the process is as follows.
 
-  svn commit -m "COMMIT MESSAGE" cl-edit.owl
+First check the file is valid - see the Jenkins job below. Additional
+spot checks would not do any harm.
 
+The pato-edit.obo file should be copied to
 
-OBSOLETING
----------------
+ * ftp://ftp.hgu.mrc.ac.uk/pub/MouseAtlas/Anatomy/PATO.obo
 
-1. Find the  class you wish to obsolete, and compare it with the class you wish to replace (or consider) it with. You need to check that both the text definition and the logical axioms have the same intent, and that nothing desired is lost in the obsolescence.
+JAX users will download from here.
 
-2. Copy any subClass axioms that you intend to keep for historical purposes (e.g. those that are not replicated on the target class) into a comment annotation property. If you do this, please ensure to add to any exisiting comments rather than adding a new COMMENT. There can be only one COMMENT in obo format and Jenkins will throw an error. If there are equivalence axioms, you may wish to consult with an expert to make sure the axioms are retained properly in the file.
+In addition, this will be picked up by the central obolibrary job
+within 24hrs, which will produce two files:
 
-3. Go to the obsolescenc plugin by going to the edit menu and scroll to the bottom, to "Make Entity Obsolete". This will perform the following for you:
-	Relabel the class as "obsolete your old term label here". 
-	Add an annotation property, "deprecated", value "true", of type "boolean". 
-	Delete subClassOf axioms
-You should see the class crossed out after you do this. 
+ 1. http://purl.obolibrary.org/obo/pato.obo
+ 2. http://purl.obolibrary.org/obo/pato.owl
 
-4. Add an annotation property "term replaced by". Navigate to the term by clicking on the "entity IRI" and either browse or control F to find the term that is replacing the one being obsoleted.
+This is used by obolibrary users and OWL people
 
-6. You may wish to add a comment regarding the reason for obsolescence or so as to include reference to why the term was replaced with whatever is indicated. Again, do not add more than one comment annotation on a class.
-
-ABOUT DEFINITION CITATIONS AND DBXREFS
----------------
-In order to properly display definition sources, you should add citations to the end of the definition text (make sure string is chosen in the bottom left type selector). Some examples include:
-definition "Paired long bones of endochondral origin that extend from the pectoral girdle to the elbows[AAO, modified]."^^string
-definition "The major postaxial endochondral bone in the posterior zeugopod[Phenoscape]."^^string
-definition "Paired cartilaginous element forming the posterior portion of the pelvic girdle. [D.F. Markle, BULLETIN OF MARINE SCIENCE. 30(1): 45-53. 1980]"^^string
-definition "A midventral endochondral skeletal element which represents the origin site of the pectoral muscles[PHENOSCAPE:ad]."^^string
-
-Note that this is *different* than making a dbxref. The dbxref field should be used only for xref to another ontology class, database ID, or URL. dbxrefs can be made on the definition as an annotation on the definition or on the class directly, depending on the nature of the xref. To make an annotation on the definition, click the little "a" symbol (this works similarly on any axiom or annotation).
-
-SEARCHING BY URI
-----------------
-To view IDs instead of labels:
-View -> Render by name (rdf: id)
-search for ID
-View -> Render by label
-click on parent in description
-click back button to get back to your term
-(stupid, eh?)
-
-SAVING and COMMITTING
----------------
-
-Save and commit regularly. Always describe the changes you have made
-at a high level in the svn commit messages. It is a good idea to type
-"svn diff" before committing (although the output can be hard to
-decipher, it can sometimes show you egregious errors, sometimes Protege's fault).
-
-**Important: make sure you save in functional syntax, using the same
-  prefixes as in the source file. This SHOULD be automatic (but Protege sometimes gets it wrong - one reason to do the diff).
-  
-**Important: there is currently a bug in Protege that is being investigated (well, there are many, but this one concerns editing ext). If protege asks you to name your merged file when you save and gives you no other option, DON'T DO IT. Quit Protege and start over. You will lose your work - another reason to save and commit in small increments. 
-
-Example session from view of command line:
-
-  svn update
-  # [open in protege]
-  # [edit in Protege]
-  # [save in Protege]
-  # ...
-  # [edit in Protege]
-  # [save in Protege]
-  svn diff cl-edit.owl
-  svn commit -m "polished up skull" cl-edit.owl
-  svn update
-
-It is always a good idea to svn update immediately after an svn
-commit. If there are changes, Protege will ask you to reload. You may wish not to trust the reload and simply reopen Protege.
-
-After an svn commit, Jenkins will check your changes to make sure they
-conform to guidelines and do not introduce any inconsistencies - an
-email will be sent to the curators list.
-
-You can check on the build here:
-  http://build.berkeleybop.org/job/build-cl/
-  
-Check for errors in the report, send an email to curators if you cannot determine what the error is.
-
-MIREOTING
----------
-Sometimes you may wish to reference a class from another ontology in the context of editing CL, and the term may not yet be mireoted. You can currently pull in a new term from GO, Uberon, Chebi, CLO, PATO or PR. 
-
-1. Identify the class to be included, and copy the URI (for example, look in Ontobee or open file in separate Protege instance and do control U to copy the URI). Note the superclass(es) of the class.
-
-2. Whilst editing CL, change the "Active Ontology" file in the top header to the import file that will house the new class, for example, uberon_import.owl
-
-3. Add a new class under the appropriate superclass in the import file, change the URI by doing control U and pasting the URI as per above. Make sure to add the label as an annotation so that you can find the class later.
-
-4. Save the file (note that you should save in RDF/XML with the "use XML entities" NOT checked in the Preferences/Save tab.
-
-5. Do a Diff to make sure you are saving in the proper file format.
-
-*6. Advanced editors with Owltools - run "make imports", for example, make imports/uberon_import.owl  in the CL ontology directory. This will pull in the closure and add the metadata.
-
-CHECKLIST
----------
-
-Always synchronize the reasoner before committing. Did your changes
-introduce unsatisfiable classes? If so, investigate them.
-
-For any classes you have created, are they in your ID range? Did you
-add text definitions, adding provenance information? Is the reasoner finding unintended inferred equivalent classes? Subclasses? 
-
-Check the jenkins report after your commits. This should alert you to
-any of the following:
-
- * consistency problems with anatomy ontologies
- * consistency problems with other ontologies
- * violation of obo-format (e.g. two labels for a class; two text
-   definitions; etc)
+For questions on this contact Chris Mungall or email obo-admin AT obofoundry.org
 
 
+# Jenkins Continuous Integration System
 
+TODO - editors do you want this set up?
+
+Check:
+
+http://build.berkeleybop.org/job/build-pato/
+
+after committing
+
+== General Guidelines ==
+
+See:
+http://wiki.geneontology.org/index.php/Curator_Guide:_General_Conventions
