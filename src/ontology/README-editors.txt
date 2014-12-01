@@ -1,6 +1,9 @@
 These notes are for the EDITORS of pato
 
 ## Editors Version
+=======
+Do you have an ID range in the idranges file (caro-idranges.owl),
+in this directory). If not, get one from the head curator. 
 
 The editors version is pato-edit.obo
 
