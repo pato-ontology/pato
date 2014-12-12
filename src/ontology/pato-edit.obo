@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 01:12:2014 16:21
-saved-by: haendel
-auto-generated-by: OBO-Edit 2.3-beta5
+date: 12:12:2014 08:48
+saved-by: davidos
+auto-generated-by: OBO-Edit 2.3.1
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -19394,6 +19394,23 @@ subset: value_slim
 is_a: PATO:0000133 ! orientation
 created_by: wasila.dahdul
 creation_date: 2014-10-17T14:24:19Z
+
+[Term]
+id: PATO:0010000
+name: maximally connected
+def: "A structural quality inhering in the bearer by virtue of the bearer consisting of a single, maximally connected structure." [GOC:dos]
+comment: What counts as maximally connected may be relative to some specification of granularity.
+is_a: PATO:0000141 ! structure
+created_by: davidos
+creation_date: 2014-12-12T08:41:11Z
+
+[Term]
+id: PATO:0010001
+name: disconnected
+def: "A structural quality inhering in the bearer by virtue of the bearer consisting of multiple structures lacking any physical connection to each other." [GOC:dos]
+is_a: PATO:0000141 ! structure
+created_by: davidos
+creation_date: 2014-12-12T08:43:17Z
 
 [Typedef]
 id: correlates_with
