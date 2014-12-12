@@ -3,6 +3,31 @@ USECAT= --catalog-xml catalog-v001.xml
 
 all: all_imports release
 
+release: pato.obo pato.owl
+
+# ----------------------------------------
+# BUILD
+# ----------------------------------------
+
+# This is a standard OORT build
+# We add a custom step to unfold the import closure in the obo version, because obo does not handle imports well
+
+# TODO: allow-equivalent-pairs is there for the CL:cell vs GO:cell
+build/pato.owl: pato-edit.obo
+	ontology-release-runner $(USECAT)   --outdir build --no-subsets --allow-overwrite --ignoreLock --reasoner elk --asserted --simple $<
+build/%: build/pato.owl
+pato.owl: build/pato.owl
+	cp $< $@
+pato.obo: build/pato.owl
+	owltools $(USECAT) $< --merge-imports-closure -o -f obo $@
+pato-basic.owl: build/pato-simple.owl
+	owltools $< --remove-axioms -t DisjointClasses --set-ontology-id $(OBO)/pato/$@ -o $@
+pato-basic.obo: pato-basic.owl
+	owltools $< -o -f obo $@
+
+%-obocheck: %.obo
+	obo2obo $< -o $@
+
 # ----------------------------------------
 # Regenerate imports
 # ----------------------------------------
@@ -22,7 +47,7 @@ all: all_imports release
 PATO_IMPORTS_BASE_URI = $(OBO)/pato
 
 # Ontology dependencies
-IMPORTS = pato uberon chebi pr go pco
+IMPORTS = uberon chebi pr go pco
 
 # Make this target to regenerate ALL
 all_imports: $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_import.obo,$(IMPORTS))
