@@ -53,16 +53,37 @@ The -edit file is generally not visible to the public (of course they
 can find it in github if they try). The editors are free to make
 changes they are not yet comfortable releasing.
 
-When ready for release, the process is as follows.
+When ready for release, the process is as follows:
 
 First check the file is valid - see the Jenkins job below. Additional
 spot checks would not do any harm.
 
-The pato-edit.obo file should be copied to
+Type:
 
- * ftp://ftp.hgu.mrc.ac.uk/pub/MouseAtlas/Anatomy/PATO.obo
+    make release
 
-JAX users will download from here.
+This generates derived files such as pato.owl and pato.obo. The versionIRI will be added.
+
+Commit and push these files.
+
+IMMEDIATELY AFTERWARDS (do *not* make further modifications) go here:
+
+ * https://github.com/gkoutos/pato/releases
+ * https://github.com/gkoutos/pato/releases/new
+
+The value of the "Tag version" field MUST be
+
+    vYYYY-MM-DD
+
+The initial lowercase "v" is REQUIRED. The YYYY-MM-DD *must* match
+what is in the versionIRI of the derived pato.owl (data-version in
+pato.obo).
+
+Release title should be YYYY-MM-DD, optionally followed by a title (e.g. "january release")
+
+Then click "publish release"
+
+NO MORE THAN ONE RELEASE PER DAY.
 
 In addition, this will be picked up by the central obolibrary job
 within 24hrs, which will produce two files:
