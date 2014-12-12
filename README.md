@@ -1,5 +1,5 @@
 pato
 ====
 
- PATO - the Phenotype And Trait Ontology
+ PATO - the Phenotype And Trait Ontology.
 
