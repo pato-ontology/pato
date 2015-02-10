@@ -24,7 +24,7 @@ is_obsolete: true
 id: PATO:0000001
 name: quality
 alt_id: PATO:0000072
-def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities." [PATOC:GVG]
+def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
 synonym: "trait" EXACT []
 
 [Term]
@@ -477,7 +477,7 @@ is_a: PATO:0000068 ! qualitative
 
 [Term]
 id: PATO:0000070
-name: count
+name: amount
 alt_id: PATO:0000053
 alt_id: PATO:0000071
 alt_id: PATO:0001169
@@ -485,7 +485,7 @@ alt_id: PATO:0001226
 def: "The number of entities of this type that are part of the whole organism." [PATOC:GVG]
 comment: This term was originally named "presence". It has been renamed to reduce ambiguity. Consider annotating with the reciprocal relation,PATO:0001555, has_number_of. For example, rather than E=fin ray Q=count in organism C=10, say E=organism Q=has number of E2= fin ray C=10.
 subset: attribute_slim
-synonym: "amount" RELATED []
+synonym: "count" EXACT []
 synonym: "count in organism" RELATED []
 synonym: "number" RELATED []
 synonym: "presence" RELATED []
@@ -2842,6 +2842,7 @@ subset: absent_slim
 subset: value_slim
 synonym: "present in organism" RELATED []
 is_a: PATO:0000070 ! count
+disjoint_with: PATO:0000462 ! absent
 
 [Term]
 id: PATO:0000469
@@ -2850,7 +2851,7 @@ is_obsolete: true
 
 [Term]
 id: PATO:0000470
-name: present in greater numbers in organism
+name: increased amount
 alt_id: PATO:0000420
 alt_id: PATO:0000650
 def: "An amount which is relatively high." [PATOC:GVG]
@@ -2858,6 +2859,7 @@ subset: value_slim
 synonym: "accessory" RELATED []
 synonym: "increased" RELATED []
 synonym: "increased number" EXACT []
+synonym: "present in greater numbers in organism" EXACT []
 synonym: "supernumerary" EXACT []
 is_a: PATO:0000467 ! present
 is_a: PATO:0002300 ! increased quality
@@ -13806,12 +13808,12 @@ is_a: PATO:0001241 ! physical object quality
 
 [Term]
 id: PATO:0001997
-name: present in fewer numbers in organism
+name: decreased amount
 alt_id: PATO:0000419
 alt_id: PATO:0000468
 def: "An amount which is relatively low." [PATOC:GVG]
 synonym: "decreased" RELATED []
-synonym: "decreased amount" EXACT []
+synonym: "present in fewer numbers in organism" EXACT []
 synonym: "decreased number" EXACT []
 synonym: "reduced" RELATED []
 synonym: "subnumerary" RELATED []
@@ -14297,8 +14299,9 @@ creation_date: 2009-03-13T12:36:14Z
 
 [Term]
 id: PATO:0002050
-name: present in normal numbers in organism
+name: normal amount
 def: "An amount which normal." [PATOC:GVG]
+synonym: "present in normal numbers in organism" EXACT []
 is_a: PATO:0000467 ! present
 relationship: reciprocal_of PATO:0001905 ! has normal numbers of parts of type
 created_by: george
@@ -19499,10 +19502,6 @@ domain: PATO:0000001 ! quality
 range: PATO:0000001 ! quality
 is_transitive: true
 is_a: different_in_magnitude_relative_to ! different_in_magnitude_relative_to
-
-[Typedef]
-id: inheres_in
-name: inheres_in
 
 [Typedef]
 id: inversely_associated_with
