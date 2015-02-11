@@ -2796,7 +2796,7 @@ id: PATO:0000462
 name: absent
 alt_id: PATO:0001996
 def: "A quality denoting the lack of an entity." [thefreedictionary.:thefreedictionary.]
-comment: Example: [ E=wing Q=absent ] -applies to an organism that lacks wings. Note that this is the reciprocal quality to the relational quality "lacks all parts of type". This means that [E=wing Q=absent] is replaceable with [E=organism Q=lacks_all_parts_of_type E2=Wing]. The latter is preferable as it allows greater precision in stating what is lacking from where. E.g. We can say [E=spermatocyte Q=lacks_all_parts_of_type E2=aster] to describe spermatocytes that have no asters.
+comment: See documentation here: http://code.google.com/p/phenotype-ontologies/wiki/ModelingOfAbsence
 subset: absent_slim
 subset: mpath_slim
 subset: value_slim
@@ -3983,12 +3983,13 @@ is_a: PATO:0000141 ! structure
 [Term]
 id: PATO:0000639
 name: degenerate
-def: "A structural quality inhering in a bearer whose structure deteriorates or is lost over time." [PATOC:mb]
+def: "A structural quality inhering in a bearer whose structure deteriorates or is lost over time due to an active pathological process." [PATOC:mb, PATOC:PortlandMeetingFeb2015]
 subset: mpath_slim
 subset: value_slim
 synonym: "degeneration" NARROW []
 is_a: PATO:0002037 ! degeneration
 disjoint_from: PATO:0002038 ! non-degenerate
+disjoint_from: PATO:0001623 ! atrophied
 relationship: has_part PATO:0000585 ! hypotrophic
 
 [Term]
@@ -9449,12 +9450,15 @@ is_a: PATO:0001598 ! protruding
 [Term]
 id: PATO:0001483
 name: aplastic
-def: "A size quality inhering in a an organ or tissue by virtue of the bearer's absence coupled with persistence of the organ/tissue primordium, which fails to develop completely." [PATOC:GVG]
+def: "Absence of an organ, tissue or cell due to failure to develop from a primordium or precursor cell." [PATOC:GVG, PATOC:PortlandMeetingFeb2015]
+comment: With aplasia, the primordium or precursor develops, but does not proceed in its development to a mature structure
 subset: mpath_slim
 subset: value_slim
 synonym: "aplasia" EXACT []
 synonym: "undeveloped" EXACT []
-is_a: PATO:0000462 ! absent
+intersection_of: PATO:0002291 ! agenesis
+intersection_of: PATO:0002290 ! aplastic/hypoplastic
+is_a: PATO:0002291 ! agenesis
 is_a: PATO:0002290 ! aplastic/hypoplastic
 
 [Term]
@@ -16723,7 +16727,7 @@ creation_date: 2011-04-18T05:11:33Z
 [Term]
 id: PATO:0002291
 name: agenesis
-def: "Failure of a tissue of organ to develop." [PATO:GVG]
+def: "Absence of a tissue or organ due to failure to develop." [PATO:GVG]
 is_a: PATO:0000462 ! absent
 created_by: George Gkoutos
 creation_date: 2011-04-18T05:17:34Z
@@ -19414,6 +19418,16 @@ def: "A structural quality inhering in the bearer by virtue of the bearer consis
 is_a: PATO:0000141 ! structure
 created_by: davidos
 creation_date: 2014-12-12T08:43:17Z
+
+[Term]
+id: PATO:0015001
+name: absence due to degeneration
+def: "Absence due to a degenerative process." [PATOC:cjm, PATOC:PortlandMeetingFeb2015]
+is_a: PATO:0000462 ! absent
+is_a: PATO:0000639 ! degenerate
+intersection_of: PATO:0000462 ! absent
+intersection_of: PATO:0000639 ! degenerate
+created_by: cjm
 
 [Typedef]
 id: correlates_with
