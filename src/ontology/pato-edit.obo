@@ -16345,7 +16345,6 @@ creation_date: 2010-08-09T04:17:37Z
 id: PATO:0002252
 name: antero-posteriorly flattened
 def: "A quality inhering in a bearer by virtue of the bearer's being flattened along the antero-posterior axis." [PATOC:JC]
-subset: absent_slim
 subset: value_slim
 synonym: "antero-posteriorly compressed" EXACT []
 is_a: PATO:0002254 ! flattened
@@ -19422,11 +19421,41 @@ creation_date: 2014-12-12T08:43:17Z
 [Term]
 id: PATO:0015001
 name: absence due to degeneration
-def: "Absence due to a degenerative process." [PATOC:cjm, PATOC:PortlandMeetingFeb2015]
+def: "Absence due to a degenerative process." [PATOC:PortlandMeetingFeb2015]
+subset: absent_slim
+subset: value_slim
 is_a: PATO:0000462 ! absent
 is_a: PATO:0000639 ! degenerate
 intersection_of: PATO:0000462 ! absent
 intersection_of: PATO:0000639 ! degenerate
+created_by: cjm
+
+[Term]
+id: PATO:0015002
+name: process efficacy
+def: "The ability of a process to produce its output." [PATOC:PortlandMeetingFeb2015]
+subset: attribute_slim
+is_a: PATO:0001236 ! process quality
+created_by: cjm
+
+[Term]
+id: PATO:0015003
+name: decreased efficacy
+def: "A decrease in the ability of a process to produce its output." [PATOC:PortlandMeetingFeb2015]
+subset: value_slim
+is_a: PATO:0015002 ! process efficacy
+intersection_of: PATO:0015002 ! process efficacy
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+created_by: cjm
+
+[Term]
+id: PATO:0015004
+name: increased efficacy
+def: "A increase in the ability of a process to produce its output." [PATOC:PortlandMeetingFeb2015]
+subset: value_slim
+is_a: PATO:0015002 ! process efficacy
+intersection_of: PATO:0015002 ! process efficacy
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 created_by: cjm
 
 [Typedef]
