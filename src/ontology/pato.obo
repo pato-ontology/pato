@@ -1,8 +1,8 @@
 format-version: 1.2
-data-version: releases/2014-12-11
-date: 01:12:2014 16:21
-saved-by: haendel
-auto-generated-by: OBO-Edit 2.3-beta5
+data-version: releases/2015-02-12
+date: 12:12:2014 08:48
+saved-by: davidos
+auto-generated-by: OBO-Edit 2.3.1
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -25,7 +25,7 @@ is_obsolete: true
 id: PATO:0000001
 name: quality
 alt_id: PATO:0000072
-def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities." [PATOC:GVG]
+def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
 synonym: "trait" EXACT []
 
 [Term]
@@ -478,7 +478,7 @@ is_a: PATO:0000068 ! qualitative
 
 [Term]
 id: PATO:0000070
-name: count
+name: amount
 alt_id: PATO:0000053
 alt_id: PATO:0000071
 alt_id: PATO:0001169
@@ -486,7 +486,7 @@ alt_id: PATO:0001226
 def: "The number of entities of this type that are part of the whole organism." [PATOC:GVG]
 comment: This term was originally named "presence". It has been renamed to reduce ambiguity. Consider annotating with the reciprocal relation,PATO:0001555, has_number_of. For example, rather than E=fin ray Q=count in organism C=10, say E=organism Q=has number of E2= fin ray C=10.
 subset: attribute_slim
-synonym: "amount" RELATED []
+synonym: "count" EXACT []
 synonym: "count in organism" RELATED []
 synonym: "number" RELATED []
 synonym: "presence" RELATED []
@@ -2801,13 +2801,14 @@ id: PATO:0000462
 name: absent
 alt_id: PATO:0001996
 def: "A quality denoting the lack of an entity." [thefreedictionary.:thefreedictionary.]
-comment: Example: [ E=wing Q=absent ] -applies to an organism that lacks wings. Note that this is the reciprocal quality to the relational quality "lacks all parts of type". This means that [E=wing Q=absent] is replaceable with [E=organism Q=lacks_all_parts_of_type E2=Wing]. The latter is preferable as it allows greater precision in stating what is lacking from where. E.g. We can say [E=spermatocyte Q=lacks_all_parts_of_type E2=aster] to describe spermatocytes that have no asters.
+comment: See documentation here: http://code.google.com/p/phenotype-ontologies/wiki/ModelingOfAbsence
 subset: absent_slim
 subset: mpath_slim
 subset: value_slim
 synonym: "absence" EXACT []
 synonym: "absent from organism" EXACT []
-is_a: PATO:0000070 ! count
+is_a: PATO:0000070 ! amount
+disjoint_from: PATO:0000467 ! present
 relationship: reciprocal_of PATO:0001558 ! lacking processual parts
 relationship: reciprocal_of PATO:0002000 ! lacks all parts of type
 
@@ -2846,7 +2847,7 @@ def: "A quality inhering in a bearer by virtue of the bearer's existence." [PATO
 subset: absent_slim
 subset: value_slim
 synonym: "present in organism" RELATED []
-is_a: PATO:0000070 ! count
+is_a: PATO:0000070 ! amount
 
 [Term]
 id: PATO:0000469
@@ -2855,7 +2856,7 @@ is_obsolete: true
 
 [Term]
 id: PATO:0000470
-name: present in greater numbers in organism
+name: increased amount
 alt_id: PATO:0000420
 alt_id: PATO:0000650
 def: "An amount which is relatively high." [PATOC:GVG]
@@ -2863,6 +2864,7 @@ subset: value_slim
 synonym: "accessory" RELATED []
 synonym: "increased" RELATED []
 synonym: "increased number" EXACT []
+synonym: "present in greater numbers in organism" EXACT []
 synonym: "supernumerary" EXACT []
 is_a: PATO:0000467 ! present
 is_a: PATO:0002300 ! increased quality
@@ -4002,11 +4004,12 @@ is_a: PATO:0000141 ! structure
 [Term]
 id: PATO:0000639
 name: degenerate
-def: "A structural quality inhering in a bearer whose structure deteriorates or is lost over time." [PATOC:mb]
+def: "A structural quality inhering in a bearer whose structure deteriorates or is lost over time due to an active pathological process." [PATOC:mb, PATOC:PortlandMeetingFeb2015]
 subset: mpath_slim
 subset: value_slim
 synonym: "degeneration" NARROW []
 is_a: PATO:0002037 ! degeneration
+disjoint_from: PATO:0001623 ! atrophied
 disjoint_from: PATO:0002038 ! non-degenerate
 relationship: has_part PATO:0000585 ! hypotrophic
 
@@ -9405,7 +9408,7 @@ def: "A quality inhering in a bearer by virtue of the bearer's being present in 
 subset: mpath_slim
 subset: value_slim
 synonym: "doubled" EXACT []
-is_a: PATO:0000470 ! present in greater numbers in organism
+is_a: PATO:0000470 ! increased amount
 
 [Term]
 id: PATO:0001474
@@ -9482,13 +9485,16 @@ is_a: PATO:0001598 ! protruding
 [Term]
 id: PATO:0001483
 name: aplastic
-def: "A size quality inhering in a an organ or tissue by virtue of the bearer's absence coupled with persistence of the organ/tissue primordium, which fails to develop completely." [PATOC:GVG]
+def: "Absence of an organ, tissue or cell due to failure to develop from a primordium or precursor cell." [PATOC:GVG, PATOC:PortlandMeetingFeb2015]
+comment: With aplasia, the primordium or precursor develops, but does not proceed in its development to a mature structure
 subset: mpath_slim
 subset: value_slim
 synonym: "aplasia" EXACT []
 synonym: "undeveloped" EXACT []
-is_a: PATO:0000462 ! absent
 is_a: PATO:0002290 ! aplastic/hypoplastic
+is_a: PATO:0002291 ! agenesis
+intersection_of: PATO:0002290 ! aplastic/hypoplastic
+intersection_of: PATO:0002291 ! agenesis
 
 [Term]
 id: PATO:0001484
@@ -13939,13 +13945,13 @@ is_a: PATO:0001241 ! physical object quality
 
 [Term]
 id: PATO:0001997
-name: present in fewer numbers in organism
+name: decreased amount
 alt_id: PATO:0000419
 alt_id: PATO:0000468
 def: "An amount which is relatively low." [PATOC:GVG]
 synonym: "decreased" RELATED []
-synonym: "decreased amount" EXACT []
 synonym: "decreased number" EXACT []
+synonym: "present in fewer numbers in organism" EXACT []
 synonym: "reduced" RELATED []
 synonym: "subnumerary" RELATED []
 is_a: PATO:0000467 ! present
@@ -14436,8 +14442,9 @@ creation_date: 2009-03-13T12:36:14Z
 
 [Term]
 id: PATO:0002050
-name: present in normal numbers in organism
+name: normal amount
 def: "An amount which normal." [PATOC:GVG]
+synonym: "present in normal numbers in organism" EXACT []
 is_a: PATO:0000467 ! present
 relationship: reciprocal_of PATO:0001905 ! has normal numbers of parts of type
 created_by: george
@@ -15142,7 +15149,7 @@ name: multiple
 def: "A quality inhering in a bearer by virtue of the bearer's being present in more than two copies." [PATOC:GVG]
 subset: mpath_slim
 subset: value_slim
-is_a: PATO:0000470 ! present in greater numbers in organism
+is_a: PATO:0000470 ! increased amount
 created_by: george
 creation_date: 2009-10-06T03:28:38Z
 
@@ -16492,7 +16499,6 @@ creation_date: 2010-08-09T04:17:37Z
 id: PATO:0002252
 name: antero-posteriorly flattened
 def: "A quality inhering in a bearer by virtue of the bearer's being flattened along the antero-posterior axis." [PATOC:JC]
-subset: absent_slim
 subset: value_slim
 synonym: "antero-posteriorly compressed" EXACT []
 is_a: PATO:0002254 ! flattened
@@ -16878,7 +16884,7 @@ creation_date: 2011-04-18T05:11:33Z
 [Term]
 id: PATO:0002291
 name: agenesis
-def: "Failure of a tissue of organ to develop." [PATO:GVG]
+def: "Absence of a tissue or organ due to failure to develop." [PATO:GVG]
 is_a: PATO:0000462 ! absent
 created_by: George Gkoutos
 creation_date: 2011-04-18T05:17:34Z
@@ -19354,7 +19360,7 @@ def: "A variability quality inhering in the bearer by virtue of the bearer havin
 subset: value_slim
 synonym: "variable number" RELATED []
 is_a: PATO:0001303 ! variability
-relationship: towards PATO:0000070 ! count
+relationship: towards PATO:0000070 ! amount
 created_by: wasila.dahdul
 creation_date: 2014-09-09T12:27:33Z
 
@@ -19573,6 +19579,67 @@ is_a: PATO:0000133 ! orientation
 created_by: wasila.dahdul
 creation_date: 2014-10-17T14:24:19Z
 
+[Term]
+id: PATO:0010000
+name: maximally connected
+def: "A structural quality inhering in the bearer by virtue of the bearer consisting of a single, maximally connected structure." [GOC:dos]
+comment: What counts as maximally connected may be relative to some specification of granularity.
+is_a: PATO:0000141 ! structure
+created_by: davidos
+creation_date: 2014-12-12T08:41:11Z
+
+[Term]
+id: PATO:0010001
+name: disconnected
+def: "A structural quality inhering in the bearer by virtue of the bearer consisting of multiple structures lacking any physical connection to each other." [GOC:dos]
+is_a: PATO:0000141 ! structure
+created_by: davidos
+creation_date: 2014-12-12T08:43:17Z
+
+[Term]
+id: PATO:0015001
+name: absence due to degeneration
+def: "Absence due to a degenerative process." [PATOC:PortlandMeetingFeb2015]
+subset: absent_slim
+subset: value_slim
+is_a: PATO:0000462 ! absent
+is_a: PATO:0000639 ! degenerate
+intersection_of: PATO:0000462 ! absent
+intersection_of: PATO:0000639 ! degenerate
+created_by: cjm
+
+[Term]
+id: PATO:0015002
+name: process efficacy
+def: "The ability of a process to produce its output." [PATOC:PortlandMeetingFeb2015]
+subset: attribute_slim
+is_a: PATO:0001236 ! process quality
+created_by: cjm
+
+[Term]
+id: PATO:0015003
+name: decreased efficacy
+def: "A decrease in the ability of a process to produce its output." [PATOC:PortlandMeetingFeb2015]
+subset: value_slim
+is_a: PATO:0002302 ! decreased process quality
+is_a: PATO:0015002 ! process efficacy
+intersection_of: PATO:0015002 ! process efficacy
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+created_by: cjm
+
+[Term]
+id: PATO:0015004
+name: increased efficacy
+def: "A increase in the ability of a process to produce its output." [PATOC:PortlandMeetingFeb2015]
+subset: value_slim
+is_a: PATO:0002304 ! increased process quality
+is_a: PATO:0015002 ! process efficacy
+intersection_of: PATO:0015002 ! process efficacy
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
+created_by: cjm
+
 [Typedef]
 id: correlates_with
 name: correlates_with
@@ -19660,10 +19727,6 @@ domain: PATO:0000001 ! quality
 range: PATO:0000001 ! quality
 is_transitive: true
 is_a: different_in_magnitude_relative_to ! different_in_magnitude_relative_to
-
-[Typedef]
-id: inheres_in
-name: inheres_in
 
 [Typedef]
 id: inversely_associated_with
