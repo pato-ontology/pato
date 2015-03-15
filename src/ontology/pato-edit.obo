@@ -19458,6 +19458,30 @@ intersection_of: PATO:0015002 ! process efficacy
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 created_by: cjm
 
+[Term]
+id: PATO:0020000
+name: genotypic sex
+def: "A biological sex quality inhering in an individual based upon genotypic composition of sex chromosomes." [PATOC:MAH]
+comment: Note that the chromosomal constitution of genotypic sex varies in different organisms. In human, we have XY, XX, though abnormal XXY, X0, XYY, and other combinations are possible. 
+is_a: PATO:0000047 ! biological sex
+created_by: mah
+
+[Term]
+id: PATO:0020001
+name: male genotypic sex
+def: "A biological sex quality inhering in an individual based upon genotypic composition that confers the capability for an organism to differentiate male gonads." [PATOC:MAH]
+comment: Note that the chromosomal constitution of genotypic sex varies in different organisms. In human, this would be XY, though abnormal XXY and XYY would also result in a male phenotypic outcome. 
+is_a: PATO:0020000 ! genotypic sex
+created_by: mah
+
+[Term]
+id: PATO:0020002
+name: female genotypic sex
+def: "A biological sex quality inhering in an individual or a population based upon genotypic composition that confers the capability for an organism to differentiate female gonads." [PATOC:MAH]
+comment: Note that the chromosomal constitution of genotypic sex varies in different organisms. In human, this would be XX, though abnormal X0 and XXX would also result in a female phenotypic outcome. 
+is_a: PATO:0020000 ! genotypic sex
+created_by: mah
+
 [Typedef]
 id: correlates_with
 name: correlates_with
