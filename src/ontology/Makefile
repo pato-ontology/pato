@@ -5,6 +5,10 @@ all: all_imports release
 
 release: pato.obo pato.owl
 
+TARGETS = pato.obo pato.owl imports
+copy-release:
+	cp -pr $(TARGETS) ../.. && cd ../.. && git add imports/*
+
 # ----------------------------------------
 # BUILD
 # ----------------------------------------
@@ -47,7 +51,7 @@ pato-basic.obo: pato-basic.owl
 PATO_IMPORTS_BASE_URI = $(OBO)/pato
 
 # Ontology dependencies
-IMPORTS = uberon chebi pr go pco
+IMPORTS = uberon go pco
 
 # Make this target to regenerate ALL
 all_imports: $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_import.obo,$(IMPORTS))
@@ -67,7 +71,7 @@ imports/%_import.obo: imports/%_import.owl
 mirror/%.owl: 
 	owltools $(OBO)/$*.owl --remove-annotation-assertions -l --remove-dangling-annotations  --make-subset-by-properties -f $(KEEPRELS)  -o $@
 mirror/uberon.owl:
-	owltools $(OBO)/uberon/basic.owl --remove-annotation-assertions -l -s -d --remove-axiom-annotations --remove-dangling-annotations --make-subset-by-properties $(KEEPRELS) --set-ontology-id $(OBO)/uberon.owl -o $@
+	owltools $(OBO)/uberon/basic.owl --remove-annotation-assertions -l -s -d --remove-axiom-annotations --remove-dangling-annotations --make-subset-by-properties -f $(KEEPRELS) --set-ontology-id $(OBO)/uberon.owl -o $@
 .PRECIOUS: mirror/uberon.owl
 mirror/pr.obo: cl-edit.owl
 	wget $(OBO)/pr.obo -O $@.tmp && ./util/obo-grep.pl -r 'id: PR:' $@.tmp > $@
