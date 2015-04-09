@@ -62,14 +62,15 @@ Type:
 
     make release
 
-This generates derived files such as pato.owl and pato.obo. The versionIRI will be added.
+This generates derived files such as pato.owl and pato.obo and places
+them in the top level (../..). The versionIRI will be added.
 
 Commit and push these files.
 
 IMMEDIATELY AFTERWARDS (do *not* make further modifications) go here:
 
- * https://github.com/gkoutos/pato/releases
- * https://github.com/gkoutos/pato/releases/new
+ * https://github.com/obophenotype/pato/releases
+ * https://github.com/obophenotype/pato/releases/new
 
 The value of the "Tag version" field MUST be
 
