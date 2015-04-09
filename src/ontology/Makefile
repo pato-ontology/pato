@@ -3,7 +3,7 @@ USECAT= --catalog-xml catalog-v001.xml
 
 all: all_imports release
 
-release: pato.obo pato.owl
+release: pato.obo pato.owl copy-release
 
 TARGETS = pato.obo pato.owl imports
 copy-release:
