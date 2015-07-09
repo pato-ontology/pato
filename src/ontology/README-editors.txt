@@ -1,8 +1,8 @@
 These notes are for the EDITORS of pato
 
 ## Editors Version
-=======
-Do you have an ID range in the idranges file (caro-idranges.owl),
+
+Do you have an ID range in the idranges file (pato-idranges.owl),
 in this directory). If not, get one from the head curator. 
 
 The editors version is pato-edit.obo
@@ -107,7 +107,7 @@ http://build.berkeleybop.org/job/build-pato/
 
 after committing
 
-== General Guidelines ==
+## General Guidelines
 
 See:
 http://wiki.geneontology.org/index.php/Curator_Guide:_General_Conventions
