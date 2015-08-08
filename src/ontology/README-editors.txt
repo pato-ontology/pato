@@ -1,8 +1,8 @@
 These notes are for the EDITORS of pato
 
 ## Editors Version
-=======
-Do you have an ID range in the idranges file (caro-idranges.owl),
+
+Do you have an ID range in the idranges file (pato-idranges.owl),
 in this directory). If not, get one from the head curator. 
 
 The editors version is pato-edit.obo
@@ -62,14 +62,15 @@ Type:
 
     make release
 
-This generates derived files such as pato.owl and pato.obo. The versionIRI will be added.
+This generates derived files such as pato.owl and pato.obo and places
+them in the top level (../..). The versionIRI will be added.
 
 Commit and push these files.
 
 IMMEDIATELY AFTERWARDS (do *not* make further modifications) go here:
 
- * https://github.com/gkoutos/pato/releases
- * https://github.com/gkoutos/pato/releases/new
+ * https://github.com/obophenotype/pato/releases
+ * https://github.com/obophenotype/pato/releases/new
 
 The value of the "Tag version" field MUST be
 
@@ -106,7 +107,7 @@ http://build.berkeleybop.org/job/build-pato/
 
 after committing
 
-== General Guidelines ==
+## General Guidelines
 
 See:
 http://wiki.geneontology.org/index.php/Curator_Guide:_General_Conventions

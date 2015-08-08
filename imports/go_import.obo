@@ -1,0 +1,61 @@
+format-version: 1.2
+ontology: file:/imports/go_import.owl
+property_value: http://purl.org/dc/elements/1.1/source http://purl.obolibrary.org/obo/go/releases/2015-03-14/go.owl
+
+[Term]
+id: GO:0005575
+name: cellular_component
+
+[Term]
+id: GO:0005623
+name: cell
+is_a: GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0005634
+name: nucleus
+is_a: GO:0043231 ! intracellular membrane-bounded organelle
+
+[Term]
+id: GO:0005929
+name: cilium
+is_a: GO:0042995 ! cell projection
+is_a: GO:0043226 ! organelle
+
+[Term]
+id: GO:0042995
+name: cell projection
+is_a: GO:0044464 ! cell part
+
+[Term]
+id: GO:0043226
+name: organelle
+is_a: GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0043227
+name: membrane-bounded organelle
+is_a: GO:0043226 ! organelle
+
+[Term]
+id: GO:0043229
+name: intracellular organelle
+is_a: GO:0043226 ! organelle
+is_a: GO:0044424 ! intracellular part
+
+[Term]
+id: GO:0043231
+name: intracellular membrane-bounded organelle
+is_a: GO:0043227 ! membrane-bounded organelle
+is_a: GO:0043229 ! intracellular organelle
+
+[Term]
+id: GO:0044424
+name: intracellular part
+is_a: GO:0044464 ! cell part
+
+[Term]
+id: GO:0044464
+name: cell part
+is_a: GO:0005575 ! cellular_component
+
