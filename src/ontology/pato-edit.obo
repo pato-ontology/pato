@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 12:12:2014 08:48
-saved-by: davidos
-auto-generated-by: OBO-Edit 2.3.1
+date: 01:09:2015 16:30
+saved-by: pbuttigieg
+auto-generated-by: OBO-Edit 2.2
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -2802,7 +2802,7 @@ subset: mpath_slim
 subset: value_slim
 synonym: "absence" EXACT []
 synonym: "absent from organism" EXACT []
-is_a: PATO:0000070 ! count
+is_a: PATO:0000070 ! amount
 relationship: reciprocal_of PATO:0001558 ! lacking processual parts
 relationship: reciprocal_of PATO:0002000 ! lacks all parts of type
 
@@ -2841,7 +2841,7 @@ def: "A quality inhering in a bearer by virtue of the bearer's existence." [PATO
 subset: absent_slim
 subset: value_slim
 synonym: "present in organism" RELATED []
-is_a: PATO:0000070 ! count
+is_a: PATO:0000070 ! amount
 disjoint_from: PATO:0000462 ! absent
 
 [Term]
@@ -3987,8 +3987,8 @@ subset: mpath_slim
 subset: value_slim
 synonym: "degeneration" NARROW []
 is_a: PATO:0002037 ! degeneration
-disjoint_from: PATO:0002038 ! non-degenerate
 disjoint_from: PATO:0001623 ! atrophied
+disjoint_from: PATO:0002038 ! non-degenerate
 relationship: has_part PATO:0000585 ! hypotrophic
 
 [Term]
@@ -9374,7 +9374,7 @@ def: "A quality inhering in a bearer by virtue of the bearer's being present in 
 subset: mpath_slim
 subset: value_slim
 synonym: "doubled" EXACT []
-is_a: PATO:0000470 ! present in greater numbers in organism
+is_a: PATO:0000470 ! increased amount
 
 [Term]
 id: PATO:0001474
@@ -9455,10 +9455,10 @@ subset: mpath_slim
 subset: value_slim
 synonym: "aplasia" EXACT []
 synonym: "undeveloped" EXACT []
-intersection_of: PATO:0002291 ! agenesis
-intersection_of: PATO:0002290 ! aplastic/hypoplastic
-is_a: PATO:0002291 ! agenesis
 is_a: PATO:0002290 ! aplastic/hypoplastic
+is_a: PATO:0002291 ! agenesis
+intersection_of: PATO:0002290 ! aplastic/hypoplastic
+intersection_of: PATO:0002291 ! agenesis
 
 [Term]
 id: PATO:0001484
@@ -13816,8 +13816,8 @@ alt_id: PATO:0000419
 alt_id: PATO:0000468
 def: "An amount which is relatively low." [PATOC:GVG]
 synonym: "decreased" RELATED []
-synonym: "present in fewer numbers in organism" EXACT []
 synonym: "decreased number" EXACT []
+synonym: "present in fewer numbers in organism" EXACT []
 synonym: "reduced" RELATED []
 synonym: "subnumerary" RELATED []
 is_a: PATO:0000467 ! present
@@ -14997,7 +14997,7 @@ name: multiple
 def: "A quality inhering in a bearer by virtue of the bearer's being present in more than two copies." [PATOC:GVG]
 subset: mpath_slim
 subset: value_slim
-is_a: PATO:0000470 ! present in greater numbers in organism
+is_a: PATO:0000470 ! increased amount
 created_by: george
 creation_date: 2009-10-06T03:28:38Z
 
@@ -19180,7 +19180,7 @@ def: "A variability quality inhering in the bearer by virtue of the bearer havin
 subset: value_slim
 synonym: "variable number" RELATED []
 is_a: PATO:0001303 ! variability
-relationship: towards PATO:0000070 ! count
+relationship: towards PATO:0000070 ! amount
 created_by: wasila.dahdul
 creation_date: 2014-09-09T12:27:33Z
 
@@ -19460,7 +19460,7 @@ created_by: cjm
 id: PATO:0020000
 name: genotypic sex
 def: "A biological sex quality inhering in an individual based upon genotypic composition of sex chromosomes." [PATOC:MAH]
-comment: Note that the chromosomal constitution of genotypic sex varies in different organisms. In human, we have XY, XX, though abnormal XXY, X0, XYY, and other combinations are possible. 
+comment: Note that the chromosomal constitution of genotypic sex varies in different organisms. In human, we have XY, XX, though abnormal XXY, X0, XYY, and other combinations are possible.
 is_a: PATO:0000047 ! biological sex
 created_by: mah
 
@@ -19468,7 +19468,7 @@ created_by: mah
 id: PATO:0020001
 name: male genotypic sex
 def: "A biological sex quality inhering in an individual based upon genotypic composition that confers the capability for an organism to differentiate male gonads." [PATOC:MAH]
-comment: Note that the chromosomal constitution of genotypic sex varies in different organisms. In human, this would be XY, though abnormal XXY and XYY would also result in a male phenotypic outcome. 
+comment: Note that the chromosomal constitution of genotypic sex varies in different organisms. In human, this would be XY, though abnormal XXY and XYY would also result in a male phenotypic outcome.
 is_a: PATO:0020000 ! genotypic sex
 created_by: mah
 
@@ -19476,9 +19476,38 @@ created_by: mah
 id: PATO:0020002
 name: female genotypic sex
 def: "A biological sex quality inhering in an individual or a population based upon genotypic composition that confers the capability for an organism to differentiate female gonads." [PATOC:MAH]
-comment: Note that the chromosomal constitution of genotypic sex varies in different organisms. In human, this would be XX, though abnormal X0 and XXX would also result in a female phenotypic outcome. 
+comment: Note that the chromosomal constitution of genotypic sex varies in different organisms. In human, this would be XX, though abnormal X0 and XXX would also result in a female phenotypic outcome.
 is_a: PATO:0020000 ! genotypic sex
 created_by: mah
+
+[Term]
+id: PATO:0025000
+name: potability
+def: "A physical quality inhering in a bearer by virtue of the bearer's disposition to being fit to be used as a safe means of hydration." [Wikipedia:https\://en.wikipedia.org/wiki/Drinking_water]
+synonym: "drinkability" EXACT []
+is_a: PATO:0001018 ! physical quality
+created_by: pbuttigieg
+creation_date: 2015-09-01T16:16:44Z
+
+[Term]
+id: PATO:0025001
+name: non-potable
+def: "A physical quality inhering in a bearer by virtue of the bearer not being suitable for use as a safe means of hydration." [Wikipedia:https\://en.wikipedia.org/wiki/Drinking_water]
+synonym: "undrinkable" EXACT []
+is_a: PATO:0025000 ! potability
+disjoint_from: PATO:0025002 ! potable
+created_by: pbuttigieg
+creation_date: 2015-09-01T16:18:57Z
+
+[Term]
+id: PATO:0025002
+name: potable
+def: "A physical quality inhering in a bearer by virtue of the bearer being suitable for use as a safe means of hydration." [Wikipedia:https\://en.wikipedia.org/wiki/Drinking_water]
+synonym: "drinkable" EXACT []
+is_a: PATO:0025000 ! potability
+disjoint_from: PATO:0025001 ! non-potable
+created_by: pbuttigieg
+creation_date: 2015-09-01T16:19:02Z
 
 [Typedef]
 id: correlates_with
