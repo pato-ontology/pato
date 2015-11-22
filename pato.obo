@@ -1,8 +1,8 @@
 format-version: 1.2
-data-version: releases/2015-04-09
-date: 12:12:2014 08:48
-saved-by: davidos
-auto-generated-by: OBO-Edit 2.3.1
+data-version: releases/2015-11-18
+date: 01:09:2015 16:30
+saved-by: pbuttigieg
+auto-generated-by: OBO-Edit 2.2
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -19637,6 +19637,26 @@ relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
 created_by: cjm
 
 [Term]
+id: PATO:0015005
+name: tendrilous
+def: "Slender and spirally coiled." [https://en.wiktionary.org/wiki/tendril]
+subset: value_slim
+synonym: "tendril-like" RELATED []
+synonym: "tendril-shaped" RELATED []
+synonym: "tendrilled" BROAD []
+is_a: PATO:0000052 ! shape
+relationship: has_part PATO:0000404 ! coiled
+relationship: has_part PATO:0002212 ! slender
+
+[Term]
+id: PATO:0015006
+name: polymeric
+def: "A quality inhering in a structure by virtue of it consisting of many of repeated, similar or identical subunits, arranged in some orderly array." [GOC:DOS, https://github.com/pato-ontology/pato/issues/78]
+comment: A complete coverage of this domain would subclasses homopolymeric, copolymeric, crystalline.
+subset: value_slim
+is_a: PATO:0000141 ! structure
+
+[Term]
 id: PATO:0020000
 name: genotypic sex
 def: "A biological sex quality inhering in an individual based upon genotypic composition of sex chromosomes." [PATOC:MAH]
@@ -19659,6 +19679,34 @@ def: "A biological sex quality inhering in an individual or a population based u
 comment: Note that the chromosomal constitution of genotypic sex varies in different organisms. In human, this would be XX, though abnormal X0 and XXX would also result in a female phenotypic outcome.
 is_a: PATO:0020000 ! genotypic sex
 created_by: mah
+
+[Term]
+id: PATO:0025000
+name: potability
+def: "A physical quality inhering in a bearer by virtue of the bearer's disposition to being fit to be used as a safe means of hydration." [Wikipedia:https\://en.wikipedia.org/wiki/Drinking_water]
+synonym: "drinkability" EXACT []
+is_a: PATO:0001018 ! physical quality
+created_by: pbuttigieg
+creation_date: 2015-09-01T16:16:44Z
+
+[Term]
+id: PATO:0025001
+name: non-potable
+def: "A physical quality inhering in a bearer by virtue of the bearer not being suitable for use as a safe means of hydration." [Wikipedia:https\://en.wikipedia.org/wiki/Drinking_water]
+synonym: "undrinkable" EXACT []
+is_a: PATO:0025000 ! potability
+disjoint_from: PATO:0025002 ! potable
+created_by: pbuttigieg
+creation_date: 2015-09-01T16:18:57Z
+
+[Term]
+id: PATO:0025002
+name: potable
+def: "A physical quality inhering in a bearer by virtue of the bearer being suitable for use as a safe means of hydration." [Wikipedia:https\://en.wikipedia.org/wiki/Drinking_water]
+synonym: "drinkable" EXACT []
+is_a: PATO:0025000 ! potability
+created_by: pbuttigieg
+creation_date: 2015-09-01T16:19:02Z
 
 [Typedef]
 id: correlates_with
@@ -19776,7 +19824,7 @@ namespace: pato.ontology
 [Typedef]
 id: part_of
 name: part_of
-xref: BFO:00000050
+xref: BFO:0000050
 is_transitive: true
 
 [Typedef]

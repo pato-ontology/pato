@@ -9,6 +9,8 @@ TARGETS = pato.obo pato.owl imports
 copy-release:
 	cp -pr $(TARGETS) ../.. && cd ../.. && git add imports/*
 
+test: all
+
 # ----------------------------------------
 # BUILD
 # ----------------------------------------
