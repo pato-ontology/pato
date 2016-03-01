@@ -139,7 +139,7 @@ is_a: PATO:0001301 ! chromatic property
 id: PATO:0000018
 name: fluorescence
 def: "A luminous flux quality inhering in a bearer by virtue of the bearer's emitting longer wavelength light following the absorption of shorter wavelength radiation; fluorescence is common with aromatic compounds with several rings joined together." [PATOC:GVG]
-subset: value_slim
+subset: attribute_slim
 is_a: PATO:0001296 ! luminous flux
 
 [Term]
@@ -3936,6 +3936,7 @@ subset: mpath_slim
 subset: value_slim
 synonym: "symmetric" EXACT []
 is_a: PATO:0000965 ! symmetry
+is_a: PATO:0000440 ! regular spatial pattern
 
 [Term]
 id: PATO:0000633
@@ -5862,7 +5863,7 @@ id: PATO:0000965
 name: symmetry
 def: "A pattern quality of inhering in a bearer by virtue of the correspondence in size, shape, and relative position of the bearer's parts on opposite sides of a dividing line or median plane or about a center or axis." [PATOC:GVG]
 subset: attribute_slim
-is_a: PATO:0000440 ! regular spatial pattern
+is_a: PATO:0000060 ! spatial pattern
 
 [Term]
 id: PATO:0000966
@@ -6111,7 +6112,8 @@ is_obsolete: true
 id: PATO:0001005
 name: latency
 def: "A time quality inhering in a bearer by virtue of the time it elapses for the bearer to respond to a stimulus." [PATOC:GVG]
-subset: attribute_slim
+comment: This class is a candidate for obsoletion. The definition is not clear, and the placement under "delayed" is not consistent with the definition.
+subset: value_slim
 is_a: PATO:0000502 ! delayed
 
 [Term]
@@ -10425,7 +10427,7 @@ is_a: PATO:0000140 ! position
 id: PATO:0001599
 name: rotated
 def: "An oriented quality inhering in a bearer by virtue of the bearer's being relocated around an axis." [answers.com:answers.com]
-subset: attribute_slim
+subset: value_slim
 subset: mpath_slim
 synonym: "rotation" EXACT []
 is_a: PATO:0000614 ! oriented
@@ -12563,7 +12565,7 @@ id: PATO:0001842
 name: acidity
 def: "A concentration quality inhering in a bearer by virtue of the bearer's containing acid (hydrogen ions)." [biology-online:biology-online]
 subset: scalar_slim
-subset: value_slim
+subset: attribute_slim
 synonym: "pH" EXACT []
 is_a: PATO:0000033 ! concentration of
 

@@ -1,0 +1,14 @@
+prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix subsets: <http://purl.obolibrary.org/obo/pato#>
+
+SELECT ?x ?xl ?y ?yl WHERE 
+{
+  ?x rdfs:subClassOf ?y .
+  ?x oboInOwl:inSubset subsets:attribute_slim .
+  ?y oboInOwl:inSubset subsets:value_slim .
+  ?x rdfs:label ?xl .
+  ?y rdfs:label ?yl
+  
+}
