@@ -522,7 +522,9 @@ subset: attribute_slim
 subset: disposition_slim
 subset: relational_slim
 subset: scalar_slim
+synonym: "response" RELATED []
 synonym: "responsivity" RELATED []
+synonym: "reactivity" RELATED [GOC:CJM]
 is_a: PATO:0001018 ! physical quality
 
 [Term]
@@ -879,6 +881,7 @@ name: structure
 alt_id: PATO:0001452
 def: "A morphology quality inhering in a bearer by virtue of the bearer's relative position, shape, arrangements and connectivity of an organism's various parts; the pattern underlying its form." [PATOC:GVG]
 subset: attribute_slim
+synonym: "conformation" BROAD [VT:1000738]
 synonym: "relational structural quality" EXACT []
 is_a: PATO:0000051 ! morphology
 
@@ -1716,7 +1719,6 @@ comment: TODO: the definition is incorrect. See absent.
 subset: value_slim
 synonym: "abolished" EXACT []
 synonym: "incomplete" RELATED []
-is_a: PATO:0000057 ! occurrence
 is_a: PATO:0002052 ! decreased occurrence
 is_a: PATO:0002324 ! offset quality
 relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
@@ -9444,6 +9446,7 @@ id: PATO:0001482
 name: prominent
 def: "A quality inhering in a bearer by virtue of the bearer's standing out or projecting beyond a surface or line." [Dictionary.com:Dictionary.com]
 subset: value_slim
+is_a: PATO:0015007 ! prominence
 is_a: PATO:0001598 ! protruding
 
 [Term]
@@ -17041,6 +17044,8 @@ creation_date: 2011-11-22T01:12:28Z
 id: PATO:0002324
 name: offset quality
 def: "The temporal relation between the end of the process with respect to a reference process." [PATOC:LC]
+synonym: "extent" RELATED [GOC:CJM]
+synonym: "completeness" RELATED [GOC:CJM]
 subset: attribute_slim
 is_a: PATO:0002323 ! temporal distribution quality
 created_by: George Gkoutos
@@ -17051,6 +17056,7 @@ id: PATO:0002325
 name: onset quality
 def: "The temporal relation between the start of the process with respect to a reference process." [PATOC:LC]
 subset: attribute_slim
+synonym: "initiation" RELATED []
 is_a: PATO:0002323 ! temporal distribution quality
 created_by: George Gkoutos
 creation_date: 2011-11-23T11:47:34Z
@@ -18423,7 +18429,7 @@ id: PATO:0002468
 name: distensible
 def: "A structure quality inhering in a bearer by virtue of the bearer's being capable of swelling or stretching." [PATOC:WD]
 subset: value_slim
-is_a: PATO:0000141 ! structure
+is_a: PATO:0015008 ! distensibility
 created_by: gkoutos
 creation_date: 2013-09-15T11:48:26Z
 
@@ -19474,6 +19480,20 @@ name: polymeric
 def: "A quality inhering in a structure by virtue of it consisting of many of repeated, similar or identical subunits, arranged in some orderly array." [https://github.com/pato-ontology/pato/issues/78, GOC:DOS]
 comment: A complete coverage of this domain would subclasses homopolymeric, copolymeric, crystalline.
 subset: value_slim
+is_a: PATO:0000141 ! structure
+
+[Term]
+id: PATO:0015007
+name: prominence
+def: "A quality inhering in a bearer by virtue of the degree to which the bearers stands out or projects beyond a surface or line." [GOC:CJM]
+subset: attribute_slim
+is_a: PATO:0000057 ! occurrence
+
+[Term]
+id: PATO:0015008
+name: distensibility
+def: "A quality inhering in a bearer by virtue of the extent to which the bearer is capable of being stretched or swollen." [GOC:CJM]
+subset: attribute_slim
 is_a: PATO:0000141 ! structure
 
 [Term]
