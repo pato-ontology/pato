@@ -84,3 +84,18 @@ mirror/clo.owl:
 mirror/ncbitaxon.owl:
 	wget $(OBO)/ncbitaxon.owl -O $@
 .PRECIOUS: mirror/%.owl
+
+# ----------------------------------------
+# Reports
+# ----------------------------------------
+REPORTS=edges basicReport
+all_reports: $(patsubst %, reports/pato-%.csv, $(REPORTS))
+
+reports/pato-%.csv: pato.owl sparql/%.sparql
+	arq --data $< --query sparql/$*.sparql --results csv > $@.tmp && mv $@.tmp $@
+
+
+## EXPERIMENTAL
+
+value_no_ldef.tsv: pato-edit.obo
+	blip-findall  -i $< "entity_partition(X,value_slim),\+genus(X,_)" -select X -label > $@
