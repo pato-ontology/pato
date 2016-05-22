@@ -19531,6 +19531,30 @@ subset: attribute_slim
 is_a: PATO:0001547 ! quality of a gas
 
 [Term]
+id: PATO:0015013
+name: degree of illumination
+def: "The degree to which the bearer is exposed to visible light." [https://github.com/pato-ontology/pato/issues/89]
+subset: attribute_slim
+is_a: PATO:0001291 ! electromagnetic (EM) radiation quality
+
+[Term]
+id: PATO:0015014
+name: increased degree of illumination
+def: "An increase in illumination." [https://github.com/pato-ontology/pato/issues/89]
+synonym: "illuminated" RELATED []
+subset: value_slim
+intersection_of: PATO:0015013 ! illumination
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+
+[Term]
+id: PATO:0015015
+name: decreased degree of illumination
+def: "An decrease in illumination." [https://github.com/pato-ontology/pato/issues/89]
+subset: value_slim
+intersection_of: PATO:0015013 ! illumination
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+
+[Term]
 id: PATO:0020000
 name: genotypic sex
 def: "A biological sex quality inhering in an individual based upon genotypic composition of sex chromosomes." [PATOC:MAH]
