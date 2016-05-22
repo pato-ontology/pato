@@ -19500,6 +19500,29 @@ subset: attribute_slim
 is_a: PATO:0000141 ! structure
 
 [Term]
+id: PATO:0015009
+name: humidity
+def: "A quality inhering in a gaseous material by virtue of the partial pressure exerted by the bearer's water vapour content." [https://github.com/pato-ontology/pato/issues/90]
+subset: attribute_slim
+is_a: PATO:0001547 ! quality of a gas
+
+[Term]
+id: PATO:0015010
+name: increased humidity
+def: "An increase in humidity." [https://github.com/pato-ontology/pato/issues/90]
+subset: value_slim
+intersection_of: PATO:0015009 ! humidity
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+
+[Term]
+id: PATO:0015011
+name: decreased humidity
+def: "An decrease in humidity." [https://github.com/pato-ontology/pato/issues/90]
+subset: value_slim
+intersection_of: PATO:0015009 ! humidity
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+
+[Term]
 id: PATO:0020000
 name: genotypic sex
 def: "A biological sex quality inhering in an individual based upon genotypic composition of sex chromosomes." [PATOC:MAH]
