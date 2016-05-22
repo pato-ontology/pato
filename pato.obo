@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2015-11-18
+data-version: releases/2016-05-22
 date: 01:09:2015 16:30
 saved-by: pbuttigieg
 auto-generated-by: OBO-Edit 2.2
@@ -140,7 +140,7 @@ is_a: PATO:0001301 ! chromatic property
 id: PATO:0000018
 name: fluorescence
 def: "A luminous flux quality inhering in a bearer by virtue of the bearer's emitting longer wavelength light following the absorption of shorter wavelength radiation; fluorescence is common with aromatic compounds with several rings joined together." [PATOC:GVG]
-subset: value_slim
+subset: attribute_slim
 is_a: PATO:0001296 ! luminous flux
 
 [Term]
@@ -326,7 +326,7 @@ is_a: PATO:0001995 ! organismal quality
 [Term]
 id: PATO:0000048
 name: hardness
-def: "A physical quality inhering in a bearer by virtue of the bearer's disposition to being turned, bowed, or twisted without breaking." [merriam-webster:merriam-webster]
+def: "A physical quality inhering in a bearer by virtue of the bearer's resistance to pressure, being broken, or pierced" [merriam-webster:merriam-webster]
 subset: attribute_slim
 subset: disposition_slim
 synonym: "impenetrability" RELATED []
@@ -523,6 +523,8 @@ subset: attribute_slim
 subset: disposition_slim
 subset: relational_slim
 subset: scalar_slim
+synonym: "reactivity" RELATED [GOC:CJM]
+synonym: "response" RELATED []
 synonym: "responsivity" RELATED []
 is_a: PATO:0001018 ! physical quality
 
@@ -880,6 +882,7 @@ name: structure
 alt_id: PATO:0001452
 def: "A morphology quality inhering in a bearer by virtue of the bearer's relative position, shape, arrangements and connectivity of an organism's various parts; the pattern underlying its form." [PATOC:GVG]
 subset: attribute_slim
+synonym: "conformation" BROAD [VT:1000738]
 synonym: "relational structural quality" EXACT []
 is_a: PATO:0000051 ! morphology
 
@@ -3953,6 +3956,7 @@ subset: cell_quality
 subset: mpath_slim
 subset: value_slim
 synonym: "symmetric" EXACT []
+is_a: PATO:0000440 ! regular spatial pattern
 is_a: PATO:0000965 ! symmetry
 
 [Term]
@@ -5883,7 +5887,7 @@ id: PATO:0000965
 name: symmetry
 def: "A pattern quality of inhering in a bearer by virtue of the correspondence in size, shape, and relative position of the bearer's parts on opposite sides of a dividing line or median plane or about a center or axis." [PATOC:GVG]
 subset: attribute_slim
-is_a: PATO:0000440 ! regular spatial pattern
+is_a: PATO:0000060 ! spatial pattern
 
 [Term]
 id: PATO:0000966
@@ -5923,7 +5927,7 @@ is_a: PATO:0000587 ! decreased size
 [Term]
 id: PATO:0000970
 name: permeability
-def: "A structural quality inhering in a bearer by virtue of the bearer's disposition to being permeated or pervaded by a liquid (as by osmosis or diffusion)." [Biology-online:Biology-online]
+def: "A structural quality inhering in a bearer by virtue of the bearer's disposition to being permeated or pervaded by a gas or liquid (as by osmosis or diffusion)." [Biology-online:Biology-online]
 subset: attribute_slim
 subset: disposition_slim
 subset: scalar_slim
@@ -5991,7 +5995,7 @@ is_obsolete: true
 [Term]
 id: PATO:0000982
 name: permeable
-def: "A permeability quality inhering in a bearer by virtue of the bearer's being capable to be permeated or pervaded by a liquid (as by osmosis or diffusion)." [Biology-online:Biology-online]
+def: "A permeability quality inhering in a bearer by virtue of the bearer's being capable to be permeated or pervaded by a gas or liquid (as by osmosis or diffusion)." [Biology-online:Biology-online]
 subset: disposition_slim
 subset: value_slim
 synonym: "porous" RELATED []
@@ -6001,7 +6005,7 @@ disjoint_from: PATO:0000983 ! impermeable
 [Term]
 id: PATO:0000983
 name: impermeable
-def: "A permeability quality inhering in a bearer by virtue of the bearer's being incapable of being permeated or pervaded by a liquid (as by osmosis or diffusion)." [Biology-online:Biology-online]
+def: "A permeability quality inhering in a bearer by virtue of the bearer's being incapable of being permeated or pervaded by a gas or liquid (as by osmosis or diffusion)." [Biology-online:Biology-online]
 subset: disposition_slim
 subset: value_slim
 is_a: PATO:0000970 ! permeability
@@ -6131,7 +6135,8 @@ is_obsolete: true
 id: PATO:0001005
 name: latency
 def: "A time quality inhering in a bearer by virtue of the time it elapses for the bearer to respond to a stimulus." [PATOC:GVG]
-subset: attribute_slim
+comment: This class is a candidate for obsoletion. The definition is not clear, and the placement under "delayed" is not consistent with the definition.
+subset: value_slim
 is_a: PATO:0000502 ! delayed
 
 [Term]
@@ -9479,6 +9484,7 @@ name: prominent
 def: "A quality inhering in a bearer by virtue of the bearer's standing out or projecting beyond a surface or line." [Dictionary.com:Dictionary.com]
 subset: value_slim
 is_a: PATO:0001598 ! protruding
+is_a: PATO:0015007 ! prominence
 
 [Term]
 id: PATO:0001483
@@ -10478,8 +10484,8 @@ is_a: PATO:0000140 ! position
 id: PATO:0001599
 name: rotated
 def: "An oriented quality inhering in a bearer by virtue of the bearer's being relocated around an axis." [answers.com:answers.com]
-subset: attribute_slim
 subset: mpath_slim
+subset: value_slim
 synonym: "rotation" EXACT []
 is_a: PATO:0000614 ! oriented
 
@@ -12681,8 +12687,8 @@ is_a: PATO:0000049 ! intensity
 id: PATO:0001842
 name: acidity
 def: "A concentration quality inhering in a bearer by virtue of the bearer's containing acid (hydrogen ions)." [biology-online:biology-online]
+subset: attribute_slim
 subset: scalar_slim
-subset: value_slim
 synonym: "pH" EXACT []
 is_a: PATO:0000033 ! concentration of
 
@@ -13947,6 +13953,7 @@ name: decreased amount
 alt_id: PATO:0000419
 alt_id: PATO:0000468
 def: "An amount which is relatively low." [PATOC:GVG]
+subset: value_slim
 synonym: "decreased" RELATED []
 synonym: "decreased number" EXACT []
 synonym: "present in fewer numbers in organism" EXACT []
@@ -17206,6 +17213,8 @@ id: PATO:0002324
 name: offset quality
 def: "The temporal relation between the end of the process with respect to a reference process." [PATOC:LC]
 subset: attribute_slim
+synonym: "completeness" RELATED [GOC:CJM]
+synonym: "extent" RELATED [GOC:CJM]
 is_a: PATO:0002323 ! temporal distribution quality
 created_by: George Gkoutos
 creation_date: 2011-11-23T11:46:00Z
@@ -17215,6 +17224,7 @@ id: PATO:0002325
 name: onset quality
 def: "The temporal relation between the start of the process with respect to a reference process." [PATOC:LC]
 subset: attribute_slim
+synonym: "initiation" RELATED []
 is_a: PATO:0002323 ! temporal distribution quality
 created_by: George Gkoutos
 creation_date: 2011-11-23T11:47:34Z
@@ -18597,7 +18607,7 @@ id: PATO:0002468
 name: distensible
 def: "A structure quality inhering in a bearer by virtue of the bearer's being capable of swelling or stretching." [PATOC:WD]
 subset: value_slim
-is_a: PATO:0000141 ! structure
+is_a: PATO:0015008 ! distensibility
 created_by: gkoutos
 creation_date: 2013-09-15T11:48:26Z
 
@@ -19655,6 +19665,108 @@ def: "A quality inhering in a structure by virtue of it consisting of many of re
 comment: A complete coverage of this domain would subclasses homopolymeric, copolymeric, crystalline.
 subset: value_slim
 is_a: PATO:0000141 ! structure
+
+[Term]
+id: PATO:0015007
+name: prominence
+def: "A quality inhering in a bearer by virtue of the degree to which the bearers stands out or projects beyond a surface or line." [GOC:CJM]
+subset: attribute_slim
+is_a: PATO:0000057 ! occurrence
+
+[Term]
+id: PATO:0015008
+name: distensibility
+def: "A quality inhering in a bearer by virtue of the extent to which the bearer is capable of being stretched or swollen." [GOC:CJM]
+subset: attribute_slim
+is_a: PATO:0000141 ! structure
+
+[Term]
+id: PATO:0015009
+name: humidity
+def: "A quality inhering in air by virtue of the partial pressure exerted by the bearer's water vapour content." [https://github.com/pato-ontology/pato/issues/90]
+subset: attribute_slim
+is_a: PATO:0001547 ! quality of a gas
+
+[Term]
+id: PATO:0015010
+name: increased humidity
+def: "An increase in humidity." [https://github.com/pato-ontology/pato/issues/90]
+subset: value_slim
+synonym: "humid" RELATED []
+is_a: PATO:0002305 ! increased object quality
+is_a: PATO:0015009 ! humidity
+intersection_of: PATO:0015009 ! humidity
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
+
+[Term]
+id: PATO:0015011
+name: decreased humidity
+def: "An decrease in humidity." [https://github.com/pato-ontology/pato/issues/90]
+subset: value_slim
+is_a: PATO:0002303 ! decreased object quality
+is_a: PATO:0015009 ! humidity
+intersection_of: PATO:0015009 ! humidity
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+
+[Term]
+id: PATO:0015012
+name: quality of a plasma
+def: "A physical quality inhering in a bearer by virtue of the bearer's exhibiting the physical characteristics of an entity consisting of roughly equal proportions of positively and negatively charged particles, having neither a defined volume nor defined shape, having internal magnetic fields, and being electrically conductive." [https://github.com/pato-ontology/pato/issues/88]
+subset: attribute_slim
+is_a: PATO:0001547 ! quality of a gas
+
+[Term]
+id: PATO:0015013
+name: degree of illumination
+def: "The degree to which the bearer is exposed to visible light." [https://github.com/pato-ontology/pato/issues/89]
+subset: attribute_slim
+is_a: PATO:0001291 ! electromagnetic (EM) radiation quality
+
+[Term]
+id: PATO:0015014
+name: increased degree of illumination
+def: "An increase in illumination." [https://github.com/pato-ontology/pato/issues/89]
+subset: value_slim
+synonym: "illuminated" RELATED []
+is_a: PATO:0002305 ! increased object quality
+is_a: PATO:0015013 ! degree of illumination
+intersection_of: PATO:0015013 ! degree of illumination
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
+
+[Term]
+id: PATO:0015015
+name: decreased degree of illumination
+def: "An decrease in illumination." [https://github.com/pato-ontology/pato/issues/89]
+subset: value_slim
+is_a: PATO:0002303 ! decreased object quality
+is_a: PATO:0015013 ! degree of illumination
+intersection_of: PATO:0015013 ! degree of illumination
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+
+[Term]
+id: PATO:0015016
+name: stepped
+def: "Having a shape or form that resembles a step of a stairway (e.g., a ledge or offset margin)." [http://www.thefreedictionary.com/stepped, https://github.com/pato-ontology/pato/issues/82]
+subset: value_slim
+is_a: PATO:0000052 ! shape
+
+[Term]
+id: PATO:0015017
+name: quality of a colloidal suspension
+def: "A physical quality inhering in an entity by virtue of the bearer's solid constituents being suspended in a liquid or gas, or the bearer's liquid constituents being suspended in a gas." [https://github.com/pato-ontology/pato/issues/91]
+subset: attribute_slim
+is_a: PATO:0002198 ! quality of a substance
+
+[Term]
+id: PATO:0015018
+name: quality of an aerosol
+def: "A physical quality inhering in an entity by virtue of the bearer's solid or liquid constituents being suspended in a gas." [https://github.com/pato-ontology/pato/issues/91]
+subset: attribute_slim
+is_a: PATO:0015017 ! quality of a colloidal suspension
 
 [Term]
 id: PATO:0020000
