@@ -19502,7 +19502,7 @@ is_a: PATO:0000141 ! structure
 [Term]
 id: PATO:0015009
 name: humidity
-def: "A quality inhering in a gaseous material by virtue of the partial pressure exerted by the bearer's water vapour content." [https://github.com/pato-ontology/pato/issues/90]
+def: "A quality inhering in air by virtue of the partial pressure exerted by the bearer's water vapour content." [https://github.com/pato-ontology/pato/issues/90]
 subset: attribute_slim
 is_a: PATO:0001547 ! quality of a gas
 
@@ -19510,6 +19510,7 @@ is_a: PATO:0001547 ! quality of a gas
 id: PATO:0015010
 name: increased humidity
 def: "An increase in humidity." [https://github.com/pato-ontology/pato/issues/90]
+synonym: "humid" RELATED []
 subset: value_slim
 intersection_of: PATO:0015009 ! humidity
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
@@ -19521,6 +19522,13 @@ def: "An decrease in humidity." [https://github.com/pato-ontology/pato/issues/90
 subset: value_slim
 intersection_of: PATO:0015009 ! humidity
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+
+[Term]
+id: PATO:0015012
+name: quality of a plasma
+def: "A physical quality inhering in a bearer by virtue of the bearer's exhibiting the physical characteristics of an entity consisting of roughly equal proportions of positively and negatively charged particles, having neither a defined volume nor defined shape, having internal magnetic fields, and being electrically conductive." [https://github.com/pato-ontology/pato/issues/88]
+subset: attribute_slim
+is_a: PATO:0001547 ! quality of a gas
 
 [Term]
 id: PATO:0020000
