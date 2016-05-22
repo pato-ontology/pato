@@ -5903,7 +5903,7 @@ is_a: PATO:0000587 ! decreased size
 [Term]
 id: PATO:0000970
 name: permeability
-def: "A structural quality inhering in a bearer by virtue of the bearer's disposition to being permeated or pervaded by a liquid (as by osmosis or diffusion)." [Biology-online:Biology-online]
+def: "A structural quality inhering in a bearer by virtue of the bearer's disposition to being permeated or pervaded by a gas or liquid (as by osmosis or diffusion)." [Biology-online:Biology-online]
 subset: attribute_slim
 subset: disposition_slim
 subset: scalar_slim
@@ -5971,7 +5971,7 @@ is_obsolete: true
 [Term]
 id: PATO:0000982
 name: permeable
-def: "A permeability quality inhering in a bearer by virtue of the bearer's being capable to be permeated or pervaded by a liquid (as by osmosis or diffusion)." [Biology-online:Biology-online]
+def: "A permeability quality inhering in a bearer by virtue of the bearer's being capable to be permeated or pervaded by a gas or liquid (as by osmosis or diffusion)." [Biology-online:Biology-online]
 subset: disposition_slim
 subset: value_slim
 synonym: "porous" RELATED []
@@ -5981,7 +5981,7 @@ disjoint_from: PATO:0000983 ! impermeable
 [Term]
 id: PATO:0000983
 name: impermeable
-def: "A permeability quality inhering in a bearer by virtue of the bearer's being incapable of being permeated or pervaded by a liquid (as by osmosis or diffusion)." [Biology-online:Biology-online]
+def: "A permeability quality inhering in a bearer by virtue of the bearer's being incapable of being permeated or pervaded by a gas or liquid (as by osmosis or diffusion)." [Biology-online:Biology-online]
 subset: disposition_slim
 subset: value_slim
 is_a: PATO:0000970 ! permeability
@@ -13820,6 +13820,7 @@ name: decreased amount
 alt_id: PATO:0000419
 alt_id: PATO:0000468
 def: "An amount which is relatively low." [PATOC:GVG]
+subset: value_slim
 synonym: "decreased" RELATED []
 synonym: "decreased number" EXACT []
 synonym: "present in fewer numbers in organism" EXACT []
