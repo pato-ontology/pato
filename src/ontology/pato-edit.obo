@@ -19590,6 +19590,32 @@ subset: value_slim
 is_a: PATO:0002008 ! concave 3-D shape
 
 [Term]
+id: PATO:0015021
+name: combustibility
+def: "The propensity of a material to undergo combustion. Combustion encompasses smouldering and flaming combustion. Combustibility is usually applied to solids." [https://github.com/EnvironmentOntology/envo/issues/384, https://en.wikipedia.org/wiki/Combustibility]
+comment: 
+subset: attribute_slim
+is_a: PATO:0001018 ! physical quality
+
+[Term]
+id: PATO:0015022
+name: increased combustibility
+def: "An increase in combustibility." []
+synonym: "combustible" EXACT []
+subset: value_slim
+intersection_of: PATO:0015021 ! combustibility
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+
+[Term]
+id: PATO:0015023
+name: decreased combustibility
+def: "An decrease in combustibility." []
+synonym: "noncombustible" RELATED []
+subset: value_slim
+intersection_of: PATO:0015021 ! combustibility
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+
+[Term]
 id: PATO:0020000
 name: genotypic sex
 def: "A biological sex quality inhering in an individual based upon genotypic composition of sex chromosomes." [PATOC:MAH]
