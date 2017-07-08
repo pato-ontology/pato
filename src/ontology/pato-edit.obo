@@ -20030,6 +20030,23 @@ intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0015022 ! increased combustibility
 
 [Term]
+id: PATO:0015024
+name: increased porosity
+def: "An increase in porosity." [https://github.com/pato-ontology/pato/issues/110]
+subset: value_slim
+intersection_of: PATO:0000973 ! porosity
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+
+[Term]
+id: PATO:0015025
+name: decreased porosity
+def: "An decrease in porosity." [https://github.com/pato-ontology/pato/issues/110]
+subset: value_slim
+intersection_of: PATO:0000973 ! porosity
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: opposite_of PATO:0015024 ! increased porosity
+
+[Term]
 id: PATO:0020000
 name: genotypic sex
 def: "A biological sex quality inhering in an individual based upon genotypic composition of sex chromosomes." [PATOC:MAH]
