@@ -20051,12 +20051,14 @@ id: PATO:0015026
 name: stability
 def: "quality, state, or degree of being stable." [https://github.com/pato-ontology/pato/issues/113]
 subset: attribute_slim
+subset: disposition_slim
 is_a: PATO:0000141 ! structure
 
 [Term]
 id: PATO:0015027
 name: increased stability
 def: "An increase in stability." [https://github.com/pato-ontology/pato/issues/113]
+subset: disposition_slim
 subset: value_slim
 intersection_of: PATO:0015026 ! stability
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
@@ -20065,6 +20067,7 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 id: PATO:0015028
 name: decreased stability
 def: "A decrease in stability." [https://github.com/pato-ontology/pato/issues/113]
+subset: disposition_slim
 subset: value_slim
 intersection_of: PATO:0015026 ! stability
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal

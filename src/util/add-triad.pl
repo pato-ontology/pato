@@ -63,7 +63,7 @@ $max ++;
 print "[Term]\n";
 printf "id: PATO:%07d\n", $max;
 print "name: decreased $n\n";
-print "def: \"An decrease in $n.\" [https://github.com/pato-ontology/pato/issues/$issue]\n";
+print "def: \"A decrease in $n.\" [https://github.com/pato-ontology/pato/issues/$issue]\n";
 print "subset: value_slim\n";
 print "intersection_of: $genus ! $n\n";
 print "intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal\n";
