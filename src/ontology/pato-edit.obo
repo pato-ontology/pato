@@ -20047,6 +20047,30 @@ intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: opposite_of PATO:0015024 ! increased porosity
 
 [Term]
+id: PATO:0015026
+name: stability
+def: "quality, state, or degree of being stable." [https://github.com/pato-ontology/pato/issues/113]
+subset: attribute_slim
+is_a: PATO:0000141 ! structure
+
+[Term]
+id: PATO:0015027
+name: increased stability
+def: "An increase in stability." [https://github.com/pato-ontology/pato/issues/113]
+subset: value_slim
+intersection_of: PATO:0015026 ! stability
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+
+[Term]
+id: PATO:0015028
+name: decreased stability
+def: "A decrease in stability." [https://github.com/pato-ontology/pato/issues/113]
+subset: value_slim
+intersection_of: PATO:0015026 ! stability
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: opposite_of PATO:0015027 ! increased stability
+
+[Term]
 id: PATO:0020000
 name: genotypic sex
 def: "A biological sex quality inhering in an individual based upon genotypic composition of sex chromosomes." [PATOC:MAH]
