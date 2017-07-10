@@ -3,12 +3,12 @@ USECAT= --catalog-xml catalog-v001.xml
 
 all: all_imports release
 
-ARTEFACTS = pato.obo pato.owl pato.json
+ARTEFACTS = pato.obo pato.owl pato.json pato_ext.owl pato_ext.json
 release: $(ARTEFACTS) copy-release
 
 TARGETS = $(ARTEFACTS) imports
 copy-release:
-	cp -pr $(TARGETS) ../.. && cd ../.. && git add imports/*
+	cp -pr $(TARGETS) ../..
 
 test: all
 
@@ -26,7 +26,9 @@ build/%: build/pato.owl
 pato.owl: build/pato.owl
 	cp $< $@
 pato.json: pato.owl
-	owltools $< -o -f json $@
+	owltools $(USECAT) $< -o -f json $@
+pato_ext.json: pato_ext.owl
+	owltools $(USECAT) $< -o -f json $@
 pato.obo: build/pato.owl
 	owltools $(USECAT) $< --merge-imports-closure -o -f obo $@
 pato-basic.owl: build/pato-simple.owl
