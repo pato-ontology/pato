@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 01:09:2015 16:30
-saved-by: pbuttigieg
-auto-generated-by: OBO-Edit 2.2
+date: 12:09:2016 15:47
+saved-by: segerdel
+auto-generated-by: OBO-Edit 2.3.1
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -522,9 +522,9 @@ subset: attribute_slim
 subset: disposition_slim
 subset: relational_slim
 subset: scalar_slim
+synonym: "reactivity" RELATED [GOC:CJM]
 synonym: "response" RELATED []
 synonym: "responsivity" RELATED []
-synonym: "reactivity" RELATED [GOC:CJM]
 is_a: PATO:0001018 ! physical quality
 
 [Term]
@@ -3861,10 +3861,11 @@ relationship: is_opposite_of PATO:0000613 ! disoriented
 
 [Term]
 id: PATO:0000615
-name: anterioralized
-def: "A malformed quality inhering in a bearer by virtue of the bearer's gross morphology containing only what are normally anterior structures." [PATOC:GVG]
+name: wholly anterioralized
+def: "An anterioralized quality inhering in a bearer by virtue of the bearer's gross morphology containing only what are normally anterior structures." [PATOC:GVG]
 subset: value_slim
-is_a: PATO:0000646 ! malformed
+synonym: "anterioralized" RELATED []
+is_a: PATO:0030000 ! anterioralized
 
 [Term]
 id: PATO:0000616
@@ -3902,11 +3903,12 @@ relationship: is_opposite_of PATO:0000633 ! uncrowded
 
 [Term]
 id: PATO:0000620
-name: dorsalized
-def: "A malformed quality inhering in a bearer by virtue of the bearer's gross morphology containing only what are normally dorsal structures." [PATOC:melissa]
+name: wholly dorsalized
+def: "A dorsalized quality inhering in a bearer by virtue of the bearer's gross morphology containing only what are normally dorsal structures." [PATOC:melissa]
 subset: mpath_slim
 subset: value_slim
-is_a: PATO:0000646 ! malformed
+synonym: "dorsalized" RELATED []
+is_a: PATO:0030001 ! dorsalized
 
 [Term]
 id: PATO:0000622
@@ -3983,11 +3985,12 @@ is_a: PATO:0000140 ! position
 
 [Term]
 id: PATO:0000630
-name: posterioralized
-def: "A malformed quality inhering in a bearer by virtue of the bearer's gross morphology containing only what are normally posterior structures." [PATOC:GVG]
+name: wholly posterioralized
+def: "A posterioralized quality inhering in a bearer by virtue of the bearer's gross morphology containing only what are normally posterior structures." [PATOC:GVG]
 subset: mpath_slim
 subset: value_slim
-is_a: PATO:0000646 ! malformed
+synonym: "posterioralized" RELATED []
+is_a: PATO:0030002 ! posterioralized
 
 [Term]
 id: PATO:0000631
@@ -4005,8 +4008,8 @@ subset: cell_quality
 subset: mpath_slim
 subset: value_slim
 synonym: "symmetric" EXACT []
-is_a: PATO:0000965 ! symmetry
 is_a: PATO:0000440 ! regular spatial pattern
+is_a: PATO:0000965 ! symmetry
 
 [Term]
 id: PATO:0000633
@@ -4034,11 +4037,12 @@ is_a: PATO:0000060 ! spatial pattern
 
 [Term]
 id: PATO:0000636
-name: ventralized
-def: "A malformed quality inhering in a bearer by virtue of the bearer's gross morphology containing only what are normally ventral structures." [PATOC:GVG]
+name: wholly ventralized
+def: "A ventralized quality inhering in a bearer by virtue of the bearer's gross morphology containing only what are normally ventral structures." [PATOC:GVG]
 subset: mpath_slim
 subset: value_slim
-is_a: PATO:0000646 ! malformed
+synonym: "ventralized" RELATED []
+is_a: PATO:0030003 ! ventralized
 
 [Term]
 id: PATO:0000637
@@ -9596,8 +9600,8 @@ id: PATO:0001482
 name: prominent
 def: "A quality inhering in a bearer by virtue of the bearer's standing out or projecting beyond a surface or line." [Dictionary.com:Dictionary.com]
 subset: value_slim
-is_a: PATO:0015007 ! prominence
 is_a: PATO:0001598 ! protruding
+is_a: PATO:0015007 ! prominence
 
 [Term]
 id: PATO:0001483
@@ -10608,8 +10612,8 @@ is_a: PATO:0000140 ! position
 id: PATO:0001599
 name: rotated
 def: "An oriented quality inhering in a bearer by virtue of the bearer's being relocated around an axis." [answers.com:answers.com]
-subset: value_slim
 subset: mpath_slim
+subset: value_slim
 synonym: "rotation" EXACT []
 is_a: PATO:0000614 ! oriented
 
@@ -12845,8 +12849,8 @@ is_a: PATO:0000049 ! intensity
 id: PATO:0001842
 name: acidity
 def: "A concentration quality inhering in a bearer by virtue of the bearer's containing acid (hydrogen ions)." [biology-online:biology-online]
-subset: scalar_slim
 subset: attribute_slim
+subset: scalar_slim
 synonym: "pH" EXACT []
 is_a: PATO:0000033 ! concentration of
 
@@ -16254,8 +16258,8 @@ id: PATO:0002210
 name: bulbous
 def: "A convex 3-D shape quality inhering in a bearer by virtue of the bearer's resembling a teardrop." [PATOC:GVG]
 subset: value_slim
-synonym: "bulblike" EXACT []
 synonym: "bulb-shaped" EXACT []
+synonym: "bulblike" EXACT []
 synonym: "swollen" RELATED []
 is_a: PATO:0001865 ! spheroid
 created_by: george
@@ -16513,9 +16517,9 @@ id: PATO:0002235
 name: blade-like
 def: "A tapered shape quality inhering in a bearer by virtue of the bearer's being flat, slender, and tapering to a point." [PATOC:JE]
 subset: value_slim
-synonym: "sword-like" EXACT []
 synonym: "blade-shaped" EXACT []
 synonym: "ensiform" EXACT []
+synonym: "sword-like" EXACT []
 synonym: "sword-shaped" EXACT []
 is_a: PATO:0001500 ! tapered
 created_by: george
@@ -17423,9 +17427,9 @@ creation_date: 2011-11-22T01:12:28Z
 id: PATO:0002324
 name: offset quality
 def: "The temporal relation between the end of the process with respect to a reference process." [PATOC:LC]
-synonym: "extent" RELATED [GOC:CJM]
-synonym: "completeness" RELATED [GOC:CJM]
 subset: attribute_slim
+synonym: "completeness" RELATED [GOC:CJM]
+synonym: "extent" RELATED [GOC:CJM]
 is_a: PATO:0002323 ! temporal distribution quality
 created_by: George Gkoutos
 creation_date: 2011-11-23T11:46:00Z
@@ -19878,9 +19882,9 @@ id: PATO:0015005
 name: tendrilous
 def: "Slender and spirally coiled." [https://en.wiktionary.org/wiki/tendril]
 subset: value_slim
-synonym: "tendrilled" BROAD []
 synonym: "tendril-like" RELATED []
 synonym: "tendril-shaped" RELATED []
+synonym: "tendrilled" BROAD []
 is_a: PATO:0000052 ! shape
 relationship: has_part PATO:0000404 ! coiled
 relationship: has_part PATO:0002212 ! slender
@@ -19888,7 +19892,7 @@ relationship: has_part PATO:0002212 ! slender
 [Term]
 id: PATO:0015006
 name: polymeric
-def: "A quality inhering in a structure by virtue of it consisting of many of repeated, similar or identical subunits, arranged in some orderly array." [https://github.com/pato-ontology/pato/issues/78, GOC:DOS]
+def: "A quality inhering in a structure by virtue of it consisting of many of repeated, similar or identical subunits, arranged in some orderly array." [GOC:DOS, https://github.com/pato-ontology/pato/issues/78]
 comment: A complete coverage of this domain would subclasses homopolymeric, copolymeric, crystalline.
 subset: value_slim
 is_a: PATO:0000141 ! structure
@@ -19918,8 +19922,8 @@ is_a: PATO:0001547 ! quality of a gas
 id: PATO:0015010
 name: increased humidity
 def: "An increase in humidity." [https://github.com/pato-ontology/pato/issues/90]
-synonym: "humid" RELATED []
 subset: value_slim
+synonym: "humid" RELATED []
 intersection_of: PATO:0015009 ! humidity
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0015011 ! decreased humidity
@@ -19951,9 +19955,9 @@ is_a: PATO:0001291 ! electromagnetic (EM) radiation quality
 id: PATO:0015014
 name: increased degree of illumination
 def: "An increase in illumination." [https://github.com/pato-ontology/pato/issues/89]
-synonym: "illuminated" RELATED []
 subset: value_slim
-intersection_of: PATO:0015013 ! illumination
+synonym: "illuminated" RELATED []
+intersection_of: PATO:0015013 ! degree of illumination
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0015015 ! decreased degree of illumination
 
@@ -19962,14 +19966,14 @@ id: PATO:0015015
 name: decreased degree of illumination
 def: "An decrease in illumination." [https://github.com/pato-ontology/pato/issues/89]
 subset: value_slim
-intersection_of: PATO:0015013 ! illumination
+intersection_of: PATO:0015013 ! degree of illumination
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0015014 ! increased degree of illumination
 
 [Term]
 id: PATO:0015016
 name: stepped
-def: "Having a shape or form that resembles a step of a stairway (e.g., a ledge or offset margin)." [https://github.com/pato-ontology/pato/issues/82, http://www.thefreedictionary.com/stepped]
+def: "Having a shape or form that resembles a step of a stairway (e.g., a ledge or offset margin)." [http://www.thefreedictionary.com/stepped, https://github.com/pato-ontology/pato/issues/82]
 subset: value_slim
 is_a: PATO:0000052 ! shape
 
@@ -19990,14 +19994,14 @@ is_a: PATO:0015017 ! quality of a colloidal suspension
 [Term]
 id: PATO:0015019
 name: C-shaped
-def: "A concave 3-D shape quality inhering in a bearer by virtue of the bearer's being shaped in the form of the letter C." [https://github.com/pato-ontology/pato/issues/96, github:mah11]
+def: "A concave 3-D shape quality inhering in a bearer by virtue of the bearer's being shaped in the form of the letter C." [github:mah11, https://github.com/pato-ontology/pato/issues/96]
 subset: value_slim
 is_a: PATO:0002008 ! concave 3-D shape
 
 [Term]
 id: PATO:0015020
 name: J-shaped
-def: "A concave 3-D shape quality inhering in a bearer by virtue of the bearer's being shaped in the form of the letter J." [https://github.com/pato-ontology/pato/issues/96, github:mah11]
+def: "A concave 3-D shape quality inhering in a bearer by virtue of the bearer's being shaped in the form of the letter J." [github:mah11, https://github.com/pato-ontology/pato/issues/96]
 subset: value_slim
 is_a: PATO:0002008 ! concave 3-D shape
 
@@ -20100,6 +20104,62 @@ disjoint_from: PATO:0025001 ! non-potable
 created_by: pbuttigieg
 creation_date: 2015-09-01T16:19:02Z
 relationship: is_opposite_of PATO:0025001 ! non-potable
+
+[Term]
+id: PATO:0030000
+name: anterioralized
+def: "A malformed quality inhering in a bearer by virtue of the bearer's gross morphology containing what are normally anterior structures and missing some or all of what are normally posterior structures." [PATOC:EJS]
+is_a: PATO:0000646 ! malformed
+created_by: segerdel
+
+[Term]
+id: PATO:0030001
+name: dorsalized
+def: "A malformed quality inhering in a bearer by virtue of the bearer's gross morphology containing what are normally dorsal structures and missing some or all of what are normally ventral structures." [PATOC:EJS]
+is_a: PATO:0000646 ! malformed
+created_by: segerdel
+
+[Term]
+id: PATO:0030002
+name: posterioralized
+def: "A malformed quality inhering in a bearer by virtue of the bearer's gross morphology containing what are normally posterior structures and missing some or all of what are normally anterior structures." [PATOC:EJS]
+is_a: PATO:0000646 ! malformed
+created_by: segerdel
+
+[Term]
+id: PATO:0030003
+name: ventralized
+def: "A malformed quality inhering in a bearer by virtue of the bearer's gross morphology containing what are normally ventral structures and missing some or all of what are normally dorsal structures." [PATOC:EJS]
+is_a: PATO:0000646 ! malformed
+created_by: segerdel
+
+[Term]
+id: PATO:0030004
+name: partially anterioralized
+def: "An anterioralized quality inhering in a bearer by virtue of the bearer's gross morphology containing what are normally anterior structures and missing some but not all of what are normally posterior structures." [PATOC:EJS]
+is_a: PATO:0030000 ! anterioralized
+created_by: segerdel
+
+[Term]
+id: PATO:0030005
+name: partially dorsalized
+def: "A dorsalized quality inhering in a bearer by virtue of the bearer's gross morphology containing what are normally dorsal structures and missing some but not all of what are normally ventral structures." [PATOC:EJS]
+is_a: PATO:0030001 ! dorsalized
+created_by: segerdel
+
+[Term]
+id: PATO:0030006
+name: partially posterioralized
+def: "A posterioralized quality inhering in a bearer by virtue of the bearer's gross morphology containing what are normally posterior structures and missing some but not all of what are normally anterior structures." [PATOC:EJS]
+is_a: PATO:0030002 ! posterioralized
+created_by: segerdel
+
+[Term]
+id: PATO:0030007
+name: partially ventralized
+def: "A ventralized quality inhering in a bearer by virtue of the bearer's gross morphology containing what are normally ventral structures and missing some but not all of what are normally dorsal structures." [PATOC:EJS]
+is_a: PATO:0030003 ! ventralized
+created_by: segerdel
 
 [Typedef]
 id: correlates_with
