@@ -1,289 +1,87 @@
 format-version: 1.2
-ontology: file:/imports/pco_import.owl
-property_value: http://purl.org/dc/elements/1.1/source http://purl.obolibrary.org/obo/pco/releases/2014-05-22/pco.owl
+ontology: urn:absolute:/imports/pco_import.owl
+
+[Term]
+id: BFO:0000001
+name: entity
+
+[Term]
+id: BFO:0000002
+name: continuant
+is_a: BFO:0000001 ! entity
+disjoint_from: BFO:0000003 ! occurrent
+
+[Term]
+id: BFO:0000003
+name: occurrent
+is_a: BFO:0000001 ! entity
+
+[Term]
+id: BFO:0000004
+name: independent continuant
+is_a: BFO:0000002 ! continuant
+disjoint_from: BFO:0000020 ! specifically dependent continuant
+
+[Term]
+id: BFO:0000020
+name: specifically dependent continuant
+is_a: BFO:0000002 ! continuant
+
+[Term]
+id: BFO:0000027
+name: object aggregate
+is_a: BFO:0000040 ! material entity
+
+[Term]
+id: BFO:0000040
+name: material entity
+is_a: BFO:0000004 ! independent continuant
 
 [Term]
 id: CARO:0001010
 name: organism or virus or viroid
-is_a: MaterialEntity ! material_entity
+is_a: PCO:0000031 ! organismal entity
 
 [Term]
-id: ConnectedSpatiotemporalRegion
-name: connected_spatiotemporal_region
-is_a: SpatiotemporalRegion ! spatiotemporal_region
-union_of: SpatiotemporalInstant ! spatiotemporal_instant
-union_of: SpatiotemporalInterval ! spatiotemporal_interval
-disjoint_from: ScatteredSpatiotemporalRegion ! scattered_spatiotemporal_region
+id: PATO:0000001
+name: quality
 
 [Term]
-id: ConnectedTemporalRegion
-name: connected_temporal_region
-is_a: TemporalRegion ! temporal_region
-union_of: TemporalInstant ! temporal_instant
-union_of: TemporalInterval ! temporal_interval
-disjoint_from: ScatteredTemporalRegion ! scattered_temporal_region
+id: PATO:0001241
+name: physical object quality
+is_a: PATO:0000001 ! quality
 
 [Term]
-id: Continuant
-name: continuant
-is_a: Entity ! entity
-union_of: DependentContinuant ! dependent_continuant
-union_of: IndependentContinuant ! independent_continuant
-union_of: SpatialRegion ! spatial_region
-disjoint_from: Occurrent ! occurrent
-
-[Term]
-id: DependentContinuant
-name: dependent_continuant
-is_a: Continuant ! continuant
-union_of: GenericallyDependentContinuant ! generically_dependent_continuant
-union_of: SpecificallyDependentContinuant ! specifically_dependent_continuant
-disjoint_from: IndependentContinuant ! independent_continuant
-disjoint_from: SpatialRegion ! spatial_region
-
-[Term]
-id: Entity
-name: entity
-union_of: Continuant ! continuant
-union_of: Occurrent ! occurrent
-
-[Term]
-id: FiatObjectPart
-name: fiat_object_part
-is_a: MaterialEntity ! material_entity
-disjoint_from: Object ! object
-disjoint_from: ObjectAggregate ! object_aggregate
-disjoint_from: ObjectBoundary ! object_boundary
-disjoint_from: Site ! site
-
-[Term]
-id: FiatProcessPart
-name: fiat_process_part
-is_a: ProcessualEntity ! processual_entity
-disjoint_from: Process ! process
-disjoint_from: ProcessAggregate ! process_aggregate
-disjoint_from: ProcessBoundary ! process_boundary
-disjoint_from: ProcessualContext ! processual_context
-
-[Term]
-id: GenericallyDependentContinuant
-name: generically_dependent_continuant
-is_a: DependentContinuant ! dependent_continuant
-disjoint_from: SpecificallyDependentContinuant ! specifically_dependent_continuant
-
-[Term]
-id: IndependentContinuant
-name: independent_continuant
-is_a: Continuant ! continuant
-union_of: MaterialEntity ! material_entity
-union_of: ObjectBoundary ! object_boundary
-union_of: Site ! site
-disjoint_from: SpatialRegion ! spatial_region
-
-[Term]
-id: MaterialEntity
-name: material_entity
-is_a: IndependentContinuant ! independent_continuant
-union_of: FiatObjectPart ! fiat_object_part
-union_of: Object ! object
-union_of: ObjectAggregate ! object_aggregate
-disjoint_from: ObjectBoundary ! object_boundary
-disjoint_from: Site ! site
-
-[Term]
-id: Object
-name: object
-is_a: MaterialEntity ! material_entity
-disjoint_from: ObjectAggregate ! object_aggregate
-disjoint_from: ObjectBoundary ! object_boundary
-disjoint_from: Site ! site
-
-[Term]
-id: ObjectAggregate
-name: object_aggregate
-is_a: MaterialEntity ! material_entity
-disjoint_from: ObjectBoundary ! object_boundary
-disjoint_from: Site ! site
-
-[Term]
-id: ObjectBoundary
-name: object_boundary
-is_a: IndependentContinuant ! independent_continuant
-disjoint_from: Site ! site
-
-[Term]
-id: Occurrent
-name: occurrent
-is_a: Entity ! entity
-union_of: ProcessualEntity ! processual_entity
-union_of: SpatiotemporalRegion ! spatiotemporal_region
-union_of: TemporalRegion ! temporal_region
-
-[Term]
-id: OneDimensionalRegion
-name: one_dimensional_region
-is_a: SpatialRegion ! spatial_region
-disjoint_from: ThreeDimensionalRegion ! three_dimensional_region
-disjoint_from: TwoDimensionalRegion ! two_dimensional_region
-disjoint_from: ZeroDimensionalRegion ! zero_dimensional_region
-
-[Term]
-id: PATO:0001236
-name: process quality
-is_a: Quality ! quality
+id: PATO:0002003
+name: population quality
+is_a: PATO:0001241 ! physical object quality
 
 [Term]
 id: PCO:0000000
 name: collection of organisms
-is_a: ObjectAggregate ! object_aggregate
+is_a: BFO:0000027 ! object aggregate
+is_a: PCO:0000031 ! organismal entity
 
 [Term]
 id: PCO:0000001
-name: population
-is_a: PCO:0000018 ! collection of organisms of the same species
+name: population of organisms
+is_a: PCO:0000018 ! single-species collection of organisms
 
 [Term]
 id: PCO:0000003
-name: population quality
-is_a: Quality ! quality
+name: quality of a population
+is_a: BFO:0000020 ! specifically dependent continuant
+is_a: PATO:0002003 ! population quality
 
 [Term]
 id: PCO:0000018
-name: collection of organisms of the same species
+name: single-species collection of organisms
 is_a: PCO:0000000 ! collection of organisms
 
 [Term]
-id: Process
-name: process
-is_a: ProcessualEntity ! processual_entity
-disjoint_from: ProcessAggregate ! process_aggregate
-disjoint_from: ProcessBoundary ! process_boundary
-disjoint_from: ProcessualContext ! processual_context
-
-[Term]
-id: ProcessAggregate
-name: process_aggregate
-is_a: ProcessualEntity ! processual_entity
-disjoint_from: ProcessBoundary ! process_boundary
-disjoint_from: ProcessualContext ! processual_context
-
-[Term]
-id: ProcessBoundary
-name: process_boundary
-is_a: ProcessualEntity ! processual_entity
-disjoint_from: ProcessualContext ! processual_context
-
-[Term]
-id: ProcessualContext
-name: processual_context
-is_a: ProcessualEntity ! processual_entity
-
-[Term]
-id: ProcessualEntity
-name: processual_entity
-is_a: Occurrent ! occurrent
-union_of: FiatProcessPart ! fiat_process_part
-union_of: Process ! process
-union_of: ProcessAggregate ! process_aggregate
-union_of: ProcessBoundary ! process_boundary
-union_of: ProcessualContext ! processual_context
-disjoint_from: SpatiotemporalRegion ! spatiotemporal_region
-disjoint_from: TemporalRegion ! temporal_region
-
-[Term]
-id: Quality
-name: quality
-is_a: SpecificallyDependentContinuant ! specifically_dependent_continuant
-disjoint_from: RealizableEntity ! realizable_entity
-
-[Term]
-id: RealizableEntity
-name: realizable_entity
-is_a: SpecificallyDependentContinuant ! specifically_dependent_continuant
-
-[Term]
-id: ScatteredSpatiotemporalRegion
-name: scattered_spatiotemporal_region
-is_a: SpatiotemporalRegion ! spatiotemporal_region
-
-[Term]
-id: ScatteredTemporalRegion
-name: scattered_temporal_region
-is_a: TemporalRegion ! temporal_region
-
-[Term]
-id: Site
-name: site
-is_a: IndependentContinuant ! independent_continuant
-
-[Term]
-id: SpatialRegion
-name: spatial_region
-is_a: Continuant ! continuant
-union_of: OneDimensionalRegion ! one_dimensional_region
-union_of: ThreeDimensionalRegion ! three_dimensional_region
-union_of: TwoDimensionalRegion ! two_dimensional_region
-union_of: ZeroDimensionalRegion ! zero_dimensional_region
-
-[Term]
-id: SpatiotemporalInstant
-name: spatiotemporal_instant
-is_a: ConnectedSpatiotemporalRegion ! connected_spatiotemporal_region
-disjoint_from: SpatiotemporalInterval ! spatiotemporal_interval
-
-[Term]
-id: SpatiotemporalInterval
-name: spatiotemporal_interval
-is_a: ConnectedSpatiotemporalRegion ! connected_spatiotemporal_region
-
-[Term]
-id: SpatiotemporalRegion
-name: spatiotemporal_region
-is_a: Occurrent ! occurrent
-union_of: ConnectedSpatiotemporalRegion ! connected_spatiotemporal_region
-union_of: ScatteredSpatiotemporalRegion ! scattered_spatiotemporal_region
-disjoint_from: TemporalRegion ! temporal_region
-
-[Term]
-id: SpecificallyDependentContinuant
-name: specifically_dependent_continuant
-is_a: DependentContinuant ! dependent_continuant
-union_of: Quality ! quality
-union_of: RealizableEntity ! realizable_entity
-
-[Term]
-id: TemporalInstant
-name: temporal_instant
-is_a: ConnectedTemporalRegion ! connected_temporal_region
-disjoint_from: TemporalInterval ! temporal_interval
-
-[Term]
-id: TemporalInterval
-name: temporal_interval
-is_a: ConnectedTemporalRegion ! connected_temporal_region
-
-[Term]
-id: TemporalRegion
-name: temporal_region
-is_a: Occurrent ! occurrent
-union_of: ConnectedTemporalRegion ! connected_temporal_region
-union_of: ScatteredTemporalRegion ! scattered_temporal_region
-
-[Term]
-id: ThreeDimensionalRegion
-name: three_dimensional_region
-is_a: SpatialRegion ! spatial_region
-disjoint_from: TwoDimensionalRegion ! two_dimensional_region
-disjoint_from: ZeroDimensionalRegion ! zero_dimensional_region
-
-[Term]
-id: TwoDimensionalRegion
-name: two_dimensional_region
-is_a: SpatialRegion ! spatial_region
-disjoint_from: ZeroDimensionalRegion ! zero_dimensional_region
-
-[Term]
-id: ZeroDimensionalRegion
-name: zero_dimensional_region
-is_a: SpatialRegion ! spatial_region
+id: PCO:0000031
+name: organismal entity
+is_a: BFO:0000040 ! material entity
+union_of: CARO:0001010 ! organism or virus or viroid
+union_of: PCO:0000000 ! collection of organisms
 
