@@ -19979,15 +19979,15 @@ is_a: PATO:0000052 ! shape
 
 [Term]
 id: PATO:0015017
-name: quality of a colloidal suspension
-def: "A physical quality inhering in an entity by virtue of the bearer's solid constituents being suspended in a liquid or gas, or the bearer's liquid constituents being suspended in a gas." [https://github.com/pato-ontology/pato/issues/91]
+name: quality of a colloid
+def: "A physical quality inhering in an entity by virtue of a portion of the bearer's molecular or polymolecular constituents present in one phase being dispersed in a portion of the bearer's constituents present in another phase." [https://github.com/pato-ontology/pato/issues/91, https://goldbook.iupac.org/html/C/C01172.html, ENVO:pb]
 subset: attribute_slim
 is_a: PATO:0002198 ! quality of a substance
 
 [Term]
 id: PATO:0015018
 name: quality of an aerosol
-def: "A physical quality inhering in an entity by virtue of the bearer's solid or liquid constituents being suspended in a gas." [https://github.com/pato-ontology/pato/issues/91]
+def: "A physical quality inhering in an entity by virtue of the bearer's solid or liquid constituents being suspended in a gas." [https://github.com/pato-ontology/pato/issues/91, ENVO:pb]
 subset: attribute_slim
 is_a: PATO:0015017 ! quality of a colloidal suspension
 
@@ -20076,6 +20076,13 @@ subset: value_slim
 intersection_of: PATO:0015026 ! stability
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: opposite_of PATO:0015027 ! increased stability
+
+[Term]
+id: PATO:0015029
+name: quality of a suspension
+def: "A physical quality inhering in an entity by virtue of the bearer's solid or liquid constituents being transiently dispersed in a solid, liquid, or gas before settling due to gravity or centrifugal forces." [https://github.com/pato-ontology/pato/issues/91, ENVO:pb]
+subset: attribute_slim
+is_a: PATO:0002198 ! quality of a substance
 
 [Term]
 id: PATO:0020000
