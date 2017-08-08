@@ -67,7 +67,7 @@ print "def: \"A decrease in $n.\" [https://github.com/pato-ontology/pato/issues/
 print "subset: value_slim\n";
 print "intersection_of: $genus ! $n\n";
 print "intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal\n";
-print "relationship: opposite_of $id ! $nI\n";
+print "relationship: is_opposite_of $id ! $nI\n";
 print "\n";
     
 print STDERR "NOW:\ngit commit -m 'added triad for $genus $n, fixes \#".$issue."' pato-edit.obo\n";
