@@ -2290,6 +2290,17 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0000381 ! decreased frequency
 
 [Term]
+id: PATO:0045087
+name: normal frequency
+def: "A frequency which is relatively normal."
+subset: value_slim
+subset: mpath_slim
+is_a: PATO:0000044 ! frequency
+is_a: PATO:0045000 ! normal rate
+intersection_of: PATO:0000044 ! frequency
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+
+[Term]
 id: PATO:0000381
 name: decreased frequency
 def: "A frequency which is relatively low." [PATOC:GVG]
@@ -3098,6 +3109,16 @@ is_a: PATO:0002304 ! increased process quality
 intersection_of: PATO:0001309 ! duration
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0000499 ! decreased duration
+
+[Term]
+id: PATO:0045084
+name: normal duration
+def: "A duration quality of a process which is relatively normal."
+subset: value_slim
+is_a: PATO:0001309 ! duration
+is_a: PATO:0045073 ! normal process quality
+intersection_of: PATO:0001309 ! duration
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
 
 [Term]
 id: PATO:0000499
@@ -5730,6 +5751,7 @@ def: "A rate which is relatively normal."
 subset: mpath_slim
 subset: value_slim
 is_a: PATO:0000161 ! rate
+is_a: PATO:0045073 ! normal process quality
 intersection_of: PATO:0000161 ! rate
 intersection_of: has_relative_magnitude PATO:0000461 ! normal
 
@@ -8380,6 +8402,16 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001311 ! decreased duration of temperature
 
 [Term]
+id: PATO:0045085
+name: normal duration of temperature
+def: "A duration quality of temperature quality of a process which is relatively normal."
+subset: value_slim
+is_a: PATO:0001310 ! duration of temperature
+is_a: PATO:0045084 ! normal duration
+intersection_of: PATO:0001310 ! duration of temperature
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+
+[Term]
 id: PATO:0001313
 name: invariant temperature
 def: "A variability quality inhering in a bearer by virtue of the bearer's lacking or not exhibiting variation of temperature." [PATO:GVG]
@@ -10382,6 +10414,17 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001552 ! decreased sensitivity of a process
 
 [Term]
+id: PATO:0045088
+name: normal sensitivity of a process
+def: "A sensitivity of a process which is relatively normal."
+subset: value_slim
+subset: relational_slim
+is_a: PATO:0001457 ! sensitivity of a process
+is_a: PATO:0045073 ! normal process quality
+intersection_of: PATO:0001457 ! sensitivity of a process
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+
+[Term]
 id: PATO:0001552
 name: decreased sensitivity of a process
 def: "A sensitivity of a process which is lower than normal or average." [PATO:GVG]
@@ -10407,6 +10450,17 @@ is_a: PATO:0001551 ! increased sensitivity of a process
 intersection_of: PATO:0001459 ! aerobic (for occurrence)
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001554 ! decreased sensitivity of a process to oxygen
+
+[Term]
+id: PATO:0045089
+name: normal sensitivity of a process to oxygen
+def: "A sensitivity of occurrent to oxygen which is relatively normal."
+subset: value_slim
+subset: disposition_slim
+is_a: PATO:0001459 ! aerobic (for occurrence)
+is_a: PATO:0045088 ! normal sensitivity of a process
+intersection_of: PATO:0001459 ! aerobic (for occurrence)
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
 
 [Term]
 id: PATO:0001554
@@ -15468,6 +15522,16 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 created_by: George Gkoutos
 creation_date: 2009-03-26T11:10:11Z
 relationship: is_opposite_of PATO:0002052 ! decreased occurrence
+
+[Term]
+id: PATO:0045086
+name: normal occurrence
+def: "An occurrence which is relatively normal."
+subset: value_slim
+is_a: PATO:0000057 ! occurrence
+is_a: PATO:0045073 ! normal process quality
+intersection_of: PATO:0000057 ! occurrence
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
 
 [Term]
 id: PATO:0002052
