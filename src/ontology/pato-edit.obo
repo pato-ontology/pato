@@ -10700,18 +10700,6 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001575 ! decreased pressure
 
 [Term]
-id: PATO:0045044
-name: normal pressure
-def: "A pressure which is relatively normal or average"
-subset: value_slim
-is_a: PATO:0045001 ! normal object quality
-is_a: PATO:0001025 ! pressure
-intersection_of: PATO:0001025 ! pressure
-intersection_of: has_relative_magnitude PATO:0000461 ! normal
-created_by: Luke Slater
-creation_date: 2017-12-22T14:16:43Z
-
-[Term]
 id: PATO:0001577
 name: increased permeability
 def: "A permeability which is relatively high." [PATO:GVG]
@@ -12599,10 +12587,24 @@ def: "A radioactivity which is relatively normal or average"
 subset: value_slim
 is_a: PATO:0045001 ! normal object quality
 is_a: PATO:0001741 ! radioactive
+intersection_of: PATO:0001741 ! radioactive
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
+id: PATO:0045044
+name: normal pressure
+def: "A pressure which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0001025 ! pressure
 intersection_of: PATO:0001025 ! pressure
 intersection_of: has_relative_magnitude PATO:0000461 ! normal
 created_by: Luke Slater
 creation_date: 2017-12-22T14:16:43Z
+
+
 
 [Term]
 id: PATO:0001743
@@ -13355,19 +13357,6 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001817 ! decreased fatigability
 
 [Term]
-id: PATO:0045065
-name: normal fatigability
-def: "A fatigability which is relatively normal or average"
-subset: value_slim
-subset: disposition_slim
-is_a: PATO:0045064 ! normal strength
-is_a: PATO:0001815 ! fatigability
-intersection_of: PATO:0001815 ! fatigability
-intersection_of: has_relative_magnitude PATO:0000461 ! normal
-created_by: Luke Slater
-creation_date: 2017-12-22T14:16:43Z
-
-[Term]
 id: PATO:0001817
 name: decreased fatigability
 def: "A fatigability which is relatively low." [PATOC:GVG]
@@ -13379,6 +13368,19 @@ is_a: PATO:0001815 ! fatigability
 intersection_of: PATO:0001815 ! fatigability
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001816 ! increased fatigability
+
+[Term]
+id: PATO:0045065
+name: normal fatigability
+def: "A fatigability which is relatively normal or average"
+subset: value_slim
+subset: disposition_slim
+is_a: PATO:0045064 ! normal strength
+is_a: PATO:0001815 ! fatigability
+intersection_of: PATO:0001815 ! fatigability
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0001818
