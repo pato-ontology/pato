@@ -1773,6 +1773,18 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0000304 ! decreased speed
 
 [Term]
+id: PATO:0045063
+name: normal speed
+def: "A speed which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0000008 ! speed
+intersection_of: PATO:0000008 ! speed
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0000304
 name: decreased speed
 def: "A speed which is relatively low." [PATOC:GVG]
@@ -3520,6 +3532,18 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0000569 ! decreased height
 
 [Term]
+id: PATO:0045053
+name: normal height
+def: "A height which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045050 ! normal size
+is_a: PATO:0000119 ! height
+intersection_of: PATO:0000119 ! height
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0000571
 name: obsolete absolute length value
 is_obsolete: true
@@ -3540,6 +3564,18 @@ is_a: PATO:0000586 ! increased size
 intersection_of: PATO:0000122 ! length
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0000574 ! decreased length
+
+[Term]
+id: PATO:0045054
+name: normal length 
+def: "A length quality which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045050 ! normal size
+is_a: PATO:0000122 ! length
+intersection_of: PATO:0000122 ! length
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0000574
@@ -3645,6 +3681,18 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0000587 ! decreased size
 
 [Term]
+id: PATO:0045050
+name: normal size
+def: "A size quality which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0000117 ! size
+intersection_of: PATO:0000117 ! size
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0000587
 name: decreased size
 def: "A size quality which is relatively low." [PATOC:GVG]
@@ -3695,6 +3743,18 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0000592 ! decreased thickness
 
 [Term]
+id: PATO:0045059
+name: normal thickness
+def: "A thickness which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045050 ! normal size
+is_a: PATO:0000915 ! thickness
+intersection_of: PATO:0000915 ! thickness
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0000592
 name: decreased thickness
 def: "A thickness which is relatively low." [PATOC:GVG]
@@ -3732,6 +3792,19 @@ is_a: PATO:0000918 ! volume
 intersection_of: PATO:0000918 ! volume
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0000596 ! decreased volume
+
+[Term]
+id: PATO:0045060
+name: normal volume
+def: "A volume which is relatively normal or average"
+subset: mpath_slim
+subset: value_slim
+is_a: PATO:0045050 ! normal size
+is_a: PATO:0000918 ! volume
+intersection_of: PATO:0000918 ! volume
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0000596
@@ -3782,6 +3855,18 @@ is_a: PATO:0000921 ! width
 intersection_of: PATO:0000921 ! width
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0000599 ! decreased width
+
+[Term]
+id: PATO:0045061
+name: normal width
+def: "A width which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045050 ! normal size
+is_a: PATO:0000921 ! width
+intersection_of: PATO:0000921 ! width
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0000601
@@ -4489,6 +4574,20 @@ is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0000152 ! threshold
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0000708 ! decreased threshold
+
+[Term]
+id: PATO:0045069
+name: normal threshold
+def: "A threshold which is relatively normal or average"
+subset: value_slim
+subset: disposition_slim
+subset: relational_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0000152 ! threshold
+intersection_of: PATO:0000152 ! threshold
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0000708
@@ -8174,6 +8273,18 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001306 ! decreased temperature
 
 [Term]
+id: PATO:0045067
+name: normal temperature
+def: "A temperature which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0000146 ! temperature
+intersection_of: PATO:0000146 ! temperature
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0001306
 name: decreased temperature
 alt_id: PATO:0000677
@@ -8199,6 +8310,19 @@ is_a: PATO:0002303 ! decreased object quality
 intersection_of: PATO:0001314 ! variant temperature
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001308 ! increased variability of temperature
+
+[Term]
+id: PATO:0045078
+name: normal variability of temperature
+def: "A variability of temperature which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0045073 ! normal process quality
+is_a: PATO:0001314 ! variant temperature
+intersection_of: PATO:0001314 ! variant temperature
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0001308
@@ -9599,6 +9723,18 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001476 ! decreased position
 
 [Term]
+id: PATO:0045040
+name: normal position
+def: "A position which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0000140 ! position
+intersection_of: PATO:0000140 ! position
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0001476
 name: decreased position
 def: "A positional which is relatively low." [PATOC:GVG]
@@ -10203,6 +10339,20 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001550 ! decreased sensitivity toward
 
 [Term]
+id: PATO:0045049
+name: normal sensitivity toward
+def: "A sensitivity toward an external stimulus which is relatively normal or average"
+subset: value_slim
+subset: relational_slim
+subset: disposition_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0000516 ! sensitive toward
+intersection_of: PATO:0000516 ! sensitive toward
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0001550
 name: decreased sensitivity toward
 def: "A sensitivity toward an external stimulus which is lower than normal/average." [PATO:GVG]
@@ -10439,6 +10589,18 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001575 ! decreased pressure
 
 [Term]
+id: PATO:0045044
+name: normal pressure
+def: "A pressure which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0001025 ! pressure
+intersection_of: PATO:0001025 ! pressure
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0001577
 name: increased permeability
 def: "A permeability which is relatively high." [PATO:GVG]
@@ -10559,6 +10721,19 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001583 ! decreased variability
 
 [Term]
+id: PATO:0045074
+name: normal variability
+def: "A variability which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0045073 ! normal process quality
+is_a: PATO:0001227 ! variant
+intersection_of: PATO:0001227 ! variant
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0001585
 name: conductivity
 def: "A physical quality inhering in a bearer by virtue of the bearer's disposition to transmit of an entity through a medium." [PATOC:GVG]
@@ -10588,6 +10763,19 @@ is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0001586 ! variability of rate
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001588 ! decreased variability of rate
+
+[Term]
+id: PATO:0045076
+name: normal variability of rate
+def: "A variability of rate which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0045073 ! normal process quality
+is_a: PATO:0001586 ! variability of rate
+intersection_of: PATO:0001586 ! variability of rate
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0001588
@@ -10687,6 +10875,18 @@ is_a: PATO:0001595 ! depth
 intersection_of: PATO:0001595 ! depth
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001472 ! decreased depth
+
+[Term]
+id: PATO:0045052
+name: normal depth
+def: "A depth quality which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045050 ! normal size
+is_a: PATO:0001595 ! depth
+intersection_of: PATO:0001595 ! depth
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0001597
@@ -10835,6 +11035,19 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001613 ! decreased variability of color
 
 [Term]
+id: PATO:0045075
+name: normal variability of color
+def: "A variability which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0045073 ! normal process quality
+is_a: PATO:0001615 ! variant color
+intersection_of: PATO:0001615 ! variant color
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0001613
 name: decreased variability of color
 def: "A variability of color which is relatively low." [PATO:GVG]
@@ -10886,6 +11099,19 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001619 ! decreased tonicity
 
 [Term]
+id: PATO:0045071
+name: normal tonicity
+def: "A tonicity which is relatively normal or average"
+subset: value_slim
+subset: disposition_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0001439 ! tonicity
+intersection_of: PATO:0001439 ! tonicity
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0001619
 name: decreased tonicity
 def: "A tonicity which is relatively low." [PATO:GVG]
@@ -10931,6 +11157,19 @@ is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0001620 ! turgor
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001621 ! decreased turgor
+
+[Term]
+id: PATO:0045072
+name: normal turgor
+def: "A turgor which is relatively normal or average"
+subset: cell_quality
+subset: value_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0001620 ! turgor
+intersection_of: PATO:0001620 ! turgor
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0001623
@@ -11150,6 +11389,20 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001651 ! decreased resistance to
 
 [Term]
+id: PATO:0045047
+name: normal resistance to
+def: "A resistance to a stimulus which is relatively normal or average"
+subset: value_slim
+subset: relational_slim
+subset: disposition_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0001178 ! resistant to
+intersection_of: PATO:0001178 ! resistant to
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0001651
 name: decreased resistance to
 def: "A resistance to a stimulus which is relatively low." [PATOC:GVG]
@@ -11300,6 +11553,20 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001664 ! decreased solubility
 
 [Term]
+id: PATO:0045062
+name: normal solubility
+def: "A solubility which is relatively normal or average"
+subset: value_slim
+subset: disposition_slim
+subset: relational_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0001537 ! soluble in
+intersection_of: PATO:0001537 ! soluble in
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0001664
 name: decreased solubility
 def: "A solubility which is relatively low." [PATO:GVG]
@@ -11361,6 +11628,20 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001670 ! decreased susceptibility toward
 
 [Term]
+id: PATO:0045066
+name: normal susceptibility toward
+def: "A susceptibility toward an external stimulus which is relatively normal or average"
+subset: value_slim
+subset: disposition_slim
+subset: relational_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0001152 ! susceptible toward
+intersection_of: PATO:0001152 ! susceptible toward
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0001670
 name: decreased susceptibility toward
 def: "A susceptibility toward an external stimulus which is lower than normal/average." [PATOC:GVG]
@@ -11386,6 +11667,18 @@ is_a: PATO:0001566 ! distributed
 intersection_of: PATO:0001566 ! distributed
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001672 ! decreased distribution
+
+[Term]
+id: PATO:0045042
+name: normal distribution
+def: "A distribution which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045040 ! normal position
+is_a: PATO:0001566 ! distributed
+intersection_of: PATO:0001566 ! distributed
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0001672
@@ -11583,6 +11876,18 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001689 ! decreased elevation
 
 [Term]
+id: PATO:0045043
+name: normal elevation
+def: "An elevation which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045040 ! normal position
+is_a: PATO:0001687 ! elevation
+intersection_of: PATO:0001687 ! elevation
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0001689
 name: decreased elevation
 def: "An elevation which is relatively low." [PATOC:GVG]
@@ -11627,6 +11932,18 @@ is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0000998 ! viscous
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001694 ! decreased viscosity
+
+[Term]
+id: PATO:0045081
+name: normal viscosity
+def: "A viscosity which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0000998 ! viscous
+intersection_of: PATO:0000998 ! viscous
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0001694
@@ -11707,6 +12024,20 @@ is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0000547 ! photosensitive
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001697 ! decreased photosensitivity
+
+[Term]
+id: PATO:0045038
+name: normal photosensitivity
+def: "A photosensitivity which is relatively normal or average"
+subset: disposition_slim
+subset: relational_slim
+subset: value_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0000547 ! photosensitive
+intersection_of: PATO:0000547 ! photosensitive
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0001699
@@ -11827,6 +12158,18 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001713 ! decreased perimeter
 
 [Term]
+id: PATO:0045057
+name: normal perimeter
+def: "A perimeter which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045054 ! normal length
+is_a: PATO:0001711 ! perimeter
+intersection_of: PATO:0001711 ! perimeter
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0001713
 name: decreased perimeter
 def: "A perimeter which is relatively low." [PATOC:GVG]
@@ -11847,6 +12190,18 @@ is_a: PATO:0001334 ! diameter
 intersection_of: PATO:0001334 ! diameter
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001715 ! decreased diameter
+
+[Term]
+id: PATO:0045055
+name: normal diameter
+def: "A diameter which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045054 ! normal length
+is_a: PATO:0001334 ! diameter
+intersection_of: PATO:0001334 ! diameter
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0001715
@@ -12125,6 +12480,18 @@ is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0001741 ! radioactive
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001743 ! decreased radioactivity
+
+[Term]
+id: PATO:0045045
+name: normal radioactivity
+def: "A radioactivity which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0001741 ! radioactive
+intersection_of: PATO:0001025 ! pressure
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0001743
@@ -12462,6 +12829,18 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001779 ! decreased strength
 
 [Term]
+id: PATO:0045064
+name: normal strength
+def: "A strength which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0001230 ! strength
+intersection_of: PATO:0001230 ! strength
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0001779
 name: decreased strength
 def: "A strength which is relatively low." [PATOC:GVG]
@@ -12779,6 +13158,19 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001807 ! decreased sensitivity to irradiation
 
 [Term]
+id: PATO:0045048
+name: normal sensitivity to irradiation
+def: "A sensitivity to irradiation which is relatively normal or average"
+subset: value_slim
+subset: disposition_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0001806 ! sensitivity to irradiation
+intersection_of: PATO:0001806 ! sensitivity to irradiation
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0001809
 name: tight
 def: "A pattern quality inhering in a bearer by virtue of the bearer's being compact or dense in arrangement." [PATOC:GVG]
@@ -12848,6 +13240,19 @@ is_a: PATO:0001815 ! fatigability
 intersection_of: PATO:0001815 ! fatigability
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001817 ! decreased fatigability
+
+[Term]
+id: PATO:0045065
+name: normal fatigability
+def: "A fatigability which is relatively normal or average"
+subset: value_slim
+subset: disposition_slim
+is_a: PATO:0045064 ! normal strength
+is_a: PATO:0001815 ! fatigability
+intersection_of: PATO:0001815 ! fatigability
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0001817
@@ -12928,6 +13333,18 @@ is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0001823 ! wet
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001826 ! decreased wetness
+
+[Term]
+id: PATO:0045083
+name: normal wetness
+def: "A wetness which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0001823 ! wet
+intersection_of: PATO:0001823 ! wet
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0001826
@@ -13719,6 +14136,18 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001899 ! decreased circumference
 
 [Term]
+id: PATO:0045058
+name: normal circumference
+def: "A circumference which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045057 ! normal perimeter
+is_a: PATO:0001648 ! circumference
+intersection_of: PATO:0001648 ! circumference
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0001899
 name: decreased circumference
 def: "A circumference which is relatively low." [PATOC:GVG]
@@ -14199,6 +14628,19 @@ is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0001956 ! variability of size
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001957 ! decreased variability of size
+
+[Term]
+id: PATO:0045077
+name: normal variability of size
+def: "A variability of size which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0045073 ! normal process quality
+is_a: PATO:0001956 ! variability of size
+intersection_of: PATO:0001956 ! variability of size
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0001959
@@ -14932,6 +15374,18 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0002042 ! decreased anterior-posterior diameter
 
 [Term]
+id: PATO:0045056
+name: normal anterior-posterior diameter
+def: "An anterior-posterior diameter which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045055 ! normal diameter
+is_a: PATO:0002041 ! anterior-posterior diameter
+intersection_of: PATO:0002041 ! anterior-posterior diameter
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0002044
 name: trapezoid
 def: "A shape quality inhering in a bearer by virtue of the bearer's being a quadrilateral with two parallel sides." [PATOC:GVG]
@@ -15101,6 +15555,18 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 created_by: George Gkoutos
 creation_date: 2009-03-30T04:11:43Z
 relationship: is_opposite_of PATO:0002058 ! decreased area
+
+[Term]
+id: PATO:0045051
+name: normal area
+def: "An area which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045050 ! normal size
+is_a: PATO:0001323 ! area
+intersection_of: PATO:0001323 ! area
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0002058
@@ -16020,6 +16486,19 @@ creation_date: 2009-10-30T03:30:39Z
 relationship: is_opposite_of PATO:0002145 ! decreased radiopacity
 
 [Term]
+id: PATO:0045046
+name: normal radiopacity
+def: "A radiopacity which is relatively normal or average"
+subset: value_slim
+subset: disposition_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0002136 ! radiopacity
+intersection_of: PATO:0002136 ! radiopacity
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0002145
 name: decreased radiopacity
 def: "A radiopacity that is relatively low." [PATOC:GVG]
@@ -16069,6 +16548,18 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 created_by: george
 creation_date: 2009-10-30T05:13:10Z
 relationship: is_opposite_of PATO:0002147 ! reduced virulence
+
+[Term]
+id: PATO:0045080
+name: normal virulence
+def: "A virulence which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0002146 ! virulence
+intersection_of: PATO:0002146 ! virulence
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0002149
@@ -16782,6 +17273,18 @@ creation_date: 2010-07-09T01:51:52Z
 relationship: is_opposite_of PATO:0002222 ! decreased phosphorylation
 
 [Term]
+id: PATO:0045037
+name: normal phosphorylation
+def: "A quality inhering in a bearer by virtue of the bearer's being phosphorylated to a normal or average extent."
+subset: value_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0002220 ! phosphorylated
+intersection_of: PATO:0002220 ! phosphorylated
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0002222
 name: decreased phosphorylation
 def: "A quality inhering in a bearer by virtue of the bearer's being phosphorylated to a lesser than normal extent, or less than fully." [Wikipedia:http\://en.wiktionary.org/wiki/hypophosphorylated]
@@ -17088,7 +17591,7 @@ relationship: is_opposite_of PATO:0002248 ! pigmented
 [Term]
 id: PATO:0002250
 name: increased pigmentation
-def: "A degree of pigmentation quality that is relative high." [PATOC:GVG]
+def: "A degree of pigmentation quality that is relatively high." [PATOC:GVG]
 subset: mpath_slim
 subset: value_slim
 synonym: "hyperpigmented" EXACT []
@@ -17099,6 +17602,19 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 created_by: george
 creation_date: 2010-08-09T04:17:19Z
 relationship: is_opposite_of PATO:0002251 ! decreased pigmentation
+
+[Term]
+id: PATO:0045039
+name: normal pigmentation
+def: "A degree of pigmentation quality which is relatively normal or average"
+subset: mpath_slim
+subset: value_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0002248 ! pigmented
+intersection_of: PATO:0002248 ! pigmented
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0002251
@@ -17691,6 +18207,16 @@ creation_date: 2011-06-16T06:53:08Z
 relationship: is_opposite_of PATO:0002302 ! decreased process quality
 
 [Term]
+id: PATO:0045073
+name: normal process quality
+def: "A quality of aprocess that has a value that is normal or average."
+is_a: PATO:0001236 ! process quality
+intersection_of: PATO:0001236 ! process quality
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-21T14:11:01Z
+
+[Term]
 id: PATO:0002305
 name: increased object quality
 def: "A quality of an object that has a value that is increased compared to normal or average." [PATOC:GVG]
@@ -17922,6 +18448,19 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 created_by: George Gkoutos
 creation_date: 2011-11-23T12:06:38Z
 relationship: is_opposite_of PATO:0002328 ! decreased angle to
+
+[Term]
+id: PATO:0045041
+name: normal angle to
+def: "An angle which is relatively normal or average"
+subset: value_slim
+subset: relational_slim
+is_a: PATO:0045040 ! normal position
+is_a: PATO:0002326 ! angle
+intersection_of: PATO:0002326 ! angle
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0002328
@@ -18269,6 +18808,18 @@ creation_date: 2012-03-16T06:31:57Z
 relationship: is_opposite_of PATO:0002362 ! decreased tendency
 
 [Term]
+id: PATO:0045068
+name: normal tendency
+def: "A tendency which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0002360 ! tendency
+intersection_of: PATO:0002360 ! tendency
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0002362
 name: decreased tendency
 def: "A tendency which is relatively low." [PATOC:GVG]
@@ -18473,6 +19024,18 @@ creation_date: 2012-07-05T03:18:03Z
 relationship: is_opposite_of PATO:0002383 ! decreased waxiness
 
 [Term]
+id: PATO:0045082
+name: normal waxiness
+def: "A waxiness which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0002381 ! waxiness
+intersection_of: PATO:0002381 ! waxiness
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
 id: PATO:0002383
 name: decreased waxiness
 def: "A waxiness which is relatively low." []
@@ -18584,6 +19147,19 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 created_by: gkoutos
 creation_date: 2012-11-15T05:32:07Z
 relationship: is_opposite_of PATO:0002394 ! decreased tolerance to
+
+[Term]
+id: PATO:0045070
+name: normal tolerance to
+def: "A tolerance to an external stimulus which is relatively normal or average"
+subset: value_slim
+subset: relational_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0000515 ! tolerant to
+intersection_of: PATO:0000515 ! tolerant to
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0002394
@@ -19335,6 +19911,18 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 created_by: gkoutos
 creation_date: 2013-09-15T12:03:45Z
 relationship: is_opposite_of PATO:0002472 ! decreased velocity
+
+[Term]
+id: PATO:0045079
+name: normal velocity
+def: "A velocity which is relatively normal or average"
+subset: value_slim
+is_a: PATO:0045001 ! normal object quality
+is_a: PATO:0002242 ! velocity
+intersection_of: PATO:0002242 ! velocity
+intersection_of: has_relative_magnitude PATO:0000461 ! normal
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
 
 [Term]
 id: PATO:0002472
