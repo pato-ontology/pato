@@ -2170,6 +2170,63 @@ is_a: PATO:0000039 ! direction
 relationship: is_opposite_of PATO:0000370 ! up
 
 [Term]
+id: PATO:0000365
+name: down
+def: "A directional quality inhering in a bearer by virtue of the bearer's direction from a higher to a lower point." [PATOC:GVG]
+subset: value_slim
+is_a: PATO:0000039 ! direction
+relationship: is_opposite_of PATO:0000370 ! up
+
+[Term]
+id: PATO:0045090
+name: cardinal direction
+def: "The four cardinal directions or cardinal points are the directions north, east, south, and west, commonly denoted by their initials, N, E, S, W. East and west are at right angles to north and south, with east being in the clockwise direction of rotation from north and west being directly opposite east." [Wikipedia:http\://en.wikipedia.org/wiki/Cardinal_direction]
+subset: value_slim
+is_a: PATO:0000039 ! direction
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+
+[Term]
+id: PATO:0045091
+name: north
+def: "North is one of the four compass points or cardinal directions. It is the opposite of south and is perpendicular to east and west." [Wikipedia:http\://en.wikipedia.org/wiki/North]
+subset: value_slim
+is_a: PATO:0045090 ! cardinal direction
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+relationship: is_opposite_of PATO:0045093 ! south
+
+[Term]
+id: PATO:0045092
+name: east
+def: "East is one of the four cardinal directions or points of the compass. It is the opposite direction from west." [Wikipedia:http\://en.wikipedia.org/wiki/East]
+subset: value_slim
+is_a: PATO:0045090 ! cardinal direction
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+relationship: is_opposite_of PATO:0045094 ! west
+
+[Term]
+id: PATO:0045093
+name: south
+def: "South is one of the four cardinal directions or compass points. South is the polar opposite of north and is perpendicular to east and west." [Wikipedia:http\://en.wikipedia.org/wiki/South]
+subset: value_slim
+is_a: PATO:0045090 ! cardinal direction
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+relationship: is_opposite_of PATO:0045091 ! north
+
+[Term]
+id: PATO:0045094
+name: west
+def: "West is one of the four cardinal directions or points of the compass. It is the opposite direction from east." [Wikipedia:http\://en.wikipedia.org/wiki/West]
+subset: value_slim
+is_a: PATO:0045090 ! cardinal direction
+created_by: Luke Slater
+creation_date: 2017-12-22T14:16:43Z
+relationship: is_opposite_of PATO:0045092 ! east
+
+[Term]
 id: PATO:0000366
 name: left
 def: "A directional quality inhering in a bearer by virtue of the bearer's direction that is similar to the direction of an object to the north when it faces east." [PATOC:GVG]
