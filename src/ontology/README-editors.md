@@ -28,15 +28,6 @@ These are stored in the file
  * [pato-idranges.owl](pato-idranges.owl)
 
 ** ONLY USE IDs WITHIN YOUR RANGE!! **
-
-## Setting ID ranges in OBO-Edit
-
-In the Metadata menu, select the ID manager option. You can set the ID range of any 
-profile you create here by clicking on the settings icon (cog wheels) next to the profile 
-name. In the window that appears, you can set the ID range by editing the default rule: 
-"ID:$sequence(<number of digits>,<minimum of range>,<maximum of range>)$"
-Thus, "PATO:$sequence(8,2000000,2999999)$" will set a range of 8 digit IDs from 200000 
-to 2999999.  
  
 ## Git Quick Guide
 
