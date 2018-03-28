@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2018-02-07
+data-version: releases/2018-03-28
 date: 07:02:2018 10:27
 saved-by: segerdel
 auto-generated-by: OBO-Edit 2.3.1
@@ -15,7 +15,6 @@ subsetdef: scalar_slim "Scalar slim"
 subsetdef: value_slim "Value slim"
 default-namespace: quality
 ontology: pato
-owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\n\n\nAnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PATO_0015021> \"\"^^xsd:string)\n)
 
 [Term]
 id: PATO:0000000
@@ -1134,7 +1133,7 @@ is_a: PATO:0001995 ! organismal quality
 id: PATO:0000187
 name: obsolete consumption quality
 def: "A relational quality of occurrent inhering in a bearer by virtue of the bearer's ability to consume a resource." [PATOC:GVG]
-comment: Use GO:0007631 ! feeding behavior plus PATO instead.
+comment: Use GO:0007631
 subset: attribute_slim
 subset: relational_slim
 synonym: "propensity to consume" RELATED []
@@ -3905,6 +3904,7 @@ id: PATO:0000617
 name: bent
 def: "A shape quality inhering in a bearer by virtue of the bearer's having one or more angle(s) in its length." [PATOC:MAH]
 subset: value_slim
+synonym: "angled" EXACT []
 is_a: PATO:0000052 ! shape
 
 [Term]
@@ -4836,7 +4836,7 @@ is_obsolete: true
 id: PATO:0000767
 name: obsolete increased consumption
 def: "A consumption which is relatively high." [PATOC:GVG]
-comment: Use GO:0007631 ! feeding behavior plus PATO instead.
+comment: Use GO:0007631
 subset: relational_slim
 subset: value_slim
 synonym: "high consumption" EXACT []
@@ -4847,7 +4847,7 @@ is_obsolete: true
 id: PATO:0000768
 name: obsolete decreased consumption
 def: "A consumption which is relatively low." [PATOC:GVG]
-comment: Use GO:0007631 ! feeding behavior plus PATO instead.
+comment: Use GO:0007631
 subset: relational_slim
 subset: value_slim
 synonym: "decreased propensity to consume" RELATED []
@@ -12721,8 +12721,8 @@ def: "A fatigability which is relatively high." [PATOC:GVG]
 subset: disposition_slim
 subset: value_slim
 synonym: "high fatigability" EXACT []
+is_a: PATO:0001779 ! decreased strength
 is_a: PATO:0001815 ! fatigability
-is_a: PATO:1778
 relationship: is_opposite_of PATO:0001817 ! decreased fatigability
 
 [Term]
@@ -14349,7 +14349,7 @@ is_a: PATO:0001241 ! physical object quality
 id: PATO:0002004
 name: obsolete surface shape
 def: "A shape that inheres in a part of a surface. An object can have different surface shapes on different parts of its surface." [PATOC:CJM]
-comment: Consider PATO:0001925 ! surface feature share
+comment: Consider PATO:0001925
 subset: attribute_slim
 is_obsolete: true
 

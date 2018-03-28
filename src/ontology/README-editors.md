@@ -35,24 +35,26 @@ TODO add instructions here
 
 ## Release Manager notes
 
+First you should have docker installed. This release pipeline uses the obolibrary/osk container on dockerhub.
+
 You should only attempt to make a release AFTER the edit version is
 committed and pushed, and the travis build passes.
 
 to release:
 
     cd src/ontology
-    make
+    ./run make
 
 If this looks good type:
 
-    make release
+    ./run make release
 
 This generates derived files such as pato.owl and pato.obo and places
 them in the top level (../..). The versionIRI will be added.
 
 Commit and push these files.
 
-    git commit -a
+    git commit -a -m 'new release'
 
 And type a brief description of the release in the editor window
 

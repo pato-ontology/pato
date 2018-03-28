@@ -7056,7 +7056,6 @@
           "val" : "The propensity of a material to undergo combustion. Combustion encompasses smouldering and flaming combustion. Combustibility is usually applied to solids.",
           "xrefs" : [ "https://en.wikipedia.org/wiki/Combustibility", "https://github.com/EnvironmentOntology/envo/issues/384" ]
         },
-        "comments" : [ "" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -14776,7 +14775,7 @@
           "val" : "A consumption which is relatively high.",
           "xrefs" : [ "PATOC:GVG" ]
         },
-        "comments" : [ "Use GO:0007631 ! feeding behavior plus PATO instead." ],
+        "comments" : [ "Use GO:0007631" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#relational_slim", "http://purl.obolibrary.org/obo/pato#value_slim" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -14885,7 +14884,7 @@
           "val" : "A consumption which is relatively low.",
           "xrefs" : [ "PATOC:GVG" ]
         },
-        "comments" : [ "Use GO:0007631 ! feeding behavior plus PATO instead." ],
+        "comments" : [ "Use GO:0007631" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#relational_slim", "http://purl.obolibrary.org/obo/pato#value_slim" ],
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
@@ -20624,7 +20623,7 @@
           "val" : "A shape that inheres in a part of a surface. An object can have different surface shapes on different parts of its surface.",
           "xrefs" : [ "PATOC:CJM" ]
         },
-        "comments" : [ "Consider PATO:0001925 ! surface feature share" ],
+        "comments" : [ "Consider PATO:0001925" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -27660,6 +27659,11 @@
           "xrefs" : [ "PATOC:MAH" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "angled",
+          "xrefs" : [ ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -32890,7 +32894,7 @@
           "val" : "A relational quality of occurrent inhering in a bearer by virtue of the bearer's ability to consume a resource.",
           "xrefs" : [ "PATOC:GVG" ]
         },
-        "comments" : [ "Use GO:0007631 ! feeding behavior plus PATO instead." ],
+        "comments" : [ "Use GO:0007631" ],
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim", "http://purl.obolibrary.org/obo/pato#relational_slim" ],
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
@@ -53313,6 +53317,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001865"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001816",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001779"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001581",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0002303"
@@ -54993,10 +55001,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000133"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0001816",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_1778"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002254",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001591"
@@ -56285,7 +56289,7 @@
         "pred" : "http://www.geneontology.org/formats/oboInOwl#saved-by",
         "val" : "segerdel"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/pato/releases/2018-02-07/pato.owl"
+      "version" : "http://purl.obolibrary.org/obo/pato/releases/2018-03-28/pato.owl"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ {
