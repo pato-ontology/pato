@@ -58,10 +58,12 @@ Commit and push these files.
 
 And type a brief description of the release in the editor window
 
+    git push origin master
+
 IMMEDIATELY AFTERWARDS (do *not* make further modifications) go here:
 
- * https://github.com/obophenotype/pato/releases
- * https://github.com/obophenotype/pato/releases/new
+ * https://github.com/pato-ontology/pato/releases
+ * https://github.com/pato-ontology/pato/releases/new
 
 The value of the "Tag version" field MUST be
 
@@ -69,7 +71,7 @@ The value of the "Tag version" field MUST be
 
 The initial lowercase "v" is REQUIRED. The YYYY-MM-DD *must* match
 what is in the versionIRI of the derived pato.owl (data-version in
-pato.obo).
+pato.obo). Note - docker is GMT, so the date may be the next day depending on which time zone you are in. 
 
 Release title should be YYYY-MM-DD, optionally followed by a title (e.g. "january release")
 
@@ -82,9 +84,11 @@ BOTH ontology purls and versioned ontology purls will resolve to the
 correct ontologies. Try it!
 
  * http://purl.obolibrary.org/obo/pato.owl <-- current ontology PURL
- * http://purl.obolibrary.org/obo/pato/releases/YYYY-MM-DD.owl <-- change to the release you just made
 
-For questions on this contact Chris Mungall or email obo-admin AT obofoundry.org
+ Publish the release in GitHub. Then check the file using the link below.
+ * http://purl.obolibrary.org/obo/pato/releases/YYYY-MM-DD/pato.owl <-- change to the release you just made
+
+For questions on this contact Chris Mungall or email Nicole Vasilevsky at vasilevs @ ohsu.edu
 
 # Travis Continuous Integration System
 
