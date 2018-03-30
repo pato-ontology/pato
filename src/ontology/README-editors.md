@@ -35,7 +35,7 @@ TODO add instructions here
 
 ## Release Manager notes
 
-First you should have docker installed. This release pipeline uses the obolibrary/osk container on dockerhub.
+First you should have [docker](https://www.docker.com/get-docker) installed. This release pipeline uses the obolibrary/osk container on dockerhub.
 
 You should only attempt to make a release AFTER the edit version is
 committed and pushed, and the travis build passes.
