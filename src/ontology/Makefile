@@ -58,18 +58,20 @@ pato-basic.obo: pato-basic.owl
 PATO_IMPORTS_BASE_URI = $(OBO)/pato
 
 # Ontology dependencies
-IMPORTS = uberon go pco ro
+# Add back 'uberon' if PATO references Uberon terms in the future. Currently it causes a ROBOT error
+# to perform an `extract` resulting in an empty ontology.
+IMPORTS = go pco ro
 
 # Make this target to regenerate ALL
 all_imports: $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_import.obo,$(IMPORTS))
 
-KEEPRELS = BFO:0000050 BFO:0000051 RO:0002202 immediate_transformation_of
+KEEPRELS = http://purl.obolibrary.org/obo/BFO_0000050 http://purl.obolibrary.org/obo/BFO_0000051 http://purl.obolibrary.org/obo/RO_0002202 http://purl.obolibrary.org/obo/RO_0002495
 
 # Create an import module using the OWLAPI module extraction code via OWLTools.
 # We use the standard catalog, but rewrite the import to X to be a local mirror of ALL of X.
 # After extraction, we further reduce the ontology by creating a "mingraph" (removes all annotations except label) and by 
 imports/%_import.owl: mirror/%.owl imports/terms.txt
-	robot extract -i $< -T imports/terms.txt --method BOT -O $(BASE)/$@ -o $@
+	robot extract -i $< -T imports/terms.txt --method BOT -O $(PATO_IMPORTS_BASE_URI)/$@ -o $@
 
 imports/%_import.obo: imports/%_import.owl
 	owltools $(USECAT) $< -o -f obo $@
@@ -78,7 +80,7 @@ imports/%_import.obo: imports/%_import.owl
 mirror/%.owl: 
 	owltools $(OBO)/$*.owl --remove-annotation-assertions -l --remove-dangling-annotations  --make-subset-by-properties -f $(KEEPRELS)  -o $@
 mirror/ro.owl: 
-	owltools $(OBO)/$*.owl --remove-annotation-assertions -l  -o $@
+	owltools $(OBO)/ro.owl --remove-annotation-assertions -l  -o $@
 mirror/uberon.owl:
 	owltools $(OBO)/uberon/basic.owl --remove-annotation-assertions -l -s -d --remove-axiom-annotations --remove-dangling-annotations --make-subset-by-properties -f $(KEEPRELS) --set-ontology-id $(OBO)/uberon.owl -o $@
 .PRECIOUS: mirror/uberon.owl
