@@ -80,7 +80,7 @@ imports/%_import.obo: imports/%_import.owl
 mirror/%.owl: 
 	owltools $(OBO)/$*.owl --remove-annotation-assertions -l --remove-dangling-annotations  --make-subset-by-properties -f $(KEEPRELS)  -o $@
 mirror/ro.owl: 
-	owltools $(OBO)/$*.owl --remove-annotation-assertions -l  -o $@
+	owltools $(OBO)/ro.owl --remove-annotation-assertions -l  -o $@
 mirror/uberon.owl:
 	owltools $(OBO)/uberon/basic.owl --remove-annotation-assertions -l -s -d --remove-axiom-annotations --remove-dangling-annotations --make-subset-by-properties -f $(KEEPRELS) --set-ontology-id $(OBO)/uberon.owl -o $@
 .PRECIOUS: mirror/uberon.owl
