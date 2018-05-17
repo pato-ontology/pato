@@ -63,7 +63,7 @@ IMPORTS = uberon go pco ro
 # Make this target to regenerate ALL
 all_imports: $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_import.obo,$(IMPORTS))
 
-KEEPRELS = BFO:0000050 BFO:0000051 RO:0002202 immediate_transformation_of
+KEEPRELS = http://purl.obolibrary.org/obo/BFO_0000050 http://purl.obolibrary.org/obo/BFO_0000051 http://purl.obolibrary.org/obo/RO_0002202 http://purl.obolibrary.org/obo/RO_0002495
 
 # Create an import module using the OWLAPI module extraction code via OWLTools.
 # We use the standard catalog, but rewrite the import to X to be a local mirror of ALL of X.
