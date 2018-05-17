@@ -58,7 +58,9 @@ pato-basic.obo: pato-basic.owl
 PATO_IMPORTS_BASE_URI = $(OBO)/pato
 
 # Ontology dependencies
-IMPORTS = uberon go pco ro
+# Add back 'uberon' if PATO references Uberon terms in the future. Currently it causes a ROBOT error
+# to perform an `extract` resulting in an empty ontology.
+IMPORTS = go pco ro
 
 # Make this target to regenerate ALL
 all_imports: $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_import.obo,$(IMPORTS))
