@@ -1132,7 +1132,7 @@ is_a: PATO:0001995 ! organismal quality
 id: PATO:0000187
 name: obsolete consumption quality
 def: "A relational quality of occurrent inhering in a bearer by virtue of the bearer's ability to consume a resource." [PATOC:GVG]
-comment: Use GO:0007631 ! feeding behavior plus PATO instead.
+comment: Use GO:0007631
 subset: attribute_slim
 subset: relational_slim
 synonym: "propensity to consume" RELATED []
@@ -4806,7 +4806,7 @@ is_obsolete: true
 id: PATO:0000767
 name: obsolete increased consumption
 def: "A consumption which is relatively high." [PATOC:GVG]
-comment: Use GO:0007631 ! feeding behavior plus PATO instead.
+comment: Use GO:0007631
 subset: relational_slim
 subset: value_slim
 synonym: "high consumption" EXACT []
@@ -4817,7 +4817,7 @@ is_obsolete: true
 id: PATO:0000768
 name: obsolete decreased consumption
 def: "A consumption which is relatively low." [PATOC:GVG]
-comment: Use GO:0007631 ! feeding behavior plus PATO instead.
+comment: Use GO:0007631
 subset: relational_slim
 subset: value_slim
 synonym: "decreased propensity to consume" RELATED []
@@ -14200,7 +14200,7 @@ is_a: PATO:0001241 ! physical object quality
 id: PATO:0002004
 name: obsolete surface shape
 def: "A shape that inheres in a part of a surface. An object can have different surface shapes on different parts of its surface." [PATOC:CJM]
-comment: Consider PATO:0001925 ! surface feature share
+comment: Consider PATO:0001925
 subset: attribute_slim
 is_obsolete: true
 
@@ -16760,6 +16760,7 @@ alt_id: PATO:0001771
 def: "A spatial quality inhering in a bearer by virtue of the bearer's being located near in space in relation to another entity." [PATOC:GVG]
 subset: relational_slim
 subset: value_slim
+synonym: "approaches" EXACT []
 synonym: "close to" EXACT []
 synonym: "near to" EXACT []
 synonym: "vicinity of" EXACT []
