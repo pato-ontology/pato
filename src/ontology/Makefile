@@ -3,7 +3,7 @@ USECAT= --catalog-xml catalog-v001.xml
 
 all: all_imports release
 
-ARTEFACTS = pato.obo pato.owl pato.json pato_ext.owl pato_ext.json
+ARTEFACTS = pato.obo pato.owl pato.json pato_ext.owl pato_ext.json pato-component.owl pato-component.obo pato-component.json
 release: $(ARTEFACTS) copy-release
 
 TARGETS = $(ARTEFACTS) imports
@@ -38,6 +38,14 @@ pato-basic.obo: pato-basic.owl
 
 %-obocheck: %.obo
 	obo2obo $< -o $@
+
+pato_ext-no-imports.owl: pato_ext.owl
+	owltools $(USECAT) $< --remove-imports-declarations -o $@
+pato-component.owl: pato-edit.obo pato_ext-no-imports.owl
+	owltools $^ --merge-support-ontologies --set-ontology-id $(OBO)/pato/$@ -o $@
+
+pato-component.%: pato-component.owl
+	robot convert -i $< -o $@
 
 # ----------------------------------------
 # Regenerate imports
