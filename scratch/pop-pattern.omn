@@ -1,0 +1,97 @@
+Ontology: <http://x.org>
+Prefix: : <http://x.org/>
+
+## Generic
+Class: IndependentContinuant
+Class: DependentContinuant DisjointWith: IndependentContinuant
+ObjectProperty: inheres_in Domain: DependentContinuant Range: IndependentContinuant Characteristics: Functional
+ObjectProperty: part_of Characteristics: Transitive, Reflexive
+ObjectProperty: has_part InverseOf: part_of
+        
+# more specific that located-in, every IC occupies exactly one IC that is its location
+# a single region of space can thus be thelocation for 2 distinct ICs
+ObjectProperty: occupies Domain: IndependentContinuant Range: IndependentContinuant Characteristics: Functional
+
+        
+## Populations
+ObjectProperty: has_member Domain: Population Range: IndependentContinuant
+Class: Population SubClassOf: IndependentContinuant
+DataProperty: member_count Domain: Population Characteristics: Functional
+Class: EmptyPopulation EquivalentTo: Population and member_count value 0
+Class: ProperPopulation EquivalentTo: Population and not EmptyPopulation
+
+Class: Quality SubClassOf: DependentContinuant
+Class: Quantity SubClassOf: Quality, has_quantity_value exactly 1 QuantityValue
+Class: QuantityValue   ## equiv to qudt class of same name? https://github.com/pato-ontology/pato/issues/101
+Class: Unit ## equiv to qudt class of same name?
+ObjectProperty: has_quantity_value Domain: Quantity Range: QuantityValue Characteristics: Functional
+ObjectProperty: has_unit Domain: QuantityValue Range: Unit Characteristics: Functional
+DataProperty: has_numeric_value Domain: QuantityValue Characteristics: Functional
+Class: EmptyQuantity EquivalentTo: Quantity and has_quantity_value some (has_numeric_value value 0)
+        
+#Class: Magnitude ValuePartition: ZERO or LOW or NORMAL or HIGH
+        
+# Cells
+Class: Cell
+Class: TCell SubClassOf: Cell
+
+# Pop Pattern
+# here we use has-memmber-some; only may be more correct.
+# however, this renders all empty populations equivalent!
+Class: TCellPop EquivalentTo: Population and has_member some TCell
+Class: CellPop EquivalentTo: Population and has_member some Cell
+
+Class: EmptyTCellPop EquivalentTo: TCellPop and member_count value 0
+Class: EmptyCellPop EquivalentTo: CellPop and member_count value 0
+        
+# Anatomy
+
+Class: Organism
+Class: Liquid
+Class: Blood SubClassOf: Liquid, part_of some Organism
+Class: Mouth SubClassOf: part_of some Organism
+Class: Tooth SubClassOf: part_of some Mouth
+Class: Jaw SubClassOf: part_of some Mouth
+Class: LowerJaw SubClassOf: part_of some Jaw
+Class: UpperJaw SubClassOf: part_of some Jaw
+        
+Class: BloodCellPop EquivalentTo: CellPop and occupies some Blood
+Class: BloodTCellPop EquivalentTo: TCellPop and occupies some Blood
+        
+# Qualities
+        
+Class: Amount SubClassOf: Quantity
+Class: DecreasedAmount SubClassOf: Amount
+Class: IncreasedAmount SubClassOf: Amount
+        ## EquivalentTo: Amount and has_decreased_magnitude_relative_to some
+Class: Absent SubClassOf: DecreasedAmount
+        EquivalentTo: Amount and inheres_in some (Population and member_count value 0)
+
+# Examples
+# To test, run makefile to get inferences, manually examine to see if hierarchy is as expected
+# todo: proper test framework        
+
+Class: IncreasedBloodCellPop EquivalentTo: IncreasedAmount and inheres_in some BloodCellPop
+Class: IncreasedBloodTCellPop EquivalentTo: IncreasedAmount and inheres_in some BloodTCellPop
+
+Class: DecreasedBloodCellPop EquivalentTo: DecreasedAmount and inheres_in some BloodCellPop
+Class: DecreasedBloodTCellPop EquivalentTo: DecreasedAmount and inheres_in some BloodTCellPop
+
+Class: AbsentBloodCellPop EquivalentTo: Absent and inheres_in some BloodCellPop
+Class: AbsentBloodTCellPop EquivalentTo: Absent and inheres_in some BloodTCellPop
+
+Class: AbsentBloodTCellPop2 EquivalentTo: Absent and inheres_in some (Population and occupies some Blood and has_member some TCell)
+Class: AbsentBloodTCellPop3 EquivalentTo: Amount and inheres_in some (Population and occupies some Blood and has_member some TCell and member_count value 0)
+Class: AbsentBloodTCellPop4 EquivalentTo: Amount and inheres_in some (EmptyTCellPop and occupies some Blood)
+
+# We should always state an occupies
+Class: AbsentTCellPop EquivalentTo: Absent and inheres_in some (TCellPop)
+Class: AbsentTCellPop2 EquivalentTo: Absent and inheres_in some (Population and has_member some TCell)
+Class: AbsentTCellPop3 EquivalentTo: Amount and inheres_in some (Population and has_member some TCell and member_count value 0)
+Class: AbsentTCellPop4 EquivalentTo: Amount and inheres_in some (EmptyTCellPop)
+
+Class: MissingAllTeeth EquivalentTo: Absent and inheres_in some (Population and occupies some Jaw and has_member some Tooth)        
+Class: MissingUpperTeeth EquivalentTo: Absent and inheres_in some (Population and occupies some UpperJaw and has_member some Tooth)        
+Class: MissingSomeTeeth EquivalentTo: Absent and inheres_in some (Population and occupies some (part_of some Jaw) and has_member some Tooth)        
+        
+
