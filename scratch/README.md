@@ -2,6 +2,15 @@
 
 ## Population Pattern
 
+We often want to use PATO to make expressions like
+
+ - increased adipose tissue (in X)
+ - decreased population/count of T-cells (in X)
+ - decreasd number of teeth teeth
+    - missing some teeth from whole mouth
+        - missing all teeth from lower jaw
+    - missing all teeth from whole mouth
+
 See replacing towards modeling:
 https://docs.google.com/document/d/1SxtqEN8K6_aDdiUAULa70nXG02XPvioTxE4c2JCAyf4/edit?ts=5b20ef69#heading=h.eznq5h29ad0w
 
