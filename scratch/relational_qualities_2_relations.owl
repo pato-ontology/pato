@@ -1,0 +1,161 @@
+Prefix: : <http://fu.bar/tmp#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+Ontology: <http://www.semanticweb.org/davidos/ontologies/2018/5/relational_qualities_2_relations.owl>
+
+
+AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#creation_date>
+
+    
+AnnotationProperty: <ttp://www.geneontology.org/formats/oboInOwl#created_by>
+
+    
+AnnotationProperty: rdfs:label
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:dateTime
+
+    
+Datatype: xsd:string
+
+    
+ObjectProperty: <http://fu.bar/tmp_#R>
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#creation_date> "2018-06-13T09:37:47Z"^^xsd:dateTime,
+        rdfs:label "R"@en,
+        <ttp://www.geneontology.org/formats/oboInOwl#created_by> "dos"^^xsd:string
+    
+    
+ObjectProperty: has_increased_amount_of
+
+    Annotations: 
+        <ttp://www.geneontology.org/formats/oboInOwl#created_by> "dos"^^xsd:string,
+        <http://www.geneontology.org/formats/oboInOwl#creation_date> "2018-06-12T18:25:48Z"^^xsd:dateTime,
+        rdfs:label "has_increased_amount_of"@en
+    
+    SubPropertyOf: 
+        <http://fu.bar/tmp_#R>
+    
+    
+ObjectProperty: inheres_in
+
+    Annotations: 
+        rdfs:label "inheres_in"@en,
+        <http://www.geneontology.org/formats/oboInOwl#creation_date> "2018-06-12T18:27:46Z"^^xsd:dateTime,
+        <ttp://www.geneontology.org/formats/oboInOwl#created_by> "dos"^^xsd:string
+    
+    
+ObjectProperty: towards
+
+    Annotations: 
+        <ttp://www.geneontology.org/formats/oboInOwl#created_by> "dos"^^xsd:string,
+        rdfs:label "towards"@en,
+        <http://www.geneontology.org/formats/oboInOwl#creation_date> "2018-06-12T18:25:06Z"^^xsd:dateTime
+    
+    SubPropertyChain: 
+        inheres_in o <http://fu.bar/tmp_#R>
+    
+    
+Class: T_helper_cell
+
+    Annotations: 
+        <ttp://www.geneontology.org/formats/oboInOwl#created_by> "dos"^^xsd:string,
+        rdfs:label "T-helper cell"@en,
+        <http://www.geneontology.org/formats/oboInOwl#creation_date> "2018-06-12T18:24:57Z"^^xsd:dateTime
+
+Class: Glucose
+Class: B_cell
+
+    
+Class: blood
+
+    Annotations: 
+        rdfs:label "blood"@en
+    
+    
+Class: inc_T_helper_count_new
+
+    Annotations: 
+        rdfs:label "increased T-helper cell count - new pattern"@en
+    
+    EquivalentTo: 
+        inheres_in some 
+            (blood
+             and (has_increased_amount_of some T_helper_cell))
+
+Class: inc_B_cell_new
+
+    Annotations: 
+        rdfs:label "increased B cell - new pattern"@en
+    
+    EquivalentTo: 
+        inheres_in some 
+            (blood
+             and (has_increased_amount_of some B_cell))
+
+    
+Class: inc_T_helper_count_old
+
+    Annotations: 
+        rdfs:label "increased T-helper cell count - old pattern"@en
+    
+    EquivalentTo: 
+        increased_amount
+         and (inheres_in some blood)
+         and (towards some T_helper_cell)
+
+Class: inc_B_cell_old
+
+    Annotations: 
+        rdfs:label "increased B cell count - old pattern"@en
+    
+    EquivalentTo: 
+        increased_amount
+         and (inheres_in some blood)
+         and (towards some B_cell)
+
+    
+Class: increased_amount
+
+    Annotations: 
+        rdfs:label "increased amount"@en,
+        <http://www.geneontology.org/formats/oboInOwl#creation_date> "2018-06-12T18:25:32Z"^^xsd:dateTime,
+        <ttp://www.geneontology.org/formats/oboInOwl#created_by> "dos"^^xsd:string
+    
+    
+Class: owl:Thing
+
+    
+Class: phenotype
+
+    Annotations: 
+        <http://www.geneontology.org/formats/oboInOwl#creation_date> "2018-06-12T18:28:59Z"^^xsd:dateTime,
+        <ttp://www.geneontology.org/formats/oboInOwl#created_by> "dos"^^xsd:string,
+        rdfs:label "phenotype"@en
+    
+Individual: b_cell_1_new Types: B_cell
+Individual: t_cell_1_new Types: T_helper_cell
+
+Individual: b_cell_1_old Types: B_cell
+Individual: t_cell_1_old Types: T_helper_cell
+
+Individual: blood_1_new Types: blood
+  Facts: has_increased_amount_of b_cell_1_new
+  Facts: has_increased_amount_of t_cell_1_new
+
+Individual: blood_1_old Types: blood
+
+Individual: q1_inc_T_new Facts: inheres_in blood_1_new
+Individual: q1_inc_B_new Facts: inheres_in blood_1_new
+
+Individual: blood_1_old Types: blood
+Individual: q1_inc_T_old Types: increased_amount Facts: inheres_in blood_1_old, towards t_cell_1_old
+Individual: q1_inc_B_old Types: increased_amount Facts: inheres_in blood_1_old, towards b_cell_1_old
