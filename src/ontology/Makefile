@@ -23,15 +23,15 @@ test: all
 pato.owl: pato-edit.obo
 	robot reason -i $< -r elk -o $@
 pato.json: pato.owl
-	robot -i $< -o $@
+	robot convert -i $< -o $@
 pato_ext.json: pato_ext.owl
-	robot -i $< -o $@
-pato.obo: build/pato.owl
+	robot convert -i $< -o $@
+pato.obo: pato.owl
 	owltools $(USECAT) $< --merge-imports-closure -o -f obo $@
 pato-basic.owl: pato.owl
 	owltools $< --remove-axioms -t DisjointClasses --set-ontology-id $(OBO)/pato/$@ -o $@
 pato-basic.obo: pato-basic.owl
-	robot -i $< -o $@.tmp && grep -v ^owl-axioms $@.tmp > $@
+	robot convert -i $< -o $@.tmp && grep -v ^owl-axioms $@.tmp > $@
 
 # ----------------------------------------
 # Base
