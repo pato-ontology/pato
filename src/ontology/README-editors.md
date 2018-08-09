@@ -71,7 +71,7 @@ The value of the "Tag version" field MUST be
 
 The initial lowercase "v" is REQUIRED. The YYYY-MM-DD *must* match
 what is in the versionIRI of the derived pato.owl (data-version in
-pato.obo). Note - docker is GMT, so the date may be the next day depending on which time zone you are in. 
+pato.obo - open with a text editor or type: more pato.obo in the command line). Note - docker is GMT, so the date may be the next day depending on which time zone you are in. 
 
 Release title should be YYYY-MM-DD, optionally followed by a title (e.g. "january release")
 
