@@ -1,14 +1,12 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="/imports/go_import.owl#"
-     xml:base="/imports/go_import.owl"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/pato/imports/go_import.owl#"
+     xml:base="http://purl.obolibrary.org/obo/pato/imports/go_import.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="/imports/go_import.owl">
-        <dc:source rdf:resource="http://purl.obolibrary.org/obo/go/releases/2015-03-14/go.owl"/>
-    </owl:Ontology>
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/pato/imports/go_import.owl"/>
     
 
 
@@ -34,8 +32,8 @@
     <!-- http://purl.obolibrary.org/obo/GO_0005623 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005623">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell</rdfs:label>
     </owl:Class>
     
 
@@ -43,8 +41,8 @@
     <!-- http://purl.obolibrary.org/obo/GO_0005634 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005634">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nucleus</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043231"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nucleus</rdfs:label>
     </owl:Class>
     
 
@@ -52,9 +50,9 @@
     <!-- http://purl.obolibrary.org/obo/GO_0005929 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005929">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cilium</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0042995"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043226"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0120025"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cilium</rdfs:label>
     </owl:Class>
     
 
@@ -62,8 +60,8 @@
     <!-- http://purl.obolibrary.org/obo/GO_0042995 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0042995">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell projection</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044464"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell projection</rdfs:label>
     </owl:Class>
     
 
@@ -71,8 +69,8 @@
     <!-- http://purl.obolibrary.org/obo/GO_0043226 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043226">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organelle</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organelle</rdfs:label>
     </owl:Class>
     
 
@@ -80,8 +78,8 @@
     <!-- http://purl.obolibrary.org/obo/GO_0043227 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043227">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">membrane-bounded organelle</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043226"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">membrane-bounded organelle</rdfs:label>
     </owl:Class>
     
 
@@ -89,9 +87,9 @@
     <!-- http://purl.obolibrary.org/obo/GO_0043229 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043229">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intracellular organelle</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043226"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044424"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intracellular organelle</rdfs:label>
     </owl:Class>
     
 
@@ -99,9 +97,9 @@
     <!-- http://purl.obolibrary.org/obo/GO_0043231 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043231">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intracellular membrane-bounded organelle</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043227"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043229"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intracellular membrane-bounded organelle</rdfs:label>
     </owl:Class>
     
 
@@ -109,8 +107,8 @@
     <!-- http://purl.obolibrary.org/obo/GO_0044424 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044424">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intracellular part</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044464"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">intracellular part</rdfs:label>
     </owl:Class>
     
 
@@ -118,12 +116,21 @@
     <!-- http://purl.obolibrary.org/obo/GO_0044464 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044464">
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell part</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell part</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0120025 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0120025">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0042995"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plasma membrane bounded cell projection</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 0.2.2-SNAPSHOT) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 4.2.6) https://github.com/owlcs/owlapi -->
 

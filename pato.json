@@ -3592,6 +3592,11 @@
           "xrefs" : [ "PATOC:GVG" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#cell_quality", "http://purl.obolibrary.org/obo/pato#attribute_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "centric",
+          "xrefs" : [ "https://orcid.org/0000-0001-5208-3432", "https://orcid.org/0000-0002-2908-3327" ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -3671,6 +3676,10 @@
           "pred" : "hasExactSynonym",
           "val" : "left-right symmetry",
           "xrefs" : [ ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "pennate",
+          "xrefs" : [ "https://orcid.org/0000-0001-5208-3432", "https://orcid.org/0000-0002-2908-3327" ]
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -6793,6 +6802,52 @@
       "type" : "CLASS",
       "lbl" : "obsolete visual acuity value"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0040001",
+      "meta" : {
+        "definition" : {
+          "val" : "Shaped like a ring",
+          "xrefs" : [ "https://orcid.org/0000-0002-6601-2165" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "annular",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2018-05-24T03:56:53Z"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/creator",
+          "val" : "http://orcid.org/0000-0001-5208-3432"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "ring-shaped"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0040002",
+      "meta" : {
+        "definition" : {
+          "val" : "A positional quality inhering in a bearer by virtue of some aspect of that bearer beginning from a position on another entity.",
+          "xrefs" : [ ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#relational_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/creator",
+          "val" : "http://orcid.org/0000-0001-5208-3432"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2018-05-24T04:10:53Z"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "originates from"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0000825",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -6814,6 +6869,26 @@
       },
       "type" : "CLASS",
       "lbl" : "obsolete visual placing value"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0040000",
+      "meta" : {
+        "definition" : {
+          "val" : "An oriented quality inhering in a bearer by virtue of the bearer's being abnormally placed or arranged.",
+          "xrefs" : [ "http://medical-dictionary.thefreedictionary.com/heterotaxic" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/creator",
+          "val" : "http://orcid.org/0000-0001-5208-3432"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2018-05-21T22:44:38Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "heterotaxic"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0000827",
       "meta" : {
@@ -17182,7 +17257,7 @@
       "id" : "http://purl.obolibrary.org/obo/PATO_0002064",
       "meta" : {
         "definition" : {
-          "val" : "A shape quality inhering in a bearer by virtue of the bearer's delimited by a surface with holes.",
+          "val" : "A structure quality inhering in a bearer by virtue of the bearer's delimited by a surface with holes.",
           "xrefs" : [ "PATOC:me" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim", "http://purl.obolibrary.org/obo/pato#cell_quality", "http://purl.obolibrary.org/obo/pato#mpath_slim" ],
@@ -22080,6 +22155,32 @@
       "type" : "CLASS",
       "lbl" : "obsolete visual_ability"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0002435",
+      "meta" : {
+        "definition" : {
+          "val" : "A positional quality inhering in a bearer by virtue of the bearer touching another entity along a border or with a projecting part.",
+          "xrefs" : [ "merriam-webster:merriam-webster" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#relational_slim", "http://purl.obolibrary.org/obo/pato#value_slim", "http://purl.obolibrary.org/obo/pato#scalar_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "abut",
+          "xrefs" : [ ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "gkoutos"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2013-01-29T09:31:12Z"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "abutting"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0000258",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -22113,27 +22214,6 @@
       },
       "type" : "CLASS",
       "lbl" : "decreased variability of rate"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/PATO_0002435",
-      "meta" : {
-        "definition" : {
-          "val" : "A positional quality inhering in a bearer by virtue of the bearer touching another entity along a border or with a projecting part.",
-          "xrefs" : [ "merriam-webster:merriam-webster" ]
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim", "http://purl.obolibrary.org/obo/pato#scalar_slim" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
-          "val" : "gkoutos"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "quality"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
-          "val" : "2013-01-29T09:31:12Z"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "abut"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0001104",
       "meta" : {
@@ -22605,7 +22685,7 @@
       "id" : "http://purl.obolibrary.org/obo/PATO_0002448",
       "meta" : {
         "definition" : {
-          "val" : "A quality inhering in a bearer by virtue of the bearer's bing aligned or positioned towards another entity.",
+          "val" : "A quality inhering in a bearer by virtue of the bearer's being aligned or positioned towards another entity.",
           "xrefs" : [ "PATOC:WD" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim", "http://purl.obolibrary.org/obo/pato#relational_slim" ],
@@ -46297,6 +46377,10 @@
           "xrefs" : [ ]
         }, {
           "pred" : "hasExactSynonym",
+          "val" : "approaches",
+          "xrefs" : [ ]
+        }, {
+          "pred" : "hasExactSynonym",
           "val" : "close to",
           "xrefs" : [ ]
         }, {
@@ -48353,6 +48437,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001925"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0040000",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000625"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0045044",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001025"
@@ -50269,6 +50357,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0045001"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0040001",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000947"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0005000",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0002007"
@@ -51817,10 +51909,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000122"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0002064",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000052"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0045002",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001842"
@@ -52617,6 +52705,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001539"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0040002",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000140"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000017",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001301"
@@ -53124,6 +53216,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000499",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001309"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0002064",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000141"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000386",
       "pred" : "is_a",
@@ -56289,7 +56385,7 @@
         "pred" : "http://www.geneontology.org/formats/oboInOwl#saved-by",
         "val" : "segerdel"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/pato/releases/2018-03-28/pato.owl"
+      "version" : "http://purl.obolibrary.org/obo/pato/releases/2018-08-09/pato.owl"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ {

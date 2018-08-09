@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/pato.owl#"
      xml:base="http://purl.obolibrary.org/obo/pato.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -10,7 +11,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/pato.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2018-03-28/pato.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2018-08-09/pato.owl"/>
         <oboInOwl:auto-generated-by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBO-Edit 2.3.1</oboInOwl:auto-generated-by>
         <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07:02:2018 10:27</oboInOwl:date>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:default-namespace>
@@ -154,6 +155,18 @@
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Value slim</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
     
 
 
@@ -20267,6 +20280,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A symmetry quality inhering in a bearer by virtue of the bearer&apos;s being symmetric about a plane running from its frontal end to its caudal end (head to tail), and has nearly identical right and left halves.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">left-right symmetry</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pennate</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001324</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#cell_quality"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
@@ -20278,6 +20292,13 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A symmetry quality inhering in a bearer by virtue of the bearer&apos;s being symmetric about a plane running from its frontal end to its caudal end (head to tail), and has nearly identical right and left halves.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Bilateral_symmetry</oboInOwl:hasDbXref>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001324"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pennate</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-2908-3327</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -20286,6 +20307,7 @@ Association is weaker than correlation or proportionality. These relations may b
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001325">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000965"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A symmetry quality inhering in a bearer by virtue of the bearer&apos;s having equal proportion around a central point or axis.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">centric</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001325</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
@@ -20297,6 +20319,13 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A symmetry quality inhering in a bearer by virtue of the bearer&apos;s having equal proportion around a central point or axis.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001325"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">centric</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-2908-3327</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -37309,8 +37338,8 @@ Association is weaker than correlation or proportionality. These relations may b
     <!-- http://purl.obolibrary.org/obo/PATO_0002064 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002064">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000052"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A shape quality inhering in a bearer by virtue of the bearer&apos;s delimited by a surface with holes.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000141"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A structure quality inhering in a bearer by virtue of the bearer&apos;s delimited by a surface with holes.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George Gkoutos</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009-07-01T01:46:53Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
@@ -37323,7 +37352,7 @@ Association is weaker than correlation or proportionality. These relations may b
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002064"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A shape quality inhering in a bearer by virtue of the bearer&apos;s delimited by a surface with holes.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A structure quality inhering in a bearer by virtue of the bearer&apos;s delimited by a surface with holes.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:me</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -41853,6 +41882,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">george</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-09-08T03:20:06Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001771</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">approaches</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">close to</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">near to</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vicinity of</oboInOwl:hasExactSynonym>
@@ -46028,11 +46058,13 @@ Association is weaker than correlation or proportionality. These relations may b
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A positional quality inhering in a bearer by virtue of the bearer touching another entity along a border or with a projecting part.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gkoutos</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-01-29T09:31:12Z</oboInOwl:creation_date>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abut</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0002435</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#relational_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#scalar_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abut</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abutting</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002435"/>
@@ -46307,7 +46339,7 @@ Note: kinked PATO:0001798(synonym twisted) is similar to &apos;torsioned&apos;, 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002448">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000133"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality inhering in a bearer by virtue of the bearer&apos;s bing aligned or positioned towards another entity.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality inhering in a bearer by virtue of the bearer&apos;s being aligned or positioned towards another entity.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gkoutos</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-02-16T02:57:06Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
@@ -46319,7 +46351,7 @@ Note: kinked PATO:0001798(synonym twisted) is similar to &apos;torsioned&apos;, 
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002448"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality inhering in a bearer by virtue of the bearer&apos;s bing aligned or positioned towards another entity.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality inhering in a bearer by virtue of the bearer&apos;s being aligned or positioned towards another entity.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:WD</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -50103,6 +50135,62 @@ height&apos;).</rdfs:comment>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A ventralized quality inhering in a bearer by virtue of the bearer&apos;s gross morphology containing what are normally ventral structures and missing some but not all of what are normally dorsal structures.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:EJS</oboInOwl:hasDbXref>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0040000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000625"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An oriented quality inhering in a bearer by virtue of the bearer&apos;s being abnormally placed or arranged.</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-21T22:44:38Z</dc:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040000</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heterotaxic</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0040000"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An oriented quality inhering in a bearer by virtue of the bearer&apos;s being abnormally placed or arranged.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://medical-dictionary.thefreedictionary.com/heterotaxic</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0040001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000947"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shaped like a ring</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-24T03:56:53Z</dc:date>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">annular</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040001</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ring-shaped</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0040001"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shaped like a ring</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0040002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000140"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A positional quality inhering in a bearer by virtue of some aspect of that bearer beginning from a position on another entity.</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-24T04:10:53Z</dc:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040002</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#relational_slim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">originates from</rdfs:label>
+    </owl:Class>
     
 
 

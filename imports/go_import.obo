@@ -1,6 +1,5 @@
 format-version: 1.2
-ontology: file:/imports/go_import.owl
-property_value: http://purl.org/dc/elements/1.1/source http://purl.obolibrary.org/obo/go/releases/2015-03-14/go.owl
+ontology: pato/imports/go_import
 
 [Term]
 id: GO:0005575
@@ -19,8 +18,8 @@ is_a: GO:0043231 ! intracellular membrane-bounded organelle
 [Term]
 id: GO:0005929
 name: cilium
-is_a: GO:0042995 ! cell projection
 is_a: GO:0043226 ! organelle
+is_a: GO:0120025 ! plasma membrane bounded cell projection
 
 [Term]
 id: GO:0042995
@@ -58,4 +57,9 @@ is_a: GO:0044464 ! cell part
 id: GO:0044464
 name: cell part
 is_a: GO:0005575 ! cellular_component
+
+[Term]
+id: GO:0120025
+name: plasma membrane bounded cell projection
+is_a: GO:0042995 ! cell projection
 
