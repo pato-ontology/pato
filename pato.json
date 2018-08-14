@@ -6912,6 +6912,46 @@
       "type" : "CLASS",
       "lbl" : "obsolete absolute visual ability value"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0040003",
+      "meta" : {
+        "definition" : {
+          "val" : "The ability of a pathogen to produce an infectious disease or disorder in an another organism.",
+          "xrefs" : [ "https://orcid.org/0000-0001-6330-7526" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2018-08-02T04:24:52Z"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/creator",
+          "val" : "http://orcid.org/0000-0001-5208-3432"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "pathogenicity"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0040004",
+      "meta" : {
+        "definition" : {
+          "val" : "A texture quality inhering in a bearer by virtue of the bearer's being covered or partially covered with hair that has increased thickness and softness.",
+          "xrefs" : [ "https://orcid.org/0000-0001-5208-3432", "https://orcid.org/0000-0003-4606-0597" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/creator",
+          "val" : "http://orcid.org/0000-0001-5208-3432"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        }, {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2018-08-02T04:39:30Z"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "plush"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0000820",
       "meta" : {
         "basicPropertyValues" : [ {
@@ -8110,26 +8150,11 @@
       "type" : "CLASS",
       "lbl" : "radiation reflective quality"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PATO_0001299",
-      "meta" : {
-        "definition" : {
-          "val" : "A scalar EM radiation quality which obtains by the capacity of the bearer to emit radiation.",
-          "xrefs" : [ "PATOC:GVG" ]
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim" ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "quality"
-        } ]
-      },
-      "type" : "CLASS",
-      "lbl" : "radiation emitting quality"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0002146",
       "meta" : {
         "definition" : {
-          "val" : "A quality inhering in a bearer by virtue of the bearer's pathogenicity.",
-          "xrefs" : [ "PATOC:GVG" ]
+          "val" : "A quality inhering in a bearer by virtue of the severity of infectious disease caused by the bearer in a target organism.",
+          "xrefs" : [ "https://orcid.org/0000-0001-5208-3432", "https://orcid.org/0000-0001-8941-3984" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#scalar_slim", "http://purl.obolibrary.org/obo/pato#attribute_slim" ],
         "basicPropertyValues" : [ {
@@ -8145,6 +8170,21 @@
       },
       "type" : "CLASS",
       "lbl" : "virulence"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0001299",
+      "meta" : {
+        "definition" : {
+          "val" : "A scalar EM radiation quality which obtains by the capacity of the bearer to emit radiation.",
+          "xrefs" : [ "PATOC:GVG" ]
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      },
+      "type" : "CLASS",
+      "lbl" : "radiation emitting quality"
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0002147",
       "meta" : {
@@ -46937,10 +46977,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001236"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0000085",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002629",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000049"
@@ -47384,10 +47420,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001391",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001389"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0001046",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001765",
       "pred" : "is_a",
@@ -49897,6 +49929,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0002353"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0040004",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000150"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002029",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0002027"
@@ -50268,10 +50304,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000689",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000057"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0000077",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001200",
       "pred" : "is_a",
@@ -51465,6 +51497,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001749"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001046",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001995"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000635",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000060"
@@ -51992,6 +52028,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001727",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0000077",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001995"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001563",
       "pred" : "is_a",
@@ -52881,13 +52921,13 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000052"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0015011",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0015009"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001685",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001682"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0015011",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0015009"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001227",
       "pred" : "is_a",
@@ -53725,6 +53765,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0045040"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0000085",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001995"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001919",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000628"
@@ -54252,6 +54296,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001574",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001906"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0040003",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001995"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001613",
       "pred" : "is_a",
@@ -56385,7 +56433,7 @@
         "pred" : "http://www.geneontology.org/formats/oboInOwl#saved-by",
         "val" : "segerdel"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/pato/releases/2018-08-09/pato.owl"
+      "version" : "http://purl.obolibrary.org/obo/pato/releases/2018-08-14/pato.owl"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ {
