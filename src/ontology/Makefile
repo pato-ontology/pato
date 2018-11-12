@@ -21,13 +21,13 @@ test: all
 
 # TODO: allow-equivalent-pairs is there for the CL:cell vs GO:cell
 pato.owl: pato-edit.obo
-	robot reason -i $< -r elk -o $@
+	robot reason -i $< -r elk annotate -V $(OBO)/pato/releases/`date +%Y-%m-%d`/pato.owl -o $@
 pato.json: pato.owl
 	robot convert -i $< -o $@
 pato_ext.json: pato_ext.owl
 	robot convert -i $< -o $@
 pato.obo: pato.owl
-	owltools $(USECAT) $< --merge-imports-closure -o -f obo $@
+	robot convert -i $< -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@
 pato-basic.owl: pato.owl
 	owltools $< --remove-axioms -t DisjointClasses --set-ontology-id $(OBO)/pato/$@ -o $@
 pato-basic.obo: pato-basic.owl
