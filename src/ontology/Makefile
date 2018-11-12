@@ -21,7 +21,7 @@ test: all
 
 # TODO: allow-equivalent-pairs is there for the CL:cell vs GO:cell
 pato.owl: pato-edit.obo
-	robot reason -i $< -r elk annotate -V $(OBO)/pato/releases/`date +%Y-%m-%d`/pato.owl -o $@
+	robot relax -i $< reason  -r elk reduce annotate -V $(OBO)/pato/releases/`date +%Y-%m-%d`/pato.owl -o $@
 pato.json: pato.owl
 	robot convert -i $< -o $@
 pato_ext.json: pato_ext.owl
