@@ -1514,7 +1514,7 @@ is_obsolete: true
 [Term]
 id: PATO:0000261
 name: maturity
-def: "A quality of a single physical entity which is held by a bearer when the latter exhibits complete growth, differentiation, or development." [Merriam-Webster:Merriam-Webster]
+def: "A quality of a single physical entity which is held by a bearer when the latter exhibits a state of growth, differentiation, or development." [Merriam-Webster:Merriam-Webster]
 subset: attribute_slim
 is_a: PATO:0001995 ! organismal quality
 
@@ -13334,6 +13334,7 @@ relationship: is_opposite_of PATO:0001892 ! decreased odor
 [Term]
 id: PATO:0001894
 name: phenotypic sex
+def: "An organismal quality inhering in a bearer by virtue of the bearer's physical expression of sexual characteristics." []
 subset: attribute_slim
 is_a: PATO:0000047 ! biological sex
 
@@ -20213,7 +20214,7 @@ property_value: http://purl.org/dc/elements/1.1/date 2018-05-24T04:10:53Z xsd:da
 [Term]
 id: PATO:0040003
 name: pathogenicity
-def: "The ability of a pathogen to produce an infectious disease or disorder in an another organism." [https://orcid.org/0000-0001-6330-7526]
+def: "The ability of a pathogen to produce an infectious disease or disorder in an another organism." [https://orcid.org/0000-0001-8941-3984]
 is_a: PATO:0001995 ! organismal quality
 property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-08-02T04:24:52Z xsd:dateTime
@@ -20233,6 +20234,97 @@ def: "A shape quality inhering in a bearer by virtue of the bearer's having a sh
 is_a: PATO:0000052 ! shape
 property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:09:59Z xsd:dateTime
+
+[Term]
+id: PATO:0040007
+name: shell shaped
+def: "A shape quality inhering in a bearer by virtue of the bearer's having a shape like a shell." [https://orcid.org/0000-0003-3162-7490]
+is_a: PATO:0000052 ! shape
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
+property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:12:47Z xsd:dateTime
+
+[Term]
+id: PATO:0040008
+name: fringed
+def: "A shape quality inhering in a bearer by virtue of the bearer's having an ornamental border consisting of short straight or twisted threads or strips hanging from cut or raveled edges or from a separate band." [https://orcid.org/0000-0003-3162-7490, https://www.merriam-webster.com/dictionary/fringe]
+is_a: PATO:0002267 ! edge shape
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
+property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:15:10Z xsd:dateTime
+
+[Term]
+id: PATO:0040009
+name: bowl shaped
+def: "A concave 3-D shape quality inhering in a bearer by virtue of the bearer's being shaped in the form of a bowl." [https://orcid.org/0000-0003-3162-7490]
+is_a: PATO:0002008 ! concave 3-D shape
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
+property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:17:01Z xsd:dateTime
+
+[Term]
+id: PATO:0040010
+name: mobile relative to
+def: "Mobility relative to a second entity." [https://orcid.org/0000-0003-3162-7490]
+comment: For example, distinct anteroposterior mobility of palatine relative to mesethmoid.
+is_a: PATO:0000004 ! mobility
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
+property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:20:08Z xsd:dateTime
+
+[Term]
+id: PATO:0040011
+name: immobile relative to
+def: "Immobility relative to a second entity." [https://orcid.org/0000-0003-3162-7490]
+comment: For example: distinct anteroposterior immobility of palatine relative to mesethmoid.
+is_a: PATO:0000004 ! mobility
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
+property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:21:07Z xsd:dateTime
+
+[Term]
+id: PATO:0040012
+name: plug shaped
+def: "A shape that is in the form of a plug, being tube-like and expanded on one end." [https://orcid.org/0000-0003-3162-7490]
+synonym: "plug like" EXACT []
+is_a: PATO:0000052 ! shape
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
+property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:24:41Z xsd:dateTime
+
+[Term]
+id: PATO:0040013
+name: dorsomedial orientation
+def: "An orientation quality inhering in a bearer by virtue of the bearer having a position that is directed dorsomedially." [https://orcid.org/0000-0003-3162-7490]
+synonym: "dorsomedially directed" EXACT []
+is_a: PATO:0000133 ! orientation
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
+property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:27:57Z xsd:dateTime
+
+[Term]
+id: PATO:0040014
+name: band shaped
+def: "A shape that is in the form of a narrow strip encircling an object." [https://orcid.org/0000-0003-3162-7490, https://www.merriam-webster.com/dictionary/band]
+synonym: "band like" EXACT []
+synonym: "band-like" EXACT []
+synonym: "strip like" EXACT []
+synonym: "strip-like" EXACT []
+is_a: PATO:0000052 ! shape
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
+property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:31:51Z xsd:dateTime
+
+[Term]
+id: PATO:0040015
+name: trough shaped
+def: "A concave 3-D shape quality inhering in a bearer by virtue of the bearer's shape resembling that of a trough, being narrow, long, and boxlike in shape." [http://www.dictionary.com/browse/trough, https://orcid.org/0000-0003-3162-7490]
+synonym: "trough like" EXACT []
+synonym: "trough-like" EXACT []
+synonym: "trough-shaped" EXACT []
+is_a: PATO:0002008 ! concave 3-D shape
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
+property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:35:51Z xsd:dateTime
+
+[Term]
+id: PATO:0040016
+name: pentagonal
+def: "A shape quality inhering in a bearer by virtue of the bearer's having five angles and five sides." [https://orcid.org/0000-0003-3162-7490, https://www.merriam-webster.com/dictionary/pentagonal]
+is_a: PATO:0002006 ! 2-D shape
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
+property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:39:48Z xsd:dateTime
 
 [Term]
 id: PATO:0045000
