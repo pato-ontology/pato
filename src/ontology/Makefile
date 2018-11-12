@@ -3,7 +3,7 @@ USECAT= --catalog-xml catalog-v001.xml
 
 all: all_imports release
 
-ARTEFACTS = pato.obo pato.owl pato.json pato_ext.owl pato_ext.json
+ARTEFACTS = pato.obo pato.owl pato.json pato_ext.owl pato_ext.json pato-base.obo pato-base.owl pato-base.json
 release: $(ARTEFACTS) copy-release
 
 TARGETS = $(ARTEFACTS) imports
@@ -20,24 +20,30 @@ test: all
 # We add a custom step to unfold the import closure in the obo version, because obo does not handle imports well
 
 # TODO: allow-equivalent-pairs is there for the CL:cell vs GO:cell
-build/pato.owl: pato-edit.obo
-	ontology-release-runner $(USECAT)   --outdir build --no-subsets --allow-overwrite --ignoreLock --reasoner elk --asserted --simple $<
-build/%: build/pato.owl
-pato.owl: build/pato.owl
-	cp $< $@
+pato.owl: pato-edit.obo
+	robot relax -i $< reason  -r elk reduce annotate -V $(OBO)/pato/releases/`date +%Y-%m-%d`/pato.owl -o $@
 pato.json: pato.owl
-	owltools $(USECAT) $< -o -f json $@
+	robot convert -i $< -o $@
 pato_ext.json: pato_ext.owl
-	owltools $(USECAT) $< -o -f json $@
-pato.obo: build/pato.owl
-	owltools $(USECAT) $< --merge-imports-closure -o -f obo $@
-pato-basic.owl: build/pato-simple.owl
+	robot convert -i $< -o $@
+pato.obo: pato.owl
+	robot convert -i $< -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@
+pato-basic.owl: pato.owl
 	owltools $< --remove-axioms -t DisjointClasses --set-ontology-id $(OBO)/pato/$@ -o $@
 pato-basic.obo: pato-basic.owl
-	owltools $< -o -f obo $@
+	robot convert -i $< -o $@.tmp && grep -v ^owl-axioms $@.tmp > $@
 
-%-obocheck: %.obo
-	obo2obo $< -o $@
+# ----------------------------------------
+# Base
+# ----------------------------------------
+pato_ext-no-imports.owl: pato_ext.owl
+	owltools $(USECAT) $< --remove-imports-declarations -o $@
+pato-base.owl: pato-edit.obo pato_ext-no-imports.owl
+	owltools $^ --merge-support-ontologies --set-ontology-id $(OBO)/pato/$@ -o $@
+pato-base.json: pato-base.owl
+	robot convert -i $< -o $@
+pato-base.obo: pato-base.owl
+	robot convert -i $< -o $@
 
 # ----------------------------------------
 # Regenerate imports

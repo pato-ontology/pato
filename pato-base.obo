@@ -1,5 +1,4 @@
 format-version: 1.2
-data-version: releases/2018-11-12
 date: 07:02:2018 10:27
 saved-by: segerdel
 auto-generated-by: OBO-Edit 2.3.1
@@ -14,7 +13,9 @@ subsetdef: relational_slim "Relational slim: types of quality that require an ad
 subsetdef: scalar_slim "Scalar slim"
 subsetdef: value_slim "Value slim"
 default-namespace: quality
-ontology: pato
+remark: Includes Ontology(OntologyID(OntologyIRI(<http://purl.obolibrary.org/obo/pato/pato_ext.owl>) VersionIRI(<http://purl.obolibrary.org/obo/pato/alpha/pato_ext.owl>))) [Axioms: 51 Logical Axioms: 19]
+ontology: pato/pato-base
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000003>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000040>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CARO_0001010>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_46662>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CL_0000000>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0005623>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0005634>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0005929>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0000125>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001236>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001241>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001396>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001405>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001406>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001407>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001408>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001908>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001993>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0002444>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0002486>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0002487>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0010000>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0010001>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PCO_0000001>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PCO_0000003>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000053>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000057>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002180>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002473>))\n\n\nEquivalentClasses(ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/GO_0005634>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001405>))\nEquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/GO_0005929>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001408>))\nEquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0000125>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0000125>))\nEquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001406>) ObjectExactCardinality(2 <http://purl.obolibrary.org/obo/RO_0002180> <http://purl.obolibrary.org/obo/GO_0005634>))\nEquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001407>) ObjectExactCardinality(1 <http://purl.obolibrary.org/obo/RO_0002180> <http://purl.obolibrary.org/obo/GO_0005634>))\nEquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001908>) ObjectMinCardinality(2 <http://purl.obolibrary.org/obo/RO_0002180> <http://purl.obolibrary.org/obo/GO_0005634>))\nEquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001993>) ObjectMinCardinality(2 <http://purl.obolibrary.org/obo/RO_0002180> <http://purl.obolibrary.org/obo/GO_0005623>))\nEquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0002444>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002473> <http://purl.obolibrary.org/obo/CHEBI_46662>))\nEquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0002486>) ObjectMinCardinality(2 <http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obolibrary.org/obo/CARO_0001010>))\nEquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0002487>) ObjectExactCardinality(1 <http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obolibrary.org/obo/CARO_0001010>))\nSubClassOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001236>) <http://purl.obolibrary.org/obo/BFO_0000003>)\nSubClassOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001241>) <http://purl.obolibrary.org/obo/BFO_0000040>)\nSubClassOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001396>) <http://purl.obolibrary.org/obo/CL_0000000>)\nSubClassOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001407>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/GO_0005634>))\nSubClassOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001908>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/GO_0005634>))\nSubClassOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PCO_0000003>) <http://purl.obolibrary.org/obo/PCO_0000001>)\nDisjointClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0010000>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0010001>))\n)
 
 [Term]
 id: PATO:0000000
@@ -1722,6 +1723,7 @@ synonym: "abolished" EXACT []
 synonym: "incomplete" RELATED []
 is_a: PATO:0002052 ! decreased occurrence
 is_a: PATO:0002324 ! offset quality
+relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 
 [Term]
 id: PATO:0000298
@@ -7597,6 +7599,7 @@ synonym: "quality of occurrent" EXACT []
 synonym: "quality of process" EXACT []
 synonym: "relational quality of occurrent" EXACT []
 is_a: PATO:0000001 ! quality
+disjoint_from: PATO:0001241 ! physical object quality
 
 [Term]
 id: PATO:0001241
@@ -8370,6 +8373,7 @@ def: "A quality of a process which ends later than the natural end time." [PATOC
 subset: value_slim
 is_a: PATO:0002304 ! increased process quality
 is_a: PATO:0002324 ! offset quality
+relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
 
 [Term]
 id: PATO:0001334
@@ -14112,6 +14116,7 @@ id: PATO:0001995
 name: organismal quality
 def: "A quality that inheres in an entire organism or part of an organism." [PATOC:CJM]
 is_a: PATO:0001241 ! physical object quality
+disjoint_from: PATO:0002003 ! population quality
 
 [Term]
 id: PATO:0001997
@@ -17173,7 +17178,6 @@ def: "A quality that has a value that is increased compared to normal or average
 is_a: PATO:0000069 ! deviation(from_normal)
 intersection_of: PATO:0000001 ! quality
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
-relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0002301 ! decreased quality
 created_by: George Gkoutos
 creation_date: 2011-06-16T06:39:43Z
@@ -17185,7 +17189,6 @@ def: "A quality that has a value that is decreased compared to normal or average
 is_a: PATO:0000069 ! deviation(from_normal)
 intersection_of: PATO:0000001 ! quality
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0002300 ! increased quality
 created_by: George Gkoutos
 creation_date: 2011-06-16T06:40:15Z
@@ -19843,7 +19846,6 @@ id: PATO:0015003
 name: decreased efficacy
 def: "A decrease in the ability of a process to produce its output." [PATOC:PortlandMeetingFeb2015]
 subset: value_slim
-is_a: PATO:0002302 ! decreased process quality
 is_a: PATO:0015002 ! process efficacy
 intersection_of: PATO:0015002 ! process efficacy
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
@@ -19855,7 +19857,6 @@ id: PATO:0015004
 name: increased efficacy
 def: "A increase in the ability of a process to produce its output." [PATOC:PortlandMeetingFeb2015]
 subset: value_slim
-is_a: PATO:0002304 ! increased process quality
 is_a: PATO:0015002 ! process efficacy
 intersection_of: PATO:0015002 ! process efficacy
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
@@ -19909,8 +19910,6 @@ name: increased humidity
 def: "An increase in humidity." [https://github.com/pato-ontology/pato/issues/90]
 subset: value_slim
 synonym: "humid" RELATED []
-is_a: PATO:0002305 ! increased object quality
-is_a: PATO:0015009 ! humidity
 intersection_of: PATO:0015009 ! humidity
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0015011 ! decreased humidity
@@ -19920,8 +19919,6 @@ id: PATO:0015011
 name: decreased humidity
 def: "An decrease in humidity." [https://github.com/pato-ontology/pato/issues/90]
 subset: value_slim
-is_a: PATO:0002303 ! decreased object quality
-is_a: PATO:0015009 ! humidity
 intersection_of: PATO:0015009 ! humidity
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0015010 ! increased humidity
@@ -19946,8 +19943,6 @@ name: increased degree of illumination
 def: "An increase in illumination." [https://github.com/pato-ontology/pato/issues/89]
 subset: value_slim
 synonym: "illuminated" RELATED []
-is_a: PATO:0002305 ! increased object quality
-is_a: PATO:0015013 ! degree of illumination
 intersection_of: PATO:0015013 ! degree of illumination
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0015015 ! decreased degree of illumination
@@ -19957,8 +19952,6 @@ id: PATO:0015015
 name: decreased degree of illumination
 def: "An decrease in illumination." [https://github.com/pato-ontology/pato/issues/89]
 subset: value_slim
-is_a: PATO:0002303 ! decreased object quality
-is_a: PATO:0015013 ! degree of illumination
 intersection_of: PATO:0015013 ! degree of illumination
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0015014 ! increased degree of illumination
@@ -20011,8 +20004,6 @@ name: increased combustibility
 def: "An increase in combustibility." []
 subset: value_slim
 synonym: "combustible" EXACT []
-is_a: PATO:0002305 ! increased object quality
-is_a: PATO:0015021 ! combustibility
 intersection_of: PATO:0015021 ! combustibility
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0015023 ! decreased combustibility
@@ -20023,8 +20014,6 @@ name: decreased combustibility
 def: "An decrease in combustibility." []
 subset: value_slim
 synonym: "noncombustible" RELATED []
-is_a: PATO:0002303 ! decreased object quality
-is_a: PATO:0015021 ! combustibility
 intersection_of: PATO:0015021 ! combustibility
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0015022 ! increased combustibility
@@ -20034,8 +20023,6 @@ id: PATO:0015024
 name: increased porosity
 def: "An increase in porosity." [https://github.com/pato-ontology/pato/issues/110]
 subset: value_slim
-is_a: PATO:0000973 ! porosity
-is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0000973 ! porosity
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 
@@ -20044,8 +20031,6 @@ id: PATO:0015025
 name: decreased porosity
 def: "An decrease in porosity." [https://github.com/pato-ontology/pato/issues/110]
 subset: value_slim
-is_a: PATO:0000973 ! porosity
-is_a: PATO:0002303 ! decreased object quality
 intersection_of: PATO:0000973 ! porosity
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0015024 ! increased porosity
@@ -20064,8 +20049,6 @@ name: increased stability
 def: "An increase in stability." [https://github.com/pato-ontology/pato/issues/113]
 subset: disposition_slim
 subset: value_slim
-is_a: PATO:0002305 ! increased object quality
-is_a: PATO:0015026 ! stability
 intersection_of: PATO:0015026 ! stability
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 
@@ -20075,8 +20058,6 @@ name: decreased stability
 def: "A decrease in stability." [https://github.com/pato-ontology/pato/issues/113]
 subset: disposition_slim
 subset: value_slim
-is_a: PATO:0002303 ! decreased object quality
-is_a: PATO:0015026 ! stability
 intersection_of: PATO:0015026 ! stability
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0015027 ! increased stability
@@ -20375,7 +20356,6 @@ def: "A quality of an object that has a value that is normal or average." []
 is_a: PATO:0001241 ! physical object quality
 intersection_of: PATO:0001241 ! physical object quality
 intersection_of: has_relative_magnitude PATO:0000461 ! normal
-relationship: has_relative_magnitude PATO:0000461 ! normal
 created_by: Luke Slater
 creation_date: 2017-12-21T14:11:01Z
 
@@ -20431,7 +20411,6 @@ name: normal avidity
 def: "An avidity which is relatively normal or average." []
 subset: disposition_slim
 subset: value_slim
-is_a: PATO:0002073 ! avidity
 is_a: PATO:0045001 ! normal object quality
 intersection_of: PATO:0002073 ! avidity
 intersection_of: has_relative_magnitude PATO:0000461 ! normal
@@ -21274,7 +21253,6 @@ def: "A quality of aprocess that has a value that is normal or average." []
 is_a: PATO:0001236 ! process quality
 intersection_of: PATO:0001236 ! process quality
 intersection_of: has_relative_magnitude PATO:0000461 ! normal
-relationship: has_relative_magnitude PATO:0000461 ! normal
 created_by: Luke Slater
 creation_date: 2017-12-21T14:11:01Z
 
