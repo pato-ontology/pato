@@ -303,7 +303,7 @@ name: frequency
 def: "A physical quality which inheres in a bearer by virtue of the number of the bearer's repetitive actions in a particular time." [Wikipedia:http\://en.wikipedia.org/wiki/frequency]
 subset: attribute_slim
 subset: scalar_slim
-is_a: PATO:0000161 ! rate
+is_a: PATO:0050000 ! rate of occurence
 
 [Term]
 id: PATO:0000045
@@ -9678,7 +9678,7 @@ name: growth rate
 comment: This term will be obsoleted; Use GO:growth and PATO:rate.
 subset: attribute_slim
 subset: scalar_slim
-is_a: PATO:0000161 ! rate
+is_a: PATO:0050001 ! rate of continuous process
 
 [Term]
 id: PATO:0001493
@@ -21514,6 +21514,18 @@ is_a: PATO:0045090 ! cardinal direction
 relationship: is_opposite_of PATO:0045092 ! east
 created_by: Luke Slater
 creation_date: 2017-12-22T14:16:43Z
+
+[Term]
+id: PATO:0050000
+name: rate of occurence
+def: "The number of repeated events per unit time, occurring in a repeating series. (e.g. the number of heart beats occurring over 1 minute)" [https://orcid.org/0000-0002-9943-9018]
+is_a: PATO:0000161 ! rate
+
+[Term]
+id: PATO:0050001
+name: rate of continuous process
+def: "The rate of output of a continuous process. Example include: growth rate, cell migration rate, enzyme reaction rate." [https://orcid.org/0000-0002-9943-9018]
+is_a: PATO:0000161 ! rate
 
 [Typedef]
 id: correlates_with
