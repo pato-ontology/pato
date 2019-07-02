@@ -10230,6 +10230,7 @@ synonym: "number" RELATED []
 synonym: "number of" EXACT []
 xref: OBO_REL:has_part
 is_a: PATO:0001241 ! physical object quality
+relationship: reciprocal_of PATO:0000070 ! amount
 
 [Term]
 id: PATO:0001558
@@ -10238,6 +10239,7 @@ def: "A quality of a process inhering in a bearer by virtue of the bearer's lack
 subset: relational_slim
 subset: value_slim
 is_a: PATO:0001564 ! extra or missing processual parts
+relationship: reciprocal_of PATO:0000462 ! absent
 
 [Term]
 id: PATO:0001559
@@ -13429,6 +13431,7 @@ def: "The bearer of this quality has_part = n, where n is the normal amount for 
 subset: relational_slim
 synonym: "having physical part" EXACT []
 is_a: PATO:0001555 ! has number of
+relationship: reciprocal_of PATO:0002050 ! normal amount
 
 [Term]
 id: PATO:0001906
@@ -14158,6 +14161,7 @@ subset: relational_slim
 synonym: "lacks all physical parts of type" EXACT []
 xref: OBO_REL:lacks_part
 is_a: PATO:0001999 ! lacks parts or has fewer parts of type
+relationship: reciprocal_of PATO:0000462 ! absent
 
 [Term]
 id: PATO:0002001
