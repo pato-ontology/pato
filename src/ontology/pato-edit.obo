@@ -21567,6 +21567,24 @@ def: "The rate of output of a continuous process. Example include: growth rate, 
 is_a: PATO:0000161 ! rate
 
 [Term]
+id: PATO:0055001
+name: decreased spatial extent of a process
+def: "A spatial distribution of a process in which the process occupies a smaller length, area, or volume than the reference process. For example, heterochromatin may form over a shorter length of a chromosome in a mutant than in wild type." [orcid:0000-0003-4148-4606]
+intersection_of: PATO:0010005 ! spatial distribution of a process
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+created_by: midori
+creation_date: 2019-07-29T14:22:24Z
+
+[Term]
+id: PATO:0055002
+name: increased spatial extent of a process
+def: "A spatial distribution of a process in which the process occupies a greater length, area, or volume than the reference process. For example, heterochromatin may form over a shorter length of a chromosome in a mutant than in wild type." [https://orcid.org/0000-0003-4148-4606]
+intersection_of: PATO:0010005 ! spatial distribution of a process
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+created_by: midori
+creation_date: 2019-07-29T14:23:31Z
+
+[Term]
 id: PATO:0060001
 name: sex-specific
 def: "A quality inhering in a bearer by virtue of the bearer's being present in one sex and absent from the other in members of the same species." [http://orcid.org/0000-0002-1373-1705]
