@@ -19827,17 +19827,17 @@ id: PATO:0010002
 name: propagation velocity
 def: "The velocity of spatial propagation of a process. Examples include the velocity of propagation of an action potential along an axon." [orcid:0000-0002-7073-9172]
 is_a: PATO:0002062 ! physical quality of a process
-property_value: created_by "dos" xsd:string
+created_by: dos
 creation_date: 2019-07-18T18:24:15Z
 
 [Term]
 id: PATO:0010003
 name: increased propagation velocity
-def: "A propagation velocity that is higher than normal." [] {http://www.w3.org/2002/07/owl#backwardCompatibleWith="orcid:0000-0002-7073-9172"}
+def: "A propagation velocity that is higher than normal." [orcid:0000-0002-7073-9172]
 is_a: PATO:0010002 ! propagation velocity
 intersection_of: PATO:0010002 ! propagation velocity
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: created_by "dos" xsd:string
+created_by: dos
 creation_date: 2019-07-18T18:24:25Z
 
 [Term]
@@ -19846,7 +19846,7 @@ name: decreased propagation velocity
 def: "A propagation velocity that is lower than normal." [orcid:0000-0002-7073-9172]
 intersection_of: PATO:0010002 ! propagation velocity
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: created_by "dos" xsd:string
+created_by: dos
 creation_date: 2019-07-18T18:24:36Z
 
 [Term]
