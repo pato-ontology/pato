@@ -485,7 +485,6 @@ alt_id: PATO:0001226
 def: "The number of entities of this type that are part of the whole organism." [PATOC:GVG]
 comment: This term was originally named "presence". It has been renamed to reduce ambiguity. Consider annotating with the reciprocal relation,PATO:0001555, has_number_of. For example, rather than E=fin ray Q=count in organism C=10, say E=organism Q=has number of E2= fin ray C=10.
 subset: attribute_slim
-synonym: "count" EXACT []
 synonym: "count in organism" RELATED []
 synonym: "number" RELATED []
 synonym: "presence" RELATED []
@@ -19823,12 +19822,39 @@ created_by: davidos
 creation_date: 2014-12-12T08:43:17Z
 
 [Term]
+id: PATO:0010002
+name: propagation velocity
+def: "The velocity of spatial propagation of a process. Examples include the velocity of propagation of an action potential along an axon." [orcid:0000-0002-7073-9172]
+is_a: PATO:0002062 ! physical quality of a process
+created_by: dos
+creation_date: 2019-07-18T18:24:15Z
+
+[Term]
+id: PATO:0010003
+name: increased propagation velocity
+def: "A propagation velocity that is higher than normal." [orcid:0000-0002-7073-9172]
+is_a: PATO:0010002 ! propagation velocity
+intersection_of: PATO:0010002 ! propagation velocity
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+created_by: dos
+creation_date: 2019-07-18T18:24:25Z
+
+[Term]
+id: PATO:0010004
+name: decreased propagation velocity
+def: "A propagation velocity that is lower than normal." [orcid:0000-0002-7073-9172]
+intersection_of: PATO:0010002 ! propagation velocity
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+created_by: dos
+creation_date: 2019-07-18T18:24:36Z
+
+[Term]
 id: PATO:0010005
 name: spatial distribution of a process
-def: "A physical quality of a process that is its spatial distribution.  For example, bone mineralization follows stereotypical spatial distribution patterns during development, which may be altered in some phenotypes." [0000-0002-7073-9172]
+def: "A physical quality of a process that is its spatial distribution.  For example, bone mineralization follows stereotypical spatial distribution patterns during development, which may be altered in some phenotypes." [orcid:0000-0002-7073-9172]
 subset: attribute_slim
 is_a: PATO:0002062 ! physical quality of a process
-property_value: created_by "dos" xsd:string
+created_by: dos
 creation_date: 2019-07-18T18:49:08Z
 
 [Term]
@@ -21557,6 +21583,30 @@ intersection_of: PATO:0010005 ! spatial distribution of a process
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 created_by: midori
 creation_date: 2019-07-29T14:23:31Z
+
+[Term]
+id: PATO:0060001
+name: sex-specific
+def: "A quality inhering in a bearer by virtue of the bearer's being present in one sex and absent from the other in members of the same species." [http://orcid.org/0000-0002-1373-1705]
+is_a: PATO:0002451 ! sexually dimorphic
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2019-08-23T08:46:30Z
+
+[Term]
+id: PATO:0060002
+name: male-specific
+def: "A quality inhering in a bearer by virtue of the bearer's being present in males and absent from females in members of the same species." [http://orcid.org/0000-0002-1373-1705]
+is_a: PATO:0060001 ! sex-specific
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2019-08-23T08:49:59Z
+
+[Term]
+id: PATO:0060003
+name: female-specific
+def: "A quality inhering in a bearer by virtue of the bearer's being present in females and absent from males in members of the same species." [http://orcid.org/0000-0002-1373-1705]
+is_a: PATO:0060001 ! sex-specific
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2019-08-23T08:51:22Z
 
 [Typedef]
 id: correlates_with
