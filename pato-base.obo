@@ -27,7 +27,6 @@ id: PATO:0000001
 name: quality
 alt_id: PATO:0000072
 def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
-synonym: "trait" EXACT []
 
 [Term]
 id: PATO:0000002
@@ -109,6 +108,7 @@ def: "A composite chromatic quality composed of hue, saturation and intensity pa
 subset: attribute_slim
 synonym: "colour" EXACT []
 synonym: "relative color" EXACT []
+is_a: PATO:0000051 ! morphology
 is_a: PATO:0001300 ! optical quality
 
 [Term]
@@ -305,7 +305,7 @@ name: frequency
 def: "A physical quality which inheres in a bearer by virtue of the number of the bearer's repetitive actions in a particular time." [Wikipedia:http\://en.wikipedia.org/wiki/frequency]
 subset: attribute_slim
 subset: scalar_slim
-is_a: PATO:0000161 ! rate
+is_a: PATO:0050000 ! rate of occurence
 
 [Term]
 id: PATO:0000045
@@ -422,7 +422,7 @@ subset: attribute_slim
 subset: hpo_slim
 synonym: "distribution" EXACT []
 synonym: "pattern" RELATED []
-is_a: PATO:0000140 ! position
+is_a: PATO:0000051 ! morphology
 
 [Term]
 id: PATO:0000061
@@ -487,7 +487,6 @@ alt_id: PATO:0001226
 def: "The number of entities of this type that are part of the whole organism." [PATOC:GVG]
 comment: This term was originally named "presence". It has been renamed to reduce ambiguity. Consider annotating with the reciprocal relation,PATO:0001555, has_number_of. For example, rather than E=fin ray Q=count in organism C=10, say E=organism Q=has number of E2= fin ray C=10.
 subset: attribute_slim
-synonym: "count" EXACT []
 synonym: "count in organism" RELATED []
 synonym: "number" RELATED []
 synonym: "presence" RELATED []
@@ -2823,7 +2822,7 @@ subset: abnormal_slim
 subset: mpath_slim
 subset: value_slim
 synonym: "average" RELATED []
-is_a: PATO:0000069 ! deviation(from_normal)
+is_a: PATO:0000068 ! qualitative
 relationship: is_opposite_of PATO:0000460 ! abnormal
 
 [Term]
@@ -5957,6 +5956,7 @@ def: "A optical quality inhering in a bearer by virtue of the bearer's lacking o
 subset: mpath_slim
 subset: value_slim
 synonym: "clear" EXACT []
+synonym: "hyaline" EXACT []
 is_a: PATO:0000957 ! opacity
 relationship: is_opposite_of PATO:0000963 ! opaque
 
@@ -8382,7 +8382,7 @@ def: "A length quality which is equal to the length of any straight line segment
 subset: attribute_slim
 subset: mpath_slim
 subset: scalar_slim
-is_a: PATO:0000122 ! length
+is_a: PATO:0001708 ! 1-D extent
 
 [Term]
 id: PATO:0001335
@@ -9680,7 +9680,7 @@ name: growth rate
 comment: This term will be obsoleted; Use GO:growth and PATO:rate.
 subset: attribute_slim
 subset: scalar_slim
-is_a: PATO:0000161 ! rate
+is_a: PATO:0050001 ! rate of continuous process
 
 [Term]
 id: PATO:0001493
@@ -10232,6 +10232,7 @@ synonym: "number" RELATED []
 synonym: "number of" EXACT []
 xref: OBO_REL:has_part
 is_a: PATO:0001241 ! physical object quality
+relationship: reciprocal_of PATO:0000070 ! amount
 
 [Term]
 id: PATO:0001558
@@ -10240,6 +10241,7 @@ def: "A quality of a process inhering in a bearer by virtue of the bearer's lack
 subset: relational_slim
 subset: value_slim
 is_a: PATO:0001564 ! extra or missing processual parts
+relationship: reciprocal_of PATO:0000462 ! absent
 
 [Term]
 id: PATO:0001559
@@ -10403,7 +10405,7 @@ relationship: is_opposite_of PATO:0001577 ! increased permeability
 [Term]
 id: PATO:0001579
 name: contractility
-def: "A physical quality inhering in a bearer by virtue of the bearer's disposition to shrink or contract." [WordNet:WordNet]
+def: "A physical quality that is the ability to contract or shrink." [WordNet:WordNet]
 subset: attribute_slim
 subset: disposition_slim
 subset: scalar_slim
@@ -11646,7 +11648,7 @@ name: perimeter
 def: "An 1-D extent quality inhering in two-dimensional bearer by virtue of being equal to the distance around it." [Wikipedia:http\://en.wikipedia.org/wiki/Perimeter]
 subset: attribute_slim
 subset: scalar_slim
-is_a: PATO:0000122 ! length
+is_a: PATO:0001708 ! 1-D extent
 
 [Term]
 id: PATO:0001712
@@ -13431,6 +13433,7 @@ def: "The bearer of this quality has_part = n, where n is the normal amount for 
 subset: relational_slim
 synonym: "having physical part" EXACT []
 is_a: PATO:0001555 ! has number of
+relationship: reciprocal_of PATO:0002050 ! normal amount
 
 [Term]
 id: PATO:0001906
@@ -14161,6 +14164,7 @@ subset: relational_slim
 synonym: "lacks all physical parts of type" EXACT []
 xref: OBO_REL:lacks_part
 is_a: PATO:0001999 ! lacks parts or has fewer parts of type
+relationship: reciprocal_of PATO:0000462 ! absent
 
 [Term]
 id: PATO:0002001
@@ -15186,7 +15190,7 @@ creation_date: 2009-10-05T01:27:56Z
 
 [Term]
 id: PATO:0002104
-name: inflammatory
+name: inflamed
 def: "A compositional quality inhering in an bearer by virtue of the bearer's infiltration by leukocytes, local edema and accumulation of plasma proteins." [PATOC:GVG]
 subset: mpath_slim
 subset: value_slim
@@ -19822,6 +19826,42 @@ created_by: davidos
 creation_date: 2014-12-12T08:43:17Z
 
 [Term]
+id: PATO:0010002
+name: propagation velocity
+def: "The velocity of spatial propagation of a process. Examples include the velocity of propagation of an action potential along an axon." [orcid:0000-0002-7073-9172]
+is_a: PATO:0002062 ! physical quality of a process
+created_by: dos
+creation_date: 2019-07-18T18:24:15Z
+
+[Term]
+id: PATO:0010003
+name: increased propagation velocity
+def: "A propagation velocity that is higher than normal." [orcid:0000-0002-7073-9172]
+is_a: PATO:0010002 ! propagation velocity
+intersection_of: PATO:0010002 ! propagation velocity
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+created_by: dos
+creation_date: 2019-07-18T18:24:25Z
+
+[Term]
+id: PATO:0010004
+name: decreased propagation velocity
+def: "A propagation velocity that is lower than normal." [orcid:0000-0002-7073-9172]
+intersection_of: PATO:0010002 ! propagation velocity
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+created_by: dos
+creation_date: 2019-07-18T18:24:36Z
+
+[Term]
+id: PATO:0010005
+name: spatial distribution of a process
+def: "A physical quality of a process that is its spatial distribution.  For example, bone mineralization follows stereotypical spatial distribution patterns during development, which may be altered in some phenotypes." [orcid:0000-0002-7073-9172]
+subset: attribute_slim
+is_a: PATO:0002062 ! physical quality of a process
+created_by: dos
+creation_date: 2019-07-18T18:49:08Z
+
+[Term]
 id: PATO:0015001
 name: absence due to degeneration
 def: "Absence due to a degenerative process." [PATOC:PortlandMeetingFeb2015]
@@ -20231,6 +20271,15 @@ property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-00
 property_value: http://purl.org/dc/elements/1.1/date 2018-08-02T04:39:30Z xsd:dateTime
 
 [Term]
+id: PATO:0040005
+name: posteroventral orientation
+def: "An orientation quality inhering in a bearer by virtue of the bearer having a position that is directed posteroventrally." [https://orcid.org/0000-0003-3162-7490]
+synonym: "posteroventrally oriented" EXACT []
+is_a: PATO:0000133 ! orientation
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
+property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T22:54:16Z xsd:dateTime
+
+[Term]
 id: PATO:0040006
 name: crown like
 def: "A shape quality inhering in a bearer by virtue of the bearer's having a shape like a crown." [https://orcid.org/0000-0003-3162-7490]
@@ -20337,6 +20386,29 @@ synonym: "dysgenesis" NARROW []
 is_a: PATO:0001433 ! growth quality of occurrent
 property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T19:01:51Z xsd:dateTime
+
+[Term]
+id: PATO:0040019
+name: fibrotic
+def: "Fibrosis is the formation of excess fibrous connective tissue in an organ or tissue in a reparative or reactive process." [https://en.wikipedia.org/wiki/Fibrosis]
+is_a: PATO:0000025 ! composition
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
+property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T23:16:17Z xsd:dateTime
+
+[Term]
+id: PATO:0040020
+name: spayed female
+def: "Female quality of being incapable to reproduce because of functional loss of the ovaries and/or uterus from surgical removal." []
+is_a: PATO:0000383 ! female
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
+property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T22:52:49Z xsd:dateTime
+
+[Term]
+id: PATO:0040025
+name: lesioned
+def: "A structural quality which is held by a bearer where a localized pathological or traumatic structural change, damage, deformity, or discontinuity of tissue, organ, or body part is present." [NCIT:C3824]
+is_a: PATO:0000141 ! structure
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0045000
@@ -21492,6 +21564,60 @@ is_a: PATO:0045090 ! cardinal direction
 relationship: is_opposite_of PATO:0045092 ! east
 created_by: Luke Slater
 creation_date: 2017-12-22T14:16:43Z
+
+[Term]
+id: PATO:0050000
+name: rate of occurence
+def: "The number of repeated events per unit time, occurring in a repeating series. (e.g. the number of heart beats occurring over 1 minute)" [https://orcid.org/0000-0002-9943-9018]
+is_a: PATO:0000161 ! rate
+
+[Term]
+id: PATO:0050001
+name: rate of continuous process
+def: "The rate of output of a continuous process. Example include: growth rate, cell migration rate, enzyme reaction rate." [https://orcid.org/0000-0002-9943-9018]
+is_a: PATO:0000161 ! rate
+
+[Term]
+id: PATO:0055001
+name: decreased spatial extent of a process
+def: "A spatial distribution of a process in which the process occupies a smaller length, area, or volume than the reference process. For example, heterochromatin may form over a shorter length of a chromosome in a mutant than in wild type." [orcid:0000-0003-4148-4606]
+intersection_of: PATO:0010005 ! spatial distribution of a process
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+created_by: midori
+creation_date: 2019-07-29T14:22:24Z
+
+[Term]
+id: PATO:0055002
+name: increased spatial extent of a process
+def: "A spatial distribution of a process in which the process occupies a greater length, area, or volume than the reference process. For example, heterochromatin may form over a shorter length of a chromosome in a mutant than in wild type." [https://orcid.org/0000-0003-4148-4606]
+intersection_of: PATO:0010005 ! spatial distribution of a process
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+created_by: midori
+creation_date: 2019-07-29T14:23:31Z
+
+[Term]
+id: PATO:0060001
+name: sex-specific
+def: "A quality inhering in a bearer by virtue of the bearer's being present in one sex and absent from the other in members of the same species." [http://orcid.org/0000-0002-1373-1705]
+is_a: PATO:0002451 ! sexually dimorphic
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2019-08-23T08:46:30Z
+
+[Term]
+id: PATO:0060002
+name: male-specific
+def: "A quality inhering in a bearer by virtue of the bearer's being present in males and absent from females in members of the same species." [http://orcid.org/0000-0002-1373-1705]
+is_a: PATO:0060001 ! sex-specific
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2019-08-23T08:49:59Z
+
+[Term]
+id: PATO:0060003
+name: female-specific
+def: "A quality inhering in a bearer by virtue of the bearer's being present in females and absent from males in members of the same species." [http://orcid.org/0000-0002-1373-1705]
+is_a: PATO:0060001 ! sex-specific
+created_by: http://orcid.org/0000-0002-1373-1705
+creation_date: 2019-08-23T08:51:22Z
 
 [Typedef]
 id: correlates_with

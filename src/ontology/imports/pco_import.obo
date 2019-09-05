@@ -1,0 +1,87 @@
+format-version: 1.2
+ontology: urn:absolute:/imports/pco_import.owl
+
+[Term]
+id: BFO:0000001
+name: entity
+
+[Term]
+id: BFO:0000002
+name: continuant
+is_a: BFO:0000001 ! entity
+disjoint_from: BFO:0000003 ! occurrent
+
+[Term]
+id: BFO:0000003
+name: occurrent
+is_a: BFO:0000001 ! entity
+
+[Term]
+id: BFO:0000004
+name: independent continuant
+is_a: BFO:0000002 ! continuant
+disjoint_from: BFO:0000020 ! specifically dependent continuant
+
+[Term]
+id: BFO:0000020
+name: specifically dependent continuant
+is_a: BFO:0000002 ! continuant
+
+[Term]
+id: BFO:0000027
+name: object aggregate
+is_a: BFO:0000040 ! material entity
+
+[Term]
+id: BFO:0000040
+name: material entity
+is_a: BFO:0000004 ! independent continuant
+
+[Term]
+id: CARO:0001010
+name: organism or virus or viroid
+is_a: PCO:0000031 ! organismal entity
+
+[Term]
+id: PATO:0000001
+name: quality
+
+[Term]
+id: PATO:0001241
+name: physical object quality
+is_a: PATO:0000001 ! quality
+
+[Term]
+id: PATO:0002003
+name: population quality
+is_a: PATO:0001241 ! physical object quality
+
+[Term]
+id: PCO:0000000
+name: collection of organisms
+is_a: BFO:0000027 ! object aggregate
+is_a: PCO:0000031 ! organismal entity
+
+[Term]
+id: PCO:0000001
+name: population of organisms
+is_a: PCO:0000018 ! single-species collection of organisms
+
+[Term]
+id: PCO:0000003
+name: quality of a population
+is_a: BFO:0000020 ! specifically dependent continuant
+is_a: PATO:0002003 ! population quality
+
+[Term]
+id: PCO:0000018
+name: single-species collection of organisms
+is_a: PCO:0000000 ! collection of organisms
+
+[Term]
+id: PCO:0000031
+name: organismal entity
+is_a: BFO:0000040 ! material entity
+union_of: CARO:0001010 ! organism or virus or viroid
+union_of: PCO:0000000 ! collection of organisms
+
