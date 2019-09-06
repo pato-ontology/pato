@@ -1,7 +1,7 @@
 OBO=http://purl.obolibrary.org/obo
 USECAT= --catalog-xml catalog-v001.xml
 
-all: all_imports test_ext release
+all: all_imports release
 
 ARTEFACTS = pato.obo pato.owl pato.json pato_ext.owl pato_ext.json pato-base.obo pato-base.owl pato-base.json
 release: $(ARTEFACTS) copy-release
@@ -45,8 +45,8 @@ pato-base.json: pato-base.owl
 pato-base.obo: pato-base.owl
 	robot convert -i $< -o $@
 
-test_ext:
-	robot reason -r elk -i pato_ext.owl 
+#test_ext:
+#	robot reason -r elk -i pato_ext.owl 
 
 # ----------------------------------------
 # Regenerate imports

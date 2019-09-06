@@ -13,6 +13,9 @@ subsetdef: relational_slim "Relational slim: types of quality that require an ad
 subsetdef: scalar_slim "Scalar slim"
 subsetdef: value_slim "Value slim"
 default-namespace: quality
+import: http://purl.obolibrary.org/obo/pato/pato_ext.owl
+import: http://purl.obolibrary.org/obo/pato/imports/go_import.owl
+import: http://purl.obolibrary.org/obo/pato/imports/ro_import.owl
 ontology: pato
 
 [Term]
@@ -19925,7 +19928,6 @@ name: prominence
 def: "A quality inhering in a bearer by virtue of the degree to which the bearers stands out or projects beyond a surface or line." [GOC:CJM]
 subset: attribute_slim
 is_a: PATO:0000140 ! position
-
 
 [Term]
 id: PATO:0015008
