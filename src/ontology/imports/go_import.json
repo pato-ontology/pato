@@ -1,0 +1,120 @@
+{
+  "graphs" : [ {
+    "nodes" : [ {
+      "id" : "http://purl.obolibrary.org/obo/GO_0120025",
+      "type" : "CLASS",
+      "lbl" : "plasma membrane bounded cell projection"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0043227",
+      "type" : "CLASS",
+      "lbl" : "membrane-bounded organelle"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0005623",
+      "type" : "CLASS",
+      "lbl" : "cell"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0005634",
+      "type" : "CLASS",
+      "lbl" : "nucleus"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0043226",
+      "type" : "CLASS",
+      "lbl" : "organelle"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0042995",
+      "type" : "CLASS",
+      "lbl" : "cell projection"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0043229",
+      "type" : "CLASS",
+      "lbl" : "intracellular organelle"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0044424",
+      "type" : "CLASS",
+      "lbl" : "intracellular part"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0005575",
+      "type" : "CLASS",
+      "lbl" : "cellular_component"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0005929",
+      "type" : "CLASS",
+      "lbl" : "cilium"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0044464",
+      "type" : "CLASS",
+      "lbl" : "cell part"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/GO_0043231",
+      "type" : "CLASS",
+      "lbl" : "intracellular membrane-bounded organelle"
+    } ],
+    "edges" : [ {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0043231",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0043229"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0043231",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0043227"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0005634",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0043231"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0005623",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0005575"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0043226",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0005575"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0043229",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0044424"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0120025",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0042995"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0043229",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0043226"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0044424",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0044464"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0042995",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0044464"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0044464",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0005575"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0043227",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0043226"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0005929",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0120025"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/GO_0005929",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/GO_0043226"
+    } ],
+    "id" : "http://purl.obolibrary.org/obo/pato/imports/go_import.owl",
+    "meta" : {
+      "subsets" : [ ],
+      "xrefs" : [ ],
+      "basicPropertyValues" : [ ]
+    },
+    "equivalentNodesSets" : [ ],
+    "logicalDefinitionAxioms" : [ ],
+    "domainRangeAxioms" : [ ],
+    "propertyChainAxioms" : [ ]
+  } ]
+}

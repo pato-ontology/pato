@@ -1,0 +1,144 @@
+{
+  "graphs" : [ {
+    "nodes" : [ {
+      "id" : "http://purl.obolibrary.org/obo/PCO_0000031",
+      "type" : "CLASS",
+      "lbl" : "organismal entity"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000004",
+      "type" : "CLASS",
+      "lbl" : "independent continuant"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PCO_0000000",
+      "type" : "CLASS",
+      "lbl" : "collection of organisms"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000027",
+      "type" : "CLASS",
+      "lbl" : "object aggregate"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PCO_0000001",
+      "type" : "CLASS",
+      "lbl" : "population of organisms"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0001241",
+      "type" : "CLASS",
+      "lbl" : "physical object quality"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0002003",
+      "type" : "CLASS",
+      "lbl" : "population quality"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0000001",
+      "type" : "CLASS",
+      "lbl" : "quality"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CARO_0001010",
+      "type" : "CLASS",
+      "lbl" : "organism or virus or viroid"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000001",
+      "type" : "CLASS",
+      "lbl" : "entity"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PCO_0000003",
+      "type" : "CLASS",
+      "lbl" : "quality of a population"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000002",
+      "type" : "CLASS",
+      "lbl" : "continuant"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000003",
+      "type" : "CLASS",
+      "lbl" : "occurrent"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000040",
+      "type" : "CLASS",
+      "lbl" : "material entity"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PCO_0000018",
+      "type" : "CLASS",
+      "lbl" : "single-species collection of organisms"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000020",
+      "type" : "CLASS",
+      "lbl" : "specifically dependent continuant"
+    } ],
+    "edges" : [ {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000002",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PCO_0000000",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PCO_0000031"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PCO_0000003",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0002003"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PCO_0000003",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000020"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PCO_0000018",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PCO_0000000"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PCO_0000000",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000027"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000004",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000002"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000003",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001241",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0002003",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CARO_0001010",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PCO_0000031"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PCO_0000031",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000027",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000040"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000040",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000004"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/BFO_0000020",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000002"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PCO_0000001",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PCO_0000018"
+    } ],
+    "id" : "urn:absolute:/imports/pco_import.owl",
+    "meta" : {
+      "subsets" : [ ],
+      "xrefs" : [ ],
+      "basicPropertyValues" : [ ]
+    },
+    "equivalentNodesSets" : [ ],
+    "logicalDefinitionAxioms" : [ ],
+    "domainRangeAxioms" : [ ],
+    "propertyChainAxioms" : [ ]
+  } ]
+}

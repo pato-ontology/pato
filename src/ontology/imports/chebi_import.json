@@ -1,0 +1,39 @@
+{
+  "graphs" : [ {
+    "nodes" : [ {
+      "id" : "http://purl.obolibrary.org/obo/CHEBI_46662",
+      "type" : "CLASS",
+      "lbl" : "mineral"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBI_24431",
+      "type" : "CLASS",
+      "lbl" : "chemical entity"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/CHEBI_59999",
+      "type" : "CLASS",
+      "lbl" : "chemical substance"
+    } ],
+    "edges" : [ {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_59999",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_24431"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/CHEBI_46662",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/CHEBI_59999"
+    } ],
+    "id" : "file:/imports/chebi_import.owl",
+    "meta" : {
+      "subsets" : [ ],
+      "xrefs" : [ ],
+      "basicPropertyValues" : [ {
+        "pred" : "http://purl.org/dc/elements/1.1/source",
+        "val" : "http://purl.obolibrary.org/obo/chebi/131/chebi.owl"
+      } ]
+    },
+    "equivalentNodesSets" : [ ],
+    "logicalDefinitionAxioms" : [ ],
+    "domainRangeAxioms" : [ ],
+    "propertyChainAxioms" : [ ]
+  } ]
+}
