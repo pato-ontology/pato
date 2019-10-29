@@ -1,7 +1,7 @@
 # ----------------------------------------
 # Makefile for pato
 # Generated using ontology-starter-kit
-# ODK Version: v1.2.18
+# ODK Version: v1.2.19
 # ----------------------------------------
 # <do not edit above this line>
 
@@ -26,7 +26,7 @@ REPORT_FAIL_ON =            none
 OBO_FORMAT_OPTIONS =        
 SPARQL_VALIDATION_CHECKS =  equivalent-classes trailing-whitespace owldef-self-reference xref-syntax nolabels
 SPARQL_EXPORTS =            basic-report class-count-by-prefix edges xrefs obsoletes synonyms
-ODK_VERSION =               v1.2.18
+ODK_VERSION =               v1.2.19
 
 TODAY ?= $(shell date +%Y-%m-%d)
 OBODATE ?= $(shell date +'%d:%m:%Y %H:%M')
@@ -43,7 +43,7 @@ RELEASE_ARTEFACTS = $(sort  base simple full base full)
 .PHONY: .FORCE
 all: odkversion all_imports all_main all_subsets sparql_test all_reports all_assets
 test: odkversion sparql_test all_reports
-	$(ROBOT) reason --input $(SRC) --reasoner ELK  --equivalent-classes-allowed all --output test.owl && rm test.owl && echo "Success"
+	$(ROBOT) reason --input $(SRC) --reasoner ELK  --equivalent-classes-allowed all --exclude-tautologies structural --output test.owl && rm test.owl && echo "Success"
 
 odkversion:
 	echo "ODK Makefile version: $(ODK_VERSION) (this is the version of the ODK with which this Makefile was generated, not the version of the ODK you are running)" &&\
@@ -211,7 +211,7 @@ $(ONT)-base.owl: $(SRC) $(OTHER_SRC)
 # Full: The full artefacts with imports merged, reasoned
 $(ONT)-full.owl: $(SRC) $(OTHER_SRC)
 	$(ROBOT) merge --input $< \
-		reason --reasoner ELK --equivalent-classes-allowed all \
+		reason --reasoner ELK --equivalent-classes-allowed all --exclude-tautologies structural \
 		relax \
 		reduce -r ELK \
 		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $@
@@ -234,7 +234,7 @@ $(SIMPLESEED): $(SRCMERGED) $(ONTOLOGYTERMS)
 
 $(ONT)-simple.owl: $(SRC) $(OTHER_SRC) $(SIMPLESEED)
 	$(ROBOT) merge --input $< $(patsubst %, -i %, $(OTHER_SRC)) \
-		reason --reasoner ELK --equivalent-classes-allowed all \
+		reason --reasoner ELK --equivalent-classes-allowed all --exclude-tautologies structural \
 		relax \
 		remove --axioms equivalent \
 		relax \
@@ -276,6 +276,8 @@ imports/%_import.obo: imports/%_import.owl
 	@if [ $(IMP) = true ]; then $(ROBOT) convert --check false -i $< -f obo -o $@.tmp.obo && mv $@.tmp.obo $@; fi
 imports/%_import.json: imports/%_import.owl
 	@if [ $(IMP) = true ]; then $(ROBOT) convert --check false -i $< -f json -o $@.tmp.json && mv $@.tmp.json $@; fi
+
+
 # ----------------------------------------
 # Mirroring upstream ontologies
 # ----------------------------------------
@@ -283,7 +285,6 @@ imports/%_import.json: imports/%_import.owl
 
 IMP=true # Global parameter to bypass import generation
 MIR=true # Global parameter to bypass mirror generation
-
 
 
 ## ONTOLOGY: ro
@@ -301,7 +302,7 @@ mirror/ro.owl: mirror/ro.trigger
 mirror/chebi.trigger: $(SRC)
 
 mirror/chebi.owl: mirror/chebi.trigger
-	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I $(URIBASE)/chebi.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+	@if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/chebi.owl.gz -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 .PRECIOUS: mirror/%.owl
 
@@ -370,7 +371,7 @@ sparql_test: $(SRC)
 # ROBOT report
 # ----------------------------------------
 reports/%-obo-report.tsv: %
-	$(ROBOT) report -i $< --fail-on $(REPORT_FAIL_ON) -o $@
+	$(ROBOT) report -i $< --fail-on $(REPORT_FAIL_ON) --print 5 -o $@
 
 # ----------------------------------------
 # Sparql queries: Exports
