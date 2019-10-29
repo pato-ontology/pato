@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pato/releases/2019-09-13/pato-simple.owl
+data-version: pato/releases/2019-10-29/pato-simple.owl
 date: 07:02:2018 10:27
 saved-by: segerdel
 auto-generated-by: OBO-Edit 2.3.1
@@ -26,6 +26,7 @@ id: PATO:0000001
 name: quality
 alt_id: PATO:0000072
 def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
+property_value: IAO:0000589 "quality (PATO)" xsd:string
 
 [Term]
 id: PATO:0000002
@@ -12072,7 +12073,6 @@ def: "A curvature quality inhering in a bearer by virtue of the bearer's being c
 comment: TODO: obsolete, definition too ambiguous.
 subset: cell_quality
 subset: value_slim
-synonym: "flared" EXACT []
 is_a: PATO:0000406 ! curved
 
 [Term]
@@ -17493,7 +17493,7 @@ creation_date: 2012-05-03T11:29:38Z
 
 [Term]
 id: PATO:0002372
-name: grand multi[arous
+name: grand multiparous
 def: "A viviparous organism that has given birth five or more times." [wiki:http\://en.wikipedia.org/wiki/Parity_(biology)]
 subset: value_slim
 is_a: PATO:0002369 ! multiparous
@@ -19992,10 +19992,52 @@ property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-00
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T22:52:49Z xsd:dateTime
 
 [Term]
+id: PATO:0040021
+name: unpaired
+def: "The bearer of this quality has_part n=1 of the indicated entity type, where n is bilaterally paired for a comparable organism.." [https://orcid.org/0000-0003-3162-7490]
+is_a: PATO:0000467 ! present
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040022
+name: flared
+def: "A shape quality inhering in a bearer by virtue of the bearer being expanded laterally and or opened outward in shape." []
+is_a: PATO:0000052 ! shape
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
+property_value: http://purl.org/dc/elements/1.1/date 2018-11-19T21:49:07Z xsd:dateTime
+
+[Term]
+id: PATO:0040023
+name: distomedial orientation
+def: "An orientation quality inhering in a bearer by virtue of the bearer having a position that is directed distomedially, ie, pertaining to an inside aspect, but also farther away from the center of the body." [https://en.wiktionary.org/wiki/distomedial]
+synonym: "disto-medial orientation" EXACT []
+synonym: "distomedial" EXACT []
+is_a: PATO:0000133 ! orientation
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
+property_value: http://purl.org/dc/elements/1.1/date 2018-11-19T21:54:33Z xsd:dateTime
+
+[Term]
+id: PATO:0040024
+name: bilaterally paired
+def: "The bearer of this quality has_part n=2 of the indicated entity type, where n is unpaired for a comparable organism." [https://orcid.org/0000-0003-3162-7490]
+synonym: "paired" BROAD []
+is_a: PATO:0000467 ! present
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
+
+[Term]
 id: PATO:0040025
 name: lesioned
 def: "A structural quality which is held by a bearer where a localized pathological or traumatic structural change, damage, deformity, or discontinuity of tissue, organ, or body part is present." [NCIT:C3824]
 is_a: PATO:0000141 ! structure
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040026
+name: structurally discontinuous
+def: "A structural quality inhering in a bearer by virtue of the bearer's being marked by interruptions or gaps." []
+comment: This term is intended for use for terms such as MP:0010461 discontinuous pulmonary artery and MP:0004157 interrupted aortic arch.
+synonym: "structurally interrupted" EXACT []
+is_a: PATO:0001241 ! physical object quality
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
@@ -21090,6 +21132,7 @@ is_a: has_ratio_quality ! has_ratio_quality
 id: has_part
 name: has part
 name: has_part
+namespace: external
 def: "a core relation that holds between a whole and its part" []
 def: "Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2." [PATOC:CJM]
 comment: We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'.
@@ -21154,6 +21197,7 @@ namespace: pato.ontology
 id: part_of
 name: part of
 name: part_of
+namespace: external
 def: "a core relation that holds between a part and its whole" []
 xref: BFO:0000050
 property_value: IAO:0000111 "is part of" xsd:string
@@ -21165,6 +21209,15 @@ property_value: IAO:0000116 "Occurrents are not subject to change and so parthoo
 property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)\n\nA continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'." xsd:string
 property_value: IAO:0000118 "part_of" xsd:string
 property_value: RO:0001900 RO:0001901
+property_value: RO:0040042 BFO:0000002
+property_value: RO:0040042 BFO:0000003
+property_value: RO:0040042 BFO:0000004
+property_value: RO:0040042 BFO:0000017
+property_value: RO:0040042 BFO:0000019
+property_value: RO:0040042 BFO:0000020
+property_value: RO:0040042 BFO:0000031
+property_value: seeAlso http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections
+property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:PartOf
 property_value: seeAlso http://www.obofoundry.org/ro/#OBO_REL:part_of xsd:string
 is_transitive: true
 inverse_of: has_part ! has part
