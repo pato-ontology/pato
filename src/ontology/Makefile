@@ -45,7 +45,7 @@ pato-base.json: pato-base.owl
 pato-base.obo: pato-base.owl
 	robot convert -i $< -o $@
 
-test_ext:
+test_ext: pato.owl
 	robot reason -r elk -i pato_ext.owl 
 
 # ----------------------------------------

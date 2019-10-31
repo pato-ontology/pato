@@ -7597,6 +7597,7 @@ synonym: "quality of occurrent" EXACT []
 synonym: "quality of process" EXACT []
 synonym: "relational quality of occurrent" EXACT []
 is_a: PATO:0000001 ! quality
+disjoint_from: PATO:0001241 ! physical object quality
 
 [Term]
 id: PATO:0001241
@@ -8092,15 +8093,15 @@ name: variability
 def: "A quality inhering in a bearer by virtue of the bearer's disposition to varying or changing." [Dictionary:http\://dictionary.reference.com/]
 subset: attribute_slim
 synonym: "variability of a physical quality" RELATED []
-is_a: PATO:0001236 ! process quality
+is_a: PATO:0000001 ! quality
 
 [Term]
 id: PATO:0001304
 name: variability of temperature
 def: "A variability quality inhering in a bearer by virtue of whether the bearer exhibits temperature variation or change." [PATO:GVG]
 subset: attribute_slim
-is_a: PATO:0001303 ! variability
-relationship: towards PATO:0000146 ! temperature
+intersection_of: PATO:0001303 ! variability
+intersection_of: towards PATO:0000146 ! temperature
 
 [Term]
 id: PATO:0001305
@@ -8136,9 +8137,6 @@ name: decreased variability of temperature
 def: "A variability of temperature which is relatively low." [PATOC:GVG]
 subset: value_slim
 synonym: "low variability of temperature" EXACT []
-is_a: PATO:0001314 ! variant temperature
-is_a: PATO:0002302 ! decreased process quality
-is_a: PATO:0002303 ! decreased object quality
 intersection_of: PATO:0001314 ! variant temperature
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001308 ! increased variability of temperature
@@ -8149,9 +8147,6 @@ name: increased variability of temperature
 def: "A variability of temperature which is relatively high." [PATOC:GVG]
 subset: value_slim
 synonym: "high variability of temperature" EXACT []
-is_a: PATO:0001314 ! variant temperature
-is_a: PATO:0002304 ! increased process quality
-is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0001314 ! variant temperature
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001307 ! decreased variability of temperature
@@ -10447,9 +10442,6 @@ name: decreased variability
 def: "A variability which is relatively low." [PATO:GVG]
 subset: value_slim
 synonym: "low variability" EXACT []
-is_a: PATO:0001227 ! variant
-is_a: PATO:0002302 ! decreased process quality
-is_a: PATO:0002303 ! decreased object quality
 intersection_of: PATO:0001227 ! variant
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001584 ! increased variability
@@ -10460,9 +10452,6 @@ name: increased variability
 def: "A variability which is relatively high." [PATO:GVG]
 subset: value_slim
 synonym: "high variability" EXACT []
-is_a: PATO:0001227 ! variant
-is_a: PATO:0002304 ! increased process quality
-is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0001227 ! variant
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001583 ! decreased variability
@@ -10491,9 +10480,6 @@ name: increased variability of rate
 def: "A variability of rate which is relatively high." [PATO:GVG]
 subset: value_slim
 synonym: "high variability of rate" EXACT []
-is_a: PATO:0001586 ! variability of rate
-is_a: PATO:0002304 ! increased process quality
-is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0001586 ! variability of rate
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001588 ! decreased variability of rate
@@ -10504,9 +10490,6 @@ name: decreased variability of rate
 def: "A variability of rate which is relatively low." [PATO:GVG]
 subset: value_slim
 synonym: "low variability of rate" EXACT []
-is_a: PATO:0001586 ! variability of rate
-is_a: PATO:0002302 ! decreased process quality
-is_a: PATO:0002303 ! decreased object quality
 intersection_of: PATO:0001586 ! variability of rate
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001587 ! increased variability of rate
@@ -10713,9 +10696,6 @@ name: increased variability of color
 def: "A variability of color which is relatively high." [PATO:GVG]
 subset: value_slim
 synonym: "high variability of color" EXACT []
-is_a: PATO:0001615 ! variant color
-is_a: PATO:0002304 ! increased process quality
-is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0001615 ! variant color
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001613 ! decreased variability of color
@@ -10726,9 +10706,6 @@ name: decreased variability of color
 def: "A variability of color which is relatively low." [PATO:GVG]
 subset: value_slim
 synonym: "low variability of color" EXACT []
-is_a: PATO:0001615 ! variant color
-is_a: PATO:0002302 ! decreased process quality
-is_a: PATO:0002303 ! decreased object quality
 intersection_of: PATO:0001615 ! variant color
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001612 ! increased variability of color
@@ -13825,9 +13802,6 @@ name: decreased variability of size
 def: "A variability of size which is relatively low." [PATOC:GVG]
 subset: value_slim
 synonym: "low variability of size" EXACT []
-is_a: PATO:0001956 ! variability of size
-is_a: PATO:0002302 ! decreased process quality
-is_a: PATO:0002303 ! decreased object quality
 intersection_of: PATO:0001956 ! variability of size
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001958 ! increased variability of size
@@ -13838,9 +13812,6 @@ name: increased variability of size
 def: "A variability of size which is relatively high." [PATOC:GVG]
 subset: value_slim
 synonym: "high variability of size" EXACT []
-is_a: PATO:0001956 ! variability of size
-is_a: PATO:0002304 ! increased process quality
-is_a: PATO:0002305 ! increased object quality
 intersection_of: PATO:0001956 ! variability of size
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0001957 ! decreased variability of size
@@ -20431,6 +20402,7 @@ synonym: "paired" BROAD []
 is_a: PATO:0000467 ! present
 property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 
+[Term]
 id: PATO:0040025
 name: lesioned
 def: "A structural quality which is held by a bearer where a localized pathological or traumatic structural change, damage, deformity, or discontinuity of tissue, organ, or body part is present." [NCIT:C3824]
@@ -21369,9 +21341,6 @@ id: PATO:0045074
 name: normal variability
 def: "A variability which is relatively normal or average" []
 subset: value_slim
-is_a: PATO:0001227 ! variant
-is_a: PATO:0045001 ! normal object quality
-is_a: PATO:0045073 ! normal process quality
 intersection_of: PATO:0001227 ! variant
 intersection_of: has_relative_magnitude PATO:0000461 ! normal
 created_by: Luke Slater
@@ -21382,9 +21351,6 @@ id: PATO:0045075
 name: normal variability of color
 def: "A variability which is relatively normal or average" []
 subset: value_slim
-is_a: PATO:0001615 ! variant color
-is_a: PATO:0045001 ! normal object quality
-is_a: PATO:0045073 ! normal process quality
 intersection_of: PATO:0001615 ! variant color
 intersection_of: has_relative_magnitude PATO:0000461 ! normal
 created_by: Luke Slater
@@ -21395,9 +21361,6 @@ id: PATO:0045076
 name: normal variability of rate
 def: "A variability of rate which is relatively normal or average" []
 subset: value_slim
-is_a: PATO:0001586 ! variability of rate
-is_a: PATO:0045001 ! normal object quality
-is_a: PATO:0045073 ! normal process quality
 intersection_of: PATO:0001586 ! variability of rate
 intersection_of: has_relative_magnitude PATO:0000461 ! normal
 created_by: Luke Slater
@@ -21408,9 +21371,6 @@ id: PATO:0045077
 name: normal variability of size
 def: "A variability of size which is relatively normal or average" []
 subset: value_slim
-is_a: PATO:0001956 ! variability of size
-is_a: PATO:0045001 ! normal object quality
-is_a: PATO:0045073 ! normal process quality
 intersection_of: PATO:0001956 ! variability of size
 intersection_of: has_relative_magnitude PATO:0000461 ! normal
 created_by: Luke Slater
@@ -21421,9 +21381,6 @@ id: PATO:0045078
 name: normal variability of temperature
 def: "A variability of temperature which is relatively normal or average" []
 subset: value_slim
-is_a: PATO:0001314 ! variant temperature
-is_a: PATO:0045001 ! normal object quality
-is_a: PATO:0045073 ! normal process quality
 intersection_of: PATO:0001314 ! variant temperature
 intersection_of: has_relative_magnitude PATO:0000461 ! normal
 created_by: Luke Slater
