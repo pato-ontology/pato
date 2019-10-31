@@ -14,9 +14,9 @@ $(ONT).obo: $(ONT)-simple.owl
 #pato-edit-donotedit.owl:
 #	$(ROBOT) convert -i $(SRC) -f owl -o $@
 
-#pato-edit-donotedit.obo: pato-edit-donotedit.owl
-#	$(ROBOT) merge --input $< \
-#		convert -f obo --check false -o $@
+x: 
+	$(ROBOT) merge --input $(ONT)-simple.owl \
+		convert -f obo --check false -o ../../pato.obo
 
 #t: pato-edit-donotedit.owl
 #	$(ROBOT) merge -i pato-edit-donotedit.owl \

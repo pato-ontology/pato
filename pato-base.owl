@@ -11,7 +11,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/pato/pato-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2019-10-29/pato-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2019-10-31/pato-base.owl"/>
         <oboInOwl:auto-generated-by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBO-Edit 2.3.1</oboInOwl:auto-generated-by>
         <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07:02:2018 10:27</oboInOwl:date>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:default-namespace>
@@ -155,12 +155,6 @@
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Value slim</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/creator -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
     
 
 
@@ -379,6 +373,30 @@
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000053 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000053"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000057 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000057"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002180 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002180"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002473 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002473"/>
     
 
 
@@ -698,6 +716,54 @@ Association is weaker than correlation or proportionality. These relations may b
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000003"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CARO_0001010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CARO_0001010"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_46662 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_46662"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CL_0000000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CL_0000000"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0005623 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005623"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0005634 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005634"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0005929 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005929"/>
     
 
 
@@ -34797,6 +34863,7 @@ Association is weaker than correlation or proportionality. These relations may b
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001995">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PATO_0002003"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality that inheres in an entire organism or part of an organism.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001995</oboInOwl:id>
@@ -48968,8 +49035,8 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040000">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000625"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An oriented quality inhering in a bearer by virtue of the bearer&apos;s being abnormally placed or arranged.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-21T22:44:38Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040000</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heterotaxic</rdfs:label>
@@ -48988,8 +49055,8 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040001">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000947"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shaped like a ring</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-24T03:56:53Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">annular</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040001</oboInOwl:id>
@@ -49009,8 +49076,8 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040002">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000140"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A positional quality inhering in a bearer by virtue of some aspect of that bearer beginning from a position on another entity.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-05-24T04:10:53Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040002</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#relational_slim"/>
@@ -49024,8 +49091,8 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040003">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001995"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ability of a pathogen to produce an infectious disease or disorder in an another organism.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-08-02T04:24:52Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040003</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pathogenicity</rdfs:label>
@@ -49044,8 +49111,8 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040004">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000150"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A texture quality inhering in a bearer by virtue of the bearer&apos;s being covered or partially covered with hair that has increased thickness and softness.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-08-02T04:39:30Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040004</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plush</rdfs:label>
@@ -49065,8 +49132,8 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040005">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000133"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An orientation quality inhering in a bearer by virtue of the bearer having a position that is directed posteroventrally.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-12T22:54:16Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">posteroventrally oriented</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040005</oboInOwl:id>
@@ -49086,8 +49153,8 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040006">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000052"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A shape quality inhering in a bearer by virtue of the bearer&apos;s having a shape like a crown.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-12T18:09:59Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040006</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">crown like</rdfs:label>
@@ -49106,8 +49173,8 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000052"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A shape quality inhering in a bearer by virtue of the bearer&apos;s having a shape like a shell.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-12T18:12:47Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040007</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shell shaped</rdfs:label>
@@ -49126,8 +49193,8 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002267"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A shape quality inhering in a bearer by virtue of the bearer&apos;s having an ornamental border consisting of short straight or twisted threads or strips hanging from cut or raveled edges or from a separate band.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-12T18:15:10Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040008</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fringed</rdfs:label>
@@ -49147,8 +49214,8 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040009">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002008"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A concave 3-D shape quality inhering in a bearer by virtue of the bearer&apos;s being shaped in the form of a bowl.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-12T18:17:01Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040009</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bowl shaped</rdfs:label>
@@ -49167,8 +49234,8 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040010">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000004"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mobility relative to a second entity.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-12T18:20:08Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040010</oboInOwl:id>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">For example, distinct anteroposterior mobility of palatine relative to mesethmoid.</rdfs:comment>
@@ -49188,8 +49255,8 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040011">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000004"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Immobility relative to a second entity.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-12T18:21:07Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040011</oboInOwl:id>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">For example: distinct anteroposterior immobility of palatine relative to mesethmoid.</rdfs:comment>
@@ -49209,8 +49276,8 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040012">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000052"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A shape that is in the form of a plug, being tube-like and expanded on one end.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-12T18:24:41Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plug like</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040012</oboInOwl:id>
@@ -49230,8 +49297,8 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040013">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000133"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An orientation quality inhering in a bearer by virtue of the bearer having a position that is directed dorsomedially.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-12T18:27:57Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dorsomedially directed</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040013</oboInOwl:id>
@@ -49251,8 +49318,8 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040014">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000052"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A shape that is in the form of a narrow strip encircling an object.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-12T18:31:51Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">band like</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">band-like</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">strip like</oboInOwl:hasExactSynonym>
@@ -49276,8 +49343,8 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040015">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002008"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A concave 3-D shape quality inhering in a bearer by virtue of the bearer&apos;s shape resembling that of a trough, being narrow, long, and boxlike in shape.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-12T18:35:51Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">trough like</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">trough-like</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">trough-shaped</oboInOwl:hasExactSynonym>
@@ -49300,8 +49367,8 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040016">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002006"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A shape quality inhering in a bearer by virtue of the bearer&apos;s having five angles and five sides.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-12T18:39:48Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040016</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pentagonal</rdfs:label>
@@ -49321,8 +49388,8 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040017">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001433"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth quality of occurrent in which the growth of an organism, structure or group of organisms is abnormal.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-12T19:01:51Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dysgenesis</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040017</oboInOwl:id>
@@ -49342,8 +49409,8 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040019">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000025"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fibrosis is the formation of excess fibrous connective tissue in an organ or tissue in a reparative or reactive process.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-12T23:16:17Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040019</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fibrotic</rdfs:label>
@@ -49362,8 +49429,8 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040020">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000383"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female quality of being incapable to reproduce because of functional loss of the ovaries and/or uterus from surgical removal.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-16T22:52:49Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040020</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spayed female</rdfs:label>
@@ -49376,7 +49443,7 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040021">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000467"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The bearer of this quality has_part n=1 of the indicated entity type, where n is bilaterally paired for a comparable organism..</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040021</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unpaired</rdfs:label>
@@ -49395,8 +49462,8 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040022">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000052"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A shape quality inhering in a bearer by virtue of the bearer being expanded laterally and or opened outward in shape.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-19T21:49:07Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040022</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flared</rdfs:label>
@@ -49409,8 +49476,8 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040023">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000133"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An orientation quality inhering in a bearer by virtue of the bearer having a position that is directed distomedially, ie, pertaining to an inside aspect, but also farther away from the center of the body.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-19T21:54:33Z</dc:date>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disto-medial orientation</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">distomedial</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
@@ -49431,7 +49498,7 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040024">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000467"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The bearer of this quality has_part n=2 of the indicated entity type, where n is unpaired for a comparable organism.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paired</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040024</oboInOwl:id>
@@ -49451,7 +49518,7 @@ height&apos;).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040025">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000141"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A structural quality which is held by a bearer where a localized pathological or traumatic structural change, damage, deformity, or discontinuity of tissue, organ, or body part is present.</obo:IAO_0000115>
-        <dc:creator rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0040025</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lesioned</rdfs:label>
@@ -52183,6 +52250,194 @@ height&apos;).</rdfs:comment>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality inhering in a bearer by virtue of the bearer&apos;s being present in females and absent from males in members of the same species.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://orcid.org/0000-0002-1373-1705</oboInOwl:hasDbXref>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000001"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PCO_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PCO_0000003"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class>
+        <owl:complementOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005634"/>
+            </owl:Restriction>
+        </owl:complementOf>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001405"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005929"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001408"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <owl:someValuesFrom>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000125"/>
+            </owl:Restriction>
+        </owl:someValuesFrom>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000125"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001406"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002180"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/GO_0005634"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001407"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002180"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/GO_0005634"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001908"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002180"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/GO_0005634"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001993"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002180"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/GO_0005623"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0002444"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002473"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_46662"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0002486"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/CARO_0001010"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0002487"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/CARO_0001010"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001236"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001396"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CL_0000000"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001407"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005634"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001908"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005634"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PCO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PCO_0000001"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0010000"/>
+        <owl:disjointWith>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0010001"/>
+            </owl:Restriction>
+        </owl:disjointWith>
+    </owl:Restriction>
 </rdf:RDF>
 
 

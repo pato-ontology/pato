@@ -5,6 +5,8 @@ SELECT DISTINCT ?cls WHERE
 {
   {?cls a owl:ObjectProperty .}
   UNION
+  {?cls a owl:AnnotationProperty .}
+  UNION
   {?x <http://www.geneontology.org/formats/oboInOwl#inSubset> ?cls}
   UNION
   {?x <http://www.geneontology.org/formats/oboInOwl#hasSynonymType> ?cls}

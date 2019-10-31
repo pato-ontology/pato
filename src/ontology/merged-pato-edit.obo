@@ -14,6 +14,7 @@ subsetdef: scalar_slim "Scalar slim"
 subsetdef: value_slim "Value slim"
 default-namespace: quality
 ontology: pato
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000003>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000040>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CARO_0001010>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_46662>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CL_0000000>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0005623>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0005634>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0005929>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0000125>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001236>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001241>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001396>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001405>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001406>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001407>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001408>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001908>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001993>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0002444>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0002486>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0002487>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0010000>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0010001>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PCO_0000001>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PCO_0000003>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000053>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000057>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002180>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002473>))\n\n\nEquivalentClasses(ObjectComplementOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/GO_0005634>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001405>))\nEquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/GO_0005929>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001408>))\nEquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0000125>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0000125>))\nEquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001406>) ObjectExactCardinality(2 <http://purl.obolibrary.org/obo/RO_0002180> <http://purl.obolibrary.org/obo/GO_0005634>))\nEquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001407>) ObjectExactCardinality(1 <http://purl.obolibrary.org/obo/RO_0002180> <http://purl.obolibrary.org/obo/GO_0005634>))\nEquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001908>) ObjectMinCardinality(2 <http://purl.obolibrary.org/obo/RO_0002180> <http://purl.obolibrary.org/obo/GO_0005634>))\nEquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001993>) ObjectMinCardinality(2 <http://purl.obolibrary.org/obo/RO_0002180> <http://purl.obolibrary.org/obo/GO_0005623>))\nEquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0002444>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002473> <http://purl.obolibrary.org/obo/CHEBI_46662>))\nEquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0002486>) ObjectMinCardinality(2 <http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obolibrary.org/obo/CARO_0001010>))\nEquivalentClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0002487>) ObjectExactCardinality(1 <http://purl.obolibrary.org/obo/RO_0000057> <http://purl.obolibrary.org/obo/CARO_0001010>))\nSubClassOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001236>) <http://purl.obolibrary.org/obo/BFO_0000003>)\nSubClassOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001241>) <http://purl.obolibrary.org/obo/BFO_0000040>)\nSubClassOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001396>) <http://purl.obolibrary.org/obo/CL_0000000>)\nSubClassOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001407>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/GO_0005634>))\nSubClassOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0001908>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000051> <http://purl.obolibrary.org/obo/GO_0005634>))\nSubClassOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PCO_0000003>) <http://purl.obolibrary.org/obo/PCO_0000001>)\nDisjointClasses(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0010000>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000053> <http://purl.obolibrary.org/obo/PATO_0010001>))\n)
 
 [Term]
 id: PATO:0000000
@@ -14086,6 +14087,7 @@ id: PATO:0001995
 name: organismal quality
 def: "A quality that inheres in an entire organism or part of an organism." [PATOC:CJM]
 is_a: PATO:0001241 ! physical object quality
+disjoint_from: PATO:0002003 ! population quality
 
 [Term]
 id: PATO:0001997
@@ -20199,8 +20201,8 @@ id: PATO:0040000
 name: heterotaxic
 def: "An oriented quality inhering in a bearer by virtue of the bearer's being abnormally placed or arranged." [http://medical-dictionary.thefreedictionary.com/heterotaxic]
 is_a: PATO:0000625 ! inverted
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-05-21T22:44:38Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040001
@@ -20208,8 +20210,8 @@ name: ring-shaped
 def: "Shaped like a ring" [https://orcid.org/0000-0002-6601-2165]
 synonym: "annular" EXACT []
 is_a: PATO:0000947 ! elliptic
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-05-24T03:56:53Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040002
@@ -20217,24 +20219,24 @@ name: originates from
 def: "A positional quality inhering in a bearer by virtue of some aspect of that bearer beginning from a position on another entity." []
 subset: relational_slim
 is_a: PATO:0000140 ! position
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-05-24T04:10:53Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040003
 name: pathogenicity
 def: "The ability of a pathogen to produce an infectious disease or disorder in an another organism." [https://orcid.org/0000-0001-8941-3984]
 is_a: PATO:0001995 ! organismal quality
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-08-02T04:24:52Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040004
 name: plush
 def: "A texture quality inhering in a bearer by virtue of the bearer's being covered or partially covered with hair that has increased thickness and softness." [https://orcid.org/0000-0001-5208-3432, https://orcid.org/0000-0003-4606-0597]
 is_a: PATO:0000150 ! texture
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-08-02T04:39:30Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040005
@@ -20242,40 +20244,40 @@ name: posteroventral orientation
 def: "An orientation quality inhering in a bearer by virtue of the bearer having a position that is directed posteroventrally." [https://orcid.org/0000-0003-3162-7490]
 synonym: "posteroventrally oriented" EXACT []
 is_a: PATO:0000133 ! orientation
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T22:54:16Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040006
 name: crown like
 def: "A shape quality inhering in a bearer by virtue of the bearer's having a shape like a crown." [https://orcid.org/0000-0003-3162-7490]
 is_a: PATO:0000052 ! shape
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:09:59Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040007
 name: shell shaped
 def: "A shape quality inhering in a bearer by virtue of the bearer's having a shape like a shell." [https://orcid.org/0000-0003-3162-7490]
 is_a: PATO:0000052 ! shape
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:12:47Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040008
 name: fringed
 def: "A shape quality inhering in a bearer by virtue of the bearer's having an ornamental border consisting of short straight or twisted threads or strips hanging from cut or raveled edges or from a separate band." [https://orcid.org/0000-0003-3162-7490, https://www.merriam-webster.com/dictionary/fringe]
 is_a: PATO:0002267 ! edge shape
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:15:10Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040009
 name: bowl shaped
 def: "A concave 3-D shape quality inhering in a bearer by virtue of the bearer's being shaped in the form of a bowl." [https://orcid.org/0000-0003-3162-7490]
 is_a: PATO:0002008 ! concave 3-D shape
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:17:01Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040010
@@ -20283,8 +20285,8 @@ name: mobile relative to
 def: "Mobility relative to a second entity." [https://orcid.org/0000-0003-3162-7490]
 comment: For example, distinct anteroposterior mobility of palatine relative to mesethmoid.
 is_a: PATO:0000004 ! mobility
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:20:08Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040011
@@ -20292,8 +20294,8 @@ name: immobile relative to
 def: "Immobility relative to a second entity." [https://orcid.org/0000-0003-3162-7490]
 comment: For example: distinct anteroposterior immobility of palatine relative to mesethmoid.
 is_a: PATO:0000004 ! mobility
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:21:07Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040012
@@ -20301,8 +20303,8 @@ name: plug shaped
 def: "A shape that is in the form of a plug, being tube-like and expanded on one end." [https://orcid.org/0000-0003-3162-7490]
 synonym: "plug like" EXACT []
 is_a: PATO:0000052 ! shape
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:24:41Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040013
@@ -20310,8 +20312,8 @@ name: dorsomedial orientation
 def: "An orientation quality inhering in a bearer by virtue of the bearer having a position that is directed dorsomedially." [https://orcid.org/0000-0003-3162-7490]
 synonym: "dorsomedially directed" EXACT []
 is_a: PATO:0000133 ! orientation
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:27:57Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040014
@@ -20322,8 +20324,8 @@ synonym: "band-like" EXACT []
 synonym: "strip like" EXACT []
 synonym: "strip-like" EXACT []
 is_a: PATO:0000052 ! shape
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:31:51Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040015
@@ -20333,16 +20335,16 @@ synonym: "trough like" EXACT []
 synonym: "trough-like" EXACT []
 synonym: "trough-shaped" EXACT []
 is_a: PATO:0002008 ! concave 3-D shape
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:35:51Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040016
 name: pentagonal
 def: "A shape quality inhering in a bearer by virtue of the bearer's having five angles and five sides." [https://orcid.org/0000-0003-3162-7490, https://www.merriam-webster.com/dictionary/pentagonal]
 is_a: PATO:0002006 ! 2-D shape
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:39:48Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040017
@@ -20350,39 +20352,39 @@ name: dysplastic growth
 def: "A growth quality of occurrent in which the growth of an organism, structure or group of organisms is abnormal." [https://www.cancer.gov/publications/dictionaries/cancer-terms/def/dysplasia]
 synonym: "dysgenesis" NARROW []
 is_a: PATO:0001433 ! growth quality of occurrent
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T19:01:51Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040019
 name: fibrotic
 def: "Fibrosis is the formation of excess fibrous connective tissue in an organ or tissue in a reparative or reactive process." [https://en.wikipedia.org/wiki/Fibrosis]
 is_a: PATO:0000025 ! composition
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T23:16:17Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040020
 name: spayed female
 def: "Female quality of being incapable to reproduce because of functional loss of the ovaries and/or uterus from surgical removal." []
 is_a: PATO:0000383 ! female
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T22:52:49Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040021
 name: unpaired
 def: "The bearer of this quality has_part n=1 of the indicated entity type, where n is bilaterally paired for a comparable organism.." [https://orcid.org/0000-0003-3162-7490]
 is_a: PATO:0000467 ! present
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040022
 name: flared
 def: "A shape quality inhering in a bearer by virtue of the bearer being expanded laterally and or opened outward in shape." []
 is_a: PATO:0000052 ! shape
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-19T21:49:07Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040023
@@ -20391,8 +20393,8 @@ def: "An orientation quality inhering in a bearer by virtue of the bearer having
 synonym: "disto-medial orientation" EXACT []
 synonym: "distomedial" EXACT []
 is_a: PATO:0000133 ! orientation
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/elements/1.1/date 2018-11-19T21:54:33Z xsd:dateTime
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040024
@@ -20400,14 +20402,14 @@ name: bilaterally paired
 def: "The bearer of this quality has_part n=2 of the indicated entity type, where n is unpaired for a comparable organism." [https://orcid.org/0000-0003-3162-7490]
 synonym: "paired" BROAD []
 is_a: PATO:0000467 ! present
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040025
 name: lesioned
 def: "A structural quality which is held by a bearer where a localized pathological or traumatic structural change, damage, deformity, or discontinuity of tissue, organ, or body part is present." [NCIT:C3824]
 is_a: PATO:0000141 ! structure
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-5208-3432
+created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040026
