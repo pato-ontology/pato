@@ -151,6 +151,9 @@ prepare_initial_release: prepare_release
 # Export formats
 # ----------------------------------------
 
+test_ext: pato.owl
+	robot reason -r elk -i pato_ext.owl 
+
 
 $(ONT)-base.obo: $(ONT)-base.owl
 	$(ROBOT) convert --input $< --check false -f obo $(OBO_FORMAT_OPTIONS) -o $@.tmp.obo && grep -v ^owl-axioms $@.tmp.obo > $@ && rm $@.tmp.obo
