@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: pato/releases/2019-10-29/imports/uberon_import.owl
-subsetdef: upper_level ""
+data-version: pato/releases/2019-10-31/imports/uberon_import.owl
+subsetdef: upper_level "abstract upper-level terms not directly useful for analysis"
 ontology: pato/imports/uberon_import
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))\n\n\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/RO_0002473> \"RO:0002473\")\n)
 
@@ -59,10 +59,23 @@ xref: RO:0002473
 is_a: has_part ! has part
 
 [Typedef]
+id: contains
+name: contains
+namespace: uberon
+xref: RO:0001019
+
+[Typedef]
 id: contains_process
 name: contains process
 namespace: uberon
 xref: BFO:0000067
+
+[Typedef]
+id: curator_notes
+name: curator notes
+namespace: uberon
+xref: IAO:0000232
+is_metadata_tag: true
 
 [Typedef]
 id: dc-creator
@@ -79,6 +92,38 @@ xref: http://purl.org/dc/elements/1.1/source
 is_metadata_tag: true
 
 [Typedef]
+id: developmentally_contributes_to
+name: developmentally_contributes_to
+namespace: uberon
+xref: RO:0002255
+holds_over_chain: develops_into part_of
+is_a: has_potential_to_developmentally_contribute_to ! has potential to developmentally contribute to
+
+[Typedef]
+id: developmentally_preceded_by
+name: developmentally preceded by
+namespace: uberon
+xref: RO:0002258
+
+[Typedef]
+id: develops_from
+name: develops_from
+namespace: uberon
+xref: RO:0002202
+holds_over_chain: part_of develops_from
+is_transitive: true
+is_a: has_developmental_contribution_from ! has developmental contribution from
+inverse_of: develops_into ! develops_into
+transitive_over: part_of ! part of
+
+[Typedef]
+id: develops_into
+name: develops_into
+namespace: uberon
+xref: RO:0002203
+is_a: has_potential_to_develop_into ! has potential to develop into
+
+[Typedef]
 id: editor_note
 name: editor note
 namespace: uberon
@@ -90,6 +135,22 @@ id: example_of_usage
 name: example of usage
 namespace: uberon
 xref: IAO:0000112
+is_metadata_tag: true
+
+[Typedef]
+id: external_definition
+name: external_definition
+namespace: uberon
+def: "An alternate textual definition for a class taken unmodified from an external source. This definition may have been used to derive a generalized definition for the new class." [https://orcid.org/0000-0002-6601-2165]
+comment: This annotation property may be replaced with an annotation property from an external ontology such as IAO
+xref: UBPROP:0000001
+is_metadata_tag: true
+
+[Typedef]
+id: foaf-page
+name: page
+namespace: uberon
+xref: http://xmlns.com/foaf/0.1/page
 is_metadata_tag: true
 
 [Typedef]
@@ -106,11 +167,54 @@ xref: RO:0002180
 is_a: has_part ! has part
 
 [Typedef]
+id: has_developmental_contribution_from
+name: has developmental contribution from
+namespace: uberon
+xref: RO:0002254
+holds_over_chain: has_part develops_from
+is_transitive: true
+
+[Typedef]
+id: has_member
+name: has member
+namespace: uberon
+xref: RO:0002351
+is_a: has_part ! has part
+
+[Typedef]
 id: has_part
 name: has part
 namespace: uberon
 xref: BFO:0000051
 is_transitive: true
+
+[Typedef]
+id: has_potential_to_develop_into
+name: has potential to develop into
+namespace: uberon
+def: "x has the potential to develop into y iff x develops into y or if x is capable of developing into y" []
+xref: RO:0002387
+
+[Typedef]
+id: has_potential_to_developmentally_contribute_to
+name: has potential to developmentally contribute to
+namespace: uberon
+def: "x has potential to developmentrally contribute to y iff x developmentally contributes to y or x is capable of developmentally contributing to y" []
+xref: RO:0002385
+
+[Typedef]
+id: has_potential_to_directly_develop_into
+name: has potential to directly develop into
+namespace: uberon
+def: "x has potential to directly develop into y iff x directly develops into y or x is capable of directly developing into y" []
+xref: RO:0002388
+
+[Typedef]
+id: has_quality
+name: has quality
+namespace: uberon
+xref: RO:0000086
+is_a: bearer_of ! bearer of
 
 [Typedef]
 id: immediately_preceded_by
@@ -122,8 +226,8 @@ synonym: "is directly preceded by" EXACT []
 synonym: "is immediately preceded by" EXACT [SIO:000251]
 synonym: "starts_at_end_of" EXACT []
 xref: RO:0002087
+property_value: external_definition "A non-transitive temporal relation in which one process immediately precedes another process, such that there is no interval of time between the two processes[SIO:000251]." xsd:string {source="SIO:000251"}
 property_value: seeAlso SIO:000251
-property_value: UBPROP:0000001 "A non-transitive temporal relation in which one process immediately precedes another process, such that there is no interval of time between the two processes[SIO:000251]." xsd:string {source="SIO:000251"}
 is_a: preceded_by ! preceded_by
 
 [Typedef]
@@ -131,6 +235,33 @@ id: input_of
 name: input of
 namespace: uberon
 xref: RO:0002352
+is_a: functionally_related_to ! functionally related to
+
+[Typedef]
+id: located_in
+name: located_in
+namespace: uberon
+xref: RO:0001025
+
+[Typedef]
+id: location_of
+name: location_of
+namespace: uberon
+xref: RO:0001015
+
+[Typedef]
+id: member_of
+name: member of
+namespace: uberon
+xref: RO:0002350
+is_a: part_of ! part of
+inverse_of: has_member ! has member
+
+[Typedef]
+id: output_of
+name: output of
+namespace: uberon
+xref: RO:0002353
 is_a: functionally_related_to ! functionally related to
 
 [Typedef]
@@ -173,4 +304,16 @@ name: precedes
 namespace: uberon
 xref: BFO:0000063
 is_transitive: true
+
+[Typedef]
+id: produced_by
+name: produced_by
+namespace: uberon
+xref: RO:0003001
+
+[Typedef]
+id: produces
+name: produces
+namespace: uberon
+xref: RO:0003000
 

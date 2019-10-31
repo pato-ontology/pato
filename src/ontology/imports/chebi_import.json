@@ -61,6 +61,10 @@
       "type" : "PROPERTY",
       "lbl" : "has_exact_synonym"
     }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#hasSynonymType",
+      "type" : "PROPERTY",
+      "lbl" : "has_synonym_type"
+    }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasDbXref",
       "type" : "PROPERTY",
       "lbl" : "database_cross_reference"
@@ -135,6 +139,15 @@
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
       "type" : "PROPERTY",
       "lbl" : "has_alternative_id"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/chebi#3_STAR",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "Manually annotated by ChEBI Team"
+        } ]
+      },
+      "type" : "PROPERTY"
     } ],
     "edges" : [ {
       "sub" : "http://purl.obolibrary.org/obo/CHEBI_46662",
@@ -150,7 +163,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/pato/releases/2019-10-29/imports/chebi_import.owl"
+      "version" : "http://purl.obolibrary.org/obo/pato/releases/2019-10-31/imports/chebi_import.owl"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],

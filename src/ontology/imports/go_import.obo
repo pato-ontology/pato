@@ -1,19 +1,19 @@
 format-version: 1.2
-data-version: pato/releases/2019-10-29/imports/go_import.owl
-subsetdef: gocheck_do_not_annotate ""
-subsetdef: gocheck_do_not_manually_annotate ""
-subsetdef: goslim_agr ""
-subsetdef: goslim_aspergillus ""
-subsetdef: goslim_candida ""
-subsetdef: goslim_chembl ""
-subsetdef: goslim_flybase_ribbon ""
-subsetdef: goslim_generic ""
-subsetdef: goslim_metagenomics ""
-subsetdef: goslim_mouse ""
-subsetdef: goslim_pir ""
-subsetdef: goslim_plant ""
-subsetdef: goslim_pombe ""
-subsetdef: goslim_yeast ""
+data-version: pato/releases/2019-10-31/imports/go_import.owl
+subsetdef: gocheck_do_not_annotate "Term not to be used for direct annotation"
+subsetdef: gocheck_do_not_manually_annotate "Term not to be used for direct manual annotation"
+subsetdef: goslim_agr "AGR slim"
+subsetdef: goslim_aspergillus "Aspergillus GO slim"
+subsetdef: goslim_candida "Candida GO slim"
+subsetdef: goslim_chembl "ChEMBL protein targets summary"
+subsetdef: goslim_flybase_ribbon "FlyBase Drosophila GO ribbon slim"
+subsetdef: goslim_generic "Generic GO slim"
+subsetdef: goslim_metagenomics "Metagenomics GO slim"
+subsetdef: goslim_mouse "Mouse GO slim"
+subsetdef: goslim_pir "PIR GO slim"
+subsetdef: goslim_plant "Plant GO slim"
+subsetdef: goslim_pombe "Fission yeast GO slim"
+subsetdef: goslim_yeast "Yeast GO slim"
 ontology: pato/imports/go_import
 
 [Term]
@@ -441,6 +441,18 @@ created_by: janelomax
 creation_date: 2012-12-11T16:56:55Z
 
 [Term]
+id: GO:0010469
+name: regulation of signaling receptor activity
+namespace: biological_process
+def: "Any process that modulates the frequency, rate or extent of a signaling receptor activity. Receptor activity is when a molecule combines with an extracellular or intracellular messenger to initiate a change in cell activity." [GOC:dph, GOC:tb]
+synonym: "regulation of receptor activity" BROAD []
+is_a: GO:0009966 ! regulation of signal transduction
+is_a: GO:0065009 ! regulation of molecular function
+intersection_of: GO:0008150 ! biological_process
+intersection_of: regulates GO:0038023 ! signaling receptor activity
+relationship: regulates GO:0038023 ! signaling receptor activity
+
+[Term]
 id: GO:0010562
 name: positive regulation of phosphorus metabolic process
 namespace: biological_process
@@ -842,7 +854,23 @@ creation_date: 2010-05-14T01:14:37Z
 
 [Term]
 id: GO:0038023
+name: signaling receptor activity
+namespace: molecular_function
 alt_id: GO:0004872
+alt_id: GO:0019041
+def: "Receiving a signal and transmitting it in the cell to initiate a change in cell activity. A signal is a physical entity or change in state that is used to transfer information in order to trigger a response." [GOC:bf, GOC:signaling]
+subset: goslim_agr
+subset: goslim_chembl
+subset: goslim_flybase_ribbon
+subset: goslim_metagenomics
+subset: goslim_mouse
+subset: goslim_pir
+subset: goslim_plant
+synonym: "receptor activity" BROAD []
+synonym: "receptor activity involved in signal transduction" EXACT [GOC:bf]
+is_a: GO:0060089 ! molecular transducer activity
+created_by: rfoulger
+creation_date: 2011-08-01T02:45:27Z
 
 [Term]
 id: GO:0042325
@@ -1408,6 +1436,15 @@ is_a: GO:0009987 ! cellular process
 is_a: GO:0050896 ! response to stimulus
 
 [Term]
+id: GO:0060089
+name: molecular transducer activity
+namespace: molecular_function
+def: "A compound molecular function in which an effector function is controlled by one or more regulatory components." [GOC:dos, GOC:pdt]
+subset: gocheck_do_not_manually_annotate
+subset: goslim_pir
+is_a: GO:0003674 ! molecular_function
+
+[Term]
 id: GO:0065007
 name: biological regulation
 namespace: biological_process
@@ -1672,6 +1709,33 @@ intersection_of: positively_regulates GO:0035556 ! intracellular signal transduc
 relationship: positively_regulates GO:0035556 ! intracellular signal transduction
 created_by: bf
 creation_date: 2013-12-02T11:33:10Z
+
+[Term]
+id: GO:2000272
+name: negative regulation of signaling receptor activity
+namespace: biological_process
+def: "Any process that stops, prevents or reduces the frequency, rate or extent of a signaling receptor activity." [GOC:obol]
+synonym: "negative regulation of receptor activity" BROAD []
+is_a: GO:0010469 ! regulation of signaling receptor activity
+is_a: GO:0044092 ! negative regulation of molecular function
+intersection_of: GO:0008150 ! biological_process
+intersection_of: negatively_regulates GO:0038023 ! signaling receptor activity
+relationship: negatively_regulates GO:0038023 ! signaling receptor activity
+created_by: rfoulger
+creation_date: 2010-12-02T09:28:47Z
+
+[Term]
+id: GO:2000273
+name: positive regulation of signaling receptor activity
+namespace: biological_process
+def: "Any process that activates or increases the frequency, rate or extent of signaling receptor activity." [GOC:obol]
+is_a: GO:0010469 ! regulation of signaling receptor activity
+is_a: GO:0044093 ! positive regulation of molecular function
+intersection_of: GO:0008150 ! biological_process
+intersection_of: positively_regulates GO:0038023 ! signaling receptor activity
+relationship: positively_regulates GO:0038023 ! signaling receptor activity
+created_by: rfoulger
+creation_date: 2010-12-02T09:28:50Z
 
 [Typedef]
 id: has_part

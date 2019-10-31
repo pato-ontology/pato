@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pato/releases/2019-10-29/imports/pco_import.owl
+data-version: pato/releases/2019-10-31/imports/pco_import.owl
 subsetdef: ro-eco ""
 subsetdef: RO:0002259 ""
 ontology: pato/imports/pco_import
@@ -43,6 +43,13 @@ name: process
 def: "An occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t." []
 def: "p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])" [] {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/083-003"}
 is_a: BFO:0000003 ! occurrent
+
+[Term]
+id: BFO:0000017
+name: realizable entity
+def: "A specifically dependent continuant  that inheres in continuant  entities and are not exhibited in full at every time in which it inheres in an entity or group of entities. The exhibition or actualization of a realizable entity is a particular manifestation, functioning or process that occurs under certain circumstances." []
+is_a: BFO:0000020 ! specifically dependent continuant
+disjoint_from: BFO:0000019 ! quality
 
 [Term]
 id: BFO:0000019
@@ -273,6 +280,13 @@ synonym: "single-organism process" RELATED []
 is_a: BFO:0000015 ! process
 
 [Term]
+id: GO:0016020
+name: membrane
+is_a: CARO:0000014 ! cell part
+is_a: GO:0044464 ! cell part
+property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
 id: GO:0016301
 name: kinase activity
 is_a: GO:0016772 ! transferase activity, transferring phosphorus-containing groups
@@ -298,6 +312,11 @@ id: GO:0044464
 name: cell part
 is_a: CARO:0000014 ! cell part
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
+
+[Term]
+id: GO:0050896
+name: response to stimulus
+is_a: GO:0008150 ! biological_process
 
 [Term]
 id: IAO:0000027
@@ -1263,6 +1282,36 @@ property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:Compo
 is_a: BFO:0000051 ! has part
 
 [Typedef]
+id: RO:0002202
+name: develops from
+def: "x develops from y if and only if either (a) x directly develops from y or (b) there exists some z such that x directly develops from z and z develops from y" []
+comment: This is the transitive form of the develops from relation
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
+property_value: IAO:0000117 "Melissa Haendel" xsd:string
+property_value: IAO:0000117 "Terry Meehan" xsd:string
+domain: BFO:0000004 ! independent continuant
+range: BFO:0000004 ! independent continuant
+is_transitive: true
+is_a: RO:0002258 ! developmentally preceded by
+inverse_of: RO:0002203 ! develops into
+
+[Typedef]
+id: RO:0002203
+name: develops into
+def: "inverse of develops from" []
+subset: RO:0002259
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
+property_value: IAO:0000117 "Terry Meehan" xsd:string
+is_transitive: true
+is_a: RO:0002286 ! developmentally succeeded by
+is_a: RO:0002387 ! has potential to develop into
+is_a: RO:0002388 ! has potential to directly develop into
+
+[Typedef]
 id: RO:0002211
 name: regulates
 def: "process(P1) regulates process(P2) iff: P1 results in the initiation or termination of P2 OR affects the frequency of its initiation or termination OR affects the magnitude or rate of output of P2." []
@@ -1398,6 +1447,44 @@ is_a: RO:0000057 ! has participant
 inverse_of: RO:0002353 ! output of
 
 [Typedef]
+id: RO:0002254
+name: has developmental contribution from
+def: "x has developmental contribution from y iff x has some part z such that z develops from y" []
+property_value: IAO:0000112 "Mammalian thymus has developmental contribution from some pharyngeal pouch 3; Mammalian thymus has developmental contribution from some pharyngeal pouch 4 [Kardong]" xsd:string
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+domain: BFO:0000004 ! independent continuant
+range: CARO:0000003 ! anatomical structure
+holds_over_chain: BFO:0000051 RO:0002202
+is_a: RO:0002258 ! developmentally preceded by
+inverse_of: RO:0002255 ! developmentally contributes to
+
+[Typedef]
+id: RO:0002255
+name: developmentally contributes to
+def: "inverse of has developmental contribution from" []
+subset: RO:0002259
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+holds_over_chain: RO:0002203 BFO:0000050
+is_a: RO:0002286 ! developmentally succeeded by
+is_a: RO:0002385 ! has potential to developmentally contribute to
+
+[Typedef]
+id: RO:0002258
+name: developmentally preceded by
+def: "Candidate definition: x developmentally related to y if and only if there exists some developmental process (GO:0032502) p such that x and y both participates in p, and x is the output of p and y is the input of p" []
+comment: This relation groups together various other developmental relations. It is fairly generic, encompassing induction, developmental contribution and direct and transitive develops from
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "false" xsd:boolean
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000232 "In general you should not use this relation to make assertions - use one of the more specific relations below this one" xsd:string
+domain: BFO:0000002 ! continuant
+range: BFO:0000002 ! continuant
+is_a: RO:0002324 ! developmentally related to
+inverse_of: RO:0002286 ! developmentally succeeded by
+
+[Typedef]
 id: RO:0002263
 name: acts upstream of
 def: "c involved in regulation of p if c enables  'p' and p' causally upstream of p" []
@@ -1411,6 +1498,14 @@ def: "c acts upstream of or within p if c is enables 'p' and p' causally upstrea
 synonym: "affects" RELATED []
 holds_over_chain: RO:0002327 RO:0002418
 is_a: RO:0002500 ! causal agent in
+
+[Typedef]
+id: RO:0002286
+name: developmentally succeeded by
+def: "Inverse of developmentally preceded by" []
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+is_a: RO:0002384 ! has developmental potential involving
 
 [Typedef]
 id: RO:0002304
@@ -1598,6 +1693,38 @@ property_value: IAO:0000112 "A lump of clay and a statue" xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000232 "This relation is added for formal completeness. It is unlikely to be used in many practical scenarios" xsd:string
 is_a: RO:0002131 ! overlaps
+
+[Typedef]
+id: RO:0002384
+name: has developmental potential involving
+def: "x has developmental potential involving y iff x is capable of a developmental process with output y. y may be the successor of x, or may be a different structure in the vicinity (as for example in the case of developmental induction)." []
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+is_a: RO:0002324 ! developmentally related to
+
+[Typedef]
+id: RO:0002385
+name: has potential to developmentally contribute to
+def: "x has potential to developmentrally contribute to y iff x developmentally contributes to y or x is capable of developmentally contributing to y" []
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+is_a: RO:0002384 ! has developmental potential involving
+
+[Typedef]
+id: RO:0002387
+name: has potential to develop into
+def: "x has the potential to develop into y iff x develops into y or if x is capable of developing into y" []
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+is_a: RO:0002384 ! has developmental potential involving
+
+[Typedef]
+id: RO:0002388
+name: has potential to directly develop into
+def: "x has potential to directly develop into y iff x directly develops into y or x is capable of directly developing into y" []
+property_value: IAO:0000114 IAO:0000428
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+is_a: RO:0002387 ! has potential to develop into
 
 [Typedef]
 id: RO:0002404

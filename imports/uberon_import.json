@@ -1,49 +1,57 @@
 {
   "graphs" : [ {
     "nodes" : [ {
-      "id" : "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym",
-      "type" : "PROPERTY",
-      "lbl" : "has_exact_synonym"
-    }, {
-      "id" : "http://www.geneontology.org/formats/oboInOwl#hasDbXref",
-      "type" : "PROPERTY",
-      "lbl" : "database_cross_reference"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/RO_0002473",
+      "id" : "http://xmlns.com/foaf/0.1/page",
       "meta" : {
-        "definition" : {
-          "val" : "x composed_primarily_of y iff: more than half of the mass of x is made from parts of y",
-          "xrefs" : [ ]
-        },
-        "xrefs" : [ {
-          "val" : "RO:0002473"
-        } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_metadata_tag",
+          "val" : "true"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "uberon"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
-          "val" : "composed_primarily_of"
+          "val" : "foaf-page"
         } ]
       },
       "type" : "PROPERTY",
-      "lbl" : "composed primarily of"
+      "lbl" : "page"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/RO_0002352",
+      "id" : "http://www.geneontology.org/formats/oboInOwl#hasSynonymType",
+      "type" : "PROPERTY",
+      "lbl" : "has_synonym_type"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002254",
       "meta" : {
         "xrefs" : [ {
-          "val" : "RO:0002352"
+          "val" : "RO:0002254"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
-          "val" : "input_of"
+          "val" : "has_developmental_contribution_from"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "uberon"
         } ]
       },
       "type" : "PROPERTY",
-      "lbl" : "input of"
+      "lbl" : "has developmental contribution from"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002255",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0002255"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "uberon"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "developmentally_contributes_to"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "developmentally_contributes_to"
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002131",
       "meta" : {
@@ -67,22 +75,6 @@
       },
       "type" : "PROPERTY",
       "lbl" : "overlaps"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/RO_0000053",
-      "meta" : {
-        "xrefs" : [ {
-          "val" : "RO:0000053"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
-          "val" : "bearer_of"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "uberon"
-        } ]
-      },
-      "type" : "PROPERTY",
-      "lbl" : "bearer of"
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002328",
       "meta" : {
@@ -116,10 +108,6 @@
       "type" : "PROPERTY",
       "lbl" : "part of structure that is capable of"
     }, {
-      "id" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
-      "type" : "PROPERTY",
-      "lbl" : "shorthand"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "meta" : {
         "xrefs" : [ {
@@ -136,17 +124,41 @@
       "type" : "PROPERTY",
       "lbl" : "part of"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002202",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0002202"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "uberon"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "develops_from"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "develops_from"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002203",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0002203"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "develops_into"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "uberon"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "develops_into"
+    }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#inSubset",
       "type" : "PROPERTY",
       "lbl" : "in_subset"
-    }, {
-      "id" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-      "type" : "PROPERTY",
-      "lbl" : "has_obo_namespace"
-    }, {
-      "id" : "http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion",
-      "type" : "PROPERTY",
-      "lbl" : "has_obo_format_version"
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000116",
       "meta" : {
@@ -206,25 +218,24 @@
       "type" : "PROPERTY",
       "lbl" : "example of usage"
     }, {
-      "id" : "http://purl.obolibrary.org/obo/RO_0002180",
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000232",
       "meta" : {
         "xrefs" : [ {
-          "val" : "RO:0002180"
+          "val" : "IAO:0000232"
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
-          "val" : "has_component"
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "uberon"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_metadata_tag",
+          "val" : "true"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "curator_notes"
         } ]
       },
       "type" : "PROPERTY",
-      "lbl" : "has component"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/IAO_0100001",
-      "type" : "PROPERTY",
-      "lbl" : "term replaced by"
+      "lbl" : "curator notes"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#consider",
       "type" : "PROPERTY",
@@ -272,22 +283,6 @@
       },
       "type" : "PROPERTY",
       "lbl" : "immediately_preceded_by"
-    }, {
-      "id" : "http://purl.org/dc/elements/1.1/creator",
-      "meta" : {
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "uberon"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_metadata_tag",
-          "val" : "true"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
-          "val" : "dc-creator"
-        } ]
-      },
-      "type" : "PROPERTY",
-      "lbl" : "creator"
     }, {
       "id" : "http://purl.obolibrary.org/obo/UBERON_0001062",
       "meta" : {
@@ -341,6 +336,381 @@
       "type" : "CLASS",
       "lbl" : "anatomical entity"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0001025",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0001025"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "uberon"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "located_in"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "located_in"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
+      "type" : "PROPERTY",
+      "lbl" : "has_related_synonym"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym",
+      "type" : "PROPERTY",
+      "lbl" : "has_broad_synonym"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym",
+      "type" : "PROPERTY",
+      "lbl" : "has_narrow_synonym"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym",
+      "type" : "PROPERTY",
+      "lbl" : "has_exact_synonym"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/uberon/core#upper_level",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "abstract upper-level terms not directly useful for analysis"
+        } ]
+      },
+      "type" : "PROPERTY"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#hasDbXref",
+      "type" : "PROPERTY",
+      "lbl" : "database_cross_reference"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002473",
+      "meta" : {
+        "definition" : {
+          "val" : "x composed_primarily_of y iff: more than half of the mass of x is made from parts of y",
+          "xrefs" : [ ]
+        },
+        "xrefs" : [ {
+          "val" : "RO:0002473"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "uberon"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "composed_primarily_of"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "composed primarily of"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002352",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0002352"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "input_of"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "uberon"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "input of"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002353",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0002353"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "output_of"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "uberon"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "output of"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0003001",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0003001"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "uberon"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "produced_by"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "produced_by"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002350",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0002350"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "member_of"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "uberon"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "member of"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0003000",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0003000"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "uberon"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "produces"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "produces"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0002351"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "has_member"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "uberon"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "has member"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000053",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0000053"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "bearer_of"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "uberon"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "bearer of"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0001019",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0001019"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "contains"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "uberon"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "contains"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+      "type" : "PROPERTY",
+      "lbl" : "shorthand"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0001015",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0001015"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "uberon"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "location_of"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "location_of"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+      "type" : "PROPERTY",
+      "lbl" : "has_obo_namespace"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion",
+      "type" : "PROPERTY",
+      "lbl" : "has_obo_format_version"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/UBPROP_0000001",
+      "meta" : {
+        "definition" : {
+          "val" : "An alternate textual definition for a class taken unmodified from an external source. This definition may have been used to derive a generalized definition for the new class.",
+          "xrefs" : [ "https://orcid.org/0000-0002-6601-2165" ]
+        },
+        "xrefs" : [ {
+          "val" : "UBPROP:0000001"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "uberon"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+          "val" : "This annotation property may be replaced with an annotation property from an external ontology such as IAO"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_metadata_tag",
+          "val" : "true"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "external_definition"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "external_definition"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002180",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0002180"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "has_component"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "uberon"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "has component"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0100001",
+      "type" : "PROPERTY",
+      "lbl" : "term replaced by"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002385",
+      "meta" : {
+        "definition" : {
+          "val" : "x has potential to developmentrally contribute to y iff x developmentally contributes to y or x is capable of developmentally contributing to y",
+          "xrefs" : [ ]
+        },
+        "xrefs" : [ {
+          "val" : "RO:0002385"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "has_potential_to_developmentally_contribute_to"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "uberon"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "has potential to developmentally contribute to"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002387",
+      "meta" : {
+        "definition" : {
+          "val" : "x has the potential to develop into y iff x develops into y or if x is capable of developing into y",
+          "xrefs" : [ ]
+        },
+        "xrefs" : [ {
+          "val" : "RO:0002387"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "uberon"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "has_potential_to_develop_into"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "has potential to develop into"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002388",
+      "meta" : {
+        "definition" : {
+          "val" : "x has potential to directly develop into y iff x directly develops into y or x is capable of directly developing into y",
+          "xrefs" : [ ]
+        },
+        "xrefs" : [ {
+          "val" : "RO:0002388"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "uberon"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "has_potential_to_directly_develop_into"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "has potential to directly develop into"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0000086",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0000086"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "has_quality"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "uberon"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "has quality"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/creator",
+      "meta" : {
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "uberon"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_metadata_tag",
+          "val" : "true"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "dc-creator"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "creator"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002258",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "RO:0002258"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "uberon"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "developmentally_preceded_by"
+        } ]
+      },
+      "type" : "PROPERTY",
+      "lbl" : "developmentally preceded by"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002215",
       "meta" : {
         "xrefs" : [ {
@@ -373,6 +743,10 @@
       "type" : "PROPERTY",
       "lbl" : "capable of part of"
     }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000424",
+      "type" : "PROPERTY",
+      "lbl" : "expand expression to"
+    }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000067",
       "meta" : {
         "xrefs" : [ {
@@ -388,14 +762,6 @@
       },
       "type" : "PROPERTY",
       "lbl" : "contains process"
-    }, {
-      "id" : "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
-      "type" : "PROPERTY",
-      "lbl" : "has_related_synonym"
-    }, {
-      "id" : "http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym",
-      "type" : "PROPERTY",
-      "lbl" : "has_broad_synonym"
     }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000062",
       "meta" : {
@@ -425,10 +791,6 @@
       },
       "type" : "PROPERTY",
       "lbl" : "preceded_by"
-    }, {
-      "id" : "http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym",
-      "type" : "PROPERTY",
-      "lbl" : "has_narrow_synonym"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#SubsetProperty",
       "type" : "PROPERTY",
@@ -471,9 +833,17 @@
       "lbl" : "precedes"
     } ],
     "edges" : [ {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002202",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002203"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002215",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002328"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002350",
+      "pred" : "inverseOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002351"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002473",
       "pred" : "subPropertyOf",
@@ -491,6 +861,18 @@
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002328"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002255",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002385"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002353",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002328"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0000086",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0000053"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002180",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/BFO_0000051"
@@ -498,6 +880,22 @@
       "sub" : "http://purl.obolibrary.org/obo/RO_0002329",
       "pred" : "subPropertyOf",
       "obj" : "http://purl.obolibrary.org/obo/RO_0002328"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002350",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000050"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002202",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002254"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002351",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/BFO_0000051"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/RO_0002203",
+      "pred" : "subPropertyOf",
+      "obj" : "http://purl.obolibrary.org/obo/RO_0002387"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "pred" : "inverseOf",
@@ -508,7 +906,7 @@
       "subsets" : [ ],
       "xrefs" : [ ],
       "basicPropertyValues" : [ ],
-      "version" : "http://purl.obolibrary.org/obo/pato/releases/2019-10-29/imports/uberon_import.owl"
+      "version" : "http://purl.obolibrary.org/obo/pato/releases/2019-10-31/imports/uberon_import.owl"
     },
     "equivalentNodesSets" : [ ],
     "logicalDefinitionAxioms" : [ ],
@@ -516,6 +914,18 @@
     "propertyChainAxioms" : [ {
       "predicateId" : "http://purl.obolibrary.org/obo/RO_0002329",
       "chainPredicateIds" : [ "http://purl.obolibrary.org/obo/BFO_0000050", "http://purl.obolibrary.org/obo/RO_0002215" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0002202",
+      "chainPredicateIds" : [ "http://purl.obolibrary.org/obo/BFO_0000050", "http://purl.obolibrary.org/obo/RO_0002202" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0002255",
+      "chainPredicateIds" : [ "http://purl.obolibrary.org/obo/RO_0002203", "http://purl.obolibrary.org/obo/BFO_0000050" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0002202",
+      "chainPredicateIds" : [ "http://purl.obolibrary.org/obo/RO_0002202", "http://purl.obolibrary.org/obo/BFO_0000050" ]
+    }, {
+      "predicateId" : "http://purl.obolibrary.org/obo/RO_0002254",
+      "chainPredicateIds" : [ "http://purl.obolibrary.org/obo/BFO_0000051", "http://purl.obolibrary.org/obo/RO_0002202" ]
     } ]
   } ]
 }
