@@ -1,0 +1,43 @@
+format-version: 1.2
+data-version: pato/releases/2019-10-31/imports/chebi_import.owl
+subsetdef: 3_STAR "Manually annotated by ChEBI Team"
+ontology: pato/imports/chebi_import
+
+[Term]
+id: CHEBI:24431
+name: chemical entity
+namespace: chebi_ontology
+def: "A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances." []
+subset: 3_STAR
+synonym: "chemical entity" EXACT [UniProt]
+
+[Term]
+id: CHEBI:46662
+name: mineral
+namespace: chebi_ontology
+def: "In general, a mineral is a chemical substance that is normally crystalline formed and has been formed as a result of geological processes. The term also includes metamict substances (naturally occurring, formerly crystalline substances whose crystallinity has been destroyed by ionising radiation) and can include naturally occurring amorphous substances that have never been crystalline ('mineraloids') such as georgite and calciouranoite as well as substances formed by the action of geological processes on bigenic compounds ('biogenic minerals')." []
+subset: 3_STAR
+synonym: "mineral" EXACT [ChEBI]
+synonym: "Minerale" RELATED [ChEBI]
+synonym: "minerales" RELATED [ChEBI]
+synonym: "minerals" RELATED [ChEBI]
+synonym: "mineraux" RELATED [ChEBI]
+is_a: CHEBI:59999 ! chemical substance
+
+[Term]
+id: CHEBI:59999
+name: chemical substance
+namespace: chebi_ontology
+def: "A chemical substance is a portion of matter of constant composition, composed of molecular entities of the same type or of different types." []
+subset: 3_STAR
+synonym: "Chemische Substanz" RELATED [ChEBI]
+is_a: CHEBI:24431 ! chemical entity
+
+[Typedef]
+id: has_part
+name: has part
+namespace: chebi_ontology
+xref: BFO:0000051
+is_cyclic: false
+is_transitive: true
+
