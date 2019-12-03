@@ -1,6 +1,6 @@
 format-version: 1.2
-data-version: pato/releases/2019-10-31/imports/uberon_import.owl
-subsetdef: upper_level "abstract upper-level terms not directly useful for analysis"
+data-version: pato/releases/2019-12-03/imports/uberon_import.owl
+subsetdef: upper_level ""
 ontology: pato/imports/uberon_import
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))\n\n\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/RO_0002473> \"RO:0002473\")\n)
 
@@ -138,15 +138,6 @@ xref: IAO:0000112
 is_metadata_tag: true
 
 [Typedef]
-id: external_definition
-name: external_definition
-namespace: uberon
-def: "An alternate textual definition for a class taken unmodified from an external source. This definition may have been used to derive a generalized definition for the new class." [https://orcid.org/0000-0002-6601-2165]
-comment: This annotation property may be replaced with an annotation property from an external ontology such as IAO
-xref: UBPROP:0000001
-is_metadata_tag: true
-
-[Typedef]
 id: foaf-page
 name: page
 namespace: uberon
@@ -226,8 +217,8 @@ synonym: "is directly preceded by" EXACT []
 synonym: "is immediately preceded by" EXACT [SIO:000251]
 synonym: "starts_at_end_of" EXACT []
 xref: RO:0002087
-property_value: external_definition "A non-transitive temporal relation in which one process immediately precedes another process, such that there is no interval of time between the two processes[SIO:000251]." xsd:string {source="SIO:000251"}
 property_value: seeAlso SIO:000251
+property_value: UBPROP:0000001 "A non-transitive temporal relation in which one process immediately precedes another process, such that there is no interval of time between the two processes[SIO:000251]." xsd:string {source="SIO:000251"}
 is_a: preceded_by ! preceded_by
 
 [Typedef]
