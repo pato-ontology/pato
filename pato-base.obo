@@ -1,8 +1,5 @@
 format-version: 1.2
-data-version: pato/releases/2019-11-05/pato-base.owl
-date: 07:02:2018 10:27
-saved-by: segerdel
-auto-generated-by: OBO-Edit 2.3.1
+data-version: pato/releases/2019-12-03/pato-base.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -15,6 +12,9 @@ subsetdef: scalar_slim "Scalar slim"
 subsetdef: value_slim "Value slim"
 default-namespace: quality
 ontology: pato/pato-base
+property_value: http://purl.org/dc/elements/1.1/description "An ontology of phenotypic qualities (properties, attributes or characteristics)." xsd:string
+property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And Trait Ontology" xsd:string
+property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
 
 [Term]
 id: PATO:0000000
@@ -8768,7 +8768,7 @@ is_a: PATO:0001377 ! polyploid
 [Term]
 id: PATO:0001384
 name: hexaploid
-def: "A polyploidy quality inhering in a bearer by virtue of the bearer's containing four homologous sets of chromosomes." [Wikipedia:http\://en.wikipedia.org/wiki/Hexaploid]
+def: "A polyploidy quality inhering in a bearer by virtue of the bearer's containing six homologous sets of chromosomes." [Wikipedia:http\://en.wikipedia.org/wiki/Hexaploid]
 subset: cell_quality
 subset: value_slim
 is_a: PATO:0001377 ! polyploid
@@ -20421,6 +20421,15 @@ is_a: PATO:0001241 ! physical object quality
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
+id: PATO:0040027
+name: doubled haploid
+def: "A ploidy quality inhering in a bearer by virtue of the bearer's haploid cells undergo chromosome doubling." [Wikipedia:https\://en.wikipedia.org/wiki/Doubled_haploidy]
+synonym: "double haploid" EXACT []
+synonym: "double-haploid" EXACT []
+is_a: PATO:0001393 ! euploid
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
 id: PATO:0045000
 name: normal rate
 def: "A rate which is relatively normal." []
@@ -21351,7 +21360,7 @@ creation_date: 2017-12-22T14:16:43Z
 [Term]
 id: PATO:0045075
 name: normal variability of color
-def: "A variability which is relatively normal or average" []
+def: "A variability of color which is relatively normal or average" []
 subset: value_slim
 intersection_of: PATO:0001615 ! variant color
 intersection_of: has_relative_magnitude PATO:0000461 ! normal

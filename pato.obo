@@ -1,8 +1,5 @@
 format-version: 1.2
-data-version: releases/2019-11-05/pato.obo
-date: 07:02:2018 10:27
-saved-by: segerdel
-auto-generated-by: OBO-Edit 2.3.1
+data-version: releases/2019-12-03/pato.obo
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -16,6 +13,9 @@ subsetdef: scalar_slim "Scalar slim"
 subsetdef: value_slim "Value slim"
 default-namespace: quality
 ontology: pato
+property_value: http://purl.org/dc/elements/1.1/description "An ontology of phenotypic qualities (properties, attributes or characteristics)." xsd:string
+property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And Trait Ontology" xsd:string
+property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
 
 [Term]
 id: PATO:0000000
@@ -27,7 +27,6 @@ id: PATO:0000001
 name: quality
 alt_id: PATO:0000072
 def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
-synonym: "trait" EXACT []
 property_value: IAO:0000589 "quality (PATO)" xsd:string
 
 [Term]
@@ -8691,7 +8690,7 @@ is_a: PATO:0001377 ! polyploid
 [Term]
 id: PATO:0001384
 name: hexaploid
-def: "A polyploidy quality inhering in a bearer by virtue of the bearer's containing four homologous sets of chromosomes." [Wikipedia:http\://en.wikipedia.org/wiki/Hexaploid]
+def: "A polyploidy quality inhering in a bearer by virtue of the bearer's containing six homologous sets of chromosomes." [Wikipedia:http\://en.wikipedia.org/wiki/Hexaploid]
 subset: cell_quality
 subset: value_slim
 is_a: PATO:0001377 ! polyploid
@@ -20043,6 +20042,15 @@ is_a: PATO:0001241 ! physical object quality
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
+id: PATO:0040027
+name: doubled haploid
+def: "A ploidy quality inhering in a bearer by virtue of the bearer's haploid cells undergo chromosome doubling." [Wikipedia:https\://en.wikipedia.org/wiki/Doubled_haploidy]
+synonym: "double haploid" EXACT []
+synonym: "double-haploid" EXACT []
+is_a: PATO:0001393 ! euploid
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
 id: PATO:0045000
 name: normal rate
 def: "A rate which is relatively normal." []
@@ -20828,7 +20836,7 @@ creation_date: 2017-12-22T14:16:43Z
 [Term]
 id: PATO:0045075
 name: normal variability of color
-def: "A variability which is relatively normal or average" []
+def: "A variability of color which is relatively normal or average" []
 subset: value_slim
 is_a: PATO:0001615 ! variant color
 relationship: has_relative_magnitude PATO:0000461 ! normal
@@ -21070,6 +21078,18 @@ created_by: http://orcid.org/0000-0002-1373-1705
 creation_date: 2019-08-23T08:51:22Z
 
 [Typedef]
+id: RO:0000053
+name: bearer of
+def: "a relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence" []
+property_value: IAO:0000111 "bearer of" xsd:string
+property_value: IAO:0000112 "this apple is bearer of this red color" xsd:string
+property_value: IAO:0000112 "this vase is bearer of this fragility" xsd:string
+property_value: IAO:0000116 "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist." xsd:string
+property_value: IAO:0000118 "bearer_of" xsd:string
+property_value: IAO:0000118 "is bearer of" xsd:string
+property_value: RO:0001900 RO:0001901
+
+[Typedef]
 id: RO:0000057
 name: has participant
 def: "a relation between a process and a continuant, in which the continuant is somehow involved in the process" []
@@ -21083,27 +21103,22 @@ property_value: IAO:0000118 "has_participant" xsd:string
 holds_over_chain: has_part RO:0000057
 
 [Typedef]
-id: bearer_of
-name: bearer of
-namespace: uberon
-def: "a relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence" []
-xref: RO:0000053
-property_value: IAO:0000111 "bearer of" xsd:string
-property_value: IAO:0000112 "this apple is bearer of this red color" xsd:string
-property_value: IAO:0000112 "this vase is bearer of this fragility" xsd:string
-property_value: IAO:0000116 "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist." xsd:string
-property_value: IAO:0000118 "bearer_of" xsd:string
-property_value: IAO:0000118 "is bearer of" xsd:string
+id: RO:0002180
+name: has component
+def: "w 'has component' p if w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type." []
+subset: ro-eco
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "The definition of 'has component' is still under discussion. The challenge is in providing a definition that does not imply transitivity." xsd:string
+property_value: IAO:0000232 "For use in recording has_part with a cardinality constraint, because OWL does not permit cardinality constraints to be used in combination with transitive object properties. In situations where you would want to say something like 'has part exactly 5 digit, you would instead use has_component exactly 5 digit." xsd:string
 property_value: RO:0001900 RO:0001901
+property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:Componency
+is_a: has_part ! has part
 
 [Typedef]
-id: composed_primarily_of
+id: RO:0002473
 name: composed primarily of
-namespace: uberon
 def: "x composed_primarily_of y if and only if more than half of the mass of x is made from y or units of the same type as y." []
-def: "x composed_primarily_of y iff: more than half of the mass of x is made from parts of y" []
 subset: ro-eco
-xref: RO:0002473
 property_value: IAO:0000112 "'otolith organ' SubClassOf 'composed primarily of' some 'calcium carbonate'" xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/22293552
@@ -21142,20 +21157,6 @@ created_by: cjm
 creation_date: 2009-08-26T02:50:08Z
 
 [Typedef]
-id: has_component
-name: has component
-namespace: uberon
-def: "w 'has component' p if w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type." []
-subset: ro-eco
-xref: RO:0002180
-property_value: IAO:0000114 IAO:0000125
-property_value: IAO:0000116 "The definition of 'has component' is still under discussion. The challenge is in providing a definition that does not imply transitivity." xsd:string
-property_value: IAO:0000232 "For use in recording has_part with a cardinality constraint, because OWL does not permit cardinality constraints to be used in combination with transitive object properties. In situations where you would want to say something like 'has part exactly 5 digit, you would instead use has_component exactly 5 digit." xsd:string
-property_value: RO:0001900 RO:0001901
-property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:Componency
-is_a: has_part ! has part
-
-[Typedef]
 id: has_cross_section
 name: has_cross_section
 def: "s3 has_cross_section s3 if and only if : there exists some 2d plane that intersects the bearer of s3, and the impression of s3 upon that plane has shape quality s2." [PATOC:CJM]
@@ -21189,9 +21190,7 @@ is_a: has_ratio_quality ! has_ratio_quality
 id: has_part
 name: has part
 name: has_part
-namespace: chebi_ontology
 namespace: external
-namespace: uberon
 def: "a core relation that holds between a whole and its part" []
 def: "Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2." [PATOC:CJM]
 comment: We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'.
@@ -21205,7 +21204,6 @@ property_value: IAO:0000116 "Occurrents are not subject to change and so parthoo
 property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)\n\nA continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'." xsd:string
 property_value: IAO:0000118 "has_part" xsd:string
 property_value: RO:0001900 RO:0001901
-is_cyclic: false
 is_transitive: true
 
 [Typedef]
@@ -21269,7 +21267,6 @@ id: part_of
 name: part of
 name: part_of
 namespace: external
-namespace: uberon
 def: "a core relation that holds between a part and its whole" []
 xref: BFO:0000050
 property_value: IAO:0000111 "is part of" xsd:string
