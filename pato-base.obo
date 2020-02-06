@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pato/releases/2019-12-03/pato-base.owl
+data-version: pato/releases/2020-02-06/pato-base.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -15,6 +15,11 @@ ontology: pato/pato-base
 property_value: http://purl.org/dc/elements/1.1/description "An ontology of phenotypic qualities (properties, attributes or characteristics)." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And Trait Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
+
+[Term]
+id: CL:0000000
+relationship: has_part GO:0005634 {gci_filler="PATO:0001908", gci_relation="RO:0000053"}
+relationship: has_part GO:0005634 {gci_filler="PATO:0001407", gci_relation="RO:0000053"}
 
 [Term]
 id: PATO:0000000
@@ -20427,6 +20432,21 @@ def: "A ploidy quality inhering in a bearer by virtue of the bearer's haploid ce
 synonym: "double haploid" EXACT []
 synonym: "double-haploid" EXACT []
 is_a: PATO:0001393 ! euploid
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040028
+name: parous
+def: "An organismal quality of having successfully reproduced." [EFO:0002947]
+is_a: PATO:0001995 ! organismal quality
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040029
+name: shaded
+def: "A physical quality inhering in a bearer by virtue of that bearer being shielded from visible light." [https://orcid.org/0000-0002-4366-3088]
+comment: Shaded does not refer to radiation more generally, as this would be more shielded than shaded.
+is_a: PATO:0001018 ! physical quality
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
