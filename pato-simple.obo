@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pato/releases/2020-02-06/pato-simple.owl
+data-version: pato/releases/2020-02-09/pato-simple.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -17471,6 +17471,7 @@ name: multiparous
 def: "A viviparous organism that has given birth two or more times." [wiki:http\://en.wikipedia.org/wiki/Parity_(biology)]
 subset: value_slim
 is_a: PATO:0002370 ! parity
+is_a: PATO:0040028 ! parous
 created_by: gkoutos
 creation_date: 2012-05-03T11:26:34Z
 
@@ -17489,6 +17490,7 @@ name: primiparous
 def: "A viviparous organism having given birth one time." [wiki:http\://en.wikipedia.org/wiki/Parity_(biology)]
 subset: value_slim
 is_a: PATO:0002370 ! parity
+is_a: PATO:0040028 ! parous
 created_by: gkoutos
 creation_date: 2012-05-03T11:29:38Z
 
@@ -20054,7 +20056,7 @@ created_by: http://orcid.org/0000-0001-5208-3432
 id: PATO:0040028
 name: parous
 def: "An organismal quality of having successfully reproduced." [EFO:0002947]
-is_a: PATO:0001995 ! organismal quality
+is_a: PATO:0001434 ! reproductive quality
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
@@ -21105,19 +21107,6 @@ property_value: IAO:0000118 "is bearer of" xsd:string
 property_value: RO:0001900 RO:0001901
 
 [Typedef]
-id: RO:0000057
-name: has participant
-def: "a relation between a process and a continuant, in which the continuant is somehow involved in the process" []
-property_value: http://purl.org/dc/elements/1.1/source http://www.obofoundry.org/ro/#OBO_REL:has_participant xsd:string
-property_value: IAO:0000111 "has participant" xsd:string
-property_value: IAO:0000112 "this blood coagulation has participant this blood clot" xsd:string
-property_value: IAO:0000112 "this investigation has participant this investigator" xsd:string
-property_value: IAO:0000112 "this process has participant this input material (or this output material)" xsd:string
-property_value: IAO:0000116 "Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time." xsd:string
-property_value: IAO:0000118 "has_participant" xsd:string
-holds_over_chain: has_part RO:0000057
-
-[Typedef]
 id: RO:0002180
 name: has component
 def: "w 'has component' p if w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type." []
@@ -21127,17 +21116,6 @@ property_value: IAO:0000116 "The definition of 'has component' is still under di
 property_value: IAO:0000232 "For use in recording has_part with a cardinality constraint, because OWL does not permit cardinality constraints to be used in combination with transitive object properties. In situations where you would want to say something like 'has part exactly 5 digit, you would instead use has_component exactly 5 digit." xsd:string
 property_value: RO:0001900 RO:0001901
 property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:Componency
-is_a: has_part ! has part
-
-[Typedef]
-id: RO:0002473
-name: composed primarily of
-def: "x composed_primarily_of y if and only if more than half of the mass of x is made from y or units of the same type as y." []
-subset: ro-eco
-property_value: IAO:0000112 "'otolith organ' SubClassOf 'composed primarily of' some 'calcium carbonate'" xsd:string
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/22293552
-property_value: RO:0001900 RO:0001901
 is_a: has_part ! has part
 
 [Typedef]
