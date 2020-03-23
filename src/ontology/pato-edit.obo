@@ -20448,6 +20448,24 @@ is_a: PATO:0001018 ! physical quality
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
+id: PATO:0040030
+name: decreased width and length
+def: "A width and length quality which is relatively small." []
+subset: value_slim
+is_a: PATO:0000587 ! decreased size
+relationship: is_opposite_of PATO:0040031 ! increased width and length
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040031
+name: increased width and length
+def: "A width and length quality that is relatively large." []
+subset: value_slim
+is_a: PATO:0000586 ! increased size
+relationship: is_opposite_of PATO:0040030 ! decreased width and length
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
 id: PATO:0045000
 name: normal rate
 def: "A rate which is relatively normal." []
