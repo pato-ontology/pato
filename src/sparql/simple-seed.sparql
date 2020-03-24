@@ -3,9 +3,9 @@ prefix obo: <http://purl.obolibrary.org/obo/>
 
 SELECT DISTINCT ?cls WHERE
 {
-  {?cls a owl:ObjectProperty .}
-  UNION
   {?cls a owl:AnnotationProperty .}
+  UNION
+  {?cls a owl:ObjectProperty .}
   UNION
   {?x <http://www.geneontology.org/formats/oboInOwl#inSubset> ?cls}
   UNION
