@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pato/releases/2020-02-09/pato-simple.owl
+data-version: pato/releases/2020-03-24/pato-simple.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -15,7 +15,8 @@ default-namespace: quality
 ontology: pato/pato-simple
 property_value: http://purl.org/dc/elements/1.1/description "An ontology of phenotypic qualities (properties, attributes or characteristics)." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And Trait Ontology" xsd:string
-property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/ xsd:string
+property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
+property_value: IAO:0000700 PATO:0000001
 
 [Term]
 id: PATO:0000000
@@ -473,7 +474,7 @@ is_a: PATO:0000001 ! quality
 
 [Term]
 id: PATO:0000069
-name: deviation(from_normal)
+name: deviation (from_normal)
 def: "A quality inhering in a bearer by virtue of the whether the bearer differs from normal or average." [PATOC:GVG]
 subset: attribute_slim
 is_a: PATO:0000068 ! qualitative
@@ -2795,7 +2796,7 @@ synonym: "aberrant" RELATED []
 synonym: "atypia" RELATED []
 synonym: "atypical" RELATED []
 synonym: "defective" RELATED []
-is_a: PATO:0000069 ! deviation(from_normal)
+is_a: PATO:0000069 ! deviation (from_normal)
 relationship: is_opposite_of PATO:0000461 ! normal
 
 [Term]
@@ -5962,11 +5963,11 @@ is_obsolete: true
 [Term]
 id: PATO:0000973
 name: porosity
-def: "A permeability quality inhering in a bearer by virtue of the bearer's disposition to admit the passage of gas or liquid through pores or interstices." [PATOC:GVG]
+def: "A structure quality inhering in a bearer by virtue of the bearer's disposition to admit the passage of gas or liquid through pores or interstices." [PATOC:GVG]
 subset: attribute_slim
 subset: disposition_slim
 subset: scalar_slim
-is_a: PATO:0000970 ! permeability
+is_a: PATO:0000141 ! structure
 
 [Term]
 id: PATO:0000974
@@ -13665,6 +13666,7 @@ id: PATO:0001975
 name: unserrated
 def: "A surface feature shape quality inhering in a bearer by virtue of the bearer's lacking sharp straight-edged teeth pointing to the apex." [ISBN:0881923214]
 subset: value_slim
+synonym: "smooth" RELATED []
 is_a: PATO:0001976 ! serration
 relationship: is_opposite_of PATO:0001206 ! serrated
 
@@ -16807,7 +16809,7 @@ creation_date: 2011-06-08T06:33:50Z
 id: PATO:0002300
 name: increased quality
 def: "A quality that has a value that is increased compared to normal or average." [PATOC:GVG]
-is_a: PATO:0000069 ! deviation(from_normal)
+is_a: PATO:0000069 ! deviation (from_normal)
 relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0002301 ! decreased quality
 created_by: George Gkoutos
@@ -16817,7 +16819,7 @@ creation_date: 2011-06-16T06:39:43Z
 id: PATO:0002301
 name: decreased quality
 def: "A quality that has a value that is decreased compared to normal or average." [PATOC:GVG]
-is_a: PATO:0000069 ! deviation(from_normal)
+is_a: PATO:0000069 ! deviation (from_normal)
 relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0002300 ! increased quality
 created_by: George Gkoutos
@@ -19101,7 +19103,9 @@ id: PATO:0002539
 name: ring shaped
 def: "A shape quality inhering in a bearer by virtue of the bearer's having a shape like a ring (a circular shape enclosing a space)." [PATOC:WD]
 subset: value_slim
-is_a: PATO:0000052 ! shape
+synonym: "annular" EXACT []
+synonym: "ring-shaped" EXACT []
+is_a: PATO:0000947 ! elliptic
 created_by: wasila.dahdul
 creation_date: 2014-08-12T12:01:56Z
 
@@ -19829,12 +19833,9 @@ created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040001
-name: ring-shaped
-def: "Shaped like a ring" [https://orcid.org/0000-0002-6601-2165]
-synonym: "annular" EXACT []
-is_a: PATO:0000947 ! elliptic
-property_value: http://purl.org/dc/elements/1.1/date 2018-05-24T03:56:53Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-5208-3432
+name: obsolete ring-shaped
+is_obsolete: true
+replaced_by: PATO:0002539
 
 [Term]
 id: PATO:0040002
@@ -20065,6 +20066,40 @@ name: shaded
 def: "A physical quality inhering in a bearer by virtue of that bearer being shielded from visible light." [https://orcid.org/0000-0002-4366-3088]
 comment: Shaded does not refer to radiation more generally, as this would be more shielded than shaded.
 is_a: PATO:0001018 ! physical quality
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040030
+name: decreased width and length
+def: "A width and length quality which is relatively small, where both width and length are decreased." []
+subset: value_slim
+is_a: PATO:0000574 ! decreased length
+is_a: PATO:0000599 ! decreased width
+relationship: is_opposite_of PATO:0040031 ! increased width and length
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040031
+name: increased width and length
+def: "A width and length quality that is relatively large, where both width and length are increased." []
+subset: value_slim
+is_a: PATO:0000573 ! increased length
+is_a: PATO:0000600 ! increased width
+relationship: is_opposite_of PATO:0040030 ! decreased width and length
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040032
+name: increased linear velocity
+def: "A distance traveled in a specific time that is relatively high." [https://orcid.org/0000-0002-2244-7917]
+is_a: PATO:0002304 ! increased process quality
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040033
+name: decreased linear velocity
+def: "A distance traveled in a specific time that is relatively low." [https://orcid.org/0000-0002-2244-7917]
+is_a: PATO:0002302 ! decreased process quality
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
