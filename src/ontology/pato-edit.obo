@@ -19476,7 +19476,9 @@ id: PATO:0002539
 name: ring shaped
 def: "A shape quality inhering in a bearer by virtue of the bearer's having a shape like a ring (a circular shape enclosing a space)." [PATOC:WD]
 subset: value_slim
-is_a: PATO:0000052 ! shape
+synonym: "annular" EXACT []
+synonym: "ring-shaped" EXACT []
+is_a: PATO:0000947 ! elliptic
 created_by: wasila.dahdul
 creation_date: 2014-08-12T12:01:56Z
 
@@ -20209,12 +20211,9 @@ created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040001
-name: ring-shaped
-def: "Shaped like a ring" [https://orcid.org/0000-0002-6601-2165]
-synonym: "annular" EXACT []
-is_a: PATO:0000947 ! elliptic
-property_value: http://purl.org/dc/elements/1.1/date 2018-05-24T03:56:53Z xsd:dateTime
-created_by: http://orcid.org/0000-0001-5208-3432
+name: obsolete ring-shaped
+is_obsolete: true
+replaced_by: PATO:0002539
 
 [Term]
 id: PATO:0040002
