@@ -17,7 +17,7 @@ ontology: pato
 property_value: http://purl.org/dc/elements/1.1/description "An ontology of phenotypic qualities (properties, attributes or characteristics)." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And Trait Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
-property_value: http://purl.obolibrary.org/obo/IAO_0000700 http://purl.obolibrary.org/obo/PATO_0000001
+property_value: IAO:0000700 PATO:0000001
 
 [Term]
 id: PATO:0000000
@@ -9262,7 +9262,7 @@ def: "A broken quality inhering in a bearer by virtue of the bearer's being brok
 subset: value_slim
 synonym: "burst" EXACT []
 synonym: "cracked" RELATED []
-synonym: "fractured" EXACT []
+synonym: "fractured" NARROW []
 synonym: "fragmented" EXACT []
 synonym: "hemorrhaged" RELATED []
 synonym: "ruptured" EXACT []
@@ -20480,6 +20480,74 @@ id: PATO:0040033
 name: decreased linear velocity
 def: "A distance traveled in a specific time that is relatively low." [https://orcid.org/0000-0002-2244-7917]
 is_a: PATO:0002302 ! decreased process quality
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040034
+name: fractured
+def: "A broken quality where an entity is cracked or broken, usually a bone." [https://medlineplus.gov/fractures.html]
+is_a: PATO:0001444 ! broken
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040035
+name: transversely fractured
+def: "A fractured quality where the fracture traverses the bone perpendicular to the axis of the bone." [https://radiopaedia.org/articles/transverse-fracture?lang=us]
+synonym: "fractured, transverse" EXACT []
+is_a: PATO:0040034 ! fractured
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040036
+name: impact-fractured
+def: "A fractured quality in which one of the fragments is driven into another fragment." [https://www.dictionary.com/browse/impacted-fracture]
+synonym: "fractured, impacted" EXACT []
+synonym: "impact fractured" EXACT []
+is_a: PATO:0040034 ! fractured
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040037
+name: linearly fractured
+def: "A fractured quality where the fracture runs parallel to the long axis of a bone." [https://www.dictionary.com/browse/linear-fracture]
+synonym: "fractured, linear" EXACT []
+is_a: PATO:0040034 ! fractured
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040038
+name: obliquely fractured
+def: "A fractured quality where the fracture occurs at a plane oblique to the long axis of the bone." [https://radiopaedia.org/articles/oblique-fracture?lang=us]
+synonym: "fractured, oblique" EXACT []
+is_a: PATO:0040034 ! fractured
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040039
+name: spirally fractured
+def: "A fractured quality that occurs when torque (a rotating force) is applied along the axis of a bone." [https://en.wikipedia.org/wiki/Spiral_fracture]
+synonym: "fractured, spiral" EXACT []
+synonym: "fractured, torsion" EXACT []
+is_a: PATO:0040034 ! fractured
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040040
+name: compression-fractured
+def: "A fractured quality that is caused by a loss of bone mass (osteoporosis) that occurs as part of aging." [https://www.mayoclinic.org/diseases-conditions/osteoporosis/multimedia/compression-fractures/img-20008995]
+synonym: "compression fractured" EXACT []
+synonym: "fractured, compression" EXACT []
+synonym: "fractured, wedge" EXACT []
+synonym: "wedge fractured" EXACT []
+is_a: PATO:0040034 ! fractured
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040041
+name: avulsion fractured
+def: "A fractured quality in which the fragment of bone tears away from the main mass of bone as a result of physical trauma." [https://en.wikipedia.org/wiki/Avulsion_fracture]
+synonym: "fractured, avulsion" EXACT []
+is_a: PATO:0040034 ! fractured
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
