@@ -13,7 +13,7 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/pato/pato-simple.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2020-03-24/pato-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2020-05-07/pato-simple.owl"/>
         <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
         <dc:description>An ontology of phenotypic qualities (properties, attributes or characteristics).</dc:description>
         <dc:title>PATO - the Phenotype And Trait Ontology</dc:title>
@@ -2872,7 +2872,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000141"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
         <owl:annotatedTarget>conformation</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>VT:1000738</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VT:1000738</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9514,6 +9514,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000052"/>
         <obo:IAO_0000115>A shape quality inhering in a bearer by virtue of the bearer&apos;s having one or more angle(s) in its length.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>angled</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>flexed</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id>PATO:0000617</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
@@ -20731,7 +20732,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001375"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A ploidy quality inhering in a bearer by virtue of the bearer&apos;s containing a single set of homologous chromosomes.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Wikipedia:http://en.wikipedia.org/wiki/Haploid</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Haploid</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -20991,7 +20992,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001388"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A disomy quality inhering in a bearer by virtue of the bearer&apos;s containing two copies of the chromosome from one of the parents (with no contribution from the other parent).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Wikipedia:http://en.wikipedia.org/wiki/Uniparental_disomy</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Uniparental_disomy</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -21011,7 +21012,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001389"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An aneuploidy quality inhering in a bearer by virtue of the bearer&apos;s containing three, instead of two, chromosomes of a particular numbered type in an organism.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Wikipedia:http://en.wikipedia.org/wiki/Trisomy</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Trisomy</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -21090,7 +21091,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001393"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A ploidy quality inhering in a bearer by virtue of the bearer&apos;s containing an integral multiple of the monoploid number, possibly excluding the sex-determining chromosomes.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Wikipedia:http://en.wikipedia.org/wiki/Euploid</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Euploid</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -21210,7 +21211,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001399"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A cellular potency that is the capacity to produce differentiated cell types of all three primary germ layers and extraembryonic cell types.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Wikipedia:http://en.wikipedia.org/wiki/Totipotent</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Totipotent</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -21275,7 +21276,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001402"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A cellular potency that is the capacity to form multiple differentiated cell types.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Wikipedia:http://en.wikipedia.org/wiki/Multipotent</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Multipotent</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -21296,7 +21297,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001403"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A cellular potency that is the capacity to produce differentiated cell types of all three primary germ layers but not extraembryonic cell types.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Wikipedia:http://en.wikipedia.org/wiki/Pluripotent</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Pluripotent</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -21398,7 +21399,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001408"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A cellular quality inhering in a bearer by virtue of the bearer&apos;s having thin, tail-like projections extending outwards from the cell body.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Wikipedia:http://en.wikipedia.org/wiki/Ciliated</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Ciliated</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -21500,7 +21501,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001413"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A physical quality inhering in a bearer by virtue of the rate of the bearer&apos;s angular movement about an axis; the angle rotated in a given time.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Angular_velocity</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Wikipedia:http://en.wikipedia.org/wiki/Angular_velocity</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -21718,7 +21719,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001424"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A color hue with very low wavelength of that portion of the visible spectrum lying between reddish blue or bluish purple, evoked in the human observer by radiant energy with wavelengths of approximately 420 to 380 nanometers.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Wikipedia:http://en.wikipedia.org/wiki/Violet</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Violet</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -21757,7 +21758,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001426"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A color consisting of purple and brown hue.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Maroon</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Wikipedia:http://en.wikipedia.org/wiki/Maroon</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -21878,7 +21879,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001432"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality inhering in a bearer by virtue of the bearer&apos;s decomposition into component parts.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Medical-dictionary:Medical-dictionary</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medical-dictionary:Medical-dictionary</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -22107,9 +22108,9 @@ Association is weaker than correlation or proportionality. These relations may b
         <oboInOwl:hasAlternativeId>PATO:0001443</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>PATO:0001820</oboInOwl:hasAlternativeId>
         <oboInOwl:hasExactSynonym>burst</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>fractured</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>fragmented</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>ruptured</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>fractured</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>cracked</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>hemorrhaged</oboInOwl:hasRelatedSynonym>
@@ -22985,7 +22986,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001486"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An age quality that exists by virtue of the time (years and months) that the bearer has existed.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>WordNet:Wordnet</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WordNet:Wordnet</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28472,7 +28473,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001756"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A conductivity quality inhering in a bearer by virtue of the bearer&apos;s disposition to spontaneous transfer of thermal energy from a region of higher temperature to a region of lower temperature.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Wikipedia:http://en.wikipedia.org/wiki/Heat_conduction</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Heat_conduction</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -29563,7 +29564,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001810"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A grooved texture quality inhering in a bearer by virtue of the bearer&apos;s being marked by one or more creases in a normally smooth surface.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://www.thefreedictionary.com/wrinkled</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.thefreedictionary.com/wrinkled</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -29808,7 +29809,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001822"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality inhering in a bearer by virtue of whether the bearer&apos;s being covered by a liquid.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>wordreference.com:wordreference.com</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wordreference.com:wordreference.com</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -30808,7 +30809,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001870"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A shape quality inhering in a circular disk by virtue of the bearer&apos;s having a segment of another circle removed from its edge, so that what remains is a shape enclosed by two circular arcs of different diameters which intersect at two points (usually in such a manner that the enclosed shape does not include the center of the original circle).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Wikipedia:http://en.wikipedia.org/wiki/Crescent</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Crescent</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -37832,7 +37833,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002204"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Handedness where the organism exhibits no overall dominance in the use of right or left hand or foot in the performance of tasks that require one hand or foot or a dominant hand or foot.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>birnlex:2042</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birnlex:2042</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -38080,7 +38081,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002215"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A shape quality inhering in a bearer by virtue of the bearer&apos;s having the shape of a scythe or sickle.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>merriam-webster:http://www.merriam-webster.com/dictionary/falciform</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">merriam-webster:http://www.merriam-webster.com/dictionary/falciform</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -38323,7 +38324,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002226"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A cylindrical shape quality inhering in a bearer by virtue of the bearer&apos;s being imperfectly cylindrical or approximately cylindrical.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://www.thefreedictionary.com/Subcylindrical</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.thefreedictionary.com/Subcylindrical</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -38565,7 +38566,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002237"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A curvature quality inhering in a bearer by virtue of the bearer&apos;s being curved backward or downward.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://www.thefreedictionary.com/retrorse</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.thefreedictionary.com/retrorse</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -38586,7 +38587,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002238"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A curvature quality inhering in a bearer by virtue of the bearer&apos;s being curved forward or upward.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://www.thefreedictionary.com/antrorse</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.thefreedictionary.com/antrorse</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -38651,7 +38652,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002241"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A lobed quality inhering in a bearer by virtue of the bearer&apos;s being divided into or having three lobes.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://www.thefreedictionary.com/trilobed</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.thefreedictionary.com/trilobed</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -38718,7 +38719,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002244"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A flow rate quality inhering in a substance by virtue of the mass of substance which passes through a given surface per unit time.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Mass_flow_rate</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Mass_flow_rate</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -38914,7 +38915,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002252"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality inhering in a bearer by virtue of the bearer&apos;s being flattened along the antero-posterior axis.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:JC</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:JC</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -39160,7 +39161,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002263"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality inhering in a protein or a molecule by virtue of the bearer&apos;s lacking a phosphate (PO4) group.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Dephosphorylation</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Dephosphorylation</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -39719,7 +39720,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002289"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A hairy quality inhering in a bearer by virtue of the bearer&apos;s being covered with setae.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ISBN:0913424137</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0913424137</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40177,7 +40178,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002310"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality inhering in a bearer by virtue of the bearer&apos;s being strong, thick or sturdy.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:BF</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:BF</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40241,7 +40242,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002313"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Having or resembling the shape of a telescope.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:BF</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:BF</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40262,7 +40263,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002314"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Having the nature or characteristic of, a ligament; composed of the tissue proper to ligaments.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:BF</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:BF</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40283,7 +40284,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002315"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A shape quality inhering in a bearer by virtue of the bearer&apos;s resembling the end of a brush with a multitude of bristles.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:BF</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:BF</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40384,7 +40385,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002319"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A shape with properties between those of a square and those of a circle.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>wikipedia:Squircle</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wikipedia:Squircle</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40735,7 +40736,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002335"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A shape quality inhering in a bearer by virtue of the bearer&apos;s being dome-shaped.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:dd</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:dd</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40987,7 +40988,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002347"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A conical quality inhering in a bearer by virtue of the bearer&apos;s resembling a cone, with the pointed end attached to an organism.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>wiktionary:http://en.wiktionary.org/wiki/obconical</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wiktionary:http://en.wiktionary.org/wiki/obconical</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -41029,7 +41030,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002349"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A spatial quality inhering in a bearer by virtue of the bearer&apos;s being located toward the base of an organism relative to another entity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>merriam-webster:http://www.merriam-webster.com/dictionary/basal</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">merriam-webster:http://www.merriam-webster.com/dictionary/basal</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -41050,7 +41051,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002350"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A spatial quality inhering in a bearer by virtue of the bearer&apos;s being located toward the stalk of an organism relative to another entity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>merriam-webster:http://www.merriam-webster.com/dictionary/cauline</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">merriam-webster:http://www.merriam-webster.com/dictionary/cauline</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -41071,7 +41072,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002351"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A structural quality inhering in a bearer by virtue of the bearer resembling or containing flesh.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>wiktionary:http://en.wiktionary.org/wiki/fleshy</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wiktionary:http://en.wiktionary.org/wiki/fleshy</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -47432,6 +47433,170 @@ height&apos;).</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0040034 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040034">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001444"/>
+        <obo:IAO_0000115>A broken quality where an entity is cracked or broken, usually a bone.</obo:IAO_0000115>
+        <oboInOwl:created_by>http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0040034</oboInOwl:id>
+        <rdfs:label>fractured</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0040034"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A broken quality where an entity is cracked or broken, usually a bone.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://medlineplus.gov/fractures.html</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0040035 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040035">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0040034"/>
+        <obo:IAO_0000115>A fractured quality where the fracture traverses the bone perpendicular to the axis of the bone.</obo:IAO_0000115>
+        <oboInOwl:created_by>http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym>fractured, transverse</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0040035</oboInOwl:id>
+        <rdfs:label>transversely fractured</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0040035"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A fractured quality where the fracture traverses the bone perpendicular to the axis of the bone.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://radiopaedia.org/articles/transverse-fracture?lang=us</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0040036 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040036">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0040034"/>
+        <obo:IAO_0000115>A fractured quality in which one of the fragments is driven into another fragment.</obo:IAO_0000115>
+        <oboInOwl:created_by>http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym>fractured, impacted</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>impact fractured</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0040036</oboInOwl:id>
+        <rdfs:label>impact-fractured</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0040036"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A fractured quality in which one of the fragments is driven into another fragment.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://www.dictionary.com/browse/impacted-fracture</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0040037 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040037">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0040034"/>
+        <obo:IAO_0000115>A fractured quality where the fracture runs parallel to the long axis of a bone.</obo:IAO_0000115>
+        <oboInOwl:created_by>http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym>fractured, linear</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0040037</oboInOwl:id>
+        <rdfs:label>linearly fractured</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0040037"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A fractured quality where the fracture runs parallel to the long axis of a bone.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://www.dictionary.com/browse/linear-fracture</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0040038 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040038">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0040034"/>
+        <obo:IAO_0000115>A fractured quality where the fracture occurs at a plane oblique to the long axis of the bone.</obo:IAO_0000115>
+        <oboInOwl:created_by>http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym>fractured, oblique</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0040038</oboInOwl:id>
+        <rdfs:label>obliquely fractured</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0040038"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A fractured quality where the fracture occurs at a plane oblique to the long axis of the bone.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://radiopaedia.org/articles/oblique-fracture?lang=us</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0040039 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040039">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0040034"/>
+        <obo:IAO_0000115>A fractured quality that occurs when torque (a rotating force) is applied along the axis of a bone.</obo:IAO_0000115>
+        <oboInOwl:created_by>http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym>fractured, spiral</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>fractured, torsion</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0040039</oboInOwl:id>
+        <rdfs:label>spirally fractured</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0040039"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A fractured quality that occurs when torque (a rotating force) is applied along the axis of a bone.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Spiral_fracture</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0040040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040040">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0040034"/>
+        <obo:IAO_0000115>A fractured quality that is caused by a loss of bone mass (osteoporosis) that occurs as part of aging.</obo:IAO_0000115>
+        <oboInOwl:created_by>http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym>compression fractured</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>fractured, compression</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>fractured, wedge</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>wedge fractured</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0040040</oboInOwl:id>
+        <rdfs:label>compression-fractured</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0040040"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A fractured quality that is caused by a loss of bone mass (osteoporosis) that occurs as part of aging.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://www.mayoclinic.org/diseases-conditions/osteoporosis/multimedia/compression-fractures/img-20008995</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0040041 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040041">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0040034"/>
+        <obo:IAO_0000115>A fractured quality in which the fragment of bone tears away from the main mass of bone as a result of physical trauma.</obo:IAO_0000115>
+        <oboInOwl:created_by>http://orcid.org/0000-0001-5208-3432</oboInOwl:created_by>
+        <oboInOwl:hasExactSynonym>fractured, avulsion</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0040041</oboInOwl:id>
+        <rdfs:label>avulsion fractured</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0040041"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A fractured quality in which the fragment of bone tears away from the main mass of bone as a result of physical trauma.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Avulsion_fracture</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PATO_0045000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0045000">
@@ -49174,6 +49339,44 @@ height&apos;).</rdfs:comment>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality inhering in a bearer by virtue of the bearer&apos;s being present in females and absent from males in members of the same species.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>http://orcid.org/0000-0002-1373-1705</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0065001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0065001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000141"/>
+        <obo:IAO_0000115>The breakdown, disintegration, destruction of an entity due to the breaking of cell membranes by any means.</obo:IAO_0000115>
+        <oboInOwl:created_by>https://orcid.org/0000-0002-3528-5267</oboInOwl:created_by>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0065001</oboInOwl:id>
+        <rdfs:label>lysed</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0065001"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The breakdown, disintegration, destruction of an entity due to the breaking of cell membranes by any means.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Lysis</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0065002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0065002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002248"/>
+        <obo:IAO_0000115>A degree of pigmentation quality that is diversified with patches, or irregularity.</obo:IAO_0000115>
+        <oboInOwl:created_by>https://orcid.org/0000-0002-3528-5267</oboInOwl:created_by>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0065002</oboInOwl:id>
+        <rdfs:label>patchy pigmentation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0065002"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A degree of pigmentation quality that is diversified with patches, or irregularity.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://medlineplus.gov/ency/article/003224.htm</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 

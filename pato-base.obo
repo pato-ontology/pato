@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pato/releases/2020-03-24/pato-base.owl
+data-version: pato/releases/2020-05-07/pato-base.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -3886,6 +3886,7 @@ name: bent
 def: "A shape quality inhering in a bearer by virtue of the bearer's having one or more angle(s) in its length." [PATOC:MAH]
 subset: value_slim
 synonym: "angled" EXACT []
+synonym: "flexed" EXACT []
 is_a: PATO:0000052 ! shape
 
 [Term]
@@ -9266,7 +9267,7 @@ def: "A broken quality inhering in a bearer by virtue of the bearer's being brok
 subset: value_slim
 synonym: "burst" EXACT []
 synonym: "cracked" RELATED []
-synonym: "fractured" EXACT []
+synonym: "fractured" NARROW []
 synonym: "fragmented" EXACT []
 synonym: "hemorrhaged" RELATED []
 synonym: "ruptured" EXACT []
@@ -20488,6 +20489,74 @@ is_a: PATO:0002302 ! decreased process quality
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
+id: PATO:0040034
+name: fractured
+def: "A broken quality where an entity is cracked or broken, usually a bone." [https://medlineplus.gov/fractures.html]
+is_a: PATO:0001444 ! broken
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040035
+name: transversely fractured
+def: "A fractured quality where the fracture traverses the bone perpendicular to the axis of the bone." [https://radiopaedia.org/articles/transverse-fracture?lang=us]
+synonym: "fractured, transverse" EXACT []
+is_a: PATO:0040034 ! fractured
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040036
+name: impact-fractured
+def: "A fractured quality in which one of the fragments is driven into another fragment." [https://www.dictionary.com/browse/impacted-fracture]
+synonym: "fractured, impacted" EXACT []
+synonym: "impact fractured" EXACT []
+is_a: PATO:0040034 ! fractured
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040037
+name: linearly fractured
+def: "A fractured quality where the fracture runs parallel to the long axis of a bone." [https://www.dictionary.com/browse/linear-fracture]
+synonym: "fractured, linear" EXACT []
+is_a: PATO:0040034 ! fractured
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040038
+name: obliquely fractured
+def: "A fractured quality where the fracture occurs at a plane oblique to the long axis of the bone." [https://radiopaedia.org/articles/oblique-fracture?lang=us]
+synonym: "fractured, oblique" EXACT []
+is_a: PATO:0040034 ! fractured
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040039
+name: spirally fractured
+def: "A fractured quality that occurs when torque (a rotating force) is applied along the axis of a bone." [https://en.wikipedia.org/wiki/Spiral_fracture]
+synonym: "fractured, spiral" EXACT []
+synonym: "fractured, torsion" EXACT []
+is_a: PATO:0040034 ! fractured
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040040
+name: compression-fractured
+def: "A fractured quality that is caused by a loss of bone mass (osteoporosis) that occurs as part of aging." [https://www.mayoclinic.org/diseases-conditions/osteoporosis/multimedia/compression-fractures/img-20008995]
+synonym: "compression fractured" EXACT []
+synonym: "fractured, compression" EXACT []
+synonym: "fractured, wedge" EXACT []
+synonym: "wedge fractured" EXACT []
+is_a: PATO:0040034 ! fractured
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040041
+name: avulsion fractured
+def: "A fractured quality in which the fragment of bone tears away from the main mass of bone as a result of physical trauma." [https://en.wikipedia.org/wiki/Avulsion_fracture]
+synonym: "fractured, avulsion" EXACT []
+is_a: PATO:0040034 ! fractured
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
 id: PATO:0045000
 name: normal rate
 def: "A rate which is relatively normal." []
@@ -21680,6 +21749,20 @@ def: "A quality inhering in a bearer by virtue of the bearer's being present in 
 is_a: PATO:0060001 ! sex-specific
 created_by: http://orcid.org/0000-0002-1373-1705
 creation_date: 2019-08-23T08:51:22Z
+
+[Term]
+id: PATO:0065001
+name: lysed
+def: "The breakdown, disintegration, destruction of an entity due to the breaking of cell membranes by any means." [https://en.wikipedia.org/wiki/Lysis]
+is_a: PATO:0000141 ! structure
+created_by: https://orcid.org/0000-0002-3528-5267
+
+[Term]
+id: PATO:0065002
+name: patchy pigmentation
+def: "A degree of pigmentation quality that is diversified with patches, or irregularity." [https://medlineplus.gov/ency/article/003224.htm]
+is_a: PATO:0002248 ! pigmented
+created_by: https://orcid.org/0000-0002-3528-5267
 
 [Typedef]
 id: correlates_with
