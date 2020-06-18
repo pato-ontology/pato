@@ -9674,7 +9674,7 @@ is_a: PATO:0001749 ! paedomorphic growth
 [Term]
 id: PATO:0001492
 name: growth rate
-def: "The rate or speed of the increase in size of an individual entity or increase in number of a population." []
+def: "The rate or speed of the change in size of an individual entity or change in number of a population." [https://orcid.org/0000-0002-9900-7880, https://orcid.org/0000-0003-4606-0597]
 subset: attribute_slim
 subset: scalar_slim
 is_a: PATO:0000161 ! rate
@@ -14178,6 +14178,7 @@ name: population quality
 def: "A quality that inheres in an entire population or part of a population." [PATOC:GVG]
 subset: attribute_slim
 is_a: PATO:0001241 ! physical object quality
+disjoint_from: PATO:0040044 ! population process quality
 
 [Term]
 id: PATO:0002004
@@ -18987,6 +18988,7 @@ name: single organismal process quality
 def: "A quality inhering in a process by virtue of that process having exactly one organism as a participant." [PATOC:DS]
 subset: attribute_slim
 is_a: PATO:0001236 ! process quality
+disjoint_from: PATO:0040044 ! population process quality
 created_by: gkoutos
 creation_date: 2013-10-10T04:09:51Z
 
