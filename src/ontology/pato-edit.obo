@@ -2832,7 +2832,7 @@ id: PATO:0000462
 name: absent
 alt_id: PATO:0001996
 def: "A quality denoting the lack of an entity." [thefreedictionary.:thefreedictionary.]
-comment: See documentation here: http://code.google.com/p/phenotype-ontologies/wiki/ModelingOfAbsence
+comment: We recommend using the new absent terms (physical absence, absent anatomical entity, or absent process) instead of this class. This is a legacy term and will ultimately be obsoleted.\nSee https://github.com/pato-ontology/pato/issues/331.
 subset: absent_slim
 subset: mpath_slim
 subset: value_slim
@@ -17059,7 +17059,7 @@ creation_date: 2011-04-18T05:11:33Z
 id: PATO:0002291
 name: agenesis
 def: "Absence of a tissue or organ due to failure to develop." [PATO:GVG]
-is_a: PATO:0000462 ! absent
+is_a: PATO:0040050 ! absent anatomical entity
 created_by: George Gkoutos
 creation_date: 2011-04-18T05:17:34Z
 
@@ -19841,10 +19841,10 @@ name: absence due to degeneration
 def: "Absence due to a degenerative process." [PATOC:PortlandMeetingFeb2015]
 subset: absent_slim
 subset: value_slim
-is_a: PATO:0000462 ! absent
 is_a: PATO:0000639 ! degenerate
-intersection_of: PATO:0000462 ! absent
+is_a: PATO:0040050 ! absent anatomical entity
 intersection_of: PATO:0000639 ! degenerate
+intersection_of: PATO:0040050 ! absent anatomical entity
 created_by: cjm
 
 [Term]
@@ -20586,6 +20586,34 @@ id: PATO:0040047
 name: fragmented
 def: "Existing or functioning as though broken into separate parts; disorganized; disunified." [https://www.dictionary.com/browse/unfragmented]
 is_a: PATO:0001444 ! broken
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040048
+name: absent physical object
+def: "A quality denoting the lack of an physical entity or object, such as a chemical." [thefreedictionary.:thefreedictionary.]
+subset: absent_slim
+synonym: "physical absence" EXACT []
+is_a: PATO:0001241 ! physical object quality
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040049
+name: absent process
+def: "A quality denoting the lack of an process or function." []
+subset: absent_slim
+synonym: "Process absence" EXACT []
+xref: thefreedictionary.:thefreedictionary.
+is_a: PATO:0001236 ! process quality
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040050
+name: absent anatomical entity
+def: "A quality denoting the lack of an anatomical entity or cellular component." [thefreedictionary.:thefreedictionary.]
+subset: absent_slim
+synonym: "anatomical entity absence" EXACT []
+is_a: PATO:0000051 ! morphology
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
