@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/pato/imports/go_import.owl#"
      xml:base="http://purl.obolibrary.org/obo/pato/imports/go_import.owl"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:go="http://purl.obolibrary.org/obo/go#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -11,7 +10,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/pato/imports/go_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2020-03-24/imports/go_import.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2020-08-02/imports/go_import.owl"/>
     </owl:Ontology>
     
 
@@ -175,12 +174,6 @@
     
 
 
-    <!-- http://purl.org/dc/elements/1.1/date -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
-    
-
-
     <!-- http://www.geneontology.org/formats/oboInOwl#SubsetProperty -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SubsetProperty">
@@ -293,6 +286,18 @@
     
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#is_class_level -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#is_class_level"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#is_metadata_tag -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#is_metadata_tag"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#shorthand -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#shorthand">
@@ -387,7 +392,7 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
-        <rdfs:comment>Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code &quot;no data&quot; (ND), is used to indicate this.</rdfs:comment>
+        <rdfs:comment>Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code &apos;no data&apos; (ND), is used to indicate this.</rdfs:comment>
         <rdfs:label>cellular_component</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -451,7 +456,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005634">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043231"/>
         <obo:IAO_0000115>A membrane-bounded organelle of eukaryotic cells in which chromosomes are housed and replicated. In most cells, the nucleus contains all of the cell&apos;s chromosomes except the organellar chromosomes, and is the site of RNA synthesis and processing. In some species, or in specialized cell types, RNA metabolism or DNA replication may be absent.</obo:IAO_0000115>
-        <oboInOwl:hasDbXref>MIPS_funcat:70.10</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao1702920020</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>Wikipedia:Cell_nucleus</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>cell nucleus</oboInOwl:hasExactSynonym>
@@ -602,7 +606,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008150">
         <obo:IAO_0000115>A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.</obo:IAO_0000115>
-        <oboInOwl:created_by>janelomax</oboInOwl:created_by>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
         <oboInOwl:creation_date>2012-09-19T15:05:24Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId>GO:0000004</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>GO:0007582</oboInOwl:hasAlternativeId>
@@ -623,7 +627,7 @@
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_plant"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pombe"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_yeast"/>
-        <rdfs:comment>Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code &quot;no data&quot; (ND), is used to indicate this.</rdfs:comment>
+        <rdfs:comment>Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code &apos;no data&apos; (ND), is used to indicate this.</rdfs:comment>
         <rdfs:label>biological_process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -853,7 +857,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0071944">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0110165"/>
         <obo:IAO_0000115>The part of a cell encompassing the cell cortex, the plasma membrane, and any external encapsulating structures.</obo:IAO_0000115>
-        <oboInOwl:created_by>midori</oboInOwl:created_by>
+        <oboInOwl:created_by>mah</oboInOwl:created_by>
         <oboInOwl:creation_date>2010-10-04T01:51:47Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0071944</oboInOwl:id>
@@ -891,7 +895,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A membrane that is a (regional) part of the plasma membrane.</obo:IAO_0000115>
-        <oboInOwl:created_by>davidos</oboInOwl:created_by>
+        <oboInOwl:created_by>dos</oboInOwl:created_by>
         <oboInOwl:creation_date>2014-03-06T11:55:32Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym>region of plasma membrane</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
@@ -1022,7 +1026,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A prolongation or process extending from a cell and that is bounded by plasma membrane, e.g. a cilium, lamellipodium, or axon.</obo:IAO_0000115>
-        <oboInOwl:created_by>kchris</oboInOwl:created_by>
+        <oboInOwl:created_by>krc</oboInOwl:created_by>
         <oboInOwl:creation_date>2017-03-21T17:26:07Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0120025</oboInOwl:id>
