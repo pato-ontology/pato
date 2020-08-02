@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2020-05-08/pato.obo
+data-version: releases/2020-08-02/pato.obo
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -9179,14 +9179,12 @@ id: PATO:0001444
 name: broken
 alt_id: PATO:0001443
 alt_id: PATO:0001820
-def: "A broken quality inhering in a bearer by virtue of the bearer's being broken open." [PATOC:GVG]
+def: "A structural quality inhering in a bearer by virtue of the bearer's components no longer being in a single contiguous unit." [https://orcid.org/0000-0003-4606-0597]
 subset: value_slim
-synonym: "burst" EXACT []
 synonym: "cracked" RELATED []
 synonym: "fractured" NARROW []
 synonym: "fragmented" EXACT []
 synonym: "hemorrhaged" RELATED []
-synonym: "ruptured" EXACT []
 synonym: "split" RELATED []
 synonym: "torn" RELATED []
 is_a: PATO:0001442 ! wholeness
@@ -20193,6 +20191,21 @@ synonym: "increased proportionality" EXACT []
 synonym: "increased quotient" EXACT []
 synonym: "increased ratio" EXACT []
 is_a: PATO:0001470 ! proportionality to
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040044
+name: ruptured
+def: "A structural quality inhering in a bearer by virtue of the bearer's components being torn, typically used for soft tissues or membranes." [https://orcid.org/0000-0003-4606-0597]
+synonym: "burst" EXACT []
+is_a: PATO:0001444 ! broken
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040047
+name: fragmented
+def: "Existing or functioning as though broken into separate parts; disorganized; disunified." [https://www.dictionary.com/browse/unfragmented]
+is_a: PATO:0001444 ! broken
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
