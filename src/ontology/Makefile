@@ -1,7 +1,7 @@
 # ----------------------------------------
 # Makefile for pato
 # Generated using ontology-starter-kit
-# ODK Version: v1.2.19
+# ODK Version: v1.2.22
 # ----------------------------------------
 # <do not edit above this line>
 
@@ -25,7 +25,7 @@ REPORT_FAIL_ON =            none
 OBO_FORMAT_OPTIONS =        
 SPARQL_VALIDATION_CHECKS =  equivalent-classes trailing-whitespace owldef-self-reference xref-syntax nolabels
 SPARQL_EXPORTS =            basic-report class-count-by-prefix edges xrefs obsoletes synonyms
-ODK_VERSION =               v1.2.19
+ODK_VERSION =               v1.2.22
 
 TODAY ?= $(shell date +%Y-%m-%d)
 OBODATE ?= $(shell date +'%d:%m:%Y %H:%M')
