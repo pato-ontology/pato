@@ -8424,6 +8424,7 @@ id: PATO:0001340
 name: hermaphrodite
 def: "A biological sex quality inhering in an organism or a population with both male and female sexual organs in one individual." [MGED:MGED]
 subset: value_slim
+synonym: "hermaphroditic" EXACT []
 synonym: "intersex" EXACT []
 is_a: PATO:0001894 ! phenotypic sex
 
@@ -20591,29 +20592,15 @@ created_by: http://orcid.org/0000-0001-5208-3432
 [Term]
 id: PATO:0040050
 name: diandrous
-def: "A quality of a plant in which the flowers have two stamens." [http://orcid.org/0000-0002-2908-3327] {comment="https://orcid.org/0000-0001-8815-0078"}
+def: "A phenotypic sex quality inhering in a  plant organism or a population of plants in which the flowers have two stamens." [http://orcid.org/0000-0002-2908-3327] {comment="https://orcid.org/0000-0001-8815-0078"}
 is_a: PATO:0001894 ! phenotypic sex
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040051
 name: monandrous
-def: "A quality of a plant in which the flowers have only one stamen." [http://orcid.org/0000-0002-2908-3327, https://orcid.org/0000-0001-8815-0078]
+def: "A phenotypic sex quality inhering in a  plant organism or a population of plants in which the flowers have only one stamen." [http://orcid.org/0000-0002-2908-3327, https://orcid.org/0000-0001-8815-0078]
 is_a: PATO:0001894 ! phenotypic sex
-created_by: http://orcid.org/0000-0001-5208-3432
-
-[Term]
-id: PATO:0040052
-name: diandrous (animal)
-def: "Possessing two different types of males." [http://orcid.org/0000-0002-2908-3327]
-is_a: PATO:0001338 ! mixed sex
-created_by: http://orcid.org/0000-0001-5208-3432
-
-[Term]
-id: PATO:0040053
-name: monandrous (animal)
-def: "Having only one type of male." [http://orcid.org/0000-0002-2908-3327]
-is_a: PATO:0001338 ! mixed sex
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
@@ -21863,6 +21850,49 @@ name: patchy pigmentation
 def: "A degree of pigmentation quality that is diversified with patches, or irregularity." [https://medlineplus.gov/ency/article/003224.htm]
 is_a: PATO:0002248 ! pigmented
 created_by: https://orcid.org/0000-0002-3528-5267
+
+[Term]
+id: PATO:0070000
+name: sequential hermaphrodite
+def: "A hermaphroditic quality that inheres in a population or organism where an organism changes is a different sexes during different life stages." [http://orcid.org/0000-0002-2908-3327, https://en.wikipedia.org/wiki/Sequential_hermaphroditism, https://orcid.org/0000-0001-8815-0078]
+comment: Sequential hermaphrodity is generally characterized by an organism producing female gametes and male gametes during different life stages.
+synonym: "sequential hermaphroditic" EXACT []
+is_a: PATO:0001340 ! hermaphrodite
+created_by: https://orcid.org/0000-0001-8815-0078
+
+[Term]
+id: PATO:0070001
+name: protogynous
+def: "A sequential hermaphroditic quality whereby organisms start out as female and change to male at a later life stage." [https://en.wikipedia.org/wiki/Sequential_hermaphroditism] {comment="http://orcid.org/0000-0002-2908-3327"}
+synonym: "protogyny" EXACT []
+is_a: PATO:0070000 ! sequential hermaphrodite
+created_by: https://orcid.org/0000-0001-8815-0078
+
+[Term]
+id: PATO:0070002
+name: protandrous
+def: "A sequential hermaphroditic quality whereby organisms start out as male and change to female at a later life stage." [http://orcid.org/0000-0002-2908-3327, https://en.wikipedia.org/wiki/Sequential_hermaphroditism]
+synonym: "protandry" EXACT []
+is_a: PATO:0070000 ! sequential hermaphrodite
+created_by: https://orcid.org/0000-0001-8815-0078
+
+[Term]
+id: PATO:0070003
+name: protogynous hermaphroditism
+def: "A protogynous quality whereby organisms start out as female and change to hermaphrodite at a later life stage." [https://en.wikipedia.org/wiki/Sequential_hermaphroditism]
+synonym: "protogynous hermaphrodite" EXACT []
+synonym: "protogynous hermaphroditic" EXACT []
+is_a: PATO:0070001 ! protogynous
+created_by: https://orcid.org/0000-0001-8815-0078
+
+[Term]
+id: PATO:0070004
+name: protandrous hermaphroditism
+def: "A protandrous quality whereby organisms start out as male and change to hermaphrodite at a later life stage." [https://en.wikipedia.org/wiki/Sequential_hermaphroditism]
+synonym: "protandrous hermaphrodite" EXACT []
+synonym: "protandrous hermaphroditic" EXACT []
+is_a: PATO:0070002 ! protandrous
+created_by: https://orcid.org/0000-0001-8815-0078
 
 [Typedef]
 id: correlates_with
