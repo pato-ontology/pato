@@ -21847,6 +21847,40 @@ def: "A degree of pigmentation quality that is diversified with patches, or irre
 is_a: PATO:0002248 ! pigmented
 created_by: https://orcid.org/0000-0002-3528-5267
 
+[Term]
+id: http://purl.obolibrary.org/obo/PATO:70002
+name: basket cell morphology
+def: "A cell morphology that inheres in neurons that have sparsely spinous dendrite, which spread radially and tangentially, with axons on the pial side of the soma ascending or descending to give off horizontal collaterals, which in turn sprout small branches ending in dense tufts of terminals." [doi:10.1016/b978-0-12-369497-3.10004-4]
+xref: ILX:0101123
+xref: ilxtr:BasketPhenotype
+xref: nifext:3
+is_a: PATO:0010006 ! cell morphology
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: http://purl.obolibrary.org/obo/PATO:70003
+name: small basket cell morphology
+def: "A basket cell morphology that inheres in neurons that are large, aspiny and multipolar, and gives rise to many long horizontally and vertically projecting axon collaterals that traverse neighbouring columns." [PMID:11884355]
+xref: ilxtr:SmallBasketPhenotype
+is_a: http://purl.obolibrary.org/obo/PATO:70002 ! basket cell morphology
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: http://purl.obolibrary.org/obo/PATO:70004
+name: large basket cell morphology
+def: "A basket cell morphology that inheres in neurons that have axonal arbors, composed of frequent short, curvy axonal branches that tend to be near their somata and within the same cortical layer." [PMID:11884355]
+xref: ilxtr:LargeBasketPhenotype
+is_a: http://purl.obolibrary.org/obo/PATO:70002 ! basket cell morphology
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: http://purl.obolibrary.org/obo/PATO:70005
+name: nest basket cell morphology
+def: "A basket cell morphology that inheres in neurons which have simpler dendritic arbors (compared to small or large basket cell morphology), and an axonal plexus of intermediate density, composed of a few long, smooth axonal branches." [PMID:11884355]
+xref: ilxtr:NestBasketPhenotype
+is_a: http://purl.obolibrary.org/obo/PATO:70002 ! basket cell morphology
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
+
 [Typedef]
 id: correlates_with
 name: correlates_with
