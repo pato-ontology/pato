@@ -21856,6 +21856,66 @@ def: "A degree of pigmentation quality that is diversified with patches, or irre
 is_a: PATO:0002248 ! pigmented
 created_by: https://orcid.org/0000-0002-3528-5267
 
+[Term]
+id: PATO:0070015
+name: pyramidal family morphology
+def: "A cell morphology that inheres in neurons which have a pyramidal shaped soma, a single axon, a large apical dendrite and multiple basal dendrites." [doi:10.1016/b978-0-12-369497-3.10004-4]
+xref: ILX:0109553
+xref: SAO:1465673360
+is_a: PATO:0010006 ! cell morphology
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070016
+name: standard pyramidal morphology
+def: "A pyramidal cell morphology that inheres in neurons which have a standard pyramidal shape with its apical dendrite aligned vertically." [doi:10.1016/b978-0-12-369497-3.10004-4]
+synonym: "pyramidal morphology" EXACT []
+synonym: "vertical pyramidal morphology" EXACT []
+xref: ilxtr:PyramidalPhenotype
+is_a: PATO:0070015 ! pyramidal family morphology
+disjoint_from: PATO:0070017 ! horizontal pyramidal morphology
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070017
+name: horizontal pyramidal morphology
+def: "A pyramidal cell morphology that inheres in neurons which have an apical tree which is oriented parallel to the pia." [PMID:30715238]
+xref: ilxtr:HorizontalPyramidalPhenotype
+is_a: PATO:0070015 ! pyramidal family morphology
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070018
+name: tufted pyramidal morphology
+def: "A pyramidal cell morphology that inheres in neurons which have a distinct tuft formation, distal from the soma." [PMID:30715238]
+xref: ilxtr:TuftedPyramidalPhenotype
+is_a: PATO:0070015 ! pyramidal family morphology
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070019
+name: untufted pyramidal morphology
+def: "A pyramidal cell morphology that inheres in neurons which lack a clear tuft formation but extend to large radial distances." [PMID:30715238]
+xref: ilxtr:UntuftedPyramidalPhenotype
+is_a: PATO:0070015 ! pyramidal family morphology
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070020
+name: stellate pyramidal morphology
+def: "A pyramidal cell morphology that inheres in neurons which lack a tuft formation but extend to small radial distances forming a star-like shape." [PMID:30715238]
+xref: ilxtr:StarPyramidalPhenotype
+is_a: PATO:0070015 ! pyramidal family morphology
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070021
+name: inverted pyramidal morphology
+def: "A pyramidal cell morphology that inheres in neurons which have an apical tree which is oriented towards the white matter." [PMID:30715238]
+xref: ilxtr:InvertedPyramidalPhenotype
+is_a: PATO:0070015 ! pyramidal family morphology
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
+
 [Typedef]
 id: correlates_with
 name: correlates_with
