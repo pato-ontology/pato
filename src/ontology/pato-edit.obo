@@ -20600,6 +20600,15 @@ is_a: PATO:0001444 ! broken
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
+id: PATO:0040048
+name: erythematous
+def: "Red due to increase blood circulation in a defined area." [https://orcid.org/0000-0002-0736-9199]
+synonym: "erythema" EXACT []
+synonym: "skin redness" EXACT []
+is_a: PATO:0000051 ! morphology
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
 id: PATO:0045000
 name: normal rate
 def: "A rate which is relatively normal." []
@@ -21855,6 +21864,74 @@ xref: ilxtr:SpinyStellatePhenotype
 is_a: PATO:0010006 ! cell morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
+[Term]
+id: PATO:0070015
+name: pyramidal family morphology
+def: "A cell morphology that inheres in neurons which have a pyramidal shaped soma, a single axon, a large apical dendrite and multiple basal dendrites." [doi:10.1016/b978-0-12-369497-3.10004-4]
+xref: ILX:0109553
+xref: SAO:1465673360
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070016
+name: horizontal pyramidal morphology
+def: "A pyramidal family morphology that inheres in neurons which have an apical tree which is oriented parallel to the pia." [PMID:30715238]
+xref: ilxtr:HorizontalPyramidalPhenotype
+is_a: PATO:0070015 ! pyramidal family morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070017
+name: standard pyramidal morphology
+def: "A pyramidal family morphology that inheres in neurons which have a standard pyramidal shape with its apical dendrite aligned vertically." [doi:10.1016/b978-0-12-369497-3.10004-4]
+synonym: "pyramidal cell morphology" EXACT []
+synonym: "vertical pyramidal morphology" EXACT []
+xref: ilxtr:PyramidalPhenotype
+is_a: PATO:0070015 ! pyramidal family morphology
+disjoint_from: PATO:0070016 ! horizontal pyramidal morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070018
+name: tufted pyramidal morphology
+def: "A pyramidal cell morphology that inheres in neurons which have a distinct tuft formation, distal from the soma." [PMID:30715238]
+xref: ilxtr:TuftedPyramidalPhenotype
+is_a: PATO:0070017 ! standard pyramidal morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070019
+name: untufted pyramidal morphology
+def: "A pyramidal cell morphology that inheres in neurons which lack a clear tuft formation but extend to large radial distances." [PMID:30715238]
+xref: ilxtr:UntuftedPyramidalPhenotype
+is_a: PATO:0070017 ! standard pyramidal morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070020
+name: stellate pyramidal morphology
+def: "A pyramidal cell morphology that inheres in neurons which lack a tuft formation but extend to small radial distances forming a star-like shape." [PMID:30715238]
+xref: ilxtr:StarPyramidalPhenotype
+is_a: PATO:0070017 ! standard pyramidal morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070021
+name: inverted pyramidal morphology
+def: "A pyramidal cell morphology that inheres in neurons which have an apical tree which is oriented towards the white matter." [PMID:30715238]
+xref: ilxtr:InvertedPyramidalPhenotype
+is_a: PATO:0070017 ! standard pyramidal morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0085001
+name: salinity
+def: "An osmolarity quality inhering in a bearer by virtue of the total amount of ionic salts dissolved in the bearer." [http://db0nus869y26v.cloudfront.net/en/Salinity, https://en.wikipedia.org/wiki/Salinity, https://rwu.pressbooks.pub/webboceanography/chapter/5-3-salinity-patterns/, https://www.sciencedirect.com/referencework/9780080983004/treatise-on-geochemistry, https://www.sciencedirect.com/science/article/pii/B9780857096807500012]
+is_a: PATO:0001655 ! osmolarity
+created_by: http://orcid.org/0000-0002-3410-4655
+creation_date: 2020-10-30T08:08:48Z
+
 [Typedef]
 id: correlates_with
 name: correlates_with
@@ -22008,4 +22085,3 @@ synonym: "monadic_form_of" EXACT []
 id: towards
 name: towards
 comment: Relation binding a relational quality or disposition to the relevant type of entity.
-
