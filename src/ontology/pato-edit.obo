@@ -21863,15 +21863,6 @@ def: "A cell morphology that inheres in neurons which are large and non-spiny, w
 xref: ilxtr:MartinottiPhenotype
 
 [Term]
-id: PATO:0070015
-name: pyramidal family morphology
-def: "A cell morphology that inheres in neurons which have a pyramidal shaped soma, a single axon, a large apical dendrite and multiple basal dendrites." [doi:10.1016/b978-0-12-369497-3.10004-4]
-xref: ILX:0109553
-xref: SAO:1465673360
-is_a: PATO:0010006 ! cell morphology
-created_by: http://orcid.org/0000-0001-7258-9596
-
-[Term]
 id: PATO:0070008
 name: 'T-shaped' martinotti morphology
 def: "A martinotti cell morphology that inheres in neurons which have axons that form a horizontal ramification, making it T-shaped." [doi:10.1016/b978-0-12-369497-3.10004-4]
@@ -21886,11 +21877,21 @@ is_a: PATO:0070007 ! martinotti morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
+id: PATO:0070015
+name: pyramidal family morphology
+def: "A cell morphology that inheres in neurons which have a pyramidal shaped soma, a single axon, a large apical dendrite and multiple basal dendrites." [doi:10.1016/b978-0-12-369497-3.10004-4]
+xref: ILX:0109553
+xref: SAO:1465673360
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
 id: PATO:0070016
 name: horizontal pyramidal morphology
 def: "A pyramidal family morphology that inheres in neurons which have an apical tree which is oriented parallel to the pia." [PMID:30715238]
 xref: ilxtr:HorizontalPyramidalPhenotype
 is_a: PATO:0070015 ! pyramidal family morphology
+disjoint_from: PATO:0070017 ! standard pyramidal morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -21901,7 +21902,6 @@ synonym: "pyramidal cell morphology" EXACT []
 synonym: "vertical pyramidal morphology" EXACT []
 xref: ilxtr:PyramidalPhenotype
 is_a: PATO:0070015 ! pyramidal family morphology
-disjoint_from: PATO:0070016 ! horizontal pyramidal morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -22097,3 +22097,4 @@ synonym: "monadic_form_of" EXACT []
 id: towards
 name: towards
 comment: Relation binding a relational quality or disposition to the relevant type of entity.
+
