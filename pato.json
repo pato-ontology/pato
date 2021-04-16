@@ -34,6 +34,12 @@
         },
         {
           "domainClassIds": [
+            "http://purl.obolibrary.org/obo/BFO_0000015"
+          ],
+          "predicateId": "http://purl.obolibrary.org/obo/RO_0002233"
+        },
+        {
+          "domainClassIds": [
             "http://purl.obolibrary.org/obo/PATO_0001470"
           ],
           "predicateId": "http://purl.obolibrary.org/obo/pato#has_dividend_entity"
@@ -177,15 +183,6 @@
           "predicateId": "http://purl.obolibrary.org/obo/RO_0002211",
           "rangeClassIds": [
             "http://purl.obolibrary.org/obo/BFO_0000015"
-          ]
-        },
-        {
-          "domainClassIds": [
-            "http://purl.obolibrary.org/obo/BFO_0000015"
-          ],
-          "predicateId": "http://purl.obolibrary.org/obo/RO_0002233",
-          "rangeClassIds": [
-            "http://purl.obolibrary.org/obo/BFO_0000040"
           ]
         },
         {
@@ -491,11 +488,6 @@
         {
           "obj": "http://purl.obolibrary.org/obo/GO_0005575",
           "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/GO_0005622"
-        },
-        {
-          "obj": "http://purl.obolibrary.org/obo/GO_0005575",
-          "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/GO_0032991"
         },
         {
@@ -505,8 +497,13 @@
         },
         {
           "obj": "http://purl.obolibrary.org/obo/GO_0005622",
-          "pred": "http://purl.obolibrary.org/obo/BFO_0000050",
+          "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/GO_0043229"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/GO_0005634",
+          "pred": "http://purl.obolibrary.org/obo/BFO_0000050",
+          "sub": "http://purl.obolibrary.org/obo/GO_0140513"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/GO_0005886",
@@ -559,6 +556,11 @@
           "sub": "http://purl.obolibrary.org/obo/GO_0098796"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/GO_0032991",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/GO_0140513"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/GO_0042995",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/GO_0120025"
@@ -572,11 +574,6 @@
           "obj": "http://purl.obolibrary.org/obo/GO_0043226",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/GO_0043227"
-        },
-        {
-          "obj": "http://purl.obolibrary.org/obo/GO_0043226",
-          "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/GO_0043229"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/GO_0043227",
@@ -612,6 +609,11 @@
           "obj": "http://purl.obolibrary.org/obo/GO_0098796",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/GO_0098797"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/GO_0110165",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/GO_0005622"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/GO_0110165",
@@ -10756,7 +10758,32 @@
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
           "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070001"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070007"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
+          "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0070010"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070011"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070012"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070013"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
@@ -11419,6 +11446,16 @@
           "sub": "http://purl.obolibrary.org/obo/PATO_0060003"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070007",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070008"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070007",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070009"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/PATO_0070015",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0070016"
@@ -11557,11 +11594,6 @@
           "obj": "http://purl.obolibrary.org/obo/RO_0002203",
           "pred": "inverseOf",
           "sub": "http://purl.obolibrary.org/obo/RO_0002202"
-        },
-        {
-          "obj": "http://purl.obolibrary.org/obo/RO_0002211",
-          "pred": "subPropertyOf",
-          "sub": "http://purl.obolibrary.org/obo/RO_0002025"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/RO_0002211",
@@ -12138,18 +12170,6 @@
       "id": "http://purl.obolibrary.org/obo/pato.json",
       "logicalDefinitionAxioms": [
         {
-          "definedClassId": "http://purl.obolibrary.org/obo/GO_0043229",
-          "genusIds": [
-            "http://purl.obolibrary.org/obo/GO_0043226"
-          ],
-          "restrictions": [
-            {
-              "fillerId": "http://purl.obolibrary.org/obo/GO_0005622",
-              "propertyId": "http://purl.obolibrary.org/obo/BFO_0000050"
-            }
-          ]
-        },
-        {
           "definedClassId": "http://purl.obolibrary.org/obo/GO_0098590",
           "genusIds": [
             "http://purl.obolibrary.org/obo/GO_0016020"
@@ -12194,6 +12214,18 @@
             {
               "fillerId": "http://purl.obolibrary.org/obo/GO_0098590",
               "propertyId": "http://purl.obolibrary.org/obo/BFO_0000051"
+            }
+          ]
+        },
+        {
+          "definedClassId": "http://purl.obolibrary.org/obo/GO_0140513",
+          "genusIds": [
+            "http://purl.obolibrary.org/obo/GO_0032991"
+          ],
+          "restrictions": [
+            {
+              "fillerId": "http://purl.obolibrary.org/obo/GO_0005634",
+              "propertyId": "http://purl.obolibrary.org/obo/BFO_0000050"
             }
           ]
         },
@@ -15938,11 +15970,11 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2021-04-14"
+            "val": "2021-04-16"
           }
         ],
         "subsets": [],
-        "version": "http://purl.obolibrary.org/obo/pato/releases/2021-04-14/pato.json",
+        "version": "http://purl.obolibrary.org/obo/pato/releases/2021-04-16/pato.json",
         "xrefs": []
       },
       "nodes": [
@@ -16110,6 +16142,12 @@
               "val": "a core relation that holds between a part and its whole",
               "xrefs": []
             },
+            "subsets": [
+              "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
+              "http://purl.obolibrary.org/obo/valid_for_go_gp2term",
+              "http://purl.obolibrary.org/obo/valid_for_go_ontology",
+              "http://purl.obolibrary.org/obo/valid_for_gocam"
+            ],
             "xrefs": [
               {
                 "val": "BFO:0000050"
@@ -16181,6 +16219,11 @@
                 "PATOC:CJM"
               ]
             },
+            "subsets": [
+              "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
+              "http://purl.obolibrary.org/obo/valid_for_go_ontology",
+              "http://purl.obolibrary.org/obo/valid_for_gocam"
+            ],
             "xrefs": [
               {
                 "val": "BFO:0000051"
@@ -16277,7 +16320,12 @@
             "definition": {
               "val": "b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t",
               "xrefs": []
-            }
+            },
+            "subsets": [
+              "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
+              "http://purl.obolibrary.org/obo/valid_for_go_ontology",
+              "http://purl.obolibrary.org/obo/valid_for_gocam"
+            ]
           },
           "type": "PROPERTY"
         },
@@ -16433,16 +16481,20 @@
         },
         {
           "id": "http://purl.obolibrary.org/obo/GO_0005622",
-          "lbl": "intracellular",
+          "lbl": "intracellular anatomical structure",
           "meta": {
             "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000233",
+                "val": "https://github.com/geneontology/go-ontology/issues/17776"
+              },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
                 "val": "cellular_component"
               }
             ],
             "definition": {
-              "val": "The living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm.",
+              "val": "A component of a cell contained within (but not including) the plasma membrane. In eukaryotes it includes the nucleus and cytoplasm.",
               "xrefs": [
                 "ISBN:0198506732"
               ]
@@ -16458,6 +16510,11 @@
               {
                 "pred": "hasExactSynonym",
                 "val": "internal to cell",
+                "xrefs": []
+              },
+              {
+                "pred": "hasExactSynonym",
+                "val": "intracellular",
                 "xrefs": []
               },
               {
@@ -16821,6 +16878,18 @@
           "meta": {
             "basicPropertyValues": [
               {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#creation_date",
+                "val": "2014-03-06T11:37:54Z"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+                "val": "GO:0098589"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
+                "val": "GO:0098805"
+              },
+              {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
                 "val": "cellular_component"
               }
@@ -16842,6 +16911,23 @@
               "http://purl.obolibrary.org/obo/go#goslim_pir",
               "http://purl.obolibrary.org/obo/go#goslim_plant",
               "http://purl.obolibrary.org/obo/go#goslim_yeast"
+            ],
+            "synonyms": [
+              {
+                "pred": "hasNarrowSynonym",
+                "val": "membrane region",
+                "xrefs": []
+              },
+              {
+                "pred": "hasNarrowSynonym",
+                "val": "region of membrane",
+                "xrefs": []
+              },
+              {
+                "pred": "hasNarrowSynonym",
+                "val": "whole membrane",
+                "xrefs": []
+              }
             ],
             "xrefs": [
               {
@@ -17272,6 +17358,10 @@
           "meta": {
             "basicPropertyValues": [
               {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000233",
+                "val": "https://github.com/geneontology/go-ontology/issues/13193"
+              },
+              {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
                 "val": "krc"
               },
@@ -17290,6 +17380,43 @@
                 "GOC:krc"
               ]
             }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/GO_0140513",
+          "lbl": "nuclear protein-containing complex",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "pg"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#creation_date",
+                "val": "2020-09-09T05:12:38Z"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "cellular_component"
+              }
+            ],
+            "definition": {
+              "val": "A stable assembly of two or more macromolecules, i.e. proteins, nucleic acids, carbohydrates or lipids, in which at least one component is a protein and the constituent parts function together in the nucleus.",
+              "xrefs": [
+                "GOC:pg"
+              ]
+            },
+            "subsets": [
+              "http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"
+            ],
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "nuclear complex",
+                "xrefs": []
+              }
+            ]
           },
           "type": "CLASS"
         },
@@ -83454,6 +83581,108 @@
           "type": "CLASS"
         },
         {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070001",
+          "lbl": "neurogliaform morphology",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A cell morphology that inheres in neurons which have a small round soma, a large number of short, smooth, or slightly beaded primary dendrites that give rise to only a few secondary branches, and a branched axon that establishes a dense axonal mesh with thin shafts.",
+              "xrefs": [
+                "PMID:17122314"
+              ]
+            },
+            "xrefs": [
+              {
+                "val": "ilxtr:NeurogliaformPhenotype"
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070007",
+          "lbl": "martinotti morphology",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A cell morphology that inheres in neurons which are large and non-spiny, with dendrites radiating in a multipolar or bitufted pattern, often favouring the descending side, and axons that ascend directly from the superficial side of the soma, and travel upward without branching.",
+              "xrefs": [
+                "doi:10.1016/b978-0-12-369497-3.10004-4"
+              ]
+            },
+            "xrefs": [
+              {
+                "val": "ilxtr:MartinottiPhenotype"
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070008",
+          "lbl": "'T-shaped' martinotti morphology",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A martinotti cell morphology that inheres in neurons which have axons that form a horizontal ramification, making it T-shaped.",
+              "xrefs": [
+                "doi:10.1016/b978-0-12-369497-3.10004-4"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070009",
+          "lbl": "'fanning-out' martinotti morphology",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A martinotti cell morphology that inheres in neurons which have axons that form a fan-like plexus.",
+              "xrefs": [
+                "doi:10.1016/b978-0-12-369497-3.10004-4"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
           "id": "http://purl.obolibrary.org/obo/PATO_0070010",
           "lbl": "stellate morphology",
           "meta": {
@@ -83479,6 +83708,96 @@
               },
               {
                 "val": "SAO:9271919883"
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070011",
+          "lbl": "chandelier cell morphology",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A cell morphology that inheres in neurons which are small and round, and make highly specialized synapses with the axon initial segments of pyramidal neurons, wrapping them with candle-shaped synaptic “cartridges”.",
+              "xrefs": [
+                "doi:10.1016/b978-0-12-369497-3.10004-4"
+              ]
+            },
+            "xrefs": [
+              {
+                "val": "ILX:0102028"
+              },
+              {
+                "val": "ilxtr:ChandelierPhenotype"
+              },
+              {
+                "val": "nifext:4"
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070012",
+          "lbl": "bitufted cell morphology",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A cell morphology that inheres in neurons which have tufts of dendrites extending from two opposite poles of the soma, and have axons that form a plexus which spreads widely, usually descending.",
+              "xrefs": [
+                "doi:10.1016/b978-0-12-369497-3.10004-4"
+              ]
+            },
+            "xrefs": [
+              {
+                "val": "ilxtr:BituftedPhenotype"
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070013",
+          "lbl": "spiny stellate cell morphology",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A cell morphology that inheres in neurons which have spiny basal dendrites and resemble pyramidal cells but lose their apical dendrites as they mature. Their axons nearly always emerge from the descending side of the soma, but often recurve and ascend with arc-like collaterals.",
+              "xrefs": [
+                "doi:10.1016/b978-0-12-369497-3.10004-4"
+              ]
+            },
+            "xrefs": [
+              {
+                "val": "ilxtr:SpinyStellatePhenotype"
               }
             ]
           },
@@ -84173,7 +84492,9 @@
               "xrefs": []
             },
             "subsets": [
-              "http://purl.obolibrary.org/obo/ro/subsets#ro-eco"
+              "http://purl.obolibrary.org/obo/ro/subsets#ro-eco",
+              "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
+              "http://purl.obolibrary.org/obo/valid_for_gocam"
             ]
           },
           "type": "PROPERTY"
@@ -84331,7 +84652,12 @@
             "definition": {
               "val": "process(P1) regulates process(P2) iff: P1 results in the initiation or termination of P2 OR affects the frequency of its initiation or termination OR affects the magnitude or rate of output of P2.",
               "xrefs": []
-            }
+            },
+            "subsets": [
+              "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
+              "http://purl.obolibrary.org/obo/valid_for_go_ontology",
+              "http://purl.obolibrary.org/obo/valid_for_gocam"
+            ]
           },
           "type": "PROPERTY"
         },
@@ -84360,7 +84686,12 @@
             "definition": {
               "val": "Process(P1) negatively regulates process(P2) iff: P1 terminates P2, or P1 descreases the the frequency of initiation of P2 or the magnitude or rate of output of P2.",
               "xrefs": []
-            }
+            },
+            "subsets": [
+              "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
+              "http://purl.obolibrary.org/obo/valid_for_go_ontology",
+              "http://purl.obolibrary.org/obo/valid_for_gocam"
+            ]
           },
           "type": "PROPERTY"
         },
@@ -84389,7 +84720,12 @@
             "definition": {
               "val": "Process(P1) postively regulates process(P2) iff: P1 initiates P2, or P1 increases the the frequency of initiation of P2 or the magnitude or rate of output of P2.",
               "xrefs": []
-            }
+            },
+            "subsets": [
+              "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
+              "http://purl.obolibrary.org/obo/valid_for_go_ontology",
+              "http://purl.obolibrary.org/obo/valid_for_gocam"
+            ]
           },
           "type": "PROPERTY"
         },
@@ -84425,10 +84761,6 @@
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000232",
                 "val": "For compatibility with BFO, this relation has a shortcut definition in which the expression \"capable of some P\" expands to \"bearer_of (some realized_by only P)\"."
-              },
-              {
-                "pred": "http://purl.obolibrary.org/obo/IAO_0000424",
-                "val": "RO_0000053 some (RO_0000054 only ?Y)"
               }
             ],
             "definition": {
@@ -84453,10 +84785,6 @@
               {
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000118",
                 "val": "has function in"
-              },
-              {
-                "pred": "http://purl.obolibrary.org/obo/IAO_0000424",
-                "val": "RO_0000053 some (RO_0000054 only (BFO_0000050 some ?Y))"
               },
               {
                 "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
@@ -84528,7 +84856,10 @@
               "xrefs": []
             },
             "subsets": [
-              "http://purl.obolibrary.org/obo/ro/subsets#ro-eco"
+              "http://purl.obolibrary.org/obo/ro/subsets#ro-eco",
+              "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
+              "http://purl.obolibrary.org/obo/valid_for_go_ontology",
+              "http://purl.obolibrary.org/obo/valid_for_gocam"
             ]
           },
           "type": "PROPERTY"
@@ -84631,7 +84962,10 @@
             "definition": {
               "val": "c acts upstream of p if and only if c enables some f that is involved in p' and p' occurs chronologically before p, is not part of p, and affects the execution of p. c is a material entity and f, p, p' are processes.",
               "xrefs": []
-            }
+            },
+            "subsets": [
+              "http://purl.obolibrary.org/obo/valid_for_go_gp2term"
+            ]
           },
           "type": "PROPERTY"
         },
@@ -84653,6 +84987,9 @@
               "val": "c acts upstream of or within p if c is enables f, and f is causally upstream of or within p. c is a material entity and p is an process.",
               "xrefs": []
             },
+            "subsets": [
+              "http://purl.obolibrary.org/obo/valid_for_go_gp2term"
+            ],
             "synonyms": [
               {
                 "pred": "hasRelatedSynonym",
@@ -84700,6 +85037,10 @@
             ],
             "comments": [
               "holds between x and y if and only if x is causally upstream of y and the progression of x increases the frequency, rate or extent of y"
+            ],
+            "subsets": [
+              "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
+              "http://purl.obolibrary.org/obo/valid_for_gocam"
             ]
           },
           "type": "PROPERTY"
@@ -84844,6 +85185,9 @@
                 "pred": "http://purl.obolibrary.org/obo/IAO_0000232",
                 "val": "This relation is currently used experimentally by the Gene Ontology Consortium. It may not be stable and may be obsoleted at some future time."
               }
+            ],
+            "subsets": [
+              "http://purl.obolibrary.org/obo/valid_for_go_gp2term"
             ]
           },
           "type": "PROPERTY"
@@ -84932,7 +85276,10 @@
             "definition": {
               "val": "inverse of enables",
               "xrefs": []
-            }
+            },
+            "subsets": [
+              "http://purl.obolibrary.org/obo/valid_for_gocam"
+            ]
           },
           "type": "PROPERTY"
         },
@@ -85189,7 +85536,11 @@
             "definition": {
               "val": "p is causally upstream of q if and only if p precedes q and p and q are linked in a causal chain",
               "xrefs": []
-            }
+            },
+            "subsets": [
+              "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
+              "http://purl.obolibrary.org/obo/valid_for_gocam"
+            ]
           },
           "type": "PROPERTY"
         },
@@ -85832,7 +86183,12 @@
             "definition": {
               "val": "Process(P1) directly regulates process(P2) iff: P1 regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  regulates the kinase activity (P2) of protein B then P1 directly regulates P2.",
               "xrefs": []
-            }
+            },
+            "subsets": [
+              "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
+              "http://purl.obolibrary.org/obo/valid_for_go_ontology",
+              "http://purl.obolibrary.org/obo/valid_for_gocam"
+            ]
           },
           "type": "PROPERTY"
         },
@@ -86043,7 +86399,12 @@
             "definition": {
               "val": "Process(P1) directly postively regulates process(P2) iff: P1 positively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding positively regulates the kinase activity (P2) of protein B then P1 directly positively regulates P2.",
               "xrefs": []
-            }
+            },
+            "subsets": [
+              "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
+              "http://purl.obolibrary.org/obo/valid_for_go_ontology",
+              "http://purl.obolibrary.org/obo/valid_for_gocam"
+            ]
           },
           "type": "PROPERTY"
         },
@@ -86068,7 +86429,12 @@
             "definition": {
               "val": "Process(P1) directly negatively regulates process(P2) iff: P1 negatively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  negatively regulates the kinase activity (P2) of protein B then P1 directly negatively regulates P2.",
               "xrefs": []
-            }
+            },
+            "subsets": [
+              "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
+              "http://purl.obolibrary.org/obo/valid_for_go_ontology",
+              "http://purl.obolibrary.org/obo/valid_for_gocam"
+            ]
           },
           "type": "PROPERTY"
         },
@@ -86114,6 +86480,9 @@
                 "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
                 "val": "http://wiki.geneontology.org/index.php/Acts_upstream_of_or_within,_positive_effect"
               }
+            ],
+            "subsets": [
+              "http://purl.obolibrary.org/obo/valid_for_go_gp2term"
             ]
           },
           "type": "PROPERTY"
@@ -86135,6 +86504,9 @@
                 "pred": "http://www.geneontology.org/formats/oboInOwl#creation_date",
                 "val": "2018-01-26T23:49:51Z"
               }
+            ],
+            "subsets": [
+              "http://purl.obolibrary.org/obo/valid_for_go_gp2term"
             ]
           },
           "type": "PROPERTY"
@@ -86164,7 +86536,10 @@
             "definition": {
               "val": "c 'acts upstream of, positive effect' p if c is enables f, and f is causally upstream of p, and the direction of f is positive",
               "xrefs": []
-            }
+            },
+            "subsets": [
+              "http://purl.obolibrary.org/obo/valid_for_go_gp2term"
+            ]
           },
           "type": "PROPERTY"
         },
@@ -86193,7 +86568,10 @@
             "definition": {
               "val": "c 'acts upstream of, negative effect' p if c is enables f, and f is causally upstream of p, and the direction of f is negative",
               "xrefs": []
-            }
+            },
+            "subsets": [
+              "http://purl.obolibrary.org/obo/valid_for_go_gp2term"
+            ]
           },
           "type": "PROPERTY"
         },
@@ -88311,6 +88689,13 @@
             "http://purl.obolibrary.org/obo/RO_0002327"
           ],
           "predicateId": "http://purl.obolibrary.org/obo/RO_0002327"
+        },
+        {
+          "chainPredicateIds": [
+            "http://purl.obolibrary.org/obo/RO_0002025",
+            "http://purl.obolibrary.org/obo/RO_0002211"
+          ],
+          "predicateId": "http://purl.obolibrary.org/obo/RO_0002211"
         },
         {
           "chainPredicateIds": [
