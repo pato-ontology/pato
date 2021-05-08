@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pato/releases/2021-04-14/pato-full.owl
+data-version: pato/releases/2021-04-16/pato-full.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -21,6 +21,10 @@ subsetdef: goslim_plant ""
 subsetdef: goslim_pombe ""
 subsetdef: goslim_yeast ""
 subsetdef: hpo_slim "Human phenotype slim"
+subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
+subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
+subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
+subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
 subsetdef: mpath_slim "Pathology slim"
 subsetdef: relational_slim "Relational slim: types of quality that require an additional entity in order to exist"
 subsetdef: ro-eco ""
@@ -33,7 +37,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology of phen
 property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And Trait Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
 property_value: IAO:0000700 PATO:0000001
-property_value: owl:versionInfo "2021-04-14" xsd:string
+property_value: owl:versionInfo "2021-04-16" xsd:string
 
 [Term]
 id: BFO:0000002
@@ -146,20 +150,22 @@ xref: NIF_Subcellular:sao1337158144
 
 [Term]
 id: GO:0005622
-name: intracellular
+name: intracellular anatomical structure
 namespace: cellular_component
-def: "The living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm." [ISBN:0198506732]
+def: "A component of a cell contained within (but not including) the plasma membrane. In eukaryotes it includes the nucleus and cytoplasm." [ISBN:0198506732]
 subset: gocheck_do_not_annotate
 subset: goslim_chembl
 subset: goslim_generic
 subset: goslim_metagenomics
 subset: goslim_plant
 synonym: "internal to cell" EXACT []
+synonym: "intracellular" EXACT []
 synonym: "nucleocytoplasm" RELATED [GOC:mah]
 synonym: "protoplasm" EXACT []
 synonym: "protoplast" RELATED [GOC:mah]
 xref: Wikipedia:Intracellular
-is_a: GO:0005575 ! cellular_component
+is_a: GO:0110165 ! cellular anatomical entity
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/17776 xsd:anyURI
 
 [Term]
 id: GO:0005634
@@ -274,6 +280,8 @@ creation_date: 2012-09-19T15:05:24Z
 id: GO:0016020
 name: membrane
 namespace: cellular_component
+alt_id: GO:0098589
+alt_id: GO:0098805
 def: "A lipid bilayer along with all the proteins and protein complexes embedded in it an attached to it." [GOC:dos, GOC:mah, ISBN:0815316194]
 subset: goslim_aspergillus
 subset: goslim_candida
@@ -283,8 +291,12 @@ subset: goslim_metagenomics
 subset: goslim_pir
 subset: goslim_plant
 subset: goslim_yeast
+synonym: "membrane region" NARROW []
+synonym: "region of membrane" NARROW []
+synonym: "whole membrane" NARROW []
 xref: Wikipedia:Biological_membrane
 is_a: GO:0110165 ! cellular anatomical entity
+creation_date: 2014-03-06T11:37:54Z
 
 [Term]
 id: GO:0016301
@@ -373,10 +385,7 @@ name: intracellular organelle
 namespace: cellular_component
 def: "Organized structure of distinctive morphology and function, occurring within the cell. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton. Excludes the plasma membrane." [GOC:go_curators]
 subset: goslim_pir
-is_a: GO:0043226 ! organelle
-intersection_of: GO:0043226 ! organelle
-intersection_of: part_of GO:0005622 ! intracellular
-relationship: part_of GO:0005622 ! intracellular
+is_a: GO:0005622 ! intracellular anatomical structure
 
 [Term]
 id: GO:0043231
@@ -458,8 +467,23 @@ is_a: GO:0042995 ! cell projection
 intersection_of: GO:0042995 ! cell projection
 intersection_of: has_part GO:0098590 ! plasma membrane region
 relationship: has_part GO:0098590 ! plasma membrane region
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/13193 xsd:anyURI
 created_by: krc
 creation_date: 2017-03-21T17:26:07Z
+
+[Term]
+id: GO:0140513
+name: nuclear protein-containing complex
+namespace: cellular_component
+def: "A stable assembly of two or more macromolecules, i.e. proteins, nucleic acids, carbohydrates or lipids, in which at least one component is a protein and the constituent parts function together in the nucleus." [GOC:pg]
+subset: gocheck_do_not_annotate
+synonym: "nuclear complex" EXACT []
+is_a: GO:0032991 ! protein-containing complex
+intersection_of: GO:0032991 ! protein-containing complex
+intersection_of: part_of GO:0005634 ! nucleus
+relationship: part_of GO:0005634 ! nucleus
+created_by: pg
+creation_date: 2020-09-09T05:12:38Z
 
 [Term]
 id: PATO:0000000
@@ -22371,11 +22395,67 @@ is_a: PATO:0002248 ! pigmented
 created_by: https://orcid.org/0000-0002-3528-5267
 
 [Term]
+id: PATO:0070001
+name: neurogliaform morphology
+def: "A cell morphology that inheres in neurons which have a small round soma, a large number of short, smooth, or slightly beaded primary dendrites that give rise to only a few secondary branches, and a branched axon that establishes a dense axonal mesh with thin shafts." [PMID:17122314]
+xref: ilxtr:NeurogliaformPhenotype
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070007
+name: martinotti morphology
+def: "A cell morphology that inheres in neurons which are large and non-spiny, with dendrites radiating in a multipolar or bitufted pattern, often favouring the descending side, and axons that ascend directly from the superficial side of the soma, and travel upward without branching." [doi:10.1016/b978-0-12-369497-3.10004-4]
+xref: ilxtr:MartinottiPhenotype
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070008
+name: 'T-shaped' martinotti morphology
+def: "A martinotti cell morphology that inheres in neurons which have axons that form a horizontal ramification, making it T-shaped." [doi:10.1016/b978-0-12-369497-3.10004-4]
+is_a: PATO:0070007 ! martinotti morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070009
+name: 'fanning-out' martinotti morphology
+def: "A martinotti cell morphology that inheres in neurons which have axons that form a fan-like plexus." [doi:10.1016/b978-0-12-369497-3.10004-4]
+is_a: PATO:0070007 ! martinotti morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
 id: PATO:0070010
 name: stellate morphology
 def: "A cell morphology that inheres in neurons that have dendritic processes radiating from the cell body forming a star-like shape." [ISBN:9780123973481]
 xref: ILX:0111036
 xref: SAO:9271919883
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070011
+name: chandelier cell morphology
+def: "A cell morphology that inheres in neurons which are small and round, and make highly specialized synapses with the axon initial segments of pyramidal neurons, wrapping them with candle-shaped synaptic “cartridges”." [doi:10.1016/b978-0-12-369497-3.10004-4]
+xref: ILX:0102028
+xref: ilxtr:ChandelierPhenotype
+xref: nifext:4
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070012
+name: bitufted cell morphology
+def: "A cell morphology that inheres in neurons which have tufts of dendrites extending from two opposite poles of the soma, and have axons that form a plexus which spreads widely, usually descending." [doi:10.1016/b978-0-12-369497-3.10004-4]
+xref: ilxtr:BituftedPhenotype
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070013
+name: spiny stellate cell morphology
+def: "A cell morphology that inheres in neurons which have spiny basal dendrites and resemble pyramidal cells but lose their apical dendrites as they mature. Their axons nearly always emerge from the descending side of the soma, but often recurve and ascend with arc-like collaterals." [doi:10.1016/b978-0-12-369497-3.10004-4]
+xref: ilxtr:SpinyStellatePhenotype
 is_a: PATO:0010006 ! cell morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
@@ -22481,6 +22561,9 @@ id: BFO:0000066
 name: occurs in
 def: "b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t" []
 comment: Paraphrase of definition: a relation between a process and an independent continuant, in which the process takes place entirely within the independent continuant
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 property_value: IAO:0000111 "occurs in" xsd:string
 property_value: IAO:0000118 "occurs_in" xsd:string
 property_value: IAO:0000118 "unfolds in" xsd:string
@@ -22635,7 +22718,6 @@ def: "A 'has effector activity' B if A and B are GO molecular functions (GO_0003
 comment: This relation is designed for constructing compound molecular functions, typically in combination with one or more regulatory component activity relations.
 is_functional: true
 is_a: RO:0002017 ! has component activity
-is_a: RO:0002211 ! regulates
 created_by: dos
 creation_date: 2017-09-22T14:14:36Z
 
@@ -22672,6 +22754,8 @@ is_a: BFO:0000063 ! precedes
 id: RO:0002131
 name: overlaps
 def: "x overlaps y if and only if there exists some z such that x has part z and z part of y" []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 subset: ro-eco
 property_value: IAO:0000114 IAO:0000125
 property_value: RO:0001900 RO:0001901
@@ -22728,6 +22812,9 @@ is_a: RO:0002388 ! has potential to directly develop into
 id: RO:0002211
 name: regulates
 def: "process(P1) regulates process(P2) iff: P1 results in the initiation or termination of P2 OR affects the frequency of its initiation or termination OR affects the magnitude or rate of output of P2." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000116 "We use 'regulates' here to specifically imply control. However, many colloquial usages of the term correctly correspond to the weaker relation of 'causally upstream of or within' (aka influences). Consider relabeling to make things more explicit" xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
@@ -22744,11 +22831,15 @@ holds_over_chain: RO:0002578 RO:0002578
 is_transitive: true
 is_a: RO:0002411 ! causally upstream of
 inverse_of: RO:0002334 ! regulated by
+transitive_over: RO:0002025 ! has effector activity
 
 [Typedef]
 id: RO:0002212
 name: negatively regulates
 def: "Process(P1) negatively regulates process(P2) iff: P1 terminates P2, or P1 descreases the the frequency of initiation of P2 or the magnitude or rate of output of P2." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
 property_value: IAO:0000589 "negatively regulates (process to process)" xsd:string
@@ -22761,6 +22852,9 @@ inverse_of: RO:0002335 ! negatively regulated by
 id: RO:0002213
 name: positively regulates
 def: "Process(P1) postively regulates process(P2) iff: P1 initiates P2, or P1 increases the the frequency of initiation of P2 or the magnitude or rate of output of P2." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
 property_value: IAO:0000589 "positively regulates (process to process)" xsd:string
@@ -22786,7 +22880,6 @@ property_value: IAO:0000232 "For compatibility with BFO, this relation has a sho
 domain: BFO:0000004 ! independent continuant
 range: BFO:0000015 ! process
 is_a: RO:0002216 ! capable of part of
-expand_expression_to: "RO_0000053 some (RO_0000054 only ?Y)" []
 
 [Typedef]
 id: RO:0002216
@@ -22798,7 +22891,6 @@ property_value: seeAlso "defining-property-chains-involving-reflexivity"
 holds_over_chain: RO:0002215 part_of {http://purl.obolibrary.org/obo/RO_0002582="true"}
 is_a: RO:0002328 ! functionally related to
 is_a: RO:0002500 ! causal agent in process
-expand_expression_to: "RO_0000053 some (RO_0000054 only (BFO_0000050 some ?Y))" []
 
 [Typedef]
 id: RO:0002222
@@ -22817,12 +22909,14 @@ range: BFO:0000003 ! occurrent
 id: RO:0002233
 name: has input
 def: "p has input c iff: p is a process, c is a material entity, c is a participant in p, c is present at the start of p, and the state of c is modified during p." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 subset: ro-eco
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000118 "consumes" xsd:string
 domain: BFO:0000015 ! process
-range: BFO:0000040 ! material entity
 is_a: RO:0000057 ! has participant
 inverse_of: RO:0002352 ! input of
 
@@ -22868,6 +22962,7 @@ inverse_of: RO:0002286 ! developmentally succeeded by
 id: RO:0002263
 name: acts upstream of
 def: "c acts upstream of p if and only if c enables some f that is involved in p' and p' occurs chronologically before p, is not part of p, and affects the execution of p. c is a material entity and f, p, p' are processes." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
 property_value: IAO:0000112 "A faulty traffic light (material entity) whose malfunctioning (a process) is causally upstream of a traffic collision (a process): the traffic light acts upstream of the collision." xsd:string
 property_value: seeAlso http://wiki.geneontology.org/index.php/Acts_upstream_of
 holds_over_chain: RO:0002327 RO:0002411
@@ -22877,6 +22972,7 @@ is_a: RO:0002264 ! acts upstream of or within
 id: RO:0002264
 name: acts upstream of or within
 def: "c acts upstream of or within p if c is enables f, and f is causally upstream of or within p. c is a material entity and p is an process." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
 synonym: "affects" RELATED []
 property_value: IAO:0000112 "A gene product that has some activity, where that activity may be a part of a pathway or upstream of the pathway." xsd:string
 property_value: seeAlso http://wiki.geneontology.org/index.php/Acts_upstream_of_or_within
@@ -22895,6 +22991,8 @@ is_a: RO:0002384 ! has developmental potential involving
 id: RO:0002304
 name: causally upstream of, positive effect
 comment: holds between x and y if and only if x is causally upstream of y and the progression of x increases the frequency, rate or extent of y
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 property_value: http://purl.org/dc/terms/creator "cjm" xsd:string
 property_value: RO:0004049 RO:0002411
 is_a: RO:0002411 ! causally upstream of
@@ -22940,6 +23038,7 @@ property_value: IAO:0000232 "Do not use this relation directly. It is ended as a
 [Typedef]
 id: RO:0002327
 name: enables
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
 property_value: IAO:0000112 "a particular instances of akt-2 enables some instance of protein kinase activity" xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000118 "catalyzes" xsd:string
@@ -22987,6 +23086,7 @@ transitive_over: part_of ! part_of
 id: RO:0002333
 name: enabled by
 def: "inverse of enables" []
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 is_a: RO:0000057 ! has participant
 is_a: RO:0002328 ! functionally related to
@@ -23095,6 +23195,8 @@ property_value: IAO:0000232 "Do not use this relation directly. It is intended a
 id: RO:0002411
 name: causally upstream of
 def: "p is causally upstream of q if and only if p precedes q and p and q are linked in a causal chain" []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 property_value: IAO:0000114 IAO:0000428
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 is_transitive: true
@@ -23355,6 +23457,9 @@ is_a: RO:0002506 ! causal relation between entities
 id: RO:0002578
 name: directly regulates
 def: "Process(P1) directly regulates process(P2) iff: P1 regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  regulates the kinase activity (P2) of protein B then P1 directly regulates P2." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
 property_value: IAO:0000589 "directly regulates (processual)" xsd:string
@@ -23420,6 +23525,9 @@ is_a: RO:0002410 ! causally related to
 id: RO:0002629
 name: directly positively regulates
 def: "Process(P1) directly postively regulates process(P2) iff: P1 positively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding positively regulates the kinase activity (P2) of protein B then P1 directly positively regulates P2." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
 property_value: IAO:0000589 "directly positively regulates (process to process)" xsd:string
 property_value: RO:0004049 RO:0002578
@@ -23430,6 +23538,9 @@ is_a: RO:0002578 ! directly regulates
 id: RO:0002630
 name: directly negatively regulates
 def: "Process(P1) directly negatively regulates process(P2) iff: P1 negatively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  negatively regulates the kinase activity (P2) of protein B then P1 directly negatively regulates P2." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
 property_value: IAO:0000589 "directly negatively regulates (process to process)" xsd:string
 property_value: RO:0004050 RO:0002578
@@ -23448,6 +23559,7 @@ creation_date: 2018-01-25T23:20:13Z
 [Typedef]
 id: RO:0004032
 name: acts upstream of or within, positive effect
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
 property_value: RO:0004049 RO:0002264
 property_value: seeAlso http://wiki.geneontology.org/index.php/Acts_upstream_of_or_within,_positive_effect
 holds_over_chain: RO:0002327 RO:0004047
@@ -23458,6 +23570,7 @@ creation_date: 2018-01-26T23:49:30Z
 [Typedef]
 id: RO:0004033
 name: acts upstream of or within, negative effect
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
 property_value: RO:0004050 RO:0002264
 holds_over_chain: RO:0002327 RO:0004046
 is_a: RO:0002264 ! acts upstream of or within
@@ -23468,6 +23581,7 @@ creation_date: 2018-01-26T23:49:51Z
 id: RO:0004034
 name: acts upstream of, positive effect
 def: "c 'acts upstream of, positive effect' p if c is enables f, and f is causally upstream of p, and the direction of f is positive" []
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
 property_value: RO:0004049 RO:0002263
 property_value: seeAlso http://wiki.geneontology.org/index.php/Acts_upstream_of,_positive_effect
 holds_over_chain: RO:0002327 RO:0002304
@@ -23480,6 +23594,7 @@ creation_date: 2018-01-26T23:53:14Z
 id: RO:0004035
 name: acts upstream of, negative effect
 def: "c 'acts upstream of, negative effect' p if c is enables f, and f is causally upstream of p, and the direction of f is negative" []
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
 property_value: RO:0004050 RO:0002263
 property_value: seeAlso http://wiki.geneontology.org/index.php/Acts_upstream_of,_negative_effect
 holds_over_chain: RO:0002327 RO:0002305
@@ -23582,6 +23697,9 @@ namespace: external
 def: "a core relation that holds between a whole and its part" []
 def: "Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2." [PATOC:CJM]
 comment: We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'.
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 xref: BFO:0000051
 property_value: IAO:0000111 "has part" xsd:string
 property_value: IAO:0000112 "my body has part my brain (continuant parthood, two material entities)" xsd:string
@@ -23657,6 +23775,10 @@ name: part of
 name: part_of
 namespace: external
 def: "a core relation that holds between a part and its whole" []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 xref: BFO:0000050
 property_value: IAO:0000111 "is part of" xsd:string
 property_value: IAO:0000112 "my brain is part of my body (continuant parthood, two material entities)" xsd:string

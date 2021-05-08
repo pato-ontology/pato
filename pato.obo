@@ -1,11 +1,15 @@
 format-version: 1.2
-data-version: releases/2021-04-14/pato.obo
+data-version: releases/2021-04-16/pato.obo
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
 subsetdef: cell_quality "cell_quality"
 subsetdef: disposition_slim "Disposition slim"
 subsetdef: hpo_slim "Human phenotype slim"
+subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
+subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
+subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
+subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
 subsetdef: mpath_slim "Pathology slim"
 subsetdef: relational_slim "Relational slim: types of quality that require an additional entity in order to exist"
 subsetdef: ro-eco ""
@@ -17,7 +21,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology of phen
 property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And Trait Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
 property_value: IAO:0000700 PATO:0000001
-property_value: owl:versionInfo "2021-04-14" xsd:string
+property_value: owl:versionInfo "2021-04-16" xsd:string
 
 [Term]
 id: PATO:0000000
@@ -21307,11 +21311,67 @@ is_a: PATO:0002248 ! pigmented
 created_by: https://orcid.org/0000-0002-3528-5267
 
 [Term]
+id: PATO:0070001
+name: neurogliaform morphology
+def: "A cell morphology that inheres in neurons which have a small round soma, a large number of short, smooth, or slightly beaded primary dendrites that give rise to only a few secondary branches, and a branched axon that establishes a dense axonal mesh with thin shafts." [PMID:17122314]
+xref: ilxtr:NeurogliaformPhenotype
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070007
+name: martinotti morphology
+def: "A cell morphology that inheres in neurons which are large and non-spiny, with dendrites radiating in a multipolar or bitufted pattern, often favouring the descending side, and axons that ascend directly from the superficial side of the soma, and travel upward without branching." [doi:10.1016/b978-0-12-369497-3.10004-4]
+xref: ilxtr:MartinottiPhenotype
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070008
+name: 'T-shaped' martinotti morphology
+def: "A martinotti cell morphology that inheres in neurons which have axons that form a horizontal ramification, making it T-shaped." [doi:10.1016/b978-0-12-369497-3.10004-4]
+is_a: PATO:0070007 ! martinotti morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070009
+name: 'fanning-out' martinotti morphology
+def: "A martinotti cell morphology that inheres in neurons which have axons that form a fan-like plexus." [doi:10.1016/b978-0-12-369497-3.10004-4]
+is_a: PATO:0070007 ! martinotti morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
 id: PATO:0070010
 name: stellate morphology
 def: "A cell morphology that inheres in neurons that have dendritic processes radiating from the cell body forming a star-like shape." [ISBN:9780123973481]
 xref: ILX:0111036
 xref: SAO:9271919883
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070011
+name: chandelier cell morphology
+def: "A cell morphology that inheres in neurons which are small and round, and make highly specialized synapses with the axon initial segments of pyramidal neurons, wrapping them with candle-shaped synaptic “cartridges”." [doi:10.1016/b978-0-12-369497-3.10004-4]
+xref: ILX:0102028
+xref: ilxtr:ChandelierPhenotype
+xref: nifext:4
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070012
+name: bitufted cell morphology
+def: "A cell morphology that inheres in neurons which have tufts of dendrites extending from two opposite poles of the soma, and have axons that form a plexus which spreads widely, usually descending." [doi:10.1016/b978-0-12-369497-3.10004-4]
+xref: ilxtr:BituftedPhenotype
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070013
+name: spiny stellate cell morphology
+def: "A cell morphology that inheres in neurons which have spiny basal dendrites and resemble pyramidal cells but lose their apical dendrites as they mature. Their axons nearly always emerge from the descending side of the soma, but often recurve and ascend with arc-like collaterals." [doi:10.1016/b978-0-12-369497-3.10004-4]
+xref: ilxtr:SpinyStellatePhenotype
 is_a: PATO:0010006 ! cell morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
@@ -21476,6 +21536,9 @@ namespace: external
 def: "a core relation that holds between a whole and its part" []
 def: "Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2." [PATOC:CJM]
 comment: We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'.
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 xref: BFO:0000051
 property_value: IAO:0000111 "has part" xsd:string
 property_value: IAO:0000112 "my body has part my brain (continuant parthood, two material entities)" xsd:string
@@ -21550,6 +21613,10 @@ name: part of
 name: part_of
 namespace: external
 def: "a core relation that holds between a part and its whole" []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 xref: BFO:0000050
 property_value: IAO:0000111 "is part of" xsd:string
 property_value: IAO:0000112 "my brain is part of my body (continuant parthood, two material entities)" xsd:string

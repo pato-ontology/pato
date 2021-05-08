@@ -13,14 +13,14 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/pato/pato-simple.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2021-04-14/pato-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2021-04-16/pato-simple.owl"/>
         <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
         <dc:description>An ontology of phenotypic qualities (properties, attributes or characteristics).</dc:description>
         <dc:title>PATO - the Phenotype And Trait Ontology</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
         <oboInOwl:default-namespace>quality</oboInOwl:default-namespace>
         <oboInOwl:hasOBOFormatVersion>1.2</oboInOwl:hasOBOFormatVersion>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-04-14</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-04-16</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -128,6 +128,38 @@
     <!-- http://purl.obolibrary.org/obo/RO_0040042 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0040042"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/valid_for_go_annotation_extension -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/valid_for_go_gp2term -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/valid_for_go_gp2term">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/valid_for_go_ontology -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/valid_for_go_ontology">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/valid_for_gocam -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/valid_for_gocam">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -430,6 +462,10 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id>part_of</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_gp2term"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
         <oboInOwl:shorthand>part_of</oboInOwl:shorthand>
         <rdfs:label>part of</rdfs:label>
         <rdfs:label xml:lang="en">part of</rdfs:label>
@@ -462,6 +498,9 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id>has_part</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
         <oboInOwl:shorthand>has_part</oboInOwl:shorthand>
         <rdfs:comment>We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality &apos;swollen&apos; necessarily comes with the qualities of &apos;protruding&apos; and &apos;increased size&apos;.</rdfs:comment>
         <rdfs:label>has part</rdfs:label>
@@ -21078,7 +21117,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001392"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A polyploidy quality inhering in a bearer by virtue of the bearer&apos;s chromosome number being increased by endomitosis and for which the degree of ploidy is proportional to the number of times that endomitosis has taken place.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Wikipedia:http://en.wikipedia.org/wiki/Endopolyploid</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Endopolyploid</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -21406,7 +21445,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001408"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A cellular quality inhering in a bearer by virtue of the bearer&apos;s having thin, tail-like projections extending outwards from the cell body.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Wikipedia:http://en.wikipedia.org/wiki/Ciliated</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Ciliated</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -21508,7 +21547,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001413"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A physical quality inhering in a bearer by virtue of the rate of the bearer&apos;s angular movement about an axis; the angle rotated in a given time.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Wikipedia:http://en.wikipedia.org/wiki/Angular_velocity</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Angular_velocity</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -21765,7 +21804,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001426"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A color consisting of purple and brown hue.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Wikipedia:http://en.wikipedia.org/wiki/Maroon</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Maroon</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -21987,7 +22026,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001437"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A attachment quality inhering in a bearer by virtue of the bearer&apos;s inability to move about.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Wikipedia:http://en.wikipedia.org/wiki/Sessile_(zoology)</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Sessile_(zoology)</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -22209,7 +22248,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001448"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A composition quality inhering in an bearer by virtue of the bearer&apos;s being hardened by the deposition of calcium into bone.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>MAMMALOGY:MAMMALOGY</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MAMMALOGY:MAMMALOGY</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -22498,7 +22537,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001462"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality inhering in a cell&apos;s plasma membrane by virtue of the electrical potential difference across it.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Membrane_potential</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Wikipedia:http://en.wikipedia.org/wiki/Membrane_potential</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -22742,7 +22781,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001474"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An oriented quality inhering in a bearer by virtue of the bearer&apos;s axis being positioned forward.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>bdid:bdid</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bdid:bdid</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -22991,7 +23030,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001486"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An age quality that exists by virtue of the time (years and months) that the bearer has existed.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>WordNet:Wordnet</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WordNet:Wordnet</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -30730,7 +30769,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001866"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A spheroid quality inhering in a bearer by virtue of the bearer&apos;s exhibiting a polar diameter longer than its equatorial diameter.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Wikipedia:http://en.wikipedia.org/wiki/Prolate</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Prolate</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -31260,7 +31299,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001890"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A concave 3-D shape quality inhering in a bearer by virtue of the bearer&apos;s being divided into three branches.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>InfoVisual:InfoVisual</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InfoVisual:InfoVisual</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -37772,7 +37811,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002201"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A behavioral quality inhering ina bearer by virtue of the bearer&apos;s unequal distribution of fine motor skill between its left and right hands or feet.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>birnlex:2178</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birnlex:2178</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -37838,7 +37877,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002204"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Handedness where the organism exhibits no overall dominance in the use of right or left hand or foot in the performance of tasks that require one hand or foot or a dominant hand or foot.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>birnlex:2042</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birnlex:2042</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -38372,7 +38411,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002228"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A tapered shape quality inhering in a bearer by virtue of the bearer&apos;s tapering gradually to a sharp point.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://www.thefreedictionary.com/acuminate</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://www.thefreedictionary.com/acuminate</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -38679,7 +38718,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002242"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A physical quality inhering in a bearer by virtue of the bearer&apos;s rate of change of the position.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>url:http://en.wikipedia.org/wiki/Velocity</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">url:http://en.wikipedia.org/wiki/Velocity</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40162,7 +40201,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002309"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A convex 3-D shape quality inhering in a bearer by virtue of the bearer&apos;s exhibiting a by virtue of the bearer&apos;s exhibiting a consistently sized and approximately round cross-section along its length, which is many times larger than its diameter.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:DC</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:DC</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40226,7 +40265,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002312"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Consisting of segments or similar parts arranged in a longitudinal series.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OED:</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>OED:</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40348,7 +40387,7 @@ Association is weaker than correlation or proportionality. These relations may b
 6.It possesses rotational symmetry.
 7.One pair of opposite sides are parallel and congruent.
 8.Two pairs of adjacent angles are supplementary.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wikipedia:Parallelogram</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>wikipedia:Parallelogram</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40741,7 +40780,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002335"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A shape quality inhering in a bearer by virtue of the bearer&apos;s being dome-shaped.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:dd</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:dd</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -41077,7 +41116,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002351"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A structural quality inhering in a bearer by virtue of the bearer resembling or containing flesh.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>wiktionary:http://en.wiktionary.org/wiki/fleshy</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wiktionary:http://en.wiktionary.org/wiki/fleshy</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -41853,7 +41892,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002387"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Extremely acute and aggressive onset of a pathological process.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:PNS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:PNS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -41875,7 +41914,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002388"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Being supported by a peduncle or stalk.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:GV</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GV</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -41918,7 +41957,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002390"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A length quality which is equal to the length of any straight line segment that passes from the center of a circle to any endpoint on the circular boundary. The radius is half of the diameter.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATO:DS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:DS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -49577,7 +49616,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0065001"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The breakdown, disintegration, destruction of an entity due to the breaking of cell membranes by any means.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Lysis</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://en.wikipedia.org/wiki/Lysis</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -49601,6 +49640,84 @@ height&apos;).</rdfs:comment>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0070001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0070001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0010006"/>
+        <obo:IAO_0000115>A cell morphology that inheres in neurons which have a small round soma, a large number of short, smooth, or slightly beaded primary dendrites that give rise to only a few secondary branches, and a branched axon that establishes a dense axonal mesh with thin shafts.</obo:IAO_0000115>
+        <oboInOwl:created_by>http://orcid.org/0000-0001-7258-9596</oboInOwl:created_by>
+        <oboInOwl:hasDbXref>ilxtr:NeurogliaformPhenotype</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0070001</oboInOwl:id>
+        <rdfs:label>neurogliaform morphology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0070001"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A cell morphology that inheres in neurons which have a small round soma, a large number of short, smooth, or slightly beaded primary dendrites that give rise to only a few secondary branches, and a branched axon that establishes a dense axonal mesh with thin shafts.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:17122314</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0070007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0070007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0010006"/>
+        <obo:IAO_0000115>A cell morphology that inheres in neurons which are large and non-spiny, with dendrites radiating in a multipolar or bitufted pattern, often favouring the descending side, and axons that ascend directly from the superficial side of the soma, and travel upward without branching.</obo:IAO_0000115>
+        <oboInOwl:created_by>http://orcid.org/0000-0001-7258-9596</oboInOwl:created_by>
+        <oboInOwl:hasDbXref>ilxtr:MartinottiPhenotype</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0070007</oboInOwl:id>
+        <rdfs:label>martinotti morphology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0070007"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A cell morphology that inheres in neurons which are large and non-spiny, with dendrites radiating in a multipolar or bitufted pattern, often favouring the descending side, and axons that ascend directly from the superficial side of the soma, and travel upward without branching.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>doi:10.1016/b978-0-12-369497-3.10004-4</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0070008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0070008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0070007"/>
+        <obo:IAO_0000115>A martinotti cell morphology that inheres in neurons which have axons that form a horizontal ramification, making it T-shaped.</obo:IAO_0000115>
+        <oboInOwl:created_by>http://orcid.org/0000-0001-7258-9596</oboInOwl:created_by>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0070008</oboInOwl:id>
+        <rdfs:label>&apos;T-shaped&apos; martinotti morphology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0070008"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A martinotti cell morphology that inheres in neurons which have axons that form a horizontal ramification, making it T-shaped.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>doi:10.1016/b978-0-12-369497-3.10004-4</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0070009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0070009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0070007"/>
+        <obo:IAO_0000115>A martinotti cell morphology that inheres in neurons which have axons that form a fan-like plexus.</obo:IAO_0000115>
+        <oboInOwl:created_by>http://orcid.org/0000-0001-7258-9596</oboInOwl:created_by>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0070009</oboInOwl:id>
+        <rdfs:label>&apos;fanning-out&apos; martinotti morphology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0070009"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A martinotti cell morphology that inheres in neurons which have axons that form a fan-like plexus.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>doi:10.1016/b978-0-12-369497-3.10004-4</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PATO_0070010 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0070010">
@@ -49618,6 +49735,68 @@ height&apos;).</rdfs:comment>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A cell morphology that inheres in neurons that have dendritic processes radiating from the cell body forming a star-like shape.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ISBN:9780123973481</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0070011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0070011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0010006"/>
+        <obo:IAO_0000115>A cell morphology that inheres in neurons which are small and round, and make highly specialized synapses with the axon initial segments of pyramidal neurons, wrapping them with candle-shaped synaptic “cartridges”.</obo:IAO_0000115>
+        <oboInOwl:created_by>http://orcid.org/0000-0001-7258-9596</oboInOwl:created_by>
+        <oboInOwl:hasDbXref>ILX:0102028</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ilxtr:ChandelierPhenotype</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>nifext:4</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0070011</oboInOwl:id>
+        <rdfs:label>chandelier cell morphology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0070011"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A cell morphology that inheres in neurons which are small and round, and make highly specialized synapses with the axon initial segments of pyramidal neurons, wrapping them with candle-shaped synaptic “cartridges”.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>doi:10.1016/b978-0-12-369497-3.10004-4</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0070012 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0070012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0010006"/>
+        <obo:IAO_0000115>A cell morphology that inheres in neurons which have tufts of dendrites extending from two opposite poles of the soma, and have axons that form a plexus which spreads widely, usually descending.</obo:IAO_0000115>
+        <oboInOwl:created_by>http://orcid.org/0000-0001-7258-9596</oboInOwl:created_by>
+        <oboInOwl:hasDbXref>ilxtr:BituftedPhenotype</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0070012</oboInOwl:id>
+        <rdfs:label>bitufted cell morphology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0070012"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A cell morphology that inheres in neurons which have tufts of dendrites extending from two opposite poles of the soma, and have axons that form a plexus which spreads widely, usually descending.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>doi:10.1016/b978-0-12-369497-3.10004-4</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0070013 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0070013">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0010006"/>
+        <obo:IAO_0000115>A cell morphology that inheres in neurons which have spiny basal dendrites and resemble pyramidal cells but lose their apical dendrites as they mature. Their axons nearly always emerge from the descending side of the soma, but often recurve and ascend with arc-like collaterals.</obo:IAO_0000115>
+        <oboInOwl:created_by>http://orcid.org/0000-0001-7258-9596</oboInOwl:created_by>
+        <oboInOwl:hasDbXref>ilxtr:SpinyStellatePhenotype</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0070013</oboInOwl:id>
+        <rdfs:label>spiny stellate cell morphology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0070013"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A cell morphology that inheres in neurons which have spiny basal dendrites and resemble pyramidal cells but lose their apical dendrites as they mature. Their axons nearly always emerge from the descending side of the soma, but often recurve and ascend with arc-like collaterals.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>doi:10.1016/b978-0-12-369497-3.10004-4</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
