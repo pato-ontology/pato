@@ -21857,20 +21857,20 @@ is_a: PATO:0002248 ! pigmented
 created_by: https://orcid.org/0000-0002-3528-5267
 
 [Term]
-id: PATO:0070002
-name: basket cell morphology
-def: "A cell morphology that inheres in neurons that have aspiny or sparsely spinous dendrites, which spread radially and tangentially, with axons on the pial side of the soma ascending or descending to give off horizontal collaterals, which in turn sprout small branches ending in dense tufts of terminals." [doi:10.1016/b978-0-12-369497-3.10004-4]
-xref: ILX:0101123
-xref: ilxtr:BasketPhenotype
-xref: nifext:3
-is_a: PATO:0010006 ! cell morphology
-created_by: http://orcid.org/0000-0001-7258-9596
-
-[Term]
 id: PATO:0070001
 name: neurogliaform morphology
 def: "A cell morphology that inheres in neurons which have a small round soma, a large number of short, smooth, or slightly beaded primary dendrites that give rise to only a few secondary branches, and a branched axon that establishes a dense axonal mesh with thin shafts." [PMID:17122314]
 xref: ilxtr:NeurogliaformPhenotype
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070002
+name: basket cell morphology
+def: "A cell morphology that inheres in neurons that have aspiny or sparsely spinous dendrites, which spread radially and tangentially, with axons on the pial side of the soma ascending or descending to give off horizontal collaterals, which in turn sprout small branches ending in dense tufts of terminals. The branched axonal arborizations give rise to the name as they appear as baskets surrounding the soma of the target cell." [doi:10.1016/b978-0-12-369497-3.10004-4, Wikipedia:Basket_cell&oldid=951703880]
+xref: ILX:0101123
+xref: ilxtr:BasketPhenotype
+xref: nifext:3
 is_a: PATO:0010006 ! cell morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
@@ -21921,6 +21921,15 @@ is_a: PATO:0070007 ! martinotti morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
+id: PATO:0070010
+name: stellate morphology
+def: "A cell morphology that inheres in neurons that have dendritic processes radiating from the cell body forming a star-like shape." [ISBN:9780123973481]
+xref: ILX:0111036
+xref: SAO:9271919883
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
 id: PATO:0070011
 name: chandelier cell morphology
 def: "A cell morphology that inheres in neurons which are small and round, and make highly specialized synapses with the axon initial segments of pyramidal neurons, wrapping them with candle-shaped synaptic “cartridges”." [doi:10.1016/b978-0-12-369497-3.10004-4]
@@ -21947,15 +21956,6 @@ is_a: PATO:0010006 ! cell morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
-id: PATO:0070010
-name: stellate morphology
-def: "A cell morphology that inheres in neurons that have dendritic processes radiating from the cell body forming a star-like shape." [ISBN:9780123973481]
-xref: ILX:0111036
-xref: SAO:9271919883
-is_a: PATO:0010006 ! cell morphology
-created_by: http://orcid.org/0000-0001-7258-9596
-
-[Term]
 id: PATO:0070015
 name: pyramidal family morphology
 def: "A cell morphology that inheres in neurons which have a pyramidal shaped soma, a single axon, a large apical dendrite and multiple basal dendrites." [doi:10.1016/b978-0-12-369497-3.10004-4]
@@ -21970,6 +21970,7 @@ name: horizontal pyramidal morphology
 def: "A pyramidal family morphology that inheres in neurons which have an apical tree which is oriented parallel to the pia." [PMID:30715238]
 xref: ilxtr:HorizontalPyramidalPhenotype
 is_a: PATO:0070015 ! pyramidal family morphology
+disjoint_from: PATO:0070017 ! standard pyramidal morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -21980,7 +21981,6 @@ synonym: "pyramidal cell morphology" EXACT []
 synonym: "vertical pyramidal morphology" EXACT []
 xref: ilxtr:PyramidalPhenotype
 is_a: PATO:0070015 ! pyramidal family morphology
-disjoint_from: PATO:0070016 ! horizontal pyramidal morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -22176,3 +22176,4 @@ synonym: "monadic_form_of" EXACT []
 id: towards
 name: towards
 comment: Relation binding a relational quality or disposition to the relevant type of entity.
+
