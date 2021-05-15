@@ -21857,20 +21857,20 @@ is_a: PATO:0002248 ! pigmented
 created_by: https://orcid.org/0000-0002-3528-5267
 
 [Term]
-id: PATO:0070006
-name: bipolar morphology
-def: "A cell morphology that inheres in neurons which have two principal fibres (dendrites or axon) which begin to branch some distance from the soma. These fibres have few spines, and branch in narrow fields. Bipolar morphology is distinguished from bitufted morphology by the long, unbranched, proximal portions of their principal fibres." [doi:10.1016/b978-0-12-369497-3.10004-4]
-xref: ILX:0101312
-xref: ilxtr:BipolarPhenotype
-xref: nifext:2
-is_a: PATO:0010006 ! cell morphology
-created_by: http://orcid.org/0000-0001-7258-9596
-
-[Term]
 id: PATO:0070001
 name: neurogliaform morphology
 def: "A cell morphology that inheres in neurons which have a small round soma, a large number of short, smooth, or slightly beaded primary dendrites that give rise to only a few secondary branches, and a branched axon that establishes a dense axonal mesh with thin shafts." [PMID:17122314]
 xref: ilxtr:NeurogliaformPhenotype
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070006
+name: bipolar morphology
+def: "A cell morphology that inheres in neurons which have two principal fibres (dendrites or axon) that emerge from the soma and begin to branch some distance from it, have few spines, and branch in narrow fields. This is in contrast to bitufted morphology where branching occurs close to the soma." [doi:10.1016/b978-0-12-369497-3.10004-4, PMID:18568015]
+xref: ILX:0101312
+xref: ilxtr:BipolarPhenotype
+xref: nifext:2
 is_a: PATO:0010006 ! cell morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
@@ -21894,6 +21894,15 @@ id: PATO:0070009
 name: 'fanning-out' martinotti morphology
 def: "A martinotti cell morphology that inheres in neurons which have axons that form a fan-like plexus." [doi:10.1016/b978-0-12-369497-3.10004-4]
 is_a: PATO:0070007 ! martinotti morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070010
+name: stellate morphology
+def: "A cell morphology that inheres in neurons that have dendritic processes radiating from the cell body forming a star-like shape." [ISBN:9780123973481]
+xref: ILX:0111036
+xref: SAO:9271919883
+is_a: PATO:0010006 ! cell morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -21923,15 +21932,6 @@ is_a: PATO:0010006 ! cell morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
-id: PATO:0070010
-name: stellate morphology
-def: "A cell morphology that inheres in neurons that have dendritic processes radiating from the cell body forming a star-like shape." [ISBN:9780123973481]
-xref: ILX:0111036
-xref: SAO:9271919883
-is_a: PATO:0010006 ! cell morphology
-created_by: http://orcid.org/0000-0001-7258-9596
-
-[Term]
 id: PATO:0070015
 name: pyramidal family morphology
 def: "A cell morphology that inheres in neurons which have a pyramidal shaped soma, a single axon, a large apical dendrite and multiple basal dendrites." [doi:10.1016/b978-0-12-369497-3.10004-4]
@@ -21946,6 +21946,7 @@ name: horizontal pyramidal morphology
 def: "A pyramidal family morphology that inheres in neurons which have an apical tree which is oriented parallel to the pia." [PMID:30715238]
 xref: ilxtr:HorizontalPyramidalPhenotype
 is_a: PATO:0070015 ! pyramidal family morphology
+disjoint_from: PATO:0070017 ! standard pyramidal morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -21956,7 +21957,6 @@ synonym: "pyramidal cell morphology" EXACT []
 synonym: "vertical pyramidal morphology" EXACT []
 xref: ilxtr:PyramidalPhenotype
 is_a: PATO:0070015 ! pyramidal family morphology
-disjoint_from: PATO:0070016 ! horizontal pyramidal morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
