@@ -21887,6 +21887,15 @@ is_a: PATO:0070007 ! martinotti morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
+id: PATO:0070010
+name: stellate morphology
+def: "A cell morphology that inheres in neurons that have dendritic processes radiating from the cell body forming a star-like shape." [ISBN:9780123973481]
+xref: ILX:0111036
+xref: SAO:9271919883
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
 id: PATO:0070011
 name: chandelier cell morphology
 def: "A cell morphology that inheres in neurons which are small and round, and make highly specialized synapses with the axon initial segments of pyramidal neurons, wrapping them with candle-shaped synaptic “cartridges”." [doi:10.1016/b978-0-12-369497-3.10004-4]
@@ -21913,15 +21922,6 @@ is_a: PATO:0010006 ! cell morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
-id: PATO:0070010
-name: stellate morphology
-def: "A cell morphology that inheres in neurons that have dendritic processes radiating from the cell body forming a star-like shape." [ISBN:9780123973481]
-xref: ILX:0111036
-xref: SAO:9271919883
-is_a: PATO:0010006 ! cell morphology
-created_by: http://orcid.org/0000-0001-7258-9596
-
-[Term]
 id: PATO:0070015
 name: pyramidal family morphology
 def: "A cell morphology that inheres in neurons which have a pyramidal shaped soma, a single axon, a large apical dendrite and multiple basal dendrites." [doi:10.1016/b978-0-12-369497-3.10004-4]
@@ -21936,6 +21936,7 @@ name: horizontal pyramidal morphology
 def: "A pyramidal family morphology that inheres in neurons which have an apical tree which is oriented parallel to the pia." [PMID:30715238]
 xref: ilxtr:HorizontalPyramidalPhenotype
 is_a: PATO:0070015 ! pyramidal family morphology
+disjoint_from: PATO:0070017 ! standard pyramidal morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -21946,7 +21947,6 @@ synonym: "pyramidal cell morphology" EXACT []
 synonym: "vertical pyramidal morphology" EXACT []
 xref: ilxtr:PyramidalPhenotype
 is_a: PATO:0070015 ! pyramidal family morphology
-disjoint_from: PATO:0070016 ! horizontal pyramidal morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -21980,6 +21980,13 @@ def: "A pyramidal cell morphology that inheres in neurons which have an apical t
 xref: ilxtr:InvertedPyramidalPhenotype
 is_a: PATO:0070017 ! standard pyramidal morphology
 created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070025
+name: unipolar neuron morphology
+def: "A cell morphology that inheres in neurons with only one process, called a neurite, that extends from the cell body. The neurite then branches to form dendritic and axonal processes." [WikipediaVersioned:Unipolar_neuron&oldid=994458581]
+is_a: PATO:0010006 ! cell morphology
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
 
 [Term]
 id: PATO:0085001
@@ -22142,3 +22149,4 @@ synonym: "monadic_form_of" EXACT []
 id: towards
 name: towards
 comment: Relation binding a relational quality or disposition to the relevant type of entity.
+
