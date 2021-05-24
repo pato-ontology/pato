@@ -21861,7 +21861,7 @@ id: PATO:0070001
 name: neurogliaform morphology
 def: "A cell morphology that inheres in neurons which have a small round soma, a large number of short, smooth, or slightly beaded primary dendrites that give rise to only a few secondary branches, and a branched axon that establishes a dense axonal mesh with thin shafts." [PMID:17122314]
 xref: ilxtr:NeurogliaformPhenotype
-is_a: PATO:0010006 ! cell morphology
+is_a: PATO:0070026 ! multipolar neuron morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -21879,7 +21879,7 @@ id: PATO:0070007
 name: martinotti morphology
 def: "A cell morphology that inheres in neurons which are large and non-spiny, with dendrites radiating in a multipolar or bitufted pattern, often favouring the descending side, and axons that ascend directly from the superficial side of the soma, and travel upward without branching." [doi:10.1016/b978-0-12-369497-3.10004-4]
 xref: ilxtr:MartinottiPhenotype
-is_a: PATO:0010006 ! cell morphology
+is_a: PATO:0070026 ! multipolar neuron morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -21902,13 +21902,14 @@ name: stellate morphology
 def: "A cell morphology that inheres in neurons that have dendritic processes radiating from the cell body forming a star-like shape." [ISBN:9780123973481]
 xref: ILX:0111036
 xref: SAO:9271919883
-is_a: PATO:0010006 ! cell morphology
+is_a: PATO:0070026 ! multipolar neuron morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
 id: PATO:0070011
 name: chandelier cell morphology
 def: "A cell morphology that inheres in neurons which are small and round, and make highly specialized synapses with the axon initial segments of pyramidal neurons, wrapping them with candle-shaped synaptic “cartridges”." [doi:10.1016/b978-0-12-369497-3.10004-4]
+comment: Chandelier cells can be bitufted or multipolar. {xref="DOI:10.1016/B978-0-12-369497-3.10004-4"}
 xref: ILX:0102028
 xref: ilxtr:ChandelierPhenotype
 xref: nifext:4
@@ -21928,7 +21929,7 @@ id: PATO:0070013
 name: spiny stellate cell morphology
 def: "A cell morphology that inheres in neurons which have spiny basal dendrites and resemble pyramidal cells but lose their apical dendrites as they mature. Their axons nearly always emerge from the descending side of the soma, but often recurve and ascend with arc-like collaterals." [doi:10.1016/b978-0-12-369497-3.10004-4]
 xref: ilxtr:SpinyStellatePhenotype
-is_a: PATO:0010006 ! cell morphology
+is_a: PATO:0070026 ! multipolar neuron morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -21937,7 +21938,7 @@ name: pyramidal family morphology
 def: "A cell morphology that inheres in neurons which have a pyramidal shaped soma, a single axon, a large apical dendrite and multiple basal dendrites." [doi:10.1016/b978-0-12-369497-3.10004-4]
 xref: ILX:0109553
 xref: SAO:1465673360
-is_a: PATO:0010006 ! cell morphology
+is_a: PATO:0070026 ! multipolar neuron morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -21989,6 +21990,15 @@ name: inverted pyramidal morphology
 def: "A pyramidal cell morphology that inheres in neurons which have an apical tree which is oriented towards the white matter." [PMID:30715238]
 xref: ilxtr:InvertedPyramidalPhenotype
 is_a: PATO:0070017 ! standard pyramidal morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070026
+name: multipolar neuron morphology
+def: "A cell morphology that inheres in neurons which possess a single axon and many dendrites and dendritic branches." [WikipediaVersioned:Multipolar_neuron&oldid=1022942606]
+xref: ILX:0107196
+xref: NLX:378
+is_a: PATO:0010006 ! cell morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -22152,4 +22162,3 @@ synonym: "monadic_form_of" EXACT []
 id: towards
 name: towards
 comment: Relation binding a relational quality or disposition to the relevant type of entity.
-

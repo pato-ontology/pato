@@ -10225,7 +10225,32 @@
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
           "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070001"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070007"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
+          "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0070010"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070011"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070012"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070013"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
@@ -10888,6 +10913,16 @@
           "sub": "http://purl.obolibrary.org/obo/PATO_0060003"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070007",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070008"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070007",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070009"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/PATO_0070015",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0070016"
@@ -10969,11 +11004,11 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2021-04-14"
+            "val": "2021-04-16"
           }
         ],
         "subsets": [],
-        "version": "http://purl.obolibrary.org/obo/pato/releases/2021-04-14/pato-simple.json",
+        "version": "http://purl.obolibrary.org/obo/pato/releases/2021-04-16/pato-simple.json",
         "xrefs": []
       },
       "nodes": [
@@ -11075,6 +11110,12 @@
               "val": "a core relation that holds between a part and its whole",
               "xrefs": []
             },
+            "subsets": [
+              "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
+              "http://purl.obolibrary.org/obo/valid_for_go_gp2term",
+              "http://purl.obolibrary.org/obo/valid_for_go_ontology",
+              "http://purl.obolibrary.org/obo/valid_for_gocam"
+            ],
             "xrefs": [
               {
                 "val": "BFO:0000050"
@@ -11146,6 +11187,11 @@
                 "PATOC:CJM"
               ]
             },
+            "subsets": [
+              "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
+              "http://purl.obolibrary.org/obo/valid_for_go_ontology",
+              "http://purl.obolibrary.org/obo/valid_for_gocam"
+            ],
             "xrefs": [
               {
                 "val": "BFO:0000051"
@@ -77315,6 +77361,108 @@
           "type": "CLASS"
         },
         {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070001",
+          "lbl": "neurogliaform morphology",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A cell morphology that inheres in neurons which have a small round soma, a large number of short, smooth, or slightly beaded primary dendrites that give rise to only a few secondary branches, and a branched axon that establishes a dense axonal mesh with thin shafts.",
+              "xrefs": [
+                "PMID:17122314"
+              ]
+            },
+            "xrefs": [
+              {
+                "val": "ilxtr:NeurogliaformPhenotype"
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070007",
+          "lbl": "martinotti morphology",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A cell morphology that inheres in neurons which are large and non-spiny, with dendrites radiating in a multipolar or bitufted pattern, often favouring the descending side, and axons that ascend directly from the superficial side of the soma, and travel upward without branching.",
+              "xrefs": [
+                "doi:10.1016/b978-0-12-369497-3.10004-4"
+              ]
+            },
+            "xrefs": [
+              {
+                "val": "ilxtr:MartinottiPhenotype"
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070008",
+          "lbl": "'T-shaped' martinotti morphology",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A martinotti cell morphology that inheres in neurons which have axons that form a horizontal ramification, making it T-shaped.",
+              "xrefs": [
+                "doi:10.1016/b978-0-12-369497-3.10004-4"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070009",
+          "lbl": "'fanning-out' martinotti morphology",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A martinotti cell morphology that inheres in neurons which have axons that form a fan-like plexus.",
+              "xrefs": [
+                "doi:10.1016/b978-0-12-369497-3.10004-4"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
           "id": "http://purl.obolibrary.org/obo/PATO_0070010",
           "lbl": "stellate morphology",
           "meta": {
@@ -77340,6 +77488,96 @@
               },
               {
                 "val": "SAO:9271919883"
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070011",
+          "lbl": "chandelier cell morphology",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A cell morphology that inheres in neurons which are small and round, and make highly specialized synapses with the axon initial segments of pyramidal neurons, wrapping them with candle-shaped synaptic “cartridges”.",
+              "xrefs": [
+                "doi:10.1016/b978-0-12-369497-3.10004-4"
+              ]
+            },
+            "xrefs": [
+              {
+                "val": "ILX:0102028"
+              },
+              {
+                "val": "ilxtr:ChandelierPhenotype"
+              },
+              {
+                "val": "nifext:4"
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070012",
+          "lbl": "bitufted cell morphology",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A cell morphology that inheres in neurons which have tufts of dendrites extending from two opposite poles of the soma, and have axons that form a plexus which spreads widely, usually descending.",
+              "xrefs": [
+                "doi:10.1016/b978-0-12-369497-3.10004-4"
+              ]
+            },
+            "xrefs": [
+              {
+                "val": "ilxtr:BituftedPhenotype"
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070013",
+          "lbl": "spiny stellate cell morphology",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A cell morphology that inheres in neurons which have spiny basal dendrites and resemble pyramidal cells but lose their apical dendrites as they mature. Their axons nearly always emerge from the descending side of the soma, but often recurve and ascend with arc-like collaterals.",
+              "xrefs": [
+                "doi:10.1016/b978-0-12-369497-3.10004-4"
+              ]
+            },
+            "xrefs": [
+              {
+                "val": "ilxtr:SpinyStellatePhenotype"
               }
             ]
           },
