@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pato/releases/2021-04-16/imports/go_import.owl
+data-version: pato/releases/2021-05-26/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate ""
 subsetdef: gocheck_do_not_manually_annotate ""
 subsetdef: goslim_agr ""
@@ -16,8 +16,8 @@ subsetdef: goslim_plant ""
 subsetdef: goslim_pombe ""
 subsetdef: goslim_yeast ""
 ontology: pato/imports/go_import
-property_value: http://purl.org/dc/elements/1.1/source http://purl.obolibrary.org/obo/go/releases/2021-02-01/go.owl
-property_value: owl:versionInfo "2021-04-16" xsd:string
+property_value: http://purl.org/dc/elements/1.1/source http://purl.obolibrary.org/obo/go/releases/2021-05-01/go.owl
+property_value: owl:versionInfo "2021-05-26" xsd:string
 
 [Term]
 id: GO:0005575
@@ -82,6 +82,57 @@ xref: Wikipedia:Cell_nucleus
 is_a: GO:0043231 ! intracellular membrane-bounded organelle
 
 [Term]
+id: GO:0005635
+name: nuclear envelope
+namespace: cellular_component
+alt_id: GO:0005636
+def: "The double lipid bilayer enclosing the nucleus and separating its contents from the rest of the cytoplasm; includes the intermembrane space, a gap of width 20-40 nm (also called the perinuclear space)." [ISBN:0198547684]
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_plant
+xref: Wikipedia:Nuclear_envelope
+is_a: GO:0031967 ! organelle envelope
+relationship: part_of GO:0005634 ! nucleus
+relationship: part_of GO:0012505 ! endomembrane system
+
+[Term]
+id: GO:0005737
+name: cytoplasm
+namespace: cellular_component
+def: "All of the contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures." [ISBN:0198547684]
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+xref: Wikipedia:Cytoplasm
+is_a: GO:0110165 ! cellular anatomical entity
+relationship: part_of GO:0005622 ! intracellular anatomical structure
+
+[Term]
+id: GO:0005773
+name: vacuole
+namespace: cellular_component
+def: "A closed structure, found only in eukaryotic cells, that is completely surrounded by unit membrane and contains liquid material. Cells contain one or several vacuoles, that may have different functions from each other. Vacuoles have a diverse array of functions. They can act as a storage organelle for nutrients or waste products, as a degradative compartment, as a cost-effective way of increasing cell size, and as a homeostatic regulator controlling both turgor pressure and pH of the cytosol." [GOC:mtg_sensu, ISBN:0198506732]
+subset: goslim_agr
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_drosophila
+subset: goslim_flybase_ribbon
+subset: goslim_generic
+subset: goslim_mouse
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+synonym: "vacuolar carboxypeptidase Y" RELATED []
+xref: Wikipedia:Vacuole
+is_a: GO:0043231 ! intracellular membrane-bounded organelle
+relationship: part_of GO:0005737 ! cytoplasm
+
+[Term]
 id: GO:0005886
 name: plasma membrane
 namespace: cellular_component
@@ -128,7 +179,7 @@ synonym: "primary cilium" NARROW []
 xref: FMA:67181
 xref: NIF_Subcellular:sao787716553
 xref: Wikipedia:Cilium
-is_a: GO:0043226 ! organelle
+is_a: GO:0043227 ! membrane-bounded organelle
 is_a: GO:0120025 ! plasma membrane bounded cell projection
 relationship: has_part GO:0030990 ! intraciliary transport particle
 property_value: RO:0002161 NCBITaxon:3176
@@ -137,6 +188,22 @@ property_value: RO:0002161 NCBITaxon:3378
 property_value: RO:0002161 NCBITaxon:3398
 property_value: RO:0002161 NCBITaxon:4890
 property_value: RO:0002161 NCBITaxon:5782
+
+[Term]
+id: GO:0005938
+name: cell cortex
+namespace: cellular_component
+def: "The region of a cell that lies just beneath the plasma membrane and often, but not always, contains a network of actin filaments and associated proteins." [GOC:mah, ISBN:0815316194]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_yeast
+synonym: "cell periphery" RELATED []
+synonym: "peripheral cytoplasm" RELATED []
+xref: Wikipedia:Cell_cortex
+is_a: GO:0005737 ! cytoplasm
+intersection_of: GO:0005737 ! cytoplasm
+intersection_of: part_of GO:0071944 ! cell periphery
+relationship: part_of GO:0071944 ! cell periphery
 
 [Term]
 id: GO:0008150
@@ -163,6 +230,20 @@ synonym: "single-organism process" RELATED []
 xref: Wikipedia:Biological_process
 created_by: jl
 creation_date: 2012-09-19T15:05:24Z
+
+[Term]
+id: GO:0012505
+name: endomembrane system
+namespace: cellular_component
+def: "A collection of membranous structures involved in transport within the cell. The main components of the endomembrane system are endoplasmic reticulum, Golgi bodies, vesicles, cell membrane and nuclear envelope. Members of the endomembrane system pass materials through each other or though the use of vesicles." [GOC:lh]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_flybase_ribbon
+subset: goslim_yeast
+xref: Wikipedia:Endomembrane_system
+is_a: GO:0110165 ! cellular anatomical entity
+relationship: has_part GO:0005773 ! vacuole
+relationship: has_part GO:0005886 ! plasma membrane
 
 [Term]
 id: GO:0016020
@@ -197,6 +278,56 @@ synonym: "IFT complex" RELATED []
 synonym: "intraflagellar transport complex" EXACT []
 synonym: "intraflagellar transport particle" EXACT []
 is_a: GO:0032991 ! protein-containing complex
+
+[Term]
+id: GO:0031090
+name: organelle membrane
+namespace: cellular_component
+def: "A membrane that is one of the two lipid bilayers of an organelle envelope or the outermost membrane of single membrane bound organelle." [GOC:dos, GOC:mah]
+synonym: "intracellular membrane" RELATED [NIF_Subcellular:sao830981606]
+xref: NIF_Subcellular:sao830981606
+is_a: GO:0016020 ! membrane
+intersection_of: GO:0016020 ! membrane
+intersection_of: part_of GO:0043227 ! membrane-bounded organelle
+relationship: part_of GO:0043227 ! membrane-bounded organelle
+
+[Term]
+id: GO:0031965
+name: nuclear membrane
+namespace: cellular_component
+def: "Either of the lipid bilayers that surround the nucleus and form the nuclear envelope; excludes the intermembrane space." [GOC:mah, GOC:pz]
+xref: NIF_Subcellular:sao1687101204
+is_a: GO:0031090 ! organelle membrane
+intersection_of: GO:0016020 ! membrane
+intersection_of: part_of GO:0005634 ! nucleus
+relationship: part_of GO:0005635 ! nuclear envelope
+
+[Term]
+id: GO:0031967
+name: organelle envelope
+namespace: cellular_component
+def: "A double membrane structure enclosing an organelle, including two lipid bilayers and the region between them. In some cases, an organelle envelope may have more than two membranes." [GOC:mah, GOC:pz]
+subset: goslim_mouse
+is_a: GO:0031975 ! envelope
+relationship: part_of GO:0043227 ! membrane-bounded organelle
+relationship: part_of GO:0043229 ! intracellular organelle
+
+[Term]
+id: GO:0031975
+name: envelope
+namespace: cellular_component
+def: "A multilayered structure surrounding all or part of a cell; encompasses one or more lipid bilayers, and may include a cell wall layer; also includes the space between layers." [GOC:mah, GOC:pz]
+is_a: GO:0110165 ! cellular anatomical entity
+
+[Term]
+id: GO:0032838
+name: plasma membrane bounded cell projection cytoplasm
+namespace: cellular_component
+def: "All of the contents of a plasma membrane bounded cell projection, excluding the plasma membrane surrounding the projection." [GOC:krc, GOC:mah]
+is_a: GO:0099568 ! cytoplasmic region
+intersection_of: GO:0005737 ! cytoplasm
+intersection_of: part_of GO:0120025 ! plasma membrane bounded cell projection
+relationship: part_of GO:0120025 ! plasma membrane bounded cell projection
 
 [Term]
 id: GO:0032991
@@ -251,6 +382,9 @@ def: "Organized structure of distinctive morphology and function, bounded by a s
 synonym: "membrane-enclosed organelle" EXACT []
 xref: NIF_Subcellular:sao414196390
 is_a: GO:0043226 ! organelle
+intersection_of: GO:0043226 ! organelle
+intersection_of: has_part GO:0016020 ! membrane
+relationship: has_part GO:0016020 ! membrane
 
 [Term]
 id: GO:0043229
@@ -258,7 +392,10 @@ name: intracellular organelle
 namespace: cellular_component
 def: "Organized structure of distinctive morphology and function, occurring within the cell. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton. Excludes the plasma membrane." [GOC:go_curators]
 subset: goslim_pir
-is_a: GO:0005622 ! intracellular anatomical structure
+is_a: GO:0043226 ! organelle
+intersection_of: GO:0043226 ! organelle
+intersection_of: part_of GO:0005622 ! intracellular anatomical structure
+relationship: part_of GO:0005622 ! intracellular anatomical structure
 
 [Term]
 id: GO:0043231
@@ -269,6 +406,8 @@ subset: goslim_pir
 synonym: "intracellular membrane-enclosed organelle" EXACT []
 is_a: GO:0043227 ! membrane-bounded organelle
 is_a: GO:0043229 ! intracellular organelle
+intersection_of: GO:0043227 ! membrane-bounded organelle
+intersection_of: part_of GO:0005622 ! intracellular anatomical structure
 
 [Term]
 id: GO:0071944
@@ -279,6 +418,27 @@ subset: goslim_flybase_ribbon
 is_a: GO:0110165 ! cellular anatomical entity
 created_by: mah
 creation_date: 2010-10-04T01:51:47Z
+
+[Term]
+id: GO:0097014
+name: ciliary plasm
+namespace: cellular_component
+def: "All of the contents of a cilium, excluding the plasma membrane surrounding the cilium." [GOC:BHF, GOC:cilia, GOC:dos, PMID:17895364]
+comment: Note that we deem cilium and microtubule-based flagellum to be equivalent. Also, researchers consider the composition of both the plasm and the membrane of the cilium to be detectably different from that in the non-ciliary cytosol and plasma membrane (e.g. in terms of calcium ion concentration, membrane lipid composition, and more). For this reason, the term "ciliary plasm" is not linked to "cytoplasm".
+synonym: "cilial cytoplasm" RELATED []
+synonym: "ciliary cytoplasm" RELATED []
+synonym: "cilium cytoplasm" RELATED []
+synonym: "cilium plasm" EXACT []
+synonym: "microtubule-based flagellar cytoplasm" RELATED []
+synonym: "microtubule-based flagellar matrix" NARROW []
+synonym: "microtubule-based flagellum cytoplasm" RELATED []
+synonym: "microtubule-based flagellum matrix" NARROW []
+is_a: GO:0032838 ! plasma membrane bounded cell projection cytoplasm
+intersection_of: GO:0005737 ! cytoplasm
+intersection_of: part_of GO:0005929 ! cilium
+relationship: part_of GO:0005929 ! cilium
+created_by: pr
+creation_date: 2011-03-23T01:52:31Z
 
 [Term]
 id: GO:0098590
@@ -315,6 +475,28 @@ is_a: GO:0098796 ! membrane protein complex
 intersection_of: GO:0032991 ! protein-containing complex
 intersection_of: part_of GO:0005886 ! plasma membrane
 relationship: part_of GO:0005886 ! plasma membrane
+
+[Term]
+id: GO:0099568
+name: cytoplasmic region
+namespace: cellular_component
+def: "Any (proper) part of the cytoplasm of a single cell of sufficient size to still be considered cytoplasm." [GOC:dos]
+is_a: GO:0005737 ! cytoplasm
+intersection_of: GO:0005737 ! cytoplasm
+intersection_of: part_of GO:0005737 ! cytoplasm
+relationship: part_of GO:0005737 ! cytoplasm
+
+[Term]
+id: GO:0099738
+name: cell cortex region
+namespace: cellular_component
+def: "The complete extent of cell cortex that underlies some some region of the plasma membrane." [GOC:dos]
+synonym: "perimembrane region" EXACT []
+is_a: GO:0005938 ! cell cortex
+is_a: GO:0099568 ! cytoplasmic region
+intersection_of: GO:0005938 ! cell cortex
+intersection_of: part_of GO:0005938 ! cell cortex
+relationship: part_of GO:0005938 ! cell cortex
 
 [Term]
 id: GO:0110165
