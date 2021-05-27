@@ -21865,16 +21865,6 @@ is_a: PATO:0070026 ! multipolar neuron morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
-id: PATO:0070006
-name: bipolar morphology
-def: "A cell morphology that inheres in neurons which have two principal fibres (dendrites or axon) that emerge from the soma and begin to branch some distance from it, have few spines, and branch in narrow fields. This is in contrast to bitufted morphology where branching occurs close to the soma." [doi:10.1016/b978-0-12-369497-3.10004-4, PMID:18568015]
-xref: ILX:0101312
-xref: ilxtr:BipolarPhenotype
-xref: nifext:2
-is_a: PATO:0010006 ! cell morphology
-created_by: http://orcid.org/0000-0001-7258-9596
-
-[Term]
 id: PATO:0070002
 name: basket cell morphology
 def: "A cell morphology that inheres in multipolar neurons with densely branched terminal axonal arborizations that form basket-like structures surrounding and synapsing to the somas of target cells." [doi:10.1016/b978-0-12-369497-3.10004-4, WikipediaVersioned:Basket_cell&oldid=951703880]
@@ -21906,6 +21896,16 @@ name: nest basket cell morphology
 def: "A basket cell morphology that inheres in neurons which have simpler dendritic arbors (compared to small or large basket cell morphology), and an axonal plexus of intermediate density, composed of a few long, smooth axonal branches." [PMID:11884355]
 xref: ilxtr:NestBasketPhenotype
 is_a: PATO:0070002 ! basket cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070006
+name: bipolar morphology
+def: "A cell morphology that inheres in neurons which have two principal fibres (dendrites or axon) that emerge from the soma and begin to branch some distance from it, have few spines, and branch in narrow fields. This is in contrast to bitufted morphology where branching occurs close to the soma." [doi:10.1016/b978-0-12-369497-3.10004-4, PMID:18568015]
+xref: ILX:0101312
+xref: ilxtr:BipolarPhenotype
+xref: nifext:2
+is_a: PATO:0010006 ! cell morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -22042,6 +22042,49 @@ def: "An osmolarity quality inhering in a bearer by virtue of the total amount o
 is_a: PATO:0001655 ! osmolarity
 created_by: http://orcid.org/0000-0002-3410-4655
 creation_date: 2020-10-30T08:08:48Z
+
+[Term]
+id: http://purl.obolibrary.org/obo/PATO0070027
+name: intratelencephalic projection
+def: "A prolongation or process extending from a cell derived from the telencephalon to structures derived from the telencephalon." []
+synonym: "IT projection" EXACT []
+xref: ILX:0770100
+is_a: GO:0042995 ! cell projection
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: http://purl.obolibrary.org/obo/PATO0070028
+name: extratelencephalic projection
+def: "A prolongation or process extending from a cell derived from the telencephalon to structures not derived from the telencephalon." []
+xref: ILX:0770101
+is_a: GO:0042995 ! cell projection
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: http://purl.obolibrary.org/obo/PATO0070029
+name: corticothalamic projection
+def: "A prolongation or process extending from a cell in the cerebral cortex to the thalamus." []
+synonym: "CT projection" EXACT []
+xref: ILX:0770102
+is_a: GO:0042995 ! cell projection
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: http://purl.obolibrary.org/obo/PATO0070030
+name: near projection
+def: "A prolongation or process extending from a cell that terminates locally rather than distantly." []
+synonym: "NP" EXACT []
+xref: ILX:0770103
+is_a: GO:0042995 ! cell projection
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: http://purl.obolibrary.org/obo/PATO0070031
+name: medulla projection
+synonym: "A prolongation or process extending from a cell that terminates in the medulla." EXACT []
+synonym: "MY projection" EXACT []
+is_a: GO:0042995 ! cell projection
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
 
 [Typedef]
 id: correlates_with
@@ -22196,3 +22239,4 @@ synonym: "monadic_form_of" EXACT []
 id: towards
 name: towards
 comment: Relation binding a relational quality or disposition to the relevant type of entity.
+
