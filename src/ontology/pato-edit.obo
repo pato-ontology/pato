@@ -21865,16 +21865,6 @@ is_a: PATO:0070026 ! multipolar neuron morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
-id: PATO:0070006
-name: bipolar morphology
-def: "A cell morphology that inheres in neurons which have two principal fibres (dendrites or axon) that emerge from the soma and begin to branch some distance from it, have few spines, and branch in narrow fields. This is in contrast to bitufted morphology where branching occurs close to the soma." [doi:10.1016/b978-0-12-369497-3.10004-4, PMID:18568015]
-xref: ILX:0101312
-xref: ilxtr:BipolarPhenotype
-xref: nifext:2
-is_a: PATO:0010006 ! cell morphology
-created_by: http://orcid.org/0000-0001-7258-9596
-
-[Term]
 id: PATO:0070002
 name: basket cell morphology
 def: "A cell morphology that inheres in multipolar neurons with densely branched terminal axonal arborizations that form basket-like structures surrounding and synapsing to the somas of target cells." [doi:10.1016/b978-0-12-369497-3.10004-4, WikipediaVersioned:Basket_cell&oldid=951703880]
@@ -21906,6 +21896,16 @@ name: nest basket cell morphology
 def: "A basket cell morphology that inheres in neurons which have simpler dendritic arbors (compared to small or large basket cell morphology), and an axonal plexus of intermediate density, composed of a few long, smooth axonal branches." [PMID:11884355]
 xref: ilxtr:NestBasketPhenotype
 is_a: PATO:0070002 ! basket cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070006
+name: bipolar morphology
+def: "A cell morphology that inheres in neurons which have two principal fibres (dendrites or axon) that emerge from the soma and begin to branch some distance from it, have few spines, and branch in narrow fields. This is in contrast to bitufted morphology where branching occurs close to the soma." [doi:10.1016/b978-0-12-369497-3.10004-4, PMID:18568015]
+xref: ILX:0101312
+xref: ilxtr:BipolarPhenotype
+xref: nifext:2
+is_a: PATO:0070027 ! cell with bitufted dendrite morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -21955,7 +21955,7 @@ id: PATO:0070012
 name: bitufted cell morphology
 def: "A cell morphology that inheres in neurons which have two clusters of branches that originate directly from the soma and extend in opposite directions and axons that form a plexus which spreads widely. Compared to bipolar morphology, bitufted morphology has branching that occur close to the soma." [doi:10.1016/b978-0-12-369497-3.10004-4, PMID:18568015]
 xref: ilxtr:BituftedPhenotype
-is_a: PATO:0010006 ! cell morphology
+is_a: PATO:0070027 ! cell with bitufted dendrite morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -22032,6 +22032,13 @@ name: multipolar neuron morphology
 def: "A cell morphology that inheres in neurons which possess a single axon and many dendrites and dendritic branches." [WikipediaVersioned:Multipolar_neuron&oldid=1022942606]
 xref: ILX:0107196
 xref: NLX:378
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070027
+name: cell with bitufted dendrite morphology
+def: "A cell morphology that inheres in neurons with dendrites that are bidirectional, emerging from opposite ends of the soma, with the two arbors extending in radial or tangential directions." [PMID: 18568015]
 is_a: PATO:0010006 ! cell morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
@@ -22196,3 +22203,4 @@ synonym: "monadic_form_of" EXACT []
 id: towards
 name: towards
 comment: Relation binding a relational quality or disposition to the relevant type of entity.
+
