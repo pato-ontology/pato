@@ -22036,55 +22036,62 @@ is_a: PATO:0010006 ! cell morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
+id: PATO:0070028
+name: extratelencephalic projection
+def: "A neuron projection quality that is a characteristic of neurons with both soma within the structures derived from the telencephalon and projections to structures not derived from the telencephalon." [DOI:10.1101/2020.10.19.343129]
+xref: ILX:0770101
+is_a: PATO:0070033 ! neuron projection quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070029
+name: corticothalamic projection
+def: "A neuron projection quality that is a characteristic of neurons with soma in the cerebral cortex and projections to the thalamus." [DOI:10.1101/2020.10.19.343129]
+synonym: "CT projection" EXACT []
+xref: ILX:0770102
+is_a: PATO:0070033 ! neuron projection quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070030
+name: near projection
+def: "A neuron projection quality that is a characteristic of neurons with projections that terminate locally rather than distantly." [DOI:10.1101/2020.10.19.343129]
+synonym: "NP" EXACT []
+xref: ILX:0770103
+is_a: PATO:0070033 ! neuron projection quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070031
+name: medulla projection
+def: "A neuron projection quality that is a characteristic of neurons with projections that terminate in the medulla." []
+synonym: "MY projection" EXACT []
+is_a: PATO:0070033 ! neuron projection quality
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070033
+name: neuron projection quality
+def: "A physical quality inhering in a neuron by virtue of the relative location of its soma and the regions to which it projects and makes synaptic contacts in." [DOI:10.1101/2020.10.19.343129]
+is_a: PATO:0001018 ! physical quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070034
+name: intratelencephalic projection
+def: "A neuron projection quality that is a characteristic of neurons with both soma and projections entirely within structures derived from the telencephalon." [DOI:10.1101/2020.10.19.343129]
+synonym: "IT projection" EXACT []
+xref: ILX:0770100
+is_a: PATO:0070033 ! neuron projection quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
 id: PATO:0085001
 name: salinity
 def: "An osmolarity quality inhering in a bearer by virtue of the total amount of ionic salts dissolved in the bearer." [http://db0nus869y26v.cloudfront.net/en/Salinity, https://en.wikipedia.org/wiki/Salinity, https://rwu.pressbooks.pub/webboceanography/chapter/5-3-salinity-patterns/, https://www.sciencedirect.com/referencework/9780080983004/treatise-on-geochemistry, https://www.sciencedirect.com/science/article/pii/B9780857096807500012]
 is_a: PATO:0001655 ! osmolarity
 created_by: http://orcid.org/0000-0002-3410-4655
 creation_date: 2020-10-30T08:08:48Z
-
-[Term]
-id: http://purl.obolibrary.org/obo/PATO0070027
-name: intratelencephalic projection
-def: "A prolongation or process extending from a cell derived from the telencephalon to structures derived from the telencephalon." []
-synonym: "IT projection" EXACT []
-xref: ILX:0770100
-is_a: GO:0042995 ! cell projection
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
-
-[Term]
-id: http://purl.obolibrary.org/obo/PATO0070028
-name: extratelencephalic projection
-def: "A prolongation or process extending from a cell derived from the telencephalon to structures not derived from the telencephalon." []
-xref: ILX:0770101
-is_a: GO:0042995 ! cell projection
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
-
-[Term]
-id: http://purl.obolibrary.org/obo/PATO0070029
-name: corticothalamic projection
-def: "A prolongation or process extending from a cell in the cerebral cortex to the thalamus." []
-synonym: "CT projection" EXACT []
-xref: ILX:0770102
-is_a: GO:0042995 ! cell projection
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
-
-[Term]
-id: http://purl.obolibrary.org/obo/PATO0070030
-name: near projection
-def: "A prolongation or process extending from a cell that terminates locally rather than distantly." []
-synonym: "NP" EXACT []
-xref: ILX:0770103
-is_a: GO:0042995 ! cell projection
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
-
-[Term]
-id: http://purl.obolibrary.org/obo/PATO0070031
-name: medulla projection
-synonym: "A prolongation or process extending from a cell that terminates in the medulla." EXACT []
-synonym: "MY projection" EXACT []
-is_a: GO:0042995 ! cell projection
-property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
 
 [Typedef]
 id: correlates_with
