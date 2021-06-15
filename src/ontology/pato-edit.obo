@@ -787,6 +787,7 @@ is_obsolete: true
 id: PATO:0000125
 name: mass
 def: "A physical quality that inheres in a bearer by virtue of the proportion of the bearer's amount of matter." [PATOC:GVG]
+comment: For any biological use of PATO,  the concept that should be used is 'mass' and not 'weight'. For example, increased weight of an organism.
 subset: attribute_slim
 subset: relational_slim
 subset: scalar_slim
@@ -805,7 +806,8 @@ is_obsolete: true
 [Term]
 id: PATO:0000128
 name: weight
-def: "A physical quality inhering in a bearer that has mass near a gravitational body." [Wikipedia:http\://en.wikipedia.org/wiki/Weight]
+def: "A physical quality inhering in a bearer that has mass near a gravitational body. Important usage note: Note that this ontology has a class for a similar concept, mass (PATO:0000125). Mass and weight are not equivalent. For most use cases, the class mass is strongly preferred over weight." [Wikipedia:http\://en.wikipedia.org/wiki/Weight, https://en.wikipedia.org/wiki/Mass#Weight_vs._mass]
+comment: For any biological use of PATO,  the concept that should be used is 'mass' and not 'weight'. For example, increased weight of an organism.
 subset: attribute_slim
 subset: scalar_slim
 is_a: PATO:0001035 ! force
@@ -21861,6 +21863,50 @@ id: PATO:0070001
 name: neurogliaform morphology
 def: "A cell morphology that inheres in neurons which have a small round soma, a large number of short, smooth, or slightly beaded primary dendrites that give rise to only a few secondary branches, and a branched axon that establishes a dense axonal mesh with thin shafts." [PMID:17122314]
 xref: ilxtr:NeurogliaformPhenotype
+is_a: PATO:0070026 ! multipolar neuron morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070002
+name: basket cell morphology
+def: "A cell morphology that inheres in multipolar neurons with densely branched terminal axonal arborizations that form basket-like structures surrounding and synapsing to the somas of target cells." [doi:10.1016/b978-0-12-369497-3.10004-4, WikipediaVersioned:Basket_cell&oldid=951703880]
+xref: ILX:0101123
+xref: ilxtr:BasketPhenotype
+xref: nifext:3
+is_a: PATO:0070026 ! multipolar neuron morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070003
+name: small basket cell morphology
+def: "A basket cell morphology that inheres in neurons with axonal arbors composed of frequent, short, curvy axonal branches that tend to be near their somata and within the same layer." [PMID:11884355]
+xref: ilxtr:SmallBasketPhenotype
+is_a: PATO:0070002 ! basket cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070004
+name: large basket cell morphology
+def: "A basket cell morphology that inheres in neurons that are large, and typically ascend to give rise to many long horizontally and vertically projecting axon collaterals that traverse neighboring columns and can extend through all cortical layers." [PMID:11884355]
+xref: ilxtr:LargeBasketPhenotype
+is_a: PATO:0070002 ! basket cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070005
+name: nest basket cell morphology
+def: "A basket cell morphology that inheres in neurons which have simpler dendritic arbors (compared to small or large basket cell morphology), and an axonal plexus of intermediate density, composed of a few long, smooth axonal branches." [PMID:11884355]
+xref: ilxtr:NestBasketPhenotype
+is_a: PATO:0070002 ! basket cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070006
+name: bipolar morphology
+def: "A cell morphology that inheres in neurons which have two principal fibres (dendrites or axon) that emerge from the soma and begin to branch some distance from it, have few spines, and branch in narrow fields. This is in contrast to bitufted morphology where branching occurs close to the soma." [doi:10.1016/b978-0-12-369497-3.10004-4, PMID:18568015]
+xref: ILX:0101312
+xref: ilxtr:BipolarPhenotype
+xref: nifext:2
 is_a: PATO:0010006 ! cell morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
@@ -21869,7 +21915,7 @@ id: PATO:0070007
 name: martinotti morphology
 def: "A cell morphology that inheres in neurons which are large and non-spiny, with dendrites radiating in a multipolar or bitufted pattern, often favouring the descending side, and axons that ascend directly from the superficial side of the soma, and travel upward without branching." [doi:10.1016/b978-0-12-369497-3.10004-4]
 xref: ilxtr:MartinottiPhenotype
-is_a: PATO:0010006 ! cell morphology
+is_a: PATO:0070026 ! multipolar neuron morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -21892,13 +21938,14 @@ name: stellate morphology
 def: "A cell morphology that inheres in neurons that have dendritic processes radiating from the cell body forming a star-like shape." [ISBN:9780123973481]
 xref: ILX:0111036
 xref: SAO:9271919883
-is_a: PATO:0010006 ! cell morphology
+is_a: PATO:0070026 ! multipolar neuron morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
 id: PATO:0070011
 name: chandelier cell morphology
 def: "A cell morphology that inheres in neurons which are small and round, and make highly specialized synapses with the axon initial segments of pyramidal neurons, wrapping them with candle-shaped synaptic “cartridges”." [doi:10.1016/b978-0-12-369497-3.10004-4]
+comment: Chandelier cells can be bitufted or multipolar. {xref="DOI:10.1016/B978-0-12-369497-3.10004-4"}
 xref: ILX:0102028
 xref: ilxtr:ChandelierPhenotype
 xref: nifext:4
@@ -21908,7 +21955,7 @@ created_by: http://orcid.org/0000-0001-7258-9596
 [Term]
 id: PATO:0070012
 name: bitufted cell morphology
-def: "A cell morphology that inheres in neurons which have tufts of dendrites extending from two opposite poles of the soma, and have axons that form a plexus which spreads widely, usually descending." [doi:10.1016/b978-0-12-369497-3.10004-4]
+def: "A cell morphology that inheres in neurons which have two clusters of primary dendrites that originate directly and extend from opposite ends of the soma, and axons that form a plexus which spreads widely. Compared to the narrow vertical axonal projection of bipolar morphology, and the 'horse-tail' axonal cluster of double boquet cells, bitufted morphology has wide horizontal axonal spans, and branching that occur close to the soma. Their vertical projection is also less extensive and crosses mostly to neighboring layers." [doi:10.1016/b978-0-12-369497-3.10004-4, PMID:15378039, PMID:18568015]
 xref: ilxtr:BituftedPhenotype
 is_a: PATO:0010006 ! cell morphology
 created_by: http://orcid.org/0000-0001-7258-9596
@@ -21918,7 +21965,7 @@ id: PATO:0070013
 name: spiny stellate cell morphology
 def: "A cell morphology that inheres in neurons which have spiny basal dendrites and resemble pyramidal cells but lose their apical dendrites as they mature. Their axons nearly always emerge from the descending side of the soma, but often recurve and ascend with arc-like collaterals." [doi:10.1016/b978-0-12-369497-3.10004-4]
 xref: ilxtr:SpinyStellatePhenotype
-is_a: PATO:0010006 ! cell morphology
+is_a: PATO:0070026 ! multipolar neuron morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -21927,7 +21974,7 @@ name: pyramidal family morphology
 def: "A cell morphology that inheres in neurons which have a pyramidal shaped soma, a single axon, a large apical dendrite and multiple basal dendrites." [doi:10.1016/b978-0-12-369497-3.10004-4]
 xref: ILX:0109553
 xref: SAO:1465673360
-is_a: PATO:0010006 ! cell morphology
+is_a: PATO:0070026 ! multipolar neuron morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -21979,6 +22026,15 @@ name: inverted pyramidal morphology
 def: "A pyramidal cell morphology that inheres in neurons which have an apical tree which is oriented towards the white matter." [PMID:30715238]
 xref: ilxtr:InvertedPyramidalPhenotype
 is_a: PATO:0070017 ! standard pyramidal morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070026
+name: multipolar neuron morphology
+def: "A cell morphology that inheres in neurons which possess a single axon and many dendrites and dendritic branches." [WikipediaVersioned:Multipolar_neuron&oldid=1022942606]
+xref: ILX:0107196
+xref: NLX:378
+is_a: PATO:0010006 ! cell morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]

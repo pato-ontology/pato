@@ -86,8 +86,22 @@ import_group:
       module_type: filter
 ```
 
-A ROBOT filter module is, essentially, importing all external terms declared by the your ontology (see [here](UpdateImports.md)] on how to declare external terms to be imported).
+A ROBOT filter module is, essentially, importing all external terms declared by the your ontology (see [here](UpdateImports.md)] on how to declare external terms to be imported). Note that the `filter` module does 
+not consider terms/annotations from namespaces other than the base-namespace of the ontology itself. For example, in the
+example of GO above, only annotations / axioms related to the GO base IRI (http://purl.obolibrary.org/obo/GO_) would be considered. This 
+behaviour can be changed by adding additional base IRIs as follows:
 
+
+```
+import_group:
+  products:
+    - id: go
+      module_type: filter
+      base_iris:
+        - http://purl.obolibrary.org/obo/GO_
+        - http://purl.obolibrary.org/obo/CL_
+        - http://purl.obolibrary.org/obo/BFO
+```
 
 If you wish to customise your import entirely, you can specify your own ROBOT command to do so. To do that, add the following to your repo config (`src/ontology/pato-odk.yaml`):
 

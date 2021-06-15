@@ -1,17 +1,12 @@
 format-version: 1.2
-data-version: pato/releases/2021-04-16/imports/pco_import.owl
+data-version: pato/releases/2021-05-26/imports/pco_import.owl
 subsetdef: abnormal_slim ""
 subsetdef: absent_slim ""
 subsetdef: attribute_slim ""
-subsetdef: goslim_aspergillus ""
-subsetdef: goslim_candida ""
-subsetdef: goslim_chembl ""
-subsetdef: goslim_generic ""
-subsetdef: goslim_metagenomics ""
-subsetdef: goslim_pir ""
-subsetdef: goslim_plant ""
-subsetdef: goslim_pombe ""
-subsetdef: goslim_yeast ""
+subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
+subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
+subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
+subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
 subsetdef: mpath_slim ""
 subsetdef: relational_slim ""
 subsetdef: ro-eco ""
@@ -19,9 +14,9 @@ subsetdef: RO:0002259 ""
 subsetdef: scalar_slim ""
 subsetdef: value_slim ""
 ontology: pato/imports/pco_import
-property_value: http://purl.org/dc/elements/1.1/source http://purl.obolibrary.org/obo/pco/releases/2020-08-26/pco.owl
-property_value: owl:versionInfo "2021-04-16" xsd:string
-owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000003>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000015>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000040>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0003674>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0008150>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0016301>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/IAO_0000078>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/IAO_0000225>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/IAO_0000409>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000066>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/PCO_0000055>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000056>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002013>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002014>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002015>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002018>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002025>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002180>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002211>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002212>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002213>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002215>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002233>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002327>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002331>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002333>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002351>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002352>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002411>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002418>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002447>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002448>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002449>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002450>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002481>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002566>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002578>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002629>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002630>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000002>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000103>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000120>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000121>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000122>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000123>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000124>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000125>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000226>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000227>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000228>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000229>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000410>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000420>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000421>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000423>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000428>))\nDeclaration(AnnotationProperty(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled>))\n\n############################\n#   Object Properties\n############################\n\n# Object Property: <http://purl.obolibrary.org/obo/RO_0002351> (has member)\n\nIrreflexiveObjectProperty(<http://purl.obolibrary.org/obo/RO_0002351>)\n\n\n\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/BFO_0000002> (continuant)\n\nDisjointClasses(<http://purl.obolibrary.org/obo/BFO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/BFO_0000003>))\n\n# Class: <http://purl.obolibrary.org/obo/BFO_0000003> (occurrent)\n\nDisjointClasses(<http://purl.obolibrary.org/obo/BFO_0000003> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/BFO_0000002>))\n\n# Class: <http://purl.obolibrary.org/obo/GO_0016301> (kinase activity)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0016301> ObjectHasSelf(<http://purl.obolibrary.org/obo/RO_0002481>))\n\n# Class: <http://purl.obolibrary.org/obo/IAO_0000078> (curation status specification)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0000078> ObjectOneOf(<http://purl.obolibrary.org/obo/IAO_0000002> <http://purl.obolibrary.org/obo/IAO_0000120> <http://purl.obolibrary.org/obo/IAO_0000121> <http://purl.obolibrary.org/obo/IAO_0000122> <http://purl.obolibrary.org/obo/IAO_0000123> <http://purl.obolibrary.org/obo/IAO_0000124> <http://purl.obolibrary.org/obo/IAO_0000125> <http://purl.obolibrary.org/obo/IAO_0000423> <http://purl.obolibrary.org/obo/IAO_0000428>))\n\n# Class: <http://purl.obolibrary.org/obo/IAO_0000225> (obsolescence reason specification)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0000225> ObjectOneOf(<http://purl.obolibrary.org/obo/IAO_0000103> <http://purl.obolibrary.org/obo/IAO_0000226> <http://purl.obolibrary.org/obo/IAO_0000227> <http://purl.obolibrary.org/obo/IAO_0000228> <http://purl.obolibrary.org/obo/IAO_0000229>))\n\n# Class: <http://purl.obolibrary.org/obo/IAO_0000409> (denotator type)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0000409> ObjectOneOf(<http://purl.obolibrary.org/obo/IAO_0000410> <http://purl.obolibrary.org/obo/IAO_0000420> <http://purl.obolibrary.org/obo/IAO_0000421>))\n\n\n############################\n#   Named Individuals\n############################\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000120> (metadata complete)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000121> (organizational term)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000122> (ready for release)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000123> (metadata incomplete)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000124> (uncurated)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000125> (pending final vetting)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000226> (placeholder removed)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000227> (terms merged)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000228> (term imported)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000229> (term split)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000423> (to be replaced with external ontology term)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000428> (requires discussion)\n\n\n\nSubClassOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002566> <http://purl.obolibrary.org/obo/BFO_0000040>) ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002418> <http://purl.obolibrary.org/obo/BFO_0000015>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002418> <http://purl.obolibrary.org/obo/BFO_0000015>)))))\nDifferentIndividuals(<http://purl.obolibrary.org/obo/IAO_0000120> <http://purl.obolibrary.org/obo/IAO_0000121> <http://purl.obolibrary.org/obo/IAO_0000122> <http://purl.obolibrary.org/obo/IAO_0000123> <http://purl.obolibrary.org/obo/IAO_0000124> <http://purl.obolibrary.org/obo/IAO_0000125> <http://purl.obolibrary.org/obo/IAO_0000423> <http://purl.obolibrary.org/obo/IAO_0000428>)\nDifferentIndividuals(<http://purl.obolibrary.org/obo/IAO_0000226> <http://purl.obolibrary.org/obo/IAO_0000227> <http://purl.obolibrary.org/obo/IAO_0000228> <http://purl.obolibrary.org/obo/IAO_0000229>)\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002327> <http://purl.obolibrary.org/obo/RO_0002211> <http://purl.obolibrary.org/obo/RO_0002333>) <http://purl.obolibrary.org/obo/RO_0002448>)\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002327> <http://purl.obolibrary.org/obo/RO_0002411> <http://purl.obolibrary.org/obo/RO_0002233>) <http://purl.obolibrary.org/obo/RO_0002566>)\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002327> <http://purl.obolibrary.org/obo/RO_0002411> <http://purl.obolibrary.org/obo/RO_0002333>) <http://purl.obolibrary.org/obo/RO_0002566>)\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002327> <http://purl.obolibrary.org/obo/RO_0002629> <http://purl.obolibrary.org/obo/RO_0002333>) <http://purl.obolibrary.org/obo/RO_0002450>)\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002327> <http://purl.obolibrary.org/obo/RO_0002630> <http://purl.obolibrary.org/obo/RO_0002333>) <http://purl.obolibrary.org/obo/RO_0002449>)\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002351>) <http://purl.obolibrary.org/obo/PCO_0000055>)\nDLSafeRule(Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002180> Variable(<urn:swrl#w>) Variable(<urn:swrl#p>)) ClassAtom(<http://purl.obolibrary.org/obo/BFO_0000015> Variable(<urn:swrl#w>)) ClassAtom(<http://purl.obolibrary.org/obo/BFO_0000015> Variable(<urn:swrl#p>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002018> Variable(<urn:swrl#w>) Variable(<urn:swrl#p>))))\nDLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> \"true\"^^xsd:boolean) Annotation(rdfs:comment \"MF(X)-directly_regulates->MF(Y)-enabled_by->GP(Z) => MF(Y)-has_input->GP(Y) e.g. if 'protein kinase activity'(X) directly_regulates 'protein binding activity (Y)and this is enabled by GP(Z) then X has_input Z\"^^xsd:string) Annotation(rdfs:label \"infer input from direct reg\"^^xsd:string) Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002327> Variable(<http://purl.obolibrary.org/obo/ro.owl#z>) Variable(<http://purl.obolibrary.org/obo/ro.owl#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002578> Variable(<http://purl.obolibrary.org/obo/ro.owl#x>) Variable(<http://purl.obolibrary.org/obo/ro.owl#y>)) ClassAtom(<http://purl.obolibrary.org/obo/GO_0003674> Variable(<http://purl.obolibrary.org/obo/ro.owl#x>)) ClassAtom(<http://purl.obolibrary.org/obo/GO_0003674> Variable(<http://purl.obolibrary.org/obo/ro.owl#y>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002233> Variable(<http://purl.obolibrary.org/obo/ro.owl#x>) Variable(<http://purl.obolibrary.org/obo/ro.owl#z>))))\nDLSafeRule(Annotation(rdfs:comment \"GP(X)-enables->MF(Y)-has_part->MF(Z) => GP(X) enables MF(Z),\ne.g.  if GP X enables ATPase coupled transporter activity' and 'ATPase coupled transporter activity' has_part 'ATPase activity' then GP(X) enables 'ATPase activity'\") Annotation(rdfs:label \"enabling an MF enables its parts\") Body(ClassAtom(<http://purl.obolibrary.org/obo/GO_0003674> Variable(<urn:swrl#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002327> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000051> Variable(<urn:swrl#y>) Variable(<urn:swrl#z>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002327> Variable(<urn:swrl#x>) Variable(<urn:swrl#z>))))\nDLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> \"true\"^^xsd:boolean) Annotation(rdfs:comment \"GP(X)-enables->MF(Y)-part_of->BP(Z) => GP(X) involved_in BP(Z) e.g. if X enables 'protein kinase activity' and Y 'part of' 'signal tranduction' then X involved in 'signal transduction'\"^^xsd:string) Annotation(rdfs:label \"involved in BP\"^^xsd:string) Body(ClassAtom(<http://purl.obolibrary.org/obo/GO_0008150> Variable(<urn:swrl#z>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000050> Variable(<urn:swrl#y>) Variable(<urn:swrl#z>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002327> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002331> Variable(<urn:swrl#x>) Variable(<urn:swrl#z>))))\nDLSafeRule(Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002578> Variable(<urn:swrl#a1>) Variable(<urn:swrl#a2>)) ClassAtom(<http://purl.obolibrary.org/obo/GO_0016301> Variable(<urn:swrl#a1>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002333> Variable(<urn:swrl#a1>) Variable(<urn:swrl#g1>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002333> Variable(<urn:swrl#a2>) Variable(<urn:swrl#g2>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002447> Variable(<urn:swrl#g1>) Variable(<urn:swrl#g2>))))\nDLSafeRule(Annotation(rdfs:comment \"This rule is dubious: added as a quick fix for expected inference in GO-CAM.  The problem is most acute for transmembrane proteins, such as receptors or cell adhesion molecules, which have some subfunctions inside the cell (e.g. kinase activity) and some subfunctions outside (e.g. ligand binding).  Correct annotation of where these functions occurs leads to incorrect inference about the location of the whole protein.  This should probably be weakened to \\\"... -> overlaps\\\"\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000066> Variable(<urn:swrl#y>) Variable(<urn:swrl#z>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002327> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000050> Variable(<urn:swrl#x>) Variable(<urn:swrl#z>))))\nDLSafeRule(Annotation(rdfs:comment \"If a molecular function (X) has a regulatory subfunction, then any gene product which is an input to that subfunction has an activity that directly_regulates X.  Note:  this is intended for cases where the regaultory subfunction is protein binding, so it could be tightened with an additional clause to specify this.\") Annotation(rdfs:label \"inferring direct reg edge from input to regulatory subfunction\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002352> Variable(<urn:swrl#B>) Variable(<urn:swrl#C>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002333> Variable(<urn:swrl#A>) Variable(<urn:swrl#B>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002013> Variable(<urn:swrl#D>) Variable(<urn:swrl#C>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002578> Variable(<urn:swrl#A>) Variable(<urn:swrl#D>))))\nDLSafeRule(Annotation(rdfs:label \"inferring direct neg reg edge from input to regulatory subfunction\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002352> Variable(<urn:swrl#B>) Variable(<urn:swrl#C>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002333> Variable(<urn:swrl#A>) Variable(<urn:swrl#B>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002014> Variable(<urn:swrl#D>) Variable(<urn:swrl#C>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002630> Variable(<urn:swrl#A>) Variable(<urn:swrl#D>))))\nDLSafeRule(Annotation(rdfs:label \"inferring direct positive reg edge from input to regulatory subfunction\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002352> Variable(<urn:swrl#B>) Variable(<urn:swrl#C>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002333> Variable(<urn:swrl#A>) Variable(<urn:swrl#B>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002015> Variable(<urn:swrl#D>) Variable(<urn:swrl#C>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002629> Variable(<urn:swrl#A>) Variable(<urn:swrl#D>))))\nDLSafeRule(Annotation(rdfs:label \"effector input is compound function input\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002233> Variable(<urn:swrl#eff>) Variable(<urn:swrl#in>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002025> Variable(<urn:swrl#mf>) Variable(<urn:swrl#eff>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002233> Variable(<urn:swrl#mf>) Variable(<urn:swrl#in>))))\nDLSafeRule(Annotation(rdfs:label \"Input of effector is input of its parent MF\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002233> Variable(<urn:swrl#mf>) Variable(<urn:swrl#in>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002025> Variable(<urn:swrl#mf>) Variable(<urn:swrl#eff>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002233> Variable(<urn:swrl#eff>) Variable(<urn:swrl#in>))))\nDLSafeRule(Annotation(rdfs:comment \"if effector directly regulates X,  its parent MF directly regulates X\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002025> Variable(<urn:swrl#mf>) Variable(<urn:swrl#eff>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002578> Variable(<urn:swrl#mf>) Variable(<urn:swrl#mf2>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002578> Variable(<urn:swrl#eff>) Variable(<urn:swrl#mf2>))))\nDLSafeRule(Annotation(rdfs:comment \"if effector directly positively regulates X,  its parent MF directly positively regulates X\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002629> Variable(<urn:swrl#mf>) Variable(<urn:swrl#mf2>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002025> Variable(<urn:swrl#mf>) Variable(<urn:swrl#eff>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002629> Variable(<urn:swrl#eff>) Variable(<urn:swrl#mf2>))))\nDLSafeRule(Annotation(rdfs:label \"if effector directly negatively regulates X,  its parent MF directly negatively regulates X\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002025> Variable(<urn:swrl#mf>) Variable(<urn:swrl#eff>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002630> Variable(<urn:swrl#mf>) Variable(<urn:swrl#mf2>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002630> Variable(<urn:swrl#eff>) Variable(<urn:swrl#mf2>))))\nDLSafeRule(Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002213> Variable(<urn:swrl#y>) Variable(<urn:swrl#z>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002212> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002212> Variable(<urn:swrl#x>) Variable(<urn:swrl#z>))))\nDLSafeRule(Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002213> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002212> Variable(<urn:swrl#y>) Variable(<urn:swrl#z>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002212> Variable(<urn:swrl#x>) Variable(<urn:swrl#z>))))\nAnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PCO_0000029> \"\"@en)\nAnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/RO_0002432> \"\")\n)
+property_value: http://purl.org/dc/elements/1.1/source http://purl.obolibrary.org/obo/pco/releases/2021-05-03/pco.owl
+property_value: owl:versionInfo "2021-05-26" xsd:string
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000003>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000015>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000040>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0003674>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0016301>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/IAO_0000078>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/IAO_0000225>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/IAO_0000409>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000056>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002131>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002211>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002212>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002213>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002215>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002233>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002327>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002333>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002351>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002404>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002411>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002418>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002447>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002448>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002481>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002566>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002578>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000002>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000103>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000120>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000121>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000122>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000123>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000124>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000125>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000226>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000227>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000228>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000229>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000410>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000420>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000421>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000423>))\nDeclaration(NamedIndividual(<http://purl.obolibrary.org/obo/IAO_0000428>))\nDeclaration(AnnotationProperty(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled>))\n\n############################\n#   Object Properties\n############################\n\n# Object Property: <http://purl.obolibrary.org/obo/RO_0002351> (has member)\n\nIrreflexiveObjectProperty(<http://purl.obolibrary.org/obo/RO_0002351>)\n\n\n\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/BFO_0000002> (continuant)\n\nDisjointClasses(<http://purl.obolibrary.org/obo/BFO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/BFO_0000003>))\n\n# Class: <http://purl.obolibrary.org/obo/BFO_0000003> (occurrent)\n\nDisjointClasses(<http://purl.obolibrary.org/obo/BFO_0000003> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/BFO_0000002>))\n\n# Class: <http://purl.obolibrary.org/obo/GO_0016301> (kinase activity)\n\nSubClassOf(<http://purl.obolibrary.org/obo/GO_0016301> ObjectHasSelf(<http://purl.obolibrary.org/obo/RO_0002481>))\n\n# Class: <http://purl.obolibrary.org/obo/IAO_0000078> (curation status specification)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0000078> ObjectOneOf(<http://purl.obolibrary.org/obo/IAO_0000002> <http://purl.obolibrary.org/obo/IAO_0000120> <http://purl.obolibrary.org/obo/IAO_0000121> <http://purl.obolibrary.org/obo/IAO_0000122> <http://purl.obolibrary.org/obo/IAO_0000123> <http://purl.obolibrary.org/obo/IAO_0000124> <http://purl.obolibrary.org/obo/IAO_0000125> <http://purl.obolibrary.org/obo/IAO_0000423> <http://purl.obolibrary.org/obo/IAO_0000428>))\n\n# Class: <http://purl.obolibrary.org/obo/IAO_0000225> (obsolescence reason specification)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0000225> ObjectOneOf(<http://purl.obolibrary.org/obo/IAO_0000103> <http://purl.obolibrary.org/obo/IAO_0000226> <http://purl.obolibrary.org/obo/IAO_0000227> <http://purl.obolibrary.org/obo/IAO_0000228> <http://purl.obolibrary.org/obo/IAO_0000229>))\n\n# Class: <http://purl.obolibrary.org/obo/IAO_0000409> (denotator type)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/IAO_0000409> ObjectOneOf(<http://purl.obolibrary.org/obo/IAO_0000410> <http://purl.obolibrary.org/obo/IAO_0000420> <http://purl.obolibrary.org/obo/IAO_0000421>))\n\n\n############################\n#   Named Individuals\n############################\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000120> (metadata complete)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000121> (organizational term)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000122> (ready for release)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000123> (metadata incomplete)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000124> (uncurated)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000125> (pending final vetting)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000226> (placeholder removed)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000227> (terms merged)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000228> (term imported)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000229> (term split)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000423> (to be replaced with external ontology term)\n\n\n# Individual: <http://purl.obolibrary.org/obo/IAO_0000428> (requires discussion)\n\n\n\nSubClassOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002566> <http://purl.obolibrary.org/obo/BFO_0000040>) ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002418> <http://purl.obolibrary.org/obo/BFO_0000015>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002418> <http://purl.obolibrary.org/obo/BFO_0000015>)))))\nDifferentIndividuals(<http://purl.obolibrary.org/obo/IAO_0000120> <http://purl.obolibrary.org/obo/IAO_0000121> <http://purl.obolibrary.org/obo/IAO_0000122> <http://purl.obolibrary.org/obo/IAO_0000123> <http://purl.obolibrary.org/obo/IAO_0000124> <http://purl.obolibrary.org/obo/IAO_0000125> <http://purl.obolibrary.org/obo/IAO_0000423> <http://purl.obolibrary.org/obo/IAO_0000428>)\nDifferentIndividuals(<http://purl.obolibrary.org/obo/IAO_0000226> <http://purl.obolibrary.org/obo/IAO_0000227> <http://purl.obolibrary.org/obo/IAO_0000228> <http://purl.obolibrary.org/obo/IAO_0000229>)\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002327> <http://purl.obolibrary.org/obo/RO_0002211> <http://purl.obolibrary.org/obo/RO_0002333>) <http://purl.obolibrary.org/obo/RO_0002448>)\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002327> <http://purl.obolibrary.org/obo/RO_0002411> <http://purl.obolibrary.org/obo/RO_0002233>) <http://purl.obolibrary.org/obo/RO_0002566>)\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002327> <http://purl.obolibrary.org/obo/RO_0002411> <http://purl.obolibrary.org/obo/RO_0002333>) <http://purl.obolibrary.org/obo/RO_0002566>)\nDLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> \"true\"^^xsd:boolean) Annotation(rdfs:comment \"MF(X)-directly_regulates->MF(Y)-enabled_by->GP(Z) => MF(Y)-has_input->GP(Y) e.g. if 'protein kinase activity'(X) directly_regulates 'protein binding activity (Y)and this is enabled by GP(Z) then X has_input Z\"^^xsd:string) Annotation(rdfs:label \"infer input from direct reg\"^^xsd:string) Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002327> Variable(<http://purl.obolibrary.org/obo/ro.owl#z>) Variable(<http://purl.obolibrary.org/obo/ro.owl#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002578> Variable(<http://purl.obolibrary.org/obo/ro.owl#x>) Variable(<http://purl.obolibrary.org/obo/ro.owl#y>)) ClassAtom(<http://purl.obolibrary.org/obo/GO_0003674> Variable(<http://purl.obolibrary.org/obo/ro.owl#x>)) ClassAtom(<http://purl.obolibrary.org/obo/GO_0003674> Variable(<http://purl.obolibrary.org/obo/ro.owl#y>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002233> Variable(<http://purl.obolibrary.org/obo/ro.owl#x>) Variable(<http://purl.obolibrary.org/obo/ro.owl#z>))))\nDLSafeRule(Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002578> Variable(<urn:swrl#a1>) Variable(<urn:swrl#a2>)) ClassAtom(<http://purl.obolibrary.org/obo/GO_0016301> Variable(<urn:swrl#a1>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002333> Variable(<urn:swrl#a1>) Variable(<urn:swrl#g1>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002333> Variable(<urn:swrl#a2>) Variable(<urn:swrl#g2>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002447> Variable(<urn:swrl#g1>) Variable(<urn:swrl#g2>))))\nDLSafeRule(Annotation(rdfs:label \"'causally downstream of' and 'overlaps' should be disjoint properties (a SWRL rule is required because these are non-simple properties).\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002404> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002131> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)))Head(ClassAtom(owl:Nothing Variable(<urn:swrl#x>)) ClassAtom(owl:Nothing Variable(<urn:swrl#y>))))\nDLSafeRule(Annotation(rdfs:label \"'causally upstream of' and 'overlaps' should be disjoint properties (a SWRL rule is required because these are non-simple properties).\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002411> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002131> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)))Head(ClassAtom(owl:Nothing Variable(<urn:swrl#x>)) ClassAtom(owl:Nothing Variable(<urn:swrl#y>))))\nDLSafeRule(Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002213> Variable(<urn:swrl#y>) Variable(<urn:swrl#z>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002212> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002212> Variable(<urn:swrl#x>) Variable(<urn:swrl#z>))))\nDLSafeRule(Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002213> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002212> Variable(<urn:swrl#y>) Variable(<urn:swrl#z>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002212> Variable(<urn:swrl#x>) Variable(<urn:swrl#z>))))\nAnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/PCO_0000029> \"\"@en)\n)
 
 [Term]
 id: BFO:0000001
@@ -43,7 +38,6 @@ name: continuant
 def: "An entity that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts." []
 is_a: BFO:0000001 ! entity
 disjoint_from: BFO:0000003 ! occurrent
-relationship: part_of BFO:0000002 ! continuant
 property_value: BFO:0000179 "continuant" xsd:string
 property_value: BFO:0000180 "Continuant" xsd:string
 property_value: IAO:0000116 "BFO 2 Reference: Continuant entities are entities which can be sliced to yield parts only along the spatial dimension, yielding for example the parts of your table which we call its legs, its top, its nails. ‘My desk stretches from the window to the door. It has spatial parts, and can be sliced (in space) in two. With respect to time, however, a thing is a continuant.’ [60, p. 240" xsd:string
@@ -63,7 +57,6 @@ id: BFO:0000003
 name: occurrent
 def: "An entity that has temporal parts and that happens, unfolds or develops through time." []
 is_a: BFO:0000001 ! entity
-relationship: part_of BFO:0000003 ! occurrent
 property_value: BFO:0000179 "occurrent" xsd:string
 property_value: BFO:0000180 "Occurrent" xsd:string
 property_value: IAO:0000116 "BFO 2 Reference: every occurrent that is not a temporal or spatiotemporal region is s-dependent on some independent continuant that is not a spatial region" xsd:string
@@ -85,7 +78,6 @@ def: "b is an independent continuant = Def. b is a continuant which is such that
 is_a: BFO:0000002 ! continuant
 disjoint_from: BFO:0000020 ! specifically dependent continuant
 disjoint_from: BFO:0000031 ! generically dependent continuant
-relationship: part_of BFO:0000004 ! independent continuant
 property_value: BFO:0000179 "ic" xsd:string
 property_value: BFO:0000180 "IndependentContinuant" xsd:string
 property_value: IAO:0000112 "a chair" xsd:string
@@ -131,7 +123,6 @@ def: "A continuant that inheres in or is borne by other entities. Every instance
 def: "b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])" [] {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/050-003"}
 is_a: BFO:0000002 ! continuant
 disjoint_from: BFO:0000031 ! generically dependent continuant
-relationship: part_of BFO:0000020 ! specifically dependent continuant
 property_value: BFO:0000179 "sdc" xsd:string
 property_value: BFO:0000180 "SpecificallyDependentContinuant" xsd:string
 property_value: IAO:0000112 "of one-sided specifically dependent continuants: the mass of this tomato" xsd:string
@@ -241,34 +232,6 @@ id: GO:0003824
 name: catalytic activity
 is_a: GO:0003674 ! molecular_function
 property_value: isDefinedBy http://purl.obolibrary.org/obo/go.owl
-
-[Term]
-id: GO:0008150
-name: biological_process
-namespace: biological_process
-alt_id: GO:0000004
-alt_id: GO:0007582
-alt_id: GO:0044699
-def: "A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence." [GOC:pdt]
-comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
-subset: goslim_aspergillus
-subset: goslim_candida
-subset: goslim_chembl
-subset: goslim_generic
-subset: goslim_metagenomics
-subset: goslim_pir
-subset: goslim_plant
-subset: goslim_pombe
-subset: goslim_yeast
-synonym: "biological process" EXACT []
-synonym: "physiological process" EXACT []
-synonym: "single organism process" RELATED []
-synonym: "single-organism process" RELATED []
-xref: Wikipedia:Biological_process
-is_a: BFO:0000015 ! process
-property_value: isDefinedBy http://purl.obolibrary.org/obo/go.owl
-created_by: jl
-creation_date: 2012-09-19T15:05:24Z
 
 [Term]
 id: GO:0016301
@@ -752,6 +715,7 @@ def: "A material entity that consists of two or more organisms, viruses, or viro
 comment: May be of the same or different species.
 is_a: BFO:0000027 ! object aggregate
 is_a: PCO:0000031 ! organismal entity
+intersection_of: BFO:0000027 ! object aggregate
 intersection_of: RO:0002351 CARO:0001010 {all_only="true"} ! has member organism or virus or viroid
 intersection_of: RO:0002351 CARO:0001010 {minCardinality="2"} ! has member organism or virus or viroid
 relationship: RO:0002351 CARO:0001010 ! has member organism or virus or viroid
@@ -807,29 +771,10 @@ property_value: IAO:0000114 IAO:0000428
 property_value: IAO:0000116 "These may not belong under BFO:quality. May be better to call them community characteristics, and classify as specifically dependent continuants. Need to look at process profiles in BFO2." xsd:string
 
 [Term]
-id: PCO:0000017
-name: species as a collection of organisms
-def: "A collection of organisms that has as members every organism of given species and no organisms of any other species." []
-def: "A collection of organisms that has as parts every organism of a species and no organisms of any other species." []
-comment: This term is neutral with respect to which organisms are included in a species. Membership will depend on the species concept and the taxonomic assertions used to define the species. These criteria must be specified by the user.
-synonym: "taxonomic group" EXACT []
-xref: GENO:0000113
-xref: Species
-xref: TAXRANK:0000006
-is_a: PCO:0000018 ! single-species collection of organisms
-is_a: PCO:0000059 ! taxon as collection of organisms
-property_value: IAO:0000114 IAO:0000120
-property_value: IAO:0000116 "At the moment there is no way to specify in an OWL axiom that the collection includes every individual of a species. This should be added, if possible." xsd:string
-
-[Term]
 id: PCO:0000018
 name: single-species collection of organisms
 def: "A material entity that has as parts two or more organisms, viruses, or viroids of the same species and no members of any other species." []
 is_a: PCO:0000000 ! collection of organisms
-intersection_of: PCO:0000055 PCO:0000017 {cardinality="1"} ! has member of species as a collection of organisms
-intersection_of: RO:0002351 CARO:0001010 {all_only="true"} ! has member organism or virus or viroid
-intersection_of: RO:0002351 CARO:0001010 {minCardinality="2"} ! has member organism or virus or viroid
-relationship: PCO:0000055 PCO:0000017 ! has member of species as a collection of organisms
 property_value: IAO:0000114 IAO:0000120
 property_value: IAO:0000118 "collection of organisms of the same species" xsd:string
 
@@ -852,14 +797,44 @@ union_of: PCO:0000000 ! collection of organisms
 property_value: IAO:0000114 IAO:0000120
 
 [Term]
-id: PCO:0000059
-name: taxon as collection of organisms
-def: "A collection of organisms that has as members every organism of a taxon and no organisms of any other equal or higher ranked taxon. The taxon may be at any level. If the taxon is species, then this is the same as the class species as a collection of organisms. When defining a taxon, it is generally understood that members include both living organisms and dead organisms that are known through specimens or observations." []
-comment: This term is neutral with respect to which organisms are included in a taxon. Membership will depend on the taxon concept and the assertions used to define the taxon. These criteria must be specified by the user. The best practice is to refer to a formal taxon description, rather than informal names "Genus species" without an authority.
-xref: data:1868
+id: PCO:0001000
+name: pair of interacting organisms
+def: "A collection of organisms that consists of exactly two organism, viruses, or viroids that are interacting with each other." []
 is_a: PCO:0000000 ! collection of organisms
-property_value: IAO:0000114 IAO:0000428
-property_value: IAO:0000117 https://orcid.org/0000-0001-8815-0078
+intersection_of: PCO:0000000 ! collection of organisms
+intersection_of: RO:0002351 CARO:0001010 {cardinality="2"} ! has member organism or virus or viroid
+
+[Typedef]
+id: BFO:0000050
+name: part of
+def: "a core relation that holds between a part and its whole" []
+property_value: IAO:0000111 "is part of" xsd:string
+property_value: IAO:0000112 "my brain is part of my body (continuant parthood, two material entities)" xsd:string
+property_value: IAO:0000112 "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)" xsd:string
+property_value: IAO:0000112 "this day is part of this year (occurrent parthood)" xsd:string
+property_value: IAO:0000116 "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other." xsd:string
+property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime" xsd:string
+property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)\n\nA continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'." xsd:string
+property_value: IAO:0000118 "part_of" xsd:string
+property_value: RO:0001900 RO:0001901
+property_value: seeAlso http://www.obofoundry.org/ro/#OBO_REL:part_of xsd:string
+is_transitive: true
+inverse_of: BFO:0000051 ! has part
+
+[Typedef]
+id: BFO:0000051
+name: has part
+def: "a core relation that holds between a whole and its part" []
+property_value: IAO:0000111 "has part" xsd:string
+property_value: IAO:0000112 "my body has part my brain (continuant parthood, two material entities)" xsd:string
+property_value: IAO:0000112 "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)" xsd:string
+property_value: IAO:0000112 "this year has part this day (occurrent parthood)" xsd:string
+property_value: IAO:0000116 "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part." xsd:string
+property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime" xsd:string
+property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)\n\nA continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'." xsd:string
+property_value: IAO:0000118 "has_part" xsd:string
+property_value: RO:0001900 RO:0001901
+is_transitive: true
 
 [Typedef]
 id: BFO:0000062
@@ -874,7 +849,6 @@ property_value: IAO:0000118 "preceded_by" xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 domain: BFO:0000003 ! occurrent
 range: BFO:0000003 ! occurrent
-holds_over_chain: part_of BFO:0000062
 is_transitive: true
 is_a: RO:0002086 ! ends after
 inverse_of: BFO:0000063 ! precedes
@@ -888,38 +862,8 @@ property_value: IAO:0000111 "precedes" xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
 domain: BFO:0000003 ! occurrent
 range: BFO:0000003 ! occurrent
-holds_over_chain: part_of BFO:0000063
 is_transitive: true
 is_a: RO:0002222 ! temporally related to
-
-[Typedef]
-id: BFO:0000066
-name: occurs in
-def: "b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t" []
-comment: Paraphrase of definition: a relation between a process and an independent continuant, in which the process takes place entirely within the independent continuant
-property_value: IAO:0000111 "occurs in" xsd:string
-property_value: IAO:0000118 "occurs_in" xsd:string
-property_value: IAO:0000118 "unfolds in" xsd:string
-property_value: IAO:0000118 "unfolds_in" xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
-domain: BFO:0000003 ! occurrent
-range: BFO:0000004 ! independent continuant
-holds_over_chain: part_of BFO:0000066
-inverse_of: BFO:0000067 ! contains process
-transitive_over: part_of ! part_of
-
-[Typedef]
-id: BFO:0000067
-name: contains process
-def: "[copied from inverse property 'occurs in'] b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t" []
-comment: Paraphrase of definition: a relation between an independent continuant and a process, in which the process takes place entirely within the independent continuant
-property_value: IAO:0000111 "site of" xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
-
-[Typedef]
-id: PCO:0000055
-name: has member of
-domain: PCO:0000000 ! collection of organisms
 
 [Typedef]
 id: RO:0000052
@@ -974,59 +918,6 @@ property_value: IAO:0000118 "has_participant" xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 domain: BFO:0000003 ! occurrent
 range: BFO:0000002 ! continuant
-holds_over_chain: has_part RO:0000057
-
-[Typedef]
-id: RO:0002013
-name: has regulatory component activity
-def: "A 'has regulatory component activity' B if A and B are GO molecular functions (GO_0003674), A has_component B and A is regulated by B." []
-property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-is_a: RO:0002017 ! has component activity
-is_a: RO:0002334 ! regulated by
-created_by: dos
-creation_date: 2017-05-24T09:30:46Z
-
-[Typedef]
-id: RO:0002014
-name: has negative regulatory component activity
-def: "A relationship that holds between a GO molecular function and a component of that molecular function that negatively regulates the activity of the whole.  More formally, A 'has regulatory component activity' B iff :A and B are GO molecular functions (GO_0003674), A has_component B and A is negatively regulated by B." []
-comment: By convention GO molecular functions are classified by their effector function.  Internal regulatory functions are treated as components.  For example, NMDA glutmate receptor activity is a cation channel activity with positive regulatory component 'glutamate binding' and negative regulatory components including 'zinc binding' and 'magnesium binding'.
-property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-is_a: RO:0002013 ! has regulatory component activity
-is_a: RO:0002335 ! negatively regulated by
-created_by: dos
-creation_date: 2017-05-24T09:31:01Z
-
-[Typedef]
-id: RO:0002015
-name: has positive regulatory component activity
-def: "A relationship that holds between a GO molecular function and a component of that molecular function that positively regulates the activity of the whole.  More formally, A 'has regulatory component activity' B iff :A and B are GO molecular functions (GO_0003674), A has_component B and A is positively regulated by B." []
-comment: By convention GO molecular functions are classified by their effector function and internal regulatory functions are treated as components.  So, for example calmodulin has a protein binding activity that has positive regulatory component activity calcium binding activity. Receptor tyrosine kinase activity is a tyrosine kinase activity that has positive regulatory component 'ligand binding'.
-property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-is_a: RO:0002013 ! has regulatory component activity
-is_a: RO:0002336 ! positively regulated by
-created_by: dos
-creation_date: 2017-05-24T09:31:17Z
-
-[Typedef]
-id: RO:0002017
-name: has component activity
-comment: A 'has component activity' B if A is A and B are molecular functions (GO_0003674) and A has_component B.
-property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-is_a: RO:0002018 ! has component process
-created_by: dos
-creation_date: 2017-05-24T09:44:33Z
-
-[Typedef]
-id: RO:0002018
-name: has component process
-def: "w 'has process component' p if p and w are processes,  w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type." []
-property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-domain: BFO:0000015 ! process
-range: BFO:0000015 ! process
-is_a: RO:0002180 ! has component
-created_by: dos
-creation_date: 2017-05-24T09:49:21Z
 
 [Typedef]
 id: RO:0002022
@@ -1037,38 +928,6 @@ is_a: RO:0002334 ! regulated by
 inverse_of: RO:0002578 ! directly regulates
 created_by: dos
 creation_date: 2017-09-17T13:52:24Z
-
-[Typedef]
-id: RO:0002023
-name: directly negatively regulated by
-def: "Process(P2) is directly negatively regulated by process(P1) iff: P1 negatively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  negatively regulates the kinase activity (P2) of protein B then P2 directly negatively regulated by P1." [GOC:dos]
-property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-is_a: RO:0002022 ! directly regulated by
-inverse_of: RO:0002630 ! directly negatively regulates
-created_by: dos
-creation_date: 2017-09-17T13:52:38Z
-
-[Typedef]
-id: RO:0002024
-name: directly positively regulated by
-def: "Process(P2) is directly postively regulated by process(P1) iff: P1 positively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding positively regulates the kinase activity (P2) of protein B then P2 is directly postively regulated by P1." [GOC:dos]
-property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-is_a: RO:0002022 ! directly regulated by
-inverse_of: RO:0002629 ! directly positively regulates
-created_by: dos
-creation_date: 2017-09-17T13:52:47Z
-
-[Typedef]
-id: RO:0002025
-name: has effector activity
-def: "A 'has effector activity' B if A and B are GO molecular functions (GO_0003674),  A 'has component activity' B and B is the effector (output function) of B.  Each compound function has only one effector activity." [GOC:dos]
-comment: This relation is designed for constructing compound molecular functions, typically in combination with one or more regulatory component activity relations.
-property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-is_functional: true
-is_a: RO:0002017 ! has component activity
-is_a: RO:0002211 ! regulates
-created_by: dos
-creation_date: 2017-09-22T14:14:36Z
 
 [Typedef]
 id: RO:0002086
@@ -1106,34 +965,22 @@ is_a: BFO:0000063 ! precedes
 id: RO:0002131
 name: overlaps
 def: "x overlaps y if and only if there exists some z such that x has part z and z part of y" []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 subset: ro-eco
 property_value: IAO:0000114 IAO:0000125
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 property_value: RO:0001900 RO:0001901
-holds_over_chain: has_part part_of {http://purl.obolibrary.org/obo/RO_0002582="true"}
-holds_over_chain: has_part RO:0002131
-holds_over_chain: part_of part_of
 is_a: RO:0002323 ! mereotopologically related to
-transitive_over: part_of ! part_of
 expand_expression_to: "http://purl.obolibrary.org/obo/BFO_0000051 some (http://purl.obolibrary.org/obo/BFO_0000050 some ?Y)" []
-
-[Typedef]
-id: RO:0002180
-name: has component
-def: "w 'has component' p if w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type." []
-subset: ro-eco
-property_value: IAO:0000114 IAO:0000125
-property_value: IAO:0000116 "The definition of 'has component' is still under discussion. The challenge is in providing a definition that does not imply transitivity." xsd:string
-property_value: IAO:0000232 "For use in recording has_part with a cardinality constraint, because OWL does not permit cardinality constraints to be used in combination with transitive object properties. In situations where you would want to say something like 'has part exactly 5 digit, you would instead use has_component exactly 5 digit." xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-property_value: RO:0001900 RO:0001901
-property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:Componency
-is_a: has_part ! has part
 
 [Typedef]
 id: RO:0002211
 name: regulates
 def: "process(P1) regulates process(P2) iff: P1 results in the initiation or termination of P2 OR affects the frequency of its initiation or termination OR affects the magnitude or rate of output of P2." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000116 "We use 'regulates' here to specifically imply control. However, many colloquial usages of the term correctly correspond to the weaker relation of 'causally upstream of or within' (aka influences). Consider relabeling to make things more explicit" xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
@@ -1156,6 +1003,9 @@ inverse_of: RO:0002334 ! regulated by
 id: RO:0002212
 name: negatively regulates
 def: "Process(P1) negatively regulates process(P2) iff: P1 terminates P2, or P1 descreases the the frequency of initiation of P2 or the magnitude or rate of output of P2." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
 property_value: IAO:0000589 "negatively regulates (process to process)" xsd:string
@@ -1169,6 +1019,9 @@ inverse_of: RO:0002335 ! negatively regulated by
 id: RO:0002213
 name: positively regulates
 def: "Process(P1) postively regulates process(P2) iff: P1 initiates P2, or P1 increases the the frequency of initiation of P2 or the magnitude or rate of output of P2." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
 property_value: IAO:0000589 "positively regulates (process to process)" xsd:string
@@ -1196,7 +1049,6 @@ property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 domain: BFO:0000004 ! independent continuant
 range: BFO:0000015 ! process
 is_a: RO:0002216 ! capable of part of
-expand_expression_to: "RO_0000053 some (RO_0000054 only ?Y)" []
 
 [Typedef]
 id: RO:0002216
@@ -1206,10 +1058,8 @@ property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000118 "has function in" xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 property_value: seeAlso "defining-property-chains-involving-reflexivity"
-holds_over_chain: RO:0002215 part_of {http://purl.obolibrary.org/obo/RO_0002582="true"}
 is_a: RO:0002328 ! functionally related to
 is_a: RO:0002500 ! causal agent in process
-expand_expression_to: "RO_0000053 some (RO_0000054 only (BFO_0000050 some ?Y))" []
 
 [Typedef]
 id: RO:0002222
@@ -1229,13 +1079,15 @@ range: BFO:0000003 ! occurrent
 id: RO:0002233
 name: has input
 def: "p has input c iff: p is a process, c is a material entity, c is a participant in p, c is present at the start of p, and the state of c is modified during p." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 subset: ro-eco
 property_value: IAO:0000114 IAO:0000125
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000118 "consumes" xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 domain: BFO:0000015 ! process
-range: BFO:0000040 ! material entity
 is_a: RO:0000057 ! has participant
 inverse_of: RO:0002352 ! input of
 
@@ -1243,6 +1095,7 @@ inverse_of: RO:0002352 ! input of
 id: RO:0002263
 name: acts upstream of
 def: "c acts upstream of p if and only if c enables some f that is involved in p' and p' occurs chronologically before p, is not part of p, and affects the execution of p. c is a material entity and f, p, p' are processes." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
 property_value: IAO:0000112 "A faulty traffic light (material entity) whose malfunctioning (a process) is causally upstream of a traffic collision (a process): the traffic light acts upstream of the collision." xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 property_value: seeAlso http://wiki.geneontology.org/index.php/Acts_upstream_of
@@ -1253,6 +1106,7 @@ is_a: RO:0002264 ! acts upstream of or within
 id: RO:0002264
 name: acts upstream of or within
 def: "c acts upstream of or within p if c is enables f, and f is causally upstream of or within p. c is a material entity and p is an process." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
 synonym: "affects" RELATED []
 property_value: IAO:0000112 "A gene product that has some activity, where that activity may be a part of a pathway or upstream of the pathway." xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
@@ -1264,6 +1118,8 @@ is_a: RO:0002500 ! causal agent in process
 id: RO:0002304
 name: causally upstream of, positive effect
 comment: holds between x and y if and only if x is causally upstream of y and the progression of x increases the frequency, rate or extent of y
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 property_value: http://purl.org/dc/terms/creator "cjm" xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 property_value: RO:0004049 RO:0002411
@@ -1292,6 +1148,7 @@ property_value: RO:0001900 RO:0001901
 [Typedef]
 id: RO:0002327
 name: enables
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
 property_value: IAO:0000112 "a particular instances of akt-2 enables some instance of protein kinase activity" xsd:string
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000118 "catalyzes" xsd:string
@@ -1304,8 +1161,6 @@ property_value: IAO:0000232 "This relation is currently used experimentally by t
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 is_a: RO:0002215 ! capable of
 inverse_of: RO:0002333 ! enabled by
-transitive_over: has_part ! has part
-transitive_over: RO:0002017 ! has component activity
 
 [Typedef]
 id: RO:0002328
@@ -1316,33 +1171,10 @@ property_value: IAO:0000232 "This is a grouping relation that collects relations
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 
 [Typedef]
-id: RO:0002329
-name: part of structure that is capable of
-def: "this relation holds between c and p when c is part of some c', and c' is capable of p." []
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-property_value: IAO:0000118 "false" xsd:boolean
-property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-holds_over_chain: part_of RO:0002215 {http://purl.obolibrary.org/obo/RO_0002581="true"}
-is_a: RO:0002328 ! functionally related to
-
-[Typedef]
-id: RO:0002331
-name: involved in
-def: "c involved_in p if and only if c enables some process p', and p' is part of p" []
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-property_value: IAO:0000118 "actively involved in" xsd:string
-property_value: IAO:0000118 "enables part of" xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-property_value: seeAlso Involved:in
-holds_over_chain: RO:0002327 part_of
-is_a: RO:0000056 ! participates in
-is_a: RO:0002431 ! involved in or involved in regulation of
-transitive_over: part_of ! part_of
-
-[Typedef]
 id: RO:0002333
 name: enabled by
 def: "inverse of enables" []
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 is_a: RO:0000057 ! has participant
@@ -1388,7 +1220,7 @@ property_value: IAO:0000118 "is member of" xsd:string
 property_value: IAO:0000118 "member part of" xsd:string
 property_value: IAO:0000119 "SIO" xsd:string
 property_value: RO:0001900 RO:0001901
-is_a: part_of ! part_of
+is_a: BFO:0000050 ! part of
 inverse_of: RO:0002351 ! has member
 
 [Typedef]
@@ -1397,7 +1229,7 @@ name: has member
 def: "has member is a mereological relation between a collection and an item." []
 property_value: IAO:0000119 "SIO" xsd:string
 property_value: RO:0001900 RO:0001901
-is_a: has_part ! has part
+is_a: BFO:0000051 ! has part
 
 [Typedef]
 id: RO:0002352
@@ -1445,6 +1277,8 @@ property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 id: RO:0002411
 name: causally upstream of
 def: "p is causally upstream of q if and only if p precedes q and p and q are linked in a causal chain" []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 property_value: IAO:0000114 IAO:0000428
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
@@ -1494,7 +1328,6 @@ def: "c involved in regulation of p if c is involved in some p' and p' regulates
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 holds_over_chain: RO:0002327 RO:0002211
-holds_over_chain: RO:0002331 RO:0002211
 is_a: RO:0002263 ! acts upstream of
 is_a: RO:0002431 ! involved in or involved in regulation of
 
@@ -1506,7 +1339,6 @@ property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 property_value: RO:0004049 RO:0002428
 holds_over_chain: RO:0002327 RO:0002213
-holds_over_chain: RO:0002331 RO:0002213
 is_a: RO:0002428 ! involved in regulation of
 
 [Typedef]
@@ -1517,7 +1349,6 @@ property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 property_value: RO:0004050 RO:0002428
 holds_over_chain: RO:0002327 RO:0002212
-holds_over_chain: RO:0002331 RO:0002212
 is_a: RO:0002428 ! involved in regulation of
 
 [Typedef]
@@ -1531,19 +1362,6 @@ property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 is_a: RO:0002264 ! acts upstream of or within
 is_a: RO:0002328 ! functionally related to
 is_a: RO:0002500 ! causal agent in process
-
-[Typedef]
-id: RO:0002432
-name: is active in
-def: "c executes activity in d if and only if c enables p and p occurs_in d.  Assuming no action at a distance by gene products, if a gene product enables (is capable of) a process that occurs in some structure, it must have at least some part in that structure." [GOC:cjm, GOC:dos]
-synonym: "enables activity in" EXACT []
-property_value: IAO:0000112 "A protein that enables activity in a cytosol." xsd:string
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-property_value: IAO:0000118 "executes activity in" xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-holds_over_chain: RO:0002327 BFO:0000066 {http://purl.obolibrary.org/obo/RO_0002581="true"}
-is_a: RO:0002131 ! overlaps
-is_a: RO:0002328 ! functionally related to
 
 [Typedef]
 id: RO:0002434
@@ -1598,48 +1416,11 @@ is_a: RO:0002436 ! molecularly interacts with
 is_a: RO:0011002 ! regulates activity of
 
 [Typedef]
-id: RO:0002449
-name: directly negatively regulates activity of
-def: "The entity A, immediately upstream of the entity B, has an activity that negatively regulates an activity performed by B. \nFor example, A and B may be gene products and binding of B by A negatively regulates the kinase activity of B." []
-synonym: "molecularly decreases activity of" EXACT []
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-property_value: IAO:0000117 "Vasundra Touré" xsd:string
-property_value: IAO:0000118 "directly inhibits" xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-domain: BFO:0000040 ! material entity
-range: BFO:0000040 ! material entity
-is_a: RO:0002448 ! directly regulates activity of
-
-[Typedef]
-id: RO:0002450
-name: directly positively regulates activity of
-def: "The entity A, immediately upstream of the entity B, has an activity that positively regulates an activity performed by B. \nFor example, A and B may be gene products and binding of B by A positively regulates the kinase activity of B." []
-synonym: "molecularly increases activity of" EXACT []
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-property_value: IAO:0000117 "Vasundra Touré" xsd:string
-property_value: IAO:0000118 "directly activates" xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-domain: BFO:0000040 ! material entity
-range: BFO:0000040 ! material entity
-is_a: RO:0002448 ! directly regulates activity of
-
-[Typedef]
 id: RO:0002464
 name: helper property (not for use in curation)
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000232 "This property or its subproperties is not to be used directly. These properties exist as helper properties that are used to support OWL reasoning." xsd:string
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-
-[Typedef]
-id: RO:0002479
-name: has part that occurs in
-def: "p has part that occurs in c if and only if there exists some p1, such that p has_part p1, and p1 occurs in c." []
-subset: ro-eco
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-domain: BFO:0000003 ! occurrent
-range: BFO:0000004 ! independent continuant
-holds_over_chain: has_part BFO:0000066 {http://purl.obolibrary.org/obo/RO_0002581="true"}
 
 [Typedef]
 id: RO:0002481
@@ -1724,6 +1505,9 @@ is_a: RO:0002506 ! causal relation between entities
 id: RO:0002578
 name: directly regulates
 def: "Process(P1) directly regulates process(P2) iff: P1 regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  regulates the kinase activity (P2) of protein B then P1 directly regulates P2." []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
 property_value: IAO:0000589 "directly regulates (processual)" xsd:string
@@ -1731,17 +1515,6 @@ property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 property_value: RO:0002575 RO:0002211
 is_a: RO:0002211 ! regulates
 is_a: RO:0002412 ! immediately causally upstream of
-
-[Typedef]
-id: RO:0002584
-name: has part structure that is capable of
-def: "s 'has part structure that is capable of' p if and only if there exists some part x such that s 'has part' x and x 'capable of' p" []
-property_value: IAO:0000112 "gland SubClassOf 'has part structure that is capable of' some 'secretion by cell'" xsd:string
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-holds_over_chain: has_part RO:0002215
-is_a: RO:0002328 ! functionally related to
-is_a: RO:0002595 ! causal relation between material entity and a process
 
 [Typedef]
 id: RO:0002595
@@ -1793,40 +1566,9 @@ property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 is_a: RO:0002410 ! causally related to
 
 [Typedef]
-id: RO:0002629
-name: directly positively regulates
-def: "Process(P1) directly postively regulates process(P2) iff: P1 positively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding positively regulates the kinase activity (P2) of protein B then P1 directly positively regulates P2." []
-property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
-property_value: IAO:0000589 "directly positively regulates (process to process)" xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-property_value: RO:0004049 RO:0002578
-is_a: RO:0002213 ! positively regulates
-is_a: RO:0002578 ! directly regulates
-
-[Typedef]
-id: RO:0002630
-name: directly negatively regulates
-def: "Process(P1) directly negatively regulates process(P2) iff: P1 negatively regulates P2 via direct physical interaction between an agent executing P1 (or some part of P1) and an agent executing P2 (or some part of P2).  For example, if protein A has protein binding activity(P1) that targets protein B and this binding  negatively regulates the kinase activity (P2) of protein B then P1 directly negatively regulates P2." []
-property_value: IAO:0000119 http://purl.obolibrary.org/obo/ro/docs/causal-relations
-property_value: IAO:0000589 "directly negatively regulates (process to process)" xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-property_value: RO:0004050 RO:0002578
-is_a: RO:0002212 ! negatively regulates
-is_a: RO:0002578 ! directly regulates
-
-[Typedef]
-id: RO:0004031
-name: enables subfunction
-def: "Holds between an entity and an process P where the entity enables some larger compound process, and that larger process has-part P." []
-property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
-holds_over_chain: RO:0002327 has_part
-is_a: RO:0002328 ! functionally related to
-created_by: cjm
-creation_date: 2018-01-25T23:20:13Z
-
-[Typedef]
 id: RO:0004032
 name: acts upstream of or within, positive effect
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 property_value: RO:0004049 RO:0002264
 property_value: seeAlso http://wiki.geneontology.org/index.php/Acts_upstream_of_or_within,_positive_effect
@@ -1838,6 +1580,7 @@ creation_date: 2018-01-26T23:49:30Z
 [Typedef]
 id: RO:0004033
 name: acts upstream of or within, negative effect
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 property_value: RO:0004050 RO:0002264
 holds_over_chain: RO:0002327 RO:0004046
@@ -1849,6 +1592,7 @@ creation_date: 2018-01-26T23:49:51Z
 id: RO:0004034
 name: acts upstream of, positive effect
 def: "c 'acts upstream of, positive effect' p if c is enables f, and f is causally upstream of p, and the direction of f is positive" []
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 property_value: RO:0004049 RO:0002263
 property_value: seeAlso http://wiki.geneontology.org/index.php/Acts_upstream_of,_positive_effect
@@ -1862,6 +1606,7 @@ creation_date: 2018-01-26T23:53:14Z
 id: RO:0004035
 name: acts upstream of, negative effect
 def: "c 'acts upstream of, negative effect' p if c is enables f, and f is causally upstream of p, and the direction of f is negative" []
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
 property_value: isDefinedBy http://purl.obolibrary.org/obo/ro.owl
 property_value: RO:0004050 RO:0002263
 property_value: seeAlso http://wiki.geneontology.org/index.php/Acts_upstream_of,_negative_effect
@@ -1921,29 +1666,6 @@ domain: PATO:0000001 ! quality
 range: PATO:0000001 ! quality
 
 [Typedef]
-id: has_part
-name: has part
-name: has_part
-namespace: external
-namespace: quality
-def: "a core relation that holds between a whole and its part" []
-def: "Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2." [PATOC:CJM]
-comment: We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'.
-xref: BFO:0000051
-property_value: IAO:0000111 "has part" xsd:string
-property_value: IAO:0000112 "my body has part my brain (continuant parthood, two material entities)" xsd:string
-property_value: IAO:0000112 "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)" xsd:string
-property_value: IAO:0000112 "this year has part this day (occurrent parthood)" xsd:string
-property_value: IAO:0000116 "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part." xsd:string
-property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime" xsd:string
-property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)\n\nA continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'." xsd:string
-property_value: IAO:0000118 "has_part" xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
-property_value: RO:0001900 RO:0001901
-is_transitive: true
-is_a: RO:0002131 ! overlaps
-
-[Typedef]
 id: increased_in_magnitude_relative_to
 name: increased_in_magnitude_relative_to
 namespace: quality
@@ -1954,38 +1676,6 @@ domain: PATO:0000001 ! quality
 range: PATO:0000001 ! quality
 is_transitive: true
 is_a: different_in_magnitude_relative_to ! different_in_magnitude_relative_to
-
-[Typedef]
-id: part_of
-name: part of
-name: part_of
-namespace: external
-namespace: quality
-def: "a core relation that holds between a part and its whole" []
-xref: BFO:0000050
-property_value: IAO:0000111 "is part of" xsd:string
-property_value: IAO:0000112 "my brain is part of my body (continuant parthood, two material entities)" xsd:string
-property_value: IAO:0000112 "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)" xsd:string
-property_value: IAO:0000112 "this day is part of this year (occurrent parthood)" xsd:string
-property_value: IAO:0000116 "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other." xsd:string
-property_value: IAO:0000116 "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See https://code.google.com/p/obo-relations/wiki/ROAndTime" xsd:string
-property_value: IAO:0000116 "Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)\n\nA continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'." xsd:string
-property_value: IAO:0000118 "part_of" xsd:string
-property_value: isDefinedBy http://purl.obolibrary.org/obo/bfo.owl
-property_value: RO:0001900 RO:0001901
-property_value: RO:0040042 BFO:0000002
-property_value: RO:0040042 BFO:0000003
-property_value: RO:0040042 BFO:0000004
-property_value: RO:0040042 BFO:0000017
-property_value: RO:0040042 BFO:0000019
-property_value: RO:0040042 BFO:0000020
-property_value: RO:0040042 BFO:0000031
-property_value: seeAlso http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections
-property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:PartOf
-property_value: seeAlso http://www.obofoundry.org/ro/#OBO_REL:part_of xsd:string
-is_transitive: true
-is_a: RO:0002131 ! overlaps
-inverse_of: has_part ! has part
 
 [Typedef]
 id: reciprocal_of

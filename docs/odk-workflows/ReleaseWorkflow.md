@@ -29,7 +29,7 @@ This will create all the specified release targets (OBO, OWL, JSON, and the vari
 
 ## Review the release
 
-1. (Optional) Rough check. This step is frequently skipped, but for the more paranoid among us (like the author of this doc), this is a 3 minute additional effort for some peace of mind. Open the main release (ont.owl) in you favourite development environment (i.e. Protege) and eyeball the hierarchy. We recommend two simple checks: 
+1. (Optional) Rough check. This step is frequently skipped, but for the more paranoid among us (like the author of this doc), this is a 3 minute additional effort for some peace of mind. Open the main release (pato.owl) in you favourite development environment (i.e. Protege) and eyeball the hierarchy. We recommend two simple checks: 
     1. Does the very top level of the hierarchy look ok? This means that all new terms have been imported/updated correctly.
     2. Does at least one change that you know should be in this release appear? For example, a new class. This means that the release was actually based on the recent edit file. 
 2. Commit your changes to the branch and make a pull request
