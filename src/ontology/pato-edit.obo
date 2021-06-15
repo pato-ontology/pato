@@ -13,6 +13,7 @@ default-namespace: quality
 import: http://purl.obolibrary.org/obo/pato/components/pato_ext.owl
 import: http://purl.obolibrary.org/obo/pato/imports/go_import.owl
 import: http://purl.obolibrary.org/obo/pato/imports/ro_import.owl
+import: http://purl.obolibrary.org/obo/pato/imports/uberon_import.owl
 ontology: pato
 property_value: http://purl.org/dc/elements/1.1/description "An ontology of phenotypic qualities (properties, attributes or characteristics)." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And Trait Ontology" xsd:string
@@ -22042,6 +22043,57 @@ def: "A cell morphology that inheres in neurons which possess a single axon and 
 xref: ILX:0107196
 xref: NLX:378
 is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070028
+name: extratelencephalic projecting
+def: "A neuron projection quality that is a characteristic of neurons whose soma is located in the telencephalon and that project to structures outside the telencephalon" [DOI:10.1101/2020.10.19.343129]
+synonym: "ET projecting" EXACT []
+xref: ILX:0770101
+is_a: PATO:0070033 ! neuron projection quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070029
+name: corticothalamic projecting
+def: "A neuron projection quality that is a characteristic of neurons with soma in the cerebral cortex and projections to the thalamus." [DOI:10.1101/2020.10.19.343129]
+synonym: "CT projecting" EXACT []
+xref: ILX:0770102
+is_a: PATO:0070033 ! neuron projection quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070030
+name: near projecting
+def: "A neuron projection quality that is a characteristic of neurons with projections that terminate locally rather than distantly." [DOI:10.1101/2020.10.19.343129]
+synonym: "NP" EXACT []
+xref: ILX:0770103
+is_a: PATO:0070033 ! neuron projection quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070031
+name: corticomedulla projecting
+def: "A neuron projection quality that is a characteristic of neurons that project to the medulla oblongata from other brain regions." [DOI:10.1101/2020.10.19.343129]
+synonym: "MY projecting" EXACT []
+is_a: PATO:0070033 ! neuron projection quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070033
+name: neuron projection quality
+def: "A physical quality inhering in a neuron by virtue of the relative location of its soma and the regions to which it projects and makes synaptic contacts in." [DOI:10.1101/2020.10.19.343129]
+is_a: PATO:0001018 ! physical quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070034
+name: intratelencephalic projecting
+def: "A neuron projection quality that is a characteristic of neurons with both soma and projections entirely within the telencephalon." [DOI:10.1101/2020.10.19.343129]
+synonym: "IT projecting" EXACT []
+xref: ILX:0770100
+is_a: PATO:0070033 ! neuron projection quality
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
