@@ -788,6 +788,7 @@ is_obsolete: true
 id: PATO:0000125
 name: mass
 def: "A physical quality that inheres in a bearer by virtue of the proportion of the bearer's amount of matter." [PATOC:GVG]
+comment: For any biological use of PATO,  the concept that should be used is 'mass' and not 'weight'. For example, increased weight of an organism.
 subset: attribute_slim
 subset: relational_slim
 subset: scalar_slim
@@ -806,7 +807,8 @@ is_obsolete: true
 [Term]
 id: PATO:0000128
 name: weight
-def: "A physical quality inhering in a bearer that has mass near a gravitational body." [Wikipedia:http\://en.wikipedia.org/wiki/Weight]
+def: "A physical quality inhering in a bearer that has mass near a gravitational body. Important usage note: Note that this ontology has a class for a similar concept, mass (PATO:0000125). Mass and weight are not equivalent. For most use cases, the class mass is strongly preferred over weight." [Wikipedia:http\://en.wikipedia.org/wiki/Weight, https://en.wikipedia.org/wiki/Mass#Weight_vs._mass]
+comment: For any biological use of PATO,  the concept that should be used is 'mass' and not 'weight'. For example, increased weight of an organism.
 subset: attribute_slim
 subset: scalar_slim
 is_a: PATO:0001035 ! force
@@ -22025,6 +22027,13 @@ name: inverted pyramidal morphology
 def: "A pyramidal cell morphology that inheres in neurons which have an apical tree which is oriented towards the white matter." [PMID:30715238]
 xref: ilxtr:InvertedPyramidalPhenotype
 is_a: PATO:0070017 ! standard pyramidal morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070025
+name: unipolar neuron morphology
+def: "A cell morphology that inheres in neurons with only one process, a neurite, that extends from the cell body. The neurite then branches to form dendritic and axonal processes." [WikipediaVersioned:Unipolar_neuron&oldid=994458581]
+is_a: PATO:0010006 ! cell morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
