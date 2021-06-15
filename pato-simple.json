@@ -4703,6 +4703,11 @@
           "sub": "http://purl.obolibrary.org/obo/PATO_0040029"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0001018",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070033"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/PATO_0001019",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0001164"
@@ -10240,6 +10245,11 @@
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
           "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070025"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
+          "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0070026"
         },
         {
@@ -10983,6 +10993,31 @@
           "sub": "http://purl.obolibrary.org/obo/PATO_0070015"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070033",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070028"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070033",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070029"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070033",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070030"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070033",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070031"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070033",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070034"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/pato#different_in_magnitude_relative_to",
           "pred": "subPropertyOf",
           "sub": "http://purl.obolibrary.org/obo/pato#decreased_in_magnitude_relative_to"
@@ -11034,11 +11069,11 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2021-05-26"
+            "val": "2021-06-15"
           }
         ],
         "subsets": [],
-        "version": "http://purl.obolibrary.org/obo/pato/releases/2021-05-26/pato-simple.json",
+        "version": "http://purl.obolibrary.org/obo/pato/releases/2021-06-15/pato-simple.json",
         "xrefs": []
       },
       "nodes": [
@@ -11118,6 +11153,10 @@
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
                 "val": "quality"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "uberon"
               },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#shorthand",
@@ -11202,6 +11241,10 @@
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
                 "val": "quality"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "uberon"
               },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#shorthand",
@@ -13556,6 +13599,9 @@
                 "val": "quality"
               }
             ],
+            "comments": [
+              "For any biological use of PATO,  the concept that should be used is 'mass' and not 'weight'. For example, increased weight of an organism."
+            ],
             "definition": {
               "val": "A physical quality that inheres in a bearer by virtue of the proportion of the bearer's amount of matter.",
               "xrefs": [
@@ -13608,10 +13654,14 @@
                 "val": "quality"
               }
             ],
+            "comments": [
+              "For any biological use of PATO,  the concept that should be used is 'mass' and not 'weight'. For example, increased weight of an organism."
+            ],
             "definition": {
-              "val": "A physical quality inhering in a bearer that has mass near a gravitational body.",
+              "val": "A physical quality inhering in a bearer that has mass near a gravitational body. Important usage note: Note that this ontology has a class for a similar concept, mass (PATO:0000125). Mass and weight are not equivalent. For most use cases, the class mass is strongly preferred over weight.",
               "xrefs": [
-                "Wikipedia:http://en.wikipedia.org/wiki/Weight"
+                "Wikipedia:http://en.wikipedia.org/wiki/Weight",
+                "https://en.wikipedia.org/wiki/Mass#Weight_vs._mass"
               ]
             },
             "subsets": [
@@ -77729,8 +77779,9 @@
               }
             ],
             "definition": {
-              "val": "A cell morphology that inheres in neurons which have two clusters of branches that originate directly from the soma and extend in opposite directions and axons that form a plexus which spreads widely. Compared to bipolar morphology, bitufted morphology has branching that occur close to the soma.",
+              "val": "A cell morphology that inheres in neurons which have two clusters of primary dendrites that originate directly and extend from opposite ends of the soma, and axons that form a plexus which spreads widely. Compared to the narrow vertical axonal projection of bipolar morphology, and the 'horse-tail' axonal cluster of double boquet cells, bitufted morphology has wide horizontal axonal spans, and branching that occur close to the soma. Their vertical projection is also less extensive and crosses mostly to neighboring layers.",
               "xrefs": [
+                "PMID:15378039",
                 "PMID:18568015",
                 "doi:10.1016/b978-0-12-369497-3.10004-4"
               ]
@@ -77983,6 +78034,29 @@
           "type": "CLASS"
         },
         {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070025",
+          "lbl": "unipolar neuron morphology",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A cell morphology that inheres in neurons with only one process, a neurite, that extends from the cell body. The neurite then branches to form dendritic and axonal processes.",
+              "xrefs": [
+                "WikipediaVersioned:Unipolar_neuron&oldid=994458581"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
           "id": "http://purl.obolibrary.org/obo/PATO_0070026",
           "lbl": "multipolar neuron morphology",
           "meta": {
@@ -78008,6 +78082,199 @@
               },
               {
                 "val": "NLX:378"
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070028",
+          "lbl": "extratelencephalic projecting",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A neuron projection quality that is a characteristic of neurons whose soma is located in the telencephalon and that project to structures outside the telencephalon",
+              "xrefs": [
+                "DOI:10.1101/2020.10.19.343129"
+              ]
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "ET projecting",
+                "xrefs": []
+              }
+            ],
+            "xrefs": [
+              {
+                "val": "ILX:0770101"
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070029",
+          "lbl": "corticothalamic projecting",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A neuron projection quality that is a characteristic of neurons with soma in the cerebral cortex and projections to the thalamus.",
+              "xrefs": [
+                "DOI:10.1101/2020.10.19.343129"
+              ]
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "CT projecting",
+                "xrefs": []
+              }
+            ],
+            "xrefs": [
+              {
+                "val": "ILX:0770102"
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070030",
+          "lbl": "near projecting",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A neuron projection quality that is a characteristic of neurons with projections that terminate locally rather than distantly.",
+              "xrefs": [
+                "DOI:10.1101/2020.10.19.343129"
+              ]
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "NP",
+                "xrefs": []
+              }
+            ],
+            "xrefs": [
+              {
+                "val": "ILX:0770103"
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070031",
+          "lbl": "corticomedulla projecting",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A neuron projection quality that is a characteristic of neurons that project to the medulla oblongata from other brain regions.",
+              "xrefs": [
+                "DOI:10.1101/2020.10.19.343129"
+              ]
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "MY projecting",
+                "xrefs": []
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070033",
+          "lbl": "neuron projection quality",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A physical quality inhering in a neuron by virtue of the relative location of its soma and the regions to which it projects and makes synaptic contacts in.",
+              "xrefs": [
+                "DOI:10.1101/2020.10.19.343129"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070034",
+          "lbl": "intratelencephalic projecting",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A neuron projection quality that is a characteristic of neurons with both soma and projections entirely within the telencephalon.",
+              "xrefs": [
+                "DOI:10.1101/2020.10.19.343129"
+              ]
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "IT projecting",
+                "xrefs": []
+              }
+            ],
+            "xrefs": [
+              {
+                "val": "ILX:0770100"
               }
             ]
           },
@@ -78076,10 +78343,93 @@
               {
                 "pred": "http://purl.obolibrary.org/obo/RO_0001900",
                 "val": "http://purl.obolibrary.org/obo/RO_0001901"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "uberon"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#shorthand",
+                "val": "bearer_of"
               }
             ],
             "definition": {
               "val": "a relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence",
+              "xrefs": []
+            },
+            "xrefs": [
+              {
+                "val": "RO:0000053"
+              }
+            ]
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/RO_0002100",
+          "lbl": "has soma location",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000114",
+                "val": "http://purl.obolibrary.org/obo/IAO_0000125"
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
+                "val": "David Osumi-Sutherland"
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000424",
+                "val": "<http://purl.obolibrary.org/obo/BFO_0000051> some (\n   <http://purl.obolibrary.org/obo/GO_0043025> and   <http://purl.obolibrary.org/obo/BFO_0000050> some ?Y)"
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/RO_0001900",
+                "val": "http://purl.obolibrary.org/obo/RO_0001901"
+              }
+            ],
+            "definition": {
+              "val": "Relation between a neuron and an anatomical structure that its soma is part of.",
+              "xrefs": []
+            }
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/RO_0002102",
+          "lbl": "axon synapses in",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000114",
+                "val": "http://purl.obolibrary.org/obo/IAO_0000125"
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
+                "val": "Chris Mungall"
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
+                "val": "David Osumi-Sutherland"
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000117",
+                "val": "David Osumi-Sutherland"
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0000424",
+                "val": "<http://purl.obolibrary.org/obo/BFO_0000051> some (\n   <http://purl.obolibrary.org/obo/GO_0030424> and <http://purl.obolibrary.org/obo/BFO_0000051> some (\n      <http://purl.obolibrary.org/obo/GO_0042734> and <http://purl.obolibrary.org/obo/BFO_0000050> some (\n         <http://purl.obolibrary.org/obo/GO_0045202> and <http://purl.obolibrary.org/obo/BFO_0000050> some ?Y)))"
+              },
+              {
+                "pred": "http://purl.obolibrary.org/obo/RO_0001900",
+                "val": "http://purl.obolibrary.org/obo/RO_0001901"
+              },
+              {
+                "pred": "http://purl.org/spar/cito/citesAsAuthority",
+                "val": "http://www.ncbi.nlm.nih.gov/pubmed/22402613"
+              }
+            ],
+            "definition": {
+              "val": "Relation between a neuron and some structure its axon forms (chemical) synapses in.",
               "xrefs": []
             }
           },
@@ -78107,6 +78457,14 @@
                 "val": "http://purl.obolibrary.org/obo/RO_0001901"
               },
               {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "uberon"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#shorthand",
+                "val": "has_component"
+              },
+              {
                 "pred": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
                 "val": "http://ontologydesignpatterns.org/wiki/Submissions:Componency"
               }
@@ -78117,6 +78475,11 @@
             },
             "subsets": [
               "http://purl.obolibrary.org/obo/ro/subsets#ro-eco"
+            ],
+            "xrefs": [
+              {
+                "val": "RO:0002180"
+              }
             ]
           },
           "type": "PROPERTY"
@@ -78529,6 +78892,27 @@
             ],
             "comments": [
               "Relation binding a relational quality or disposition to the relevant type of entity."
+            ]
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.org/dc/elements/1.1/creator",
+          "lbl": "creator",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "uberon"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#is_metadata_tag",
+                "val": "true"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#shorthand",
+                "val": "dc-creator"
+              }
             ]
           },
           "type": "PROPERTY"
@@ -80027,7 +80411,22 @@
           "type": "CLASS"
         }
       ],
-      "propertyChainAxioms": []
+      "propertyChainAxioms": [
+        {
+          "chainPredicateIds": [
+            "http://purl.obolibrary.org/obo/BFO_0000050",
+            "http://purl.obolibrary.org/obo/RO_0002100"
+          ],
+          "predicateId": "http://purl.obolibrary.org/obo/RO_0002100"
+        },
+        {
+          "chainPredicateIds": [
+            "http://purl.obolibrary.org/obo/BFO_0000050",
+            "http://purl.obolibrary.org/obo/RO_0002102"
+          ],
+          "predicateId": "http://purl.obolibrary.org/obo/RO_0002102"
+        }
+      ]
     }
   ]
 }
