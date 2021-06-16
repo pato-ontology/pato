@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2021-05-26/pato.obo
+data-version: releases/2021-06-15/pato.obo
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -21,7 +21,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology of phen
 property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And Trait Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
 property_value: IAO:0000700 PATO:0000001
-property_value: owl:versionInfo "2021-05-26" xsd:string
+property_value: owl:versionInfo "2021-06-15" xsd:string
 
 [Term]
 id: PATO:0000000
@@ -792,6 +792,7 @@ is_obsolete: true
 id: PATO:0000125
 name: mass
 def: "A physical quality that inheres in a bearer by virtue of the proportion of the bearer's amount of matter." [PATOC:GVG]
+comment: For any biological use of PATO,  the concept that should be used is 'mass' and not 'weight'. For example, increased weight of an organism.
 subset: attribute_slim
 subset: relational_slim
 subset: scalar_slim
@@ -810,7 +811,8 @@ is_obsolete: true
 [Term]
 id: PATO:0000128
 name: weight
-def: "A physical quality inhering in a bearer that has mass near a gravitational body." [Wikipedia:http\://en.wikipedia.org/wiki/Weight]
+def: "A physical quality inhering in a bearer that has mass near a gravitational body. Important usage note: Note that this ontology has a class for a similar concept, mass (PATO:0000125). Mass and weight are not equivalent. For most use cases, the class mass is strongly preferred over weight." [https://en.wikipedia.org/wiki/Mass#Weight_vs._mass, Wikipedia:http\://en.wikipedia.org/wiki/Weight]
+comment: For any biological use of PATO,  the concept that should be used is 'mass' and not 'weight'. For example, increased weight of an organism.
 subset: attribute_slim
 subset: scalar_slim
 is_a: PATO:0001035 ! force
@@ -21242,7 +21244,7 @@ name: increased rate of occurrence
 def: "A rate of occurrence that is relatively high." [https://orcid.org/0000-0003-4148-4606]
 is_a: PATO:0000912 ! increased rate
 is_a: PATO:0050000 ! rate of occurence
-property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0003-4148-4606 xsd:string
+property_value: dc-creator https://orcid.org/0000-0003-4148-4606 xsd:string
 property_value: http://purl.org/dc/elements/1.1/date 2020-08-19T09:23:19Z xsd:dateTime
 
 [Term]
@@ -21251,7 +21253,7 @@ name: decreased rate of occurrence
 def: "A rate of occurrence that is relatively low." [https://orcid.org/0000-0003-4148-4606]
 is_a: PATO:0000911 ! decreased rate
 is_a: PATO:0050000 ! rate of occurence
-property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0003-4148-4606 xsd:string
+property_value: dc-creator https://orcid.org/0000-0003-4148-4606 xsd:string
 property_value: http://purl.org/dc/elements/1.1/date 2020-08-19T09:24:35Z xsd:dateTime
 
 [Term]
@@ -21260,7 +21262,7 @@ name: increased rate of continuous process
 def: "A rate of output of a continuous process that is relatively high." [https://orcid.org/0000-0003-4148-4606]
 is_a: PATO:0000912 ! increased rate
 is_a: PATO:0050001 ! rate of continuous process
-property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0003-4148-4606 xsd:string
+property_value: dc-creator https://orcid.org/0000-0003-4148-4606 xsd:string
 property_value: http://purl.org/dc/elements/1.1/date 2020-08-19T09:24:56Z xsd:dateTime
 
 [Term]
@@ -21269,7 +21271,7 @@ name: decreased rate of continuous process
 def: "A rate of output of a continuous process that is relatively low." [https://orcid.org/0000-0003-4148-4606]
 is_a: PATO:0000911 ! decreased rate
 is_a: PATO:0050001 ! rate of continuous process
-property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0003-4148-4606 xsd:string
+property_value: dc-creator https://orcid.org/0000-0003-4148-4606 xsd:string
 property_value: http://purl.org/dc/elements/1.1/date 2020-08-19T09:25:07Z xsd:dateTime
 
 [Term]
@@ -21407,7 +21409,7 @@ created_by: http://orcid.org/0000-0001-7258-9596
 [Term]
 id: PATO:0070012
 name: bitufted cell morphology
-def: "A cell morphology that inheres in neurons which have two clusters of branches that originate directly from the soma and extend in opposite directions and axons that form a plexus which spreads widely. Compared to bipolar morphology, bitufted morphology has branching that occur close to the soma." [doi:10.1016/b978-0-12-369497-3.10004-4, PMID:18568015]
+def: "A cell morphology that inheres in neurons which have two clusters of primary dendrites that originate directly and extend from opposite ends of the soma, and axons that form a plexus which spreads widely. Compared to the narrow vertical axonal projection of bipolar morphology, and the 'horse-tail' axonal cluster of double boquet cells, bitufted morphology has wide horizontal axonal spans, and branching that occur close to the soma. Their vertical projection is also less extensive and crosses mostly to neighboring layers." [doi:10.1016/b978-0-12-369497-3.10004-4, PMID:15378039, PMID:18568015]
 xref: ilxtr:BituftedPhenotype
 is_a: PATO:0010006 ! cell morphology
 created_by: http://orcid.org/0000-0001-7258-9596
@@ -21481,12 +21483,70 @@ is_a: PATO:0070017 ! standard pyramidal morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
+id: PATO:0070025
+name: unipolar neuron morphology
+def: "A cell morphology that inheres in neurons with only one process, a neurite, that extends from the cell body. The neurite then branches to form dendritic and axonal processes." [WikipediaVersioned:Unipolar_neuron&oldid=994458581]
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
 id: PATO:0070026
 name: multipolar neuron morphology
 def: "A cell morphology that inheres in neurons which possess a single axon and many dendrites and dendritic branches." [WikipediaVersioned:Multipolar_neuron&oldid=1022942606]
 xref: ILX:0107196
 xref: NLX:378
 is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070028
+name: extratelencephalic projecting
+def: "A neuron projection quality that is a characteristic of neurons whose soma is located in the telencephalon and that project to structures outside the telencephalon" [DOI:10.1101/2020.10.19.343129]
+synonym: "ET projecting" EXACT []
+xref: ILX:0770101
+is_a: PATO:0070033 ! neuron projection quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070029
+name: corticothalamic projecting
+def: "A neuron projection quality that is a characteristic of neurons with soma in the cerebral cortex and projections to the thalamus." [DOI:10.1101/2020.10.19.343129]
+synonym: "CT projecting" EXACT []
+xref: ILX:0770102
+is_a: PATO:0070033 ! neuron projection quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070030
+name: near projecting
+def: "A neuron projection quality that is a characteristic of neurons with projections that terminate locally rather than distantly." [DOI:10.1101/2020.10.19.343129]
+synonym: "NP" EXACT []
+xref: ILX:0770103
+is_a: PATO:0070033 ! neuron projection quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070031
+name: corticomedulla projecting
+def: "A neuron projection quality that is a characteristic of neurons that project to the medulla oblongata from other brain regions." [DOI:10.1101/2020.10.19.343129]
+synonym: "MY projecting" EXACT []
+is_a: PATO:0070033 ! neuron projection quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070033
+name: neuron projection quality
+def: "A physical quality inhering in a neuron by virtue of the relative location of its soma and the regions to which it projects and makes synaptic contacts in." [DOI:10.1101/2020.10.19.343129]
+is_a: PATO:0001018 ! physical quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070034
+name: intratelencephalic projecting
+def: "A neuron projection quality that is a characteristic of neurons with both soma and projections entirely within the telencephalon." [DOI:10.1101/2020.10.19.343129]
+synonym: "IT projecting" EXACT []
+xref: ILX:0770100
+is_a: PATO:0070033 ! neuron projection quality
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -21498,9 +21558,34 @@ created_by: http://orcid.org/0000-0002-3410-4655
 creation_date: 2020-10-30T08:08:48Z
 
 [Typedef]
-id: RO:0000053
+id: RO:0002100
+name: has soma location
+def: "Relation between a neuron and an anatomical structure that its soma is part of." []
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
+property_value: RO:0001900 RO:0001901
+transitive_over: part_of ! part_of
+expand_expression_to: "BFO_0000051 some (\n   GO_0043025 and   BFO_0000050 some ?Y)" []
+
+[Typedef]
+id: RO:0002102
+name: axon synapses in
+def: "Relation between a neuron and some structure its axon forms (chemical) synapses in." []
+property_value: http://purl.org/spar/cito/citesAsAuthority http://www.ncbi.nlm.nih.gov/pubmed/22402613
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
+property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
+property_value: RO:0001900 RO:0001901
+transitive_over: part_of ! part_of
+expand_expression_to: "BFO_0000051 some (\n   GO_0030424 and BFO_0000051 some (\n      GO_0042734 and BFO_0000050 some (\n         GO_0045202 and BFO_0000050 some ?Y)))" []
+
+[Typedef]
+id: bearer_of
 name: bearer of
+namespace: uberon
 def: "a relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence" []
+xref: RO:0000053
 property_value: IAO:0000111 "bearer of" xsd:string
 property_value: IAO:0000112 "this apple is bearer of this red color" xsd:string
 property_value: IAO:0000112 "this vase is bearer of this fragility" xsd:string
@@ -21510,20 +21595,15 @@ property_value: IAO:0000118 "is bearer of" xsd:string
 property_value: RO:0001900 RO:0001901
 
 [Typedef]
-id: RO:0002180
-name: has component
-def: "w 'has component' p if w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type." []
-subset: ro-eco
-property_value: IAO:0000114 IAO:0000125
-property_value: IAO:0000116 "The definition of 'has component' is still under discussion. The challenge is in providing a definition that does not imply transitivity." xsd:string
-property_value: IAO:0000232 "For use in recording has_part with a cardinality constraint, because OWL does not permit cardinality constraints to be used in combination with transitive object properties. In situations where you would want to say something like 'has part exactly 5 digit, you would instead use has_component exactly 5 digit." xsd:string
-property_value: RO:0001900 RO:0001901
-property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:Componency
-is_a: has_part ! has part
-
-[Typedef]
 id: correlates_with
 name: correlates_with
+
+[Typedef]
+id: dc-creator
+name: creator
+namespace: uberon
+xref: http://purl.org/dc/elements/1.1/creator
+is_metadata_tag: true
 
 [Typedef]
 id: decreased_in_magnitude_relative_to
@@ -21551,6 +21631,20 @@ domain: PATO:0000001 ! quality
 range: PATO:0000001 ! quality
 created_by: cjm
 creation_date: 2009-08-26T02:50:08Z
+
+[Typedef]
+id: has_component
+name: has component
+namespace: uberon
+def: "w 'has component' p if w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type." []
+subset: ro-eco
+xref: RO:0002180
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "The definition of 'has component' is still under discussion. The challenge is in providing a definition that does not imply transitivity." xsd:string
+property_value: IAO:0000232 "For use in recording has_part with a cardinality constraint, because OWL does not permit cardinality constraints to be used in combination with transitive object properties. In situations where you would want to say something like 'has part exactly 5 digit, you would instead use has_component exactly 5 digit." xsd:string
+property_value: RO:0001900 RO:0001901
+property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:Componency
+is_a: has_part ! has part
 
 [Typedef]
 id: has_cross_section
@@ -21587,6 +21681,7 @@ id: has_part
 name: has part
 name: has_part
 namespace: external
+namespace: uberon
 def: "a core relation that holds between a whole and its part" []
 def: "Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2." [PATOC:CJM]
 comment: We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'.
@@ -21666,6 +21761,7 @@ id: part_of
 name: part of
 name: part_of
 namespace: external
+namespace: uberon
 def: "a core relation that holds between a part and its whole" []
 subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
 subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
