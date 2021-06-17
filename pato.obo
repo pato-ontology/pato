@@ -1,11 +1,15 @@
 format-version: 1.2
-data-version: releases/2020-08-02/pato.obo
+data-version: releases/2021-06-15/pato.obo
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
 subsetdef: cell_quality "cell_quality"
 subsetdef: disposition_slim "Disposition slim"
 subsetdef: hpo_slim "Human phenotype slim"
+subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
+subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
+subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
+subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
 subsetdef: mpath_slim "Pathology slim"
 subsetdef: relational_slim "Relational slim: types of quality that require an additional entity in order to exist"
 subsetdef: ro-eco ""
@@ -17,6 +21,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology of phen
 property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And Trait Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
 property_value: IAO:0000700 PATO:0000001
+property_value: owl:versionInfo "2021-06-15" xsd:string
 
 [Term]
 id: PATO:0000000
@@ -787,6 +792,7 @@ is_obsolete: true
 id: PATO:0000125
 name: mass
 def: "A physical quality that inheres in a bearer by virtue of the proportion of the bearer's amount of matter." [PATOC:GVG]
+comment: For any biological use of PATO,  the concept that should be used is 'mass' and not 'weight'. For example, increased weight of an organism.
 subset: attribute_slim
 subset: relational_slim
 subset: scalar_slim
@@ -805,7 +811,8 @@ is_obsolete: true
 [Term]
 id: PATO:0000128
 name: weight
-def: "A physical quality inhering in a bearer that has mass near a gravitational body." [Wikipedia:http\://en.wikipedia.org/wiki/Weight]
+def: "A physical quality inhering in a bearer that has mass near a gravitational body. Important usage note: Note that this ontology has a class for a similar concept, mass (PATO:0000125). Mass and weight are not equivalent. For most use cases, the class mass is strongly preferred over weight." [https://en.wikipedia.org/wiki/Mass#Weight_vs._mass, Wikipedia:http\://en.wikipedia.org/wiki/Weight]
+comment: For any biological use of PATO,  the concept that should be used is 'mass' and not 'weight'. For example, increased weight of an organism.
 subset: attribute_slim
 subset: scalar_slim
 is_a: PATO:0001035 ! force
@@ -2251,7 +2258,7 @@ subset: value_slim
 synonym: "frequent" RELATED []
 synonym: "high frequency" EXACT []
 is_a: PATO:0000044 ! frequency
-is_a: PATO:0000912 ! increased rate
+is_a: PATO:0055003 ! increased rate of occurrence
 relationship: is_opposite_of PATO:0000381 ! decreased frequency
 
 [Term]
@@ -2263,7 +2270,7 @@ subset: value_slim
 synonym: "infrequent" RELATED []
 synonym: "low frequency" EXACT []
 is_a: PATO:0000044 ! frequency
-is_a: PATO:0000911 ! decreased rate
+is_a: PATO:0055004 ! decreased rate of occurrence
 relationship: is_opposite_of PATO:0000380 ! increased frequency
 
 [Term]
@@ -19460,6 +19467,15 @@ created_by: dos
 creation_date: 2019-07-18T18:49:08Z
 
 [Term]
+id: PATO:0010006
+name: cell morphology
+def: "A quality of a single cell inhering in the bearer by virtue of the bearer's size or shape or structure." [ORCID:0000-0002-7073-9172]
+comment: Use this term for morphologies that can *only* inhere in a cell, e.g. morphological qualities inhering in a cell by virtue of the presence, location or shape of one or more cell parts.
+is_a: PATO:0000051 ! morphology
+created_by: http://orcid.org/0000-0002-7073-9172
+creation_date: 2021-01-23T11:31:53Z
+
+[Term]
 id: PATO:0015001
 name: absence due to degeneration
 def: "Absence due to a degenerative process." [PATOC:PortlandMeetingFeb2015]
@@ -20174,6 +20190,7 @@ id: PATO:0040042
 name: decreased proportionality to
 def: "A proportionality quality inhering in a bearer by virtue of the bearer's decreased magnitude in respect to a related entity." [https://orcid.org/0000-0001-5208-3432]
 comment: Example: decreased proportion of CD4 T cells relative to total T cells.
+subset: relational_slim
 synonym: "decreased proportion" EXACT []
 synonym: "decreased proportionality" EXACT []
 synonym: "decreased quotient" EXACT []
@@ -20186,6 +20203,7 @@ id: PATO:0040043
 name: increased proportionality to
 def: "A proportionality quality inhering in a bearer by virtue of the bearer's increased magnitude in respect to a related entity." [https://orcid.org/0000-0001-5208-3432]
 comment: Example: increased proportion of CD4 T cells relative to total T cells.
+subset: relational_slim
 synonym: "increased proportion" EXACT []
 synonym: "increased proportionality" EXACT []
 synonym: "increased quotient" EXACT []
@@ -20206,6 +20224,15 @@ id: PATO:0040047
 name: fragmented
 def: "Existing or functioning as though broken into separate parts; disorganized; disunified." [https://www.dictionary.com/browse/unfragmented]
 is_a: PATO:0001444 ! broken
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040048
+name: erythematous
+def: "Red due to increase blood circulation in a defined area." [https://orcid.org/0000-0002-0736-9199]
+synonym: "erythema" EXACT []
+synonym: "skin redness" EXACT []
+is_a: PATO:0000051 ! morphology
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
@@ -21212,6 +21239,42 @@ created_by: midori
 creation_date: 2019-07-29T14:23:31Z
 
 [Term]
+id: PATO:0055003
+name: increased rate of occurrence
+def: "A rate of occurrence that is relatively high." [https://orcid.org/0000-0003-4148-4606]
+is_a: PATO:0000912 ! increased rate
+is_a: PATO:0050000 ! rate of occurence
+property_value: dc-creator https://orcid.org/0000-0003-4148-4606 xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2020-08-19T09:23:19Z xsd:dateTime
+
+[Term]
+id: PATO:0055004
+name: decreased rate of occurrence
+def: "A rate of occurrence that is relatively low." [https://orcid.org/0000-0003-4148-4606]
+is_a: PATO:0000911 ! decreased rate
+is_a: PATO:0050000 ! rate of occurence
+property_value: dc-creator https://orcid.org/0000-0003-4148-4606 xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2020-08-19T09:24:35Z xsd:dateTime
+
+[Term]
+id: PATO:0055005
+name: increased rate of continuous process
+def: "A rate of output of a continuous process that is relatively high." [https://orcid.org/0000-0003-4148-4606]
+is_a: PATO:0000912 ! increased rate
+is_a: PATO:0050001 ! rate of continuous process
+property_value: dc-creator https://orcid.org/0000-0003-4148-4606 xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2020-08-19T09:24:56Z xsd:dateTime
+
+[Term]
+id: PATO:0055006
+name: decreased rate of continuous process
+def: "A rate of output of a continuous process that is relatively low." [https://orcid.org/0000-0003-4148-4606]
+is_a: PATO:0000911 ! decreased rate
+is_a: PATO:0050001 ! rate of continuous process
+property_value: dc-creator https://orcid.org/0000-0003-4148-4606 xsd:string
+property_value: http://purl.org/dc/elements/1.1/date 2020-08-19T09:25:07Z xsd:dateTime
+
+[Term]
 id: PATO:0060001
 name: sex-specific
 def: "A quality inhering in a bearer by virtue of the bearer's being present in one sex and absent from the other in members of the same species." [http://orcid.org/0000-0002-1373-1705]
@@ -21249,10 +21312,280 @@ def: "A degree of pigmentation quality that is diversified with patches, or irre
 is_a: PATO:0002248 ! pigmented
 created_by: https://orcid.org/0000-0002-3528-5267
 
+[Term]
+id: PATO:0070001
+name: neurogliaform morphology
+def: "A cell morphology that inheres in neurons which have a small round soma, a large number of short, smooth, or slightly beaded primary dendrites that give rise to only a few secondary branches, and a branched axon that establishes a dense axonal mesh with thin shafts." [PMID:17122314]
+xref: ilxtr:NeurogliaformPhenotype
+is_a: PATO:0070026 ! multipolar neuron morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070002
+name: basket cell morphology
+def: "A cell morphology that inheres in multipolar neurons with densely branched terminal axonal arborizations that form basket-like structures surrounding and synapsing to the somas of target cells." [doi:10.1016/b978-0-12-369497-3.10004-4, WikipediaVersioned:Basket_cell&oldid=951703880]
+xref: ILX:0101123
+xref: ilxtr:BasketPhenotype
+xref: nifext:3
+is_a: PATO:0070026 ! multipolar neuron morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070003
+name: small basket cell morphology
+def: "A basket cell morphology that inheres in neurons with axonal arbors composed of frequent, short, curvy axonal branches that tend to be near their somata and within the same layer." [PMID:11884355]
+xref: ilxtr:SmallBasketPhenotype
+is_a: PATO:0070002 ! basket cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070004
+name: large basket cell morphology
+def: "A basket cell morphology that inheres in neurons that are large, and typically ascend to give rise to many long horizontally and vertically projecting axon collaterals that traverse neighboring columns and can extend through all cortical layers." [PMID:11884355]
+xref: ilxtr:LargeBasketPhenotype
+is_a: PATO:0070002 ! basket cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070005
+name: nest basket cell morphology
+def: "A basket cell morphology that inheres in neurons which have simpler dendritic arbors (compared to small or large basket cell morphology), and an axonal plexus of intermediate density, composed of a few long, smooth axonal branches." [PMID:11884355]
+xref: ilxtr:NestBasketPhenotype
+is_a: PATO:0070002 ! basket cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070006
+name: bipolar morphology
+def: "A cell morphology that inheres in neurons which have two principal fibres (dendrites or axon) that emerge from the soma and begin to branch some distance from it, have few spines, and branch in narrow fields. This is in contrast to bitufted morphology where branching occurs close to the soma." [doi:10.1016/b978-0-12-369497-3.10004-4, PMID:18568015]
+xref: ILX:0101312
+xref: ilxtr:BipolarPhenotype
+xref: nifext:2
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070007
+name: martinotti morphology
+def: "A cell morphology that inheres in neurons which are large and non-spiny, with dendrites radiating in a multipolar or bitufted pattern, often favouring the descending side, and axons that ascend directly from the superficial side of the soma, and travel upward without branching." [doi:10.1016/b978-0-12-369497-3.10004-4]
+xref: ilxtr:MartinottiPhenotype
+is_a: PATO:0070026 ! multipolar neuron morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070008
+name: 'T-shaped' martinotti morphology
+def: "A martinotti cell morphology that inheres in neurons which have axons that form a horizontal ramification, making it T-shaped." [doi:10.1016/b978-0-12-369497-3.10004-4]
+is_a: PATO:0070007 ! martinotti morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070009
+name: 'fanning-out' martinotti morphology
+def: "A martinotti cell morphology that inheres in neurons which have axons that form a fan-like plexus." [doi:10.1016/b978-0-12-369497-3.10004-4]
+is_a: PATO:0070007 ! martinotti morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070010
+name: stellate morphology
+def: "A cell morphology that inheres in neurons that have dendritic processes radiating from the cell body forming a star-like shape." [ISBN:9780123973481]
+xref: ILX:0111036
+xref: SAO:9271919883
+is_a: PATO:0070026 ! multipolar neuron morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070011
+name: chandelier cell morphology
+def: "A cell morphology that inheres in neurons which are small and round, and make highly specialized synapses with the axon initial segments of pyramidal neurons, wrapping them with candle-shaped synaptic “cartridges”." [doi:10.1016/b978-0-12-369497-3.10004-4]
+comment: Chandelier cells can be bitufted or multipolar. {xref="DOI:10.1016/B978-0-12-369497-3.10004-4"}
+xref: ILX:0102028
+xref: ilxtr:ChandelierPhenotype
+xref: nifext:4
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070012
+name: bitufted cell morphology
+def: "A cell morphology that inheres in neurons which have two clusters of primary dendrites that originate directly and extend from opposite ends of the soma, and axons that form a plexus which spreads widely. Compared to the narrow vertical axonal projection of bipolar morphology, and the 'horse-tail' axonal cluster of double boquet cells, bitufted morphology has wide horizontal axonal spans, and branching that occur close to the soma. Their vertical projection is also less extensive and crosses mostly to neighboring layers." [doi:10.1016/b978-0-12-369497-3.10004-4, PMID:15378039, PMID:18568015]
+xref: ilxtr:BituftedPhenotype
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070013
+name: spiny stellate cell morphology
+def: "A cell morphology that inheres in neurons which have spiny basal dendrites and resemble pyramidal cells but lose their apical dendrites as they mature. Their axons nearly always emerge from the descending side of the soma, but often recurve and ascend with arc-like collaterals." [doi:10.1016/b978-0-12-369497-3.10004-4]
+xref: ilxtr:SpinyStellatePhenotype
+is_a: PATO:0070026 ! multipolar neuron morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070015
+name: pyramidal family morphology
+def: "A cell morphology that inheres in neurons which have a pyramidal shaped soma, a single axon, a large apical dendrite and multiple basal dendrites." [doi:10.1016/b978-0-12-369497-3.10004-4]
+xref: ILX:0109553
+xref: SAO:1465673360
+is_a: PATO:0070026 ! multipolar neuron morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070016
+name: horizontal pyramidal morphology
+def: "A pyramidal family morphology that inheres in neurons which have an apical tree which is oriented parallel to the pia." [PMID:30715238]
+xref: ilxtr:HorizontalPyramidalPhenotype
+is_a: PATO:0070015 ! pyramidal family morphology
+disjoint_from: PATO:0070017 ! standard pyramidal morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070017
+name: standard pyramidal morphology
+def: "A pyramidal family morphology that inheres in neurons which have a standard pyramidal shape with its apical dendrite aligned vertically." [doi:10.1016/b978-0-12-369497-3.10004-4]
+synonym: "pyramidal cell morphology" EXACT []
+synonym: "vertical pyramidal morphology" EXACT []
+xref: ilxtr:PyramidalPhenotype
+is_a: PATO:0070015 ! pyramidal family morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070018
+name: tufted pyramidal morphology
+def: "A pyramidal cell morphology that inheres in neurons which have a distinct tuft formation, distal from the soma." [PMID:30715238]
+xref: ilxtr:TuftedPyramidalPhenotype
+is_a: PATO:0070017 ! standard pyramidal morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070019
+name: untufted pyramidal morphology
+def: "A pyramidal cell morphology that inheres in neurons which lack a clear tuft formation but extend to large radial distances." [PMID:30715238]
+xref: ilxtr:UntuftedPyramidalPhenotype
+is_a: PATO:0070017 ! standard pyramidal morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070020
+name: stellate pyramidal morphology
+def: "A pyramidal cell morphology that inheres in neurons which lack a tuft formation but extend to small radial distances forming a star-like shape." [PMID:30715238]
+xref: ilxtr:StarPyramidalPhenotype
+is_a: PATO:0070017 ! standard pyramidal morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070021
+name: inverted pyramidal morphology
+def: "A pyramidal cell morphology that inheres in neurons which have an apical tree which is oriented towards the white matter." [PMID:30715238]
+xref: ilxtr:InvertedPyramidalPhenotype
+is_a: PATO:0070017 ! standard pyramidal morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070025
+name: unipolar neuron morphology
+def: "A cell morphology that inheres in neurons with only one process, a neurite, that extends from the cell body. The neurite then branches to form dendritic and axonal processes." [WikipediaVersioned:Unipolar_neuron&oldid=994458581]
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070026
+name: multipolar neuron morphology
+def: "A cell morphology that inheres in neurons which possess a single axon and many dendrites and dendritic branches." [WikipediaVersioned:Multipolar_neuron&oldid=1022942606]
+xref: ILX:0107196
+xref: NLX:378
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070028
+name: extratelencephalic projecting
+def: "A neuron projection quality that is a characteristic of neurons whose soma is located in the telencephalon and that project to structures outside the telencephalon" [DOI:10.1101/2020.10.19.343129]
+synonym: "ET projecting" EXACT []
+xref: ILX:0770101
+is_a: PATO:0070033 ! neuron projection quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070029
+name: corticothalamic projecting
+def: "A neuron projection quality that is a characteristic of neurons with soma in the cerebral cortex and projections to the thalamus." [DOI:10.1101/2020.10.19.343129]
+synonym: "CT projecting" EXACT []
+xref: ILX:0770102
+is_a: PATO:0070033 ! neuron projection quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070030
+name: near projecting
+def: "A neuron projection quality that is a characteristic of neurons with projections that terminate locally rather than distantly." [DOI:10.1101/2020.10.19.343129]
+synonym: "NP" EXACT []
+xref: ILX:0770103
+is_a: PATO:0070033 ! neuron projection quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070031
+name: corticomedulla projecting
+def: "A neuron projection quality that is a characteristic of neurons that project to the medulla oblongata from other brain regions." [DOI:10.1101/2020.10.19.343129]
+synonym: "MY projecting" EXACT []
+is_a: PATO:0070033 ! neuron projection quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070033
+name: neuron projection quality
+def: "A physical quality inhering in a neuron by virtue of the relative location of its soma and the regions to which it projects and makes synaptic contacts in." [DOI:10.1101/2020.10.19.343129]
+is_a: PATO:0001018 ! physical quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070034
+name: intratelencephalic projecting
+def: "A neuron projection quality that is a characteristic of neurons with both soma and projections entirely within the telencephalon." [DOI:10.1101/2020.10.19.343129]
+synonym: "IT projecting" EXACT []
+xref: ILX:0770100
+is_a: PATO:0070033 ! neuron projection quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0085001
+name: salinity
+def: "An osmolarity quality inhering in a bearer by virtue of the total amount of ionic salts dissolved in the bearer." [http://db0nus869y26v.cloudfront.net/en/Salinity, https://en.wikipedia.org/wiki/Salinity, https://rwu.pressbooks.pub/webboceanography/chapter/5-3-salinity-patterns/, https://www.sciencedirect.com/referencework/9780080983004/treatise-on-geochemistry, https://www.sciencedirect.com/science/article/pii/B9780857096807500012]
+is_a: PATO:0001655 ! osmolarity
+created_by: http://orcid.org/0000-0002-3410-4655
+creation_date: 2020-10-30T08:08:48Z
+
 [Typedef]
-id: RO:0000053
+id: RO:0002100
+name: has soma location
+def: "Relation between a neuron and an anatomical structure that its soma is part of." []
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
+property_value: RO:0001900 RO:0001901
+transitive_over: part_of ! part_of
+expand_expression_to: "BFO_0000051 some (\n   GO_0043025 and   BFO_0000050 some ?Y)" []
+
+[Typedef]
+id: RO:0002102
+name: axon synapses in
+def: "Relation between a neuron and some structure its axon forms (chemical) synapses in." []
+property_value: http://purl.org/spar/cito/citesAsAuthority http://www.ncbi.nlm.nih.gov/pubmed/22402613
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
+property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
+property_value: RO:0001900 RO:0001901
+transitive_over: part_of ! part_of
+expand_expression_to: "BFO_0000051 some (\n   GO_0030424 and BFO_0000051 some (\n      GO_0042734 and BFO_0000050 some (\n         GO_0045202 and BFO_0000050 some ?Y)))" []
+
+[Typedef]
+id: bearer_of
 name: bearer of
+namespace: uberon
 def: "a relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence" []
+xref: RO:0000053
 property_value: IAO:0000111 "bearer of" xsd:string
 property_value: IAO:0000112 "this apple is bearer of this red color" xsd:string
 property_value: IAO:0000112 "this vase is bearer of this fragility" xsd:string
@@ -21262,20 +21595,15 @@ property_value: IAO:0000118 "is bearer of" xsd:string
 property_value: RO:0001900 RO:0001901
 
 [Typedef]
-id: RO:0002180
-name: has component
-def: "w 'has component' p if w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type." []
-subset: ro-eco
-property_value: IAO:0000114 IAO:0000125
-property_value: IAO:0000116 "The definition of 'has component' is still under discussion. The challenge is in providing a definition that does not imply transitivity." xsd:string
-property_value: IAO:0000232 "For use in recording has_part with a cardinality constraint, because OWL does not permit cardinality constraints to be used in combination with transitive object properties. In situations where you would want to say something like 'has part exactly 5 digit, you would instead use has_component exactly 5 digit." xsd:string
-property_value: RO:0001900 RO:0001901
-property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:Componency
-is_a: has_part ! has part
-
-[Typedef]
 id: correlates_with
 name: correlates_with
+
+[Typedef]
+id: dc-creator
+name: creator
+namespace: uberon
+xref: http://purl.org/dc/elements/1.1/creator
+is_metadata_tag: true
 
 [Typedef]
 id: decreased_in_magnitude_relative_to
@@ -21303,6 +21631,20 @@ domain: PATO:0000001 ! quality
 range: PATO:0000001 ! quality
 created_by: cjm
 creation_date: 2009-08-26T02:50:08Z
+
+[Typedef]
+id: has_component
+name: has component
+namespace: uberon
+def: "w 'has component' p if w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type." []
+subset: ro-eco
+xref: RO:0002180
+property_value: IAO:0000114 IAO:0000125
+property_value: IAO:0000116 "The definition of 'has component' is still under discussion. The challenge is in providing a definition that does not imply transitivity." xsd:string
+property_value: IAO:0000232 "For use in recording has_part with a cardinality constraint, because OWL does not permit cardinality constraints to be used in combination with transitive object properties. In situations where you would want to say something like 'has part exactly 5 digit, you would instead use has_component exactly 5 digit." xsd:string
+property_value: RO:0001900 RO:0001901
+property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:Componency
+is_a: has_part ! has part
 
 [Typedef]
 id: has_cross_section
@@ -21339,9 +21681,13 @@ id: has_part
 name: has part
 name: has_part
 namespace: external
+namespace: uberon
 def: "a core relation that holds between a whole and its part" []
 def: "Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2." [PATOC:CJM]
 comment: We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'.
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 xref: BFO:0000051
 property_value: IAO:0000111 "has part" xsd:string
 property_value: IAO:0000112 "my body has part my brain (continuant parthood, two material entities)" xsd:string
@@ -21415,7 +21761,12 @@ id: part_of
 name: part of
 name: part_of
 namespace: external
+namespace: uberon
 def: "a core relation that holds between a part and its whole" []
+subset: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension
+subset: http://purl.obolibrary.org/obo/valid_for_go_gp2term
+subset: http://purl.obolibrary.org/obo/valid_for_go_ontology
+subset: http://purl.obolibrary.org/obo/valid_for_gocam
 xref: BFO:0000050
 property_value: IAO:0000111 "is part of" xsd:string
 property_value: IAO:0000112 "my brain is part of my body (continuant parthood, two material entities)" xsd:string
