@@ -20105,6 +20105,33 @@ synonym: "plumed" EXACT []
 is_a: PATO:0000052 ! shape
 
 [Term]
+id: PATO:0015031
+name: contamination
+def: "The presence of a constituent, impurity, or some other undesirable element that spoils, corrupts, infects, makes unfit, or makes inferior a material, physical body, natural environment, place of human occupancy, or other material entitt." [https://github.com/pato-ontology/pato/issues/420, https://en.wikipedia.org/wiki/Contamination]
+subset: attribute_slim
+synonym: "degree of contamination" EXACT []
+is_a: PATO:0000025 ! composition
+
+[Term]
+id: PATO:0015032
+name: increased contamination
+def: "An increase in contamination." [https://github.com/pato-ontology/pato/issues/420, https://en.wikipedia.org/wiki/Contamination]
+subset: value_slim
+synonym: "contaminated" EXACT []
+intersection_of: PATO:0015031 ! contamination
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+
+[Term]
+id: PATO:0015033
+name: decreased contamination
+def: "A decrease in contamination." [https://github.com/pato-ontology/pato/issues/420, https://en.wikipedia.org/wiki/Contamination]
+subset: value_slim
+synonym: "uncontaminated" EXACT []
+intersection_of: PATO:0015031 ! contamination
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0015032 ! increased contamination
+
+[Term]
 id: PATO:0020000
 name: genotypic sex
 def: "A biological sex quality inhering in an individual based upon genotypic composition of sex chromosomes." [PATOC:MAH]
