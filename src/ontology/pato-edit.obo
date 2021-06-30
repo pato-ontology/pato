@@ -13,6 +13,7 @@ default-namespace: quality
 import: http://purl.obolibrary.org/obo/pato/components/pato_ext.owl
 import: http://purl.obolibrary.org/obo/pato/imports/go_import.owl
 import: http://purl.obolibrary.org/obo/pato/imports/ro_import.owl
+import: http://purl.obolibrary.org/obo/pato/imports/uberon_import.owl
 ontology: pato
 property_value: http://purl.org/dc/elements/1.1/description "An ontology of phenotypic qualities (properties, attributes or characteristics)." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And Trait Ontology" xsd:string
@@ -787,6 +788,7 @@ is_obsolete: true
 id: PATO:0000125
 name: mass
 def: "A physical quality that inheres in a bearer by virtue of the proportion of the bearer's amount of matter." [PATOC:GVG]
+comment: For any biological use of PATO,  the concept that should be used is 'mass' and not 'weight'. For example, increased weight of an organism.
 subset: attribute_slim
 subset: relational_slim
 subset: scalar_slim
@@ -805,7 +807,8 @@ is_obsolete: true
 [Term]
 id: PATO:0000128
 name: weight
-def: "A physical quality inhering in a bearer that has mass near a gravitational body." [Wikipedia:http\://en.wikipedia.org/wiki/Weight]
+def: "A physical quality inhering in a bearer that has mass near a gravitational body. Important usage note: Note that this ontology has a class for a similar concept, mass (PATO:0000125). Mass and weight are not equivalent. For most use cases, the class mass is strongly preferred over weight." [https://en.wikipedia.org/wiki/Mass#Weight_vs._mass, Wikipedia:http\://en.wikipedia.org/wiki/Weight]
+comment: For any biological use of PATO,  the concept that should be used is 'mass' and not 'weight'. For example, increased weight of an organism.
 subset: attribute_slim
 subset: scalar_slim
 is_a: PATO:0001035 ! force
@@ -20102,6 +20105,33 @@ synonym: "plumed" EXACT []
 is_a: PATO:0000052 ! shape
 
 [Term]
+id: PATO:0015031
+name: contamination
+def: "The presence of a constituent, impurity, or some other undesirable element that spoils, corrupts, infects, makes unfit, or makes inferior a material, physical body, natural environment, place of human occupancy, or other material entitt." [https://github.com/pato-ontology/pato/issues/420, https://en.wikipedia.org/wiki/Contamination]
+subset: attribute_slim
+synonym: "degree of contamination" EXACT []
+is_a: PATO:0000025 ! composition
+
+[Term]
+id: PATO:0015032
+name: increased contamination
+def: "An increase in contamination." [https://github.com/pato-ontology/pato/issues/420, https://en.wikipedia.org/wiki/Contamination]
+subset: value_slim
+synonym: "contaminated" EXACT []
+intersection_of: PATO:0015031 ! contamination
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+
+[Term]
+id: PATO:0015033
+name: decreased contamination
+def: "A decrease in contamination." [https://github.com/pato-ontology/pato/issues/420, https://en.wikipedia.org/wiki/Contamination]
+subset: value_slim
+synonym: "uncontaminated" EXACT []
+intersection_of: PATO:0015031 ! contamination
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0015032 ! increased contamination
+
+[Term]
 id: PATO:0020000
 name: genotypic sex
 def: "A biological sex quality inhering in an individual based upon genotypic composition of sex chromosomes." [PATOC:MAH]
@@ -20596,7 +20626,8 @@ created_by: http://orcid.org/0000-0001-5208-3432
 id: PATO:0040047
 name: fragmented
 def: "Existing or functioning as though broken into separate parts; disorganized; disunified." [https://www.dictionary.com/browse/unfragmented]
-is_a: PATO:0001444 ! broken
+comment: Moved to a child of wholeness because broken implies a trauma and fragmented could be caused by a developmental process. See HP:0100168 Fragmented epiphyses as an example.
+is_a: PATO:0001442 ! wholeness
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
@@ -20606,6 +20637,16 @@ def: "Red due to increase blood circulation in a defined area." [https://orcid.o
 synonym: "erythema" EXACT []
 synonym: "skin redness" EXACT []
 is_a: PATO:0000051 ! morphology
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040070
+name: thermoplastic
+def: "A physical quality inhering in a bearer by virtue of the bearer's disposition to deform by heating." [http://www.gesamp.org/publications/guidelines-for-the-monitoring-and-assessment-of-plastic-litter-in-the-ocean, https://orcid.org/0000-0002-8166-0486]
+is_a: PATO:0001018 ! physical quality
+property_value: http://purl.org/dc/elements/1.1/contributor https://orcid.org/0000-0002-2996-719X xsd:string
+property_value: http://purl.org/dc/elements/1.1/contributor https://orcid.org/0000-0002-8166-0486 xsd:string
+property_value: http://purl.org/dc/elements/1.1/contributor https://orcid.org/0000-0003-1072-8081 xsd:string
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
@@ -21910,7 +21951,7 @@ created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
 id: PATO:0070007
-name: martinotti morphology
+name: Martinotti morphology
 def: "A cell morphology that inheres in neurons which are large and non-spiny, with dendrites radiating in a multipolar or bitufted pattern, often favouring the descending side, and axons that ascend directly from the superficial side of the soma, and travel upward without branching." [doi:10.1016/b978-0-12-369497-3.10004-4]
 xref: ilxtr:MartinottiPhenotype
 is_a: PATO:0070026 ! multipolar neuron morphology
@@ -21918,16 +21959,18 @@ created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
 id: PATO:0070008
-name: 'T-shaped' martinotti morphology
-def: "A martinotti cell morphology that inheres in neurons which have axons that form a horizontal ramification, making it T-shaped." [doi:10.1016/b978-0-12-369497-3.10004-4]
-is_a: PATO:0070007 ! martinotti morphology
+name: T Martinotti morphology
+def: "A Martinotti cell morphology that inheres in neurons which have axons that form a horizontal ramification, making it T-shaped." [doi:10.1016/b978-0-12-369497-3.10004-4]
+synonym: "'T-shaped' Martinotti morphology" EXACT []
+is_a: PATO:0070007 ! Martinotti morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
 id: PATO:0070009
-name: 'fanning-out' martinotti morphology
-def: "A martinotti cell morphology that inheres in neurons which have axons that form a fan-like plexus." [doi:10.1016/b978-0-12-369497-3.10004-4]
-is_a: PATO:0070007 ! martinotti morphology
+name: fan Martinotti morphology
+def: "A Martinotti cell morphology that inheres in neurons which have axons that form a fan-like plexus." [doi:10.1016/b978-0-12-369497-3.10004-4]
+synonym: "'fanning-out' Martinotti morphology" EXACT []
+is_a: PATO:0070007 ! Martinotti morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -22027,6 +22070,13 @@ is_a: PATO:0070017 ! standard pyramidal morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
+id: PATO:0070025
+name: unipolar neuron morphology
+def: "A cell morphology that inheres in neurons with only one process, a neurite, that extends from the cell body. The neurite then branches to form dendritic and axonal processes." [WikipediaVersioned:Unipolar_neuron&oldid=994458581]
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
 id: PATO:0070026
 name: multipolar neuron morphology
 def: "A cell morphology that inheres in neurons which possess a single axon and many dendrites and dendritic branches." [WikipediaVersioned:Multipolar_neuron&oldid=1022942606]
@@ -22041,6 +22091,57 @@ name: bitufted dendrite cell morphology
 def: "A cell morphology that inheres in neurons with dendrites that are bidirectional, emerging from opposite ends of the soma, with the two arbors extending in radial or tangential directions." [PMID:18568015]
 comment: This morphology type is distinct from bitufted cell morphology in that it refers to bitufted dendrite morphology rather than bitufted cell morphology.
 is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070028
+name: extratelencephalic projecting
+def: "A neuron projection quality that is a characteristic of neurons whose soma is located in the telencephalon and that project to structures outside the telencephalon" [DOI:10.1101/2020.10.19.343129]
+synonym: "ET projecting" EXACT []
+xref: ILX:0770101
+is_a: PATO:0070033 ! neuron projection quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070029
+name: corticothalamic projecting
+def: "A neuron projection quality that is a characteristic of neurons with soma in the cerebral cortex and projections to the thalamus." [DOI:10.1101/2020.10.19.343129]
+synonym: "CT projecting" EXACT []
+xref: ILX:0770102
+is_a: PATO:0070033 ! neuron projection quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070030
+name: near projecting
+def: "A neuron projection quality that is a characteristic of neurons with projections that terminate locally rather than distantly." [DOI:10.1101/2020.10.19.343129]
+synonym: "NP" EXACT []
+xref: ILX:0770103
+is_a: PATO:0070033 ! neuron projection quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070031
+name: corticomedulla projecting
+def: "A neuron projection quality that is a characteristic of neurons that project to the medulla oblongata from other brain regions." [DOI:10.1101/2020.10.19.343129]
+synonym: "MY projecting" EXACT []
+is_a: PATO:0070033 ! neuron projection quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070033
+name: neuron projection quality
+def: "A physical quality inhering in a neuron by virtue of the relative location of its soma and the regions to which it projects and makes synaptic contacts in." [DOI:10.1101/2020.10.19.343129]
+is_a: PATO:0001018 ! physical quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070034
+name: intratelencephalic projecting
+def: "A neuron projection quality that is a characteristic of neurons with both soma and projections entirely within the telencephalon." [DOI:10.1101/2020.10.19.343129]
+synonym: "IT projecting" EXACT []
+xref: ILX:0770100
+is_a: PATO:0070033 ! neuron projection quality
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
