@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pato/releases/2021-06-15/pato-base.owl
+data-version: pato/releases/2021-07-09/pato-base.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -17,7 +17,7 @@ property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And 
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
 property_value: IAO:0000700 PATO:0000001
-property_value: owl:versionInfo "2021-06-15" xsd:string
+property_value: owl:versionInfo "2021-07-09" xsd:string
 
 [Term]
 id: CL:0000000
@@ -792,7 +792,7 @@ is_obsolete: true
 id: PATO:0000125
 name: mass
 def: "A physical quality that inheres in a bearer by virtue of the proportion of the bearer's amount of matter." [PATOC:GVG]
-comment: For any biological use of PATO,  the concept that should be used is 'mass' and not 'weight'. For example, increased weight of an organism.
+comment: For any biological use of PATO, the concept that should be used is 'mass' and not 'weight'. For example, increased weight of an organism.
 subset: attribute_slim
 subset: relational_slim
 subset: scalar_slim
@@ -812,7 +812,7 @@ is_obsolete: true
 id: PATO:0000128
 name: weight
 def: "A physical quality inhering in a bearer that has mass near a gravitational body. Important usage note: Note that this ontology has a class for a similar concept, mass (PATO:0000125). Mass and weight are not equivalent. For most use cases, the class mass is strongly preferred over weight." [https://en.wikipedia.org/wiki/Mass#Weight_vs._mass, Wikipedia:http\://en.wikipedia.org/wiki/Weight]
-comment: For any biological use of PATO,  the concept that should be used is 'mass' and not 'weight'. For example, increased weight of an organism.
+comment: For any biological use of PATO, the concept that should be used is 'mass' and not 'weight'. For example, increased weight of an organism.
 subset: attribute_slim
 subset: scalar_slim
 is_a: PATO:0001035 ! force
@@ -8860,7 +8860,7 @@ is_a: PATO:0001374 ! ploidy
 id: PATO:0001394
 name: diploid
 def: "A ploidy quality inhering in a bearer by virtue of the bearer's having two copies (homologs) of each chromosome, usually one from the mother and one from the father." [Wikipedia:http\://en.wikipedia.org/wiki/Diploid]
-comment: The exact number may be one or two different from the 2n number and still be classified as diploidy (although with aneuploidy). Nearly all mammals are diploid organisms, although all individuals have some small fracton of cells that are polyploidy.
+comment: The exact number may be one or two different from the 2n number and still be classified as diploidy (although with aneuploidy). Nearly all mammals are diploid organisms, although all individuals have some small fraction of cells that are polyploidy.
 subset: cell_quality
 subset: value_slim
 is_a: PATO:0001393 ! euploid
@@ -10560,7 +10560,7 @@ is_a: PATO:0001857 ! concave
 [Term]
 id: PATO:0001595
 name: depth
-def: "A 1-D extent quality inhering in a bearer by virtue of the bearer's downward or backward or inward dimenision." [WordNet:WordNet]
+def: "A 1-D extent quality inhering in a bearer by virtue of the bearer's downward or backward or inward dimension." [WordNet:WordNet]
 subset: attribute_slim
 subset: scalar_slim
 is_a: PATO:0001708 ! 1-D extent
@@ -11104,7 +11104,7 @@ relationship: is_opposite_of PATO:0001656 ! decreased osmolarity
 [Term]
 id: PATO:0001658
 name: dorsally rotated
-def: "A rotatiotion quality inhering in a bearer by virtue of being rotated towards the back or upper surface of an organism." [PATOC:GVG]
+def: "A rotation quality inhering in a bearer by virtue of being rotated towards the back or upper surface of an organism." [PATOC:GVG]
 subset: mpath_slim
 subset: value_slim
 is_a: PATO:0001599 ! rotated
@@ -11802,7 +11802,7 @@ is_a: PATO:0001727 ! disposition
 [Term]
 id: PATO:0001729
 name: shedability
-def: "An organismal quality inhering in a bearer by virtue of the bearer's disposition to lose an entitity by natural process." [PATOC:GVG]
+def: "An organismal quality inhering in a bearer by virtue of the bearer's disposition to lose an entity by natural process." [PATOC:GVG]
 subset: attribute_slim
 subset: disposition_slim
 subset: relational_slim
@@ -11991,7 +11991,7 @@ is_a: PATO:0001749 ! paedomorphic growth
 [Term]
 id: PATO:0001751
 name: progenetic growth
-def: "A paedomorphic growth quality which is due to an ealier offset." [PATOC:mh]
+def: "A paedomorphic growth quality which is due to an earlier offset." [PATOC:mh]
 subset: value_slim
 is_a: PATO:0001749 ! paedomorphic growth
 
@@ -14928,7 +14928,7 @@ creation_date: 2009-09-18T02:19:20Z
 [Term]
 id: PATO:0002080
 name: broken into two pieces
-def: "A broken quality inhering in a bearer by virtue of the bearer's being seperated into two contiguous wholes." [PATOC:CJM]
+def: "A broken quality inhering in a bearer by virtue of the bearer's being separated into two contiguous wholes." [PATOC:CJM]
 subset: value_slim
 is_a: PATO:0001444 ! broken
 created_by: George Gkoutos
@@ -15014,7 +15014,7 @@ creation_date: 2009-10-01T03:02:54Z
 [Term]
 id: PATO:0002090
 name: adenomatous
-def: "A morphology quality inhering in a tumour by virtue of the bearer's exhbiting the morphological characteristics of a glandular epithelial cell." [PATOC:GVG]
+def: "A morphology quality inhering in a tumour by virtue of the bearer's exhibiting the morphological characteristics of a glandular epithelial cell." [PATOC:GVG]
 subset: mpath_slim
 subset: value_slim
 is_a: PATO:0000051 ! morphology
@@ -15055,7 +15055,7 @@ creation_date: 2009-10-05T12:01:13Z
 [Term]
 id: PATO:0002094
 name: basophilic
-def: "An affinity inhering in a tissue constituent by virtue of the bearer exhibiting a molecular interaction for basic dyes under specific ph conditions." [PATOC:GVG]
+def: "An affinity inhering in a tissue constituent by virtue of the bearer exhibiting a molecular interaction for basic dyes under specific pH conditions." [PATOC:GVG]
 subset: disposition_slim
 subset: mpath_slim
 subset: value_slim
@@ -15345,7 +15345,7 @@ creation_date: 2009-10-06T03:56:00Z
 [Term]
 id: PATO:0002121
 name: trabecular
-def: "A spatial pattern inhering in a bearer by virtue of the bearer's structureresembling an irregular meshwork with cross-linking struts." [PATOC:GVG]
+def: "A spatial pattern inhering in a bearer by virtue of the bearer's structure resembling an irregular meshwork with cross-linking struts." [PATOC:GVG]
 subset: mpath_slim
 subset: value_slim
 is_a: PATO:0000330 ! irregular spatial pattern
@@ -15509,7 +15509,7 @@ creation_date: 2009-10-26T01:14:38Z
 [Term]
 id: PATO:0002137
 name: radiopaque
-def: "A readiopacity quality inhering in a bearer by virtue of the bearer's prevention of the passage of electromagnetic radiation." [Wikipedia:Wikipedia]
+def: "A radiopacity quality inhering in a bearer by virtue of the bearer's prevention of the passage of electromagnetic radiation." [Wikipedia:Wikipedia]
 subset: disposition_slim
 subset: value_slim
 is_a: PATO:0002136 ! radiopacity
@@ -17358,7 +17358,7 @@ creation_date: 2011-10-12T12:47:48Z
 [Term]
 id: PATO:0002320
 name: diamond shaped
-def: "A superelptic shape inhering in a bearer by virtue of the bearer's shape resembling a diamond." [PATO:WC]
+def: "A superelliptic shape inhering in a bearer by virtue of the bearer's shape resembling a diamond." [PATO:WC]
 subset: value_slim
 is_a: PATO:0002318 ! superelliptic
 created_by: George Gkoutos
@@ -18327,7 +18327,7 @@ creation_date: 2012-12-17T02:16:18Z
 [Term]
 id: PATO:0002418
 name: acidophilic
-def: "An affinity inhering in a tissue constituent by virtue of the bearer exhibiting a molecular interaction for acidic dyes under specific ph conditions." [PATOC:GVG]
+def: "An affinity inhering in a tissue constituent by virtue of the bearer exhibiting a molecular interaction for acidic dyes under specific pH conditions." [PATOC:GVG]
 subset: mpath_slim
 subset: value_slim
 is_a: PATO:0002070 ! affinity
@@ -18654,7 +18654,7 @@ creation_date: 2013-03-11T09:22:04Z
 [Term]
 id: PATO:0002452
 name: decondensed
-def: "A structural quality inhering in a bearer by virtue of the bearer being thinner or more losely packed." [PATOC:JL]
+def: "A structural quality inhering in a bearer by virtue of the bearer being thinner or more loosely packed." [PATOC:JL]
 subset: value_slim
 is_a: PATO:0000141 ! structure
 relationship: is_opposite_of PATO:0001485 ! condensed
@@ -18727,7 +18727,7 @@ creation_date: 2013-04-09T06:04:36Z
 [Term]
 id: PATO:0002460
 name: shriveled
-def: "A structural quality inhering in a bearer by virtue of the bearer being smaller and contracted, expecially due to loss of moisture." [PATOC:JL]
+def: "A structural quality inhering in a bearer by virtue of the bearer being smaller and contracted, especially due to loss of moisture." [PATOC:JL]
 subset: value_slim
 is_a: PATO:0000141 ! structure
 created_by: gkoutos
@@ -18809,7 +18809,7 @@ creation_date: 2013-09-15T11:48:26Z
 [Term]
 id: PATO:0002469
 name: sutured to
-def: "Structural quality inhereing in a bearer in which a joint has apposed bony surfaces united by fibrous tissue, permitting no movement; found only between bones." [PATOC:WD]
+def: "Structural quality inhering in a bearer in which a joint has apposed bony surfaces united by fibrous tissue, permitting no movement; found only between bones." [PATOC:WD]
 subset: relational_slim
 subset: value_slim
 is_a: PATO:0000141 ! structure
@@ -19837,7 +19837,7 @@ creation_date: 2019-07-18T18:24:36Z
 [Term]
 id: PATO:0010005
 name: spatial distribution of a process
-def: "A physical quality of a process that is its spatial distribution.  For example, bone mineralization follows stereotypical spatial distribution patterns during development, which may be altered in some phenotypes." [orcid:0000-0002-7073-9172]
+def: "A physical quality of a process that is its spatial distribution. For example, bone mineralization follows stereotypical spatial distribution patterns during development, which may be altered in some phenotypes." [orcid:0000-0002-7073-9172]
 subset: attribute_slim
 is_a: PATO:0002062 ! physical quality of a process
 created_by: dos
@@ -20108,6 +20108,33 @@ subset: value_slim
 synonym: "feather-shaped" EXACT []
 synonym: "plumed" EXACT []
 is_a: PATO:0000052 ! shape
+
+[Term]
+id: PATO:0015031
+name: contamination
+def: "The presence of a constituent, impurity, or some other undesirable element that spoils, corrupts, infects, makes unfit, or makes inferior a material, physical body, natural environment, place of human occupancy, or other material entitt." [https://en.wikipedia.org/wiki/Contamination, https://github.com/pato-ontology/pato/issues/420]
+subset: attribute_slim
+synonym: "degree of contamination" EXACT []
+is_a: PATO:0000025 ! composition
+
+[Term]
+id: PATO:0015032
+name: increased contamination
+def: "An increase in contamination." [https://en.wikipedia.org/wiki/Contamination, https://github.com/pato-ontology/pato/issues/420]
+subset: value_slim
+synonym: "contaminated" EXACT []
+intersection_of: PATO:0015031 ! contamination
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+
+[Term]
+id: PATO:0015033
+name: decreased contamination
+def: "A decrease in contamination." [https://en.wikipedia.org/wiki/Contamination, https://github.com/pato-ontology/pato/issues/420]
+subset: value_slim
+synonym: "uncontaminated" EXACT []
+intersection_of: PATO:0015031 ! contamination
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: is_opposite_of PATO:0015032 ! increased contamination
 
 [Term]
 id: PATO:0020000
@@ -20604,7 +20631,8 @@ created_by: http://orcid.org/0000-0001-5208-3432
 id: PATO:0040047
 name: fragmented
 def: "Existing or functioning as though broken into separate parts; disorganized; disunified." [https://www.dictionary.com/browse/unfragmented]
-is_a: PATO:0001444 ! broken
+comment: Moved to a child of wholeness because broken implies a trauma and fragmented could be caused by a developmental process. See HP:0100168 Fragmented epiphyses as an example.
+is_a: PATO:0001442 ! wholeness
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
@@ -20614,6 +20642,16 @@ def: "Red due to increase blood circulation in a defined area." [https://orcid.o
 synonym: "erythema" EXACT []
 synonym: "skin redness" EXACT []
 is_a: PATO:0000051 ! morphology
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040070
+name: thermoplastic
+def: "A physical quality inhering in a bearer by virtue of the bearer's disposition to deform by heating." [http://www.gesamp.org/publications/guidelines-for-the-monitoring-and-assessment-of-plastic-litter-in-the-ocean, https://orcid.org/0000-0002-8166-0486]
+is_a: PATO:0001018 ! physical quality
+property_value: http://purl.org/dc/elements/1.1/contributor https://orcid.org/0000-0002-2996-719X xsd:string
+property_value: http://purl.org/dc/elements/1.1/contributor https://orcid.org/0000-0002-8166-0486 xsd:string
+property_value: http://purl.org/dc/elements/1.1/contributor https://orcid.org/0000-0003-1072-8081 xsd:string
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
@@ -21527,7 +21565,7 @@ creation_date: 2017-12-22T14:16:43Z
 [Term]
 id: PATO:0045073
 name: normal process quality
-def: "A quality of aprocess that has a value that is normal or average." []
+def: "A quality of a process that has a value that is normal or average." []
 is_a: PATO:0001236 ! process quality
 intersection_of: PATO:0001236 ! process quality
 intersection_of: has_relative_magnitude PATO:0000461 ! normal
@@ -21918,7 +21956,7 @@ created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
 id: PATO:0070007
-name: martinotti morphology
+name: Martinotti morphology
 def: "A cell morphology that inheres in neurons which are large and non-spiny, with dendrites radiating in a multipolar or bitufted pattern, often favouring the descending side, and axons that ascend directly from the superficial side of the soma, and travel upward without branching." [doi:10.1016/b978-0-12-369497-3.10004-4]
 xref: ilxtr:MartinottiPhenotype
 is_a: PATO:0070026 ! multipolar neuron morphology
@@ -21926,16 +21964,18 @@ created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
 id: PATO:0070008
-name: 'T-shaped' martinotti morphology
-def: "A martinotti cell morphology that inheres in neurons which have axons that form a horizontal ramification, making it T-shaped." [doi:10.1016/b978-0-12-369497-3.10004-4]
-is_a: PATO:0070007 ! martinotti morphology
+name: T Martinotti morphology
+def: "A Martinotti cell morphology that inheres in neurons which have axons that form a horizontal ramification, making it T-shaped." [doi:10.1016/b978-0-12-369497-3.10004-4]
+synonym: "'T-shaped' Martinotti morphology" EXACT []
+is_a: PATO:0070007 ! Martinotti morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
 id: PATO:0070009
-name: 'fanning-out' martinotti morphology
-def: "A martinotti cell morphology that inheres in neurons which have axons that form a fan-like plexus." [doi:10.1016/b978-0-12-369497-3.10004-4]
-is_a: PATO:0070007 ! martinotti morphology
+name: fan Martinotti morphology
+def: "A Martinotti cell morphology that inheres in neurons which have axons that form a fan-like plexus." [doi:10.1016/b978-0-12-369497-3.10004-4]
+synonym: "'fanning-out' Martinotti morphology" EXACT []
+is_a: PATO:0070007 ! Martinotti morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -21950,7 +21990,7 @@ created_by: http://orcid.org/0000-0001-7258-9596
 [Term]
 id: PATO:0070011
 name: chandelier cell morphology
-def: "A cell morphology that inheres in neurons which are small and round, and make highly specialized synapses with the axon initial segments of pyramidal neurons, wrapping them with candle-shaped synaptic “cartridges”." [doi:10.1016/b978-0-12-369497-3.10004-4]
+def: "A cell morphology that inheres in neurons which are small and round, and make highly specialized synapses with the axon initial segments of pyramidal neurons, wrapping them with candle-shaped synaptic 'cartridges'." [doi:10.1016/b978-0-12-369497-3.10004-4]
 comment: Chandelier cells can be bitufted or multipolar. {xref="DOI:10.1016/B978-0-12-369497-3.10004-4"}
 xref: ILX:0102028
 xref: ilxtr:ChandelierPhenotype
@@ -22173,8 +22213,6 @@ is_a: has_ratio_quality ! has_ratio_quality
 [Typedef]
 id: has_part
 name: has_part
-def: "Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2." [PATOC:CJM]
-comment: We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'.
 xref: BFO:0000051
 
 [Typedef]
@@ -22233,7 +22271,6 @@ namespace: pato.ontology
 id: part_of
 name: part_of
 xref: BFO:0000050
-is_transitive: true
 
 [Typedef]
 id: realized_by
