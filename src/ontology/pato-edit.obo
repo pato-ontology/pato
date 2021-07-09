@@ -22208,8 +22208,6 @@ is_a: has_ratio_quality ! has_ratio_quality
 [Typedef]
 id: has_part
 name: has_part
-def: "Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2." [PATOC:CJM]
-comment: We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'.
 xref: BFO:0000051
 
 [Typedef]
@@ -22268,7 +22266,6 @@ namespace: pato.ontology
 id: part_of
 name: part_of
 xref: BFO:0000050
-is_transitive: true
 
 [Typedef]
 id: realized_by
