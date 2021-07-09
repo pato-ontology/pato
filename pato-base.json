@@ -490,6 +490,11 @@
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0000025",
           "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0015031"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0000025",
+          "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0040019"
         },
         {
@@ -4635,6 +4640,11 @@
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0001018",
           "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0040070"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0001018",
+          "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0070033"
         },
         {
@@ -5823,6 +5833,11 @@
           "sub": "http://purl.obolibrary.org/obo/PATO_0001446"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0001442",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0040047"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/PATO_0001444",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0001445"
@@ -5851,11 +5866,6 @@
           "obj": "http://purl.obolibrary.org/obo/PATO_0001444",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0040044"
-        },
-        {
-          "obj": "http://purl.obolibrary.org/obo/PATO_0001444",
-          "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/PATO_0040047"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0001447",
@@ -13252,6 +13262,30 @@
           ]
         },
         {
+          "definedClassId": "http://purl.obolibrary.org/obo/PATO_0015032",
+          "genusIds": [
+            "http://purl.obolibrary.org/obo/PATO_0015031"
+          ],
+          "restrictions": [
+            {
+              "fillerId": "http://purl.obolibrary.org/obo/PATO_0000461",
+              "propertyId": "http://purl.obolibrary.org/obo/pato#increased_in_magnitude_relative_to"
+            }
+          ]
+        },
+        {
+          "definedClassId": "http://purl.obolibrary.org/obo/PATO_0015033",
+          "genusIds": [
+            "http://purl.obolibrary.org/obo/PATO_0015031"
+          ],
+          "restrictions": [
+            {
+              "fillerId": "http://purl.obolibrary.org/obo/PATO_0000461",
+              "propertyId": "http://purl.obolibrary.org/obo/pato#decreased_in_magnitude_relative_to"
+            }
+          ]
+        },
+        {
           "definedClassId": "http://purl.obolibrary.org/obo/PATO_0045000",
           "genusIds": [
             "http://purl.obolibrary.org/obo/PATO_0000161"
@@ -14436,11 +14470,11 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2021-06-15"
+            "val": "2021-07-09"
           }
         ],
         "subsets": [],
-        "version": "http://purl.obolibrary.org/obo/pato/releases/2021-06-15/pato-base.json",
+        "version": "http://purl.obolibrary.org/obo/pato/releases/2021-07-09/pato-base.json",
         "xrefs": []
       },
       "nodes": [
@@ -14480,15 +14514,6 @@
                 "val": "has_part"
               }
             ],
-            "comments": [
-              "We use the has_part relation to relate complex qualities to more primitive ones. A complex quality is a collection of qualities. The complex quality cannot exist without the sub-qualities. For example, the quality 'swollen' necessarily comes with the qualities of 'protruding' and 'increased size'."
-            ],
-            "definition": {
-              "val": "Q1 has_part Q2 if and only if: every instance of Q1 is a quality_of an entity that has_quality some Q2.",
-              "xrefs": [
-                "PATOC:CJM"
-              ]
-            },
             "xrefs": [
               {
                 "val": "BFO:0000051"
@@ -16807,7 +16832,7 @@
               }
             ],
             "comments": [
-              "For any biological use of PATO,  the concept that should be used is 'mass' and not 'weight'. For example, increased weight of an organism."
+              "For any biological use of PATO, the concept that should be used is 'mass' and not 'weight'. For example, increased weight of an organism."
             ],
             "definition": {
               "val": "A physical quality that inheres in a bearer by virtue of the proportion of the bearer's amount of matter.",
@@ -16862,7 +16887,7 @@
               }
             ],
             "comments": [
-              "For any biological use of PATO,  the concept that should be used is 'mass' and not 'weight'. For example, increased weight of an organism."
+              "For any biological use of PATO, the concept that should be used is 'mass' and not 'weight'. For example, increased weight of an organism."
             ],
             "definition": {
               "val": "A physical quality inhering in a bearer that has mass near a gravitational body. Important usage note: Note that this ontology has a class for a similar concept, mass (PATO:0000125). Mass and weight are not equivalent. For most use cases, the class mass is strongly preferred over weight.",
@@ -40650,7 +40675,7 @@
               }
             ],
             "comments": [
-              "The exact number may be one or two different from the 2n number and still be classified as diploidy (although with aneuploidy). Nearly all mammals are diploid organisms, although all individuals have some small fracton of cells that are polyploidy."
+              "The exact number may be one or two different from the 2n number and still be classified as diploidy (although with aneuploidy). Nearly all mammals are diploid organisms, although all individuals have some small fraction of cells that are polyploidy."
             ],
             "definition": {
               "val": "A ploidy quality inhering in a bearer by virtue of the bearer's having two copies (homologs) of each chromosome, usually one from the mother and one from the father.",
@@ -45852,7 +45877,7 @@
               }
             ],
             "definition": {
-              "val": "A 1-D extent quality inhering in a bearer by virtue of the bearer's downward or backward or inward dimenision.",
+              "val": "A 1-D extent quality inhering in a bearer by virtue of the bearer's downward or backward or inward dimension.",
               "xrefs": [
                 "WordNet:WordNet"
               ]
@@ -47511,7 +47536,7 @@
               }
             ],
             "definition": {
-              "val": "A rotatiotion quality inhering in a bearer by virtue of being rotated towards the back or upper surface of an organism.",
+              "val": "A rotation quality inhering in a bearer by virtue of being rotated towards the back or upper surface of an organism.",
               "xrefs": [
                 "PATOC:GVG"
               ]
@@ -49504,7 +49529,7 @@
               }
             ],
             "definition": {
-              "val": "An organismal quality inhering in a bearer by virtue of the bearer's disposition to lose an entitity by natural process.",
+              "val": "An organismal quality inhering in a bearer by virtue of the bearer's disposition to lose an entity by natural process.",
               "xrefs": [
                 "PATOC:GVG"
               ]
@@ -50074,7 +50099,7 @@
               }
             ],
             "definition": {
-              "val": "A paedomorphic growth quality which is due to an ealier offset.",
+              "val": "A paedomorphic growth quality which is due to an earlier offset.",
               "xrefs": [
                 "PATOC:mh"
               ]
@@ -59110,7 +59135,7 @@
               }
             ],
             "definition": {
-              "val": "A broken quality inhering in a bearer by virtue of the bearer's being seperated into two contiguous wholes.",
+              "val": "A broken quality inhering in a bearer by virtue of the bearer's being separated into two contiguous wholes.",
               "xrefs": [
                 "PATOC:CJM"
               ]
@@ -59397,7 +59422,7 @@
               }
             ],
             "definition": {
-              "val": "A morphology quality inhering in a tumour by virtue of the bearer's exhbiting the morphological characteristics of a glandular epithelial cell.",
+              "val": "A morphology quality inhering in a tumour by virtue of the bearer's exhibiting the morphological characteristics of a glandular epithelial cell.",
               "xrefs": [
                 "PATOC:GVG"
               ]
@@ -59522,7 +59547,7 @@
               }
             ],
             "definition": {
-              "val": "An affinity inhering in a tissue constituent by virtue of the bearer exhibiting a molecular interaction for basic dyes under specific ph conditions.",
+              "val": "An affinity inhering in a tissue constituent by virtue of the bearer exhibiting a molecular interaction for basic dyes under specific pH conditions.",
               "xrefs": [
                 "PATOC:GVG"
               ]
@@ -60427,7 +60452,7 @@
               }
             ],
             "definition": {
-              "val": "A spatial pattern inhering in a bearer by virtue of the bearer's structureresembling an irregular meshwork with cross-linking struts.",
+              "val": "A spatial pattern inhering in a bearer by virtue of the bearer's structure resembling an irregular meshwork with cross-linking struts.",
               "xrefs": [
                 "PATOC:GVG"
               ]
@@ -60938,7 +60963,7 @@
               }
             ],
             "definition": {
-              "val": "A readiopacity quality inhering in a bearer by virtue of the bearer's prevention of the passage of electromagnetic radiation.",
+              "val": "A radiopacity quality inhering in a bearer by virtue of the bearer's prevention of the passage of electromagnetic radiation.",
               "xrefs": [
                 "Wikipedia:Wikipedia"
               ]
@@ -66936,7 +66961,7 @@
               }
             ],
             "definition": {
-              "val": "A superelptic shape inhering in a bearer by virtue of the bearer's shape resembling a diamond.",
+              "val": "A superelliptic shape inhering in a bearer by virtue of the bearer's shape resembling a diamond.",
               "xrefs": [
                 "PATO:WC"
               ]
@@ -70030,7 +70055,7 @@
               }
             ],
             "definition": {
-              "val": "An affinity inhering in a tissue constituent by virtue of the bearer exhibiting a molecular interaction for acidic dyes under specific ph conditions.",
+              "val": "An affinity inhering in a tissue constituent by virtue of the bearer exhibiting a molecular interaction for acidic dyes under specific pH conditions.",
               "xrefs": [
                 "PATOC:GVG"
               ]
@@ -71101,7 +71126,7 @@
               }
             ],
             "definition": {
-              "val": "A structural quality inhering in a bearer by virtue of the bearer being thinner or more losely packed.",
+              "val": "A structural quality inhering in a bearer by virtue of the bearer being thinner or more loosely packed.",
               "xrefs": [
                 "PATOC:JL"
               ]
@@ -71341,7 +71366,7 @@
               }
             ],
             "definition": {
-              "val": "A structural quality inhering in a bearer by virtue of the bearer being smaller and contracted, expecially due to loss of moisture.",
+              "val": "A structural quality inhering in a bearer by virtue of the bearer being smaller and contracted, especially due to loss of moisture.",
               "xrefs": [
                 "PATOC:JL"
               ]
@@ -71614,7 +71639,7 @@
               }
             ],
             "definition": {
-              "val": "Structural quality inhereing in a bearer in which a joint has apposed bony surfaces united by fibrous tissue, permitting no movement; found only between bones.",
+              "val": "Structural quality inhering in a bearer in which a joint has apposed bony surfaces united by fibrous tissue, permitting no movement; found only between bones.",
               "xrefs": [
                 "PATOC:WD"
               ]
@@ -75053,7 +75078,7 @@
               }
             ],
             "definition": {
-              "val": "A physical quality of a process that is its spatial distribution.  For example, bone mineralization follows stereotypical spatial distribution patterns during development, which may be altered in some phenotypes.",
+              "val": "A physical quality of a process that is its spatial distribution. For example, bone mineralization follows stereotypical spatial distribution patterns during development, which may be altered in some phenotypes.",
               "xrefs": [
                 "orcid:0000-0002-7073-9172"
               ]
@@ -75873,6 +75898,100 @@
               {
                 "pred": "hasExactSynonym",
                 "val": "plumed",
+                "xrefs": []
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0015031",
+          "lbl": "contamination",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "The presence of a constituent, impurity, or some other undesirable element that spoils, corrupts, infects, makes unfit, or makes inferior a material, physical body, natural environment, place of human occupancy, or other material entitt.",
+              "xrefs": [
+                "https://en.wikipedia.org/wiki/Contamination",
+                "https://github.com/pato-ontology/pato/issues/420"
+              ]
+            },
+            "subsets": [
+              "http://purl.obolibrary.org/obo/pato#attribute_slim"
+            ],
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "degree of contamination",
+                "xrefs": []
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0015032",
+          "lbl": "increased contamination",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "An increase in contamination.",
+              "xrefs": [
+                "https://en.wikipedia.org/wiki/Contamination",
+                "https://github.com/pato-ontology/pato/issues/420"
+              ]
+            },
+            "subsets": [
+              "http://purl.obolibrary.org/obo/pato#value_slim"
+            ],
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "contaminated",
+                "xrefs": []
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0015033",
+          "lbl": "decreased contamination",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/RO_0002604",
+                "val": "http://purl.obolibrary.org/obo/PATO_0015032"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A decrease in contamination.",
+              "xrefs": [
+                "https://en.wikipedia.org/wiki/Contamination",
+                "https://github.com/pato-ontology/pato/issues/420"
+              ]
+            },
+            "subsets": [
+              "http://purl.obolibrary.org/obo/pato#value_slim"
+            ],
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "uncontaminated",
                 "xrefs": []
               }
             ]
@@ -77620,6 +77739,9 @@
                 "val": "quality"
               }
             ],
+            "comments": [
+              "Moved to a child of wholeness because broken implies a trauma and fragmented could be caused by a developmental process. See HP:0100168 Fragmented epiphyses as an example."
+            ],
             "definition": {
               "val": "Existing or functioning as though broken into separate parts; disorganized; disunified.",
               "xrefs": [
@@ -77661,6 +77783,42 @@
                 "xrefs": []
               }
             ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0040070",
+          "lbl": "thermoplastic",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.org/dc/elements/1.1/contributor",
+                "val": "https://orcid.org/0000-0002-2996-719X"
+              },
+              {
+                "pred": "http://purl.org/dc/elements/1.1/contributor",
+                "val": "https://orcid.org/0000-0002-8166-0486"
+              },
+              {
+                "pred": "http://purl.org/dc/elements/1.1/contributor",
+                "val": "https://orcid.org/0000-0003-1072-8081"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-5208-3432"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A physical quality inhering in a bearer by virtue of the bearer's disposition to deform by heating.",
+              "xrefs": [
+                "http://www.gesamp.org/publications/guidelines-for-the-monitoring-and-assessment-of-plastic-litter-in-the-ocean",
+                "https://orcid.org/0000-0002-8166-0486"
+              ]
+            }
           },
           "type": "CLASS"
         },
@@ -79745,7 +79903,7 @@
               }
             ],
             "definition": {
-              "val": "A quality of aprocess that has a value that is normal or average.",
+              "val": "A quality of a process that has a value that is normal or average.",
               "xrefs": []
             }
           },
@@ -80831,7 +80989,7 @@
         },
         {
           "id": "http://purl.obolibrary.org/obo/PATO_0070007",
-          "lbl": "martinotti morphology",
+          "lbl": "Martinotti morphology",
           "meta": {
             "basicPropertyValues": [
               {
@@ -80859,7 +81017,7 @@
         },
         {
           "id": "http://purl.obolibrary.org/obo/PATO_0070008",
-          "lbl": "'T-shaped' martinotti morphology",
+          "lbl": "T Martinotti morphology",
           "meta": {
             "basicPropertyValues": [
               {
@@ -80872,17 +81030,24 @@
               }
             ],
             "definition": {
-              "val": "A martinotti cell morphology that inheres in neurons which have axons that form a horizontal ramification, making it T-shaped.",
+              "val": "A Martinotti cell morphology that inheres in neurons which have axons that form a horizontal ramification, making it T-shaped.",
               "xrefs": [
                 "doi:10.1016/b978-0-12-369497-3.10004-4"
               ]
-            }
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "'T-shaped' Martinotti morphology",
+                "xrefs": []
+              }
+            ]
           },
           "type": "CLASS"
         },
         {
           "id": "http://purl.obolibrary.org/obo/PATO_0070009",
-          "lbl": "'fanning-out' martinotti morphology",
+          "lbl": "fan Martinotti morphology",
           "meta": {
             "basicPropertyValues": [
               {
@@ -80895,11 +81060,18 @@
               }
             ],
             "definition": {
-              "val": "A martinotti cell morphology that inheres in neurons which have axons that form a fan-like plexus.",
+              "val": "A Martinotti cell morphology that inheres in neurons which have axons that form a fan-like plexus.",
               "xrefs": [
                 "doi:10.1016/b978-0-12-369497-3.10004-4"
               ]
-            }
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "'fanning-out' Martinotti morphology",
+                "xrefs": []
+              }
+            ]
           },
           "type": "CLASS"
         },
@@ -80952,7 +81124,7 @@
               "Chandelier cells can be bitufted or multipolar."
             ],
             "definition": {
-              "val": "A cell morphology that inheres in neurons which are small and round, and make highly specialized synapses with the axon initial segments of pyramidal neurons, wrapping them with candle-shaped synaptic “cartridges”.",
+              "val": "A cell morphology that inheres in neurons which are small and round, and make highly specialized synapses with the axon initial segments of pyramidal neurons, wrapping them with candle-shaped synaptic 'cartridges'.",
               "xrefs": [
                 "doi:10.1016/b978-0-12-369497-3.10004-4"
               ]
