@@ -8427,6 +8427,7 @@ id: PATO:0001340
 name: hermaphrodite
 def: "A biological sex quality inhering in an organism or a population with both male and female sexual organs in one individual." [MGED:MGED]
 subset: value_slim
+synonym: "hermaphroditic" EXACT []
 synonym: "intersex" EXACT []
 is_a: PATO:0001894 ! phenotypic sex
 
@@ -20107,7 +20108,7 @@ is_a: PATO:0000052 ! shape
 [Term]
 id: PATO:0015031
 name: contamination
-def: "The presence of a constituent, impurity, or some other undesirable element that spoils, corrupts, infects, makes unfit, or makes inferior a material, physical body, natural environment, place of human occupancy, or other material entitt." [https://github.com/pato-ontology/pato/issues/420, https://en.wikipedia.org/wiki/Contamination]
+def: "The presence of a constituent, impurity, or some other undesirable element that spoils, corrupts, infects, makes unfit, or makes inferior a material, physical body, natural environment, place of human occupancy, or other material entitt." [https://en.wikipedia.org/wiki/Contamination, https://github.com/pato-ontology/pato/issues/420]
 subset: attribute_slim
 synonym: "degree of contamination" EXACT []
 is_a: PATO:0000025 ! composition
@@ -20115,7 +20116,7 @@ is_a: PATO:0000025 ! composition
 [Term]
 id: PATO:0015032
 name: increased contamination
-def: "An increase in contamination." [https://github.com/pato-ontology/pato/issues/420, https://en.wikipedia.org/wiki/Contamination]
+def: "An increase in contamination." [https://en.wikipedia.org/wiki/Contamination, https://github.com/pato-ontology/pato/issues/420]
 subset: value_slim
 synonym: "contaminated" EXACT []
 intersection_of: PATO:0015031 ! contamination
@@ -20124,7 +20125,7 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 [Term]
 id: PATO:0015033
 name: decreased contamination
-def: "A decrease in contamination." [https://github.com/pato-ontology/pato/issues/420, https://en.wikipedia.org/wiki/Contamination]
+def: "A decrease in contamination." [https://en.wikipedia.org/wiki/Contamination, https://github.com/pato-ontology/pato/issues/420]
 subset: value_slim
 synonym: "uncontaminated" EXACT []
 intersection_of: PATO:0015031 ! contamination
@@ -20638,6 +20639,54 @@ synonym: "erythema" EXACT []
 synonym: "skin redness" EXACT []
 is_a: PATO:0000051 ! morphology
 created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040050
+name: diandrous
+def: "A phenotypic sex quality inhering in a  plant organism or a population of plants in which the flowers have two stamens." [http://orcid.org/0000-0002-2908-3327] {comment="https://orcid.org/0000-0001-8815-0078"}
+is_a: PATO:0001894 ! phenotypic sex
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040051
+name: monandrous
+def: "A phenotypic sex quality inhering in a  plant organism or a population of plants in which the flowers have only one stamen." [http://orcid.org/0000-0002-2908-3327, https://orcid.org/0000-0001-8815-0078]
+is_a: PATO:0001894 ! phenotypic sex
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040052
+name: protogynous
+def: "A sequential hermaphroditic quality whereby organisms start out as female and change to male at a later life stage." [https://en.wikipedia.org/wiki/Sequential_hermaphroditism] {comment="http://orcid.org/0000-0002-2908-3327"}
+synonym: "protogyny" EXACT []
+is_a: PATO:0070000 ! sequential hermaphrodite
+created_by: https://orcid.org/0000-0001-8815-0078
+
+[Term]
+id: PATO:0040053
+name: protandrous
+def: "A sequential hermaphroditic quality whereby organisms start out as male and change to female at a later life stage." [http://orcid.org/0000-0002-2908-3327, https://en.wikipedia.org/wiki/Sequential_hermaphroditism]
+synonym: "protandry" EXACT []
+is_a: PATO:0070000 ! sequential hermaphrodite
+created_by: https://orcid.org/0000-0001-8815-0078
+
+[Term]
+id: PATO:0040054
+name: protogynous hermaphroditism
+def: "A protogynous quality whereby organisms start out as female and change to hermaphrodite at a later life stage." [https://en.wikipedia.org/wiki/Sequential_hermaphroditism]
+synonym: "protogynous hermaphrodite" EXACT []
+synonym: "protogynous hermaphroditic" EXACT []
+is_a: PATO:0040052 ! protogynous
+created_by: https://orcid.org/0000-0001-8815-0078
+
+[Term]
+id: PATO:0040055
+name: protandrous hermaphroditism
+def: "A protandrous quality whereby organisms start out as male and change to hermaphrodite at a later life stage." [https://en.wikipedia.org/wiki/Sequential_hermaphroditism]
+synonym: "protandrous hermaphrodite" EXACT []
+synonym: "protandrous hermaphroditic" EXACT []
+is_a: PATO:0040053 ! protandrous
+created_by: https://orcid.org/0000-0001-8815-0078
 
 [Term]
 id: PATO:0040070
@@ -21896,6 +21945,15 @@ name: patchy pigmentation
 def: "A degree of pigmentation quality that is diversified with patches, or irregularity." [https://medlineplus.gov/ency/article/003224.htm]
 is_a: PATO:0002248 ! pigmented
 created_by: https://orcid.org/0000-0002-3528-5267
+
+[Term]
+id: PATO:0070000
+name: sequential hermaphrodite
+def: "A hermaphroditic quality that inheres in a population or organism where an organism changes is a different sexes during different life stages." [http://orcid.org/0000-0002-2908-3327, https://en.wikipedia.org/wiki/Sequential_hermaphroditism, https://orcid.org/0000-0001-8815-0078]
+comment: Sequential hermaphrodity is generally characterized by an organism producing female gametes and male gametes during different life stages.
+synonym: "sequential hermaphroditic" EXACT []
+is_a: PATO:0001340 ! hermaphrodite
+created_by: https://orcid.org/0000-0001-8815-0078
 
 [Term]
 id: PATO:0070001
