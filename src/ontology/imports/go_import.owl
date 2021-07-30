@@ -11,9 +11,9 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/pato/imports/go_import.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2021-06-15/imports/go_import.owl"/>
-        <dc:source rdf:resource="http://purl.obolibrary.org/obo/go/releases/2021-05-01/go.owl"/>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-06-15</owl:versionInfo>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2021-07-29/imports/go_import.owl"/>
+        <dc:source rdf:resource="http://purl.obolibrary.org/obo/go/releases/2021-07-02/go.owl"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2021-07-29</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -170,6 +170,14 @@
     <!-- http://purl.obolibrary.org/obo/go#goslim_pombe -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_pombe">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/go#goslim_synapse -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/go#goslim_synapse">
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
@@ -408,7 +416,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pdt</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>NIF_Subcellular:sao1337158144</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -550,7 +558,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0005622"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>All of the contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures.</obo:IAO_0000115>
+        <obo:IAO_0000115>The contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>Wikipedia:Cytoplasm</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0005737</oboInOwl:id>
@@ -566,7 +574,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005737"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>All of the contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures.</owl:annotatedTarget>
+        <owl:annotatedTarget>The contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0198547684</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -792,7 +800,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pdt</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -863,6 +871,66 @@
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dos</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0815316194</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0030054 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0030054">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0110165"/>
+        <obo:IAO_0000115>A cellular component that forms a specialized region of connection between two or more cells, or between a cell and the extracellular matrix, or between two membrane-bound components of a cell, such as flagella.</obo:IAO_0000115>
+        <obo:RO_0002161 rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_4751"/>
+        <oboInOwl:hasDbXref>Wikipedia:Cell_junction</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0030054</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_agr"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_drosophila"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon"/>
+        <rdfs:label>cell junction</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0030054"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A cellular component that forms a specialized region of connection between two or more cells, or between a cell and the extracellular matrix, or between two membrane-bound components of a cell, such as flagella.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:aruk</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:bc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0198506732</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:26820516</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:28096264</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://www.vivo.colostate.edu/hbooks/cmb/cells/pmemb/junctions_a.html</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0030425 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0030425">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043005"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0097447"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A neuron projection that has a short, tapering, morphology. Dendrites receive and integrate signals from other neurons or from sensory stimuli, and conduct nerve impulses towards the axon or the cell body. In most neurons, the impulse is conveyed from dendrites to axon via the cell body, but in some types of unipolar neuron, the impulse does not travel via the cell body.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NIF_Subcellular:sao1211023249</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Wikipedia:Dendrite</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0030425</oboInOwl:id>
+        <rdfs:label>dendrite</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0030425"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A neuron projection that has a short, tapering, morphology. Dendrites receive and integrate signals from other neurons or from sensory stimuli, and conduct nerve impulses towards the axon or the cell body. In most neurons, the impulse is conveyed from dendrites to axon via the cell body, but in some types of unipolar neuron, the impulse does not travel via the cell body.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:aruk</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:bc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dos</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:nln</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0198506732</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1062,6 +1130,42 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0032839 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0032839">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0005737"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0030425"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0120111"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0030425"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>All of the contents of a dendrite, excluding the surrounding plasma membrane.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>dendritic cytoplasm</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0032839</oboInOwl:id>
+        <rdfs:label>dendrite cytoplasm</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0032839"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>All of the contents of a dendrite, excluding the surrounding plasma membrane.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:mah</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0032991 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0032991">
@@ -1093,6 +1197,27 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0036477 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0036477">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0110165"/>
+        <obo:IAO_0000115>The region of a neuron that includes the cell body (cell soma) and dendrite(s), but excludes the axon.</obo:IAO_0000115>
+        <oboInOwl:created_by>bf</oboInOwl:created_by>
+        <oboInOwl:creation_date>2014-07-24T10:06:19Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0036477</oboInOwl:id>
+        <rdfs:label>somatodendritic compartment</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0036477"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The region of a neuron that includes the cell body (cell soma) and dendrite(s), but excludes the axon.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:PARL</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:pad</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0042995 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0042995">
@@ -1115,6 +1240,108 @@
         <owl:annotatedTarget>A prolongation or process extending from a cell, e.g. a flagellum or axon.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>http://www.cogsci.princeton.edu/~wn/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0043005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0120025"/>
+        <obo:IAO_0000115>A prolongation or process extending from a nerve cell, e.g. an axon or dendrite.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NIF_Subcellular:sao867568886</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>neuron process</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>neuron protrusion</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>neuronal cell projection</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>neurite</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>nerve fiber</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>GO:0043005</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
+        <rdfs:label>neuron projection</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043005"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A prolongation or process extending from a nerve cell, e.g. an axon or dendrite.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:jl</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>http://www.cogsci.princeton.edu/~wn/</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043005"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>neuron protrusion</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NIF_Subcellular:sao250931889</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043005"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>nerve fiber</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0043197 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0043197">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044309"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0098794"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0030425"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A small, membranous protrusion from a dendrite that forms a postsynaptic compartment, typically receiving input from a single presynapse.  They function as partially isolated biochemical and an electrical compartments. Spine morphology is variable:they can be thin, stubby, mushroom, or  branched, with a continuum of intermediate morphologies. They typically terminate in a bulb shape, linked to the dendritic shaft by a restriction. Spine remodeling is though to be involved in synaptic plasticity.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NIF_Subcellular:sao1799103720</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Wikipedia:Dendritic_spine</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>dendrite spine</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>branched dendritic spine</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>mushroom dendritic spine</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>sessile dendritic spine</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>stubby dendritic spine</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>thin dendritic spine</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0043197</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_synapse"/>
+        <rdfs:label>dendritic spine</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043197"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A small, membranous protrusion from a dendrite that forms a postsynaptic compartment, typically receiving input from a single presynapse.  They function as partially isolated biochemical and an electrical compartments. Spine morphology is variable:they can be thin, stubby, mushroom, or  branched, with a continuum of intermediate morphologies. They typically terminate in a bulb shape, linked to the dendritic shaft by a restriction. Spine remodeling is though to be involved in synaptic plasticity.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:nln</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043197"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>branched dendritic spine</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NIF_Subcellular:sao965204139</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043197"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>mushroom dendritic spine</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NIF_Subcellular:sao876577163</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043197"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>sessile dendritic spine</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NIF_Subcellular:sao1536532595</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043197"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>stubby dendritic spine</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NIF_Subcellular:sao317384566</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0043197"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>thin dendritic spine</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NIF_Subcellular:sao1232858786</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1247,6 +1474,109 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0044309 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044309">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043005"/>
+        <obo:IAO_0000115>A small membranous protrusion, often ending in a bulbous head and attached to the neuron by a narrow stalk or neck.</obo:IAO_0000115>
+        <oboInOwl:created_by>jl</oboInOwl:created_by>
+        <oboInOwl:creation_date>2010-02-05T04:25:10Z</oboInOwl:creation_date>
+        <oboInOwl:hasBroadSynonym>spine</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasDbXref>NIF_Subcellular:sao1145756102</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0044309</oboInOwl:id>
+        <rdfs:label>neuron spine</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044309"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A small membranous protrusion, often ending in a bulbous head and attached to the neuron by a narrow stalk or neck.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ISBN:0198504888</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NIF_Subcellular:sao1145756102</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0045202 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0045202">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0030054"/>
+        <obo:IAO_0000115>The junction between an axon of one neuron and a dendrite of another neuron, a muscle fiber or a glial cell. As the axon approaches the synapse it enlarges into a specialized structure, the presynaptic terminal bouton, which contains mitochondria and synaptic vesicles. At the tip of the terminal bouton is the presynaptic membrane; facing it, and separated from it by a minute cleft (the synaptic cleft) is a specialized area of membrane on the receiving cell, known as the postsynaptic membrane. In response to the arrival of nerve impulses, the presynaptic terminal bouton secretes molecules of neurotransmitters into the synaptic cleft. These diffuse across the cleft and transmit the signal to the postsynaptic membrane.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref>NIF_Subcellular:sao914572699</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Wikipedia:Chemical_synapse</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>synaptic junction</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>mixed synapse</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym>electrotonic synapse</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>GO:0045202</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_agr"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_drosophila"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_flybase_ribbon"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_mouse"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_pir"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_synapse"/>
+        <rdfs:label>synapse</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0045202"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The junction between an axon of one neuron and a dendrite of another neuron, a muscle fiber or a glial cell. As the axon approaches the synapse it enlarges into a specialized structure, the presynaptic terminal bouton, which contains mitochondria and synaptic vesicles. At the tip of the terminal bouton is the presynaptic membrane; facing it, and separated from it by a minute cleft (the synaptic cleft) is a specialized area of membrane on the receiving cell, known as the postsynaptic membrane. In response to the arrival of nerve impulses, the presynaptic terminal bouton secretes molecules of neurotransmitters into the synaptic cleft. These diffuse across the cleft and transmit the signal to the postsynaptic membrane.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:aruk</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0198506732</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:24619342</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:29383328</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:31998110</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0045202"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+        <owl:annotatedTarget>mixed synapse</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NIF_Subcellular:sao1506103497</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0045202"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>electrotonic synapse</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NIF_Subcellular:sao1311109124</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0061846 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0061846">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0005737"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0043197"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032839"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0043197"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The region of the neuronal cytoplasm located in dendritic spines.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0061846</oboInOwl:id>
+        <rdfs:label>dendritic spine cytoplasm</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0061846"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The region of the neuronal cytoplasm located in dendritic spines.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:15673667</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0071944 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0071944">
@@ -1317,6 +1647,80 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/GO_0097060 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0097060">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0098590"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0045202"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0098590"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0045202"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A specialized area of membrane on either the presynaptic or the postsynaptic side of a synapse, the junction between a nerve fiber of one neuron and another neuron or muscle fiber or glial cell.</obo:IAO_0000115>
+        <oboInOwl:created_by>pr</oboInOwl:created_by>
+        <oboInOwl:creation_date>2011-06-07T11:22:09Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0097060</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_synapse"/>
+        <rdfs:label>synaptic membrane</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0097060"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A specialized area of membrane on either the presynaptic or the postsynaptic side of a synapse, the junction between a nerve fiber of one neuron and another neuron or muscle fiber or glial cell.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:BHF</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:20410104</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0097447 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0097447">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043005"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0036477"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0030425"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The entire complement of dendrites for a neuron, consisting of each primary dendrite and all its branches.</obo:IAO_0000115>
+        <oboInOwl:created_by>pr</oboInOwl:created_by>
+        <oboInOwl:creation_date>2012-12-17T12:31:49Z</oboInOwl:creation_date>
+        <oboInOwl:hasDbXref>NIF_Subcellular:sao172297168</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0097447</oboInOwl:id>
+        <rdfs:label>dendritic tree</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0097447"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The entire complement of dendrites for a neuron, consisting of each primary dendrite and all its branches.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:aruk</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:bc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>NIF_Subcellular:sao172297168</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/GO_0098590 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0098590">
@@ -1352,6 +1756,31 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0098590"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A membrane that is a (regional) part of the plasma membrane.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dos</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0098794 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0098794">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0110165"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0045202"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>The part of a synapse that is part of the post-synaptic cell.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0098794</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#goslim_synapse"/>
+        <rdfs:label>postsynapse</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0098794"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The part of a synapse that is part of the post-synaptic cell.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dos</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -1452,6 +1881,7 @@
         <obo:IAO_0000115>Any (proper) part of the cytoplasm of a single cell of sufficient size to still be considered cytoplasm.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0099568</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:label>cytoplasmic region</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1489,6 +1919,7 @@
         <oboInOwl:hasExactSynonym>perimembrane region</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
         <oboInOwl:id>GO:0099738</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/go#gocheck_do_not_annotate"/>
         <rdfs:label>cell cortex region</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1554,6 +1985,43 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A prolongation or process extending from a cell and that is bounded by plasma membrane, e.g. a cilium, lamellipodium, or axon.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:krc</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/GO_0120111 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0120111">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0005737"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0043005"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032838"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0043005"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>All of the contents of a plasma membrane bounded neuron projection, excluding the plasma membrane surrounding the projection.</obo:IAO_0000115>
+        <oboInOwl:created_by>krc</oboInOwl:created_by>
+        <oboInOwl:creation_date>2017-11-01T18:58:12Z</oboInOwl:creation_date>
+        <oboInOwl:hasOBONamespace>cellular_component</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>GO:0120111</oboInOwl:id>
+        <rdfs:label>neuron projection cytoplasm</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0120111"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>All of the contents of a plasma membrane bounded neuron projection, excluding the plasma membrane surrounding the projection.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:ha</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
