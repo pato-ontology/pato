@@ -21941,8 +21941,9 @@ created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
 id: PATO:0070006
-name: bipolar morphology
-def: "A cell morphology that inheres in neurons which have two principal fibres (dendrites or axon) that emerge from the soma and begin to branch some distance from it, have few spines, and branch in narrow fields. This is in contrast to bitufted morphology where branching occurs close to the soma." [doi:10.1016/b978-0-12-369497-3.10004-4, PMID:18568015]
+name: cortical bipolar morphology
+def: "A cell morphology that inheres in neurons which have two principal dendrites that emerge from the soma and begin to branch some distance from it, have few spines, and branch in narrow fields. This is in contrast to bitufted morphology where branching occurs close to the soma." [doi:10.1016/b978-0-12-369497-3.10004-4, PMID:18568015]
+comment: This is specific to cortical bipolar cells and are distinguished from retinal bipolar cell morphology which has an axon and dendrite emerging from opposite ends of the soma.
 xref: ILX:0101312
 xref: ilxtr:BipolarPhenotype
 xref: nifext:2
@@ -22151,6 +22152,14 @@ def: "An osmolarity quality inhering in a bearer by virtue of the total amount o
 is_a: PATO:0001655 ! osmolarity
 created_by: http://orcid.org/0000-0002-3410-4655
 creation_date: 2020-10-30T08:08:48Z
+
+[Term]
+id: http://purl.obolibrary.org/obo/PATO:0070042
+name: retinal bipolar morphology
+def: "A cell morphology that inheres in retinal neurons which have two principal fibres, an axon and a dendrite, that emerge from opposite end the soma." [WikipediaVersioned:Retina_bipolar_cell&oldid=1033254616]
+comment: This is distinct from cortical bipolar morphology which has two dendrites emerging from opposite ends of the soma, rather than one axon and one dendrite.
+is_a: PATO:0010006 ! cell morphology
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
 
 [Typedef]
 id: correlates_with
