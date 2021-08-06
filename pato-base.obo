@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pato/releases/2021-07-09/pato-base.owl
+data-version: pato/releases/2021-08-06/pato-base.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -17,7 +17,7 @@ property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And 
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
 property_value: IAO:0000700 PATO:0000001
-property_value: owl:versionInfo "2021-07-09" xsd:string
+property_value: owl:versionInfo "2021-08-06" xsd:string
 
 [Term]
 id: CL:0000000
@@ -7362,7 +7362,6 @@ def: "A spatial quality inhering in a bearer by virtue of the bearer's being loc
 subset: mpath_slim
 subset: relational_slim
 subset: value_slim
-synonym: "anterior_ to" EXACT []
 is_a: PATO:0000140 ! position
 
 [Term]
@@ -10903,7 +10902,6 @@ subset: mpath_slim
 subset: relational_slim
 subset: value_slim
 synonym: "preceding" EXACT []
-synonym: "ventral_to" EXACT []
 is_a: PATO:0000140 ! position
 
 [Term]
@@ -22139,6 +22137,49 @@ def: "A neuron projection quality that is a characteristic of neurons with both 
 synonym: "IT projecting" EXACT []
 xref: ILX:0770100
 is_a: PATO:0070033 ! neuron projection quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070036
+name: dendrite quality
+def: "A quality inhering in a neuron's dendrites by virtue of the bearer's physical composition." []
+xref: ILX:0103022
+is_a: PATO:0000001 ! quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070038
+name: spiny dendrite quality
+def: "A dendrite quality inhering in a neuron by virtue of the bearer's dendrite having spines." []
+xref: ILX:0110980
+is_a: PATO:0070036 ! dendrite quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070039
+name: tufted dendrite quality
+def: "A dendrite quality inhering in a neuron by virtue of the bearer's dendrite having a terminal tuft." [ILX:0112065]
+xref: ILX:0112065
+xref: SAO:754373097
+is_a: PATO:0070036 ! dendrite quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070040
+name: aspiny dendrite quality
+def: "A dendrite quality inhering in a neuron by virtue of the bearer's dendrite having few or no recognizable dendritic spines." [ILX:0100932]
+xref: ILX:0100932
+xref: SAO:128827344
+is_a: PATO:0070036 ! dendrite quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070041
+name: varicose dendrite quality
+def: "A dendrite quality inhering in a neuron by virtue of the bearer's dendrite having numerous swellings or varicosities along their length." [ILX:0112263]
+xref: ILX:0112263
+xref: SAO:1706854098
+is_a: PATO:0070036 ! dendrite quality
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
