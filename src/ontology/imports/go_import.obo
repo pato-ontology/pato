@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pato/releases/2021-07-09/imports/go_import.owl
+data-version: pato/releases/2021-08-06/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate ""
 subsetdef: gocheck_do_not_manually_annotate ""
 subsetdef: goslim_agr ""
@@ -14,10 +14,11 @@ subsetdef: goslim_mouse ""
 subsetdef: goslim_pir ""
 subsetdef: goslim_plant ""
 subsetdef: goslim_pombe ""
+subsetdef: goslim_synapse ""
 subsetdef: goslim_yeast ""
 ontology: pato/imports/go_import
 property_value: http://purl.org/dc/elements/1.1/source http://purl.obolibrary.org/obo/go/releases/2021-07-02/go.owl
-property_value: owl:versionInfo "2021-07-09" xsd:string
+property_value: owl:versionInfo "2021-08-06" xsd:string
 
 [Term]
 id: GO:0005575
@@ -268,6 +269,28 @@ is_a: GO:0110165 ! cellular anatomical entity
 creation_date: 2014-03-06T11:37:54Z
 
 [Term]
+id: GO:0030054
+name: cell junction
+namespace: cellular_component
+def: "A cellular component that forms a specialized region of connection between two or more cells, or between a cell and the extracellular matrix, or between two membrane-bound components of a cell, such as flagella." [GOC:aruk, GOC:bc, GOC:mah, http://www.vivo.colostate.edu/hbooks/cmb/cells/pmemb/junctions_a.html, ISBN:0198506732, PMID:26820516, PMID:28096264]
+subset: goslim_agr
+subset: goslim_drosophila
+subset: goslim_flybase_ribbon
+xref: Wikipedia:Cell_junction
+is_a: GO:0110165 ! cellular anatomical entity
+property_value: RO:0002161 NCBITaxon:4751
+
+[Term]
+id: GO:0030425
+name: dendrite
+namespace: cellular_component
+def: "A neuron projection that has a short, tapering, morphology. Dendrites receive and integrate signals from other neurons or from sensory stimuli, and conduct nerve impulses towards the axon or the cell body. In most neurons, the impulse is conveyed from dendrites to axon via the cell body, but in some types of unipolar neuron, the impulse does not travel via the cell body." [GOC:aruk, GOC:bc, GOC:dos, GOC:mah, GOC:nln, ISBN:0198506732]
+xref: NIF_Subcellular:sao1211023249
+xref: Wikipedia:Dendrite
+is_a: GO:0043005 ! neuron projection
+relationship: part_of GO:0097447 ! dendritic tree
+
+[Term]
 id: GO:0030990
 name: intraciliary transport particle
 namespace: cellular_component
@@ -330,6 +353,17 @@ intersection_of: part_of GO:0120025 ! plasma membrane bounded cell projection
 relationship: part_of GO:0120025 ! plasma membrane bounded cell projection
 
 [Term]
+id: GO:0032839
+name: dendrite cytoplasm
+namespace: cellular_component
+def: "All of the contents of a dendrite, excluding the surrounding plasma membrane." [GOC:mah]
+synonym: "dendritic cytoplasm" EXACT []
+is_a: GO:0120111 ! neuron projection cytoplasm
+intersection_of: GO:0005737 ! cytoplasm
+intersection_of: part_of GO:0030425 ! dendrite
+relationship: part_of GO:0030425 ! dendrite
+
+[Term]
 id: GO:0032991
 name: protein-containing complex
 namespace: cellular_component
@@ -349,6 +383,15 @@ synonym: "protein-protein complex" NARROW []
 is_a: GO:0005575 ! cellular_component
 
 [Term]
+id: GO:0036477
+name: somatodendritic compartment
+namespace: cellular_component
+def: "The region of a neuron that includes the cell body (cell soma) and dendrite(s), but excludes the axon." [GOC:pad, GOC:PARL]
+is_a: GO:0110165 ! cellular anatomical entity
+created_by: bf
+creation_date: 2014-07-24T10:06:19Z
+
+[Term]
 id: GO:0042995
 name: cell projection
 namespace: cellular_component
@@ -361,6 +404,38 @@ synonym: "cell process" BROAD []
 synonym: "cellular process" BROAD []
 synonym: "cellular projection" EXACT []
 is_a: GO:0110165 ! cellular anatomical entity
+
+[Term]
+id: GO:0043005
+name: neuron projection
+namespace: cellular_component
+def: "A prolongation or process extending from a nerve cell, e.g. an axon or dendrite." [GOC:jl, http://www.cogsci.princeton.edu/~wn/]
+subset: goslim_pir
+synonym: "nerve fiber" RELATED [GOC:dph]
+synonym: "neurite" NARROW []
+synonym: "neuron process" EXACT []
+synonym: "neuron protrusion" EXACT [NIF_Subcellular:sao250931889]
+synonym: "neuronal cell projection" EXACT []
+xref: NIF_Subcellular:sao867568886
+is_a: GO:0120025 ! plasma membrane bounded cell projection
+
+[Term]
+id: GO:0043197
+name: dendritic spine
+namespace: cellular_component
+def: "A small, membranous protrusion from a dendrite that forms a postsynaptic compartment, typically receiving input from a single presynapse.  They function as partially isolated biochemical and an electrical compartments. Spine morphology is variable:they can be thin, stubby, mushroom, or  branched, with a continuum of intermediate morphologies. They typically terminate in a bulb shape, linked to the dendritic shaft by a restriction. Spine remodeling is though to be involved in synaptic plasticity." [GOC:nln]
+subset: goslim_synapse
+synonym: "branched dendritic spine" NARROW [NIF_Subcellular:sao965204139]
+synonym: "dendrite spine" EXACT []
+synonym: "mushroom dendritic spine" NARROW [NIF_Subcellular:sao876577163]
+synonym: "sessile dendritic spine" NARROW [NIF_Subcellular:sao1536532595]
+synonym: "stubby dendritic spine" NARROW [NIF_Subcellular:sao317384566]
+synonym: "thin dendritic spine" NARROW [NIF_Subcellular:sao1232858786]
+xref: NIF_Subcellular:sao1799103720
+xref: Wikipedia:Dendritic_spine
+is_a: GO:0044309 ! neuron spine
+is_a: GO:0098794 ! postsynapse
+relationship: part_of GO:0030425 ! dendrite
 
 [Term]
 id: GO:0043226
@@ -410,6 +485,45 @@ intersection_of: GO:0043227 ! membrane-bounded organelle
 intersection_of: part_of GO:0005622 ! intracellular anatomical structure
 
 [Term]
+id: GO:0044309
+name: neuron spine
+namespace: cellular_component
+def: "A small membranous protrusion, often ending in a bulbous head and attached to the neuron by a narrow stalk or neck." [ISBN:0198504888, NIF_Subcellular:sao1145756102]
+synonym: "spine" BROAD []
+xref: NIF_Subcellular:sao1145756102
+is_a: GO:0043005 ! neuron projection
+created_by: jl
+creation_date: 2010-02-05T04:25:10Z
+
+[Term]
+id: GO:0045202
+name: synapse
+namespace: cellular_component
+def: "The junction between an axon of one neuron and a dendrite of another neuron, a muscle fiber or a glial cell. As the axon approaches the synapse it enlarges into a specialized structure, the presynaptic terminal bouton, which contains mitochondria and synaptic vesicles. At the tip of the terminal bouton is the presynaptic membrane; facing it, and separated from it by a minute cleft (the synaptic cleft) is a specialized area of membrane on the receiving cell, known as the postsynaptic membrane. In response to the arrival of nerve impulses, the presynaptic terminal bouton secretes molecules of neurotransmitters into the synaptic cleft. These diffuse across the cleft and transmit the signal to the postsynaptic membrane." [GOC:aruk, ISBN:0198506732, PMID:24619342, PMID:29383328, PMID:31998110]
+subset: goslim_agr
+subset: goslim_drosophila
+subset: goslim_flybase_ribbon
+subset: goslim_mouse
+subset: goslim_pir
+subset: goslim_synapse
+synonym: "electrotonic synapse" RELATED [NIF_Subcellular:sao1311109124]
+synonym: "mixed synapse" NARROW [NIF_Subcellular:sao1506103497]
+synonym: "synaptic junction" EXACT []
+xref: NIF_Subcellular:sao914572699
+xref: Wikipedia:Chemical_synapse
+is_a: GO:0030054 ! cell junction
+
+[Term]
+id: GO:0061846
+name: dendritic spine cytoplasm
+namespace: cellular_component
+def: "The region of the neuronal cytoplasm located in dendritic spines." [PMID:15673667]
+is_a: GO:0032839 ! dendrite cytoplasm
+intersection_of: GO:0005737 ! cytoplasm
+intersection_of: part_of GO:0043197 ! dendritic spine
+relationship: part_of GO:0043197 ! dendritic spine
+
+[Term]
 id: GO:0071944
 name: cell periphery
 namespace: cellular_component
@@ -441,6 +555,31 @@ created_by: pr
 creation_date: 2011-03-23T01:52:31Z
 
 [Term]
+id: GO:0097060
+name: synaptic membrane
+namespace: cellular_component
+def: "A specialized area of membrane on either the presynaptic or the postsynaptic side of a synapse, the junction between a nerve fiber of one neuron and another neuron or muscle fiber or glial cell." [GOC:BHF, PMID:20410104]
+subset: goslim_synapse
+is_a: GO:0098590 ! plasma membrane region
+intersection_of: GO:0098590 ! plasma membrane region
+intersection_of: part_of GO:0045202 ! synapse
+relationship: part_of GO:0045202 ! synapse
+created_by: pr
+creation_date: 2011-06-07T11:22:09Z
+
+[Term]
+id: GO:0097447
+name: dendritic tree
+namespace: cellular_component
+def: "The entire complement of dendrites for a neuron, consisting of each primary dendrite and all its branches." [GOC:aruk, GOC:bc, NIF_Subcellular:sao172297168]
+xref: NIF_Subcellular:sao172297168
+is_a: GO:0043005 ! neuron projection
+relationship: has_part GO:0030425 ! dendrite
+relationship: part_of GO:0036477 ! somatodendritic compartment
+created_by: pr
+creation_date: 2012-12-17T12:31:49Z
+
+[Term]
 id: GO:0098590
 name: plasma membrane region
 namespace: cellular_component
@@ -454,6 +593,15 @@ intersection_of: part_of GO:0005886 ! plasma membrane
 relationship: part_of GO:0005886 ! plasma membrane
 created_by: dos
 creation_date: 2014-03-06T11:55:32Z
+
+[Term]
+id: GO:0098794
+name: postsynapse
+namespace: cellular_component
+def: "The part of a synapse that is part of the post-synaptic cell." [GOC:dos]
+subset: goslim_synapse
+is_a: GO:0110165 ! cellular anatomical entity
+relationship: part_of GO:0045202 ! synapse
 
 [Term]
 id: GO:0098796
@@ -521,6 +669,18 @@ relationship: has_part GO:0098590 ! plasma membrane region
 property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/13193 xsd:anyURI
 created_by: krc
 creation_date: 2017-03-21T17:26:07Z
+
+[Term]
+id: GO:0120111
+name: neuron projection cytoplasm
+namespace: cellular_component
+def: "All of the contents of a plasma membrane bounded neuron projection, excluding the plasma membrane surrounding the projection." [GOC:ha]
+is_a: GO:0032838 ! plasma membrane bounded cell projection cytoplasm
+intersection_of: GO:0005737 ! cytoplasm
+intersection_of: part_of GO:0043005 ! neuron projection
+relationship: part_of GO:0043005 ! neuron projection
+created_by: krc
+creation_date: 2017-11-01T18:58:12Z
 
 [Term]
 id: GO:0140513

@@ -118,6 +118,11 @@
           "sub": "http://purl.obolibrary.org/obo/PATO_0001303"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0000001",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070036"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/PATO_0000004",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0000299"
@@ -10678,6 +10683,26 @@
           "sub": "http://purl.obolibrary.org/obo/PATO_0070034"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070036",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070038"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070036",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070039"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070036",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070040"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070036",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070041"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/pato#different_in_magnitude_relative_to",
           "pred": "subPropertyOf",
           "sub": "http://purl.obolibrary.org/obo/pato#decreased_in_magnitude_relative_to"
@@ -14470,11 +14495,11 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2021-07-09"
+            "val": "2021-08-06"
           }
         ],
         "subsets": [],
-        "version": "http://purl.obolibrary.org/obo/pato/releases/2021-07-09/pato-base.json",
+        "version": "http://purl.obolibrary.org/obo/pato/releases/2021-08-06/pato-base.json",
         "xrefs": []
       },
       "nodes": [
@@ -36046,13 +36071,6 @@
               "http://purl.obolibrary.org/obo/pato#mpath_slim",
               "http://purl.obolibrary.org/obo/pato#relational_slim",
               "http://purl.obolibrary.org/obo/pato#value_slim"
-            ],
-            "synonyms": [
-              {
-                "pred": "hasExactSynonym",
-                "val": "anterior_ to",
-                "xrefs": []
-              }
             ]
           },
           "type": "CLASS"
@@ -46927,11 +46945,6 @@
               {
                 "pred": "hasExactSynonym",
                 "val": "preceding",
-                "xrefs": []
-              },
-              {
-                "pred": "hasExactSynonym",
-                "val": "ventral_to",
                 "xrefs": []
               }
             ]
@@ -81654,6 +81667,151 @@
             "xrefs": [
               {
                 "val": "ILX:0770100"
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070036",
+          "lbl": "dendrite quality",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A quality inhering in a neuron's dendrites by virtue of the bearer's physical composition.",
+              "xrefs": []
+            },
+            "xrefs": [
+              {
+                "val": "ILX:0103022"
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070038",
+          "lbl": "spiny dendrite quality",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A dendrite quality inhering in a neuron by virtue of the bearer's dendrite having spines.",
+              "xrefs": []
+            },
+            "xrefs": [
+              {
+                "val": "ILX:0110980"
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070039",
+          "lbl": "tufted dendrite quality",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A dendrite quality inhering in a neuron by virtue of the bearer's dendrite having a terminal tuft.",
+              "xrefs": [
+                "ILX:0112065"
+              ]
+            },
+            "xrefs": [
+              {
+                "val": "ILX:0112065"
+              },
+              {
+                "val": "SAO:754373097"
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070040",
+          "lbl": "aspiny dendrite quality",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A dendrite quality inhering in a neuron by virtue of the bearer's dendrite having few or no recognizable dendritic spines.",
+              "xrefs": [
+                "ILX:0100932"
+              ]
+            },
+            "xrefs": [
+              {
+                "val": "ILX:0100932"
+              },
+              {
+                "val": "SAO:128827344"
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070041",
+          "lbl": "varicose dendrite quality",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A dendrite quality inhering in a neuron by virtue of the bearer's dendrite having numerous swellings or varicosities along their length.",
+              "xrefs": [
+                "ILX:0112263"
+              ]
+            },
+            "xrefs": [
+              {
+                "val": "ILX:0112263"
+              },
+              {
+                "val": "SAO:1706854098"
               }
             ]
           },
