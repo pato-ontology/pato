@@ -5508,6 +5508,11 @@
           "sub": "http://purl.obolibrary.org/obo/PATO_0001343"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0001340",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070000"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/PATO_0001342",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0001341"
@@ -7596,6 +7601,16 @@
           "obj": "http://purl.obolibrary.org/obo/PATO_0001894",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0001827"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0001894",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0040050"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0001894",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0040051"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0001895",
@@ -10458,6 +10473,16 @@
           "sub": "http://purl.obolibrary.org/obo/PATO_0040041"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0040052",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0040054"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0040053",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0040055"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/PATO_0045000",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0045087"
@@ -10943,6 +10968,16 @@
           "sub": "http://purl.obolibrary.org/obo/PATO_0060003"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070000",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0040052"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070000",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0040053"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/PATO_0070002",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0070003"
@@ -11124,11 +11159,11 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2021-08-06"
+            "val": "2021-08-25"
           }
         ],
         "subsets": [],
-        "version": "http://purl.obolibrary.org/obo/pato/releases/2021-08-06/pato-simple.json",
+        "version": "http://purl.obolibrary.org/obo/pato/releases/2021-08-25/pato-simple.json",
         "xrefs": []
       },
       "nodes": [
@@ -36291,6 +36326,11 @@
               "http://purl.obolibrary.org/obo/pato#value_slim"
             ],
             "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "hermaphroditic",
+                "xrefs": []
+              },
               {
                 "pred": "hasExactSynonym",
                 "val": "intersex",
@@ -72825,7 +72865,7 @@
               }
             ],
             "definition": {
-              "val": "The presence of a constituent, impurity, or some other undesirable element that spoils, corrupts, infects, makes unfit, or makes inferior a material, physical body, natural environment, place of human occupancy, or other material entitt.",
+              "val": "The presence of a constituent, impurity, or some other undesirable element that spoils, corrupts, infects, makes unfit, or makes inferior a material, physical body, natural environment, place of human occupancy, or other material entity.",
               "xrefs": [
                 "https://en.wikipedia.org/wiki/Contamination",
                 "https://github.com/pato-ontology/pato/issues/420"
@@ -74690,6 +74730,184 @@
               {
                 "pred": "hasExactSynonym",
                 "val": "skin redness",
+                "xrefs": []
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0040050",
+          "lbl": "diandrous",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-5208-3432"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A phenotypic sex quality inhering in a  plant organism or a population of plants in which the flowers have two stamens.",
+              "xrefs": [
+                "http://orcid.org/0000-0002-2908-3327"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0040051",
+          "lbl": "monandrous",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-5208-3432"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A phenotypic sex quality inhering in a  plant organism or a population of plants in which the flowers have only one stamen.",
+              "xrefs": [
+                "http://orcid.org/0000-0002-2908-3327",
+                "https://orcid.org/0000-0001-8815-0078"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0040052",
+          "lbl": "protogynous",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "https://orcid.org/0000-0001-8815-0078"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A sequential hermaphroditic quality whereby organisms start out as female and change to male at a later life stage.",
+              "xrefs": [
+                "https://en.wikipedia.org/wiki/Sequential_hermaphroditism"
+              ]
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "protogyny",
+                "xrefs": []
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0040053",
+          "lbl": "protandrous",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "https://orcid.org/0000-0001-8815-0078"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A sequential hermaphroditic quality whereby organisms start out as male and change to female at a later life stage.",
+              "xrefs": [
+                "http://orcid.org/0000-0002-2908-3327",
+                "https://en.wikipedia.org/wiki/Sequential_hermaphroditism"
+              ]
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "protandry",
+                "xrefs": []
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0040054",
+          "lbl": "protogynous hermaphroditism",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "https://orcid.org/0000-0001-8815-0078"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A protogynous quality whereby organisms start out as female and change to hermaphrodite at a later life stage.",
+              "xrefs": [
+                "https://en.wikipedia.org/wiki/Sequential_hermaphroditism"
+              ]
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "protogynous hermaphrodite",
+                "xrefs": []
+              },
+              {
+                "pred": "hasExactSynonym",
+                "val": "protogynous hermaphroditic",
+                "xrefs": []
+              }
+            ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0040055",
+          "lbl": "protandrous hermaphroditism",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "https://orcid.org/0000-0001-8815-0078"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A protandrous quality whereby organisms start out as male and change to hermaphrodite at a later life stage.",
+              "xrefs": [
+                "https://en.wikipedia.org/wiki/Sequential_hermaphroditism"
+              ]
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "protandrous hermaphrodite",
+                "xrefs": []
+              },
+              {
+                "pred": "hasExactSynonym",
+                "val": "protandrous hermaphroditic",
                 "xrefs": []
               }
             ]
@@ -77712,6 +77930,41 @@
                 "https://medlineplus.gov/ency/article/003224.htm"
               ]
             }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070000",
+          "lbl": "sequential hermaphrodite",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "https://orcid.org/0000-0001-8815-0078"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "comments": [
+              "Sequential hermaphrodity is generally characterized by an organism producing female gametes and male gametes during different life stages."
+            ],
+            "definition": {
+              "val": "A hermaphroditic quality that inheres in a population or organism where an organism changes is a different sexes during different life stages.",
+              "xrefs": [
+                "http://orcid.org/0000-0002-2908-3327",
+                "https://en.wikipedia.org/wiki/Sequential_hermaphroditism",
+                "https://orcid.org/0000-0001-8815-0078"
+              ]
+            },
+            "synonyms": [
+              {
+                "pred": "hasExactSynonym",
+                "val": "sequential hermaphroditic",
+                "xrefs": []
+              }
+            ]
           },
           "type": "CLASS"
         },
