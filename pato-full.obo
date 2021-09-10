@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pato/releases/2021-08-06/pato-full.owl
+data-version: pato/releases/2021-09-09/pato-full.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: added_for_HCA ""
@@ -58,7 +58,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology of phen
 property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And Trait Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
 property_value: IAO:0000700 PATO:0000001
-property_value: owl:versionInfo "2021-08-06" xsd:string
+property_value: owl:versionInfo "2021-09-09" xsd:string
 
 [Term]
 id: BFO:0000001
@@ -5268,7 +5268,6 @@ synonym: "horsetail nucleus" NARROW [GOC:al, GOC:mah, GOC:vw, PMID:15030757]
 xref: NIF_Subcellular:sao1702920020
 xref: Wikipedia:Cell_nucleus
 is_a: GO:0043231 ! intracellular membrane-bounded organelle
-is_a: GO:0044464 ! obsolete cell part
 property_value: IAO:0000412 http://purl.obolibrary.org/obo/go.owl
 
 [Term]
@@ -7260,7 +7259,6 @@ is_a: GO:0008150 ! biological_process
 id: GO:0044464
 name: cell part
 name: obsolete cell part
-is_a: CARO:0000003 ! connected anatomical structure
 
 [Term]
 id: GO:0044703
@@ -18521,6 +18519,7 @@ id: PATO:0001340
 name: hermaphrodite
 def: "A biological sex quality inhering in an organism or a population with both male and female sexual organs in one individual." [MGED:MGED]
 subset: value_slim
+synonym: "hermaphroditic" EXACT []
 synonym: "intersex" EXACT []
 is_a: PATO:0001894 ! phenotypic sex
 
@@ -30244,7 +30243,7 @@ is_a: PATO:0000052 ! shape
 [Term]
 id: PATO:0015031
 name: contamination
-def: "The presence of a constituent, impurity, or some other undesirable element that spoils, corrupts, infects, makes unfit, or makes inferior a material, physical body, natural environment, place of human occupancy, or other material entitt." [https://en.wikipedia.org/wiki/Contamination, https://github.com/pato-ontology/pato/issues/420]
+def: "The presence of a constituent, impurity, or some other undesirable element that spoils, corrupts, infects, makes unfit, or makes inferior a material, physical body, natural environment, place of human occupancy, or other material entity." [https://en.wikipedia.org/wiki/Contamination, https://github.com/pato-ontology/pato/issues/420]
 subset: attribute_slim
 synonym: "degree of contamination" EXACT []
 is_a: PATO:0000025 ! composition
@@ -30779,6 +30778,54 @@ synonym: "erythema" EXACT []
 synonym: "skin redness" EXACT []
 is_a: PATO:0000051 ! morphology
 created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040050
+name: diandrous
+def: "A phenotypic sex quality inhering in a  plant organism or a population of plants in which the flowers have two stamens." [http://orcid.org/0000-0002-2908-3327] {comment="https://orcid.org/0000-0001-8815-0078"}
+is_a: PATO:0001894 ! phenotypic sex
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040051
+name: monandrous
+def: "A phenotypic sex quality inhering in a  plant organism or a population of plants in which the flowers have only one stamen." [http://orcid.org/0000-0002-2908-3327, https://orcid.org/0000-0001-8815-0078]
+is_a: PATO:0001894 ! phenotypic sex
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040052
+name: protogynous
+def: "A sequential hermaphroditic quality whereby organisms start out as female and change to male at a later life stage." [https://en.wikipedia.org/wiki/Sequential_hermaphroditism] {comment="http://orcid.org/0000-0002-2908-3327"}
+synonym: "protogyny" EXACT []
+is_a: PATO:0070000 ! sequential hermaphrodite
+created_by: https://orcid.org/0000-0001-8815-0078
+
+[Term]
+id: PATO:0040053
+name: protandrous
+def: "A sequential hermaphroditic quality whereby organisms start out as male and change to female at a later life stage." [http://orcid.org/0000-0002-2908-3327, https://en.wikipedia.org/wiki/Sequential_hermaphroditism]
+synonym: "protandry" EXACT []
+is_a: PATO:0070000 ! sequential hermaphrodite
+created_by: https://orcid.org/0000-0001-8815-0078
+
+[Term]
+id: PATO:0040054
+name: protogynous hermaphroditism
+def: "A protogynous quality whereby organisms start out as female and change to hermaphrodite at a later life stage." [https://en.wikipedia.org/wiki/Sequential_hermaphroditism]
+synonym: "protogynous hermaphrodite" EXACT []
+synonym: "protogynous hermaphroditic" EXACT []
+is_a: PATO:0040052 ! protogynous
+created_by: https://orcid.org/0000-0001-8815-0078
+
+[Term]
+id: PATO:0040055
+name: protandrous hermaphroditism
+def: "A protandrous quality whereby organisms start out as male and change to hermaphrodite at a later life stage." [https://en.wikipedia.org/wiki/Sequential_hermaphroditism]
+synonym: "protandrous hermaphrodite" EXACT []
+synonym: "protandrous hermaphroditic" EXACT []
+is_a: PATO:0040053 ! protandrous
+created_by: https://orcid.org/0000-0001-8815-0078
 
 [Term]
 id: PATO:0040070
@@ -32060,6 +32107,15 @@ is_a: PATO:0002248 ! pigmented
 created_by: https://orcid.org/0000-0002-3528-5267
 
 [Term]
+id: PATO:0070000
+name: sequential hermaphrodite
+def: "A hermaphroditic quality that inheres in a population or organism where an organism changes is a different sexes during different life stages." [http://orcid.org/0000-0002-2908-3327, https://en.wikipedia.org/wiki/Sequential_hermaphroditism, https://orcid.org/0000-0001-8815-0078]
+comment: Sequential hermaphrodity is generally characterized by an organism producing female gametes and male gametes during different life stages.
+synonym: "sequential hermaphroditic" EXACT []
+is_a: PATO:0001340 ! hermaphrodite
+created_by: https://orcid.org/0000-0001-8815-0078
+
+[Term]
 id: PATO:0070001
 name: neurogliaform morphology
 def: "A cell morphology that inheres in neurons which have a small round soma, a large number of short, smooth, or slightly beaded primary dendrites that give rise to only a few secondary branches, and a branched axon that establishes a dense axonal mesh with thin shafts." [PMID:17122314]
@@ -32739,7 +32795,6 @@ is_a: UBERON:0000026 ! appendage
 intersection_of: UBERON:0000026 ! appendage
 intersection_of: has_quality PATO:0002236 ! aliform
 relationship: capable_of_part_of GO:0060361 ! flight
-relationship: confers_advantage_in ENVO:00000568 ! obsolete aerial habitat
 relationship: has_quality PATO:0002236 ! aliform
 relationship: only_in_taxon NCBITaxon:33213 ! Bilateria
 property_value: RO:0002161 NCBITaxon:118072 {source="bgee"}
@@ -56027,7 +56082,6 @@ xref: FMA:83115
 is_a: BFO:0000040 ! material entity
 is_a: UBERON:0000477 {source="FMA"} ! anatomical cluster
 relationship: composed_primarily_of GO:0005575 ! cellular_component
-relationship: has_component GO:0044464 {minCardinality="2"} ! obsolete cell part
 property_value: UBPROP:0000012 "we go with the FMA classification rather than the CARO one. FMA def: 'Anatomical cluster which has as direct parts cell parts from two or more cells.'" xsd:string {external_ontology="CARO", external_ontology="FMA"}
 
 [Term]
@@ -68981,7 +69035,7 @@ property_value: IAO:0000118 "actively involved in" xsd:string
 property_value: IAO:0000118 "enables part of" xsd:string
 property_value: seeAlso Involved:in
 holds_over_chain: RO:0002327 part_of
-is_a: participates_in ! participates in
+is_a: participates_in ! participates_in
 is_a: RO:0002431 ! involved in or involved in regulation of
 transitive_over: part_of ! part_of
 
@@ -70561,7 +70615,7 @@ subset: RO:0002259
 xref: RO:0002352
 property_value: IAO:0000117 "Chris Mungall" xsd:string
 is_a: functionally_related_to ! functionally related to
-is_a: participates_in ! participates in
+is_a: participates_in ! participates_in
 
 [Typedef]
 id: intersects_midsagittal_plane_of
@@ -70703,7 +70757,7 @@ namespace: uberon
 def: "inverse of has output" []
 xref: RO:0002353
 is_a: functionally_related_to ! functionally related to
-is_a: participates_in ! participates in
+is_a: participates_in ! participates_in
 
 [Typedef]
 id: overlaps
