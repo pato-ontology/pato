@@ -19863,7 +19863,7 @@ id: PATO:0015002
 name: process efficacy
 def: "The ability of a process to produce its output." [PATOC:PortlandMeetingFeb2015]
 subset: attribute_slim
-is_a: PATO:0001236 ! process quality
+is_a: PATO:0002062 ! physical quality of a process
 created_by: cjm
 
 [Term]
@@ -20106,7 +20106,7 @@ is_a: PATO:0000052 ! shape
 [Term]
 id: PATO:0015031
 name: contamination
-def: "The presence of a constituent, impurity, or some other undesirable element that spoils, corrupts, infects, makes unfit, or makes inferior a material, physical body, natural environment, place of human occupancy, or other material entitt." [https://github.com/pato-ontology/pato/issues/420, https://en.wikipedia.org/wiki/Contamination]
+def: "The presence of a constituent, impurity, or some other undesirable element that spoils, corrupts, infects, makes unfit, or makes inferior a material, physical body, natural environment, place of human occupancy, or other material entitt." [https://en.wikipedia.org/wiki/Contamination, https://github.com/pato-ontology/pato/issues/420]
 subset: attribute_slim
 synonym: "degree of contamination" EXACT []
 is_a: PATO:0000025 ! composition
@@ -20114,7 +20114,7 @@ is_a: PATO:0000025 ! composition
 [Term]
 id: PATO:0015032
 name: increased contamination
-def: "An increase in contamination." [https://github.com/pato-ontology/pato/issues/420, https://en.wikipedia.org/wiki/Contamination]
+def: "An increase in contamination." [https://en.wikipedia.org/wiki/Contamination, https://github.com/pato-ontology/pato/issues/420]
 subset: value_slim
 synonym: "contaminated" EXACT []
 intersection_of: PATO:0015031 ! contamination
@@ -20123,7 +20123,7 @@ intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 [Term]
 id: PATO:0015033
 name: decreased contamination
-def: "A decrease in contamination." [https://github.com/pato-ontology/pato/issues/420, https://en.wikipedia.org/wiki/Contamination]
+def: "A decrease in contamination." [https://en.wikipedia.org/wiki/Contamination, https://github.com/pato-ontology/pato/issues/420]
 subset: value_slim
 synonym: "uncontaminated" EXACT []
 intersection_of: PATO:0015031 ! contamination
@@ -21799,6 +21799,7 @@ id: PATO:0050001
 name: rate of continuous process
 def: "The rate of output of a continuous process. Example include: growth rate, cell migration rate, enzyme reaction rate." [https://orcid.org/0000-0002-9943-9018]
 is_a: PATO:0000161 ! rate
+is_a: PATO:0015002 ! process efficacy
 
 [Term]
 id: PATO:0055001
@@ -21842,7 +21843,6 @@ property_value: http://purl.org/dc/elements/1.1/date 2020-08-19T09:24:35Z xsd:da
 id: PATO:0055005
 name: increased rate of continuous process
 def: "A rate of output of a continuous process that is relatively high." [https://orcid.org/0000-0003-4148-4606]
-is_a: PATO:0050001 ! rate of continuous process
 intersection_of: PATO:0050001 ! rate of continuous process
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
 property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0003-4148-4606 xsd:string
@@ -21852,7 +21852,6 @@ property_value: http://purl.org/dc/elements/1.1/date 2020-08-19T09:24:56Z xsd:da
 id: PATO:0055006
 name: decreased rate of continuous process
 def: "A rate of output of a continuous process that is relatively low." [https://orcid.org/0000-0003-4148-4606]
-is_a: PATO:0050001 ! rate of continuous process
 intersection_of: PATO:0050001 ! rate of continuous process
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 property_value: http://purl.org/dc/elements/1.1/creator https://orcid.org/0000-0003-4148-4606 xsd:string
