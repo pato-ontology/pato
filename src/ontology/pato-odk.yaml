@@ -18,7 +18,7 @@ import_group:
   products:
     - id: ro
     - id: chebi
-      mirror_from: http://purl.obolibrary.org/obo/chebi.owl.gz
+      use_gzipped: TRUE
     - id: go
     - id: pco
     - id: uberon
@@ -27,4 +27,4 @@ documentation:
 components:
   products:
     - filename: pato_ext.owl
-robot_java_args: '-Xmx8G'
+robot_java_args: '-Xmx12G'
