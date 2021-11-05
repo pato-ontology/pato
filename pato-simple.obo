@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pato/releases/2021-09-09/pato-simple.owl
+data-version: pato/releases/2021-11-05/pato-simple.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -21,7 +21,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology of phen
 property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And Trait Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
 property_value: IAO:0000700 PATO:0000001
-property_value: owl:versionInfo "2021-09-09" xsd:string
+property_value: owl:versionInfo "2021-11-05" xsd:string
 
 [Term]
 id: PATO:0000000
@@ -11099,7 +11099,7 @@ relationship: is_opposite_of PATO:0001671 ! increased distribution
 [Term]
 id: PATO:0001673
 name: cystic
-def: "Structure quality that is the presence of closed epithelium bounded capsules containing one or more liquid or solid organism substances." [PATOC:MAH]
+def: "Structure quality that is the presence of at least one sac-like closed membranous structure containing one or more liquid or solid organism substances." [PATOC:MAH]
 comment: Cystic is an abnormal condition.
 subset: value_slim
 synonym: "cysts" NARROW []
@@ -14685,7 +14685,7 @@ creation_date: 2009-09-30T09:53:43Z
 [Term]
 id: PATO:0002088
 name: monocystic
-def: "A structure quality inhering in a bearer by virtue of the bearer's body consisting of one sac." [mondofacto:mondofacto]
+def: "A structure quality inhering in a bearer by virtue of the bearer's body containing one cyst - a formation of a sac-like closed membranous structure not associated with neoplasia." [mondofacto:mondofacto]
 subset: mpath_slim
 subset: value_slim
 is_a: PATO:0001673 ! cystic
@@ -14695,7 +14695,7 @@ creation_date: 2009-10-01T03:00:20Z
 [Term]
 id: PATO:0002089
 name: polycystic
-def: "A structure quality inhering in a bearer by virtue of the bearer's body containing more than one cyst - formations of an epithelium bounded cavity not associated with neoplasia." [PATOC:GVG]
+def: "A structure quality inhering in a bearer by virtue of the bearer's body containing more than one cyst - formations of sac-like closed membranous structures not associated with neoplasia." [PATOC:GVG]
 subset: value_slim
 synonym: "multicystic" EXACT []
 is_a: PATO:0001673 ! cystic
@@ -19880,8 +19880,9 @@ replaced_by: PATO:0002539
 
 [Term]
 id: PATO:0040002
-name: originates from
+name: position originates from
 def: "A positional quality inhering in a bearer by virtue of some aspect of that bearer beginning from a position on another entity." []
+comment: Original label "originates from" changed to current label to differentiate that this term is a positional quality rather than one that connects between an entity and another entity it originates from.
 subset: relational_slim
 is_a: PATO:0000140 ! position
 property_value: http://purl.org/dc/elements/1.1/date 2018-05-24T04:10:53Z xsd:dateTime
@@ -21450,12 +21451,13 @@ created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
 id: PATO:0070006
-name: bipolar morphology
-def: "A cell morphology that inheres in neurons which have two principal fibres (dendrites or axon) that emerge from the soma and begin to branch some distance from it, have few spines, and branch in narrow fields. This is in contrast to bitufted morphology where branching occurs close to the soma." [doi:10.1016/b978-0-12-369497-3.10004-4, PMID:18568015]
+name: cortical bipolar morphology
+def: "A cell morphology that inheres in neurons which have two principal dendrites that emerge from the soma and begin to branch some distance from it, have few spines, and branch in narrow fields. This is in contrast to bitufted morphology where branching occurs close to the soma." [doi:10.1016/b978-0-12-369497-3.10004-4, PMID:18568015]
+comment: This is specific to cortical bipolar cells and are distinguished from retinal bipolar cell morphology which has an axon and dendrite emerging from opposite ends of the soma.
 xref: ILX:0101312
 xref: ilxtr:BipolarPhenotype
 xref: nifext:2
-is_a: PATO:0010006 ! cell morphology
+is_a: PATO:0070027 ! bitufted dendrite cell morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -21507,7 +21509,7 @@ id: PATO:0070012
 name: bitufted cell morphology
 def: "A cell morphology that inheres in neurons which have two clusters of primary dendrites that originate directly and extend from opposite ends of the soma, and axons that form a plexus which spreads widely. Compared to the narrow vertical axonal projection of bipolar morphology, and the 'horse-tail' axonal cluster of double boquet cells, bitufted morphology has wide horizontal axonal spans, and branching that occur close to the soma. Their vertical projection is also less extensive and crosses mostly to neighboring layers." [doi:10.1016/b978-0-12-369497-3.10004-4, PMID:15378039, PMID:18568015]
 xref: ilxtr:BituftedPhenotype
-is_a: PATO:0010006 ! cell morphology
+is_a: PATO:0070027 ! bitufted dendrite cell morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -21591,6 +21593,14 @@ name: multipolar neuron morphology
 def: "A cell morphology that inheres in neurons which possess a single axon and many dendrites and dendritic branches." [WikipediaVersioned:Multipolar_neuron&oldid=1022942606]
 xref: ILX:0107196
 xref: NLX:378
+is_a: PATO:0010006 ! cell morphology
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070027
+name: bitufted dendrite cell morphology
+def: "A cell morphology that inheres in neurons with dendrites that are bidirectional, emerging from opposite ends of the soma, with the two arbors extending in radial or tangential directions." [PMID:18568015]
+comment: This morphology type is distinct from bitufted cell morphology in that it refers to bitufted dendrite morphology rather than bitufted cell morphology.
 is_a: PATO:0010006 ! cell morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
@@ -21686,6 +21696,14 @@ def: "A dendrite quality inhering in a neuron by virtue of the bearer's dendrite
 xref: ILX:0112263
 xref: SAO:1706854098
 is_a: PATO:0070036 ! dendrite quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070042
+name: retinal bipolar morphology
+def: "A cell morphology that inheres in retinal neurons which have two principal fibres, an axon and a dendrite, that emerge from opposite end the soma." [WikipediaVersioned:Retina_bipolar_cell&oldid=1033254616]
+comment: This is distinct from cortical bipolar morphology which has two dendrites emerging from opposite ends of the soma, rather than one axon and one dendrite.
+is_a: PATO:0010006 ! cell morphology
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]

@@ -9960,17 +9960,7 @@
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
           "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/PATO_0070006"
-        },
-        {
-          "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
-          "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0070011"
-        },
-        {
-          "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
-          "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/PATO_0070012"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
@@ -9981,6 +9971,16 @@
           "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0070026"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070027"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070042"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0015002",
@@ -10691,6 +10691,16 @@
           "obj": "http://purl.obolibrary.org/obo/PATO_0070026",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0070015"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070027",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070006"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070027",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070012"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0070033",
@@ -14530,11 +14540,11 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2021-09-09"
+            "val": "2021-11-05"
           }
         ],
         "subsets": [],
-        "version": "http://purl.obolibrary.org/obo/pato/releases/2021-09-09/pato-base.json",
+        "version": "http://purl.obolibrary.org/obo/pato/releases/2021-11-05/pato-base.json",
         "xrefs": []
       },
       "nodes": [
@@ -48041,7 +48051,7 @@
               "Cystic is an abnormal condition."
             ],
             "definition": {
-              "val": "Structure quality that is the presence of closed epithelium bounded capsules containing one or more liquid or solid organism substances.",
+              "val": "Structure quality that is the presence of at least one sac-like closed membranous structure containing one or more liquid or solid organism substances.",
               "xrefs": [
                 "PATOC:MAH"
               ]
@@ -59407,7 +59417,7 @@
               }
             ],
             "definition": {
-              "val": "A structure quality inhering in a bearer by virtue of the bearer's body consisting of one sac.",
+              "val": "A structure quality inhering in a bearer by virtue of the bearer's body containing one cyst - a formation of a sac-like closed membranous structure not associated with neoplasia.",
               "xrefs": [
                 "mondofacto:mondofacto"
               ]
@@ -59438,7 +59448,7 @@
               }
             ],
             "definition": {
-              "val": "A structure quality inhering in a bearer by virtue of the bearer's body containing more than one cyst - formations of an epithelium bounded cavity not associated with neoplasia.",
+              "val": "A structure quality inhering in a bearer by virtue of the bearer's body containing more than one cyst - formations of sac-like closed membranous structures not associated with neoplasia.",
               "xrefs": [
                 "PATOC:GVG"
               ]
@@ -76470,7 +76480,7 @@
         },
         {
           "id": "http://purl.obolibrary.org/obo/PATO_0040002",
-          "lbl": "originates from",
+          "lbl": "position originates from",
           "meta": {
             "basicPropertyValues": [
               {
@@ -76485,6 +76495,9 @@
                 "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
                 "val": "quality"
               }
+            ],
+            "comments": [
+              "Original label \"originates from\" changed to current label to differentiate that this term is a positional quality rather than one that connects between an entity and another entity it originates from."
             ],
             "definition": {
               "val": "A positional quality inhering in a bearer by virtue of some aspect of that bearer beginning from a position on another entity.",
@@ -81220,7 +81233,7 @@
         },
         {
           "id": "http://purl.obolibrary.org/obo/PATO_0070006",
-          "lbl": "bipolar morphology",
+          "lbl": "cortical bipolar morphology",
           "meta": {
             "basicPropertyValues": [
               {
@@ -81232,8 +81245,11 @@
                 "val": "quality"
               }
             ],
+            "comments": [
+              "This is specific to cortical bipolar cells and are distinguished from retinal bipolar cell morphology which has an axon and dendrite emerging from opposite ends of the soma."
+            ],
             "definition": {
-              "val": "A cell morphology that inheres in neurons which have two principal fibres (dendrites or axon) that emerge from the soma and begin to branch some distance from it, have few spines, and branch in narrow fields. This is in contrast to bitufted morphology where branching occurs close to the soma.",
+              "val": "A cell morphology that inheres in neurons which have two principal dendrites that emerge from the soma and begin to branch some distance from it, have few spines, and branch in narrow fields. This is in contrast to bitufted morphology where branching occurs close to the soma.",
               "xrefs": [
                 "PMID:18568015",
                 "doi:10.1016/b978-0-12-369497-3.10004-4"
@@ -81733,6 +81749,32 @@
           "type": "CLASS"
         },
         {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070027",
+          "lbl": "bitufted dendrite cell morphology",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "comments": [
+              "This morphology type is distinct from bitufted cell morphology in that it refers to bitufted dendrite morphology rather than bitufted cell morphology."
+            ],
+            "definition": {
+              "val": "A cell morphology that inheres in neurons with dendrites that are bidirectional, emerging from opposite ends of the soma, with the two arbors extending in radial or tangential directions.",
+              "xrefs": [
+                "PMID:18568015"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
           "id": "http://purl.obolibrary.org/obo/PATO_0070028",
           "lbl": "extratelencephalic projecting",
           "meta": {
@@ -82067,6 +82109,32 @@
                 "val": "SAO:1706854098"
               }
             ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070042",
+          "lbl": "retinal bipolar morphology",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "comments": [
+              "This is distinct from cortical bipolar morphology which has two dendrites emerging from opposite ends of the soma, rather than one axon and one dendrite."
+            ],
+            "definition": {
+              "val": "A cell morphology that inheres in retinal neurons which have two principal fibres, an axon and a dendrite, that emerge from opposite end the soma.",
+              "xrefs": [
+                "WikipediaVersioned:Retina_bipolar_cell&oldid=1033254616"
+              ]
+            }
           },
           "type": "CLASS"
         },
