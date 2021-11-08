@@ -1,6 +1,8 @@
 Level	Rule Name	Subject	Property	Value
-WARN	missing_definition	part of	definition	
-WARN	missing_definition	has part	definition	
+ERROR	missing_label	CL:0000000	rdfs:label	
+WARN	missing_definition	part_of	definition	
+WARN	missing_definition	has_part	definition	
+WARN	missing_definition	CL:0000000	definition	
 WARN	missing_definition	definition	definition	
 WARN	missing_definition	term replaced by	definition	
 WARN	missing_definition	qualitative	definition	
@@ -58,6 +60,7 @@ INFO	lowercase_definition	increased_in_magnitude_relative_to	definition	q1 incre
 INFO	lowercase_definition	inversely_associated_with	definition	q1 inversely_associated_with q2 iff q1 is dependent on q2, and the magnitude of q1 decreases if the magnitude of q2 is increased, or the magnitude of q1 increases if the magnitude of q2 is decreased. The relationship is not necessarily linear.
 INFO	lowercase_definition	reciprocal_of	definition	<q1 reciprocal_of q2 if and only if : q1 and q2 are relational qualities and a phenotype e q1 e2 mutually implies a phenotype e2 q2 e.>
 INFO	lowercase_definition	similar_in_magnitude_relative_to	definition	q1 similar_in_magnitude_relative_to q2 if and only if magnitude(q1) =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.
+INFO	missing_superclass	CL:0000000	rdfs:subClassOf	
 INFO	missing_superclass	quality	rdfs:subClassOf	
 INFO	missing_superclass	variability of temperature	rdfs:subClassOf	
 INFO	missing_superclass	decreased variability of temperature	rdfs:subClassOf	
