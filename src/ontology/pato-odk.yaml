@@ -28,3 +28,17 @@ components:
   products:
     - filename: pato_ext.owl
 robot_java_args: '-Xmx12G'
+robot_report:
+  release_reports: False
+  fail_on : ERROR
+  use_labels : False
+  custom_profile : True
+  report_on :
+    - edit
+  custom_sparql_checks :
+    - equivalent-classes
+    - owldef-self-reference
+    - properties-as-annotation-and-object
+    - missing-label
+  custom_sparql_exports : 
+    - basic-report
