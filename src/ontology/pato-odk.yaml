@@ -15,13 +15,20 @@ release_artefacts:
   - full
 primary_release: full
 import_group:
+  use_base_merging: TRUE
+  slme_individuals: exclude
+  mirror_max_time_download: 400
   products:
     - id: ro
     - id: chebi
+      make_base: TRUE
       use_gzipped: TRUE
     - id: go
+      use_base: True
     - id: pco
+      make_base: TRUE
     - id: uberon
+      use_base: TRUE
 documentation:
   documentation_system: mkdocs
 components:
