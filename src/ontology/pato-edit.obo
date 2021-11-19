@@ -11656,7 +11656,6 @@ id: PATO:0001714
 name: increased diameter
 def: "A diameter which is relatively large." [PATOC:GVG]
 subset: value_slim
-is_a: PATO:0000573 ! increased length
 is_a: PATO:0001334 ! diameter
 intersection_of: PATO:0001334 ! diameter
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
@@ -11667,7 +11666,6 @@ id: PATO:0001715
 name: decreased diameter
 def: "A diameter which is relatively small." [PATOC:GVG]
 subset: value_slim
-is_a: PATO:0000574 ! decreased length
 is_a: PATO:0001334 ! diameter
 intersection_of: PATO:0001334 ! diameter
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
@@ -21385,7 +21383,6 @@ name: normal diameter
 def: "A diameter which is relatively normal or average" []
 subset: value_slim
 is_a: PATO:0001334 ! diameter
-is_a: PATO:0045054 ! normal length
 intersection_of: PATO:0001334 ! diameter
 intersection_of: has_relative_magnitude PATO:0000461 ! normal
 created_by: Luke Slater
