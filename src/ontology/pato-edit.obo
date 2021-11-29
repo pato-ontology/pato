@@ -6148,10 +6148,10 @@ is_obsolete: true
 [Term]
 id: PATO:0000992
 name: viscosity
-def: "A physical quality of a liquid inhering in a bearer by virtue of the bearer's disposition to internal resistance to flow." [PATOC:GVG]
+def: "A physical quality of a fluid inhering in a bearer by virtue of the bearer's disposition to internal resistance to flow." [PATOC:GVG]
 subset: attribute_slim
 subset: disposition_slim
-is_a: PATO:0001548 ! quality of a liquid
+is_a: PATO:0001548 ! quality of a fluid
 
 [Term]
 id: PATO:0000993
@@ -22250,6 +22250,14 @@ def: "A cell morphology that inheres in retinal neurons which have two principal
 comment: This is distinct from cortical bipolar morphology which has two dendrites emerging from opposite ends of the soma, rather than one axon and one dendrite.
 is_a: PATO:0010006 ! cell morphology
 created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0080001
+name: quality of a fluid
+def: "A physical quality inhering in an entity exhibiting the physical charachteristics of a material that flows under applied force." [WikipediaVersioned:Fluid&oldid=1049126570]
+subset: attribute_slim
+synonym: "fluidity" EXACT []
+is_a: PATO:0002198 ! quality of a substance
 
 [Term]
 id: PATO:0085001
