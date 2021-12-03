@@ -16,6 +16,10 @@ release_artefacts:
 primary_release: full
 import_group:
   use_base_merging: TRUE
+  exclude_iri_patterns:
+    - <http://purl.obolibrary.org/obo/GOCHE_*>
+    - <http://purl.obolibrary.org/obo/NCBITaxon_Union_*>
+    - <http://www.informatics.jax.org/marker/MGI:*>
   slme_individuals: exclude
   mirror_max_time_download: 400
   products:
@@ -25,10 +29,21 @@ import_group:
       use_gzipped: TRUE
     - id: go
       use_base: True
+      base_iris:
+        - http://purl.obolibrary.org/obo/GO_
+        - http://purl.obolibrary.org/obo/GOREL_
+        - http://purl.obolibrary.org/obo/GOCHE_
     - id: pco
       make_base: TRUE
     - id: uberon
       use_base: TRUE
+    - id: cl
+      use_base: TRUE
+    - id: ncbitaxon
+      mirror_from: http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.obo
+    - id: pr
+      make_base: TRUE
+      mirror_from: https://raw.githubusercontent.com/obophenotype/pro_obo_slim/master/pr_slim.owl
 documentation:
   documentation_system: mkdocs
 components:
