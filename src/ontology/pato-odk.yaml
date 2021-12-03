@@ -20,10 +20,13 @@ import_group:
     - <http://purl.obolibrary.org/obo/GOCHE_*>
     - <http://purl.obolibrary.org/obo/NCBITaxon_Union_*>
     - <http://www.informatics.jax.org/marker/MGI:*>
+    - <http://purl.obolibrary.org/obo/OBA_*>
+    - <http://purl.obolibrary.org/obo/CARO_*>
   slme_individuals: exclude
   mirror_max_time_download: 400
   products:
     - id: ro
+      use_base: True
     - id: chebi
       make_base: TRUE
       use_gzipped: TRUE
