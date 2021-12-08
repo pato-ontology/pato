@@ -88,7 +88,7 @@ all_main: $(MAIN_FILES)
 ## By default this is the cross-product of IMPORT_MODULES x FORMATS
 
 
-IMPORTS =  ro chebi go pco uberon
+IMPORTS =  ro chebi go pco uberon cl ncbitaxon pr
 
 IMPORT_ROOTS = $(patsubst %, imports/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -219,14 +219,24 @@ imports/%_terms_combined.txt: $(IMPORTSEED) imports/%_terms.txt
 	if [ $(IMP) = true ]; then cat $^ | grep -v ^# | sort | uniq >  $@; fi
 
 
+ALL_TERMS_COMBINED = $(patsubst %, imports/%_terms_combined.txt, $(IMPORTS))
+imports/merged_terms_combined.txt: $(ALL_TERMS_COMBINED)
+	if [ $(IMP) = true ]; then cat $^ | grep -v ^# | sort | uniq >  $@; fi
+
+
 imports/merged_import.owl: mirror/merged.owl imports/merged_terms_combined.txt
-	echo "ERROR: You have configured your default module type to be slme; this behavior needs to be overwritten in pato.Makefile!" && false
+	if [ $(IMP) = true ]; then $(ROBOT) merge -i $< \
+		remove  --select "<http://purl.obolibrary.org/obo/GOCHE_*>" remove  --select "<http://purl.obolibrary.org/obo/NCBITaxon_Union_*>" remove  --select "<http://www.informatics.jax.org/marker/MGI:*>" remove  --select "<http://purl.obolibrary.org/obo/OBA_*>" remove  --select "<http://purl.obolibrary.org/obo/CARO_*>"  \
+		extract -T imports/merged_terms_combined.txt --force true --copy-ontology-annotations true --individuals exclude --method BOT \
+		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
+		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
 
 
-imports/%_import.owl: mirror/%.owl imports/%_terms_combined.txt
+
+imports/%_import.owl: mirror/merged.owl imports/%_terms_combined.txt
 	if [ $(IMP) = true ]; then $(ROBOT) query -i $< --update ../sparql/preprocess-module.ru \
-		extract -T imports/$*_terms_combined.txt --force true --copy-ontology-annotations true --individuals include --method BOT \
+		extract -T imports/$*_terms_combined.txt --force true --copy-ontology-annotations true --individuals exclude --method BOT \
 		query --update ../sparql/inject-subset-declaration.ru --update ../sparql/postprocess-module.ru \
 		annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@; fi
 
@@ -284,7 +294,7 @@ IMP_LARGE=true # Global parameter to bypass handling of large imports
 mirror/ro.trigger: $(SRC)
 
 mirror/ro.owl: mirror/ro.trigger
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(URIBASE)/ro.owl --create-dirs -o mirror/ro.owl --retry 4 --max-time 200 && $(ROBOT) convert -i mirror/ro.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(URIBASE)/ro/ro-base.owl --create-dirs -o mirror/ro.owl --retry 4 --max-time 400 && $(ROBOT) convert -i mirror/ro.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: mirror/ro.owl
 
 
@@ -293,7 +303,8 @@ mirror/ro.owl: mirror/ro.trigger
 mirror/chebi.trigger: $(SRC)
 
 mirror/chebi.owl: mirror/chebi.trigger
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(URIBASE)/chebi.owl.gz --create-dirs -o mirror/chebi.owl.gz --retry 4 --max-time 200 && $(ROBOT) convert -i mirror/chebi.owl.gz -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(URIBASE)/chebi.owl.gz --create-dirs -o mirror/chebi.owl.gz --retry 4 --max-time 400 && $(ROBOT) convert -i mirror/chebi.owl.gz -o $@.tmp.owl && \
+		$(ROBOT) remove -i $@.tmp.owl --base-iri $(URIBASE)/CHEBI --axioms external --preserve-structure false --trim false -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: mirror/chebi.owl
 
 
@@ -302,7 +313,7 @@ mirror/chebi.owl: mirror/chebi.trigger
 mirror/go.trigger: $(SRC)
 
 mirror/go.owl: mirror/go.trigger
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(URIBASE)/go.owl --create-dirs -o mirror/go.owl --retry 4 --max-time 200 && $(ROBOT) convert -i mirror/go.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(URIBASE)/go/go-base.owl --create-dirs -o mirror/go.owl --retry 4 --max-time 400 && $(ROBOT) convert -i mirror/go.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: mirror/go.owl
 
 
@@ -311,7 +322,8 @@ mirror/go.owl: mirror/go.trigger
 mirror/pco.trigger: $(SRC)
 
 mirror/pco.owl: mirror/pco.trigger
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(URIBASE)/pco.owl --create-dirs -o mirror/pco.owl --retry 4 --max-time 200 && $(ROBOT) convert -i mirror/pco.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(URIBASE)/pco.owl --create-dirs -o mirror/pco.owl --retry 4 --max-time 400 && $(ROBOT) convert -i mirror/pco.owl -o $@.tmp.owl && \
+		$(ROBOT) remove -i $@.tmp.owl --base-iri $(URIBASE)/PCO --axioms external --preserve-structure false --trim false -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: mirror/pco.owl
 
 
@@ -320,8 +332,44 @@ mirror/pco.owl: mirror/pco.trigger
 mirror/uberon.trigger: $(SRC)
 
 mirror/uberon.owl: mirror/uberon.trigger
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(URIBASE)/uberon.owl --create-dirs -o mirror/uberon.owl --retry 4 --max-time 200 && $(ROBOT) convert -i mirror/uberon.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(URIBASE)/uberon/uberon-base.owl --create-dirs -o mirror/uberon.owl --retry 4 --max-time 400 && $(ROBOT) convert -i mirror/uberon.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: mirror/uberon.owl
+
+
+## ONTOLOGY: cl
+## Copy of cl is re-downloaded whenever source changes
+mirror/cl.trigger: $(SRC)
+
+mirror/cl.owl: mirror/cl.trigger
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then curl -L $(URIBASE)/cl/cl-base.owl --create-dirs -o mirror/cl.owl --retry 4 --max-time 400 && $(ROBOT) convert -i mirror/cl.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+.PRECIOUS: mirror/cl.owl
+
+
+## ONTOLOGY: ncbitaxon
+## Copy of ncbitaxon is re-downloaded whenever source changes
+mirror/ncbitaxon.trigger: $(SRC)
+
+mirror/ncbitaxon.owl: mirror/ncbitaxon.trigger
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.obo -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+.PRECIOUS: mirror/ncbitaxon.owl
+
+
+## ONTOLOGY: pr
+## Copy of pr is re-downloaded whenever source changes
+mirror/pr.trigger: $(SRC)
+
+mirror/pr.owl: mirror/pr.trigger
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I https://raw.githubusercontent.com/obophenotype/pro_obo_slim/master/pr_slim.owl -o $@.tmp.owl && \
+		$(ROBOT) remove -i $@.tmp.owl --base-iri $(URIBASE)/PR --axioms external --preserve-structure false --trim false -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+.PRECIOUS: mirror/pr.owl
+
+ALL_MIRRORS = $(patsubst %, mirror/%.owl, $(IMPORTS))
+MERGE_MIRRORS = true
+
+mirror/merged.owl: $(ALL_MIRRORS)
+	if [ $(IMP) = true ] && [ $(MERGE_MIRRORS) = true ]; then $(ROBOT) merge $(patsubst %, -i %, $^) -o $@; fi
+.PRECIOUS: mirror/merged.owl
+
 
 
 
@@ -488,6 +536,15 @@ explain_unsat: $(SRC)
 	$(ROBOT) explain -i $(SRC) -M unsatisfiability --unsatisfiable random:10 --explanation $(TMPDIR)/$@.md
 
 
+
+
+.PHONY: normalize_obo_src
+normalize_obo_src: $(SRC)
+	$(OWLTOOLS) $< --merge-axiom-annotations -o -f obo $(TMPDIR)/NORM.obo && $(ROBOT) convert -i $(TMPDIR)/NORM.obo -o $(TMPDIR)/NORM.tmp.obo && mv $(TMPDIR)/NORM.tmp.obo $(SRC)
+
+.PHONY: normalize_src
+normalize_src: $(SRC)
+	$(ROBOT) convert -i $< -f obo --check false -o tmp/normalise && mv tmp/normalise $<
 
 
 .PHONY: normalize_obo_src

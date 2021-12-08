@@ -11,9 +11,7 @@ subsetdef: scalar_slim "Scalar slim"
 subsetdef: value_slim "Value slim"
 default-namespace: quality
 import: http://purl.obolibrary.org/obo/pato/components/pato_ext.owl
-import: http://purl.obolibrary.org/obo/pato/imports/go_import.owl
-import: http://purl.obolibrary.org/obo/pato/imports/ro_import.owl
-import: http://purl.obolibrary.org/obo/pato/imports/uberon_import.owl
+import: http://purl.obolibrary.org/obo/pato/imports/merged_import.owl
 ontology: pato
 property_value: http://purl.org/dc/elements/1.1/description "An ontology of phenotypic qualities (properties, attributes or characteristics)." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And Trait Ontology" xsd:string
@@ -11656,7 +11654,6 @@ id: PATO:0001714
 name: increased diameter
 def: "A diameter which is relatively large." [PATOC:GVG]
 subset: value_slim
-is_a: PATO:0000573 ! increased length
 is_a: PATO:0001334 ! diameter
 intersection_of: PATO:0001334 ! diameter
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
@@ -11667,7 +11664,6 @@ id: PATO:0001715
 name: decreased diameter
 def: "A diameter which is relatively small." [PATOC:GVG]
 subset: value_slim
-is_a: PATO:0000574 ! decreased length
 is_a: PATO:0001334 ! diameter
 intersection_of: PATO:0001334 ! diameter
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
@@ -14952,6 +14948,7 @@ name: altered number of
 def: "Having extra or fewer parts." [PATOC:GVG]
 subset: attribute_slim
 subset: relational_slim
+is_a: PATO:0000051 ! morphology
 is_a: PATO:0001555 ! has number of
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2009-09-21T10:41:58Z
@@ -21384,7 +21381,6 @@ name: normal diameter
 def: "A diameter which is relatively normal or average" []
 subset: value_slim
 is_a: PATO:0001334 ! diameter
-is_a: PATO:0045054 ! normal length
 intersection_of: PATO:0001334 ! diameter
 intersection_of: has_relative_magnitude PATO:0000461 ! normal
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-9227-0670
@@ -22260,6 +22256,79 @@ def: "An osmolarity quality inhering in a bearer by virtue of the total amount o
 is_a: PATO:0001655 ! osmolarity
 property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0002-3410-4655
 creation_date: 2020-10-30T08:08:48Z
+
+[Term]
+id: PATO:0095001
+name: organismal area to mass ratio
+def: "Quotient (or ratio) of surface area of an organism divided by the mass of the same organism" []
+is_a: PATO:0001470 ! proportionality to
+is_a: PATO:0001995 ! organismal quality
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-2908-3327
+property_value: http://purl.org/dc/elements/1.1/date 2021-05-17T13:13:52Z xsd:dateTime
+
+[Term]
+id: PATO:0095002
+name: cursorial
+def: "An organismal quality inhering in a bearer by virtue of the bearer's morphological and physiological adaptation for running." []
+is_a: PATO:0001995 ! organismal quality
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-2908-3327
+property_value: http://purl.org/dc/elements/1.1/date 2021-05-17T13:19:15Z xsd:dateTime
+
+[Term]
+id: PATO:0095003
+name: fossorial
+def: "An organismal quality inhering in a bearer by virtue of the bearer's morphological and physiological adaptation for digging and living underground." []
+is_a: PATO:0001995 ! organismal quality
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-2908-3327
+property_value: http://purl.org/dc/elements/1.1/date 2021-05-17T13:19:57Z xsd:dateTime
+
+[Term]
+id: PATO:0095004
+name: arboreal
+def: "An organismal quality inhering in a bearer by virtue of the bearer's morphological and physiological adaptation for living in trees." []
+is_a: PATO:0001995 ! organismal quality
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-2908-3327
+property_value: http://purl.org/dc/elements/1.1/date 2021-05-17T13:20:31Z xsd:dateTime
+
+[Term]
+id: PATO:0095005
+name: crepuscular
+def: "A quality of a process that happens during dawn and dusk." []
+is_a: PATO:0001236 ! process quality
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-2908-3327
+property_value: http://purl.org/dc/elements/1.1/date 2021-05-17T13:22:18Z xsd:dateTime
+
+[Term]
+id: PATO:0095006
+name: nocturnal
+def: "A quality of a process that happens during the hours of darkness." []
+is_a: PATO:0001236 ! process quality
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-2908-3327
+property_value: http://purl.org/dc/elements/1.1/date 2021-05-17T13:26:38Z xsd:dateTime
+
+[Term]
+id: PATO:0095007
+name: diurnal
+def: "A quality of a process that happens during the hours of daylight." []
+is_a: PATO:0001236 ! process quality
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-2908-3327
+property_value: http://purl.org/dc/elements/1.1/date 2021-05-17T13:27:09Z xsd:dateTime
+
+[Term]
+id: PATO:0095008
+name: migratory
+def: "An organismal quality inhering in a bearer by virtue of the bearer's morphological and physiological adaptation for participating in long-distance movement of conspecifics, usually on a seasonal basis." []
+is_a: PATO:0001995 ! organismal quality
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-2908-3327
+property_value: http://purl.org/dc/elements/1.1/date 2021-05-17T13:28:09Z xsd:dateTime
+
+[Term]
+id: PATO:0095009
+name: anecic
+def: "An organismal quality inhering in a bearer by virtue of the bearer's ability to burrow more than 20 cm deep into the soil and make permanent, vertical burrows." []
+is_a: PATO:0001995 ! organismal quality
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-2908-3327
+property_value: http://purl.org/dc/elements/1.1/date 2021-05-17T13:28:41Z xsd:dateTime
 
 [Typedef]
 id: correlates_with
