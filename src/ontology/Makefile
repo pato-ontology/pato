@@ -36,7 +36,7 @@ REPORT_FAIL_ON =            ERROR
 REPORT_LABEL =              
 REPORT_PROFILE_OPTS =       --profile $(ROBOT_PROFILE)
 OBO_FORMAT_OPTIONS =        
-SPARQL_VALIDATION_CHECKS =   equivalent-classes owldef-self-reference properties-as-annotation-and-object missing-label
+SPARQL_VALIDATION_CHECKS =   equivalent-classes owldef-self-reference properties-as-annotation-and-object missing-label illegal-annotation-property
 SPARQL_EXPORTS =             basic-report
 ODK_VERSION_MAKEFILE =      v1.2.31
 
@@ -373,6 +373,7 @@ mirror/merged.owl: $(ALL_MIRRORS)
 
 
 
+
 # ----------------------------------------
 # Subsets
 # ----------------------------------------
@@ -535,6 +536,15 @@ explain_unsat: $(SRC)
 	$(ROBOT) explain -i $(SRC) -M unsatisfiability --unsatisfiable random:10 --explanation $(TMPDIR)/$@.md
 
 
+
+
+.PHONY: normalize_obo_src
+normalize_obo_src: $(SRC)
+	$(OWLTOOLS) $< --merge-axiom-annotations -o -f obo $(TMPDIR)/NORM.obo && $(ROBOT) convert -i $(TMPDIR)/NORM.obo -o $(TMPDIR)/NORM.tmp.obo && mv $(TMPDIR)/NORM.tmp.obo $(SRC)
+
+.PHONY: normalize_src
+normalize_src: $(SRC)
+	$(ROBOT) convert -i $< -f obo --check false -o tmp/normalise && mv tmp/normalise $<
 
 
 .PHONY: normalize_obo_src
