@@ -5,6 +5,7 @@
 
 
 #pre_release: $(SRCOWL)
+	
 
 $(ONT).obo: $(ONT)-simple.owl
 	$(ROBOT) annotate --input $(ONT)-simple.owl --ontology-iri $(URIBASE)/$(ONT).owl --version-iri $(ONTBASE)/releases/$(TODAY)/$@ \
@@ -35,6 +36,3 @@ test_obsolete: tmp/merged.obo
 	! grep "! obsolete" $<
 
 test: test_obsolete
-
-benchmark_imports:
-	/usr/bin/time -f %M make refresh-imports
