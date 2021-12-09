@@ -350,7 +350,7 @@ mirror/cl.owl: mirror/cl.trigger
 mirror/ncbitaxon.trigger: $(SRC)
 
 mirror/ncbitaxon.owl: mirror/ncbitaxon.trigger
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.obo -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: mirror/ncbitaxon.owl
 
 
@@ -369,7 +369,6 @@ MERGE_MIRRORS = true
 mirror/merged.owl: $(ALL_MIRRORS)
 	if [ $(IMP) = true ] && [ $(MERGE_MIRRORS) = true ]; then $(ROBOT) merge $(patsubst %, -i %, $^) -o $@; fi
 .PRECIOUS: mirror/merged.owl
-
 
 
 
@@ -536,15 +535,6 @@ explain_unsat: $(SRC)
 	$(ROBOT) explain -i $(SRC) -M unsatisfiability --unsatisfiable random:10 --explanation $(TMPDIR)/$@.md
 
 
-
-
-.PHONY: normalize_obo_src
-normalize_obo_src: $(SRC)
-	$(OWLTOOLS) $< --merge-axiom-annotations -o -f obo $(TMPDIR)/NORM.obo && $(ROBOT) convert -i $(TMPDIR)/NORM.obo -o $(TMPDIR)/NORM.tmp.obo && mv $(TMPDIR)/NORM.tmp.obo $(SRC)
-
-.PHONY: normalize_src
-normalize_src: $(SRC)
-	$(ROBOT) convert -i $< -f obo --check false -o tmp/normalise && mv tmp/normalise $<
 
 
 .PHONY: normalize_obo_src
