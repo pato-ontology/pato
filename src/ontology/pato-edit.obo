@@ -8106,7 +8106,7 @@ name: variability of temperature
 def: "A variability quality inhering in a bearer by virtue of whether the bearer exhibits temperature variation or change." [PATO:GVG]
 subset: attribute_slim
 intersection_of: PATO:0001303 ! variability
-intersection_of: towards PATO:0000146 ! temperature
+intersection_of: RO:0002503 PATO:0000146 ! towards temperature
 
 [Term]
 id: PATO:0001305
@@ -10476,7 +10476,7 @@ name: variability of rate
 def: "A variability quality inhering in a bearer by virtue of whether the bearer exhibits rate variation or change." [PATO:GVG]
 subset: value_slim
 is_a: PATO:0001303 ! variability
-relationship: towards PATO:0000161 ! rate
+relationship: RO:0002503 PATO:0000161 ! towards rate
 
 [Term]
 id: PATO:0001587
@@ -10692,7 +10692,7 @@ name: variability of color
 def: "A variability quality inhering in a bearer by virtue of whether the bearer exhibits color variation or change." [PATO:GVG]
 subset: attribute_slim
 is_a: PATO:0001303 ! variability
-relationship: towards PATO:0000014 ! color
+relationship: RO:0002503 PATO:0000014 ! towards color
 
 [Term]
 id: PATO:0001612
@@ -13592,7 +13592,7 @@ name: variability of shape
 def: "A variability quality inhering in a bearer by virtue of whether the bearer exhibits shape variation or change." [PATOC:GVG]
 subset: attribute_slim
 is_a: PATO:0001303 ! variability
-relationship: towards PATO:0000052 ! shape
+relationship: RO:0002503 PATO:0000052 ! towards shape
 
 [Term]
 id: PATO:0001930
@@ -13795,7 +13795,7 @@ name: variability of size
 def: "A variability quality inhering in a bearer by virtue of whether the bearer exhibits size variation or change." [PATOC:GVG]
 subset: attribute_slim
 is_a: PATO:0001303 ! variability
-relationship: towards PATO:0000117 ! size
+relationship: RO:0002503 PATO:0000117 ! towards size
 
 [Term]
 id: PATO:0001957
@@ -16604,7 +16604,7 @@ def: "A quality inhering in a bearer by virtue of the bearer's having or lacking
 subset: attribute_slim
 subset: scalar_slim
 is_a: PATO:0000141 ! structure
-relationship: correlates_with PATO:0000014 ! color
+relationship: RO:0002610 PATO:0000014 ! correlated with color
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2010-08-09T04:14:00Z
 
@@ -19560,7 +19560,7 @@ def: "A variability quality inhering in the bearer by virtue of the bearer havin
 subset: value_slim
 synonym: "variable number" RELATED []
 is_a: PATO:0001303 ! variability
-relationship: towards PATO:0000070 ! amount
+relationship: RO:0002503 PATO:0000070 ! towards amount
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-3162-7490
 creation_date: 2014-09-09T12:27:33Z
 
