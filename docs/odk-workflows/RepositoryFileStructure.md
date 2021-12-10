@@ -22,7 +22,7 @@ These are the current imports in PATO
 | pco | http://purl.obolibrary.org/obo/pco.owl | None |
 | uberon | http://purl.obolibrary.org/obo/uberon.owl | None |
 | cl | http://purl.obolibrary.org/obo/cl.owl | None |
-| ncbitaxon | http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.obo | None |
+| ncbitaxon | http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl | None |
 | pr | https://raw.githubusercontent.com/obophenotype/pro_obo_slim/master/pr_slim.owl | None |
 
 ## Components

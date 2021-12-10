@@ -8106,7 +8106,7 @@ name: variability of temperature
 def: "A variability quality inhering in a bearer by virtue of whether the bearer exhibits temperature variation or change." [PATO:GVG]
 subset: attribute_slim
 intersection_of: PATO:0001303 ! variability
-intersection_of: towards PATO:0000146 ! temperature
+intersection_of: RO:0002503 PATO:0000146 ! towards temperature
 
 [Term]
 id: PATO:0001305
@@ -10476,7 +10476,7 @@ name: variability of rate
 def: "A variability quality inhering in a bearer by virtue of whether the bearer exhibits rate variation or change." [PATO:GVG]
 subset: value_slim
 is_a: PATO:0001303 ! variability
-relationship: towards PATO:0000161 ! rate
+relationship: RO:0002503 PATO:0000161 ! towards rate
 
 [Term]
 id: PATO:0001587
@@ -10692,7 +10692,7 @@ name: variability of color
 def: "A variability quality inhering in a bearer by virtue of whether the bearer exhibits color variation or change." [PATO:GVG]
 subset: attribute_slim
 is_a: PATO:0001303 ! variability
-relationship: towards PATO:0000014 ! color
+relationship: RO:0002503 PATO:0000014 ! towards color
 
 [Term]
 id: PATO:0001612
@@ -13592,7 +13592,7 @@ name: variability of shape
 def: "A variability quality inhering in a bearer by virtue of whether the bearer exhibits shape variation or change." [PATOC:GVG]
 subset: attribute_slim
 is_a: PATO:0001303 ! variability
-relationship: towards PATO:0000052 ! shape
+relationship: RO:0002503 PATO:0000052 ! towards shape
 
 [Term]
 id: PATO:0001930
@@ -13795,7 +13795,7 @@ name: variability of size
 def: "A variability quality inhering in a bearer by virtue of whether the bearer exhibits size variation or change." [PATOC:GVG]
 subset: attribute_slim
 is_a: PATO:0001303 ! variability
-relationship: towards PATO:0000117 ! size
+relationship: RO:0002503 PATO:0000117 ! towards size
 
 [Term]
 id: PATO:0001957
@@ -14959,8 +14959,8 @@ name: obsolete post-mortem
 def: "The period after death of the organism." [thefreedictionary:thefreedictionary]
 comment: Terms were requested by the OBI consortium but it was later decided that the term was not reflecting a quality rather what it might be refered to as a "conferred quality".
 subset: value_slim
-is_obsolete: true
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
+is_obsolete: true
 creation_date: 2009-09-25T11:29:21Z
 
 [Term]
@@ -14969,8 +14969,8 @@ name: obsolete pre-mortem
 def: "The period before death of the organism." [merriam-webster:merriam-webster]
 comment: Terms were requested by the OBI consortium but it was later decided that the term was not reflecting a quality rather what it might be refered to as a "conferred quality".
 subset: value_slim
-is_obsolete: true
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
+is_obsolete: true
 creation_date: 2009-09-25T11:31:13Z
 
 [Term]
@@ -15059,8 +15059,8 @@ id: PATO:0002095
 name: obsolete neoplasm disposition
 def: "A disposition inhering in a tumour to progress or fail to progress during it's life time." [PATOC:GVG]
 subset: attribute_slim
-is_obsolete: true
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
+is_obsolete: true
 creation_date: 2009-10-05T12:15:02Z
 
 [Term]
@@ -16604,7 +16604,7 @@ def: "A quality inhering in a bearer by virtue of the bearer's having or lacking
 subset: attribute_slim
 subset: scalar_slim
 is_a: PATO:0000141 ! structure
-relationship: correlates_with PATO:0000014 ! color
+relationship: RO:0002610 PATO:0000014 ! correlated with color
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2010-08-09T04:14:00Z
 
@@ -18123,8 +18123,8 @@ creation_date: 2012-12-07T05:32:18Z
 [Term]
 id: PATO:0002398
 name: obsolete <new term>
-is_obsolete: true
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
+is_obsolete: true
 creation_date: 2012-12-07T05:34:16Z
 
 [Term]
@@ -19560,7 +19560,7 @@ def: "A variability quality inhering in the bearer by virtue of the bearer havin
 subset: value_slim
 synonym: "variable number" RELATED []
 is_a: PATO:0001303 ! variability
-relationship: towards PATO:0000070 ! amount
+relationship: RO:0002503 PATO:0000070 ! towards amount
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-3162-7490
 creation_date: 2014-09-09T12:27:33Z
 
@@ -20689,10 +20689,10 @@ id: PATO:0040070
 name: thermoplastic
 def: "A physical quality inhering in a bearer by virtue of the bearer's disposition to deform by heating." [http://www.gesamp.org/publications/guidelines-for-the-monitoring-and-assessment-of-plastic-litter-in-the-ocean, https://orcid.org/0000-0002-8166-0486]
 is_a: PATO:0001018 ! physical quality
+property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2996-719X
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-8166-0486
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-1072-8081
-property_value: http://purl.org/dc/terms/contributor http://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0045000
@@ -21870,8 +21870,8 @@ def: "A rate of occurrence that is relatively high." [https://orcid.org/0000-000
 is_a: PATO:0050000 ! rate of occurence
 intersection_of: PATO:0050000 ! rate of occurence
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-4148-4606
 property_value: http://purl.org/dc/elements/1.1/date 2020-08-19T09:23:19Z xsd:dateTime
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-4148-4606
 
 [Term]
 id: PATO:0055004
@@ -21880,8 +21880,8 @@ def: "A rate of occurrence that is relatively low." [https://orcid.org/0000-0003
 is_a: PATO:0050000 ! rate of occurence
 intersection_of: PATO:0050000 ! rate of occurence
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-4148-4606
 property_value: http://purl.org/dc/elements/1.1/date 2020-08-19T09:24:35Z xsd:dateTime
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-4148-4606
 
 [Term]
 id: PATO:0055005
@@ -21890,8 +21890,8 @@ def: "A rate of output of a continuous process that is relatively high." [https:
 is_a: PATO:0050001 ! rate of continuous process
 intersection_of: PATO:0050001 ! rate of continuous process
 intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-4148-4606
 property_value: http://purl.org/dc/elements/1.1/date 2020-08-19T09:24:56Z xsd:dateTime
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-4148-4606
 
 [Term]
 id: PATO:0055006
@@ -21900,8 +21900,8 @@ def: "A rate of output of a continuous process that is relatively low." [https:/
 is_a: PATO:0050001 ! rate of continuous process
 intersection_of: PATO:0050001 ! rate of continuous process
 intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-4148-4606
 property_value: http://purl.org/dc/elements/1.1/date 2020-08-19T09:25:07Z xsd:dateTime
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-4148-4606
 
 [Term]
 id: PATO:0060001
@@ -22332,7 +22332,10 @@ property_value: http://purl.org/dc/elements/1.1/date 2021-05-17T13:28:41Z xsd:da
 
 [Typedef]
 id: correlates_with
-name: correlates_with
+name: obsolete correlates_with
+comment: Consider using RO:0002610 instead. See https://github.com/pato-ontology/pato/issues/454
+is_obsolete: true
+replaced_by: RO:0002610
 
 [Typedef]
 id: decreased_in_magnitude_relative_to
@@ -22356,9 +22359,9 @@ id: directly_associated_with
 name: directly_associated_with
 def: "q1 directly_associated_with q2 iff q1 is dependent on q2, and the magnitude of q1 increases if the magnitude of q2 is increased, or the magnitude of q1 decreases if the magnitude of q2 is decreased. The relationship is not necessarily linear." [PATOC:cjm, Wikipedia:Association_(statistics)]
 comment: Example: 'Lewy bodies increased number related to dystrophic neurite increased number' (from annotation of PMID:8740227 in http://ccdb.ucsd.edu/1.0/NDPO.owl#ndpo_404). Here the increase in the number of lewy bodies is directly_associated_with the increase in the number of dystrophic neurites.\nAssociation is weaker than correlation or proportionality. These relations may be later added to PATO.
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-6601-2165
 domain: PATO:0000001 ! quality
 range: PATO:0000001 ! quality
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-6601-2165
 creation_date: 2009-08-26T02:50:08Z
 
 [Typedef]
@@ -22421,9 +22424,9 @@ id: inversely_associated_with
 name: inversely_associated_with
 def: "q1 inversely_associated_with q2 iff q1 is dependent on q2, and the magnitude of q1 decreases if the magnitude of q2 is increased, or the magnitude of q1 increases if the magnitude of q2 is decreased. The relationship is not necessarily linear." [PATOC:cjm, Wikipedia:Association_(statistics)]
 comment: Association is weaker than correlation or proportionality. These relations may be later added to PATO.
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-6601-2165
 domain: PATO:0000001 ! quality
 range: PATO:0000001 ! quality
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-6601-2165
 creation_date: 2009-08-26T02:50:24Z
 
 [Typedef]
@@ -22456,6 +22459,9 @@ xref: BFO:0000050
 [Typedef]
 id: realized_by
 name: realized_by
+comment: Consider using RO:0009501 instead. See https://github.com/pato-ontology/pato/issues/454
+is_obsolete: true
+replaced_by: RO:0009501
 
 [Typedef]
 id: reciprocal_of
@@ -22478,6 +22484,8 @@ synonym: "monadic_form_of" EXACT []
 
 [Typedef]
 id: towards
-name: towards
-comment: Relation binding a relational quality or disposition to the relevant type of entity.
+name: obsolete towards
+comment: Consider using RO:0002503 instead. See https://github.com/pato-ontology/pato/issues/454
+is_obsolete: true
+replaced_by: RO:0002503
 
