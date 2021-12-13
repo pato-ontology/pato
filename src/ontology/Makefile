@@ -36,7 +36,7 @@ REPORT_FAIL_ON =            ERROR
 REPORT_LABEL =              
 REPORT_PROFILE_OPTS =       --profile $(ROBOT_PROFILE)
 OBO_FORMAT_OPTIONS =        
-SPARQL_VALIDATION_CHECKS =   equivalent-classes owldef-self-reference properties-as-annotation-and-object missing-label
+SPARQL_VALIDATION_CHECKS =   equivalent-classes owldef-self-reference properties-as-annotation-and-object missing-label illegal-annotation-property
 SPARQL_EXPORTS =             basic-report
 ODK_VERSION_MAKEFILE =      v1.2.31
 
@@ -350,7 +350,7 @@ mirror/cl.owl: mirror/cl.trigger
 mirror/ncbitaxon.trigger: $(SRC)
 
 mirror/ncbitaxon.owl: mirror/ncbitaxon.trigger
-	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.obo -o $@.tmp.owl && mv $@.tmp.owl $@; fi
+	if [ $(MIR) = true ] && [ $(IMP) = true ]; then $(ROBOT) convert -I http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl -o $@.tmp.owl && mv $@.tmp.owl $@; fi
 .PRECIOUS: mirror/ncbitaxon.owl
 
 
