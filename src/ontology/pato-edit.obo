@@ -22364,12 +22364,11 @@ range: PATO:0000001 ! quality
 
 [Typedef]
 id: directly_associated_with
-name: directly_associated_with
-def: "q1 directly_associated_with q2 iff q1 is dependent on q2, and the magnitude of q1 increases if the magnitude of q2 is increased, or the magnitude of q1 decreases if the magnitude of q2 is decreased. The relationship is not necessarily linear." [PATOC:cjm, Wikipedia:Association_(statistics)]
-comment: Example: 'Lewy bodies increased number related to dystrophic neurite increased number' (from annotation of PMID:8740227 in http://ccdb.ucsd.edu/1.0/NDPO.owl#ndpo_404). Here the increase in the number of lewy bodies is directly_associated_with the increase in the number of dystrophic neurites.\nAssociation is weaker than correlation or proportionality. These relations may be later added to PATO.
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-6601-2165
-domain: PATO:0000001 ! quality
-range: PATO:0000001 ! quality
+name: obsolete directly_associated_with
+def: "OBSOLETE. q1 directly_associated_with q2 iff q1 is dependent on q2, and the magnitude of q1 increases if the magnitude of q2 is increased, or the magnitude of q1 decreases if the magnitude of q2 is decreased. The relationship is not necessarily linear." [PATOC:cjm, Wikipedia:Association_(statistics)]
+comment: refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason. \nOBSOLETE. Example: 'Lewy bodies increased number related to dystrophic neurite increased number' (from annotation of PMID:8740227 in http://ccdb.ucsd.edu/1.0/NDPO.owl#ndpo_404). Here the increase in the number of lewy bodies is directly_associated_with the increase in the number of dystrophic neurites.\nAssociation is weaker than correlation or proportionality. These relations may be later added to PATO.
+is_obsolete: true
+created_by: cjm
 creation_date: 2009-08-26T02:50:08Z
 
 [Typedef]
@@ -22380,27 +22379,27 @@ comment: Example: a spherical object has the quality of being spherical, and the
 
 [Typedef]
 id: has_dividend_entity
-name: has_dividend_entity
-domain: PATO:0001470 ! proportionality to
+name: obsolete has_dividend_entity
+comment: refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
+is_obsolete: true
 
 [Typedef]
 id: has_dividend_quality
-name: has_dividend_quality
-domain: PATO:0001470 ! proportionality to
-range: PATO:0000001 ! quality
-is_a: has_ratio_quality ! has_ratio_quality
+name: obsolete has_dividend_quality
+comment: refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
+is_obsolete: true
 
 [Typedef]
 id: has_divisor_entity
-name: has_divisor_entity
-domain: PATO:0001470 ! proportionality to
+name: obsolete has_divisor_entity
+comment: refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
+is_obsolete: true
 
 [Typedef]
 id: has_divisor_quality
-name: has_divisor_quality
-domain: PATO:0001470 ! proportionality to
-range: PATO:0000001 ! quality
-is_a: has_ratio_quality ! has_ratio_quality
+name: obsolete has_divisor_quality
+comment: refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
+is_obsolete: true
 
 [Typedef]
 id: has_part
@@ -22409,9 +22408,9 @@ xref: BFO:0000051
 
 [Typedef]
 id: has_ratio_quality
-name: has_ratio_quality
-domain: PATO:0001470 ! proportionality to
-range: PATO:0000001 ! quality
+name: obsolete has_ratio_quality
+comment: refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
+is_obsolete: true
 
 [Typedef]
 id: has_relative_magnitude
@@ -22429,23 +22428,26 @@ is_a: different_in_magnitude_relative_to ! different_in_magnitude_relative_to
 
 [Typedef]
 id: inversely_associated_with
-name: inversely_associated_with
-def: "q1 inversely_associated_with q2 iff q1 is dependent on q2, and the magnitude of q1 decreases if the magnitude of q2 is increased, or the magnitude of q1 increases if the magnitude of q2 is decreased. The relationship is not necessarily linear." [PATOC:cjm, Wikipedia:Association_(statistics)]
-comment: Association is weaker than correlation or proportionality. These relations may be later added to PATO.
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-6601-2165
-domain: PATO:0000001 ! quality
-range: PATO:0000001 ! quality
+name: obsolete inversely_associated_with
+def: "OBSOLETE. q1 inversely_associated_with q2 iff q1 is dependent on q2, and the magnitude of q1 decreases if the magnitude of q2 is increased, or the magnitude of q1 increases if the magnitude of q2 is decreased. The relationship is not necessarily linear." [PATOC:cjm, Wikipedia:Association_(statistics)]
+comment: refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
+is_obsolete: true
+created_by: cjm
 creation_date: 2009-08-26T02:50:24Z
 
 [Typedef]
 id: is_magnitude_of
-name: is_magnitude_of
+name: obsolete is_magnitude_of
 namespace: pato.ontology
+comment: refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
+is_obsolete: true
 
 [Typedef]
 id: is_measurement_of
-name: is_measurement_of
+name: obsolete is_measurement_of
 namespace: pato.ontology
+comment: refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
+is_obsolete: true
 
 [Typedef]
 id: is_opposite_of
@@ -22456,8 +22458,10 @@ is_class_level: true
 
 [Typedef]
 id: is_unit_of
-name: is_unit_of
+name: obsolete is_unit_of
 namespace: pato.ontology
+comment: refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
+is_obsolete: true
 
 [Typedef]
 id: part_of
@@ -22486,9 +22490,10 @@ range: PATO:0000001 ! quality
 
 [Typedef]
 id: singly_occurring_form_of
-name: singly_occurring_form_of
-comment: PATO divides qualities between normal (monadic, singly-occurring) qualities and relational qualities. Relational qualities stand in the 'towards' relation with respect to some additional entity. For example, The sensitivity of an eye towards red light. In some cases we want to represent a quality such as 'protruding' in both monadic and relational branches. We use this relation to link them.
+name: obsolete singly_occurring_form_of
+comment: refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.\nOBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qualities and relational qualities. Relational qualities stand in the 'towards' relation with respect to some additional entity. For example, The sensitivity of an eye towards red light. In some cases we want to represent a quality such as 'protruding' in both monadic and relational branches. We use this relation to link them.
 synonym: "monadic_form_of" EXACT []
+is_obsolete: true
 
 [Typedef]
 id: towards
