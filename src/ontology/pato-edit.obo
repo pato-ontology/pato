@@ -22250,6 +22250,116 @@ is_a: PATO:0010006 ! cell morphology
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-7258-9596
 
 [Term]
+id: PATO:0070044
+name: cellular electrophysiological quality
+def: "A cellular quality that exists by virtue of the electrical properties of the cell." [WikipediaVersioned:Electrophysiology&oldid=1059385774]
+xref: ilxtr:ElectrophysiologicalPhenotype
+is_a: PATO:0001396 ! cellular quality
+
+[Term]
+id: PATO:0070045
+name: spiking phenotype
+xref: ilxtr:SpikingPhenotype
+is_a: PATO:0070044 ! cellular electrophysiological quality
+
+[Term]
+id: PATO:0070046
+name: regular spiking non pyramidal phenotype
+xref: ilxtr:RegularSpikingNonPyramidalPhenotype
+is_a: PATO:0070045 ! spiking phenotype
+disjoint_from: PATO:0070059 ! fast spiking phenotype
+
+[Term]
+id: PATO:0070047
+name: sustained spiking phenotype
+xref: ilxtr:PetillaSustainedSpikingPhenotype
+is_a: PATO:0070045 ! spiking phenotype
+
+[Term]
+id: PATO:0070048
+name: initial spiking phenotype
+xref: ilxtr:PetillaInitialSpikingPhenotype
+is_a: PATO:0070045 ! spiking phenotype
+property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070049
+name: non-accommodating spiking phenotype
+xref: ilxtr:NonAccommodatingSpikingPhenotype
+is_a: PATO:0070045 ! spiking phenotype
+disjoint_from: PATO:0070050 ! accommodating spiking phenotype
+
+[Term]
+id: PATO:0070050
+name: accommodating spiking phenotype
+xref: ilxtr:AccommodatingSpikingPhenotype
+is_a: PATO:0070045 ! spiking phenotype
+
+[Term]
+id: PATO:0070051
+name: initial delayed spiking phenotype
+synonym: "Petilla d" EXACT [PMID:18568015]
+xref: ilxtr:PetillaInitialDelayedSpikingPhenotype
+is_a: PATO:0070048 ! initial spiking phenotype
+disjoint_from: PATO:0070052 ! initial classical spiking phenotype
+disjoint_from: PATO:0070053 ! initial burst spiking phenotype
+
+[Term]
+id: PATO:0070052
+name: initial classical spiking phenotype
+synonym: "Petilla c" EXACT [PMID:18568015]
+xref: ilxtr:PetillaInitialClassicalSpikingPhenotype
+is_a: PATO:0070048 ! initial spiking phenotype
+disjoint_from: PATO:0070053 ! initial burst spiking phenotype
+
+[Term]
+id: PATO:0070053
+name: initial burst spiking phenotype
+synonym: "Petilla b" EXACT [PMID:18568015]
+xref: ilxtr:PetillaInitialBurstSpikingPhenotype
+is_a: PATO:0070048 ! initial spiking phenotype
+
+[Term]
+id: PATO:0070055
+name: sustained stuttering phenotype
+synonym: "Petilla stut" EXACT [PMID:18568015]
+xref: ilxtr:PetillaSustainedStutteringPhenotype
+is_a: PATO:0070047 ! sustained spiking phenotype
+disjoint_from: PATO:0070056 ! sustained non accommodating phenotype
+disjoint_from: PATO:0070057 ! sustained irregular phenotype
+disjoint_from: PATO:0070058 ! sustained accommodating phenotype
+
+[Term]
+id: PATO:0070056
+name: sustained non accommodating phenotype
+synonym: "Petilla nac" EXACT [PMID:18568015]
+xref: ilxtr:PetillaSustainedNonAccommodatingPhenotype
+is_a: PATO:0070047 ! sustained spiking phenotype
+disjoint_from: PATO:0070057 ! sustained irregular phenotype
+disjoint_from: PATO:0070058 ! sustained accommodating phenotype
+
+[Term]
+id: PATO:0070057
+name: sustained irregular phenotype
+synonym: "Petilla ir" EXACT [PMID:18568015]
+xref: ilxtr:PetillaSustainedIrregularPhenotype
+is_a: PATO:0070047 ! sustained spiking phenotype
+disjoint_from: PATO:0070058 ! sustained accommodating phenotype
+
+[Term]
+id: PATO:0070058
+name: sustained accommodating phenotype
+synonym: "Petilla ac" EXACT [PMID:18568015]
+xref: ilxtr:PetillaSustainedAccommodatingPhenotype
+is_a: PATO:0070047 ! sustained spiking phenotype
+
+[Term]
+id: PATO:0070059
+name: fast spiking phenotype
+xref: ilxtr:FastSpikingPhenotype
+is_a: PATO:0070045 ! spiking phenotype
+
+[Term]
 id: PATO:0080001
 name: quality of a fluid
 def: "A physical quality inhering in an entity exhibiting the physical charachteristics of a material that flows under applied force." [WikipediaVersioned:Fluid&oldid=1049126570]
