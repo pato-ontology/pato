@@ -6149,7 +6149,7 @@ name: viscosity
 def: "A physical quality of a fluid inhering in a bearer by virtue of the bearer's disposition to internal resistance to flow." [PATOC:GVG]
 subset: attribute_slim
 subset: disposition_slim
-is_a: PATO:0001548 ! quality of a fluid
+is_a: PATO:0001548 ! quality of a liquid
 
 [Term]
 id: PATO:0000993
@@ -20695,7 +20695,7 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-1072-8081
 
 [Term]
-id: PATO:0040048
+id: PATO:0040071
 name: nuclear/cytoplasmic ratio
 def: "A quality inhering in a cell by virtue of the ratio between the volume of its nucleus and the volume of its cytoplasm." [Wikipedia:NC_ratio&oldid=931936284]
 synonym: "N:C ratio" EXACT []
@@ -20703,7 +20703,7 @@ is_a: PATO:0001396 ! cellular quality
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
-id: PATO:0040049
+id: PATO:0040072
 name: high nuclear/cytoplasmic ratio
 def: "A quality inhering in a cell by virtue of the cell having a high nuclear/cytoplasmic ratio." [http://lymerick.net/blood-cells.pdf, Wikipedia:NC_ratio&oldid=931936284]
 comment: A high nuclear/cytolasmic ratio is 70% or higher.
@@ -22267,14 +22267,6 @@ is_a: PATO:0010006 ! cell morphology
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-7258-9596
 
 [Term]
-id: PATO:0080001
-name: quality of a fluid
-def: "A physical quality inhering in an entity exhibiting the physical charachteristics of a material that flows under applied force." [WikipediaVersioned:Fluid&oldid=1049126570]
-subset: attribute_slim
-synonym: "fluidity" EXACT []
-is_a: PATO:0002198 ! quality of a substance
-
-[Term]
 id: PATO:0070044
 name: anatomical structure quality
 def: "A quality of continuant that exist at the anatomical level of organisation and anything under it. This includes, but is not limited to, cells , tissues, and components." []
@@ -22301,6 +22293,14 @@ name: polychromatophilic
 def: "An affinity inhering in an anatomical structure by virtue of the bearer exhibiting a molecular interaction for both basic and acid stains under specific pH conditions." [GOC:add]
 is_a: PATO:0070045 ! anatomical histological quality
 created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0080001
+name: quality of a fluid
+def: "A physical quality inhering in an entity exhibiting the physical charachteristics of a material that flows under applied force." [WikipediaVersioned:Fluid&oldid=1049126570]
+subset: attribute_slim
+synonym: "fluidity" EXACT []
+is_a: PATO:0002198 ! quality of a substance
 
 [Term]
 id: PATO:0085001
