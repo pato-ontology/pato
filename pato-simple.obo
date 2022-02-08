@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pato/releases/2022-01-12/pato-simple.owl
+data-version: pato/releases/2022-02-08/pato-simple.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -21,7 +21,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology of phen
 property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And Trait Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
 property_value: IAO:0000700 PATO:0000001
-property_value: owl:versionInfo "2022-01-12" xsd:string
+property_value: owl:versionInfo "2022-02-08" xsd:string
 
 [Term]
 id: PATO:0000000
@@ -499,7 +499,7 @@ synonym: "presence" RELATED []
 synonym: "presence or absence in organism" EXACT []
 synonym: "quantitative" EXACT []
 is_a: PATO:0000068 ! qualitative
-relationship: reciprocal_of PATO:0001555 ! has number of
+relationship: RO:0015012 PATO:0001555 ! reciprocal of has number of
 
 [Term]
 id: PATO:0000073
@@ -2830,8 +2830,8 @@ synonym: "absent from organism" EXACT []
 is_a: PATO:0000070 ! amount
 disjoint_from: PATO:0000467 ! present
 relationship: is_opposite_of PATO:0000467 ! present
-relationship: reciprocal_of PATO:0001558 ! lacking processual parts
-relationship: reciprocal_of PATO:0002000 ! lacks all parts of type
+relationship: RO:0015012 PATO:0001558 ! reciprocal of lacking processual parts
+relationship: RO:0015012 PATO:0002000 ! reciprocal of lacks all parts of type
 
 [Term]
 id: PATO:0000463
@@ -8796,7 +8796,7 @@ is_a: PATO:0001394 ! diploid
 id: PATO:0001396
 name: cellular quality
 def: "A monadic quality of continuant that exists at the cellular level of organisation." [PATOC:GVG]
-is_a: PATO:0001241 ! physical object quality
+is_a: PATO:0070044 ! anatomical structure quality
 
 [Term]
 id: PATO:0001397
@@ -9647,7 +9647,7 @@ subset: value_slim
 synonym: "globular" EXACT []
 synonym: "rotund" RELATED []
 is_a: PATO:0001865 ! spheroid
-relationship: has_cross_section PATO:0000411 ! circular
+relationship: RO:0015011 PATO:0000411 ! has cross section circular
 
 [Term]
 id: PATO:0001500
@@ -10133,7 +10133,7 @@ synonym: "number" RELATED []
 synonym: "number of" EXACT []
 xref: OBO_REL:has_part
 is_a: PATO:0001241 ! physical object quality
-relationship: reciprocal_of PATO:0000070 ! amount
+relationship: RO:0015012 PATO:0000070 ! reciprocal of amount
 
 [Term]
 id: PATO:0001558
@@ -10142,7 +10142,7 @@ def: "A quality of a process inhering in a bearer by virtue of the bearer's lack
 subset: relational_slim
 subset: value_slim
 is_a: PATO:0001564 ! extra or missing processual parts
-relationship: reciprocal_of PATO:0000462 ! absent
+relationship: RO:0015012 PATO:0000462 ! reciprocal of absent
 
 [Term]
 id: PATO:0001559
@@ -12842,7 +12842,7 @@ subset: value_slim
 synonym: "block-like" RELATED []
 synonym: "cuboidal" EXACT []
 is_a: PATO:0002007 ! convex 3-D shape
-relationship: has_cross_section PATO:0000413 ! square
+relationship: RO:0015011 PATO:0000413 ! has cross section square
 
 [Term]
 id: PATO:0001873
@@ -12855,7 +12855,7 @@ synonym: "rod-like" EXACT []
 synonym: "rod-shaped" EXACT []
 synonym: "tubulate" NARROW []
 is_a: PATO:0002007 ! convex 3-D shape
-relationship: has_cross_section PATO:0000411 ! circular
+relationship: RO:0015011 PATO:0000411 ! has cross section circular
 
 [Term]
 id: PATO:0001874
@@ -13031,7 +13031,7 @@ synonym: "egg-shaped" EXACT []
 synonym: "oval" EXACT []
 synonym: "ovoid" EXACT []
 is_a: PATO:0001865 ! spheroid
-relationship: has_cross_section PATO:0000946 ! oblong
+relationship: RO:0015011 PATO:0000946 ! has cross section oblong
 
 [Term]
 id: PATO:0001892
@@ -13144,7 +13144,7 @@ def: "The bearer of this quality has_part = n, where n is the normal amount for 
 subset: relational_slim
 synonym: "having physical part" EXACT []
 is_a: PATO:0001555 ! has number of
-relationship: reciprocal_of PATO:0002050 ! normal amount
+relationship: RO:0015012 PATO:0002050 ! reciprocal of normal amount
 
 [Term]
 id: PATO:0001906
@@ -13864,7 +13864,7 @@ subset: relational_slim
 synonym: "lacks all physical parts of type" EXACT []
 xref: OBO_REL:lacks_part
 is_a: PATO:0001999 ! lacks parts or has fewer parts of type
-relationship: reciprocal_of PATO:0000462 ! absent
+relationship: RO:0015012 PATO:0000462 ! reciprocal of absent
 
 [Term]
 id: PATO:0002001
@@ -13935,8 +13935,8 @@ comment: Use this term or an is_a child of this term when the entire shape of th
 subset: attribute_slim
 xref: Image:http\://upload.wikimedia.org/wikipedia/commons/0/06/Convex_polygon_illustration1.png
 is_a: PATO:0002266 ! 3-D shape
-relationship: has_cross_section PATO:0002006 ! 2-D shape
 relationship: is_opposite_of PATO:0002008 ! concave 3-D shape
+relationship: RO:0015011 PATO:0002006 ! has cross section 2-D shape
 
 [Term]
 id: PATO:0002008
@@ -14319,7 +14319,7 @@ name: normal amount
 def: "An amount which normal." [PATOC:GVG]
 synonym: "present in normal numbers in organism" EXACT []
 is_a: PATO:0000467 ! present
-relationship: reciprocal_of PATO:0001905 ! has normal numbers of parts of type
+relationship: RO:0015012 PATO:0001905 ! reciprocal of has normal numbers of parts of type
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2009-03-20T11:16:22Z
 
@@ -14746,11 +14746,11 @@ creation_date: 2009-10-05T12:01:13Z
 [Term]
 id: PATO:0002094
 name: basophilic
-def: "An affinity inhering in a tissue constituent by virtue of the bearer exhibiting a molecular interaction for basic dyes under specific pH conditions." [PATOC:GVG]
+def: "An affinity inhering in an anatomical structure by virtue of the bearer exhibiting a molecular interaction for basic dyes under specific pH conditions." [PATOC:GVG]
 subset: disposition_slim
 subset: mpath_slim
 subset: value_slim
-is_a: PATO:0002070 ! affinity
+is_a: PATO:0070045 ! anatomical histological quality
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2009-10-05T12:05:23Z
 
@@ -16815,8 +16815,8 @@ id: PATO:0002300
 name: increased quality
 def: "A quality that has a value that is increased compared to normal or average." [PATOC:GVG]
 is_a: PATO:0000069 ! deviation (from_normal)
-relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0002301 ! decreased quality
+relationship: RO:0015007 PATO:0000461 ! increased in magnitude relative to normal
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2011-06-16T06:39:43Z
 
@@ -16825,8 +16825,8 @@ id: PATO:0002301
 name: decreased quality
 def: "A quality that has a value that is decreased compared to normal or average." [PATOC:GVG]
 is_a: PATO:0000069 ! deviation (from_normal)
-relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
 relationship: is_opposite_of PATO:0002300 ! increased quality
+relationship: RO:0015008 PATO:0000461 ! decreased in magnitude relative to normal
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2011-06-16T06:40:15Z
 
@@ -17954,20 +17954,20 @@ creation_date: 2012-12-17T02:16:18Z
 [Term]
 id: PATO:0002418
 name: acidophilic
-def: "An affinity inhering in a tissue constituent by virtue of the bearer exhibiting a molecular interaction for acidic dyes under specific pH conditions." [PATOC:GVG]
+def: "An affinity inhering in an anatomical structure by virtue of the bearer exhibiting a molecular interaction for acidic dyes under specific pH conditions." [PATOC:GVG]
 subset: mpath_slim
 subset: value_slim
-is_a: PATO:0002070 ! affinity
+is_a: PATO:0070045 ! anatomical histological quality
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2012-12-17T03:01:19Z
 
 [Term]
 id: PATO:0002419
 name: eosinophilic
-def: "An affinity inhering in a tissue constituent by virtue of the bearer exhibiting a molecular interaction for eosin dye." [PATOC:GVG]
+def: "An affinity inhering in an anatomical structure by virtue of the bearer exhibiting a molecular interaction for eosin dye." [PATOC:GVG]
 subset: mpath_slim
 subset: value_slim
-is_a: PATO:0002070 ! affinity
+is_a: PATO:0070045 ! anatomical histological quality
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2012-12-17T03:02:09Z
 
@@ -17977,7 +17977,7 @@ name: amphiphilic
 def: "Having both hydrophilic and hydrophobic (or lipophilic) groups." [wikipedia:http\://en.wiktionary.org/wiki/amphiphilic]
 subset: mpath_slim
 subset: value_slim
-is_a: PATO:0002070 ! affinity
+is_a: PATO:0070045 ! anatomical histological quality
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2012-12-17T03:04:39Z
 
@@ -20335,7 +20335,7 @@ id: PATO:0045001
 name: normal object quality
 def: "A quality of an object that has a value that is normal or average." []
 is_a: PATO:0001241 ! physical object quality
-relationship: has_relative_magnitude PATO:0000461 ! normal
+relationship: RO:0015010 PATO:0000461 ! has relative magnitude normal
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-9227-0670
 creation_date: 2017-12-21T14:11:01Z
 
@@ -21090,7 +21090,7 @@ id: PATO:0045073
 name: normal process quality
 def: "A quality of a process that has a value that is normal or average." []
 is_a: PATO:0001236 ! process quality
-relationship: has_relative_magnitude PATO:0000461 ! normal
+relationship: RO:0015010 PATO:0000461 ! has relative magnitude normal
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-9227-0670
 creation_date: 2017-12-21T14:11:01Z
 
@@ -21100,7 +21100,7 @@ name: normal variability
 def: "A variability which is relatively normal or average" []
 subset: value_slim
 is_a: PATO:0001227 ! variant
-relationship: has_relative_magnitude PATO:0000461 ! normal
+relationship: RO:0015010 PATO:0000461 ! has relative magnitude normal
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-9227-0670
 creation_date: 2017-12-22T14:16:43Z
 
@@ -21110,7 +21110,7 @@ name: normal variability of color
 def: "A variability of color which is relatively normal or average" []
 subset: value_slim
 is_a: PATO:0001615 ! variant color
-relationship: has_relative_magnitude PATO:0000461 ! normal
+relationship: RO:0015010 PATO:0000461 ! has relative magnitude normal
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-9227-0670
 creation_date: 2017-12-22T14:16:43Z
 
@@ -21120,7 +21120,7 @@ name: normal variability of rate
 def: "A variability of rate which is relatively normal or average" []
 subset: value_slim
 is_a: PATO:0001586 ! variability of rate
-relationship: has_relative_magnitude PATO:0000461 ! normal
+relationship: RO:0015010 PATO:0000461 ! has relative magnitude normal
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-9227-0670
 creation_date: 2017-12-22T14:16:43Z
 
@@ -21130,7 +21130,7 @@ name: normal variability of size
 def: "A variability of size which is relatively normal or average" []
 subset: value_slim
 is_a: PATO:0001956 ! variability of size
-relationship: has_relative_magnitude PATO:0000461 ! normal
+relationship: RO:0015010 PATO:0000461 ! has relative magnitude normal
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-9227-0670
 creation_date: 2017-12-22T14:16:43Z
 
@@ -21140,7 +21140,7 @@ name: normal variability of temperature
 def: "A variability of temperature which is relatively normal or average" []
 subset: value_slim
 is_a: PATO:0001314 ! variant temperature
-relationship: has_relative_magnitude PATO:0000461 ! normal
+relationship: RO:0015010 PATO:0000461 ! has relative magnitude normal
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-9227-0670
 creation_date: 2017-12-22T14:16:43Z
 
@@ -21590,7 +21590,7 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001
 [Term]
 id: PATO:0070026
 name: multipolar neuron morphology
-def: "A cell morphology that inheres in neurons which possess a single axon and many dendrites and dendritic branches." [WikipediaVersioned:Multipolar_neuron&oldid=1022942606]
+def: "A cell morphology that inheres in neurons which possess three or more neurites, usually a single axon and many dendrites and dendritic branches." [WikipediaVersioned:Multipolar_neuron&oldid=1022942606]
 xref: ILX:0107196
 xref: NLX:378
 is_a: PATO:0010006 ! cell morphology
@@ -21705,6 +21705,34 @@ def: "A cell morphology that inheres in retinal neurons which have two principal
 comment: This is distinct from cortical bipolar morphology which has two dendrites emerging from opposite ends of the soma, rather than one axon and one dendrite.
 is_a: PATO:0010006 ! cell morphology
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070044
+name: anatomical structure quality
+def: "A quality of continuant that exist at the anatomical level of organisation and anything under it. This includes, but is not limited to, cells , tissues, and components." []
+is_a: PATO:0001241 ! physical object quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070045
+name: anatomical histological quality
+def: "A quality inhering in an anotomical structure by virtue of its capacity to be stained by specific histological dyes." []
+is_a: PATO:0070044 ! anatomical structure quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070046
+name: neutrophillic
+def: "An affinity inhering in an anatomical structure by virtue of the bearer exhibiting a molecular interaction that stains and colors, pale-pink, with Wright-Giemsa stain." [GOC:add]
+is_a: PATO:0070045 ! anatomical histological quality
+created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070047
+name: polychromatophilic
+def: "An affinity inhering in an anatomical structure by virtue of the bearer exhibiting a molecular interaction for both basic and acid stains under specific pH conditions." [GOC:add]
+is_a: PATO:0070045 ! anatomical histological quality
+created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
 id: PATO:0080001
@@ -21833,6 +21861,38 @@ def: "A relationship that holds between two entities, where the entities exhibit
 property_value: IAO:0000232 "Groups both positive and negative correlation" xsd:string
 
 [Typedef]
+id: RO:0015007
+name: increased in magnitude relative to
+def: "q1 increased_in_magnitude_relative_to q2 if and only if magnitude(q1) > magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [https://orcid.org/0000-0002-6601-2165]
+comment: This relation is used to determine the 'directionality' of relative qualities such as 'increased strength', relative to the parent type, 'strength'.
+domain: PATO:0000001 ! quality
+range: PATO:0000001 ! quality
+
+[Typedef]
+id: RO:0015008
+name: decreased in magnitude relative to
+def: "q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) < magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [https://orcid.org/0000-0002-6601-2165]
+comment: This relation is used to determine the 'directionality' of relative qualities such as 'decreased strength', relative to the parent type, 'strength'.
+domain: PATO:0000001 ! quality
+range: PATO:0000001 ! quality
+
+[Typedef]
+id: RO:0015010
+name: has relative magnitude
+
+[Typedef]
+id: RO:0015011
+name: has cross section
+def: "s3 has_cross_section s3 if and only if : there exists some 2d plane that intersects the bearer of s3, and the impression of s3 upon that plane has shape quality s2." [https://orcid.org/0000-0002-6601-2165]
+comment: Example: a spherical object has the quality of being spherical, and the spherical quality has_cross_section round.
+
+[Typedef]
+id: RO:0015012
+name: reciprocal of
+def: "q1 reciprocal_of q2 if and only if : q1 and q2 are relational qualities and a phenotype e q1 e2 mutually implies a phenotype e2 q2 e." [https://orcid.org/0000-0002-6601-2165]
+comment: There are frequently two ways to state the same thing: we can say 'spermatocyte lacks asters' or 'asters absent from spermatocyte'. In this case the quality is 'lacking all parts of type' - it is a (relational) quality of the spermatocyte, and it is with respect to instances of 'aster'. One of the popular requirements of PATO is that it continue to support 'absent', so we need to relate statements which use this quality to the 'lacking all parts of type' quality.
+
+[Typedef]
 id: bearer_of
 name: bearer of
 name: has characteristic
@@ -21865,29 +21925,32 @@ is_metadata_tag: true
 
 [Typedef]
 id: decreased_in_magnitude_relative_to
-name: decreased_in_magnitude_relative_to
-def: "q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) < magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
-comment: This relation is used to determine the 'directionality' of relative qualities such as 'decreased strength', relative to the parent type, 'strength'.
+name: obsolete decreased_in_magnitude_relative_to
+def: "OBSOLETE. q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) < magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
+comment: Refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason. This relation is used to determine the 'directionality' of relative qualities such as 'decreased strength', relative to the parent type, 'strength'.
 domain: PATO:0000001 ! quality
 range: PATO:0000001 ! quality
 is_transitive: true
-is_a: different_in_magnitude_relative_to ! different_in_magnitude_relative_to
+is_obsolete: true
+replaced_by: RO:0015008
 
 [Typedef]
 id: different_in_magnitude_relative_to
-name: different_in_magnitude_relative_to
-def: "q1 different_in_magnitude_relative_to q2 if and only if magnitude(q1) NOT =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
+name: obsolete different_in_magnitude_relative_to
+def: "OBSOLETE. q1 different_in_magnitude_relative_to q2 if and only if magnitude(q1) NOT =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
+comment: Refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
 domain: PATO:0000001 ! quality
 range: PATO:0000001 ! quality
+is_obsolete: true
+replaced_by: RO:0015006
 
 [Typedef]
 id: directly_associated_with
-name: directly_associated_with
-def: "q1 directly_associated_with q2 iff q1 is dependent on q2, and the magnitude of q1 increases if the magnitude of q2 is increased, or the magnitude of q1 decreases if the magnitude of q2 is decreased. The relationship is not necessarily linear." [PATOC:cjm, Wikipedia:Association_(statistics)]
-comment: Example: 'Lewy bodies increased number related to dystrophic neurite increased number' (from annotation of PMID:8740227 in http://ccdb.ucsd.edu/1.0/NDPO.owl#ndpo_404). Here the increase in the number of lewy bodies is directly_associated_with the increase in the number of dystrophic neurites.\nAssociation is weaker than correlation or proportionality. These relations may be later added to PATO.
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-6601-2165
-domain: PATO:0000001 ! quality
-range: PATO:0000001 ! quality
+name: obsolete directly_associated_with
+def: "OBSOLETE. q1 directly_associated_with q2 iff q1 is dependent on q2, and the magnitude of q1 increases if the magnitude of q2 is increased, or the magnitude of q1 decreases if the magnitude of q2 is decreased. The relationship is not necessarily linear." [PATOC:cjm, Wikipedia:Association_(statistics)]
+comment: refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason. \nOBSOLETE. Example: 'Lewy bodies increased number related to dystrophic neurite increased number' (from annotation of PMID:8740227 in http://ccdb.ucsd.edu/1.0/NDPO.owl#ndpo_404). Here the increase in the number of lewy bodies is directly_associated_with the increase in the number of dystrophic neurites.\nAssociation is weaker than correlation or proportionality. These relations may be later added to PATO.
+is_obsolete: true
+created_by: cjm
 creation_date: 2009-08-26T02:50:08Z
 
 [Typedef]
@@ -21907,33 +21970,35 @@ is_a: has_part ! has part
 
 [Typedef]
 id: has_cross_section
-name: has_cross_section
-def: "s3 has_cross_section s3 if and only if : there exists some 2d plane that intersects the bearer of s3, and the impression of s3 upon that plane has shape quality s2." [PATOC:CJM]
-comment: Example: a spherical object has the quality of being spherical, and the spherical quality has_cross_section round.
+name: obsolete has_cross_section
+def: "OBSOLETE. s3 has_cross_section s3 if and only if : there exists some 2d plane that intersects the bearer of s3, and the impression of s3 upon that plane has shape quality s2." [PATOC:CJM]
+comment: Refer to https://github.com/pato-ontology/pato/issues/454. Example: a spherical object has the quality of being spherical, and the spherical quality has_cross_section round.
+is_obsolete: true
+replaced_by: RO:0015011
 
 [Typedef]
 id: has_dividend_entity
-name: has_dividend_entity
-domain: PATO:0001470 ! proportionality to
+name: obsolete has_dividend_entity
+comment: refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
+is_obsolete: true
 
 [Typedef]
 id: has_dividend_quality
-name: has_dividend_quality
-domain: PATO:0001470 ! proportionality to
-range: PATO:0000001 ! quality
-is_a: has_ratio_quality ! has_ratio_quality
+name: obsolete has_dividend_quality
+comment: refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
+is_obsolete: true
 
 [Typedef]
 id: has_divisor_entity
-name: has_divisor_entity
-domain: PATO:0001470 ! proportionality to
+name: obsolete has_divisor_entity
+comment: refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
+is_obsolete: true
 
 [Typedef]
 id: has_divisor_quality
-name: has_divisor_quality
-domain: PATO:0001470 ! proportionality to
-range: PATO:0000001 ! quality
-is_a: has_ratio_quality ! has_ratio_quality
+name: obsolete has_divisor_quality
+comment: refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
+is_obsolete: true
 
 [Typedef]
 id: has_part
@@ -21959,43 +22024,50 @@ is_transitive: true
 
 [Typedef]
 id: has_ratio_quality
-name: has_ratio_quality
-domain: PATO:0001470 ! proportionality to
-range: PATO:0000001 ! quality
+name: obsolete has_ratio_quality
+comment: refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
+is_obsolete: true
 
 [Typedef]
 id: has_relative_magnitude
-name: has_relative_magnitude
+name: obsolete has_relative_magnitude
+comment: Refer to https://github.com/pato-ontology/pato/issues/454.
+is_obsolete: true
+replaced_by: RO:0015010
 
 [Typedef]
 id: increased_in_magnitude_relative_to
-name: increased_in_magnitude_relative_to
-def: "q1 increased_in_magnitude_relative_to q2 if and only if magnitude(q1) > magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
-comment: This relation is used to determine the 'directionality' of relative qualities such as 'increased strength', relative to the parent type, 'strength'.
+name: obsolete increased_in_magnitude_relative_to
+def: "OBSOLETE. q1 increased_in_magnitude_relative_to q2 if and only if magnitude(q1) > magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
+comment: Refer to https://github.com/pato-ontology/pato/issues/454. This relation is used to determine the 'directionality' of relative qualities such as 'increased strength', relative to the parent type, 'strength'.
 domain: PATO:0000001 ! quality
 range: PATO:0000001 ! quality
 is_transitive: true
-is_a: different_in_magnitude_relative_to ! different_in_magnitude_relative_to
+is_obsolete: true
+replaced_by: RO:0015007
 
 [Typedef]
 id: inversely_associated_with
-name: inversely_associated_with
-def: "q1 inversely_associated_with q2 iff q1 is dependent on q2, and the magnitude of q1 decreases if the magnitude of q2 is increased, or the magnitude of q1 increases if the magnitude of q2 is decreased. The relationship is not necessarily linear." [PATOC:cjm, Wikipedia:Association_(statistics)]
-comment: Association is weaker than correlation or proportionality. These relations may be later added to PATO.
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-6601-2165
-domain: PATO:0000001 ! quality
-range: PATO:0000001 ! quality
+name: obsolete inversely_associated_with
+def: "OBSOLETE. q1 inversely_associated_with q2 iff q1 is dependent on q2, and the magnitude of q1 decreases if the magnitude of q2 is increased, or the magnitude of q1 increases if the magnitude of q2 is decreased. The relationship is not necessarily linear." [PATOC:cjm, Wikipedia:Association_(statistics)]
+comment: refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
+is_obsolete: true
+created_by: cjm
 creation_date: 2009-08-26T02:50:24Z
 
 [Typedef]
 id: is_magnitude_of
-name: is_magnitude_of
+name: obsolete is_magnitude_of
 namespace: pato.ontology
+comment: refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
+is_obsolete: true
 
 [Typedef]
 id: is_measurement_of
-name: is_measurement_of
+name: obsolete is_measurement_of
 namespace: pato.ontology
+comment: refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
+is_obsolete: true
 
 [Typedef]
 id: is_opposite_of
@@ -22010,8 +22082,10 @@ is_class_level: true
 
 [Typedef]
 id: is_unit_of
-name: is_unit_of
+name: obsolete is_unit_of
 namespace: pato.ontology
+comment: refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
+is_obsolete: true
 
 [Typedef]
 id: part_of
@@ -22049,29 +22123,35 @@ inverse_of: has_part ! has part
 
 [Typedef]
 id: realized_by
-name: realized_by
+name: obsolete realized_by
 comment: Consider using RO:0009501 instead. See https://github.com/pato-ontology/pato/issues/454
 is_obsolete: true
 replaced_by: RO:0009501
 
 [Typedef]
 id: reciprocal_of
-name: reciprocal_of
-def: "q1 reciprocal_of q2 if and only if : q1 and q2 are relational qualities and a phenotype e q1 e2 mutually implies a phenotype e2 q2 e." [PATOC:CJM]
-comment: There are frequently two ways to state the same thing: we can say 'spermatocyte lacks asters' or 'asters absent from spermatocyte'. In this case the quality is 'lacking all parts of type' - it is a (relational) quality of the spermatocyte, and it is with respect to instances of 'aster'. One of the popular requirements of PATO is that it continue to support 'absent', so we need to relate statements which use this quality to the 'lacking all parts of type' quality.
+name: obsolete reciprocal_of
+def: "OBSOLETE. q1 reciprocal_of q2 if and only if : q1 and q2 are relational qualities and a phenotype e q1 e2 mutually implies a phenotype e2 q2 e." [PATOC:CJM]
+comment: Refer to https://github.com/pato-ontology/pato/issues/454. There are frequently two ways to state the same thing: we can say 'spermatocyte lacks asters' or 'asters absent from spermatocyte'. In this case the quality is 'lacking all parts of type' - it is a (relational) quality of the spermatocyte, and it is with respect to instances of 'aster'. One of the popular requirements of PATO is that it continue to support 'absent', so we need to relate statements which use this quality to the 'lacking all parts of type' quality.
+is_obsolete: true
+replaced_by: RO:0015012
 
 [Typedef]
 id: similar_in_magnitude_relative_to
-name: similar_in_magnitude_relative_to
-def: "q1 similar_in_magnitude_relative_to q2 if and only if magnitude(q1) =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
+name: obsolete similar_in_magnitude_relative_to
+def: "OBSOLETE. q1 similar_in_magnitude_relative_to q2 if and only if magnitude(q1) =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
+comment: Refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
 domain: PATO:0000001 ! quality
 range: PATO:0000001 ! quality
+is_obsolete: true
+replaced_by: RO:0015009
 
 [Typedef]
 id: singly_occurring_form_of
-name: singly_occurring_form_of
-comment: PATO divides qualities between normal (monadic, singly-occurring) qualities and relational qualities. Relational qualities stand in the 'towards' relation with respect to some additional entity. For example, The sensitivity of an eye towards red light. In some cases we want to represent a quality such as 'protruding' in both monadic and relational branches. We use this relation to link them.
+name: obsolete singly_occurring_form_of
+comment: refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.\nOBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qualities and relational qualities. Relational qualities stand in the 'towards' relation with respect to some additional entity. For example, The sensitivity of an eye towards red light. In some cases we want to represent a quality such as 'protruding' in both monadic and relational branches. We use this relation to link them.
 synonym: "monadic_form_of" EXACT []
+is_obsolete: true
 
 [Typedef]
 id: towards
