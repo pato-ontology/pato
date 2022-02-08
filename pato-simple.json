@@ -4,15 +4,21 @@
       "domainRangeAxioms": [
         {
           "domainClassIds": [
-            "http://purl.obolibrary.org/obo/PATO_0001470"
+            "http://purl.obolibrary.org/obo/PATO_0000001"
           ],
-          "predicateId": "http://purl.obolibrary.org/obo/pato#has_dividend_entity"
+          "predicateId": "http://purl.obolibrary.org/obo/RO_0015007",
+          "rangeClassIds": [
+            "http://purl.obolibrary.org/obo/PATO_0000001"
+          ]
         },
         {
           "domainClassIds": [
-            "http://purl.obolibrary.org/obo/PATO_0001470"
+            "http://purl.obolibrary.org/obo/PATO_0000001"
           ],
-          "predicateId": "http://purl.obolibrary.org/obo/pato#has_divisor_entity"
+          "predicateId": "http://purl.obolibrary.org/obo/RO_0015008",
+          "rangeClassIds": [
+            "http://purl.obolibrary.org/obo/PATO_0000001"
+          ]
         },
         {
           "domainClassIds": [
@@ -36,15 +42,6 @@
           "domainClassIds": [
             "http://purl.obolibrary.org/obo/PATO_0000001"
           ],
-          "predicateId": "http://purl.obolibrary.org/obo/pato#directly_associated_with",
-          "rangeClassIds": [
-            "http://purl.obolibrary.org/obo/PATO_0000001"
-          ]
-        },
-        {
-          "domainClassIds": [
-            "http://purl.obolibrary.org/obo/PATO_0000001"
-          ],
           "predicateId": "http://purl.obolibrary.org/obo/pato#increased_in_magnitude_relative_to",
           "rangeClassIds": [
             "http://purl.obolibrary.org/obo/PATO_0000001"
@@ -54,43 +51,7 @@
           "domainClassIds": [
             "http://purl.obolibrary.org/obo/PATO_0000001"
           ],
-          "predicateId": "http://purl.obolibrary.org/obo/pato#inversely_associated_with",
-          "rangeClassIds": [
-            "http://purl.obolibrary.org/obo/PATO_0000001"
-          ]
-        },
-        {
-          "domainClassIds": [
-            "http://purl.obolibrary.org/obo/PATO_0000001"
-          ],
           "predicateId": "http://purl.obolibrary.org/obo/pato#similar_in_magnitude_relative_to",
-          "rangeClassIds": [
-            "http://purl.obolibrary.org/obo/PATO_0000001"
-          ]
-        },
-        {
-          "domainClassIds": [
-            "http://purl.obolibrary.org/obo/PATO_0001470"
-          ],
-          "predicateId": "http://purl.obolibrary.org/obo/pato#has_dividend_quality",
-          "rangeClassIds": [
-            "http://purl.obolibrary.org/obo/PATO_0000001"
-          ]
-        },
-        {
-          "domainClassIds": [
-            "http://purl.obolibrary.org/obo/PATO_0001470"
-          ],
-          "predicateId": "http://purl.obolibrary.org/obo/pato#has_divisor_quality",
-          "rangeClassIds": [
-            "http://purl.obolibrary.org/obo/PATO_0000001"
-          ]
-        },
-        {
-          "domainClassIds": [
-            "http://purl.obolibrary.org/obo/PATO_0001470"
-          ],
-          "predicateId": "http://purl.obolibrary.org/obo/pato#has_ratio_quality",
           "rangeClassIds": [
             "http://purl.obolibrary.org/obo/PATO_0000001"
           ]
@@ -1574,7 +1535,7 @@
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0000070",
-          "pred": "http://purl.obolibrary.org/obo/pato#reciprocal_of",
+          "pred": "http://purl.obolibrary.org/obo/RO_0015012",
           "sub": "http://purl.obolibrary.org/obo/PATO_0001555"
         },
         {
@@ -3454,12 +3415,12 @@
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0000411",
-          "pred": "http://purl.obolibrary.org/obo/pato#has_cross_section",
+          "pred": "http://purl.obolibrary.org/obo/RO_0015011",
           "sub": "http://purl.obolibrary.org/obo/PATO_0001499"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0000411",
-          "pred": "http://purl.obolibrary.org/obo/pato#has_cross_section",
+          "pred": "http://purl.obolibrary.org/obo/RO_0015011",
           "sub": "http://purl.obolibrary.org/obo/PATO_0001873"
         },
         {
@@ -3474,7 +3435,7 @@
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0000413",
-          "pred": "http://purl.obolibrary.org/obo/pato#has_cross_section",
+          "pred": "http://purl.obolibrary.org/obo/RO_0015011",
           "sub": "http://purl.obolibrary.org/obo/PATO_0001872"
         },
         {
@@ -3534,57 +3495,57 @@
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0000461",
-          "pred": "http://purl.obolibrary.org/obo/pato#decreased_in_magnitude_relative_to",
+          "pred": "http://purl.obolibrary.org/obo/RO_0015007",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0002300"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0000461",
+          "pred": "http://purl.obolibrary.org/obo/RO_0015008",
           "sub": "http://purl.obolibrary.org/obo/PATO_0002301"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0000461",
-          "pred": "http://purl.obolibrary.org/obo/pato#has_relative_magnitude",
+          "pred": "http://purl.obolibrary.org/obo/RO_0015010",
           "sub": "http://purl.obolibrary.org/obo/PATO_0045001"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0000461",
-          "pred": "http://purl.obolibrary.org/obo/pato#has_relative_magnitude",
+          "pred": "http://purl.obolibrary.org/obo/RO_0015010",
           "sub": "http://purl.obolibrary.org/obo/PATO_0045073"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0000461",
-          "pred": "http://purl.obolibrary.org/obo/pato#has_relative_magnitude",
+          "pred": "http://purl.obolibrary.org/obo/RO_0015010",
           "sub": "http://purl.obolibrary.org/obo/PATO_0045074"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0000461",
-          "pred": "http://purl.obolibrary.org/obo/pato#has_relative_magnitude",
+          "pred": "http://purl.obolibrary.org/obo/RO_0015010",
           "sub": "http://purl.obolibrary.org/obo/PATO_0045075"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0000461",
-          "pred": "http://purl.obolibrary.org/obo/pato#has_relative_magnitude",
+          "pred": "http://purl.obolibrary.org/obo/RO_0015010",
           "sub": "http://purl.obolibrary.org/obo/PATO_0045076"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0000461",
-          "pred": "http://purl.obolibrary.org/obo/pato#has_relative_magnitude",
+          "pred": "http://purl.obolibrary.org/obo/RO_0015010",
           "sub": "http://purl.obolibrary.org/obo/PATO_0045077"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0000461",
-          "pred": "http://purl.obolibrary.org/obo/pato#has_relative_magnitude",
+          "pred": "http://purl.obolibrary.org/obo/RO_0015010",
           "sub": "http://purl.obolibrary.org/obo/PATO_0045078"
         },
         {
-          "obj": "http://purl.obolibrary.org/obo/PATO_0000461",
-          "pred": "http://purl.obolibrary.org/obo/pato#increased_in_magnitude_relative_to",
-          "sub": "http://purl.obolibrary.org/obo/PATO_0002300"
-        },
-        {
           "obj": "http://purl.obolibrary.org/obo/PATO_0000462",
-          "pred": "http://purl.obolibrary.org/obo/pato#reciprocal_of",
+          "pred": "http://purl.obolibrary.org/obo/RO_0015012",
           "sub": "http://purl.obolibrary.org/obo/PATO_0001558"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0000462",
-          "pred": "http://purl.obolibrary.org/obo/pato#reciprocal_of",
+          "pred": "http://purl.obolibrary.org/obo/RO_0015012",
           "sub": "http://purl.obolibrary.org/obo/PATO_0002000"
         },
         {
@@ -4234,7 +4195,7 @@
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0000946",
-          "pred": "http://purl.obolibrary.org/obo/pato#has_cross_section",
+          "pred": "http://purl.obolibrary.org/obo/RO_0015011",
           "sub": "http://purl.obolibrary.org/obo/PATO_0001891"
         },
         {
@@ -5075,11 +5036,6 @@
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0001241",
           "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/PATO_0001396"
-        },
-        {
-          "obj": "http://purl.obolibrary.org/obo/PATO_0001241",
-          "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0001509"
         },
         {
@@ -5131,6 +5087,11 @@
           "obj": "http://purl.obolibrary.org/obo/PATO_0001241",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0045001"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0001241",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070044"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0001242",
@@ -6469,7 +6430,7 @@
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0001555",
-          "pred": "http://purl.obolibrary.org/obo/pato#reciprocal_of",
+          "pred": "http://purl.obolibrary.org/obo/RO_0015012",
           "sub": "http://purl.obolibrary.org/obo/PATO_0000070"
         },
         {
@@ -6484,7 +6445,7 @@
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0001558",
-          "pred": "http://purl.obolibrary.org/obo/pato#reciprocal_of",
+          "pred": "http://purl.obolibrary.org/obo/RO_0015012",
           "sub": "http://purl.obolibrary.org/obo/PATO_0000462"
         },
         {
@@ -7649,7 +7610,7 @@
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0001905",
-          "pred": "http://purl.obolibrary.org/obo/pato#reciprocal_of",
+          "pred": "http://purl.obolibrary.org/obo/RO_0015012",
           "sub": "http://purl.obolibrary.org/obo/PATO_0002050"
         },
         {
@@ -8014,7 +7975,7 @@
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0002000",
-          "pred": "http://purl.obolibrary.org/obo/pato#reciprocal_of",
+          "pred": "http://purl.obolibrary.org/obo/RO_0015012",
           "sub": "http://purl.obolibrary.org/obo/PATO_0000462"
         },
         {
@@ -8044,7 +8005,7 @@
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0002006",
-          "pred": "http://purl.obolibrary.org/obo/pato#has_cross_section",
+          "pred": "http://purl.obolibrary.org/obo/RO_0015011",
           "sub": "http://purl.obolibrary.org/obo/PATO_0002007"
         },
         {
@@ -8444,7 +8405,7 @@
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0002050",
-          "pred": "http://purl.obolibrary.org/obo/pato#reciprocal_of",
+          "pred": "http://purl.obolibrary.org/obo/RO_0015012",
           "sub": "http://purl.obolibrary.org/obo/PATO_0001905"
         },
         {
@@ -8506,26 +8467,6 @@
           "obj": "http://purl.obolibrary.org/obo/PATO_0002070",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0002072"
-        },
-        {
-          "obj": "http://purl.obolibrary.org/obo/PATO_0002070",
-          "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/PATO_0002094"
-        },
-        {
-          "obj": "http://purl.obolibrary.org/obo/PATO_0002070",
-          "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/PATO_0002418"
-        },
-        {
-          "obj": "http://purl.obolibrary.org/obo/PATO_0002070",
-          "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/PATO_0002419"
-        },
-        {
-          "obj": "http://purl.obolibrary.org/obo/PATO_0002070",
-          "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/PATO_0002420"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0002070",
@@ -11178,24 +11119,44 @@
           "sub": "http://purl.obolibrary.org/obo/PATO_0070041"
         },
         {
-          "obj": "http://purl.obolibrary.org/obo/pato#different_in_magnitude_relative_to",
-          "pred": "subPropertyOf",
-          "sub": "http://purl.obolibrary.org/obo/pato#decreased_in_magnitude_relative_to"
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070044",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0001396"
         },
         {
-          "obj": "http://purl.obolibrary.org/obo/pato#different_in_magnitude_relative_to",
-          "pred": "subPropertyOf",
-          "sub": "http://purl.obolibrary.org/obo/pato#increased_in_magnitude_relative_to"
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070044",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070045"
         },
         {
-          "obj": "http://purl.obolibrary.org/obo/pato#has_ratio_quality",
-          "pred": "subPropertyOf",
-          "sub": "http://purl.obolibrary.org/obo/pato#has_dividend_quality"
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070045",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0002094"
         },
         {
-          "obj": "http://purl.obolibrary.org/obo/pato#has_ratio_quality",
-          "pred": "subPropertyOf",
-          "sub": "http://purl.obolibrary.org/obo/pato#has_divisor_quality"
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070045",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0002418"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070045",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0002419"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070045",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0002420"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070045",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070046"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070045",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070047"
         }
       ],
       "equivalentNodesSets": [],
@@ -11229,11 +11190,11 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2022-01-12"
+            "val": "2022-02-08"
           }
         ],
         "subsets": [],
-        "version": "http://purl.obolibrary.org/obo/pato/releases/2022-01-12/pato-simple.json",
+        "version": "http://purl.obolibrary.org/obo/pato/releases/2022-02-08/pato-simple.json",
         "xrefs": []
       },
       "nodes": [
@@ -56446,7 +56407,7 @@
               }
             ],
             "definition": {
-              "val": "An affinity inhering in a tissue constituent by virtue of the bearer exhibiting a molecular interaction for basic dyes under specific pH conditions.",
+              "val": "An affinity inhering in an anatomical structure by virtue of the bearer exhibiting a molecular interaction for basic dyes under specific pH conditions.",
               "xrefs": [
                 "PATOC:GVG"
               ]
@@ -66954,7 +66915,7 @@
               }
             ],
             "definition": {
-              "val": "An affinity inhering in a tissue constituent by virtue of the bearer exhibiting a molecular interaction for acidic dyes under specific pH conditions.",
+              "val": "An affinity inhering in an anatomical structure by virtue of the bearer exhibiting a molecular interaction for acidic dyes under specific pH conditions.",
               "xrefs": [
                 "PATOC:GVG"
               ]
@@ -66985,7 +66946,7 @@
               }
             ],
             "definition": {
-              "val": "An affinity inhering in a tissue constituent by virtue of the bearer exhibiting a molecular interaction for eosin dye.",
+              "val": "An affinity inhering in an anatomical structure by virtue of the bearer exhibiting a molecular interaction for eosin dye.",
               "xrefs": [
                 "PATOC:GVG"
               ]
@@ -78568,7 +78529,7 @@
               }
             ],
             "definition": {
-              "val": "A cell morphology that inheres in neurons which possess a single axon and many dendrites and dendritic branches.",
+              "val": "A cell morphology that inheres in neurons which possess three or more neurites, usually a single axon and many dendrites and dendritic branches.",
               "xrefs": [
                 "WikipediaVersioned:Multipolar_neuron&oldid=1022942606"
               ]
@@ -78969,6 +78930,94 @@
               "val": "A cell morphology that inheres in retinal neurons which have two principal fibres, an axon and a dendrite, that emerge from opposite end the soma.",
               "xrefs": [
                 "WikipediaVersioned:Retina_bipolar_cell&oldid=1033254616"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070044",
+          "lbl": "anatomical structure quality",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A quality of continuant that exist at the anatomical level of organisation and anything under it. This includes, but is not limited to, cells , tissues, and components.",
+              "xrefs": []
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070045",
+          "lbl": "anatomical histological quality",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A quality inhering in an anotomical structure by virtue of its capacity to be stained by specific histological dyes.",
+              "xrefs": []
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070046",
+          "lbl": "neutrophillic",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "An affinity inhering in an anatomical structure by virtue of the bearer exhibiting a molecular interaction that stains and colors, pale-pink, with Wright-Giemsa stain.",
+              "xrefs": [
+                "GOC:add"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070047",
+          "lbl": "polychromatophilic",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "http://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "An affinity inhering in an anatomical structure by virtue of the bearer exhibiting a molecular interaction for both basic and acid stains under specific pH conditions.",
+              "xrefs": [
+                "GOC:add"
               ]
             }
           },
@@ -79525,6 +79574,70 @@
           "type": "PROPERTY"
         },
         {
+          "id": "http://purl.obolibrary.org/obo/RO_0015007",
+          "lbl": "increased in magnitude relative to",
+          "meta": {
+            "comments": [
+              "This relation is used to determine the 'directionality' of relative qualities such as 'increased strength', relative to the parent type, 'strength'."
+            ],
+            "definition": {
+              "val": "q1 increased_in_magnitude_relative_to q2 if and only if magnitude(q1) > magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.",
+              "xrefs": [
+                "https://orcid.org/0000-0002-6601-2165"
+              ]
+            }
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/RO_0015008",
+          "lbl": "decreased in magnitude relative to",
+          "meta": {
+            "comments": [
+              "This relation is used to determine the 'directionality' of relative qualities such as 'decreased strength', relative to the parent type, 'strength'."
+            ],
+            "definition": {
+              "val": "q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) < magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.",
+              "xrefs": [
+                "https://orcid.org/0000-0002-6601-2165"
+              ]
+            }
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/RO_0015011",
+          "lbl": "has cross section",
+          "meta": {
+            "comments": [
+              "Example: a spherical object has the quality of being spherical, and the spherical quality has_cross_section round."
+            ],
+            "definition": {
+              "val": "s3 has_cross_section s3 if and only if : there exists some 2d plane that intersects the bearer of s3, and the impression of s3 upon that plane has shape quality s2.",
+              "xrefs": [
+                "https://orcid.org/0000-0002-6601-2165"
+              ]
+            }
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/RO_0015012",
+          "lbl": "reciprocal of",
+          "meta": {
+            "comments": [
+              "There are frequently two ways to state the same thing: we can say 'spermatocyte lacks asters' or 'asters absent from spermatocyte'. In this case the quality is 'lacking all parts of type' - it is a (relational) quality of the spermatocyte, and it is with respect to instances of 'aster'. One of the popular requirements of PATO is that it continue to support 'absent', so we need to relate statements which use this quality to the 'lacking all parts of type' quality."
+            ],
+            "definition": {
+              "val": "q1 reciprocal_of q2 if and only if : q1 and q2 are relational qualities and a phenotype e q1 e2 mutually implies a phenotype e2 q2 e.",
+              "xrefs": [
+                "https://orcid.org/0000-0002-6601-2165"
+              ]
+            }
+          },
+          "type": "PROPERTY"
+        },
+        {
           "id": "http://purl.obolibrary.org/obo/pato#correlates_with",
           "lbl": "obsolete correlates_with",
           "meta": {
@@ -79547,53 +79660,66 @@
         },
         {
           "id": "http://purl.obolibrary.org/obo/pato#decreased_in_magnitude_relative_to",
-          "lbl": "decreased_in_magnitude_relative_to",
+          "lbl": "obsolete decreased_in_magnitude_relative_to",
           "meta": {
             "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0100001",
+                "val": "RO:0015008"
+              },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
                 "val": "quality"
               }
             ],
             "comments": [
-              "This relation is used to determine the 'directionality' of relative qualities such as 'decreased strength', relative to the parent type, 'strength'."
+              "Refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason. This relation is used to determine the 'directionality' of relative qualities such as 'decreased strength', relative to the parent type, 'strength'."
             ],
             "definition": {
-              "val": "q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) < magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.",
+              "val": "OBSOLETE. q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) < magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.",
               "xrefs": [
                 "PATOC:CJM"
               ]
-            }
+            },
+            "deprecated": true
           },
           "type": "PROPERTY"
         },
         {
           "id": "http://purl.obolibrary.org/obo/pato#different_in_magnitude_relative_to",
-          "lbl": "different_in_magnitude_relative_to",
+          "lbl": "obsolete different_in_magnitude_relative_to",
           "meta": {
             "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0100001",
+                "val": "RO:0015006"
+              },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
                 "val": "quality"
               }
             ],
+            "comments": [
+              "Refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason."
+            ],
             "definition": {
-              "val": "q1 different_in_magnitude_relative_to q2 if and only if magnitude(q1) NOT =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.",
+              "val": "OBSOLETE. q1 different_in_magnitude_relative_to q2 if and only if magnitude(q1) NOT =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.",
               "xrefs": [
                 "PATOC:CJM"
               ]
-            }
+            },
+            "deprecated": true
           },
           "type": "PROPERTY"
         },
         {
           "id": "http://purl.obolibrary.org/obo/pato#directly_associated_with",
-          "lbl": "directly_associated_with",
+          "lbl": "obsolete directly_associated_with",
           "meta": {
             "basicPropertyValues": [
               {
-                "pred": "http://purl.org/dc/terms/contributor",
-                "val": "https://orcid.org/0000-0002-6601-2165"
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "cjm"
               },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#creation_date",
@@ -79605,121 +79731,49 @@
               }
             ],
             "comments": [
-              "Example: 'Lewy bodies increased number related to dystrophic neurite increased number' (from annotation of PMID:8740227 in http://ccdb.ucsd.edu/1.0/NDPO.owl#ndpo_404). Here the increase in the number of lewy bodies is directly_associated_with the increase in the number of dystrophic neurites.\nAssociation is weaker than correlation or proportionality. These relations may be later added to PATO."
+              "refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason. \nOBSOLETE. Example: 'Lewy bodies increased number related to dystrophic neurite increased number' (from annotation of PMID:8740227 in http://ccdb.ucsd.edu/1.0/NDPO.owl#ndpo_404). Here the increase in the number of lewy bodies is directly_associated_with the increase in the number of dystrophic neurites.\nAssociation is weaker than correlation or proportionality. These relations may be later added to PATO."
             ],
             "definition": {
-              "val": "q1 directly_associated_with q2 iff q1 is dependent on q2, and the magnitude of q1 increases if the magnitude of q2 is increased, or the magnitude of q1 decreases if the magnitude of q2 is decreased. The relationship is not necessarily linear.",
+              "val": "OBSOLETE. q1 directly_associated_with q2 iff q1 is dependent on q2, and the magnitude of q1 increases if the magnitude of q2 is increased, or the magnitude of q1 decreases if the magnitude of q2 is decreased. The relationship is not necessarily linear.",
               "xrefs": [
                 "PATOC:cjm",
                 "Wikipedia:Association_(statistics)"
               ]
-            }
+            },
+            "deprecated": true
           },
           "type": "PROPERTY"
         },
         {
           "id": "http://purl.obolibrary.org/obo/pato#has_cross_section",
-          "lbl": "has_cross_section",
+          "lbl": "obsolete has_cross_section",
           "meta": {
             "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0100001",
+                "val": "RO:0015011"
+              },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
                 "val": "quality"
               }
             ],
             "comments": [
-              "Example: a spherical object has the quality of being spherical, and the spherical quality has_cross_section round."
+              "Refer to https://github.com/pato-ontology/pato/issues/454. Example: a spherical object has the quality of being spherical, and the spherical quality has_cross_section round."
             ],
             "definition": {
-              "val": "s3 has_cross_section s3 if and only if : there exists some 2d plane that intersects the bearer of s3, and the impression of s3 upon that plane has shape quality s2.",
+              "val": "OBSOLETE. s3 has_cross_section s3 if and only if : there exists some 2d plane that intersects the bearer of s3, and the impression of s3 upon that plane has shape quality s2.",
               "xrefs": [
                 "PATOC:CJM"
               ]
-            }
+            },
+            "deprecated": true
           },
           "type": "PROPERTY"
         },
         {
           "id": "http://purl.obolibrary.org/obo/pato#has_dividend_entity",
-          "lbl": "has_dividend_entity",
-          "meta": {
-            "basicPropertyValues": [
-              {
-                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-                "val": "quality"
-              }
-            ]
-          },
-          "type": "PROPERTY"
-        },
-        {
-          "id": "http://purl.obolibrary.org/obo/pato#has_dividend_quality",
-          "lbl": "has_dividend_quality",
-          "meta": {
-            "basicPropertyValues": [
-              {
-                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-                "val": "quality"
-              }
-            ]
-          },
-          "type": "PROPERTY"
-        },
-        {
-          "id": "http://purl.obolibrary.org/obo/pato#has_divisor_entity",
-          "lbl": "has_divisor_entity",
-          "meta": {
-            "basicPropertyValues": [
-              {
-                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-                "val": "quality"
-              }
-            ]
-          },
-          "type": "PROPERTY"
-        },
-        {
-          "id": "http://purl.obolibrary.org/obo/pato#has_divisor_quality",
-          "lbl": "has_divisor_quality",
-          "meta": {
-            "basicPropertyValues": [
-              {
-                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-                "val": "quality"
-              }
-            ]
-          },
-          "type": "PROPERTY"
-        },
-        {
-          "id": "http://purl.obolibrary.org/obo/pato#has_ratio_quality",
-          "lbl": "has_ratio_quality",
-          "meta": {
-            "basicPropertyValues": [
-              {
-                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-                "val": "quality"
-              }
-            ]
-          },
-          "type": "PROPERTY"
-        },
-        {
-          "id": "http://purl.obolibrary.org/obo/pato#has_relative_magnitude",
-          "lbl": "has_relative_magnitude",
-          "meta": {
-            "basicPropertyValues": [
-              {
-                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-                "val": "quality"
-              }
-            ]
-          },
-          "type": "PROPERTY"
-        },
-        {
-          "id": "http://purl.obolibrary.org/obo/pato#increased_in_magnitude_relative_to",
-          "lbl": "increased_in_magnitude_relative_to",
+          "lbl": "obsolete has_dividend_entity",
           "meta": {
             "basicPropertyValues": [
               {
@@ -79728,25 +79782,136 @@
               }
             ],
             "comments": [
-              "This relation is used to determine the 'directionality' of relative qualities such as 'increased strength', relative to the parent type, 'strength'."
+              "refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason."
+            ],
+            "deprecated": true
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/pato#has_dividend_quality",
+          "lbl": "obsolete has_dividend_quality",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "comments": [
+              "refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason."
+            ],
+            "deprecated": true
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/pato#has_divisor_entity",
+          "lbl": "obsolete has_divisor_entity",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "comments": [
+              "refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason."
+            ],
+            "deprecated": true
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/pato#has_divisor_quality",
+          "lbl": "obsolete has_divisor_quality",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "comments": [
+              "refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason."
+            ],
+            "deprecated": true
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/pato#has_ratio_quality",
+          "lbl": "obsolete has_ratio_quality",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "comments": [
+              "refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason."
+            ],
+            "deprecated": true
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/pato#has_relative_magnitude",
+          "lbl": "obsolete has_relative_magnitude",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0100001",
+                "val": "RO:0015010"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "comments": [
+              "Refer to https://github.com/pato-ontology/pato/issues/454."
+            ],
+            "deprecated": true
+          },
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/pato#increased_in_magnitude_relative_to",
+          "lbl": "obsolete increased_in_magnitude_relative_to",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0100001",
+                "val": "RO:0015007"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "comments": [
+              "Refer to https://github.com/pato-ontology/pato/issues/454. This relation is used to determine the 'directionality' of relative qualities such as 'increased strength', relative to the parent type, 'strength'."
             ],
             "definition": {
-              "val": "q1 increased_in_magnitude_relative_to q2 if and only if magnitude(q1) > magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.",
+              "val": "OBSOLETE. q1 increased_in_magnitude_relative_to q2 if and only if magnitude(q1) > magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.",
               "xrefs": [
                 "PATOC:CJM"
               ]
-            }
+            },
+            "deprecated": true
           },
           "type": "PROPERTY"
         },
         {
           "id": "http://purl.obolibrary.org/obo/pato#inversely_associated_with",
-          "lbl": "inversely_associated_with",
+          "lbl": "obsolete inversely_associated_with",
           "meta": {
             "basicPropertyValues": [
               {
-                "pred": "http://purl.org/dc/terms/contributor",
-                "val": "https://orcid.org/0000-0002-6601-2165"
+                "pred": "http://www.geneontology.org/formats/oboInOwl#created_by",
+                "val": "cjm"
               },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#creation_date",
@@ -79758,60 +79923,73 @@
               }
             ],
             "comments": [
-              "Association is weaker than correlation or proportionality. These relations may be later added to PATO."
+              "refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason."
             ],
             "definition": {
-              "val": "q1 inversely_associated_with q2 iff q1 is dependent on q2, and the magnitude of q1 decreases if the magnitude of q2 is increased, or the magnitude of q1 increases if the magnitude of q2 is decreased. The relationship is not necessarily linear.",
+              "val": "OBSOLETE. q1 inversely_associated_with q2 iff q1 is dependent on q2, and the magnitude of q1 decreases if the magnitude of q2 is increased, or the magnitude of q1 increases if the magnitude of q2 is decreased. The relationship is not necessarily linear.",
               "xrefs": [
                 "PATOC:cjm",
                 "Wikipedia:Association_(statistics)"
               ]
-            }
+            },
+            "deprecated": true
           },
           "type": "PROPERTY"
         },
         {
           "id": "http://purl.obolibrary.org/obo/pato#is_magnitude_of",
-          "lbl": "is_magnitude_of",
+          "lbl": "obsolete is_magnitude_of",
           "meta": {
             "basicPropertyValues": [
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
                 "val": "pato.ontology"
               }
-            ]
+            ],
+            "comments": [
+              "refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason."
+            ],
+            "deprecated": true
           },
           "type": "PROPERTY"
         },
         {
           "id": "http://purl.obolibrary.org/obo/pato#is_measurement_of",
-          "lbl": "is_measurement_of",
+          "lbl": "obsolete is_measurement_of",
           "meta": {
             "basicPropertyValues": [
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
                 "val": "pato.ontology"
               }
-            ]
+            ],
+            "comments": [
+              "refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason."
+            ],
+            "deprecated": true
           },
           "type": "PROPERTY"
         },
         {
           "id": "http://purl.obolibrary.org/obo/pato#is_unit_of",
-          "lbl": "is_unit_of",
+          "lbl": "obsolete is_unit_of",
           "meta": {
             "basicPropertyValues": [
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
                 "val": "pato.ontology"
               }
-            ]
+            ],
+            "comments": [
+              "refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason."
+            ],
+            "deprecated": true
           },
           "type": "PROPERTY"
         },
         {
           "id": "http://purl.obolibrary.org/obo/pato#realized_by",
-          "lbl": "realized_by",
+          "lbl": "obsolete realized_by",
           "meta": {
             "basicPropertyValues": [
               {
@@ -79832,48 +80010,61 @@
         },
         {
           "id": "http://purl.obolibrary.org/obo/pato#reciprocal_of",
-          "lbl": "reciprocal_of",
+          "lbl": "obsolete reciprocal_of",
           "meta": {
             "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0100001",
+                "val": "RO:0015012"
+              },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
                 "val": "quality"
               }
             ],
             "comments": [
-              "There are frequently two ways to state the same thing: we can say 'spermatocyte lacks asters' or 'asters absent from spermatocyte'. In this case the quality is 'lacking all parts of type' - it is a (relational) quality of the spermatocyte, and it is with respect to instances of 'aster'. One of the popular requirements of PATO is that it continue to support 'absent', so we need to relate statements which use this quality to the 'lacking all parts of type' quality."
+              "Refer to https://github.com/pato-ontology/pato/issues/454. There are frequently two ways to state the same thing: we can say 'spermatocyte lacks asters' or 'asters absent from spermatocyte'. In this case the quality is 'lacking all parts of type' - it is a (relational) quality of the spermatocyte, and it is with respect to instances of 'aster'. One of the popular requirements of PATO is that it continue to support 'absent', so we need to relate statements which use this quality to the 'lacking all parts of type' quality."
             ],
             "definition": {
-              "val": "q1 reciprocal_of q2 if and only if : q1 and q2 are relational qualities and a phenotype e q1 e2 mutually implies a phenotype e2 q2 e.",
+              "val": "OBSOLETE. q1 reciprocal_of q2 if and only if : q1 and q2 are relational qualities and a phenotype e q1 e2 mutually implies a phenotype e2 q2 e.",
               "xrefs": [
                 "PATOC:CJM"
               ]
-            }
+            },
+            "deprecated": true
           },
           "type": "PROPERTY"
         },
         {
           "id": "http://purl.obolibrary.org/obo/pato#similar_in_magnitude_relative_to",
-          "lbl": "similar_in_magnitude_relative_to",
+          "lbl": "obsolete similar_in_magnitude_relative_to",
           "meta": {
             "basicPropertyValues": [
+              {
+                "pred": "http://purl.obolibrary.org/obo/IAO_0100001",
+                "val": "RO:0015009"
+              },
               {
                 "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
                 "val": "quality"
               }
             ],
+            "comments": [
+              "Refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason."
+            ],
             "definition": {
-              "val": "q1 similar_in_magnitude_relative_to q2 if and only if magnitude(q1) =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.",
+              "val": "OBSOLETE. q1 similar_in_magnitude_relative_to q2 if and only if magnitude(q1) =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.",
               "xrefs": [
                 "PATOC:CJM"
               ]
-            }
+            },
+            "deprecated": true
           },
           "type": "PROPERTY"
         },
         {
           "id": "http://purl.obolibrary.org/obo/pato#singly_occurring_form_of",
-          "lbl": "singly_occurring_form_of",
+          "lbl": "obsolete singly_occurring_form_of",
           "meta": {
             "basicPropertyValues": [
               {
@@ -79882,8 +80073,9 @@
               }
             ],
             "comments": [
-              "PATO divides qualities between normal (monadic, singly-occurring) qualities and relational qualities. Relational qualities stand in the 'towards' relation with respect to some additional entity. For example, The sensitivity of an eye towards red light. In some cases we want to represent a quality such as 'protruding' in both monadic and relational branches. We use this relation to link them."
+              "refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.\nOBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qualities and relational qualities. Relational qualities stand in the 'towards' relation with respect to some additional entity. For example, The sensitivity of an eye towards red light. In some cases we want to represent a quality such as 'protruding' in both monadic and relational branches. We use this relation to link them."
             ],
+            "deprecated": true,
             "synonyms": [
               {
                 "pred": "hasExactSynonym",
@@ -79949,6 +80141,11 @@
         {
           "id": "http://purl.obolibrary.org/obo/IAO_0100001",
           "lbl": "term replaced by",
+          "type": "PROPERTY"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/RO_0015010",
+          "lbl": "has relative magnitude",
           "type": "PROPERTY"
         },
         {
