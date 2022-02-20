@@ -39,7 +39,7 @@ REPORT_FAIL_ON =            ERROR
 REPORT_LABEL =              
 REPORT_PROFILE_OPTS =       --profile $(ROBOT_PROFILE)
 OBO_FORMAT_OPTIONS =        
-SPARQL_VALIDATION_CHECKS =   equivalent-classes owldef-self-reference properties-as-annotation-and-object missing-label illegal-annotation-property orcid-contributor
+SPARQL_VALIDATION_CHECKS =   equivalent-classes owldef-self-reference properties-as-annotation-and-object missing-label illegal-annotation-property orcid-contributor iri-range
 SPARQL_EXPORTS =             basic-report
 ODK_VERSION_MAKEFILE =      v1.3.0
 
@@ -92,7 +92,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  ro chebi go pco uberon cl ncbitaxon pr
+IMPORTS =  merged
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -199,13 +199,13 @@ CLEANFILES=$(MAIN_FILES) $(SRCMERGED)
 .PHONY: prepare_release
 prepare_release: all
 	rsync -R $(RELEASE_ASSETS) $(RELEASEDIR) &&\
-	rm -f $(CLEANFILES) &&\
+	rm -f $(patsubst %, ./%, $(CLEANFILES)) &&\
 	echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on your git hosting site such as GitHub or GitLab"
 
 .PHONY: prepare_initial_release
 prepare_initial_release: all_assets
 	rsync -R $(RELEASE_ASSETS) $(RELEASEDIR) &&\
-	rm -f $(CLEANFILES) &&\
+	rm -f $(patsubst %, ./%, $(CLEANFILES)) &&\
 	cd $(RELEASEDIR) && git add $(RELEASE_ASSETS)
 
 # ------------------------
@@ -302,6 +302,8 @@ no-mirror-refresh-%:
 # ----------------------------------------
 # Some ontologies contain external and internal components. A component is included in the ontology in its entirety.
 
+COMP=true # Global parameter to bypass component generation
+
 $(COMPONENTSDIR)/%: | $(COMPONENTSDIR)
 	touch $@
 .PRECIOUS: $(COMPONENTSDIR)/%
@@ -387,7 +389,7 @@ $(MIRRORDIR)/merged.owl: $(ALL_MIRRORS)
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)
-	cmp -s $(TMPDIR)/mirror-$*.owl $@; RETVAL=$$?; if [ $$RETVAL -eq 0 ]; then echo "Mirror identical, ignoring."; else echo "Mirrors different, updating." && cp $(TMPDIR)/mirror-$*.owl $@; fi
+	if [ $(IMP) = true ] && [ $(MIR) = true ]; then if cmp -s $(TMPDIR)/mirror-$*.owl $@ ; then echo "Mirror identical, ignoring."; else echo "Mirrors different, updating." && cp $(TMPDIR)/mirror-$*.owl $@; fi; fi
 
 
 
@@ -562,11 +564,12 @@ update_repo:
 update_docs:
 	mkdocs gh-deploy --config-file ../../mkdocs.yaml
 
+# Note to future generations: prepending ./ is a safety measure to ensure that 
+# the environment does not malicously set `CLEANFILES` to `\`.
 .PHONY: clean
 clean:
-	rm -rf $(TMPDIR)/
-	rm -rf $(MIRROR)/
-	rm -f $(CLEANFILES)
+	rm -rf ./tmp/* ./mirror/*
+	rm -f $(patsubst %, ./%, $(CLEANFILES))
 
 .PHONY: help
 help:
