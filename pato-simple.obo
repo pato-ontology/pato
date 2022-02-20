@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pato/releases/2022-02-08/pato-simple.owl
+data-version: pato/releases/2022-02-20/pato-simple.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -21,7 +21,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology of phen
 property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And Trait Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
 property_value: IAO:0000700 PATO:0000001
-property_value: owl:versionInfo "2022-02-08" xsd:string
+property_value: owl:versionInfo "2022-02-20" xsd:string
 
 [Term]
 id: PATO:0000000
@@ -21733,6 +21733,13 @@ name: polychromatophilic
 def: "An affinity inhering in an anatomical structure by virtue of the bearer exhibiting a molecular interaction for both basic and acid stains under specific pH conditions." [GOC:add]
 is_a: PATO:0070045 ! anatomical histological quality
 created_by: http://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070059
+name: rusty
+def: "A texture quality inhering in a bearer by virtue of the bearer's being covered by iron oxide as a result of oxidation." [WikipediaVersioned:Rust&oldid=1072363937]
+is_a: PATO:0000150 ! texture
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2738-824X
 
 [Term]
 id: PATO:0080001
