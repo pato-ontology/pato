@@ -92,9 +92,9 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  merged
+IMPORTS =  ro chebi go pco uberon cl ncbitaxon pr
 
-IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
+IMPORT_ROOTS =  $(IMPORTDIR)/merged_import
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
 IMPORT_FILES = $(IMPORT_OWL_FILES)
 
