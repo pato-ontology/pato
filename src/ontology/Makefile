@@ -39,8 +39,8 @@ REPORT_FAIL_ON =            ERROR
 REPORT_LABEL =              
 REPORT_PROFILE_OPTS =       --profile $(ROBOT_PROFILE)
 OBO_FORMAT_OPTIONS =        
-SPARQL_VALIDATION_CHECKS =   equivalent-classes owldef-self-reference properties-as-annotation-and-object missing-label illegal-annotation-property orcid-contributor iri-range
-SPARQL_EXPORTS =             basic-report
+SPARQL_VALIDATION_CHECKS =  equivalent-classes owldef-self-reference properties-as-annotation-and-object missing-label illegal-annotation-property orcid-contributor iri-range 
+SPARQL_EXPORTS =            basic-report 
 ODK_VERSION_MAKEFILE =      v1.3.0
 
 TODAY ?=                    $(shell date +%Y-%m-%d)
@@ -64,7 +64,7 @@ RELEASE_ARTEFACTS = $(sort $(ONT)-base $(ONT)-simple $(ONT)-full $(ONT)-base $(O
 all: odkversion test all_assets
 
 .PHONY: test
-test: odkversion sparql_test robot_reports 
+test: odkversion sparql_test robot_reports $(REPORTDIR)/validate_profile_owl2dl_$(ONT).owl.txt
 	$(ROBOT) reason --input $(SRC) --reasoner ELK  --equivalent-classes-allowed asserted-only --exclude-tautologies structural --output test.owl && rm test.owl && echo "Success"
 
 .PHONY: odkversion
@@ -199,7 +199,7 @@ CLEANFILES=$(MAIN_FILES) $(SRCMERGED)
 .PHONY: prepare_release
 prepare_release: all
 	rsync -R $(RELEASE_ASSETS) $(RELEASEDIR) &&\
-	rm -f $(patsubst %, ./%, $(CLEANFILES)) &&\
+	rm -f $(CLEANFILES) &&\
 	echo "Release files are now in $(RELEASEDIR) - now you should commit, push and make a release on your git hosting site such as GitHub or GitLab"
 
 .PHONY: prepare_initial_release
@@ -568,8 +568,9 @@ update_docs:
 # the environment does not malicously set `CLEANFILES` to `\`.
 .PHONY: clean
 clean:
-	rm -rf ./tmp/* ./mirror/*
-	rm -f $(patsubst %, ./%, $(CLEANFILES))
+	[ -n "$(MIRRORDIR)" ] && [ $(MIRRORDIR) != "." ] && [ $(MIRRORDIR) != "/" ] && [ $(MIRRORDIR) != ".." ] && [ -d ./$(MIRRORDIR) ] && rm -rf ./$(MIRRORDIR)/*
+	[ -n "$(TMPDIR)" ] && [ $(TMPDIR) != "." ] && [ $(TMPDIR) != "/" ] && [ $(TMPDIR) != ".." ] && [ -d ./$(TMPDIR) ] && rm -rf ./$(TMPDIR)/*
+	rm -f $(CLEANFILES)
 
 .PHONY: help
 help:
