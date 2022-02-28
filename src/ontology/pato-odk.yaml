@@ -53,6 +53,10 @@ components:
   products:
     - filename: pato_ext.owl
 robot_java_args: '-Xmx12G'
+namespaces:
+  - http://purl.obolibrary.org/obo/PATO_
+  - http://purl.obolibrary.org/obo/pato#
+
 robot_report:
   release_reports: False
   fail_on : ERROR
@@ -67,5 +71,6 @@ robot_report:
     - missing-label
     - illegal-annotation-property
     - orcid-contributor
+    - iri-range
   custom_sparql_exports : 
     - basic-report
