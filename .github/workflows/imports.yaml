@@ -13,7 +13,7 @@ jobs:
       - name: Checkout main branch
         uses: actions/checkout@v2
       - name: Refreshing imports
-        run: cd src/ontology/ && make GITHUB_ACTION=true refresh-imports
+        run: cd src/ontology/ && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' GITHUB_ACTION=true refresh-imports-excluding-large
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
