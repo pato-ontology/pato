@@ -8011,17 +8011,18 @@ is_a: PATO:0000018 ! fluorescence
 
 [Term]
 id: PATO:0001291
-name: electromagnetic (EM) radiation quality
-def: "A radiation quality that inheres in a bearer by virtue of how that bearer interacts with electromagnetic radiation." [Wikipedia:http\://en.wikipedia.org/wiki/Electromagnetic_radiation]
-subset: attribute_slim
-is_a: PATO:0001739 ! radiation quality
+name: obsolete electromagnetic (EM) radiation quality
+def: "OBSOLETE A radiation quality that inheres in a bearer by virtue of how that bearer interacts with electromagnetic radiation." [Wikipedia:http\://en.wikipedia.org/wiki/Electromagnetic_radiation]
+comment: See https://github.com/pato-ontology/pato/issues/490
+is_obsolete: true
+replaced_by: PATO:0070060
 
 [Term]
 id: PATO:0001292
 name: full-spectrum EM radiation quality
 def: "An EM radiation quality that is independent of the EM wavelength range." [PATOC:GVG]
 subset: attribute_slim
-is_a: PATO:0001291 ! electromagnetic (EM) radiation quality
+is_a: PATO:0070060 ! quality of interaction of a substance with electromagnetic radiation
 
 [Term]
 id: PATO:0001293
@@ -8078,7 +8079,7 @@ id: PATO:0001300
 name: optical quality
 def: "An EM radiation quality in which the EM radiation is within the fiat range of the spectrum visible deemed to be light." [PATOC:GVG]
 subset: attribute_slim
-is_a: PATO:0001291 ! electromagnetic (EM) radiation quality
+is_a: PATO:0070060 ! quality of interaction of a substance with electromagnetic radiation
 
 [Term]
 id: PATO:0001301
@@ -11890,9 +11891,11 @@ is_a: PATO:0001018 ! physical quality
 id: PATO:0001740
 name: activity (of a radionuclide)
 def: "A radiation quality inhering in a radioactive substance by virtue of its transformation (disintegration) rate." [PATOC:GVG]
+comment: See https://github.com/pato-ontology/pato/issues/490
 subset: attribute_slim
 synonym: "radioactivity" EXACT []
-is_a: PATO:0001739 ! radiation quality
+xref: ENVO:03510037
+is_a: PATO:0002198 ! quality of a substance
 
 [Term]
 id: PATO:0001741
@@ -11927,35 +11930,43 @@ relationship: is_opposite_of PATO:0001742 ! increased radioactivity
 
 [Term]
 id: PATO:0001744
-name: radiation exposure
-def: "A radiation quality inhering in a bearer by virtue of what the bearer receives as a result of being exposed to ionizing radiation." [hps:hps]
+name: irradiated
+def: "A quality of a substance inhering in a bearer by virtue of it being currently or previously exposed to electromagnetic radiation," [https://orcid.org/0000-0002-5111-7263, ISSN:9781496335418]
+comment: This may refer to incident external irradiation or internal radiation from an ingested or otherwise internal source.
 subset: attribute_slim
 subset: scalar_slim
-is_a: PATO:0001739 ! radiation quality
+synonym: "radiation exposed" EXACT []
+is_a: PATO:0002198 ! quality of a substance
 
 [Term]
 id: PATO:0001745
-name: radiation absorbed dose
-def: "A radiation exposure quality inhering in a substance by virtue of the radiation energy \"deposited\" in a kilogram of a substance." [arpansa:arpansa]
+name: obsolete radiation absorbed dose
+def: "OBSOLETE A radiation exposure quality inhering in a substance by virtue of the radiation energy \"deposited\" in a kilogram of a substance." [arpansa:arpansa]
+comment: see: https://github.com/pato-ontology/pato/issues/485
 subset: attribute_slim
 subset: scalar_slim
-is_a: PATO:0001744 ! radiation exposure
+is_obsolete: true
+consider: RBO:00005010
 
 [Term]
 id: PATO:0001746
-name: radiation equivalent dose
-def: "A radiation exposure quality inhering in a tissue by virtue of the relation between the absorbed dose to the effective biological damage of the radiation to that tissue." [arpansa:arpansa]
+name: obsolete radiation equivalent dose
+def: "OBSOLETE A radiation exposure quality inhering in a tissue by virtue of the relation between the absorbed dose to the effective biological damage of the radiation to that tissue." [arpansa:arpansa]
+comment: See: https://github.com/pato-ontology/pato/issues/485
 subset: attribute_slim
 subset: scalar_slim
-is_a: PATO:0001744 ! radiation exposure
+is_obsolete: true
+consider: RBO:00000023
 
 [Term]
 id: PATO:0001747
-name: radiation effective dose
-def: "A radiation exposure quality inhering in an organ by virtue of the multiplication of an equivalent dose to that organ multiplied by the tissue weighting factor for that organ." [arpansa:arpansa]
+name: obsolete radiation effective dose
+def: "OBSOLETE A radiation exposure quality inhering in an organ by virtue of the multiplication of an equivalent dose to that organ multiplied by the tissue weighting factor for that organ." [arpansa:arpansa]
+comment: See: https://github.com/pato-ontology/pato/issues/485
 subset: attribute_slim
 subset: scalar_slim
-is_a: PATO:0001744 ! radiation exposure
+is_obsolete: true
+consider: RBO:00000014
 
 [Term]
 id: PATO:0001748
@@ -15497,7 +15508,7 @@ def: "A quality inhering in a bearer by virtue of the bearer's relative inabilit
 subset: attribute_slim
 subset: disposition_slim
 subset: scalar_slim
-is_a: PATO:0001291 ! electromagnetic (EM) radiation quality
+is_a: PATO:0070060 ! quality of interaction of a substance with electromagnetic radiation
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2009-10-26T01:14:38Z
 
@@ -19961,7 +19972,7 @@ id: PATO:0015013
 name: degree of illumination
 def: "The degree to which the bearer is exposed to visible light." [https://github.com/pato-ontology/pato/issues/89]
 subset: attribute_slim
-is_a: PATO:0001291 ! electromagnetic (EM) radiation quality
+is_a: PATO:0070060 ! quality of interaction of a substance with electromagnetic radiation
 
 [Term]
 id: PATO:0015014
@@ -22287,6 +22298,13 @@ name: rusty
 def: "A texture quality inhering in a bearer by virtue of the bearer's being covered by iron oxide as a result of oxidation." [WikipediaVersioned:Rust&oldid=1072363937]
 is_a: PATO:0000150 ! texture
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2738-824X
+
+[Term]
+id: PATO:0070060
+name: quality of interaction of a substance with electromagnetic radiation
+def: "A quality of a substance on which or through which electromagnetic radiation impinges or traverses with respect to radiation. This substance quality changes the quality of the incident radiation with respect to any of: intensity, direction, scatter and wavelength." [https://orcid.org/0000-0002-5111-7263]
+subset: attribute_slim
+is_a: PATO:0002198 ! quality of a substance
 
 [Term]
 id: PATO:0080001
