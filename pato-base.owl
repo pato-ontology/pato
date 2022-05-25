@@ -12,7 +12,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/pato/pato-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2022-02-20/pato-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2022-05-20/pato-base.owl"/>
         <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
         <dc:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An ontology of phenotypic qualities (properties, attributes or characteristics).</dc:description>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO - the Phenotype And Trait Ontology</dc:title>
@@ -20,7 +20,7 @@
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:default-namespace>
         <oboInOwl:hasOBOFormatVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2</oboInOwl:hasOBOFormatVersion>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-02-20</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-05-20</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -19423,17 +19423,18 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
     <!-- http://purl.obolibrary.org/obo/PATO_0001291 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001291">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001739"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A physical quality that inheres in an bearer by virtue of how that bearer interacts with electromagnetic radiation.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBSOLETE A radiation quality that inheres in a bearer by virtue of how that bearer interacts with electromagnetic radiation.</obo:IAO_0000115>
+        <obo:IAO_0100001 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0070060</obo:IAO_0100001>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001291</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electromagnetic (EM) radiation quality</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">See https://github.com/pato-ontology/pato/issues/490</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete electromagnetic (EM) radiation quality</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001291"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A physical quality that inheres in an bearer by virtue of how that bearer interacts with electromagnetic radiation.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBSOLETE A radiation quality that inheres in a bearer by virtue of how that bearer interacts with electromagnetic radiation.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wikipedia:http://en.wikipedia.org/wiki/Electromagnetic_radiation</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -19442,7 +19443,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
     <!-- http://purl.obolibrary.org/obo/PATO_0001292 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001292">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001291"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0070060"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An EM radiation quality that is independent of the EM wavelength range.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001292</oboInOwl:id>
@@ -19595,7 +19596,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
     <!-- http://purl.obolibrary.org/obo/PATO_0001300 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001300">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001291"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0070060"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An EM radiation quality in which the EM radiation is within the fiat range of the spectrum visible deemed to be light.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001300</oboInOwl:id>
@@ -29302,17 +29303,25 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001739">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001018"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality that inheres in an bearer by virtue of how that bearer interacts with radiation.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality of radiation that reflects the fluence spectrum of charged and neutral particles within the material or medium where dose is being deposited.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001739</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radiation quality is often expressed in terms of the linear energy transfer of the ionising particles that deliver the absorbed dose, but this is an over simplification.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiation quality</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001739"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality that inheres in an bearer by virtue of how that bearer interacts with radiation.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality of radiation that reflects the fluence spectrum of charged and neutral particles within the material or medium where dose is being deposited.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI:10.20348/STOREDB/1173/1250</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-5111-7263</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001739"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radiation quality is often expressed in terms of the linear energy transfer of the ionising particles that deliver the absorbed dose, but this is an over simplification.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI:10.2307/3570787</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -29320,12 +29329,14 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
     <!-- http://purl.obolibrary.org/obo/PATO_0001740 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001740">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001739"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002198"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A radiation quality inhering in a radioactive substance by virtue of its transformation (disintegration) rate.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENVO:03510037</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radioactivity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001740</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">See https://github.com/pato-ontology/pato/issues/490</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activity (of a radionuclide)</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -29425,19 +29436,22 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
     <!-- http://purl.obolibrary.org/obo/PATO_0001744 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001744">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001739"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A radiation quality inhering in a bearer by virtue of what the bearer receives as a result of being exposed to ionizing radiation.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002198"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality of a substance inhering in a bearer by virtue of it being currently or previously exposed to electromagnetic radiation,</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiation exposed</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001744</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#scalar_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiation exposure</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This may refer to incident external irradiation or internal radiation from an ingested or otherwise internal source.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">irradiated</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001744"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A radiation quality inhering in a bearer by virtue of what the bearer receives as a result of being exposed to ionizing radiation.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hps:hps</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality of a substance inhering in a bearer by virtue of it being currently or previously exposed to electromagnetic radiation,</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISSN:9781496335418</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-5111-7263</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -29445,18 +29459,20 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
     <!-- http://purl.obolibrary.org/obo/PATO_0001745 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001745">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001744"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A radiation exposure quality inhering in a substance by virtue of the radiation energy &quot;deposited&quot; in a kilogram of a substance.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBSOLETE A radiation exposure quality inhering in a substance by virtue of the radiation energy &quot;deposited&quot; in a kilogram of a substance.</obo:IAO_0000115>
+        <oboInOwl:consider rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RBO:00005010</oboInOwl:consider>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001745</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#scalar_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiation absorbed dose</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">see: https://github.com/pato-ontology/pato/issues/485</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete radiation absorbed dose</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001745"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A radiation exposure quality inhering in a substance by virtue of the radiation energy &quot;deposited&quot; in a kilogram of a substance.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBSOLETE A radiation exposure quality inhering in a substance by virtue of the radiation energy &quot;deposited&quot; in a kilogram of a substance.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">arpansa:arpansa</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -29465,18 +29481,20 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
     <!-- http://purl.obolibrary.org/obo/PATO_0001746 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001746">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001744"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A radiation exposure quality inhering in a tissue by virtue of the relation between the absorbed dose to the effective biological damage of the radiation to that tissue.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBSOLETE A radiation exposure quality inhering in a tissue by virtue of the relation between the absorbed dose to the effective biological damage of the radiation to that tissue.</obo:IAO_0000115>
+        <oboInOwl:consider rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RBO:00000023</oboInOwl:consider>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001746</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#scalar_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiation equivalent dose</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">See: https://github.com/pato-ontology/pato/issues/485</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete radiation equivalent dose</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001746"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A radiation exposure quality inhering in a tissue by virtue of the relation between the absorbed dose to the effective biological damage of the radiation to that tissue.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBSOLETE A radiation exposure quality inhering in a tissue by virtue of the relation between the absorbed dose to the effective biological damage of the radiation to that tissue.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">arpansa:arpansa</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -29485,18 +29503,20 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
     <!-- http://purl.obolibrary.org/obo/PATO_0001747 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001747">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001744"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A radiation exposure quality inhering in an organ by virtue of the multiplication of an equivalent dose to that organ multiplied by the tissue weighting factor for that organ.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBSOLETE A radiation exposure quality inhering in an organ by virtue of the multiplication of an equivalent dose to that organ multiplied by the tissue weighting factor for that organ.</obo:IAO_0000115>
+        <oboInOwl:consider rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RBO:00000014</oboInOwl:consider>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0001747</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#scalar_slim"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiation effective dose</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">See: https://github.com/pato-ontology/pato/issues/485</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsolete radiation effective dose</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001747"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A radiation exposure quality inhering in an organ by virtue of the multiplication of an equivalent dose to that organ multiplied by the tissue weighting factor for that organ.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBSOLETE A radiation exposure quality inhering in an organ by virtue of the multiplication of an equivalent dose to that organ multiplied by the tissue weighting factor for that organ.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">arpansa:arpansa</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -38164,7 +38184,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
     <!-- http://purl.obolibrary.org/obo/PATO_0002136 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002136">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001291"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0070060"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality inhering in a bearer by virtue of the bearer&apos;s relative inability of electromagnetism to pass through a particular material, particularly X-rays.</obo:IAO_0000115>
         <terms:contributor rdf:resource="https://orcid.org/0000-0002-2061-091X"/>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009-10-26T01:14:38Z</oboInOwl:creation_date>
@@ -48416,7 +48436,7 @@ height&apos;).</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/PATO_0015013 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0015013">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001291"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0070060"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The degree to which the bearer is exposed to visible light.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0015013</oboInOwl:id>
@@ -53954,6 +53974,25 @@ height&apos;).</rdfs:comment>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A texture quality inhering in a bearer by virtue of the bearer&apos;s being covered by iron oxide as a result of oxidation.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WikipediaVersioned:Rust&amp;oldid=1072363937</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0070060 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0070060">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002198"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality of a substance on which or through which electromagnetic radiation impinges or traverses with respect to radiation. This substance quality changes the quality of the incident radiation with respect to any of: intensity, direction, scatter and wavelength.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0070060</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality of interaction of a substance with electromagnetic radiation</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0070060"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality of a substance on which or through which electromagnetic radiation impinges or traverses with respect to radiation. This substance quality changes the quality of the incident radiation with respect to any of: intensity, direction, scatter and wavelength.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-5111-7263</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
