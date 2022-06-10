@@ -20258,6 +20258,48 @@ is_a: PATO:0030003 ! ventralized
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-9611-1279
 
 [Term]
+id: PATO:0030008
+name: dorso-anteriorized
+def: "A malformed quality inhering in a bearer by virtue of the bearer's gross morphology containing what are normally dorso-anterior structures and missing some or all of what are normally ventro-posterior structures." [PATOC:EJS]
+is_a: PATO:0000646 ! malformed
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-9611-1279
+
+[Term]
+id: PATO:0030009
+name: partially dorso-anteriorized
+def: "A dorso-anteriorized quality inhering in a bearer by virtue of the bearer's gross morphology containing what are normally dorso-anterior structures and missing some but not all of what are normally ventro-posterior structures." [PATOC:EJS]
+is_a: PATO:0030008 ! dorso-anteriorized
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-9611-1279
+
+[Term]
+id: PATO:0030010
+name: wholly dorso-anteriorized
+def: "A dorso-anteriorized quality inhering in a bearer by virtue of the bearer's gross morphology containing only what are normally dorso-anterior structures." [PATOC:EJS]
+is_a: PATO:0030008 ! dorso-anteriorized
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-9611-1279
+
+[Term]
+id: PATO:0030011
+name: ventro-posteriorized
+def: "A malformed quality inhering in a bearer by virtue of the bearer's gross morphology containing what are normally ventro-posterior structures and missing some or all of what are normally dorso-anterior structures." [PATOC:EJS]
+is_a: PATO:0000646 ! malformed
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-9611-1279
+
+[Term]
+id: PATO:0030012
+name: partially ventro-posteriorized
+def: "A ventro-posteriorized quality inhering in a bearer by virtue of the bearer's gross morphology containing what are normally ventro-posterior structures and missing some but not all of what are normally dorso-anterior structures." [PATOC:EJS]
+is_a: PATO:0030011 ! ventro-posteriorized
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-9611-1279
+
+[Term]
+id: PATO:0030013
+name: wholly ventro-posteriorized
+def: "A ventro-posteriorized quality inhering in a bearer by virtue of the bearer's gross morphology containing only what are normally ventro-posterior structures." [PATOC:EJS]
+is_a: PATO:0030011 ! ventro-posteriorized
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-9611-1279
+
+[Term]
 id: PATO:0040000
 name: heterotaxic
 def: "An oriented quality inhering in a bearer by virtue of the bearer's being abnormally placed or arranged." [http://medical-dictionary.thefreedictionary.com/heterotaxic]
@@ -22578,3 +22620,4 @@ name: obsolete towards
 comment: Consider using RO:0002503 instead. See https://github.com/pato-ontology/pato/issues/454
 is_obsolete: true
 replaced_by: RO:0002503
+
