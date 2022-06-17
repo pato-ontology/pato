@@ -10641,6 +10641,11 @@
           "sub": "http://purl.obolibrary.org/obo/PATO_0070012"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0070027",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070061"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/PATO_0070033",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0070028"
@@ -14518,11 +14523,11 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2022-05-20"
+            "val": "2022-06-17"
           }
         ],
         "subsets": [],
-        "version": "http://purl.obolibrary.org/obo/pato/releases/2022-05-20/pato-base.json",
+        "version": "http://purl.obolibrary.org/obo/pato/releases/2022-06-17/pato-base.json",
         "xrefs": []
       },
       "nodes": [
@@ -50019,7 +50024,7 @@
               }
             ],
             "comments": [
-              "see: https://github.com/pato-ontology/pato/issues/485"
+              "https://github.com/pato-ontology/pato/issues/485"
             ],
             "definition": {
               "val": "OBSOLETE A radiation exposure quality inhering in a substance by virtue of the radiation energy \"deposited\" in a kilogram of a substance.",
@@ -82298,6 +82303,25 @@
             "subsets": [
               "http://purl.obolibrary.org/obo/pato#attribute_slim"
             ]
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070061",
+          "lbl": "double bouquet morphology",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A cell morphology that inheres in neurons with bitufted dendritic morphology but with the special feature of a tight fascicular axonal cylinder that resembles a 'horse tail'.",
+              "xrefs": [
+                "PMID:15378039"
+              ]
+            }
           },
           "type": "CLASS"
         },
