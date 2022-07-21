@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pato/releases/2022-06-17/pato-base.owl
+data-version: pato/releases/2022-07-21/pato-base.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -17,7 +17,7 @@ property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And 
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
 property_value: IAO:0000700 PATO:0000001
-property_value: owl:versionInfo "2022-06-17" xsd:string
+property_value: owl:versionInfo "2022-07-21" xsd:string
 
 [Term]
 id: CL:0000000
@@ -773,10 +773,12 @@ is_obsolete: true
 id: PATO:0000122
 name: length
 def: "A 1-D extent quality which is equal to the distance between two points." [PATOC:GVG]
+comment: Length often refers to the longer or longest dimension of an object, however, this is not always true. See https://github.com/pato-ontology/pato/issues/337 for full discussion.
 subset: attribute_slim
 subset: mpath_slim
 subset: scalar_slim
 is_a: PATO:0001708 ! 1-D extent
+property_value: seeAlso https://github.com/pato-ontology/pato/issues/337 xsd:string
 
 [Term]
 id: PATO:0000123
@@ -5632,9 +5634,11 @@ is_obsolete: true
 id: PATO:0000915
 name: thickness
 def: "A 1-D extent quality which is equal to the dimension through an object as opposed to its length or width." [WordNet:WordNet]
+comment: Thickness often refers to the smallest 1-D extent compared to the other two orthogonal dimensions, however, this is not always true. See https://github.com/pato-ontology/pato/issues/337 for full discussion.
 subset: attribute_slim
 subset: scalar_slim
 is_a: PATO:0001708 ! 1-D extent
+property_value: seeAlso https://github.com/pato-ontology/pato/issues/337 xsd:string
 
 [Term]
 id: PATO:0000916
@@ -5669,10 +5673,12 @@ is_obsolete: true
 id: PATO:0000921
 name: width
 def: "A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite." [PATOC:GVG]
+comment: Width often refers to the dimension that is greater than the extent in only one of the other two orthogonal dimensions, however, this is not always true. See https://github.com/pato-ontology/pato/issues/337 for full discussion.
 subset: attribute_slim
 subset: scalar_slim
 synonym: "breadth" RELATED []
 is_a: PATO:0001708 ! 1-D extent
+property_value: seeAlso https://github.com/pato-ontology/pato/issues/337 xsd:string
 
 [Term]
 id: PATO:0000922
