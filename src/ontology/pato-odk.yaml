@@ -1,6 +1,7 @@
 id: pato
 title: "Phenotype And Trait Ontology"
 github_org: pato-ontology
+git_main_branch: master
 repo: pato
 report_fail_on: none
 edit_format: obo
@@ -14,14 +15,64 @@ release_artefacts:
   - full
 primary_release: full
 import_group:
+  use_base_merging: TRUE
+  exclude_iri_patterns:
+    - <http://purl.obolibrary.org/obo/GOCHE_*>
+    - <http://purl.obolibrary.org/obo/NCBITaxon_Union_*>
+    - <http://www.informatics.jax.org/marker/MGI:*>
+    - <http://purl.obolibrary.org/obo/OBA_*>
+    - <http://purl.obolibrary.org/obo/CARO_*>
+  slme_individuals: exclude
+  mirror_max_time_download: 400
   products:
     - id: ro
+      use_base: True
     - id: chebi
-      mirror_from: http://purl.obolibrary.org/obo/chebi.owl.gz
+      make_base: TRUE
+      use_gzipped: TRUE
+      is_large: TRUE
     - id: go
+      use_base: True
+      base_iris:
+        - http://purl.obolibrary.org/obo/GO_
+        - http://purl.obolibrary.org/obo/GOREL_
+        - http://purl.obolibrary.org/obo/GOCHE_
     - id: pco
+      make_base: TRUE
     - id: uberon
+      use_base: TRUE
+    - id: cl
+      use_base: TRUE
+    - id: ncbitaxon
+      mirror_from: http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl
+    - id: pr
+      make_base: TRUE
+      mirror_from: https://raw.githubusercontent.com/obophenotype/pro_obo_slim/master/pr_slim.owl
+documentation:
+  documentation_system: mkdocs
 components:
   products:
     - filename: pato_ext.owl
-robot_java_args: '-Xmx8G'
+robot_java_args: '-Xmx12G'
+namespaces:
+  - http://purl.obolibrary.org/obo/PATO_
+  - http://purl.obolibrary.org/obo/pato#
+
+robot_report:
+  use_base_iris: True
+  release_reports: False
+  fail_on : ERROR
+  use_labels : False
+  custom_profile : True
+  report_on :
+    - edit
+  custom_sparql_checks :
+    - equivalent-classes
+    - owldef-self-reference
+    - properties-as-annotation-and-object
+    - missing-label
+    - illegal-annotation-property
+    - orcid-contributor
+    - iri-range
+  custom_sparql_exports : 
+    - basic-report

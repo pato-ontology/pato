@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pato/releases/2020-03-24/imports/go_import.owl
+data-version: pato/releases/2021-08-06/imports/go_import.owl
 subsetdef: gocheck_do_not_annotate ""
 subsetdef: gocheck_do_not_manually_annotate ""
 subsetdef: goslim_agr ""
@@ -14,8 +14,11 @@ subsetdef: goslim_mouse ""
 subsetdef: goslim_pir ""
 subsetdef: goslim_plant ""
 subsetdef: goslim_pombe ""
+subsetdef: goslim_synapse ""
 subsetdef: goslim_yeast ""
 ontology: pato/imports/go_import
+property_value: http://purl.org/dc/elements/1.1/source http://purl.obolibrary.org/obo/go/releases/2021-07-02/go.owl
+property_value: owl:versionInfo "2021-08-06" xsd:string
 
 [Term]
 id: GO:0005575
@@ -23,7 +26,7 @@ name: cellular_component
 namespace: cellular_component
 alt_id: GO:0008372
 def: "A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome)." [GOC:pdt, NIF_Subcellular:sao1337158144]
-comment: Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this.
+comment: Note that, in addition to forming the root of the cellular component ontology, this term is recommended for use for the annotation of gene products whose cellular component is unknown. When this term is used for annotation, it indicates that no information was available about the cellular component of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_chembl
@@ -39,20 +42,22 @@ xref: NIF_Subcellular:sao1337158144
 
 [Term]
 id: GO:0005622
-name: intracellular
+name: intracellular anatomical structure
 namespace: cellular_component
-def: "The living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm." [ISBN:0198506732]
+def: "A component of a cell contained within (but not including) the plasma membrane. In eukaryotes it includes the nucleus and cytoplasm." [ISBN:0198506732]
 subset: gocheck_do_not_annotate
 subset: goslim_chembl
 subset: goslim_generic
 subset: goslim_metagenomics
 subset: goslim_plant
 synonym: "internal to cell" EXACT []
+synonym: "intracellular" EXACT []
 synonym: "nucleocytoplasm" RELATED [GOC:mah]
 synonym: "protoplasm" EXACT []
 synonym: "protoplast" RELATED [GOC:mah]
 xref: Wikipedia:Intracellular
-is_a: GO:0005575 ! cellular_component
+is_a: GO:0110165 ! cellular anatomical entity
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/17776 xsd:anyURI
 
 [Term]
 id: GO:0005634
@@ -73,10 +78,60 @@ subset: goslim_plant
 subset: goslim_yeast
 synonym: "cell nucleus" EXACT []
 synonym: "horsetail nucleus" NARROW [GOC:al, GOC:mah, GOC:vw, PMID:15030757]
-xref: MIPS_funcat:70.10
 xref: NIF_Subcellular:sao1702920020
 xref: Wikipedia:Cell_nucleus
 is_a: GO:0043231 ! intracellular membrane-bounded organelle
+
+[Term]
+id: GO:0005635
+name: nuclear envelope
+namespace: cellular_component
+alt_id: GO:0005636
+def: "The double lipid bilayer enclosing the nucleus and separating its contents from the rest of the cytoplasm; includes the intermembrane space, a gap of width 20-40 nm (also called the perinuclear space)." [ISBN:0198547684]
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_plant
+xref: Wikipedia:Nuclear_envelope
+is_a: GO:0031967 ! organelle envelope
+relationship: part_of GO:0005634 ! nucleus
+relationship: part_of GO:0012505 ! endomembrane system
+
+[Term]
+id: GO:0005737
+name: cytoplasm
+namespace: cellular_component
+def: "The contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures." [ISBN:0198547684]
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_generic
+subset: goslim_metagenomics
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+xref: Wikipedia:Cytoplasm
+is_a: GO:0110165 ! cellular anatomical entity
+relationship: part_of GO:0005622 ! intracellular anatomical structure
+
+[Term]
+id: GO:0005773
+name: vacuole
+namespace: cellular_component
+def: "A closed structure, found only in eukaryotic cells, that is completely surrounded by unit membrane and contains liquid material. Cells contain one or several vacuoles, that may have different functions from each other. Vacuoles have a diverse array of functions. They can act as a storage organelle for nutrients or waste products, as a degradative compartment, as a cost-effective way of increasing cell size, and as a homeostatic regulator controlling both turgor pressure and pH of the cytosol." [GOC:mtg_sensu, ISBN:0198506732]
+subset: goslim_agr
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_chembl
+subset: goslim_drosophila
+subset: goslim_flybase_ribbon
+subset: goslim_generic
+subset: goslim_mouse
+subset: goslim_pir
+subset: goslim_plant
+subset: goslim_yeast
+synonym: "vacuolar carboxypeptidase Y" RELATED []
+xref: Wikipedia:Vacuole
+is_a: GO:0043231 ! intracellular membrane-bounded organelle
+relationship: part_of GO:0005737 ! cytoplasm
 
 [Term]
 id: GO:0005886
@@ -125,7 +180,7 @@ synonym: "primary cilium" NARROW []
 xref: FMA:67181
 xref: NIF_Subcellular:sao787716553
 xref: Wikipedia:Cilium
-is_a: GO:0043226 ! organelle
+is_a: GO:0043227 ! membrane-bounded organelle
 is_a: GO:0120025 ! plasma membrane bounded cell projection
 relationship: has_part GO:0030990 ! intraciliary transport particle
 property_value: RO:0002161 NCBITaxon:3176
@@ -136,6 +191,22 @@ property_value: RO:0002161 NCBITaxon:4890
 property_value: RO:0002161 NCBITaxon:5782
 
 [Term]
+id: GO:0005938
+name: cell cortex
+namespace: cellular_component
+def: "The region of a cell that lies just beneath the plasma membrane and often, but not always, contains a network of actin filaments and associated proteins." [GOC:mah, ISBN:0815316194]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_yeast
+synonym: "cell periphery" RELATED []
+synonym: "peripheral cytoplasm" RELATED []
+xref: Wikipedia:Cell_cortex
+is_a: GO:0005737 ! cytoplasm
+intersection_of: GO:0005737 ! cytoplasm
+intersection_of: part_of GO:0071944 ! cell periphery
+relationship: part_of GO:0071944 ! cell periphery
+
+[Term]
 id: GO:0008150
 name: biological_process
 namespace: biological_process
@@ -143,7 +214,7 @@ alt_id: GO:0000004
 alt_id: GO:0007582
 alt_id: GO:0044699
 def: "A biological process represents a specific objective that the organism is genetically programmed to achieve. Biological processes are often described by their outcome or ending state, e.g., the biological process of cell division results in the creation of two daughter cells (a divided cell) from a single parent cell. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence." [GOC:pdt]
-comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code "no data" (ND), is used to indicate this.
+comment: Note that, in addition to forming the root of the biological process ontology, this term is recommended for use for the annotation of gene products whose biological process is unknown. When this term is used for annotation, it indicates that no information was available about the biological process of the gene product annotated as of the date the annotation was made; the evidence code 'no data' (ND), is used to indicate this.
 subset: goslim_aspergillus
 subset: goslim_candida
 subset: goslim_chembl
@@ -158,13 +229,29 @@ synonym: "physiological process" EXACT []
 synonym: "single organism process" RELATED []
 synonym: "single-organism process" RELATED []
 xref: Wikipedia:Biological_process
-created_by: janelomax
+created_by: jl
 creation_date: 2012-09-19T15:05:24Z
+
+[Term]
+id: GO:0012505
+name: endomembrane system
+namespace: cellular_component
+def: "A collection of membranous structures involved in transport within the cell. The main components of the endomembrane system are endoplasmic reticulum, Golgi bodies, vesicles, cell membrane and nuclear envelope. Members of the endomembrane system pass materials through each other or though the use of vesicles." [GOC:lh]
+subset: goslim_aspergillus
+subset: goslim_candida
+subset: goslim_flybase_ribbon
+subset: goslim_yeast
+xref: Wikipedia:Endomembrane_system
+is_a: GO:0110165 ! cellular anatomical entity
+relationship: has_part GO:0005773 ! vacuole
+relationship: has_part GO:0005886 ! plasma membrane
 
 [Term]
 id: GO:0016020
 name: membrane
 namespace: cellular_component
+alt_id: GO:0098589
+alt_id: GO:0098805
 def: "A lipid bilayer along with all the proteins and protein complexes embedded in it an attached to it." [GOC:dos, GOC:mah, ISBN:0815316194]
 subset: goslim_aspergillus
 subset: goslim_candida
@@ -174,8 +261,34 @@ subset: goslim_metagenomics
 subset: goslim_pir
 subset: goslim_plant
 subset: goslim_yeast
+synonym: "membrane region" NARROW []
+synonym: "region of membrane" NARROW []
+synonym: "whole membrane" NARROW []
 xref: Wikipedia:Biological_membrane
 is_a: GO:0110165 ! cellular anatomical entity
+creation_date: 2014-03-06T11:37:54Z
+
+[Term]
+id: GO:0030054
+name: cell junction
+namespace: cellular_component
+def: "A cellular component that forms a specialized region of connection between two or more cells, or between a cell and the extracellular matrix, or between two membrane-bound components of a cell, such as flagella." [GOC:aruk, GOC:bc, GOC:mah, http://www.vivo.colostate.edu/hbooks/cmb/cells/pmemb/junctions_a.html, ISBN:0198506732, PMID:26820516, PMID:28096264]
+subset: goslim_agr
+subset: goslim_drosophila
+subset: goslim_flybase_ribbon
+xref: Wikipedia:Cell_junction
+is_a: GO:0110165 ! cellular anatomical entity
+property_value: RO:0002161 NCBITaxon:4751
+
+[Term]
+id: GO:0030425
+name: dendrite
+namespace: cellular_component
+def: "A neuron projection that has a short, tapering, morphology. Dendrites receive and integrate signals from other neurons or from sensory stimuli, and conduct nerve impulses towards the axon or the cell body. In most neurons, the impulse is conveyed from dendrites to axon via the cell body, but in some types of unipolar neuron, the impulse does not travel via the cell body." [GOC:aruk, GOC:bc, GOC:dos, GOC:mah, GOC:nln, ISBN:0198506732]
+xref: NIF_Subcellular:sao1211023249
+xref: Wikipedia:Dendrite
+is_a: GO:0043005 ! neuron projection
+relationship: part_of GO:0097447 ! dendritic tree
 
 [Term]
 id: GO:0030990
@@ -188,6 +301,67 @@ synonym: "IFT complex" RELATED []
 synonym: "intraflagellar transport complex" EXACT []
 synonym: "intraflagellar transport particle" EXACT []
 is_a: GO:0032991 ! protein-containing complex
+
+[Term]
+id: GO:0031090
+name: organelle membrane
+namespace: cellular_component
+def: "A membrane that is one of the two lipid bilayers of an organelle envelope or the outermost membrane of single membrane bound organelle." [GOC:dos, GOC:mah]
+synonym: "intracellular membrane" RELATED [NIF_Subcellular:sao830981606]
+xref: NIF_Subcellular:sao830981606
+is_a: GO:0016020 ! membrane
+intersection_of: GO:0016020 ! membrane
+intersection_of: part_of GO:0043227 ! membrane-bounded organelle
+relationship: part_of GO:0043227 ! membrane-bounded organelle
+
+[Term]
+id: GO:0031965
+name: nuclear membrane
+namespace: cellular_component
+def: "Either of the lipid bilayers that surround the nucleus and form the nuclear envelope; excludes the intermembrane space." [GOC:mah, GOC:pz]
+xref: NIF_Subcellular:sao1687101204
+is_a: GO:0031090 ! organelle membrane
+intersection_of: GO:0016020 ! membrane
+intersection_of: part_of GO:0005634 ! nucleus
+relationship: part_of GO:0005635 ! nuclear envelope
+
+[Term]
+id: GO:0031967
+name: organelle envelope
+namespace: cellular_component
+def: "A double membrane structure enclosing an organelle, including two lipid bilayers and the region between them. In some cases, an organelle envelope may have more than two membranes." [GOC:mah, GOC:pz]
+subset: goslim_mouse
+is_a: GO:0031975 ! envelope
+relationship: part_of GO:0043227 ! membrane-bounded organelle
+relationship: part_of GO:0043229 ! intracellular organelle
+
+[Term]
+id: GO:0031975
+name: envelope
+namespace: cellular_component
+def: "A multilayered structure surrounding all or part of a cell; encompasses one or more lipid bilayers, and may include a cell wall layer; also includes the space between layers." [GOC:mah, GOC:pz]
+is_a: GO:0110165 ! cellular anatomical entity
+
+[Term]
+id: GO:0032838
+name: plasma membrane bounded cell projection cytoplasm
+namespace: cellular_component
+def: "All of the contents of a plasma membrane bounded cell projection, excluding the plasma membrane surrounding the projection." [GOC:krc, GOC:mah]
+is_a: GO:0099568 ! cytoplasmic region
+intersection_of: GO:0005737 ! cytoplasm
+intersection_of: part_of GO:0120025 ! plasma membrane bounded cell projection
+relationship: part_of GO:0120025 ! plasma membrane bounded cell projection
+
+[Term]
+id: GO:0032839
+name: dendrite cytoplasm
+namespace: cellular_component
+def: "All of the contents of a dendrite, excluding the surrounding plasma membrane." [GOC:mah]
+synonym: "dendritic cytoplasm" EXACT []
+is_a: GO:0120111 ! neuron projection cytoplasm
+intersection_of: GO:0005737 ! cytoplasm
+intersection_of: part_of GO:0030425 ! dendrite
+relationship: part_of GO:0030425 ! dendrite
 
 [Term]
 id: GO:0032991
@@ -209,6 +383,15 @@ synonym: "protein-protein complex" NARROW []
 is_a: GO:0005575 ! cellular_component
 
 [Term]
+id: GO:0036477
+name: somatodendritic compartment
+namespace: cellular_component
+def: "The region of a neuron that includes the cell body (cell soma) and dendrite(s), but excludes the axon." [GOC:pad, GOC:PARL]
+is_a: GO:0110165 ! cellular anatomical entity
+created_by: bf
+creation_date: 2014-07-24T10:06:19Z
+
+[Term]
 id: GO:0042995
 name: cell projection
 namespace: cellular_component
@@ -221,6 +404,38 @@ synonym: "cell process" BROAD []
 synonym: "cellular process" BROAD []
 synonym: "cellular projection" EXACT []
 is_a: GO:0110165 ! cellular anatomical entity
+
+[Term]
+id: GO:0043005
+name: neuron projection
+namespace: cellular_component
+def: "A prolongation or process extending from a nerve cell, e.g. an axon or dendrite." [GOC:jl, http://www.cogsci.princeton.edu/~wn/]
+subset: goslim_pir
+synonym: "nerve fiber" RELATED [GOC:dph]
+synonym: "neurite" NARROW []
+synonym: "neuron process" EXACT []
+synonym: "neuron protrusion" EXACT [NIF_Subcellular:sao250931889]
+synonym: "neuronal cell projection" EXACT []
+xref: NIF_Subcellular:sao867568886
+is_a: GO:0120025 ! plasma membrane bounded cell projection
+
+[Term]
+id: GO:0043197
+name: dendritic spine
+namespace: cellular_component
+def: "A small, membranous protrusion from a dendrite that forms a postsynaptic compartment, typically receiving input from a single presynapse.  They function as partially isolated biochemical and an electrical compartments. Spine morphology is variable:they can be thin, stubby, mushroom, or  branched, with a continuum of intermediate morphologies. They typically terminate in a bulb shape, linked to the dendritic shaft by a restriction. Spine remodeling is though to be involved in synaptic plasticity." [GOC:nln]
+subset: goslim_synapse
+synonym: "branched dendritic spine" NARROW [NIF_Subcellular:sao965204139]
+synonym: "dendrite spine" EXACT []
+synonym: "mushroom dendritic spine" NARROW [NIF_Subcellular:sao876577163]
+synonym: "sessile dendritic spine" NARROW [NIF_Subcellular:sao1536532595]
+synonym: "stubby dendritic spine" NARROW [NIF_Subcellular:sao317384566]
+synonym: "thin dendritic spine" NARROW [NIF_Subcellular:sao1232858786]
+xref: NIF_Subcellular:sao1799103720
+xref: Wikipedia:Dendritic_spine
+is_a: GO:0044309 ! neuron spine
+is_a: GO:0098794 ! postsynapse
+relationship: part_of GO:0030425 ! dendrite
 
 [Term]
 id: GO:0043226
@@ -242,6 +457,9 @@ def: "Organized structure of distinctive morphology and function, bounded by a s
 synonym: "membrane-enclosed organelle" EXACT []
 xref: NIF_Subcellular:sao414196390
 is_a: GO:0043226 ! organelle
+intersection_of: GO:0043226 ! organelle
+intersection_of: has_part GO:0016020 ! membrane
+relationship: has_part GO:0016020 ! membrane
 
 [Term]
 id: GO:0043229
@@ -251,8 +469,8 @@ def: "Organized structure of distinctive morphology and function, occurring with
 subset: goslim_pir
 is_a: GO:0043226 ! organelle
 intersection_of: GO:0043226 ! organelle
-intersection_of: part_of GO:0005622 ! intracellular
-relationship: part_of GO:0005622 ! intracellular
+intersection_of: part_of GO:0005622 ! intracellular anatomical structure
+relationship: part_of GO:0005622 ! intracellular anatomical structure
 
 [Term]
 id: GO:0043231
@@ -263,6 +481,47 @@ subset: goslim_pir
 synonym: "intracellular membrane-enclosed organelle" EXACT []
 is_a: GO:0043227 ! membrane-bounded organelle
 is_a: GO:0043229 ! intracellular organelle
+intersection_of: GO:0043227 ! membrane-bounded organelle
+intersection_of: part_of GO:0005622 ! intracellular anatomical structure
+
+[Term]
+id: GO:0044309
+name: neuron spine
+namespace: cellular_component
+def: "A small membranous protrusion, often ending in a bulbous head and attached to the neuron by a narrow stalk or neck." [ISBN:0198504888, NIF_Subcellular:sao1145756102]
+synonym: "spine" BROAD []
+xref: NIF_Subcellular:sao1145756102
+is_a: GO:0043005 ! neuron projection
+created_by: jl
+creation_date: 2010-02-05T04:25:10Z
+
+[Term]
+id: GO:0045202
+name: synapse
+namespace: cellular_component
+def: "The junction between an axon of one neuron and a dendrite of another neuron, a muscle fiber or a glial cell. As the axon approaches the synapse it enlarges into a specialized structure, the presynaptic terminal bouton, which contains mitochondria and synaptic vesicles. At the tip of the terminal bouton is the presynaptic membrane; facing it, and separated from it by a minute cleft (the synaptic cleft) is a specialized area of membrane on the receiving cell, known as the postsynaptic membrane. In response to the arrival of nerve impulses, the presynaptic terminal bouton secretes molecules of neurotransmitters into the synaptic cleft. These diffuse across the cleft and transmit the signal to the postsynaptic membrane." [GOC:aruk, ISBN:0198506732, PMID:24619342, PMID:29383328, PMID:31998110]
+subset: goslim_agr
+subset: goslim_drosophila
+subset: goslim_flybase_ribbon
+subset: goslim_mouse
+subset: goslim_pir
+subset: goslim_synapse
+synonym: "electrotonic synapse" RELATED [NIF_Subcellular:sao1311109124]
+synonym: "mixed synapse" NARROW [NIF_Subcellular:sao1506103497]
+synonym: "synaptic junction" EXACT []
+xref: NIF_Subcellular:sao914572699
+xref: Wikipedia:Chemical_synapse
+is_a: GO:0030054 ! cell junction
+
+[Term]
+id: GO:0061846
+name: dendritic spine cytoplasm
+namespace: cellular_component
+def: "The region of the neuronal cytoplasm located in dendritic spines." [PMID:15673667]
+is_a: GO:0032839 ! dendrite cytoplasm
+intersection_of: GO:0005737 ! cytoplasm
+intersection_of: part_of GO:0043197 ! dendritic spine
+relationship: part_of GO:0043197 ! dendritic spine
 
 [Term]
 id: GO:0071944
@@ -271,8 +530,54 @@ namespace: cellular_component
 def: "The part of a cell encompassing the cell cortex, the plasma membrane, and any external encapsulating structures." [GOC:mah]
 subset: goslim_flybase_ribbon
 is_a: GO:0110165 ! cellular anatomical entity
-created_by: midori
+created_by: mah
 creation_date: 2010-10-04T01:51:47Z
+
+[Term]
+id: GO:0097014
+name: ciliary plasm
+namespace: cellular_component
+def: "All of the contents of a cilium, excluding the plasma membrane surrounding the cilium." [GOC:BHF, GOC:cilia, GOC:dos, PMID:17895364]
+comment: Note that we deem cilium and microtubule-based flagellum to be equivalent. Also, researchers consider the composition of both the plasm and the membrane of the cilium to be detectably different from that in the non-ciliary cytosol and plasma membrane (e.g. in terms of calcium ion concentration, membrane lipid composition, and more). For this reason, the term "ciliary plasm" is not linked to "cytoplasm".
+synonym: "cilial cytoplasm" RELATED []
+synonym: "ciliary cytoplasm" RELATED []
+synonym: "cilium cytoplasm" RELATED []
+synonym: "cilium plasm" EXACT []
+synonym: "microtubule-based flagellar cytoplasm" RELATED []
+synonym: "microtubule-based flagellar matrix" NARROW []
+synonym: "microtubule-based flagellum cytoplasm" RELATED []
+synonym: "microtubule-based flagellum matrix" NARROW []
+is_a: GO:0032838 ! plasma membrane bounded cell projection cytoplasm
+intersection_of: GO:0005737 ! cytoplasm
+intersection_of: part_of GO:0005929 ! cilium
+relationship: part_of GO:0005929 ! cilium
+created_by: pr
+creation_date: 2011-03-23T01:52:31Z
+
+[Term]
+id: GO:0097060
+name: synaptic membrane
+namespace: cellular_component
+def: "A specialized area of membrane on either the presynaptic or the postsynaptic side of a synapse, the junction between a nerve fiber of one neuron and another neuron or muscle fiber or glial cell." [GOC:BHF, PMID:20410104]
+subset: goslim_synapse
+is_a: GO:0098590 ! plasma membrane region
+intersection_of: GO:0098590 ! plasma membrane region
+intersection_of: part_of GO:0045202 ! synapse
+relationship: part_of GO:0045202 ! synapse
+created_by: pr
+creation_date: 2011-06-07T11:22:09Z
+
+[Term]
+id: GO:0097447
+name: dendritic tree
+namespace: cellular_component
+def: "The entire complement of dendrites for a neuron, consisting of each primary dendrite and all its branches." [GOC:aruk, GOC:bc, NIF_Subcellular:sao172297168]
+xref: NIF_Subcellular:sao172297168
+is_a: GO:0043005 ! neuron projection
+relationship: has_part GO:0030425 ! dendrite
+relationship: part_of GO:0036477 ! somatodendritic compartment
+created_by: pr
+creation_date: 2012-12-17T12:31:49Z
 
 [Term]
 id: GO:0098590
@@ -286,8 +591,17 @@ is_a: GO:0016020 ! membrane
 intersection_of: GO:0016020 ! membrane
 intersection_of: part_of GO:0005886 ! plasma membrane
 relationship: part_of GO:0005886 ! plasma membrane
-created_by: davidos
+created_by: dos
 creation_date: 2014-03-06T11:55:32Z
+
+[Term]
+id: GO:0098794
+name: postsynapse
+namespace: cellular_component
+def: "The part of a synapse that is part of the post-synaptic cell." [GOC:dos]
+subset: goslim_synapse
+is_a: GO:0110165 ! cellular anatomical entity
+relationship: part_of GO:0045202 ! synapse
 
 [Term]
 id: GO:0098796
@@ -311,6 +625,30 @@ intersection_of: part_of GO:0005886 ! plasma membrane
 relationship: part_of GO:0005886 ! plasma membrane
 
 [Term]
+id: GO:0099568
+name: cytoplasmic region
+namespace: cellular_component
+def: "Any (proper) part of the cytoplasm of a single cell of sufficient size to still be considered cytoplasm." [GOC:dos]
+subset: gocheck_do_not_annotate
+is_a: GO:0005737 ! cytoplasm
+intersection_of: GO:0005737 ! cytoplasm
+intersection_of: part_of GO:0005737 ! cytoplasm
+relationship: part_of GO:0005737 ! cytoplasm
+
+[Term]
+id: GO:0099738
+name: cell cortex region
+namespace: cellular_component
+def: "The complete extent of cell cortex that underlies some some region of the plasma membrane." [GOC:dos]
+subset: gocheck_do_not_annotate
+synonym: "perimembrane region" EXACT []
+is_a: GO:0005938 ! cell cortex
+is_a: GO:0099568 ! cytoplasmic region
+intersection_of: GO:0005938 ! cell cortex
+intersection_of: part_of GO:0005938 ! cell cortex
+relationship: part_of GO:0005938 ! cell cortex
+
+[Term]
 id: GO:0110165
 name: cellular anatomical entity
 namespace: cellular_component
@@ -328,8 +666,35 @@ is_a: GO:0042995 ! cell projection
 intersection_of: GO:0042995 ! cell projection
 intersection_of: has_part GO:0098590 ! plasma membrane region
 relationship: has_part GO:0098590 ! plasma membrane region
-created_by: kchris
+property_value: IAO:0000233 https://github.com/geneontology/go-ontology/issues/13193 xsd:anyURI
+created_by: krc
 creation_date: 2017-03-21T17:26:07Z
+
+[Term]
+id: GO:0120111
+name: neuron projection cytoplasm
+namespace: cellular_component
+def: "All of the contents of a plasma membrane bounded neuron projection, excluding the plasma membrane surrounding the projection." [GOC:ha]
+is_a: GO:0032838 ! plasma membrane bounded cell projection cytoplasm
+intersection_of: GO:0005737 ! cytoplasm
+intersection_of: part_of GO:0043005 ! neuron projection
+relationship: part_of GO:0043005 ! neuron projection
+created_by: krc
+creation_date: 2017-11-01T18:58:12Z
+
+[Term]
+id: GO:0140513
+name: nuclear protein-containing complex
+namespace: cellular_component
+def: "A stable assembly of two or more macromolecules, i.e. proteins, nucleic acids, carbohydrates or lipids, in which at least one component is a protein and the constituent parts function together in the nucleus." [GOC:pg]
+subset: gocheck_do_not_annotate
+synonym: "nuclear complex" EXACT []
+is_a: GO:0032991 ! protein-containing complex
+intersection_of: GO:0032991 ! protein-containing complex
+intersection_of: part_of GO:0005634 ! nucleus
+relationship: part_of GO:0005634 ! nucleus
+created_by: pg
+creation_date: 2020-09-09T05:12:38Z
 
 [Typedef]
 id: has_part
