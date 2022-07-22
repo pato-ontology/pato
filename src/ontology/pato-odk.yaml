@@ -30,6 +30,7 @@ import_group:
     - id: chebi
       make_base: TRUE
       use_gzipped: TRUE
+      is_large: TRUE
     - id: go
       use_base: True
       base_iris:
@@ -53,7 +54,12 @@ components:
   products:
     - filename: pato_ext.owl
 robot_java_args: '-Xmx12G'
+namespaces:
+  - http://purl.obolibrary.org/obo/PATO_
+  - http://purl.obolibrary.org/obo/pato#
+
 robot_report:
+  use_base_iris: True
   release_reports: False
   fail_on : ERROR
   use_labels : False
@@ -67,5 +73,6 @@ robot_report:
     - missing-label
     - illegal-annotation-property
     - orcid-contributor
+    - iri-range
   custom_sparql_exports : 
     - basic-report
