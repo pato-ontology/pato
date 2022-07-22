@@ -14,14 +14,14 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/pato/pato-simple.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2022-06-17/pato-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2022-07-21/pato-simple.owl"/>
         <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
         <dc:description>An ontology of phenotypic qualities (properties, attributes or characteristics).</dc:description>
         <dc:title>PATO - the Phenotype And Trait Ontology</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
         <oboInOwl:default-namespace>quality</oboInOwl:default-namespace>
         <oboInOwl:hasOBOFormatVersion>1.2</oboInOwl:hasOBOFormatVersion>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-06-17</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-07-21</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -264,6 +264,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/pato#seeAlso -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/pato#seeAlso"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/pato#value_slim -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/pato#value_slim">
@@ -324,6 +330,12 @@
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SubsetProperty">
         <rdfs:label>subset_property</rdfs:label>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#SynonymTypeProperty"/>
     
 
 
@@ -770,7 +782,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/pato#decreased_in_magnitude_relative_to"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>OBSOLETE. q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) &lt; magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -792,7 +804,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/pato#different_in_magnitude_relative_to"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>OBSOLETE. q1 different_in_magnitude_relative_to q2 if and only if magnitude(q1) NOT =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -836,7 +848,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/pato#has_cross_section"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>OBSOLETE. s3 has_cross_section s3 if and only if : there exists some 2d plane that intersects the bearer of s3, and the impression of s3 upon that plane has shape quality s2.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -932,7 +944,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/pato#increased_in_magnitude_relative_to"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>OBSOLETE. q1 increased_in_magnitude_relative_to q2 if and only if magnitude(q1) &gt; magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1023,7 +1035,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/pato#reciprocal_of"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>OBSOLETE. q1 reciprocal_of q2 if and only if : q1 and q2 are relational qualities and a phenotype e q1 e2 mutually implies a phenotype e2 q2 e.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1045,7 +1057,7 @@ Association is weaker than correlation or proportionality. These relations may b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/pato#similar_in_magnitude_relative_to"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>OBSOLETE. q1 similar_in_magnitude_relative_to q2 if and only if magnitude(q1) =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2293,7 +2305,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000077"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>reactivity</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2847,11 +2859,13 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000122">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001708"/>
         <obo:IAO_0000115>A 1-D extent quality which is equal to the distance between two points.</obo:IAO_0000115>
+        <pato:seeAlso>https://github.com/pato-ontology/pato/issues/337</pato:seeAlso>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id>PATO:0000122</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#mpath_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#scalar_slim"/>
+        <rdfs:comment>Length often refers to the longer or longest dimension of an object, however, this is not always true. See https://github.com/pato-ontology/pato/issues/337 for full discussion.</rdfs:comment>
         <rdfs:label>length</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -3056,7 +3070,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000136"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A morphological quality pertaining to the degree to which an object contains an opening, aperture, orifice or vent.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -5036,7 +5050,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000297"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality of a process which ends earlier than the natural end time or reference process.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:LC</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:LC</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5554,7 +5568,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000329"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A color pattern inhering in a bearer by virtue of bearer&apos;s being marked with irregularly shaped spots or blots of a different hue or degree of saturation.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Dictionary.com:Dictionary.com</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dictionary.com:Dictionary.com</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5596,7 +5610,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000331"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A color quality inhering in a bearer by virtue of the bearer&apos;s being altered or spoiled in color.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Dictionary.com:Dictionary.com</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dictionary.com:Dictionary.com</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7408,7 +7422,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000453"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A pilosity quality inhering in a bearer by virtue of the bearer&apos;s lack of hairs or bristles.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -8152,7 +8166,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000502"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality of a process which starts later than the natural start time or the reference process.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:LC</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:LC</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10239,8 +10253,8 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000639"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A structural quality inhering in a bearer whose structure deteriorates or is lost over time due to an active pathological process.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:PortlandMeetingFeb2015</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PATOC:mb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:PortlandMeetingFeb2015</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:mb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -13738,10 +13752,12 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000915">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001708"/>
         <obo:IAO_0000115>A 1-D extent quality which is equal to the dimension through an object as opposed to its length or width.</obo:IAO_0000115>
+        <pato:seeAlso>https://github.com/pato-ontology/pato/issues/337</pato:seeAlso>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id>PATO:0000915</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#scalar_slim"/>
+        <rdfs:comment>Thickness often refers to the smallest 1-D extent compared to the other two orthogonal dimensions, however, this is not always true. See https://github.com/pato-ontology/pato/issues/337 for full discussion.</rdfs:comment>
         <rdfs:label>thickness</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -13823,11 +13839,13 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000921">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001708"/>
         <obo:IAO_0000115>A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.</obo:IAO_0000115>
+        <pato:seeAlso>https://github.com/pato-ontology/pato/issues/337</pato:seeAlso>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>breadth</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>PATO:0000921</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#scalar_slim"/>
+        <rdfs:comment>Width often refers to the dimension that is greater than the extent in only one of the other two orthogonal dimensions, however, this is not always true. See https://github.com/pato-ontology/pato/issues/337 for full discussion.</rdfs:comment>
         <rdfs:label>width</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -14612,7 +14630,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000969"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A size quality inhering in a bearer by virtue of the bearer&apos;s being abnormally small.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Answers.com:Answers.com</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Answers.com:Answers.com</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -14633,7 +14651,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000970"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A structural quality inhering in a bearer by virtue of the bearer&apos;s disposition to being permeated or pervaded by a gas or liquid (as by osmosis or diffusion).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Biology-online:Biology-online</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biology-online:Biology-online</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -14787,7 +14805,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000982"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A permeability quality inhering in a bearer by virtue of the bearer&apos;s being capable to be permeated or pervaded by a gas or liquid (as by osmosis or diffusion).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Biology-online:Biology-online</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biology-online:Biology-online</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -14808,7 +14826,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000983"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A permeability quality inhering in a bearer by virtue of the bearer&apos;s being incapable of being permeated or pervaded by a gas or liquid (as by osmosis or diffusion).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Biology-online:Biology-online</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biology-online:Biology-online</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -21607,7 +21625,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001405"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A nucleate quality inhering in a bearer by virtue of the bearer&apos;s having no nucleus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Biology-online:Biology-online</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biology-online:Biology-online</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -21628,7 +21646,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001406"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A nucleate quality inhering in a bearer by virtue of the bearer&apos;s having two nuclei.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Biology-online:Biology-online</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biology-online:Biology-online</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -21649,7 +21667,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001407"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A nucleate quality inhering in a bearer by virtue of the bearer&apos;s having one nucleus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Biology-online:Biology-online</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biology-online:Biology-online</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -21690,7 +21708,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001409"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A shape quality inhering in a bearer by virtue of the bearer&apos;s resembling a long tapered rod.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Biology-online:Biology-online</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biology-online:Biology-online</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -21711,7 +21729,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001410"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A shape quality inhering in a bearer by virtue of the bearer&apos;s being marked by narrow lines or grooves, usually parallel.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Biology-online:Biology-online</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biology-online:Biology-online</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -22048,7 +22066,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001427"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A concentration quality inhering in compound by virtue of the bearer&apos;s tendency to act as a hydron donor.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>chemicool:chemicool</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemicool:chemicool</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -22068,7 +22086,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001428"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A concentration quality inhering in a medium by virtue of the bearer&apos;s tendency to hydronate a specific reference base.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>chemicool:chemicool</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemicool:chemicool</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -22087,7 +22105,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001429"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An medium acidity quality inhering in a solution by virtue of the bearer&apos;s a high concentration of H+ ions.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>chemicool:chemicool</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemicool:chemicool</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -22106,7 +22124,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001430"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An medium acidity quality inhering in a solution by virtue of the bearer&apos;s a low concentration of H+ ions.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>chemicool:chemicool</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemicool:chemicool</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -22315,7 +22333,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001440"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A cellular adhesivity quality inhering in a molecule in one cell by virtue of the bearer&apos;s attachment to an identical molecule in an adjacent cell.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:GO</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GO:GO</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -22335,7 +22353,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001441"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A cellular adhesivity quality inhering in a molecule in one cell by virtue of the bearer&apos;s attachment to an nonidentical molecule in an adjacent cell.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:GO</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GO:GO</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -22392,7 +22410,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001444"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A structural quality inhering in a bearer by virtue of the bearer&apos;s components no longer being in a single contiguous unit.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://orcid.org/0000-0003-4606-0597</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0003-4606-0597</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -22985,7 +23003,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001473"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality inhering in a bearer by virtue of the bearer&apos;s being present in two copies.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Dictionary.com:Dictionary.com</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dictionary.com:Dictionary.com</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -23070,7 +23088,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001477"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A positional quality inhering in a bearer by virtue of the bearer&apos;s being drawn in or pulled back from any given point.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Dictionary.com:Dictionary.com</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dictionary.com:Dictionary.com</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -23090,7 +23108,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001478"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A structural quality inhering in a bearer by virtue of the bearer&apos;s being broken down; caved in.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Dictionary.com:Dictionary.com</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dictionary.com:Dictionary.com</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -23126,7 +23144,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001480"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A structural quality inhering in a bearer by virtue of the bearer&apos;s resembling a sponge in elasticity, absorbency, or porousness.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Answers.com:Answers.com</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Answers.com:Answers.com</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -23165,7 +23183,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001482"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality inhering in a bearer by virtue of the bearer&apos;s standing out or projecting beyond a surface or line.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Dictionary.com:Dictionary.com</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dictionary.com:Dictionary.com</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -23190,7 +23208,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Absence of an organ, tissue or cell due to failure to develop from a primordium or precursor cell.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:GVG</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>PATOC:PortlandMeetingFeb2015</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:PortlandMeetingFeb2015</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -24648,7 +24666,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001555"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The number of parts of a particular type that the bearer entity has. This is a relational quality, and thus holds between two entities: the bearer of the quality, and the type of parts.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -26852,7 +26870,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001665"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A spatial pattern inhering in a bearer by virtue of the bearer&apos;s being located near a surface.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>Dictionary.com:Dictionary.com</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dictionary.com:Dictionary.com</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28006,7 +28024,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001720"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A behavioral quality which holds by virtue of extent of the receptiveness of a female to male advances.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:GO</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GO:GO</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -29358,7 +29376,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001786"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A shape quality inhering in a bearer by virtue of the bearer&apos;s being divided or broken up into parts or divisions.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">die.net:die.net</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>die.net:die.net</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -30804,7 +30822,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001856"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An oriented quality inhering in a bearer by virtue of the bearer&apos;s being turned inward upon itself.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">die.net:die.net</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>die.net:die.net</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -31051,7 +31069,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001868"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A fluorescence quality inhering in a bearer by virtue of the bearer&apos;s exhibiting fluorescence which is self-induced.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:mb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:mb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -31283,7 +31301,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001878"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A shape quality inhering in a bearer by virtue of the bearer&apos;s consisting of two curves, in opposite directions. S-shaped.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -31369,7 +31387,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001882"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A concave 3-D shape quality inhering in a bearer by virtue of the bearer&apos;s resembling a slug.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -31572,7 +31590,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001891"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A spheroid quality inhering in a bearer by virtue of the bearer&apos;s exhibiting a continuous convex surface with an axis of symmetry and one axis longer than the other; egg-shaped.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:mc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:mc</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -31852,7 +31870,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001905"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The bearer of this quality has_part = n, where n is the normal amount for a comparable organism. Note that the bearer of the quality is the whole, not the part.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -31968,7 +31986,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001911"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A behavioral quality inhering in a bearer by virtue of the bearer&apos;s exhibiting movement in a circular course.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:mb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:mb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -31986,7 +32004,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001912"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality of a single process inhering in a bearer by virtue of the state of bearer&apos;s mechanical, physical, and biochemical processes.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:mb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:mb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -32004,7 +32022,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001913"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A physiological state which is characterized by periods of high-frequency high amplitude electrical activity in neuronal tissue.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:mb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:mb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -32022,7 +32040,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001914"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A physiological state which is characterized by normal electrical activity in neuronal tissue.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:mb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:mb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -32121,7 +32139,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001919"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A positional quality inhering in a bearer by virtue of the bearer&apos;s being positioned towards the back or upper surface of an organism.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:mb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:mb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -32140,7 +32158,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001920"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A positional quality inhering in a bearer by virtue of the bearer&apos;s being positioned towards the abdomen of an organism.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:mb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:mb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -32159,7 +32177,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001921"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A positional quality inhering in a bearer by virtue of the bearer&apos;s being positioned towards the front of an organism.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:mb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:mb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -32178,7 +32196,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001922"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A positional quality inhering in a bearer by virtue of the bearer&apos;s being positioned towards the rear of an organism.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:mb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:mb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -32197,7 +32215,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001923"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A positional quality inhering in a bearer by virtue of the bearer&apos;s being positioned towards the side of an organism.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:mb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:mb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -32216,7 +32234,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001924"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A positional quality inhering in a bearer by virtue of the bearer&apos;s being positioned towards the middle of an organism.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:mb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:mb</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -32236,7 +32254,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001925"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A surface shape quality inhering in a bearer by virtue of the bearer&apos;s shape of features present on its surface or outer shell.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -33617,7 +33635,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001995"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality that inheres in an entire organism or part of an organism.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -33694,7 +33712,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001999"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The bearer of this quality has_part &lt; n of the indicated entity type, where n is the normal amount for a comparable organism. Note that the bearer of the quality is the whole, not the part. Formally: If a bearer entity e has fewer parts of type X at time t, then the number of instances x of X at t such that x part_of e is &lt; n, where n is either the normal number for comparable entities, or n is stated explicitly. This case includes the limit case, where the bearer lacks all parts of the specified type.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -33723,7 +33741,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002000"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality of physical entities inhering in a bearer by virtue of the bearer&apos;s lacking a physical part as specified by the additional entity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -33749,7 +33767,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002001"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The bearer of this quality has_part &lt; n AND has_part &gt; 0 of the indicated entity type, where n is the normal amount for a comparable organism. Note that the bearer of the quality is the whole, not the part. Formally: If a bearer entity e has fewer parts of type X at time t, then the number of instances x of X at t such that x part_of e is &lt; n, where n is either the normal number for comparable entities, or n is stated explicitly.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -33777,7 +33795,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002002"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The bearer of this quality has_part &gt; n of the indicated entity type, where n is the normal amount for a comparable organism. Note that the bearer of the quality is the whole, not the part.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -33816,7 +33834,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002004"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A shape that inheres in a part of a surface. An object can have different surface shapes on different parts of its surface.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -33856,7 +33874,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002006"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A shape that inheres in a 2 dimensional entity, such as a cross section or projection of a 3 dimensional entity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -33884,7 +33902,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002007"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A complete three dimensional shape in which for every line connecting pair of points on the object is within the object. Or: a shape lacking cavities. Contrast: concave.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -33911,7 +33929,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002008"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A complete three dimensional shape in which there is a line connecting pair of points on the object that lies outside the object. Or: a shape with cavities. Contrast: concave.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -34333,7 +34351,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002030"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A molecular quality that inheres in a molecular entity by virtue of whether the bearer exhibits the ability of a probe to react precisely with a specific target molecule.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:mc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:mc</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -34375,7 +34393,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002032"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A reflectivity quality inhering in light by virtue of the bearer&apos;s scattering occurring at small angle to the incident beam.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:mc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:mc</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -34396,7 +34414,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002033"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A reflective quality that is the light scattering occurring at wide angle (around 90 degrees) to the incident beam.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:mc</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:mc</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -35374,7 +35392,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002077"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A spatial quality inhering in a bearer by virtue of the bearer&apos;s being positioned with multiple entities of the same type above and below.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -35426,7 +35444,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002080"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A broken quality inhering in a bearer by virtue of the bearer&apos;s being separated into two contiguous wholes.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -35468,7 +35486,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002082"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A broken quality inhering in a bearer by virtue of the bearer&apos;s being still one contiguous whole but structurally damaged such that in danger of become two or more.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40742,7 +40760,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002323"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A temporal distribution pattern of process occurrences within a regulation/reference process.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:LC</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:LC</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40765,19 +40783,19 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002324"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The temporal relation between the end of the process with respect to a reference process.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:LC</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:LC</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002324"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>completeness</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002324"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>extent</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40799,7 +40817,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002325"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The temporal relation between the start of the process with respect to a reference process.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:LC</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:LC</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40911,7 +40929,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002330"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality inhering in a bearer by virtue of the bearer&apos;s being extended along a straight line, and is shaped like a reversed lance-point, with the tapering point attached to the leafstalk.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:PG</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:PG</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -41044,7 +41062,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002336"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A shape quality inhering in a bearer by virtue of the bearer&apos;s having triangular faces that meet at a common point and containing a polygonal shaped base.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:DD</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:DD</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -41065,7 +41083,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002337"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A spheroid quality inhering in a bearer by virtue of the bearer&apos;s exhibiting a continuous convex surface with an axis of symmetry and one axis longer than the other; characterized with an egg-shaped form crossed with a lance-head shaped form.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:DD</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:DD</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -41086,7 +41104,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002338"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A shape quality inhering in a bearer by virtue of the bearer&apos;s being shaped like a lance-head, considerably longer than wide, tapering towards the tip from below the middle together forming three angles; attached at the broad end.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:DD</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:DD</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -41128,7 +41146,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002340"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality of being minutely hispid.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:DD</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:DD</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -41170,7 +41188,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002342"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality inhering in a bearer by virtue of the bearer&apos;s being a cupule, with a structure similar to a cup that also encloses the ovule in partiality.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:DD</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:DD</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -41212,7 +41230,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002344"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality inhering in a bearer by virtue of the bearer&apos;s being characterized by fine, entangled hairs giving the appearance of cobweb.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:DD</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:DD</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -41380,7 +41398,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002352"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality inhering in a bearer by virtue of the bearer&apos;s upper parts die back to the rootstock at the end of the growing season.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:PG</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:PG</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -42267,7 +42285,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002393"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A tolerance quality inhering in a bearer by virtue of the bearer&apos;s increased ability to endure a stimulus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:LC</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:LC</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -42291,7 +42309,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002394"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A tolerance quality inhering in a bearer by virtue of the bearer&apos;s decreased ability to endure a stimulus.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:LC</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:LC</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -43912,7 +43930,7 @@ Note: kinked PATO:0001798(synonym twisted) is similar to &apos;torsioned&apos;, 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002470"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A morphological quality between two bearers inhering that one bearer is subject to change the nature, function, or condition of itself to become the other.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:LC</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:LC</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -44001,7 +44019,7 @@ Note: kinked PATO:0001798(synonym twisted) is similar to &apos;torsioned&apos;, 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002474"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A flavor quality inhering in a bearer by virtue of the bearer&apos;s having an acrid, sharp, or disagreeable flavor.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:LC</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:LC</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -46222,7 +46240,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0015001"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Absence due to a degenerative process.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:PortlandMeetingFeb2015</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:PortlandMeetingFeb2015</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -46242,7 +46260,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0015002"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The ability of a process to produce its output.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:PortlandMeetingFeb2015</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:PortlandMeetingFeb2015</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -46264,7 +46282,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0015003"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A decrease in the ability of a process to produce its output.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:PortlandMeetingFeb2015</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:PortlandMeetingFeb2015</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -46286,7 +46304,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0015004"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A increase in the ability of a process to produce its output.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:PortlandMeetingFeb2015</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:PortlandMeetingFeb2015</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -46360,7 +46378,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0015007"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality inhering in a bearer by virtue of the degree to which the bearers stands out or projects beyond a surface or line.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -46379,7 +46397,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0015008"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality inhering in a bearer by virtue of the extent to which the bearer is capable of being stretched or swollen.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:CJM</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:CJM</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -47253,7 +47271,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A texture quality inhering in a bearer by virtue of the bearer&apos;s being covered or partially covered with hair that has increased thickness and softness.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>https://orcid.org/0000-0003-4606-0597</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0003-4606-0597</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -48037,7 +48055,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0040044"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A structural quality inhering in a bearer by virtue of the bearer&apos;s components being torn, typically used for soft tissues or membranes.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://orcid.org/0000-0003-4606-0597</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0003-4606-0597</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
