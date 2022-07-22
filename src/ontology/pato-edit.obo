@@ -3862,11 +3862,13 @@ relationship: is_opposite_of PATO:0000613 ! disoriented
 
 [Term]
 id: PATO:0000615
-name: wholly anterioralized
-def: "An anterioralized quality inhering in a bearer by virtue of the bearer's gross morphology containing only what are normally anterior structures." [PATOC:GVG]
+name: wholly anteriorized
+def: "An anteriorized quality inhering in a bearer by virtue of the bearer's gross morphology containing only what are normally anterior structures." [PATOC:GVG]
 subset: value_slim
 synonym: "anterioralized" RELATED []
-is_a: PATO:0030000 ! anterioralized
+synonym: "anteriorized" RELATED []
+synonym: "wholly anterioralized" EXACT []
+is_a: PATO:0030000 ! anteriorized
 
 [Term]
 id: PATO:0000616
@@ -3988,12 +3990,14 @@ is_a: PATO:0000140 ! position
 
 [Term]
 id: PATO:0000630
-name: wholly posterioralized
-def: "A posterioralized quality inhering in a bearer by virtue of the bearer's gross morphology containing only what are normally posterior structures." [PATOC:GVG]
+name: wholly posteriorized
+def: "A posteriorized quality inhering in a bearer by virtue of the bearer's gross morphology containing only what are normally posterior structures." [PATOC:GVG]
 subset: mpath_slim
 subset: value_slim
 synonym: "posterioralized" RELATED []
-is_a: PATO:0030002 ! posterioralized
+synonym: "posteriorized" RELATED []
+synonym: "wholly posterioralized" EXACT []
+is_a: PATO:0030002 ! posteriorized
 
 [Term]
 id: PATO:0000631
@@ -20205,8 +20209,9 @@ creation_date: 2015-09-01T16:19:02Z
 
 [Term]
 id: PATO:0030000
-name: anterioralized
+name: anteriorized
 def: "A malformed quality inhering in a bearer by virtue of the bearer's gross morphology containing what are normally anterior structures and missing some or all of what are normally posterior structures." [PATOC:EJS]
+synonym: "anterioralized" EXACT []
 is_a: PATO:0000646 ! malformed
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-9611-1279
 
@@ -20219,8 +20224,9 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002
 
 [Term]
 id: PATO:0030002
-name: posterioralized
+name: posteriorized
 def: "A malformed quality inhering in a bearer by virtue of the bearer's gross morphology containing what are normally posterior structures and missing some or all of what are normally anterior structures." [PATOC:EJS]
+synonym: "posterioralized" EXACT []
 is_a: PATO:0000646 ! malformed
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-9611-1279
 
@@ -20233,9 +20239,10 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002
 
 [Term]
 id: PATO:0030004
-name: partially anterioralized
-def: "An anterioralized quality inhering in a bearer by virtue of the bearer's gross morphology containing what are normally anterior structures and missing some but not all of what are normally posterior structures." [PATOC:EJS]
-is_a: PATO:0030000 ! anterioralized
+name: partially anteriorized
+def: "An anteriorized quality inhering in a bearer by virtue of the bearer's gross morphology containing what are normally anterior structures and missing some but not all of what are normally posterior structures." [PATOC:EJS]
+synonym: "partially anterioralized" EXACT []
+is_a: PATO:0030000 ! anteriorized
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-9611-1279
 
 [Term]
@@ -20247,9 +20254,10 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002
 
 [Term]
 id: PATO:0030006
-name: partially posterioralized
-def: "A posterioralized quality inhering in a bearer by virtue of the bearer's gross morphology containing what are normally posterior structures and missing some but not all of what are normally anterior structures." [PATOC:EJS]
-is_a: PATO:0030002 ! posterioralized
+name: partially posteriorized
+def: "A posteriorized quality inhering in a bearer by virtue of the bearer's gross morphology containing what are normally posterior structures and missing some but not all of what are normally anterior structures." [PATOC:EJS]
+synonym: "partially posterioralized" EXACT []
+is_a: PATO:0030002 ! posteriorized
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-9611-1279
 
 [Term]
@@ -20257,6 +20265,48 @@ id: PATO:0030007
 name: partially ventralized
 def: "A ventralized quality inhering in a bearer by virtue of the bearer's gross morphology containing what are normally ventral structures and missing some but not all of what are normally dorsal structures." [PATOC:EJS]
 is_a: PATO:0030003 ! ventralized
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-9611-1279
+
+[Term]
+id: PATO:0030008
+name: dorso-anteriorized
+def: "A malformed quality inhering in a bearer by virtue of the bearer's gross morphology containing what are normally dorso-anterior structures and missing some or all of what are normally ventro-posterior structures." [PATOC:EJS]
+is_a: PATO:0000646 ! malformed
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-9611-1279
+
+[Term]
+id: PATO:0030009
+name: partially dorso-anteriorized
+def: "A dorso-anteriorized quality inhering in a bearer by virtue of the bearer's gross morphology containing what are normally dorso-anterior structures and missing some but not all of what are normally ventro-posterior structures." [PATOC:EJS]
+is_a: PATO:0030008 ! dorso-anteriorized
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-9611-1279
+
+[Term]
+id: PATO:0030010
+name: wholly dorso-anteriorized
+def: "A dorso-anteriorized quality inhering in a bearer by virtue of the bearer's gross morphology containing only what are normally dorso-anterior structures." [PATOC:EJS]
+is_a: PATO:0030008 ! dorso-anteriorized
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-9611-1279
+
+[Term]
+id: PATO:0030011
+name: ventro-posteriorized
+def: "A malformed quality inhering in a bearer by virtue of the bearer's gross morphology containing what are normally ventro-posterior structures and missing some or all of what are normally dorso-anterior structures." [PATOC:EJS]
+is_a: PATO:0000646 ! malformed
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-9611-1279
+
+[Term]
+id: PATO:0030012
+name: partially ventro-posteriorized
+def: "A ventro-posteriorized quality inhering in a bearer by virtue of the bearer's gross morphology containing what are normally ventro-posterior structures and missing some but not all of what are normally dorso-anterior structures." [PATOC:EJS]
+is_a: PATO:0030011 ! ventro-posteriorized
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-9611-1279
+
+[Term]
+id: PATO:0030013
+name: wholly ventro-posteriorized
+def: "A ventro-posteriorized quality inhering in a bearer by virtue of the bearer's gross morphology containing only what are normally ventro-posterior structures." [PATOC:EJS]
+is_a: PATO:0030011 ! ventro-posteriorized
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-9611-1279
 
 [Term]
