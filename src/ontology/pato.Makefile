@@ -5,7 +5,6 @@
 
 
 #pre_release: $(SRCOWL)
-	
 
 $(ONT).obo: $(ONT)-simple.owl
 	$(ROBOT) annotate --input $(ONT)-simple.owl --ontology-iri $(URIBASE)/$(ONT).owl --version-iri $(ONTBASE)/releases/$(TODAY)/$@ \
@@ -27,3 +26,15 @@ x:
 #		filter --term-file $(SIMPLESEED) --select "annotations ontology anonymous self" --trim true --signature true \
 #		reduce -r ELK \
 #		annotate --ontology-iri $(ONTBASE)/$@ --version-iri $(ONTBASE)/releases/$(TODAY)/$@ --output $@.tmp.owl && mv $@.tmp.owl $(ONT)-simple.owl
+
+tmp/merged.obo: $(SRC)
+	$(ROBOT) merge -i $< convert -f obo --check false -o $@
+
+.PHONY: test_obsolete
+test_obsolete: tmp/merged.obo
+	! grep "! obsolete" $<
+
+test: test_obsolete
+
+benchmark_imports:
+	/usr/bin/time -f %M make refresh-imports
