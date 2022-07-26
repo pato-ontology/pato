@@ -9684,10 +9684,10 @@ is_a: PATO:0001749 ! paedomorphic growth
 [Term]
 id: PATO:0001492
 name: growth rate
-comment: This term will be obsoleted; Use GO:growth and PATO:rate.
+def: "The rate or speed of the change in size of an individual entity or change in number of a population." [https://orcid.org/0000-0002-9900-7880, https://orcid.org/0000-0003-4606-0597]
 subset: attribute_slim
 subset: scalar_slim
-is_a: PATO:0050001 ! rate of continuous process
+is_a: PATO:0000161 ! rate
 
 [Term]
 id: PATO:0001493
@@ -14196,6 +14196,7 @@ name: population quality
 def: "A quality that inheres in an entire population or part of a population." [PATOC:GVG]
 subset: attribute_slim
 is_a: PATO:0001241 ! physical object quality
+disjoint_from: PATO:0040057 ! population process quality
 
 [Term]
 id: PATO:0002004
@@ -19010,6 +19011,7 @@ name: single organismal process quality
 def: "A quality inhering in a process by virtue of that process having exactly one organism as a participant." [PATOC:DS]
 subset: attribute_slim
 is_a: PATO:0001236 ! process quality
+disjoint_from: PATO:0040057 ! population process quality
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2013-10-10T04:09:51Z
 
@@ -20692,6 +20694,21 @@ is_a: PATO:0001444 ! broken
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-5208-3432
 
 [Term]
+id: PATO:0040045
+name: population growth rate
+def: "The rate or speed of the change in in number of a population." [https://orcid.org/0000-0002-9900-7880, https://orcid.org/0000-0003-4606-0597]
+is_a: PATO:0001492 ! growth rate
+is_a: PATO:0040057 ! population process quality
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040046
+name: single organismal growth rate
+def: "The rate or speed of the change in size of an individual entity." [https://orcid.org/0000-0002-9900-7880, https://orcid.org/0000-0003-4606-0597]
+is_a: PATO:0002487 ! single organismal process quality
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
 id: PATO:0040047
 name: fragmented
 def: "Existing or functioning as though broken into separate parts; disorganized; disunified." [https://www.dictionary.com/browse/unfragmented]
@@ -20780,6 +20797,13 @@ synonym: "female, DSD" EXACT []
 synonym: "intersex" BROAD []
 is_a: PATO:0001894 ! phenotypic sex
 property_value: seeAlso https://github.com/pato-ontology/pato/issues/482 xsd:string
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040057
+name: population process quality
+def: "A quality inhering in a process by virtue of that process having a population or part of a population, where population is defined as a collection of individuals from the same taxonomic class distinguished by one or more characteristics, as participants." [https://www.alliancegenome.org/glossary]
+is_a: PATO:0001236 ! process quality
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
