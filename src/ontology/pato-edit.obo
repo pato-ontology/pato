@@ -20711,6 +20711,19 @@ is_a: PATO:0000051 ! morphology
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-5208-3432
 
 [Term]
+id: PATO:0040049
+name: male with DSD
+def: "A biological sex quality inhering in an individual or a population who are otherwise male of a non-hermaphroditic species who has ambiguous or atypical congenital development of the reproductive system." []
+comment: The term intersex is popular in use, but may be considered offensive when applied to humans. DSD can be expanded multiple ways to 'disorders/differences of sexual development/differentiation'.
+synonym: "intersex" BROAD []
+synonym: "male with differences of sexual differentiation" EXACT []
+synonym: "male with disorder of sexual development" EXACT []
+synonym: "male, DSD" EXACT []
+is_a: PATO:0001894 ! phenotypic sex
+property_value: seeAlso https://github.com/pato-ontology/pato/issues/482 xsd:string
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
 id: PATO:0040050
 name: diandrous
 def: "A phenotypic sex quality inhering in a  plant organism or a population of plants in which the flowers have two stamens." [http://orcid.org/0000-0002-2908-3327] {comment="https://orcid.org/0000-0001-8815-0078"}
@@ -20759,6 +20772,19 @@ is_a: PATO:0040053 ! protandrous
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8815-0078
 
 [Term]
+id: PATO:0040056
+name: female with DSD
+def: "A biological sex quality inhering in an individual or a population who are otherwise female of a non-hermaphroditic species who has ambiguous or atypical congenital development of the reproductive system." []
+comment: The term intersex is popular in use, but may be considered offensive when applied to humans. DSD can be expanded multiple ways to 'disorders/differences of sexual development/differentiation'.
+synonym: "female with differences of sexual differentiation" EXACT []
+synonym: "female with disorder of sexual development" EXACT []
+synonym: "female, DSD" EXACT []
+synonym: "intersex" BROAD []
+is_a: PATO:0001894 ! phenotypic sex
+property_value: seeAlso https://github.com/pato-ontology/pato/issues/482 xsd:string
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
 id: PATO:0040070
 name: thermoplastic
 def: "A physical quality inhering in a bearer by virtue of the bearer's disposition to deform by heating." [http://www.gesamp.org/publications/guidelines-for-the-monitoring-and-assessment-of-plastic-litter-in-the-ocean, https://orcid.org/0000-0002-8166-0486]
@@ -20788,6 +20814,23 @@ id: PATO:0040046
 name: single organismal growth rate
 def: "The rate or speed of the change in size of an individual entity." [https://orcid.org/0000-0002-9900-7880, https://orcid.org/0000-0003-4606-0597]
 is_a: PATO:0002487 ! single organismal process quality
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040071
+name: nuclear/cytoplasmic ratio
+def: "A quality inhering in a cell by virtue of the ratio between the volume of its nucleus and the volume of its cytoplasm." [Wikipedia:NC_ratio&oldid=931936284]
+synonym: "N:C ratio" EXACT []
+is_a: PATO:0001396 ! cellular quality
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040072
+name: high nuclear/cytoplasmic ratio
+def: "A quality inhering in a cell by virtue of the cell having a high nuclear/cytoplasmic ratio." [http://lymerick.net/blood-cells.pdf, Wikipedia:NC_ratio&oldid=931936284]
+comment: A high nuclear/cytolasmic ratio is 70% or higher.
+synonym: "high N:C ratio" EXACT []
+is_a: PATO:0001396 ! cellular quality
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
