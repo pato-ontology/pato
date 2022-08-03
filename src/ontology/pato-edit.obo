@@ -17081,7 +17081,7 @@ creation_date: 2011-04-18T05:11:33Z
 id: PATO:0002291
 name: agenesis
 def: "Absence of a tissue or organ due to failure to develop." [PATO:GVG]
-is_a: PATO:0040050 ! absence of anatomical entity
+is_a: PATO:0040060 ! absence of anatomical entity
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2011-04-18T05:17:34Z
 
@@ -19878,9 +19878,9 @@ def: "Absence due to a degenerative process." [PATOC:PortlandMeetingFeb2015]
 subset: absent_slim
 subset: value_slim
 is_a: PATO:0000639 ! degenerate
-is_a: PATO:0040050 ! absence of anatomical entity
+is_a: PATO:0040060 ! absence of anatomical entity
 intersection_of: PATO:0000639 ! degenerate
-intersection_of: PATO:0040050 ! absence of anatomical entity
+intersection_of: PATO:0040060 ! absence of anatomical entity
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-6601-2165
 
 [Term]
@@ -20807,16 +20807,6 @@ is_a: PATO:0001236 ! process quality
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
-id: PATO:0040070
-name: thermoplastic
-def: "A physical quality inhering in a bearer by virtue of the bearer's disposition to deform by heating." [http://www.gesamp.org/publications/guidelines-for-the-monitoring-and-assessment-of-plastic-litter-in-the-ocean, https://orcid.org/0000-0002-8166-0486]
-is_a: PATO:0001018 ! physical quality
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-5208-3432
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2996-719X
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-8166-0486
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-1072-8081
-
-[Term]
 id: PATO:0040058
 name: absence of physical object
 def: "A quality denoting the lack of a physical entity or object, such as a chemical." [thefreedictionary.:thefreedictionary.]
@@ -20839,11 +20829,22 @@ created_by: http://orcid.org/0000-0001-5208-3432
 id: PATO:0040060
 name: absence of anatomical entity
 def: "A quality denoting the lack of an anatomical entity or cellular component." [thefreedictionary.:thefreedictionary.]
+comment: Absence of anatomical entity should only be used when all of the entity is absent. For example, absent teeth would mean all teeth are absent not some teeth are absent.
 subset: absent_slim
 synonym: "anatomical entity absence" EXACT []
 is_a: PATO:0000051 ! morphology
 is_a: PATO:0040058 ! absence of physical object
 created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040070
+name: thermoplastic
+def: "A physical quality inhering in a bearer by virtue of the bearer's disposition to deform by heating." [http://www.gesamp.org/publications/guidelines-for-the-monitoring-and-assessment-of-plastic-litter-in-the-ocean, https://orcid.org/0000-0002-8166-0486]
+is_a: PATO:0001018 ! physical quality
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-5208-3432
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2996-719X
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-8166-0486
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-1072-8081
 
 [Term]
 id: PATO:0040071
