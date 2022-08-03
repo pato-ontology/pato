@@ -20817,7 +20817,7 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-1072-8081
 
 [Term]
-id: PATO:0040048
+id: PATO:0040058
 name: absence of physical object
 def: "A quality denoting the lack of a physical entity or object, such as a chemical." [thefreedictionary.:thefreedictionary.]
 subset: absent_slim
@@ -20826,7 +20826,7 @@ is_a: PATO:0001241 ! physical object quality
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
-id: PATO:0040049
+id: PATO:0040059
 name: absent process
 def: "A quality denoting the lack of a process or function." []
 subset: absent_slim
@@ -20836,12 +20836,13 @@ is_a: PATO:0001236 ! process quality
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
-id: PATO:0040050
+id: PATO:0040060
 name: absence of anatomical entity
 def: "A quality denoting the lack of an anatomical entity or cellular component." [thefreedictionary.:thefreedictionary.]
 subset: absent_slim
 synonym: "anatomical entity absence" EXACT []
 is_a: PATO:0000051 ! morphology
+is_a PATO:0040058 ! absence of physical object
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
