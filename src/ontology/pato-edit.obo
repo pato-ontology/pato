@@ -2835,7 +2835,7 @@ id: PATO:0000462
 name: absent
 alt_id: PATO:0001996
 def: "A quality denoting the lack of an entity." [thefreedictionary.:thefreedictionary.]
-comment: See documentation here: http://code.google.com/p/phenotype-ontologies/wiki/ModelingOfAbsence
+comment: We recommend using the new absent terms (physical absence, absent anatomical entity, or absent process) instead of this class. This is a legacy term and will ultimately be obsoleted.\nSee https://github.com/pato-ontology/pato/issues/331.
 subset: absent_slim
 subset: mpath_slim
 subset: value_slim
@@ -17081,7 +17081,7 @@ creation_date: 2011-04-18T05:11:33Z
 id: PATO:0002291
 name: agenesis
 def: "Absence of a tissue or organ due to failure to develop." [PATO:GVG]
-is_a: PATO:0000462 ! absent
+is_a: PATO:0040060 ! absence of anatomical entity
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2011-04-18T05:17:34Z
 
@@ -19877,10 +19877,10 @@ name: absence due to degeneration
 def: "Absence due to a degenerative process." [PATOC:PortlandMeetingFeb2015]
 subset: absent_slim
 subset: value_slim
-is_a: PATO:0000462 ! absent
 is_a: PATO:0000639 ! degenerate
-intersection_of: PATO:0000462 ! absent
+is_a: PATO:0040060 ! absence of anatomical entity
 intersection_of: PATO:0000639 ! degenerate
+intersection_of: PATO:0040060 ! absence of anatomical entity
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-6601-2165
 
 [Term]
@@ -20804,6 +20804,36 @@ id: PATO:0040057
 name: population process quality
 def: "A quality inhering in a process by virtue of that process having a population or part of a population, where population is defined as a collection of individuals from the same taxonomic class distinguished by one or more characteristics, as participants." [https://www.alliancegenome.org/glossary]
 is_a: PATO:0001236 ! process quality
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040058
+name: absence of physical object
+def: "A quality denoting the lack of a physical entity or object, such as a chemical." [thefreedictionary.:thefreedictionary.]
+subset: absent_slim
+synonym: "physical absence" EXACT []
+is_a: PATO:0001241 ! physical object quality
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040059
+name: absent process
+def: "A quality denoting the lack of a process or function." []
+subset: absent_slim
+synonym: "Process absence" EXACT []
+xref: thefreedictionary.:thefreedictionary.
+is_a: PATO:0001236 ! process quality
+created_by: http://orcid.org/0000-0001-5208-3432
+
+[Term]
+id: PATO:0040060
+name: absence of anatomical entity
+def: "A quality denoting the lack of an anatomical entity or cellular component." [thefreedictionary.:thefreedictionary.]
+comment: Absence of anatomical entity should only be used when all of the entity is absent. For example, absent teeth would mean all teeth are absent not some teeth are absent.
+subset: absent_slim
+synonym: "anatomical entity absence" EXACT []
+is_a: PATO:0000051 ! morphology
+is_a: PATO:0040058 ! absence of physical object
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
