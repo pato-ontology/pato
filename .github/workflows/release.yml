@@ -11,7 +11,11 @@ jobs:
       max-parallel: 1
     steps:
       - name: Checkout main branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
+
+      - name: work around permission issue
+      - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+        
       - name: Refreshing imports
         run: cd src/ontology/ && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' GITHUB_ACTION=true prepare_release_fast
       - name: Create Pull Request
@@ -22,4 +26,3 @@ jobs:
           body: |
             Updates all release files.
           assignees: matentzn
-          base: ${{ github.head_ref }}
