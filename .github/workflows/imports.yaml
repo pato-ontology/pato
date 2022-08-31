@@ -6,19 +6,27 @@ on:
 jobs:
   diff:
     runs-on: ubuntu-latest
-    container: obolibrary/odkfull:v1.3.0
+    container: obolibrary/odkfull:v1.3.1
     strategy:
       max-parallel: 1
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v2
+
+      - name: work around permission issue
+        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
+        
       - name: Refreshing imports
-        run: cd src/ontology/ && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' GITHUB_ACTION=true refresh-imports
+        run: cd src/ontology/ && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' IMP_LARGE=false GITHUB_ACTION=true refresh-imports
+      
+      - name: Refreshing components
+        run: cd src/ontology/ && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' IMP_LARGE=false GITHUB_ACTION=true recreate-components
+      
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          commit-message: Update imports
-          title: 'Update all imports'
+          commit-message: Update imports and components
+          title: 'Update all imports and components'
           body: |
-            Updates all imports.
+            Updates all imports and components.
           assignees: matentzn
