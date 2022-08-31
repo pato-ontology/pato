@@ -5,22 +5,27 @@ on:
     - cron: "0 0 1 * *"
 jobs:
   imports:
-    runs-on: ubuntu-latest
-    container: obolibrary/odkfull:v1.3.1
-    strategy:
-      max-parallel: 1
+    runs-on: macos-latest
+    steps:
+      - uses: docker-practice/actions-setup-docker@master
+      - run: |
+          set -x
+          docker version
+      - name: Install ODK
+        run: docker pull obolibrary/odklite
+      # Checks-out current branch
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v2
 
       - name: work around permission issue
         run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
-        
+      
       - name: Refreshing imports
-        run: cd src/ontology/ && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' IMP_LARGE=false GITHUB_ACTION=true refresh-imports
+        run: cd src/ontology/ && docker run -v $PWD/../../:/work -w /work/src/ontology -e ROBOT_JAVA_ARGS='-Xmx9G' -e JAVA_OPTS='-Xmx9G' --rm obolibrary/odklite make IMP_LARGE=false GITHUB_ACTION=true refresh-imports
       
       - name: Refreshing components
-        run: cd src/ontology/ && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' IMP_LARGE=false GITHUB_ACTION=true recreate-components
+        run: cd src/ontology/ && docker run -v $PWD/../../:/work -w /work/src/ontology -e ROBOT_JAVA_ARGS='-Xmx9G' -e JAVA_OPTS='-Xmx9G' --rm obolibrary/odklite make IMP_LARGE=false GITHUB_ACTION=true recreate-components
       
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
