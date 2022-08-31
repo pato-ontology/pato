@@ -11,10 +11,11 @@ jobs:
       - run: |
           set -x
           docker version
+
       - name: Install ODK
         run: docker pull obolibrary/odklite
       # Checks-out current branch
-    steps:
+
       - name: Checkout main branch
         uses: actions/checkout@v2
 
