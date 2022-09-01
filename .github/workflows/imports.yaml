@@ -23,10 +23,10 @@ jobs:
         run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       
       - name: Refreshing imports
-        run: cd src/ontology/ && docker run -v $PWD/../../:/work -w /work/src/ontology -e ROBOT_JAVA_ARGS='-Xmx9G' -e JAVA_OPTS='-Xmx9G' --rm obolibrary/odklite make IMP_LARGE=false GITHUB_ACTION=true refresh-imports
+        run: cd src/ontology/ && docker run -v $PWD/../../:/work -w /work/src/ontology -e ROBOT_JAVA_ARGS='-Xmx10G' -e JAVA_OPTS='-Xmx10G' --rm obolibrary/odklite make IMP_LARGE=false GITHUB_ACTION=true refresh-imports
       
       - name: Refreshing components
-        run: cd src/ontology/ && docker run -v $PWD/../../:/work -w /work/src/ontology -e ROBOT_JAVA_ARGS='-Xmx9G' -e JAVA_OPTS='-Xmx9G' --rm obolibrary/odklite make IMP_LARGE=false GITHUB_ACTION=true recreate-components
+        run: cd src/ontology/ && docker run -v $PWD/../../:/work -w /work/src/ontology -e ROBOT_JAVA_ARGS='-Xmx10G' -e JAVA_OPTS='-Xmx10G' --rm obolibrary/odklite make IMP_LARGE=false GITHUB_ACTION=true recreate-components
       
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
