@@ -4118,25 +4118,25 @@ is_a: PATO:0001598 ! protruding
 id: PATO:0000644
 name: hyperplastic
 alt_id: PATO:0000943
-def: "A increased size quality inhering in an organ or tissue by virtue of the bearer's exhibiting increased number of cells." [Wikipedia:http\://en.wikipedia.org/wiki/Hyperplastic]
+def: "A physical quality inhering in an organ or tissue by virtue of the bearer's exhibiting an increased number of cells, typically associated with an increase in size." [Wikipedia:Hyperplasia]
 subset: mpath_slim
 subset: value_slim
 synonym: "hyperplasia" EXACT []
 synonym: "overdeveloped" RELATED []
-is_a: PATO:0000586 ! increased size
+is_a: PATO:0002305 ! increased object quality
 relationship: is_opposite_of PATO:0000645 ! hypoplastic
 
 [Term]
 id: PATO:0000645
 name: hypoplastic
 alt_id: PATO:0000942
-def: "A decreased size quality inhering in a bearer by virtue of the bearer's exhibiting reduced number of cells within an organ or tissue." [PATOC:GVG]
+def: "A physical quality inhering in an organ or tissue by virtue of the bearer's exhibiting a decreased number of cells, typically associated with a decrease in size." [PATOC:GVG, Wikipedia:Hyperplasia]
 subset: mpath_slim
 subset: value_slim
 synonym: "hypoplasia" EXACT []
 synonym: "underdeveloped" RELATED []
-is_a: PATO:0000587 ! decreased size
 is_a: PATO:0002290 ! aplastic/hypoplastic
+is_a: PATO:0002303 ! decreased object quality
 relationship: is_opposite_of PATO:0000644 ! hyperplastic
 
 [Term]
