@@ -3658,11 +3658,6 @@
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0000586",
           "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/PATO_0000644"
-        },
-        {
-          "obj": "http://purl.obolibrary.org/obo/PATO_0000586",
-          "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0001571"
         },
         {
@@ -3709,11 +3704,6 @@
           "obj": "http://purl.obolibrary.org/obo/PATO_0000587",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0000599"
-        },
-        {
-          "obj": "http://purl.obolibrary.org/obo/PATO_0000587",
-          "pred": "is_a",
-          "sub": "http://purl.obolibrary.org/obo/PATO_0000645"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0000587",
@@ -6851,6 +6841,11 @@
           "sub": "http://purl.obolibrary.org/obo/PATO_0000918"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0001710",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070064"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/PATO_0001711",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0001648"
@@ -8993,6 +8988,11 @@
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0002303",
           "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0000645"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0002303",
+          "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0000708"
         },
         {
@@ -9349,6 +9349,11 @@
           "obj": "http://purl.obolibrary.org/obo/PATO_0002305",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0000586"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0002305",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0000644"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0002305",
@@ -9979,6 +9984,11 @@
           "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0070042"
+        },
+        {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070062"
         },
         {
           "obj": "http://purl.obolibrary.org/obo/PATO_0015002",
@@ -14605,10 +14615,10 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2022-08-31"
+            "val": "2022-11-03"
           }
         ],
-        "version": "http://purl.obolibrary.org/obo/pato/releases/2022-08-31/pato-base.json"
+        "version": "http://purl.obolibrary.org/obo/pato/releases/2022-11-03/pato-base.json"
       },
       "nodes": [
         {
@@ -26643,9 +26653,9 @@
               }
             ],
             "definition": {
-              "val": "A increased size quality inhering in an organ or tissue by virtue of the bearer's exhibiting increased number of cells.",
+              "val": "A physical quality inhering in an organ or tissue by virtue of the bearer's exhibiting an increased number of cells, typically associated with an increase in size.",
               "xrefs": [
-                "Wikipedia:http://en.wikipedia.org/wiki/Hyperplastic"
+                "Wikipedia:Hyperplasia"
               ]
             },
             "subsets": [
@@ -26684,9 +26694,10 @@
               }
             ],
             "definition": {
-              "val": "A decreased size quality inhering in a bearer by virtue of the bearer's exhibiting reduced number of cells within an organ or tissue.",
+              "val": "A physical quality inhering in an organ or tissue by virtue of the bearer's exhibiting a decreased number of cells, typically associated with a decrease in size.",
               "xrefs": [
-                "PATOC:GVG"
+                "PATOC:GVG",
+                "Wikipedia:Hyperplasia"
               ]
             },
             "subsets": [
@@ -61613,7 +61624,7 @@
         },
         {
           "id": "http://purl.obolibrary.org/obo/PATO_0002175",
-          "lbl": "deviation",
+          "lbl": "spatial deviation",
           "meta": {
             "basicPropertyValues": [
               {
@@ -81928,6 +81939,62 @@
               "val": "A cell morphology that inheres in neurons with bitufted dendritic morphology but with the special feature of a tight fascicular axonal cylinder that resembles a 'horse tail'.",
               "xrefs": [
                 "PMID:15378039"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070062",
+          "lbl": "bistratified dendrite cell morphology",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.org/dc/terms/contributor",
+                "val": "https://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A cell morphology that inheres in neurons with dendrites that stratify at two and only two locations.",
+              "xrefs": [
+                "PMID:34093409"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070064",
+          "lbl": "dendritic field size",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.org/dc/terms/contributor",
+                "val": "https://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://purl.org/dc/terms/contributor",
+                "val": "https://orcid.org/0000-0002-1373-1705"
+              },
+              {
+                "pred": "http://purl.org/dc/terms/contributor",
+                "val": "https://orcid.org/0000-0002-5260-9315"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A 3-D extent quality inhering in a bearer by virtue of the spatial region that is defined by the maximal span of the bearer's dendritic arbor.",
+              "xrefs": [
+                "https://orcid.org/0000-0001-7258-9596",
+                "https://orcid.org/0000-0002-1373-1705",
+                "https://orcid.org/0000-0002-5260-9315"
               ]
             }
           },

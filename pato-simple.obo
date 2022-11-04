@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pato/releases/2022-08-31/pato-simple.owl
+data-version: pato/releases/2022-11-03/pato-simple.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -22,7 +22,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology of phen
 property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And Trait Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
 property_value: IAO:0000700 PATO:0000001
-property_value: owl:versionInfo "2022-08-31" xsd:string
+property_value: owl:versionInfo "2022-11-03" xsd:string
 
 [Term]
 id: PATO:0000000
@@ -4073,25 +4073,25 @@ is_a: PATO:0001598 ! protruding
 id: PATO:0000644
 name: hyperplastic
 alt_id: PATO:0000943
-def: "A increased size quality inhering in an organ or tissue by virtue of the bearer's exhibiting increased number of cells." [Wikipedia:http\://en.wikipedia.org/wiki/Hyperplastic]
+def: "A physical quality inhering in an organ or tissue by virtue of the bearer's exhibiting an increased number of cells, typically associated with an increase in size." [Wikipedia:Hyperplasia]
 subset: mpath_slim
 subset: value_slim
 synonym: "hyperplasia" EXACT []
 synonym: "overdeveloped" RELATED []
-is_a: PATO:0000586 ! increased size
+is_a: PATO:0002305 ! increased object quality
 relationship: is_opposite_of PATO:0000645 ! hypoplastic
 
 [Term]
 id: PATO:0000645
 name: hypoplastic
 alt_id: PATO:0000942
-def: "A decreased size quality inhering in a bearer by virtue of the bearer's exhibiting reduced number of cells within an organ or tissue." [PATOC:GVG]
+def: "A physical quality inhering in an organ or tissue by virtue of the bearer's exhibiting a decreased number of cells, typically associated with a decrease in size." [PATOC:GVG, Wikipedia:Hyperplasia]
 subset: mpath_slim
 subset: value_slim
 synonym: "hypoplasia" EXACT []
 synonym: "underdeveloped" RELATED []
-is_a: PATO:0000587 ! decreased size
 is_a: PATO:0002290 ! aplastic/hypoplastic
+is_a: PATO:0002303 ! decreased object quality
 relationship: is_opposite_of PATO:0000644 ! hyperplastic
 
 [Term]
@@ -15584,7 +15584,7 @@ creation_date: 2010-02-22T03:18:48Z
 
 [Term]
 id: PATO:0002175
-name: deviation
+name: spatial deviation
 def: "A spatial quality inhering in a bearer by virtue of the bearer's changed direction of position towards another entity." [PATO:GVG]
 subset: attribute_slim
 is_a: PATO:0000060 ! spatial pattern
@@ -15596,7 +15596,7 @@ id: PATO:0002176
 name: deviation towards the lateral side
 def: "A deviation quality inhering in a bearer by virtue of the bearer's changed direction of position towards the side." [PATOC:GVG]
 subset: value_slim
-is_a: PATO:0002175 ! deviation
+is_a: PATO:0002175 ! spatial deviation
 relationship: dc-contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2010-02-25T09:16:04Z
 
@@ -15605,7 +15605,7 @@ id: PATO:0002177
 name: deviation towards the medial side
 def: "A deviation quality inhering in a bearer by virtue of the bearer's changed direction of position towards the middle." [PATOC:GVG]
 subset: value_slim
-is_a: PATO:0002175 ! deviation
+is_a: PATO:0002175 ! spatial deviation
 relationship: dc-contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2010-02-25T09:16:56Z
 
@@ -21923,6 +21923,22 @@ id: PATO:0070061
 name: double bouquet morphology
 def: "A cell morphology that inheres in neurons with bitufted dendritic morphology but with the special feature of a tight fascicular axonal cylinder that resembles a 'horse tail'." [PMID:15378039]
 is_a: PATO:0070027 ! bitufted dendrite cell morphology
+
+[Term]
+id: PATO:0070062
+name: bistratified dendrite cell morphology
+def: "A cell morphology that inheres in neurons with dendrites that stratify at two and only two locations." [PMID:34093409]
+is_a: PATO:0010006 ! cell morphology
+relationship: dc-contributor https://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070064
+name: dendritic field size
+def: "A 3-D extent quality inhering in a bearer by virtue of the spatial region that is defined by the maximal span of the bearer's dendritic arbor." [https://orcid.org/0000-0001-7258-9596, https://orcid.org/0000-0002-1373-1705, https://orcid.org/0000-0002-5260-9315]
+is_a: PATO:0001710 ! 3-D extent
+relationship: dc-contributor https://orcid.org/0000-0001-7258-9596
+relationship: dc-contributor https://orcid.org/0000-0002-1373-1705
+relationship: dc-contributor https://orcid.org/0000-0002-5260-9315
 
 [Term]
 id: PATO:0080001
