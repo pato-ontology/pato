@@ -10329,6 +10329,11 @@
           "sub": "http://purl.obolibrary.org/obo/PATO_0070062"
         },
         {
+          "obj": "http://purl.obolibrary.org/obo/PATO_0010006",
+          "pred": "is_a",
+          "sub": "http://purl.obolibrary.org/obo/PATO_0070063"
+        },
+        {
           "obj": "http://purl.obolibrary.org/obo/PATO_0015002",
           "pred": "is_a",
           "sub": "http://purl.obolibrary.org/obo/PATO_0015003"
@@ -11278,10 +11283,10 @@
           },
           {
             "pred": "http://www.w3.org/2002/07/owl#versionInfo",
-            "val": "2022-11-03"
+            "val": "2022-11-09"
           }
         ],
-        "version": "http://purl.obolibrary.org/obo/pato/releases/2022-11-03/pato-simple.json"
+        "version": "http://purl.obolibrary.org/obo/pato/releases/2022-11-09/pato-simple.json"
       },
       "nodes": [
         {
@@ -78768,6 +78773,29 @@
             ],
             "definition": {
               "val": "A cell morphology that inheres in neurons with dendrites that stratify at two and only two locations.",
+              "xrefs": [
+                "PMID:34093409"
+              ]
+            }
+          },
+          "type": "CLASS"
+        },
+        {
+          "id": "http://purl.obolibrary.org/obo/PATO_0070063",
+          "lbl": "monostratified dendrite cell morphology",
+          "meta": {
+            "basicPropertyValues": [
+              {
+                "pred": "http://purl.org/dc/terms/contributor",
+                "val": "https://orcid.org/0000-0001-7258-9596"
+              },
+              {
+                "pred": "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+                "val": "quality"
+              }
+            ],
+            "definition": {
+              "val": "A cell morphology that inheres in neurons with dendrites that stratify at one and only one location.",
               "xrefs": [
                 "PMID:34093409"
               ]
