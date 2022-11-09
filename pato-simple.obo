@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pato/releases/2022-11-03/pato-simple.owl
+data-version: pato/releases/2022-11-09/pato-simple.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -22,7 +22,7 @@ property_value: http://purl.org/dc/elements/1.1/description "An ontology of phen
 property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And Trait Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
 property_value: IAO:0000700 PATO:0000001
-property_value: owl:versionInfo "2022-11-03" xsd:string
+property_value: owl:versionInfo "2022-11-09" xsd:string
 
 [Term]
 id: PATO:0000000
@@ -21928,6 +21928,13 @@ is_a: PATO:0070027 ! bitufted dendrite cell morphology
 id: PATO:0070062
 name: bistratified dendrite cell morphology
 def: "A cell morphology that inheres in neurons with dendrites that stratify at two and only two locations." [PMID:34093409]
+is_a: PATO:0010006 ! cell morphology
+relationship: dc-contributor https://orcid.org/0000-0001-7258-9596
+
+[Term]
+id: PATO:0070063
+name: monostratified dendrite cell morphology
+def: "A cell morphology that inheres in neurons with dendrites that stratify at one and only one location." [PMID:34093409]
 is_a: PATO:0010006 ! cell morphology
 relationship: dc-contributor https://orcid.org/0000-0001-7258-9596
 
