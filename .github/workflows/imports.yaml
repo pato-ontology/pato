@@ -1,8 +1,6 @@
 name: Refresh imports
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 0 1 * *"
 jobs:
   imports:
     runs-on: macos-latest
