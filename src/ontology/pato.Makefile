@@ -38,3 +38,12 @@ test: test_obsolete
 
 benchmark_imports:
 	/usr/bin/time -f %M make refresh-imports
+
+RELEASE_ASSETS_RELEASE_DIR=$(foreach n,$(RELEASE_ASSETS), ../../$(n))
+
+.PHONY: public_release
+public_release:
+	@test $(GHVERSION)
+	ls -alt $(RELEASE_ASSETS_RELEASE_DIR)
+	gh auth login
+	gh release create $(GHVERSION) --notes "TBD." --title "$(GHVERSION)" --draft $(RELEASE_ASSETS_RELEASE_DIR)  --generate-notes
