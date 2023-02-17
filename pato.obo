@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2022-12-15/pato.obo
+data-version: releases/2023-02-17/pato.obo
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -10,7 +10,6 @@ subsetdef: http://purl.obolibrary.org/obo/valid_for_go_annotation_extension ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_gp2term ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_go_ontology ""
 subsetdef: http://purl.obolibrary.org/obo/valid_for_gocam ""
-subsetdef: location_grouping ""
 subsetdef: mpath_slim "Pathology slim"
 subsetdef: relational_slim "Relational slim: types of quality that require an additional entity in order to exist"
 subsetdef: ro-eco ""
@@ -18,11 +17,11 @@ subsetdef: scalar_slim "Scalar slim"
 subsetdef: value_slim "Value slim"
 default-namespace: quality
 ontology: pato
-property_value: http://purl.org/dc/elements/1.1/description "An ontology of phenotypic qualities (properties, attributes or characteristics)." xsd:string
-property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And Trait Ontology" xsd:string
-property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
-property_value: IAO:0000700 PATO:0000001
-property_value: owl:versionInfo "2022-12-15" xsd:string
+property_value: dc-description "An ontology of phenotypic qualities (properties, attributes or characteristics)." xsd:string
+property_value: dc-title "PATO - the Phenotype And Trait Ontology" xsd:string
+property_value: dcterms-license https://creativecommons.org/licenses/by/3.0/
+property_value: has_ontology_root_term PATO:0000001
+property_value: owl:versionInfo "2023-02-17" xsd:string
 
 [Term]
 id: PATO:0000000
@@ -778,7 +777,7 @@ subset: attribute_slim
 subset: mpath_slim
 subset: scalar_slim
 is_a: PATO:0001708 ! 1-D extent
-property_value: seeAlso https://github.com/pato-ontology/pato/issues/337 xsd:string
+property_value: seeAlso "https://github.com/pato-ontology/pato/issues/337" xsd:string
 
 [Term]
 id: PATO:0000123
@@ -5579,7 +5578,7 @@ comment: Thickness often refers to the smallest 1-D extent compared to the other
 subset: attribute_slim
 subset: scalar_slim
 is_a: PATO:0001708 ! 1-D extent
-property_value: seeAlso https://github.com/pato-ontology/pato/issues/337 xsd:string
+property_value: seeAlso "https://github.com/pato-ontology/pato/issues/337" xsd:string
 
 [Term]
 id: PATO:0000916
@@ -5619,7 +5618,7 @@ subset: attribute_slim
 subset: scalar_slim
 synonym: "breadth" RELATED []
 is_a: PATO:0001708 ! 1-D extent
-property_value: seeAlso https://github.com/pato-ontology/pato/issues/337 xsd:string
+property_value: seeAlso "https://github.com/pato-ontology/pato/issues/337" xsd:string
 
 [Term]
 id: PATO:0000922
@@ -19945,7 +19944,7 @@ name: heterotaxic
 def: "An oriented quality inhering in a bearer by virtue of the bearer's being abnormally placed or arranged." [http://medical-dictionary.thefreedictionary.com/heterotaxic]
 is_a: PATO:0000625 ! inverted
 relationship: dc-contributor https://orcid.org/0000-0001-5208-3432
-property_value: http://purl.org/dc/elements/1.1/date 2018-05-21T22:44:38Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2018-05-21T22:44:38Z" xsd:dateTime
 
 [Term]
 id: PATO:0040001
@@ -19961,7 +19960,7 @@ comment: Original label "originates from" changed to current label to differenti
 subset: relational_slim
 is_a: PATO:0000140 ! position
 relationship: dc-contributor https://orcid.org/0000-0001-5208-3432
-property_value: http://purl.org/dc/elements/1.1/date 2018-05-24T04:10:53Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2018-05-24T04:10:53Z" xsd:dateTime
 
 [Term]
 id: PATO:0040003
@@ -19969,7 +19968,7 @@ name: pathogenicity
 def: "The ability of a pathogen to produce an infectious disease or disorder in an another organism." [https://orcid.org/0000-0001-8941-3984]
 is_a: PATO:0001995 ! organismal quality
 relationship: dc-contributor https://orcid.org/0000-0001-5208-3432
-property_value: http://purl.org/dc/elements/1.1/date 2018-08-02T04:24:52Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2018-08-02T04:24:52Z" xsd:dateTime
 
 [Term]
 id: PATO:0040004
@@ -19977,7 +19976,7 @@ name: plush
 def: "A texture quality inhering in a bearer by virtue of the bearer's being covered or partially covered with hair that has increased thickness and softness." [https://orcid.org/0000-0001-5208-3432, https://orcid.org/0000-0003-4606-0597]
 is_a: PATO:0000150 ! texture
 relationship: dc-contributor https://orcid.org/0000-0001-5208-3432
-property_value: http://purl.org/dc/elements/1.1/date 2018-08-02T04:39:30Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2018-08-02T04:39:30Z" xsd:dateTime
 
 [Term]
 id: PATO:0040005
@@ -19986,7 +19985,7 @@ def: "An orientation quality inhering in a bearer by virtue of the bearer having
 synonym: "posteroventrally oriented" EXACT []
 is_a: PATO:0000133 ! orientation
 relationship: dc-contributor https://orcid.org/0000-0001-5208-3432
-property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T22:54:16Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2018-11-12T22:54:16Z" xsd:dateTime
 
 [Term]
 id: PATO:0040006
@@ -19994,7 +19993,7 @@ name: crown like
 def: "A shape quality inhering in a bearer by virtue of the bearer's having a shape like a crown." [https://orcid.org/0000-0003-3162-7490]
 is_a: PATO:0000052 ! shape
 relationship: dc-contributor https://orcid.org/0000-0001-5208-3432
-property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:09:59Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2018-11-12T18:09:59Z" xsd:dateTime
 
 [Term]
 id: PATO:0040007
@@ -20002,7 +20001,7 @@ name: shell shaped
 def: "A shape quality inhering in a bearer by virtue of the bearer's having a shape like a shell." [https://orcid.org/0000-0003-3162-7490]
 is_a: PATO:0000052 ! shape
 relationship: dc-contributor https://orcid.org/0000-0001-5208-3432
-property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:12:47Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2018-11-12T18:12:47Z" xsd:dateTime
 
 [Term]
 id: PATO:0040008
@@ -20010,7 +20009,7 @@ name: fringed
 def: "A shape quality inhering in a bearer by virtue of the bearer's having an ornamental border consisting of short straight or twisted threads or strips hanging from cut or raveled edges or from a separate band." [https://orcid.org/0000-0003-3162-7490, https://www.merriam-webster.com/dictionary/fringe]
 is_a: PATO:0002267 ! edge shape
 relationship: dc-contributor https://orcid.org/0000-0001-5208-3432
-property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:15:10Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2018-11-12T18:15:10Z" xsd:dateTime
 
 [Term]
 id: PATO:0040009
@@ -20018,7 +20017,7 @@ name: bowl shaped
 def: "A concave 3-D shape quality inhering in a bearer by virtue of the bearer's being shaped in the form of a bowl." [https://orcid.org/0000-0003-3162-7490]
 is_a: PATO:0002008 ! concave 3-D shape
 relationship: dc-contributor https://orcid.org/0000-0001-5208-3432
-property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:17:01Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2018-11-12T18:17:01Z" xsd:dateTime
 
 [Term]
 id: PATO:0040010
@@ -20027,7 +20026,7 @@ def: "Mobility relative to a second entity." [https://orcid.org/0000-0003-3162-7
 comment: For example, distinct anteroposterior mobility of palatine relative to mesethmoid.
 is_a: PATO:0000004 ! mobility
 relationship: dc-contributor https://orcid.org/0000-0001-5208-3432
-property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:20:08Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2018-11-12T18:20:08Z" xsd:dateTime
 
 [Term]
 id: PATO:0040011
@@ -20036,7 +20035,7 @@ def: "Immobility relative to a second entity." [https://orcid.org/0000-0003-3162
 comment: For example: distinct anteroposterior immobility of palatine relative to mesethmoid.
 is_a: PATO:0000004 ! mobility
 relationship: dc-contributor https://orcid.org/0000-0001-5208-3432
-property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:21:07Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2018-11-12T18:21:07Z" xsd:dateTime
 
 [Term]
 id: PATO:0040012
@@ -20045,7 +20044,7 @@ def: "A shape that is in the form of a plug, being tube-like and expanded on one
 synonym: "plug like" EXACT []
 is_a: PATO:0000052 ! shape
 relationship: dc-contributor https://orcid.org/0000-0001-5208-3432
-property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:24:41Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2018-11-12T18:24:41Z" xsd:dateTime
 
 [Term]
 id: PATO:0040013
@@ -20054,7 +20053,7 @@ def: "An orientation quality inhering in a bearer by virtue of the bearer having
 synonym: "dorsomedially directed" EXACT []
 is_a: PATO:0000133 ! orientation
 relationship: dc-contributor https://orcid.org/0000-0001-5208-3432
-property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:27:57Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2018-11-12T18:27:57Z" xsd:dateTime
 
 [Term]
 id: PATO:0040014
@@ -20066,7 +20065,7 @@ synonym: "strip like" EXACT []
 synonym: "strip-like" EXACT []
 is_a: PATO:0000052 ! shape
 relationship: dc-contributor https://orcid.org/0000-0001-5208-3432
-property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:31:51Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2018-11-12T18:31:51Z" xsd:dateTime
 
 [Term]
 id: PATO:0040015
@@ -20077,7 +20076,7 @@ synonym: "trough-like" EXACT []
 synonym: "trough-shaped" EXACT []
 is_a: PATO:0002008 ! concave 3-D shape
 relationship: dc-contributor https://orcid.org/0000-0001-5208-3432
-property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:35:51Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2018-11-12T18:35:51Z" xsd:dateTime
 
 [Term]
 id: PATO:0040016
@@ -20085,7 +20084,7 @@ name: pentagonal
 def: "A shape quality inhering in a bearer by virtue of the bearer's having five angles and five sides." [https://orcid.org/0000-0003-3162-7490, https://www.merriam-webster.com/dictionary/pentagonal]
 is_a: PATO:0002006 ! 2-D shape
 relationship: dc-contributor https://orcid.org/0000-0001-5208-3432
-property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T18:39:48Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2018-11-12T18:39:48Z" xsd:dateTime
 
 [Term]
 id: PATO:0040017
@@ -20094,7 +20093,7 @@ def: "A growth quality of occurrent in which the growth of an organism, structur
 synonym: "dysgenesis" NARROW []
 is_a: PATO:0001433 ! growth quality of occurrent
 relationship: dc-contributor https://orcid.org/0000-0001-5208-3432
-property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T19:01:51Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2018-11-12T19:01:51Z" xsd:dateTime
 
 [Term]
 id: PATO:0040019
@@ -20102,7 +20101,7 @@ name: fibrotic
 def: "Fibrosis is the formation of excess fibrous connective tissue in an organ or tissue in a reparative or reactive process." [https://en.wikipedia.org/wiki/Fibrosis]
 is_a: PATO:0000025 ! composition
 relationship: dc-contributor https://orcid.org/0000-0001-5208-3432
-property_value: http://purl.org/dc/elements/1.1/date 2018-11-12T23:16:17Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2018-11-12T23:16:17Z" xsd:dateTime
 
 [Term]
 id: PATO:0040020
@@ -20110,7 +20109,7 @@ name: spayed female
 def: "Female quality of being incapable to reproduce because of functional loss of the ovaries and/or uterus from surgical removal." []
 is_a: PATO:0000383 ! female
 relationship: dc-contributor https://orcid.org/0000-0001-5208-3432
-property_value: http://purl.org/dc/elements/1.1/date 2018-11-16T22:52:49Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2018-11-16T22:52:49Z" xsd:dateTime
 
 [Term]
 id: PATO:0040021
@@ -20125,7 +20124,7 @@ name: flared
 def: "A shape quality inhering in a bearer by virtue of the bearer being expanded laterally and or opened outward in shape." []
 is_a: PATO:0000052 ! shape
 relationship: dc-contributor https://orcid.org/0000-0001-5208-3432
-property_value: http://purl.org/dc/elements/1.1/date 2018-11-19T21:49:07Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2018-11-19T21:49:07Z" xsd:dateTime
 
 [Term]
 id: PATO:0040023
@@ -20135,7 +20134,7 @@ synonym: "disto-medial orientation" EXACT []
 synonym: "distomedial" EXACT []
 is_a: PATO:0000133 ! orientation
 relationship: dc-contributor https://orcid.org/0000-0001-5208-3432
-property_value: http://purl.org/dc/elements/1.1/date 2018-11-19T21:54:33Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2018-11-19T21:54:33Z" xsd:dateTime
 
 [Term]
 id: PATO:0040024
@@ -20363,7 +20362,7 @@ synonym: "male with differences of sexual differentiation" EXACT []
 synonym: "male with disorder of sexual development" EXACT []
 synonym: "male, DSD" EXACT []
 is_a: PATO:0001894 ! phenotypic sex
-property_value: seeAlso https://github.com/pato-ontology/pato/issues/482 xsd:string
+property_value: seeAlso "https://github.com/pato-ontology/pato/issues/482" xsd:string
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
@@ -20424,7 +20423,7 @@ synonym: "female with disorder of sexual development" EXACT []
 synonym: "female, DSD" EXACT []
 synonym: "intersex" BROAD []
 is_a: PATO:0001894 ! phenotypic sex
-property_value: seeAlso https://github.com/pato-ontology/pato/issues/482 xsd:string
+property_value: seeAlso "https://github.com/pato-ontology/pato/issues/482" xsd:string
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
@@ -21501,7 +21500,7 @@ def: "A rate of occurrence that is relatively high." [https://orcid.org/0000-000
 is_a: PATO:0000912 ! increased rate
 is_a: PATO:0050000 ! rate of occurence
 relationship: dc-contributor https://orcid.org/0000-0003-4148-4606
-property_value: http://purl.org/dc/elements/1.1/date 2020-08-19T09:23:19Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2020-08-19T09:23:19Z" xsd:dateTime
 
 [Term]
 id: PATO:0055004
@@ -21510,7 +21509,7 @@ def: "A rate of occurrence that is relatively low." [https://orcid.org/0000-0003
 is_a: PATO:0000911 ! decreased rate
 is_a: PATO:0050000 ! rate of occurence
 relationship: dc-contributor https://orcid.org/0000-0003-4148-4606
-property_value: http://purl.org/dc/elements/1.1/date 2020-08-19T09:24:35Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2020-08-19T09:24:35Z" xsd:dateTime
 
 [Term]
 id: PATO:0055005
@@ -21519,7 +21518,7 @@ def: "A rate of output of a continuous process that is relatively high." [https:
 is_a: PATO:0000912 ! increased rate
 is_a: PATO:0050001 ! rate of continuous process
 relationship: dc-contributor https://orcid.org/0000-0003-4148-4606
-property_value: http://purl.org/dc/elements/1.1/date 2020-08-19T09:24:56Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2020-08-19T09:24:56Z" xsd:dateTime
 
 [Term]
 id: PATO:0055006
@@ -21528,7 +21527,7 @@ def: "A rate of output of a continuous process that is relatively low." [https:/
 is_a: PATO:0000911 ! decreased rate
 is_a: PATO:0050001 ! rate of continuous process
 relationship: dc-contributor https://orcid.org/0000-0003-4148-4606
-property_value: http://purl.org/dc/elements/1.1/date 2020-08-19T09:25:07Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2020-08-19T09:25:07Z" xsd:dateTime
 
 [Term]
 id: PATO:0060001
@@ -21970,7 +21969,7 @@ def: "Quotient (or ratio) of surface area of an organism divided by the mass of 
 is_a: PATO:0001470 ! proportionality to
 is_a: PATO:0001995 ! organismal quality
 relationship: dc-creator http://orcid.org/0000-0002-2908-3327
-property_value: http://purl.org/dc/elements/1.1/date 2021-05-17T13:13:52Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2021-05-17T13:13:52Z" xsd:dateTime
 
 [Term]
 id: PATO:0095002
@@ -21978,7 +21977,7 @@ name: cursorial
 def: "An organismal quality inhering in a bearer by virtue of the bearer's morphological and physiological adaptation for running." []
 is_a: PATO:0001995 ! organismal quality
 relationship: dc-creator http://orcid.org/0000-0002-2908-3327
-property_value: http://purl.org/dc/elements/1.1/date 2021-05-17T13:19:15Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2021-05-17T13:19:15Z" xsd:dateTime
 
 [Term]
 id: PATO:0095003
@@ -21986,7 +21985,7 @@ name: fossorial
 def: "An organismal quality inhering in a bearer by virtue of the bearer's morphological and physiological adaptation for digging and living underground." []
 is_a: PATO:0001995 ! organismal quality
 relationship: dc-creator http://orcid.org/0000-0002-2908-3327
-property_value: http://purl.org/dc/elements/1.1/date 2021-05-17T13:19:57Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2021-05-17T13:19:57Z" xsd:dateTime
 
 [Term]
 id: PATO:0095004
@@ -21994,7 +21993,7 @@ name: arboreal
 def: "An organismal quality inhering in a bearer by virtue of the bearer's morphological and physiological adaptation for living in trees." []
 is_a: PATO:0001995 ! organismal quality
 relationship: dc-creator http://orcid.org/0000-0002-2908-3327
-property_value: http://purl.org/dc/elements/1.1/date 2021-05-17T13:20:31Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2021-05-17T13:20:31Z" xsd:dateTime
 
 [Term]
 id: PATO:0095005
@@ -22002,7 +22001,7 @@ name: crepuscular
 def: "A quality of a process that happens during dawn and dusk." []
 is_a: PATO:0001236 ! process quality
 relationship: dc-creator http://orcid.org/0000-0002-2908-3327
-property_value: http://purl.org/dc/elements/1.1/date 2021-05-17T13:22:18Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2021-05-17T13:22:18Z" xsd:dateTime
 
 [Term]
 id: PATO:0095006
@@ -22010,7 +22009,7 @@ name: nocturnal
 def: "A quality of a process that happens during the hours of darkness." []
 is_a: PATO:0001236 ! process quality
 relationship: dc-creator http://orcid.org/0000-0002-2908-3327
-property_value: http://purl.org/dc/elements/1.1/date 2021-05-17T13:26:38Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2021-05-17T13:26:38Z" xsd:dateTime
 
 [Term]
 id: PATO:0095007
@@ -22018,7 +22017,7 @@ name: diurnal
 def: "A quality of a process that happens during the hours of daylight." []
 is_a: PATO:0001236 ! process quality
 relationship: dc-creator http://orcid.org/0000-0002-2908-3327
-property_value: http://purl.org/dc/elements/1.1/date 2021-05-17T13:27:09Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2021-05-17T13:27:09Z" xsd:dateTime
 
 [Term]
 id: PATO:0095008
@@ -22026,7 +22025,7 @@ name: migratory
 def: "An organismal quality inhering in a bearer by virtue of the bearer's morphological and physiological adaptation for participating in long-distance movement of conspecifics, usually on a seasonal basis." []
 is_a: PATO:0001995 ! organismal quality
 relationship: dc-creator http://orcid.org/0000-0002-2908-3327
-property_value: http://purl.org/dc/elements/1.1/date 2021-05-17T13:28:09Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2021-05-17T13:28:09Z" xsd:dateTime
 
 [Term]
 id: PATO:0095009
@@ -22034,7 +22033,7 @@ name: anecic
 def: "An organismal quality inhering in a bearer by virtue of the bearer's ability to burrow more than 20 cm deep into the soil and make permanent, vertical burrows." []
 is_a: PATO:0001995 ! organismal quality
 relationship: dc-creator http://orcid.org/0000-0002-2908-3327
-property_value: http://purl.org/dc/elements/1.1/date 2021-05-17T13:28:41Z xsd:dateTime
+property_value: http://purl.org/dc/elements/1.1/date "2021-05-17T13:28:41Z" xsd:dateTime
 
 [Typedef]
 id: RO:0002100
@@ -22143,6 +22142,27 @@ xref: http://purl.org/dc/elements/1.1/creator
 is_metadata_tag: true
 
 [Typedef]
+id: dc-description
+name: description
+namespace: uberon
+xref: http://purl.org/dc/elements/1.1/description
+is_metadata_tag: true
+
+[Typedef]
+id: dc-title
+name: title
+namespace: uberon
+xref: http://purl.org/dc/elements/1.1/title
+is_metadata_tag: true
+
+[Typedef]
+id: dcterms-license
+name: license
+namespace: uberon
+xref: http://purl.org/dc/terms/license
+is_metadata_tag: true
+
+[Typedef]
 id: decreased_in_magnitude_relative_to
 name: obsolete decreased_in_magnitude_relative_to
 def: "OBSOLETE. q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) < magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
@@ -22218,6 +22238,14 @@ id: has_divisor_quality
 name: obsolete has_divisor_quality
 comment: refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
 is_obsolete: true
+
+[Typedef]
+id: has_ontology_root_term
+name: has ontology root term
+name: preferred_root
+namespace: uberon
+xref: IAO:0000700
+is_metadata_tag: true
 
 [Typedef]
 id: has_part
@@ -22336,7 +22364,7 @@ property_value: RO:0040042 BFO:0000020
 property_value: RO:0040042 BFO:0000031
 property_value: seeAlso http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections
 property_value: seeAlso http://ontologydesignpatterns.org/wiki/Submissions:PartOf
-property_value: seeAlso http://www.obofoundry.org/ro/#OBO_REL:part_of xsd:string
+property_value: seeAlso "http://www.obofoundry.org/ro/#OBO_REL:part_of" xsd:string
 is_transitive: true
 inverse_of: has_part ! has part
 

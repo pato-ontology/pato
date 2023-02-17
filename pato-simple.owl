@@ -14,14 +14,14 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/pato/pato-simple.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2022-12-15/pato-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2023-02-17/pato-simple.owl"/>
         <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
         <dc:description>An ontology of phenotypic qualities (properties, attributes or characteristics).</dc:description>
         <dc:title>PATO - the Phenotype And Trait Ontology</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
         <oboInOwl:default-namespace>quality</oboInOwl:default-namespace>
         <oboInOwl:hasOBOFormatVersion>1.2</oboInOwl:hasOBOFormatVersion>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-12-15</owl:versionInfo>
+        <owl:versionInfo>2023-02-17</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -102,6 +102,20 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0000424 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000424"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000700 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000700">
+        <oboInOwl:hasDbXref>IAO:0000700</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>has_ontology_root_term</oboInOwl:id>
+        <oboInOwl:is_metadata_tag rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oboInOwl:is_metadata_tag>
+        <oboInOwl:shorthand>has_ontology_root_term</oboInOwl:shorthand>
+        <rdfs:label>has ontology root term</rdfs:label>
+        <rdfs:label>preferred_root</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -229,14 +243,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/pato#location_grouping -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/pato#location_grouping">
-        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
-    </owl:AnnotationProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/pato#mpath_slim -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/pato#mpath_slim">
@@ -306,6 +312,32 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description">
+        <oboInOwl:hasDbXref>http://purl.org/dc/elements/1.1/description</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>dc-description</oboInOwl:id>
+        <oboInOwl:is_metadata_tag rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oboInOwl:is_metadata_tag>
+        <oboInOwl:shorthand>dc-description</oboInOwl:shorthand>
+        <rdfs:label>description</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title">
+        <oboInOwl:hasDbXref>http://purl.org/dc/elements/1.1/title</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>dc-title</oboInOwl:id>
+        <oboInOwl:is_metadata_tag rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oboInOwl:is_metadata_tag>
+        <oboInOwl:shorthand>dc-title</oboInOwl:shorthand>
+        <rdfs:label>title</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.org/dc/terms/contributor -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor">
@@ -315,6 +347,19 @@
         <oboInOwl:is_metadata_tag rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oboInOwl:is_metadata_tag>
         <oboInOwl:shorthand>dc-contributor</oboInOwl:shorthand>
         <rdfs:label>contributor</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
+        <oboInOwl:hasDbXref>http://purl.org/dc/terms/license</oboInOwl:hasDbXref>
+        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>dcterms-license</oboInOwl:id>
+        <oboInOwl:is_metadata_tag rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oboInOwl:is_metadata_tag>
+        <oboInOwl:shorthand>dcterms-license</oboInOwl:shorthand>
+        <rdfs:label>license</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -526,8 +571,8 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
         <oboInOwl:shorthand>part_of</oboInOwl:shorthand>
-        <rdfs:label>part of</rdfs:label>
         <rdfs:label xml:lang="en">part of</rdfs:label>
+        <rdfs:label>part of</rdfs:label>
         <rdfs:label>part_of</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections"/>
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:PartOf"/>
@@ -561,8 +606,8 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
         <oboInOwl:shorthand>has_part</oboInOwl:shorthand>
-        <rdfs:label>has part</rdfs:label>
         <rdfs:label xml:lang="en">has part</rdfs:label>
+        <rdfs:label>has part</rdfs:label>
         <rdfs:label>has_part</rdfs:label>
     </owl:ObjectProperty>
     
@@ -584,8 +629,8 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
         <oboInOwl:id>bearer_of</oboInOwl:id>
         <oboInOwl:shorthand>bearer_of</oboInOwl:shorthand>
-        <rdfs:label>bearer of</rdfs:label>
         <rdfs:label xml:lang="en">has characteristic</rdfs:label>
+        <rdfs:label>bearer of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -618,8 +663,8 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115 xml:lang="en">Relation between a neuron and some structure its axon forms (chemical) synapses in.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Chris Mungall</obo:IAO_0000117>
-        <obo:IAO_0000117>David Osumi-Sutherland</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">David Osumi-Sutherland</obo:IAO_0000117>
+        <obo:IAO_0000117>David Osumi-Sutherland</obo:IAO_0000117>
         <obo:IAO_0000424>&lt;http://purl.obolibrary.org/obo/BFO_0000051&gt; some (
    &lt;http://purl.obolibrary.org/obo/GO_0030424&gt; and &lt;http://purl.obolibrary.org/obo/BFO_0000051&gt; some (
       &lt;http://purl.obolibrary.org/obo/GO_0042734&gt; and &lt;http://purl.obolibrary.org/obo/BFO_0000050&gt; some (
@@ -646,8 +691,8 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:id>has_component</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <oboInOwl:shorthand>has_component</oboInOwl:shorthand>
-        <rdfs:label>has component</rdfs:label>
         <rdfs:label xml:lang="en">has component</rdfs:label>
+        <rdfs:label>has component</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:Componency"/>
     </owl:ObjectProperty>
     
@@ -688,7 +733,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0015007"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>q1 increased_in_magnitude_relative_to q2 if and only if magnitude(q1) &gt; magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -706,7 +751,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0015008"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) &lt; magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -730,7 +775,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0015011"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>s3 has_cross_section s3 if and only if : there exists some 2d plane that intersects the bearer of s3, and the impression of s3 upon that plane has shape quality s2.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -746,7 +791,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0015012"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>q1 reciprocal_of q2 if and only if : q1 and q2 are relational qualities and a phenotype e q1 e2 mutually implies a phenotype e2 q2 e.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0002-6601-2165</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1351,7 +1396,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000016"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A scalar optical property that is the intensity, value or amount of perceived light.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5526,7 +5571,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000327"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A color brightness which is relatively low.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -5548,7 +5593,7 @@ OBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qual
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000328"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A color saturation which is of low purity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9235,7 +9280,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000584"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An increased size quality inhering in a bearer by virtue of the bearer&apos;s exhibiting enlargement of a cell or constituent group of cells (for example, organ).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9258,7 +9303,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000585"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A decreased size quality inhering in a bearer by virtue of the bearer&apos;s exhibiting reduced size of a cell or constituent group of cells (for example, organ).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9331,7 +9376,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000588"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality inhering in a bearer by virtue of the bearer&apos;s being a remnant structure from earlier development or evolution.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9744,7 +9789,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000614"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A pattern where all the repeated elements are oriented in the same direction.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9810,7 +9855,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000617"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A shape quality inhering in a bearer by virtue of the bearer&apos;s having one or more angle(s) in its length.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10280,7 +10325,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000640"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A structural quality inhering in a bearer by virtue of the bearer&apos;s exhibiting an alteration in size, shape or organization of its constituent cells.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10409,7 +10454,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000646"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A morphological quality inhering in a bearer by virtue of the bearer&apos;s being distorted during formation.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -10655,7 +10700,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000665"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A color brightness which is relatively high.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -14382,7 +14427,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000954"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Red color having medium to high brightness and low to moderate saturation.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -18136,7 +18181,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001229"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A color saturation which is of high purity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -18670,7 +18715,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001258"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Pink color having medium brightness and moderate saturation.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -19513,7 +19558,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001301"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An optical quality that is the mixture, purity or pattern of wavelengths of light perceived by the observer.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -20007,7 +20052,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001324"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>pennate</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>https://orcid.org/0000-0002-2908-3327</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -20035,7 +20080,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001325"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>centric</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>https://orcid.org/0000-0002-2908-3327</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -21549,7 +21594,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001401"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A cellular potency that is the capacity to form multiple differentiated cell types of a specific lineage and lack self renewing capacity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -22195,7 +22240,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001433"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality of a single process which describes the growth of an organism, structure, or group of organisms.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -22339,7 +22384,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001440"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A cellular adhesivity quality inhering in a molecule in one cell by virtue of the bearer&apos;s attachment to an identical molecule in an adjacent cell.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:GO</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GO:GO</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -22359,7 +22404,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001441"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A cellular adhesivity quality inhering in a molecule in one cell by virtue of the bearer&apos;s attachment to an nonidentical molecule in an adjacent cell.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:GO</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GO:GO</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -23349,7 +23394,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001490"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A growth quality of a process inhering in an organism, structure, or group of organisms by virtue of the bearer&apos;s reduced or increased growth.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -23389,7 +23434,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001492"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The rate or speed of the change in size of an individual entity or change in number of a population.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-9900-7880</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0002-9900-7880</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>https://orcid.org/0000-0003-4606-0597</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -23716,7 +23761,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001509"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality of a single physical entity that arises by virtue of whether the bearer exhibits the ability to perform a regular function(s).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -23737,7 +23782,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001510"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A functionality quality held by the bearer when the latter is able to perform a regular function(s).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -25711,7 +25756,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001607"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A tangled quality inhering in a bearer by virtue of the bearer&apos;s being not possible to unravel.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -27053,7 +27098,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001673"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Structure quality that is the presence of at least one sac-like closed membranous structure containing one or more liquid or solid organism substances.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -28037,7 +28082,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001720"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A behavioral quality which holds by virtue of extent of the receptiveness of a female to male advances.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:GO</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GO:GO</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -29026,13 +29071,13 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001769"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A positional quality inhering in a bearer by virtue of the bearer&apos;s location of features or characteristics along an axis.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001769"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>cellular polarity</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -29143,7 +29188,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001775"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A positional quality inhering in a bearer by virtue of the bearer&apos;s location of features or characteristics along the dorsal-ventral axis.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -31175,7 +31220,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001872"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A convex 3-D shape quality inhering in a bearer by virtue of the bearer&apos;s resemblance to a cube (a 3-D shape with a square cross section).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -31205,7 +31250,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001873"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A convex 3-D shape quality inhering in a bearer by virtue of the bearer&apos;s exhibiting a consistently-sized round cross section.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -31697,7 +31742,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001896"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A structure quality inhering in a bearer by virtue of the bearer&apos;s lacking of a three dimensional space surrounded by one or more anatomical structures and containing one or more anatomical substances.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -31718,7 +31763,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001897"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A structure quality inhering in a bearer by virtue of the bearer&apos;s having a three dimensional space surrounded by one or more anatomical structures and containing one or more anatomical substances.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -33492,7 +33537,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001987"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A structural quality inhering in a bearer by virtue of the bearer&apos;s having a three dimensional cavity with a narrow or no opening, and often containing an anatomical substance.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -33705,7 +33750,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001998"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality inhering in a bearer by virtue of its visibility.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -33867,7 +33912,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002005"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Surface shape that refers to the inward or outward curvature of the surface.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -33963,7 +34008,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002009"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A shape quality inhering in a bearer by virtue of the degree to which there are subdivisions or offshoots in a bearer entity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -34004,7 +34049,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002011"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A structural quality which is held by a bearer when the latter&apos;s disposition the presence of abnormally proliferating masses of cells.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -34127,7 +34172,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002019"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A growth quality of occurrent in which the growth of an organism, structure or group of organisms does not occur.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -34204,7 +34249,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002023"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A positional quality inhering in a bearer by virtue of the bearer&apos;s location of features or characteristics along an apical-basal axis.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -34225,7 +34270,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002024"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A positional quality inhering in a bearer by virtue of the bearer&apos;s location of features or characteristics along the anterior-posterior axis.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -36915,7 +36960,7 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002146"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality inhering in a bearer by virtue of the severity of infectious disease caused by the bearer in a target organism.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>https://orcid.org/0000-0001-8941-3984</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -46113,7 +46158,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0010000"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A structural quality inhering in the bearer by virtue of the bearer consisting of a single, maximally connected structure.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dos</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:dos</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -46133,7 +46178,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0010001"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A structural quality inhering in the bearer by virtue of the bearer consisting of multiple structures lacking any physical connection to each other.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dos</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:dos</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -46943,7 +46988,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0020000"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A biological sex quality inhering in an individual based upon genotypic composition of sex chromosomes.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -46963,7 +47008,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0020001"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A biological sex quality inhering in an individual based upon genotypic composition that confers the capability for an organism to differentiate male gonads.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -46983,7 +47028,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0020002"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A biological sex quality inhering in an individual or a population based upon genotypic composition that confers the capability for an organism to differentiate female gonads.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATOC:MAH</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PATOC:MAH</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -47407,7 +47452,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0040004"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A texture quality inhering in a bearer by virtue of the bearer&apos;s being covered or partially covered with hair that has increased thickness and softness.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>https://orcid.org/0000-0003-4606-0597</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -48147,7 +48192,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0040042"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A proportionality quality inhering in a bearer by virtue of the bearer&apos;s decreased magnitude in respect to a related entity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -48172,7 +48217,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0040043"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A proportionality quality inhering in a bearer by virtue of the bearer&apos;s increased magnitude in respect to a related entity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -48212,7 +48257,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0040045"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The rate or speed of the change in in number of a population.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-9900-7880</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0002-9900-7880</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>https://orcid.org/0000-0003-4606-0597</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -48232,7 +48277,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0040046"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>The rate or speed of the change in size of an individual entity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-9900-7880</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://orcid.org/0000-0002-9900-7880</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>https://orcid.org/0000-0003-4606-0597</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -50597,7 +50642,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0070006"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A cell morphology that inheres in neurons which have two principal dendrites that emerge from the soma and begin to branch some distance from it, have few spines, and branch in narrow fields. This is in contrast to bitufted morphology where branching occurs close to the soma.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:18568015</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:18568015</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1016/b978-0-12-369497-3.10004-4</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -50728,8 +50773,8 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0070012"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A cell morphology that inheres in neurons which have two clusters of primary dendrites that originate directly and extend from opposite ends of the soma, and axons that form a plexus which spreads widely. Compared to the narrow vertical axonal projection of bipolar morphology, and the &apos;horse-tail&apos; axonal cluster of double boquet cells, bitufted morphology has wide horizontal axonal spans, and branching that occur close to the soma. Their vertical projection is also less extensive and crosses mostly to neighboring layers.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:15378039</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:18568015</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:15378039</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:18568015</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>doi:10.1016/b978-0-12-369497-3.10004-4</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -50954,7 +50999,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0070027"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A cell morphology that inheres in neurons with dendrites that are bidirectional, emerging from opposite ends of the soma, with the two arbors extending in radial or tangential directions.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:18568015</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:18568015</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -51233,7 +51278,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0070046"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An affinity inhering in an anatomical structure by virtue of the bearer exhibiting a molecular interaction that stains and colors, pale-pink, with Wright-Giemsa stain.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:add</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:add</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -51252,7 +51297,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0070047"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>An affinity inhering in an anatomical structure by virtue of the bearer exhibiting a molecular interaction for both basic and acid stains under specific pH conditions.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:add</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>GOC:add</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -51308,7 +51353,7 @@ height&apos;).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0070061"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A cell morphology that inheres in neurons with bitufted dendritic morphology but with the special feature of a tight fascicular axonal cylinder that resembles a &apos;horse tail&apos;.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:15378039</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:15378039</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -51577,5 +51622,5 @@ height&apos;).</rdfs:comment>
 
 
 
-<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.25) https://github.com/owlcs/owlapi -->
 
