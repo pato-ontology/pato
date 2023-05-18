@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2023-02-17/pato.obo
+data-version: releases/2023-05-18/pato.obo
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -21,7 +21,7 @@ property_value: dc-description "An ontology of phenotypic qualities (properties,
 property_value: dc-title "PATO - the Phenotype And Trait Ontology" xsd:string
 property_value: dcterms-license https://creativecommons.org/licenses/by/3.0/
 property_value: has_ontology_root_term PATO:0000001
-property_value: owl:versionInfo "2023-02-17" xsd:string
+property_value: owl:versionInfo "2023-05-18" xsd:string
 
 [Term]
 id: PATO:0000000
@@ -22040,7 +22040,7 @@ id: RO:0002100
 name: has soma location
 def: "Relation between a neuron and an anatomical structure that its soma is part of." []
 property_value: IAO:0000114 IAO:0000125
-property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
+property_value: IAO:0000117 https://orcid.org/0000-0002-7073-9172
 property_value: RO:0001900 RO:0001901
 transitive_over: part_of ! part_of
 expand_expression_to: "BFO_0000051 some (\n   GO_0043025 and   BFO_0000050 some ?Y)" []
@@ -22051,9 +22051,8 @@ name: axon synapses in
 def: "Relation between a neuron and some structure its axon forms (chemical) synapses in." []
 property_value: http://purl.org/spar/cito/citesAsAuthority http://www.ncbi.nlm.nih.gov/pubmed/22402613
 property_value: IAO:0000114 IAO:0000125
-property_value: IAO:0000117 "Chris Mungall" xsd:string
-property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
-property_value: IAO:0000117 "David Osumi-Sutherland" xsd:string
+property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
+property_value: IAO:0000117 https://orcid.org/0000-0002-7073-9172
 property_value: RO:0001900 RO:0001901
 transitive_over: part_of ! part_of
 expand_expression_to: "BFO_0000051 some (\n   GO_0030424 and BFO_0000051 some (\n      GO_0042734 and BFO_0000050 some (\n         GO_0045202 and BFO_0000050 some ?Y)))" []
@@ -22063,7 +22062,7 @@ id: RO:0002503
 name: towards
 def: "q towards e2 if and only if q is a relational quality such that q inheres-in some e, and e != e2 and q is dependent on e2" []
 property_value: IAO:0000116 "This relation is provided in order to support the use of relational qualities such as 'concentration of'; for example, the concentration of C in V is a quality that inheres in V, but pertains to C." xsd:string
-property_value: IAO:0000117 "Chris Mungall" xsd:string
+property_value: IAO:0000117 https://orcid.org/0000-0002-6601-2165
 property_value: IAO:0000119 http://www.ncbi.nlm.nih.gov/pubmed/20064205
 
 [Typedef]
