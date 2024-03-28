@@ -22,9 +22,9 @@
         "val" : "1.2"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2023-05-18"
+        "val" : "2024-03-28"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/pato/releases/2023-05-18/pato-simple.json"
+      "version" : "http://purl.obolibrary.org/obo/pato/releases/2024-03-28/pato-simple.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000050",
@@ -93,9 +93,6 @@
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
         }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "uberon"
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
           "val" : "part_of"
         }, {
@@ -107,6 +104,9 @@
         }, {
           "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
           "val" : "http://www.obofoundry.org/ro/#OBO_REL:part_of"
+        }, {
+          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+          "val" : "https://wiki.geneontology.org/Part_of"
         } ]
       }
     }, {
@@ -155,9 +155,6 @@
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
         }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "uberon"
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
           "val" : "has_part"
         } ]
@@ -176,7 +173,10 @@
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "uberon"
+          "val" : "external"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_class_level",
+          "val" : "true"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#is_metadata_tag",
           "val" : "true"
@@ -20684,14 +20684,13 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0001470",
-      "lbl" : "proportionality to",
+      "lbl" : "ratio",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A quality inhering in a bearer by virtue of the bearer's magnitude in respect to a related entity.",
-          "xrefs" : [ "PATOC:nw" ]
+          "val" : "A quality inhering in a bearer by virtue of the bearer's magnitude in proportion to the magnitude of another entity."
         },
-        "comments" : [ "Examples: height to weight; brain size to body size. These could all be children of proportionality. Proportions can be measured as ratios. Some measures may be dimensionless. Not all ratios measure proportionality, eg m/s measures velocity which is not a proportion in the sense defined above, it is a quality in its own right." ],
+        "comments" : [ "Examples: height to weight; brain size to body size; root to shoot ratio; urinary sodium to potassium ratio. waist-hip ratio." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim", "http://purl.obolibrary.org/obo/pato#relational_slim" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -20701,10 +20700,10 @@
           "val" : "proportionality"
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "quotient"
+          "val" : "proportionality to"
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "ratio"
+          "val" : "quotient"
         }, {
           "pred" : "hasRelatedSynonym",
           "val" : "rate"
@@ -44938,12 +44937,11 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0040042",
-      "lbl" : "decreased proportionality to",
+      "lbl" : "decreased ratio",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A proportionality quality inhering in a bearer by virtue of the bearer's decreased magnitude in respect to a related entity.",
-          "xrefs" : [ "https://orcid.org/0000-0001-5208-3432" ]
+          "val" : "A decreased quality inhering in a bearer by virtue of the bearer's decreased magnitude in proportion to the magnitude of another entity."
         },
         "comments" : [ "Example: decreased proportion of CD4 T cells relative to total T cells." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#relational_slim" ],
@@ -44955,10 +44953,10 @@
           "val" : "decreased proportionality"
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "decreased quotient"
+          "val" : "decreased proportionality to"
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "decreased ratio"
+          "val" : "decreased quotient"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/terms/contributor",
@@ -44970,12 +44968,11 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0040043",
-      "lbl" : "increased proportionality to",
+      "lbl" : "increased ratio",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A proportionality quality inhering in a bearer by virtue of the bearer's increased magnitude in respect to a related entity.",
-          "xrefs" : [ "https://orcid.org/0000-0001-5208-3432" ]
+          "val" : "An increased quality inhering in a bearer by virtue of the bearer's increased magnitude in proportion to the magnitude of another entity."
         },
         "comments" : [ "Example: increased proportion of CD4 T cells relative to total T cells." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#relational_slim" ],
@@ -44987,10 +44984,10 @@
           "val" : "increased proportionality"
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "increased quotient"
+          "val" : "increased proportionality to"
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "increased ratio"
+          "val" : "increased quotient"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/terms/contributor",
@@ -48737,7 +48734,7 @@
       "type" : "PROPERTY",
       "meta" : {
         "definition" : {
-          "val" : "Relation between a neuron and an anatomical structure that its soma is part of."
+          "val" : "Relation between a neuron and a material anatomical entity that its soma is part of."
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
@@ -48808,9 +48805,6 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "external"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "uberon"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
           "val" : "has_component"
@@ -49261,107 +49255,20 @@
         "deprecated" : true
       }
     }, {
-      "id" : "http://purl.org/dc/elements/1.1/creator",
-      "lbl" : "creator",
-      "type" : "PROPERTY",
-      "meta" : {
-        "xrefs" : [ {
-          "val" : "http://purl.org/dc/elements/1.1/creator"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "uberon"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_metadata_tag",
-          "val" : "true"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
-          "val" : "dc-creator"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.org/dc/elements/1.1/description",
-      "lbl" : "description",
-      "type" : "PROPERTY",
-      "meta" : {
-        "xrefs" : [ {
-          "val" : "http://purl.org/dc/elements/1.1/description"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "uberon"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_metadata_tag",
-          "val" : "true"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
-          "val" : "dc-description"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.org/dc/elements/1.1/title",
-      "lbl" : "title",
-      "type" : "PROPERTY",
-      "meta" : {
-        "xrefs" : [ {
-          "val" : "http://purl.org/dc/elements/1.1/title"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "uberon"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_metadata_tag",
-          "val" : "true"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
-          "val" : "dc-title"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.org/dc/terms/contributor",
-      "lbl" : "contributor",
-      "type" : "PROPERTY",
-      "meta" : {
-        "xrefs" : [ {
-          "val" : "http://purl.org/dc/terms/contributor"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "uberon"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_metadata_tag",
-          "val" : "true"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
-          "val" : "dc-contributor"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.org/dc/terms/license",
-      "lbl" : "license",
-      "type" : "PROPERTY",
-      "meta" : {
-        "xrefs" : [ {
-          "val" : "http://purl.org/dc/terms/license"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "uberon"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_metadata_tag",
-          "val" : "true"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
-          "val" : "dcterms-license"
-        } ]
-      }
-    }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#SubsetProperty",
       "lbl" : "subset_property",
       "type" : "PROPERTY"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#consider",
       "lbl" : "consider",
+      "type" : "PROPERTY"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+      "lbl" : "created by",
+      "type" : "PROPERTY"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+      "lbl" : "creation date",
       "type" : "PROPERTY"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
@@ -49394,6 +49301,10 @@
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
       "lbl" : "has_related_synonym",
+      "type" : "PROPERTY"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#id",
+      "lbl" : "id",
       "type" : "PROPERTY"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#inSubset",
@@ -57213,9 +57124,17 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001470"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0040042",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0002303"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0040043",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001470"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0040043",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0002305"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0040044",
       "pred" : "is_a",

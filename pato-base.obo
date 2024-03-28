@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pato/releases/2023-05-18/pato-base.owl
+data-version: pato/releases/2024-03-28/pato-base.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -17,7 +17,7 @@ property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And 
 property_value: http://purl.org/dc/elements/1.1/type IAO:8000001
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
 property_value: IAO:0000700 PATO:0000001
-property_value: owl:versionInfo "2023-05-18" xsd:string
+property_value: owl:versionInfo "2024-03-28" xsd:string
 
 [Term]
 id: CL:0000000
@@ -9504,16 +9504,16 @@ is_a: PATO:0000406 ! curved
 
 [Term]
 id: PATO:0001470
-name: proportionality to
-def: "A quality inhering in a bearer by virtue of the bearer's magnitude in respect to a related entity." [PATOC:nw]
-comment: Examples: height to weight; brain size to body size. These could all be children of proportionality. Proportions can be measured as ratios. Some measures may be dimensionless. Not all ratios measure proportionality, eg m/s measures velocity which is not a proportion in the sense defined above, it is a quality in its own right.
+name: ratio
+def: "A quality inhering in a bearer by virtue of the bearer's magnitude in proportion to the magnitude of another entity." [] {http://purl.org/dc/terms/contributor="https://orcid.org/0000-0001-8314-2140"}
+comment: Examples: height to weight; brain size to body size; root to shoot ratio; urinary sodium to potassium ratio. waist-hip ratio. {http://purl.org/dc/terms/contributor="https://orcid.org/0000-0001-8314-2140"}
 subset: attribute_slim
 subset: relational_slim
 synonym: "proportion" EXACT []
 synonym: "proportionality" EXACT []
+synonym: "proportionality to" EXACT []
 synonym: "quotient" EXACT []
 synonym: "rate" RELATED []
-synonym: "ratio" EXACT []
 is_a: PATO:0001018 ! physical quality
 
 [Term]
@@ -20668,28 +20668,30 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001
 
 [Term]
 id: PATO:0040042
-name: decreased proportionality to
-def: "A proportionality quality inhering in a bearer by virtue of the bearer's decreased magnitude in respect to a related entity." [https://orcid.org/0000-0001-5208-3432]
+name: decreased ratio
+def: "A decreased quality inhering in a bearer by virtue of the bearer's decreased magnitude in proportion to the magnitude of another entity." [] {http://purl.org/dc/terms/contributor="https://orcid.org/0000-0001-8314-2140", http://purl.org/dc/terms/contributor="https://orcid.org/0000-0001-5208-3432"}
 comment: Example: decreased proportion of CD4 T cells relative to total T cells.
 subset: relational_slim
 synonym: "decreased proportion" EXACT []
 synonym: "decreased proportionality" EXACT []
+synonym: "decreased proportionality to" EXACT []
 synonym: "decreased quotient" EXACT []
-synonym: "decreased ratio" EXACT []
-is_a: PATO:0001470 ! proportionality to
+intersection_of: PATO:0001470 ! ratio
+intersection_of: PATO:0002301 ! decreased quality
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-5208-3432
 
 [Term]
 id: PATO:0040043
-name: increased proportionality to
-def: "A proportionality quality inhering in a bearer by virtue of the bearer's increased magnitude in respect to a related entity." [https://orcid.org/0000-0001-5208-3432]
+name: increased ratio
+def: "An increased quality inhering in a bearer by virtue of the bearer's increased magnitude in proportion to the magnitude of another entity." [] {http://purl.org/dc/terms/contributor="https://orcid.org/0000-0001-8314-2140", http://purl.org/dc/terms/contributor="https://orcid.org/0000-0001-5208-3432"}
 comment: Example: increased proportion of CD4 T cells relative to total T cells.
 subset: relational_slim
 synonym: "increased proportion" EXACT []
 synonym: "increased proportionality" EXACT []
+synonym: "increased proportionality to" EXACT []
 synonym: "increased quotient" EXACT []
-synonym: "increased ratio" EXACT []
-is_a: PATO:0001470 ! proportionality to
+intersection_of: PATO:0001470 ! ratio
+intersection_of: PATO:0002300 ! increased quality
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-5208-3432
 
 [Term]
@@ -22516,7 +22518,7 @@ creation_date: 2020-10-30T08:08:48Z
 id: PATO:0095001
 name: organismal area to mass ratio
 def: "Quotient (or ratio) of surface area of an organism divided by the mass of the same organism" []
-is_a: PATO:0001470 ! proportionality to
+is_a: PATO:0001470 ! ratio
 is_a: PATO:0001995 ! organismal quality
 property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-2908-3327
 property_value: http://purl.org/dc/elements/1.1/date "2021-05-17T13:13:52Z" xsd:dateTime

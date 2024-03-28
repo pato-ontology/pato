@@ -14,14 +14,14 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/pato/pato-simple.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2023-05-18/pato-simple.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2024-03-28/pato-simple.owl"/>
         <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
         <dc:description>An ontology of phenotypic qualities (properties, attributes or characteristics).</dc:description>
         <dc:title>PATO - the Phenotype And Trait Ontology</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
         <oboInOwl:default-namespace>quality</oboInOwl:default-namespace>
         <oboInOwl:hasOBOFormatVersion>1.2</oboInOwl:hasOBOFormatVersion>
-        <owl:versionInfo>2023-05-18</owl:versionInfo>
+        <owl:versionInfo>2024-03-28</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -109,8 +109,9 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000700">
         <oboInOwl:hasDbXref>IAO:0000700</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
         <oboInOwl:id>has_ontology_root_term</oboInOwl:id>
+        <oboInOwl:is_class_level rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oboInOwl:is_class_level>
         <oboInOwl:is_metadata_tag rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oboInOwl:is_metadata_tag>
         <oboInOwl:shorthand>has_ontology_root_term</oboInOwl:shorthand>
         <rdfs:label>has ontology root term</rdfs:label>
@@ -295,14 +296,7 @@
 
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
-        <oboInOwl:hasDbXref>http://purl.org/dc/elements/1.1/creator</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>dc-creator</oboInOwl:id>
-        <oboInOwl:is_metadata_tag rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oboInOwl:is_metadata_tag>
-        <oboInOwl:shorthand>dc-creator</oboInOwl:shorthand>
-        <rdfs:label>creator</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
     
 
 
@@ -314,53 +308,25 @@
 
     <!-- http://purl.org/dc/elements/1.1/description -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description">
-        <oboInOwl:hasDbXref>http://purl.org/dc/elements/1.1/description</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>dc-description</oboInOwl:id>
-        <oboInOwl:is_metadata_tag rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oboInOwl:is_metadata_tag>
-        <oboInOwl:shorthand>dc-description</oboInOwl:shorthand>
-        <rdfs:label>description</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/title -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title">
-        <oboInOwl:hasDbXref>http://purl.org/dc/elements/1.1/title</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>dc-title</oboInOwl:id>
-        <oboInOwl:is_metadata_tag rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oboInOwl:is_metadata_tag>
-        <oboInOwl:shorthand>dc-title</oboInOwl:shorthand>
-        <rdfs:label>title</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
     
 
 
     <!-- http://purl.org/dc/terms/contributor -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor">
-        <oboInOwl:hasDbXref>http://purl.org/dc/terms/contributor</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>dc-contributor</oboInOwl:id>
-        <oboInOwl:is_metadata_tag rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oboInOwl:is_metadata_tag>
-        <oboInOwl:shorthand>dc-contributor</oboInOwl:shorthand>
-        <rdfs:label>contributor</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
     
 
 
     <!-- http://purl.org/dc/terms/license -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
-        <oboInOwl:hasDbXref>http://purl.org/dc/terms/license</oboInOwl:hasDbXref>
-        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>dcterms-license</oboInOwl:id>
-        <oboInOwl:is_metadata_tag rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</oboInOwl:is_metadata_tag>
-        <oboInOwl:shorthand>dcterms-license</oboInOwl:shorthand>
-        <rdfs:label>license</rdfs:label>
-    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
     
 
 
@@ -394,13 +360,17 @@
 
     <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by"/>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by">
+        <rdfs:label>created by</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#creation_date">
+        <rdfs:label>creation date</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -476,7 +446,9 @@
 
     <!-- http://www.geneontology.org/formats/oboInOwl#id -->
 
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id">
+        <rdfs:label>id</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -564,7 +536,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <oboInOwl:hasDbXref>BFO:0000050</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
         <oboInOwl:id>part_of</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_gp2term"/>
@@ -576,6 +547,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <rdfs:label>part_of</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections"/>
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:PartOf"/>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://wiki.geneontology.org/Part_of</rdfs:seeAlso>
         <rdfs:seeAlso>http://www.obofoundry.org/ro/#OBO_REL:part_of</rdfs:seeAlso>
     </owl:ObjectProperty>
     
@@ -600,7 +572,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <oboInOwl:hasDbXref>BFO:0000051</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
         <oboInOwl:id>has_part</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
@@ -643,7 +614,7 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
         </owl:propertyChainAxiom>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115 xml:lang="en">Relation between a neuron and an anatomical structure that its soma is part of.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Relation between a neuron and a material anatomical entity that its soma is part of.</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-7073-9172"/>
         <obo:IAO_0000424>&lt;http://purl.obolibrary.org/obo/BFO_0000051&gt; some (
    &lt;http://purl.obolibrary.org/obo/GO_0043025&gt; and   &lt;http://purl.obolibrary.org/obo/BFO_0000050&gt; some ?Y)</obo:IAO_0000424>
@@ -686,7 +657,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
         <oboInOwl:hasDbXref>RO:0002180</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace>external</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasOBONamespace>uberon</oboInOwl:hasOBONamespace>
         <oboInOwl:id>has_component</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <oboInOwl:shorthand>has_component</oboInOwl:shorthand>
@@ -22981,24 +22951,30 @@ See https://github.com/pato-ontology/pato/issues/331.</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001470">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001018"/>
-        <obo:IAO_0000115>A quality inhering in a bearer by virtue of the bearer&apos;s magnitude in respect to a related entity.</obo:IAO_0000115>
+        <obo:IAO_0000115>A quality inhering in a bearer by virtue of the bearer&apos;s magnitude in proportion to the magnitude of another entity.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>proportion</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>proportionality</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>proportionality to</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>quotient</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>ratio</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym>rate</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id>PATO:0001470</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#relational_slim"/>
-        <rdfs:comment>Examples: height to weight; brain size to body size. These could all be children of proportionality. Proportions can be measured as ratios. Some measures may be dimensionless. Not all ratios measure proportionality, eg m/s measures velocity which is not a proportion in the sense defined above, it is a quality in its own right.</rdfs:comment>
-        <rdfs:label>proportionality to</rdfs:label>
+        <rdfs:comment>Examples: height to weight; brain size to body size; root to shoot ratio; urinary sodium to potassium ratio. waist-hip ratio.</rdfs:comment>
+        <rdfs:label>ratio</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001470"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A quality inhering in a bearer by virtue of the bearer&apos;s magnitude in respect to a related entity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:nw</oboInOwl:hasDbXref>
+        <owl:annotatedTarget>A quality inhering in a bearer by virtue of the bearer&apos;s magnitude in proportion to the magnitude of another entity.</owl:annotatedTarget>
+        <terms:contributor>https://orcid.org/0000-0001-8314-2140</terms:contributor>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001470"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>Examples: height to weight; brain size to body size; root to shoot ratio; urinary sodium to potassium ratio. waist-hip ratio.</owl:annotatedTarget>
+        <terms:contributor>https://orcid.org/0000-0001-8314-2140</terms:contributor>
     </owl:Axiom>
     
 
@@ -48175,23 +48151,25 @@ height&apos;).</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040042">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001470"/>
-        <obo:IAO_0000115>A proportionality quality inhering in a bearer by virtue of the bearer&apos;s decreased magnitude in respect to a related entity.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002303"/>
+        <obo:IAO_0000115>A decreased quality inhering in a bearer by virtue of the bearer&apos;s decreased magnitude in proportion to the magnitude of another entity.</obo:IAO_0000115>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
         <oboInOwl:hasExactSynonym>decreased proportion</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>decreased proportionality</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>decreased proportionality to</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>decreased quotient</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>decreased ratio</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id>PATO:0040042</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#relational_slim"/>
         <rdfs:comment>Example: decreased proportion of CD4 T cells relative to total T cells.</rdfs:comment>
-        <rdfs:label>decreased proportionality to</rdfs:label>
+        <rdfs:label>decreased ratio</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0040042"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A proportionality quality inhering in a bearer by virtue of the bearer&apos;s decreased magnitude in respect to a related entity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
+        <owl:annotatedTarget>A decreased quality inhering in a bearer by virtue of the bearer&apos;s decreased magnitude in proportion to the magnitude of another entity.</owl:annotatedTarget>
+        <terms:contributor>https://orcid.org/0000-0001-5208-3432</terms:contributor>
+        <terms:contributor>https://orcid.org/0000-0001-8314-2140</terms:contributor>
     </owl:Axiom>
     
 
@@ -48200,23 +48178,25 @@ height&apos;).</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0040043">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001470"/>
-        <obo:IAO_0000115>A proportionality quality inhering in a bearer by virtue of the bearer&apos;s increased magnitude in respect to a related entity.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002305"/>
+        <obo:IAO_0000115>An increased quality inhering in a bearer by virtue of the bearer&apos;s increased magnitude in proportion to the magnitude of another entity.</obo:IAO_0000115>
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-5208-3432"/>
         <oboInOwl:hasExactSynonym>increased proportion</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>increased proportionality</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>increased proportionality to</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>increased quotient</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>increased ratio</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id>PATO:0040043</oboInOwl:id>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#relational_slim"/>
         <rdfs:comment>Example: increased proportion of CD4 T cells relative to total T cells.</rdfs:comment>
-        <rdfs:label>increased proportionality to</rdfs:label>
+        <rdfs:label>increased ratio</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0040043"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A proportionality quality inhering in a bearer by virtue of the bearer&apos;s increased magnitude in respect to a related entity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>https://orcid.org/0000-0001-5208-3432</oboInOwl:hasDbXref>
+        <owl:annotatedTarget>An increased quality inhering in a bearer by virtue of the bearer&apos;s increased magnitude in proportion to the magnitude of another entity.</owl:annotatedTarget>
+        <terms:contributor>https://orcid.org/0000-0001-5208-3432</terms:contributor>
+        <terms:contributor>https://orcid.org/0000-0001-8314-2140</terms:contributor>
     </owl:Axiom>
     
 
@@ -51621,5 +51601,5 @@ height&apos;).</rdfs:comment>
 
 
 
-<!-- Generated by the OWL API (version 4.5.25) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.26) https://github.com/owlcs/owlapi -->
 

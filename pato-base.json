@@ -25,9 +25,9 @@
         "val" : "1.2"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2023-05-18"
+        "val" : "2024-03-28"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/pato/releases/2023-05-18/pato-base.json"
+      "version" : "http://purl.obolibrary.org/obo/pato/releases/2024-03-28/pato-base.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000050",
@@ -20564,14 +20564,13 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0001470",
-      "lbl" : "proportionality to",
+      "lbl" : "ratio",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A quality inhering in a bearer by virtue of the bearer's magnitude in respect to a related entity.",
-          "xrefs" : [ "PATOC:nw" ]
+          "val" : "A quality inhering in a bearer by virtue of the bearer's magnitude in proportion to the magnitude of another entity."
         },
-        "comments" : [ "Examples: height to weight; brain size to body size. These could all be children of proportionality. Proportions can be measured as ratios. Some measures may be dimensionless. Not all ratios measure proportionality, eg m/s measures velocity which is not a proportion in the sense defined above, it is a quality in its own right." ],
+        "comments" : [ "Examples: height to weight; brain size to body size; root to shoot ratio; urinary sodium to potassium ratio. waist-hip ratio." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim", "http://purl.obolibrary.org/obo/pato#relational_slim" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -20581,10 +20580,10 @@
           "val" : "proportionality"
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "quotient"
+          "val" : "proportionality to"
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "ratio"
+          "val" : "quotient"
         }, {
           "pred" : "hasRelatedSynonym",
           "val" : "rate"
@@ -44818,12 +44817,11 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0040042",
-      "lbl" : "decreased proportionality to",
+      "lbl" : "decreased ratio",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A proportionality quality inhering in a bearer by virtue of the bearer's decreased magnitude in respect to a related entity.",
-          "xrefs" : [ "https://orcid.org/0000-0001-5208-3432" ]
+          "val" : "A decreased quality inhering in a bearer by virtue of the bearer's decreased magnitude in proportion to the magnitude of another entity."
         },
         "comments" : [ "Example: decreased proportion of CD4 T cells relative to total T cells." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#relational_slim" ],
@@ -44835,10 +44833,10 @@
           "val" : "decreased proportionality"
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "decreased quotient"
+          "val" : "decreased proportionality to"
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "decreased ratio"
+          "val" : "decreased quotient"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/terms/contributor",
@@ -44850,12 +44848,11 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0040043",
-      "lbl" : "increased proportionality to",
+      "lbl" : "increased ratio",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A proportionality quality inhering in a bearer by virtue of the bearer's increased magnitude in respect to a related entity.",
-          "xrefs" : [ "https://orcid.org/0000-0001-5208-3432" ]
+          "val" : "An increased quality inhering in a bearer by virtue of the bearer's increased magnitude in proportion to the magnitude of another entity."
         },
         "comments" : [ "Example: increased proportion of CD4 T cells relative to total T cells." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#relational_slim" ],
@@ -44867,10 +44864,10 @@
           "val" : "increased proportionality"
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "increased quotient"
+          "val" : "increased proportionality to"
         }, {
           "pred" : "hasExactSynonym",
-          "val" : "increased ratio"
+          "val" : "increased quotient"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/terms/contributor",
@@ -48932,6 +48929,14 @@
       "lbl" : "consider",
       "type" : "PROPERTY"
     }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+      "lbl" : "created by",
+      "type" : "PROPERTY"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+      "lbl" : "creation date",
+      "type" : "PROPERTY"
+    }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
       "lbl" : "has_alternative_id",
       "type" : "PROPERTY"
@@ -48962,6 +48967,10 @@
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
       "lbl" : "has_related_synonym",
+      "type" : "PROPERTY"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#id",
+      "lbl" : "id",
       "type" : "PROPERTY"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#inSubset",
@@ -56565,14 +56574,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0040034"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0040042",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001470"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0040043",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001470"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0040044",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001444"
@@ -59125,6 +59126,12 @@
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0015008",
         "fillerId" : "http://purl.obolibrary.org/obo/PATO_0000461"
       } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/PATO_0040042",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/PATO_0001470", "http://purl.obolibrary.org/obo/PATO_0002301" ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/PATO_0040043",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/PATO_0001470", "http://purl.obolibrary.org/obo/PATO_0002300" ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/PATO_0045000",
       "genusIds" : [ "http://purl.obolibrary.org/obo/PATO_0000161" ],
