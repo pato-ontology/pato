@@ -1,0 +1,57 @@
+#curie_map:
+#  PATO: http://purl.obolibrary.org/obo/PATO_
+#  oio: http://www.geneontology.org/formats/oboInOwl#
+#  owl: http://www.w3.org/2002/07/owl#
+#  quantitykind: http://w3id.org/sssom/unknown_prefix/quantitykind/
+#  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+#  rdfs: http://www.w3.org/2000/01/rdf-schema#
+#  semapv: https://w3id.org/semapv/vocab/
+#  skos: http://www.w3.org/2004/02/skos/core#
+#  sssom: https://w3id.org/sssom/
+#  ORCID: "https://orcid.org/"
+#creator_id:
+#  - "ORCID:0000-0002-6601-2165"
+#license: https://w3id.org/sssom/license/unspecified
+#mapping_set_id: http://purl.obolibrary.org/obo/pato/mappings/pato-to-qudt-quantitykind.sssom.tsv
+#mapping_set_description: "Mappings between PATO and qudt QuantityKind types. Seeded using lexmatch then curated"
+#license: "https://creativecommons.org/licenses/by/4.0/"
+#subject_source: "obo:pato.owl"
+#object_source: "quantitykind:"
+#mapping_date: "2024-08-09"
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	mapping_tool	confidence	subject_match_field	object_match_field	match_string
+PATO:0000008	speed	skos:exactMatch	quantitykind:Speed	Speed	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	speed
+PATO:0000033	concentration of	skos:exactMatch	quantitykind:Concentration	Concentration	semapv:ManualMappingCuration	oaklib	1.0	oio:hasExactSynonym	rdfs:label	concentration
+PATO:0000057	occurrence	skos:exactMatch	quantitykind:Incidence	Incidence	semapv:ManualMappingCuration	oaklib	1.0	oio:hasExactSynonym	rdfs:label	incidence
+PATO:0000133	orientation	skos:exactMatch	quantitykind:Angle	Angle	semapv:ManualMappingCuration	oaklib	1.0	oio:hasRelatedSynonym	rdfs:label	angle
+PATO:0000146	temperature	skos:exactMatch	quantitykind:Temperature	Temperature	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	temperature
+PATO:0000915	thickness	skos:exactMatch	quantitykind:Thickness	Thickness	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	thickness
+PATO:0000918	volume	skos:exactMatch	quantitykind:Volume	Volume	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	volume
+PATO:0000921	width	skos:exactMatch	quantitykind:Width	Width	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	width
+PATO:0000970	permeability	skos:exactMatch	quantitykind:Permeability	Permeability	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	permeability
+PATO:0000992	viscosity	skos:exactMatch	quantitykind:Viscosity	Viscosity	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	viscosity
+PATO:0001019	mass density	skos:exactMatch	quantitykind:Density	Density	semapv:ManualMappingCuration	oaklib	1.0	oio:hasRelatedSynonym	rdfs:label	density
+PATO:0001022	impulse	skos:exactMatch	quantitykind:Impulse	impulse	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	impulse
+PATO:0001030	flux	skos:exactMatch	quantitykind:Flux	Flux	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	flux
+PATO:0001034	strain	skos:exactMatch	quantitykind:Strain	Strain	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	strain
+PATO:0001046	resistance to	skos:exactMatch	quantitykind:Resistance	Resistance	semapv:ManualMappingCuration	oaklib	1.0	oio:hasExactSynonym	rdfs:label	resistance
+PATO:0001297	reflectivity	skos:exactMatch	quantitykind:Reflectivity	Reflectivity	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	reflectivity
+PATO:0001309	duration	skos:exactMatch	quantitykind:Period	Period	semapv:ManualMappingCuration	oaklib	1.0	oio:hasExactSynonym	rdfs:label	period
+PATO:0001352	linear density	skos:exactMatch	quantitykind:LinearDensity	Linear Density	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	linear density
+PATO:0001414	catalytic activity	skos:exactMatch	quantitykind:CatalyticActivity	Catalytic Activity	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	catalytic activity
+PATO:0001470	ratio	skos:exactMatch	quantitykind:Ratio	ratio	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	ratio
+PATO:0001521	sound amplitude	skos:exactMatch	quantitykind:Loudness	loudness	semapv:ManualMappingCuration	oaklib	1.0	oio:hasBroadSynonym	rdfs:label	loudness
+PATO:0001585	conductivity	skos:exactMatch	quantitykind:Conductivity	Conductivity	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	conductivity
+PATO:0001591	curvature	skos:exactMatch	quantitykind:Curvature	Curvature	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	curvature
+PATO:0001595	depth	skos:exactMatch	quantitykind:Depth	Depth	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	depth
+PATO:0001679	specific volume	skos:exactMatch	quantitykind:SpecificVolume	Specific Volume	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	specific volume
+PATO:0001718	luminance	skos:exactMatch	quantitykind:Luminance	Luminance	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	luminance
+PATO:0001740	activity (of a radionuclide)	skos:exactMatch	quantitykind:Radioactivity	radioactivity	semapv:ManualMappingCuration	oaklib	1.0	oio:hasExactSynonym	rdfs:label	radioactivity
+PATO:0001842	acidity	skos:exactMatch	quantitykind:Acidity	Acidity	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	acidity
+PATO:0002205	capacitance	skos:exactMatch	quantitykind:Capacitance	Capacitance	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	capacitance
+PATO:0002243	fluid flow rate	skos:exactMatch	quantitykind:VolumeFlowRate	Volume Flow Rate	semapv:ManualMappingCuration	oaklib	1.0	oio:hasExactSynonym	rdfs:label	volume flow rate
+PATO:0002244	mass flow rate	skos:exactMatch	quantitykind:MassFlowRate	Mass Flow Rate	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	mass flow rate
+PATO:0002284	tension	skos:exactMatch	quantitykind:Tension	Tension	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	tension
+PATO:0002326	angle	skos:exactMatch	quantitykind:Angle	Angle	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	angle
+PATO:0002390	radius	skos:exactMatch	quantitykind:Radius	Radius	semapv:ManualMappingCuration	oaklib	1.0	rdfs:label	rdfs:label	radius
+
+
