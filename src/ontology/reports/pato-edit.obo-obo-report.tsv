@@ -1,92 +1,58 @@
 Level	Rule Name	Subject	Property	Value
-WARN	missing_definition	part_of	definition	
-WARN	missing_definition	has_part	definition	
-WARN	missing_definition	definition	definition	
-WARN	missing_definition	term replaced by	definition	
-WARN	missing_definition	qualitative	definition	
-WARN	missing_definition	growth rate	definition	
-WARN	missing_definition	hypertrophic growth	definition	
-WARN	missing_definition	hypotrophic growth	definition	
-WARN	missing_definition	female semi-fertile	definition	
-WARN	missing_definition	male semi-fertile	definition	
-WARN	missing_definition	male semi-sterile	definition	
-WARN	missing_definition	female semi-sterile	definition	
-WARN	missing_definition	semi-fertile	definition	
-WARN	missing_definition	magnitude	definition	
-WARN	missing_definition	increased magnitude	definition	
-WARN	missing_definition	decreased magnitude	definition	
-WARN	missing_definition	physical quality of a process	definition	
-WARN	missing_definition	bracket	definition	
-WARN	missing_definition	sloped downward	definition	
-WARN	missing_definition	edge shape	definition	
-WARN	missing_definition	aplastic/hypoplastic	definition	
-WARN	missing_definition	hypoelliptic	definition	
-WARN	missing_definition	hyperelliptic	definition	
-WARN	missing_definition	is_opposite_of	definition	
-WARN	missing_definition	correlates_with	definition	
-WARN	missing_definition	has_dividend_entity	definition	
-WARN	missing_definition	has_dividend_quality	definition	
-WARN	missing_definition	has_divisor_entity	definition	
-WARN	missing_definition	has_divisor_quality	definition	
-WARN	missing_definition	has_ratio_quality	definition	
-WARN	missing_definition	has_relative_magnitude	definition	
-WARN	missing_definition	is_magnitude_of	definition	
-WARN	missing_definition	is_measurement_of	definition	
-WARN	missing_definition	is_unit_of	definition	
-WARN	missing_definition	realized_by	definition	
-WARN	missing_definition	singly_occurring_form_of	definition	
-WARN	missing_definition	towards	definition	
-WARN	missing_definition	subset_property	definition	
-WARN	missing_definition	consider	definition	
-WARN	missing_definition	has_alternative_id	definition	
-WARN	missing_definition	has_broad_synonym	definition	
-WARN	missing_definition	database_cross_reference	definition	
-WARN	missing_definition	has_exact_synonym	definition	
-WARN	missing_definition	has_narrow_synonym	definition	
-WARN	missing_definition	has_obo_format_version	definition	
-WARN	missing_definition	has_obo_namespace	definition	
-WARN	missing_definition	has_related_synonym	definition	
-WARN	missing_definition	in_subset	definition	
-WARN	missing_definition	shorthand	definition	
-INFO	lowercase_definition	random pattern	definition	characterised by an unidentifiable pattern.
-INFO	lowercase_definition	stability	definition	quality, state, or degree of being stable.
-INFO	lowercase_definition	decreased_in_magnitude_relative_to	definition	q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) < magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.
-INFO	lowercase_definition	different_in_magnitude_relative_to	definition	q1 different_in_magnitude_relative_to q2 if and only if magnitude(q1) NOT =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.
-INFO	lowercase_definition	directly_associated_with	definition	q1 directly_associated_with q2 iff q1 is dependent on q2, and the magnitude of q1 increases if the magnitude of q2 is increased, or the magnitude of q1 decreases if the magnitude of q2 is decreased. The relationship is not necessarily linear.
-INFO	lowercase_definition	has_cross_section	definition	<s3 has_cross_section s3 if and only if : there exists some 2d plane that intersects the bearer of s3, and the impression of s3 upon that plane has shape quality s2.>
-INFO	lowercase_definition	increased_in_magnitude_relative_to	definition	q1 increased_in_magnitude_relative_to q2 if and only if magnitude(q1) > magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.
-INFO	lowercase_definition	inversely_associated_with	definition	q1 inversely_associated_with q2 iff q1 is dependent on q2, and the magnitude of q1 decreases if the magnitude of q2 is increased, or the magnitude of q1 increases if the magnitude of q2 is decreased. The relationship is not necessarily linear.
-INFO	lowercase_definition	reciprocal_of	definition	<q1 reciprocal_of q2 if and only if : q1 and q2 are relational qualities and a phenotype e q1 e2 mutually implies a phenotype e2 q2 e.>
-INFO	lowercase_definition	similar_in_magnitude_relative_to	definition	q1 similar_in_magnitude_relative_to q2 if and only if magnitude(q1) =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.
-INFO	missing_superclass	quality	rdfs:subClassOf	
-INFO	missing_superclass	variability of temperature	rdfs:subClassOf	
-INFO	missing_superclass	decreased variability of temperature	rdfs:subClassOf	
-INFO	missing_superclass	increased variability of temperature	rdfs:subClassOf	
-INFO	missing_superclass	decreased variability	rdfs:subClassOf	
-INFO	missing_superclass	increased variability	rdfs:subClassOf	
-INFO	missing_superclass	increased variability of rate	rdfs:subClassOf	
-INFO	missing_superclass	decreased variability of rate	rdfs:subClassOf	
-INFO	missing_superclass	increased variability of color	rdfs:subClassOf	
-INFO	missing_superclass	decreased variability of color	rdfs:subClassOf	
-INFO	missing_superclass	decreased variability of size	rdfs:subClassOf	
-INFO	missing_superclass	increased variability of size	rdfs:subClassOf	
-INFO	missing_superclass	decreased propagation velocity	rdfs:subClassOf	
-INFO	missing_superclass	increased humidity	rdfs:subClassOf	
-INFO	missing_superclass	decreased humidity	rdfs:subClassOf	
-INFO	missing_superclass	increased degree of illumination	rdfs:subClassOf	
-INFO	missing_superclass	decreased degree of illumination	rdfs:subClassOf	
-INFO	missing_superclass	increased combustibility	rdfs:subClassOf	
-INFO	missing_superclass	decreased combustibility	rdfs:subClassOf	
-INFO	missing_superclass	increased porosity	rdfs:subClassOf	
-INFO	missing_superclass	decreased porosity	rdfs:subClassOf	
-INFO	missing_superclass	increased stability	rdfs:subClassOf	
-INFO	missing_superclass	decreased stability	rdfs:subClassOf	
-INFO	missing_superclass	increased contamination	rdfs:subClassOf	
-INFO	missing_superclass	decreased contamination	rdfs:subClassOf	
-INFO	missing_superclass	normal variability	rdfs:subClassOf	
-INFO	missing_superclass	normal variability of color	rdfs:subClassOf	
-INFO	missing_superclass	normal variability of rate	rdfs:subClassOf	
-INFO	missing_superclass	normal variability of size	rdfs:subClassOf	
-INFO	missing_superclass	normal variability of temperature	rdfs:subClassOf	
-INFO	missing_superclass	decreased spatial extent of a process	rdfs:subClassOf	
-INFO	missing_superclass	increased spatial extent of a process	rdfs:subClassOf	
+WARN	duplicate_label_synonym	PATO:0001598	oboInOwl:hasExactSynonym	protruding
+WARN	duplicate_label_synonym	PATO:0040047	oboInOwl:hasExactSynonym	fragmented
+WARN	invalid_xref	PATO:0040059	oboInOwl:hasDbXref	thefreedictionary.:thefreedictionary.
+WARN	missing_definition	PATO:0000068	IAO:0000115	
+WARN	missing_definition	PATO:0001493	IAO:0000115	
+WARN	missing_definition	PATO:0001494	IAO:0000115	
+WARN	missing_definition	PATO:0001760	IAO:0000115	
+WARN	missing_definition	PATO:0001761	IAO:0000115	
+WARN	missing_definition	PATO:0001762	IAO:0000115	
+WARN	missing_definition	PATO:0001763	IAO:0000115	
+WARN	missing_definition	PATO:0001767	IAO:0000115	
+WARN	missing_definition	PATO:0002016	IAO:0000115	
+WARN	missing_definition	PATO:0002017	IAO:0000115	
+WARN	missing_definition	PATO:0002018	IAO:0000115	
+WARN	missing_definition	PATO:0002062	IAO:0000115	
+WARN	missing_definition	PATO:0002142	IAO:0000115	
+WARN	missing_definition	PATO:0002143	IAO:0000115	
+WARN	missing_definition	PATO:0002267	IAO:0000115	
+WARN	missing_definition	PATO:0002290	IAO:0000115	
+WARN	missing_definition	PATO:0002321	IAO:0000115	
+WARN	missing_definition	PATO:0002322	IAO:0000115	
+INFO	lowercase_definition	PATO:0002401	IAO:0000115	characterised by an unidentifiable pattern.
+INFO	lowercase_definition	PATO:0015026	IAO:0000115	quality, state, or degree of being stable.
+INFO	missing_superclass	PATO:0000001	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0001304	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0001307	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0001308	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0001583	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0001584	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0001587	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0001588	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0001612	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0001613	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0001957	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0001958	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0010004	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0015010	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0015011	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0015014	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0015015	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0015022	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0015023	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0015024	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0015025	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0015027	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0015028	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0015032	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0015033	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0040042	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0040043	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0045074	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0045075	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0045076	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0045077	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0045078	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0055001	rdfs:subClassOf	
+INFO	missing_superclass	PATO:0055002	rdfs:subClassOf	

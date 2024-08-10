@@ -3,9 +3,9 @@
 The documentation for PATO is managed in two places (relative to the repository root):
 
 1. The `docs` directory contains all the files that pertain to the content of the documentation (more below)
-2. the `mkdocs.yaml` file cotains the documentation config, in particular its navigation bar and theme.
+2. the `mkdocs.yaml` file contains the documentation config, in particular its navigation bar and theme.
 
-The documentation is hosted using github pages, on a special branch of the repository (called `gh-pages`). It is important that this branch is never deleted - it contains all the files GitHub pages needs to render and deploy the site. It is also important to note that _the gh-pages branch should never be edited manually_. All changes to the docs happen inside the `docs` directory on the `main` branch.
+The documentation is hosted using GitHub pages, on a special branch of the repository (called `gh-pages`). It is important that this branch is never deleted - it contains all the files GitHub pages needs to render and deploy the site. It is also important to note that _the gh-pages branch should never be edited manually_. All changes to the docs happen inside the `docs` directory on the `main` branch.
 
 ## Editing the docs
 
@@ -15,7 +15,7 @@ All the documentation is contained in the `docs` directory, and is managed in _M
 1. Open the `.md` file you want to change in an editor of choice (a simple text editor is often best). _IMPORTANT_: Do not edit any files in the `docs/odk-workflows/` directory. These files are managed by the ODK system and will be overwritten when the repository is upgraded! If you wish to change these files, make an issue on the [ODK issue tracker](https://github.com/INCATools/ontology-development-kit/issues).
 2. Perform the edit and save the file
 3. Commit the file to a branch, and create a pull request as usual. 
-4. If your development team likes your changes, merge the docs into master.
+4. If your development team likes your changes, merge the docs into master branch.
 5. Deploy the documentation (see below)
 
 ## Deploy the documentation
@@ -42,4 +42,5 @@ The documentation is _not_ automatically updated from the Markdown, and needs to
    ```
 3. Just to double check, you can now navigate to your documentation pages (usually https://pato-ontology.github.io/pato/). 
    Just make sure you give GitHub 2-5 minutes to build the pages!
+
 
