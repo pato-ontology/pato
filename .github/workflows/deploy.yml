@@ -10,12 +10,12 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    container: obolibrary/odkfull:v1.3.1
+    container: obolibrary/odkfull:v1.5.2
     strategy:
       max-parallel: 1
     steps:
       - name: Checkout main branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: work around permission issue
         run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
@@ -24,7 +24,7 @@ jobs:
         run: cd src/ontology/ && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' GITHUB_ACTION=true prepare_release_fast
       
       - name: Run release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
           draft: true
