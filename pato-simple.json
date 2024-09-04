@@ -22,174 +22,11 @@
         "val" : "1.2"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2024-03-28"
+        "val" : "2024-09-04"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/pato/releases/2024-03-28/pato-simple.json"
+      "version" : "http://purl.obolibrary.org/obo/pato/releases/2024-09-04/pato-simple.json"
     },
     "nodes" : [ {
-      "id" : "http://purl.obolibrary.org/obo/BFO_0000050",
-      "lbl" : "part_of",
-      "type" : "PROPERTY",
-      "meta" : {
-        "definition" : {
-          "val" : "a core relation that holds between a part and its whole"
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension", "http://purl.obolibrary.org/obo/valid_for_go_gp2term", "http://purl.obolibrary.org/obo/valid_for_go_ontology", "http://purl.obolibrary.org/obo/valid_for_gocam" ],
-        "xrefs" : [ {
-          "val" : "BFO:0000050"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "is part of"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "my brain is part of my body (continuant parthood, two material entities)"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "this day is part of this year (occurrent parthood)"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other."
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)\n\nA continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'."
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
-          "val" : "part_of"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/RO_0001900",
-          "val" : "http://purl.obolibrary.org/obo/RO_0001901"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/RO_0040042",
-          "val" : "http://purl.obolibrary.org/obo/BFO_0000002"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/RO_0040042",
-          "val" : "http://purl.obolibrary.org/obo/BFO_0000003"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/RO_0040042",
-          "val" : "http://purl.obolibrary.org/obo/BFO_0000004"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/RO_0040042",
-          "val" : "http://purl.obolibrary.org/obo/BFO_0000017"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/RO_0040042",
-          "val" : "http://purl.obolibrary.org/obo/BFO_0000019"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/RO_0040042",
-          "val" : "http://purl.obolibrary.org/obo/BFO_0000020"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/RO_0040042",
-          "val" : "http://purl.obolibrary.org/obo/BFO_0000031"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "external"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "quality"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
-          "val" : "part_of"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://ontologydesignpatterns.org/wiki/Submissions:PartOf"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://www.obofoundry.org/ro/#OBO_REL:part_of"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "https://wiki.geneontology.org/Part_of"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/BFO_0000051",
-      "lbl" : "has_part",
-      "type" : "PROPERTY",
-      "meta" : {
-        "definition" : {
-          "val" : "a core relation that holds between a whole and its part"
-        },
-        "subsets" : [ "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension", "http://purl.obolibrary.org/obo/valid_for_go_ontology", "http://purl.obolibrary.org/obo/valid_for_gocam" ],
-        "xrefs" : [ {
-          "val" : "BFO:0000051"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "has part"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "my body has part my brain (continuant parthood, two material entities)"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "this year has part this day (occurrent parthood)"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part."
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)\n\nA continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'."
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
-          "val" : "has_part"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/RO_0001900",
-          "val" : "http://purl.obolibrary.org/obo/RO_0001901"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "external"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "quality"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
-          "val" : "has_part"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/IAO_0000115",
-      "lbl" : "definition",
-      "type" : "PROPERTY"
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/IAO_0000700",
-      "lbl" : "preferred_root",
-      "type" : "PROPERTY",
-      "meta" : {
-        "xrefs" : [ {
-          "val" : "IAO:0000700"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "external"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_class_level",
-          "val" : "true"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_metadata_tag",
-          "val" : "true"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
-          "val" : "has_ontology_root_term"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/IAO_0100001",
-      "lbl" : "term replaced by",
-      "type" : "PROPERTY"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0000000",
       "lbl" : "obsolete pato",
       "type" : "CLASS",
@@ -1176,6 +1013,10 @@
       "lbl" : "qualitative",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "A quality of an entity that is descriptive or observational, typically not represented numerically.",
+          "xrefs" : [ "https://libguides.macalester.edu/c.php?g=527786&p=3608639", "https://www.ncbi.nlm.nih.gov/books/NBK470395/" ]
+        },
         "comments" : [ "TODO: define this or obsolete it and move children somewhere else." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
@@ -10707,7 +10548,7 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
-          "val" : "PATO:0001624"
+          "val" : "http://purl.obolibrary.org/obo/PATO_0001624"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -17707,7 +17548,7 @@
         "comments" : [ "See https://github.com/pato-ontology/pato/issues/490" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
-          "val" : "PATO:0070060"
+          "val" : "http://purl.obolibrary.org/obo/PATO_0070060"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -19610,12 +19451,12 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0001408",
-      "lbl" : "ciliatedness",
+      "lbl" : "ciliated",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A cellular quality inhering in a bearer by virtue of the bearer's having thin, tail-like projections extending outwards from the cell body.",
-          "xrefs" : [ "Wikipedia:http://en.wikipedia.org/wiki/Ciliated" ]
+          "val" : "A cellular quality inhering in a bearer by virtue of the bearer's having one or more cilia as a part.",
+          "xrefs" : [ "PMID:36924208", "wikipedia:Cilium" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#cell_quality", "http://purl.obolibrary.org/obo/pato#value_slim" ],
         "basicPropertyValues" : [ {
@@ -22885,7 +22726,7 @@
         "comments" : [ "Obsoleted because it used to be a child of behavioral quality, which really meant increased magnitude of a given behavior. Now this can be done by using increased magnitude with another quality." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
-          "val" : "PATO:0002017"
+          "val" : "http://purl.obolibrary.org/obo/PATO_0002017"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -25795,7 +25636,7 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim", "http://purl.obolibrary.org/obo/pato#scalar_slim" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
-          "val" : "RBO:00005010"
+          "val" : "http://purl.obolibrary.org/obo/RBO_00005010"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -25815,7 +25656,7 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim", "http://purl.obolibrary.org/obo/pato#scalar_slim" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
-          "val" : "RBO:00000023"
+          "val" : "http://purl.obolibrary.org/obo/RBO_00000023"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -25835,7 +25676,7 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim", "http://purl.obolibrary.org/obo/pato#scalar_slim" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
-          "val" : "RBO:00000014"
+          "val" : "http://purl.obolibrary.org/obo/RBO_00000014"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -26159,7 +26000,7 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim", "http://purl.obolibrary.org/obo/pato#cell_quality" ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#consider",
-          "val" : "PATO:0001769"
+          "val" : "http://purl.obolibrary.org/obo/PATO_0001769"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -27735,7 +27576,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A positional quality inhering in a bearer by virtue of the bearer's being out of its usual or proper place, or position.",
+          "val" : "A positional quality inhering in a bearer by virtue of the bearer's being out of its usual or proper place, or position due to it being physically moved from the normal location.",
           "xrefs" : [ "thefreedictionary.com:thefreedictionary.com" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#mpath_slim", "http://purl.obolibrary.org/obo/pato#value_slim" ],
@@ -36774,6 +36615,14 @@
       "lbl" : "aplastic/hypoplastic",
       "type" : "CLASS",
       "meta" : {
+        "definition" : {
+          "val" : "Decreased size or absence of organ, tissue or cell due to a reduction in cell numbers.",
+          "xrefs" : [ "https://orcid.org/0000-0003-4606-0597" ]
+        },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "aplasia/hypoplasia"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/terms/contributor",
           "val" : "https://orcid.org/0000-0002-2061-091X"
@@ -39612,7 +39461,7 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#mpath_slim", "http://purl.obolibrary.org/obo/pato#value_slim" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
-          "val" : "PATO:0002418"
+          "val" : "http://purl.obolibrary.org/obo/PATO_0002418"
         }, {
           "pred" : "http://purl.org/dc/terms/contributor",
           "val" : "https://orcid.org/0000-0002-2061-091X"
@@ -42027,7 +41876,7 @@
         "comments" : [ "obsoleted because the ID was accidentally reused" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
-          "val" : "PATO:0002628"
+          "val" : "http://purl.obolibrary.org/obo/PATO_0002628"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -42042,7 +41891,7 @@
         "comments" : [ "obsoleted because the ID was accidentally reused" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
-          "val" : "PATO:0002629"
+          "val" : "http://purl.obolibrary.org/obo/PATO_0002629"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -42057,7 +41906,7 @@
         "comments" : [ "obsoleted because the ID was accidentally reused" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
-          "val" : "PATO:0002630"
+          "val" : "http://purl.obolibrary.org/obo/PATO_0002630"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -42072,7 +41921,7 @@
         "comments" : [ "obsoleted because the ID was accidentally reused" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
-          "val" : "PATO:0002631"
+          "val" : "http://purl.obolibrary.org/obo/PATO_0002631"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -42087,7 +41936,7 @@
         "comments" : [ "obsoleted because the ID was accidentally reused" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
-          "val" : "PATO:0002632"
+          "val" : "http://purl.obolibrary.org/obo/PATO_0002632"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -43001,7 +42850,7 @@
       "meta" : {
         "definition" : {
           "val" : "The velocity of spatial propagation of a process. Examples include the velocity of propagation of an action potential along an axon.",
-          "xrefs" : [ "orcid:0000-0002-7073-9172" ]
+          "xrefs" : [ "https://orcid.org/0000-0002-7073-9172" ]
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/terms/contributor",
@@ -43021,7 +42870,7 @@
       "meta" : {
         "definition" : {
           "val" : "A propagation velocity that is higher than normal.",
-          "xrefs" : [ "orcid:0000-0002-7073-9172" ]
+          "xrefs" : [ "https://orcid.org/0000-0002-7073-9172" ]
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/terms/contributor",
@@ -43041,7 +42890,7 @@
       "meta" : {
         "definition" : {
           "val" : "A propagation velocity that is lower than normal.",
-          "xrefs" : [ "orcid:0000-0002-7073-9172" ]
+          "xrefs" : [ "https://orcid.org/0000-0002-7073-9172" ]
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/terms/contributor",
@@ -43061,7 +42910,7 @@
       "meta" : {
         "definition" : {
           "val" : "A physical quality of a process that is its spatial distribution. For example, bone mineralization follows stereotypical spatial distribution patterns during development, which may be altered in some phenotypes.",
-          "xrefs" : [ "orcid:0000-0002-7073-9172" ]
+          "xrefs" : [ "https://orcid.org/0000-0002-7073-9172" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim" ],
         "basicPropertyValues" : [ {
@@ -43082,7 +42931,7 @@
       "meta" : {
         "definition" : {
           "val" : "A quality of a single cell inhering in the bearer by virtue of the bearer's size or shape or structure.",
-          "xrefs" : [ "ORCID:0000-0002-7073-9172" ]
+          "xrefs" : [ "https://orcid.org/0000-0002-7073-9172" ]
         },
         "comments" : [ "Use this term for morphologies that can *only* inhere in a cell, e.g. morphological qualities inhering in a cell by virtue of the presence, location or shape of one or more cell parts." ],
         "basicPropertyValues" : [ {
@@ -43091,6 +42940,46 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
           "val" : "2021-01-23T11:31:53Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0010007",
+      "lbl" : "multiciliated",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A cellular quality inhering in a bearer by virtue of the bearer's having multiple cilia.",
+          "xrefs" : [ "PMID:36924208" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-7073-9172"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2024-07-23T10:43:20Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0010008",
+      "lbl" : "monociliated",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A cellular quality inhering in a bearer by virtue of the bearer's having only one cilium.",
+          "xrefs" : [ "PMID:36924208" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-7073-9172"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2024-07-23T10:43:33Z"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -44093,7 +43982,7 @@
       "meta" : {
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
-          "val" : "PATO:0002539"
+          "val" : "http://purl.obolibrary.org/obo/PATO_0002539"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -47340,7 +47229,7 @@
       "meta" : {
         "definition" : {
           "val" : "A spatial distribution of a process in which the process occupies a smaller length, area, or volume than the reference process. For example, heterochromatin may form over a shorter length of a chromosome in a mutant than in wild type.",
-          "xrefs" : [ "orcid:0000-0003-4148-4606" ]
+          "xrefs" : [ "https://orcid.org/0000-0003-4148-4606" ]
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/terms/contributor",
@@ -48689,9 +48578,75 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0103000",
+      "lbl" : "quantitative",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A quality of an entity that can be represented numerically, including anything that can be counted, measured, or given a numerical value.",
+          "xrefs" : [ "https://libguides.macalester.edu/c.php?g=527786&p=3608639", "https://www.nnlm.gov/guides/data-glossary/quantitative-data" ]
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0001-8314-2140"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "lbl" : "part_of",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "a core relation that holds between a part and its whole"
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension", "http://purl.obolibrary.org/obo/valid_for_go_gp2term", "http://purl.obolibrary.org/obo/valid_for_go_ontology", "http://purl.obolibrary.org/obo/valid_for_gocam" ],
+        "xrefs" : [ {
+          "val" : "BFO:0000050"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "external"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "part_of"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/BFO_0000051",
+      "lbl" : "has_part",
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
+      "meta" : {
+        "definition" : {
+          "val" : "a core relation that holds between a whole and its part"
+        },
+        "subsets" : [ "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension", "http://purl.obolibrary.org/obo/valid_for_go_ontology", "http://purl.obolibrary.org/obo/valid_for_gocam" ],
+        "xrefs" : [ {
+          "val" : "BFO:0000051"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "external"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "has_part"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0000053",
       "lbl" : "has characteristic",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
           "val" : "Inverse of characteristic_of"
@@ -48700,27 +48655,6 @@
           "val" : "RO:0000053"
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000111",
-          "val" : "bearer of"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "this apple is bearer of this red color"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "this vase is bearer of this fragility"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist."
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
-          "val" : "bearer_of"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000118",
-          "val" : "is bearer of"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/RO_0001900",
-          "val" : "http://purl.obolibrary.org/obo/RO_0001901"
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "external"
         }, {
@@ -48732,56 +48666,27 @@
       "id" : "http://purl.obolibrary.org/obo/RO_0002100",
       "lbl" : "has soma location",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
           "val" : "Relation between a neuron and a material anatomical entity that its soma is part of."
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
-          "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "https://orcid.org/0000-0002-7073-9172"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000424",
-          "val" : "<http://purl.obolibrary.org/obo/BFO_0000051> some (\n   <http://purl.obolibrary.org/obo/GO_0043025> and   <http://purl.obolibrary.org/obo/BFO_0000050> some ?Y)"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/RO_0001900",
-          "val" : "http://purl.obolibrary.org/obo/RO_0001901"
-        } ]
+        }
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002102",
       "lbl" : "axon synapses in",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
           "val" : "Relation between a neuron and some structure its axon forms (chemical) synapses in."
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
-          "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "https://orcid.org/0000-0002-6601-2165"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "https://orcid.org/0000-0002-7073-9172"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000424",
-          "val" : "<http://purl.obolibrary.org/obo/BFO_0000051> some (\n   <http://purl.obolibrary.org/obo/GO_0030424> and <http://purl.obolibrary.org/obo/BFO_0000051> some (\n      <http://purl.obolibrary.org/obo/GO_0042734> and <http://purl.obolibrary.org/obo/BFO_0000050> some (\n         <http://purl.obolibrary.org/obo/GO_0045202> and <http://purl.obolibrary.org/obo/BFO_0000050> some ?Y)))"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/RO_0001900",
-          "val" : "http://purl.obolibrary.org/obo/RO_0001901"
-        }, {
-          "pred" : "http://purl.org/spar/cito/citesAsAuthority",
-          "val" : "http://www.ncbi.nlm.nih.gov/pubmed/22402613"
-        } ]
+        }
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002180",
       "lbl" : "has component",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
           "val" : "w 'has component' p if w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type."
@@ -48791,95 +48696,38 @@
           "val" : "RO:0002180"
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000114",
-          "val" : "http://purl.obolibrary.org/obo/IAO_0000125"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "The definition of 'has component' is still under discussion. The challenge is in providing a definition that does not imply transitivity."
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000232",
-          "val" : "For use in recording has_part with a cardinality constraint, because OWL does not permit cardinality constraints to be used in combination with transitive object properties. In situations where you would want to say something like 'has part exactly 5 digit, you would instead use has_component exactly 5 digit."
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/RO_0001900",
-          "val" : "http://purl.obolibrary.org/obo/RO_0001901"
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "external"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
           "val" : "has_component"
-        }, {
-          "pred" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-          "val" : "http://ontologydesignpatterns.org/wiki/Submissions:Componency"
         } ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002503",
       "lbl" : "towards",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
           "val" : "q towards e2 if and only if q is a relational quality such that q inheres-in some e, and e != e2 and q is dependent on e2"
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000116",
-          "val" : "This relation is provided in order to support the use of relational qualities such as 'concentration of'; for example, the concentration of C in V is a quality that inheres in V, but pertains to C."
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000117",
-          "val" : "https://orcid.org/0000-0002-6601-2165"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000119",
-          "val" : "http://www.ncbi.nlm.nih.gov/pubmed/20064205"
-        } ]
-      }
-    }, {
-      "id" : "http://purl.obolibrary.org/obo/RO_0002604",
-      "lbl" : "is_opposite_of",
-      "type" : "PROPERTY",
-      "meta" : {
-        "definition" : {
-          "val" : "x is the opposite of y if there exists some distance metric M, and there exists no z such as M(x,z) <= M(x,y) or M(y,z) <= M(y,x)."
-        },
-        "xrefs" : [ {
-          "val" : "RO:0002604"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "'anterior end of organism' is-opposite-of 'posterior end of organism'"
-        }, {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000112",
-          "val" : "'increase in temperature' is-opposite-of 'decrease in temperature'"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "quality"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_class_level",
-          "val" : "true"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_metadata_tag",
-          "val" : "true"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
-          "val" : "is_opposite_of"
-        } ]
+        }
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002610",
       "lbl" : "correlated with",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
           "val" : "A relationship that holds between two entities, where the entities exhibit a statistical dependence relationship. The entities may be statistical variables, or they may be other kinds of entities such as diseases, chemical entities or processes."
-        },
-        "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/IAO_0000232",
-          "val" : "Groups both positive and negative correlation"
-        } ]
+        }
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0015007",
       "lbl" : "increased in magnitude relative to",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
           "val" : "q1 increased_in_magnitude_relative_to q2 if and only if magnitude(q1) > magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.",
@@ -48891,6 +48739,7 @@
       "id" : "http://purl.obolibrary.org/obo/RO_0015008",
       "lbl" : "decreased in magnitude relative to",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
           "val" : "q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) < magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.",
@@ -48901,11 +48750,13 @@
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0015010",
       "lbl" : "has relative magnitude",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "OBJECT"
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0015011",
       "lbl" : "has cross section",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
           "val" : "s3 has_cross_section s3 if and only if : there exists some 2d plane that intersects the bearer of s3, and the impression of s3 upon that plane has shape quality s2.",
@@ -48917,6 +48768,7 @@
       "id" : "http://purl.obolibrary.org/obo/RO_0015012",
       "lbl" : "reciprocal of",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
           "val" : "q1 reciprocal_of q2 if and only if : q1 and q2 are relational qualities and a phenotype e q1 e2 mutually implies a phenotype e2 q2 e.",
@@ -48928,11 +48780,12 @@
       "id" : "http://purl.obolibrary.org/obo/pato#correlates_with",
       "lbl" : "obsolete correlates_with",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "comments" : [ "Consider using RO:0002610 instead. See https://github.com/pato-ontology/pato/issues/454" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
-          "val" : "RO:0002610"
+          "val" : "http://purl.obolibrary.org/obo/RO_0002610"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -48943,6 +48796,7 @@
       "id" : "http://purl.obolibrary.org/obo/pato#decreased_in_magnitude_relative_to",
       "lbl" : "obsolete decreased_in_magnitude_relative_to",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
           "val" : "OBSOLETE. q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) < magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.",
@@ -48951,7 +48805,7 @@
         "comments" : [ "Refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason. This relation is used to determine the 'directionality' of relative qualities such as 'decreased strength', relative to the parent type, 'strength'." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
-          "val" : "RO:0015008"
+          "val" : "http://purl.obolibrary.org/obo/RO_0015008"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -48962,6 +48816,7 @@
       "id" : "http://purl.obolibrary.org/obo/pato#different_in_magnitude_relative_to",
       "lbl" : "obsolete different_in_magnitude_relative_to",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
           "val" : "OBSOLETE. q1 different_in_magnitude_relative_to q2 if and only if magnitude(q1) NOT =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.",
@@ -48970,7 +48825,7 @@
         "comments" : [ "Refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
-          "val" : "RO:0015006"
+          "val" : "http://purl.obolibrary.org/obo/RO_0015006"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -48981,6 +48836,7 @@
       "id" : "http://purl.obolibrary.org/obo/pato#directly_associated_with",
       "lbl" : "obsolete directly_associated_with",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
           "val" : "OBSOLETE. q1 directly_associated_with q2 iff q1 is dependent on q2, and the magnitude of q1 increases if the magnitude of q2 is increased, or the magnitude of q1 decreases if the magnitude of q2 is decreased. The relationship is not necessarily linear.",
@@ -49003,6 +48859,7 @@
       "id" : "http://purl.obolibrary.org/obo/pato#has_cross_section",
       "lbl" : "obsolete has_cross_section",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
           "val" : "OBSOLETE. s3 has_cross_section s3 if and only if : there exists some 2d plane that intersects the bearer of s3, and the impression of s3 upon that plane has shape quality s2.",
@@ -49011,7 +48868,7 @@
         "comments" : [ "Refer to https://github.com/pato-ontology/pato/issues/454. Example: a spherical object has the quality of being spherical, and the spherical quality has_cross_section round." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
-          "val" : "RO:0015011"
+          "val" : "http://purl.obolibrary.org/obo/RO_0015011"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -49022,6 +48879,7 @@
       "id" : "http://purl.obolibrary.org/obo/pato#has_dividend_entity",
       "lbl" : "obsolete has_dividend_entity",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "comments" : [ "refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason." ],
         "basicPropertyValues" : [ {
@@ -49034,6 +48892,7 @@
       "id" : "http://purl.obolibrary.org/obo/pato#has_dividend_quality",
       "lbl" : "obsolete has_dividend_quality",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "comments" : [ "refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason." ],
         "basicPropertyValues" : [ {
@@ -49046,6 +48905,7 @@
       "id" : "http://purl.obolibrary.org/obo/pato#has_divisor_entity",
       "lbl" : "obsolete has_divisor_entity",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "comments" : [ "refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason." ],
         "basicPropertyValues" : [ {
@@ -49058,6 +48918,7 @@
       "id" : "http://purl.obolibrary.org/obo/pato#has_divisor_quality",
       "lbl" : "obsolete has_divisor_quality",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "comments" : [ "refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason." ],
         "basicPropertyValues" : [ {
@@ -49070,6 +48931,7 @@
       "id" : "http://purl.obolibrary.org/obo/pato#has_ratio_quality",
       "lbl" : "obsolete has_ratio_quality",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "comments" : [ "refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason." ],
         "basicPropertyValues" : [ {
@@ -49082,11 +48944,12 @@
       "id" : "http://purl.obolibrary.org/obo/pato#has_relative_magnitude",
       "lbl" : "obsolete has_relative_magnitude",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "comments" : [ "Refer to https://github.com/pato-ontology/pato/issues/454." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
-          "val" : "RO:0015010"
+          "val" : "http://purl.obolibrary.org/obo/RO_0015010"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -49097,6 +48960,7 @@
       "id" : "http://purl.obolibrary.org/obo/pato#increased_in_magnitude_relative_to",
       "lbl" : "obsolete increased_in_magnitude_relative_to",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
           "val" : "OBSOLETE. q1 increased_in_magnitude_relative_to q2 if and only if magnitude(q1) > magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.",
@@ -49105,7 +48969,7 @@
         "comments" : [ "Refer to https://github.com/pato-ontology/pato/issues/454. This relation is used to determine the 'directionality' of relative qualities such as 'increased strength', relative to the parent type, 'strength'." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
-          "val" : "RO:0015007"
+          "val" : "http://purl.obolibrary.org/obo/RO_0015007"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -49116,6 +48980,7 @@
       "id" : "http://purl.obolibrary.org/obo/pato#inversely_associated_with",
       "lbl" : "obsolete inversely_associated_with",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
           "val" : "OBSOLETE. q1 inversely_associated_with q2 iff q1 is dependent on q2, and the magnitude of q1 decreases if the magnitude of q2 is increased, or the magnitude of q1 increases if the magnitude of q2 is decreased. The relationship is not necessarily linear.",
@@ -49138,6 +49003,7 @@
       "id" : "http://purl.obolibrary.org/obo/pato#is_magnitude_of",
       "lbl" : "obsolete is_magnitude_of",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "comments" : [ "refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason." ],
         "basicPropertyValues" : [ {
@@ -49150,6 +49016,7 @@
       "id" : "http://purl.obolibrary.org/obo/pato#is_measurement_of",
       "lbl" : "obsolete is_measurement_of",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "comments" : [ "refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason." ],
         "basicPropertyValues" : [ {
@@ -49162,6 +49029,7 @@
       "id" : "http://purl.obolibrary.org/obo/pato#is_unit_of",
       "lbl" : "obsolete is_unit_of",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "comments" : [ "refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason." ],
         "basicPropertyValues" : [ {
@@ -49174,11 +49042,12 @@
       "id" : "http://purl.obolibrary.org/obo/pato#realized_by",
       "lbl" : "obsolete realized_by",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "comments" : [ "Consider using RO:0009501 instead. See https://github.com/pato-ontology/pato/issues/454" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
-          "val" : "RO:0009501"
+          "val" : "http://purl.obolibrary.org/obo/RO_0009501"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -49189,6 +49058,7 @@
       "id" : "http://purl.obolibrary.org/obo/pato#reciprocal_of",
       "lbl" : "obsolete reciprocal_of",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
           "val" : "OBSOLETE. q1 reciprocal_of q2 if and only if : q1 and q2 are relational qualities and a phenotype e q1 e2 mutually implies a phenotype e2 q2 e.",
@@ -49197,7 +49067,7 @@
         "comments" : [ "Refer to https://github.com/pato-ontology/pato/issues/454. There are frequently two ways to state the same thing: we can say 'spermatocyte lacks asters' or 'asters absent from spermatocyte'. In this case the quality is 'lacking all parts of type' - it is a (relational) quality of the spermatocyte, and it is with respect to instances of 'aster'. One of the popular requirements of PATO is that it continue to support 'absent', so we need to relate statements which use this quality to the 'lacking all parts of type' quality." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
-          "val" : "RO:0015012"
+          "val" : "http://purl.obolibrary.org/obo/RO_0015012"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -49208,6 +49078,7 @@
       "id" : "http://purl.obolibrary.org/obo/pato#similar_in_magnitude_relative_to",
       "lbl" : "obsolete similar_in_magnitude_relative_to",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "definition" : {
           "val" : "OBSOLETE. q1 similar_in_magnitude_relative_to q2 if and only if magnitude(q1) =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale.",
@@ -49216,7 +49087,7 @@
         "comments" : [ "Refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason." ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
-          "val" : "RO:0015009"
+          "val" : "http://purl.obolibrary.org/obo/RO_0015009"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -49227,6 +49098,7 @@
       "id" : "http://purl.obolibrary.org/obo/pato#singly_occurring_form_of",
       "lbl" : "obsolete singly_occurring_form_of",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "comments" : [ "refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.\nOBSOLETE. PATO divides qualities between normal (monadic, singly-occurring) qualities and relational qualities. Relational qualities stand in the 'towards' relation with respect to some additional entity. For example, The sensitivity of an eye towards red light. In some cases we want to represent a quality such as 'protruding' in both monadic and relational branches. We use this relation to link them." ],
         "synonyms" : [ {
@@ -49243,11 +49115,12 @@
       "id" : "http://purl.obolibrary.org/obo/pato#towards",
       "lbl" : "obsolete towards",
       "type" : "PROPERTY",
+      "propertyType" : "OBJECT",
       "meta" : {
         "comments" : [ "Consider using RO:0002503 instead. See https://github.com/pato-ontology/pato/issues/454" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
-          "val" : "RO:0002503"
+          "val" : "http://purl.obolibrary.org/obo/RO_0002503"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -49255,65 +49128,289 @@
         "deprecated" : true
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000115",
+      "lbl" : "definition",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000231",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0000700",
+      "lbl" : "has ontology root term",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "xrefs" : [ {
+          "val" : "IAO:0000700"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "external"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_class_level",
+          "val" : "true"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_metadata_tag",
+          "val" : "true"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "has_ontology_root_term"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/IAO_0100001",
+      "lbl" : "term replaced by",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/RO_0002604",
+      "lbl" : "is_opposite_of",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "definition" : {
+          "val" : "x is the opposite of y if there exists some distance metric M, and there exists no z such as M(x,z) <= M(x,y) or M(y,z) <= M(y,x)."
+        },
+        "xrefs" : [ {
+          "val" : "RO:0002604"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_class_level",
+          "val" : "true"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_metadata_tag",
+          "val" : "true"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
+          "val" : "is_opposite_of"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/valid_for_go_annotation_extension",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/valid_for_go_gp2term",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/valid_for_go_ontology",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/valid_for_gocam",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/pato#abnormal_slim",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "comments" : [ "Abnormal/normal slim" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/pato#absent_slim",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "comments" : [ "Absent/present slim" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/pato#attribute_slim",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "comments" : [ "Attribute slim" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/pato#cell_quality",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "comments" : [ "cell_quality" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/pato#disposition_slim",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "comments" : [ "Disposition slim" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/pato#hpo_slim",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "comments" : [ "Human phenotype slim" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/pato#mpath_slim",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "comments" : [ "Pathology slim" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/pato#relational_slim",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "comments" : [ "Relational slim: types of quality that require an additional entity in order to exist" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/pato#scalar_slim",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "comments" : [ "Scalar slim" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/pato#seeAlso",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/pato#value_slim",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION",
+      "meta" : {
+        "comments" : [ "Value slim" ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/ro/subsets#ro-eco",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/creator",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/date",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/description",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/elements/1.1/title",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/terms/contributor",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/terms/date",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.org/dc/terms/license",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#SubsetProperty",
       "lbl" : "subset_property",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#consider",
       "lbl" : "consider",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#created_by",
       "lbl" : "created by",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
       "lbl" : "creation date",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#default-namespace",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
       "lbl" : "has_alternative_id",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym",
       "lbl" : "has_broad_synonym",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasDbXref",
       "lbl" : "database_cross_reference",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym",
       "lbl" : "has_exact_synonym",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym",
       "lbl" : "has_narrow_synonym",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion",
       "lbl" : "has_obo_format_version",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
       "lbl" : "has_obo_namespace",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym",
       "lbl" : "has_related_synonym",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#id",
       "lbl" : "id",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#inSubset",
       "lbl" : "in_subset",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#is_class_level",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#is_metadata_tag",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
       "lbl" : "shorthand",
-      "type" : "PROPERTY"
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.w3.org/2000/01/rdf-schema#comment",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.w3.org/2000/01/rdf-schema#label",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.w3.org/2002/07/owl#deprecated",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
     } ],
     "edges" : [ {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000004",
@@ -49366,7 +49463,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000033",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002182"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000070"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000037",
       "pred" : "is_a",
@@ -49446,7 +49543,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000070",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000068"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0103000"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000070",
       "pred" : "http://purl.obolibrary.org/obo/RO_0015012",
@@ -50666,6 +50763,10 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001162",
       "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000470"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001162",
+      "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001159"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001162",
@@ -50675,6 +50776,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001163",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001159"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001163",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001997"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001163",
       "pred" : "is_a",
@@ -52090,10 +52195,6 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001555",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0001555",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0015012",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000070"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001558",
@@ -52562,7 +52663,15 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001656",
       "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001997"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001656",
+      "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0002303"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001657",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000470"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001657",
       "pred" : "is_a",
@@ -53478,7 +53587,15 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001843",
       "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001997"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001843",
+      "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0002303"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0001844",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000470"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001844",
       "pred" : "is_a",
@@ -54186,11 +54303,19 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002001",
       "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001997"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0002001",
+      "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001999"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002001",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0002303"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0002002",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000470"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002002",
       "pred" : "is_a",
@@ -54302,11 +54427,19 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002028",
       "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001997"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0002028",
+      "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0002027"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002028",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0002303"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0002029",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000470"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002029",
       "pred" : "is_a",
@@ -56672,6 +56805,14 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000051"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0010007",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001408"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0010008",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001408"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0015001",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000639"
@@ -56682,7 +56823,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0015002",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001236"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0002062"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0015003",
       "pred" : "is_a",
@@ -57972,6 +58113,10 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000161"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0050001",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0015002"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0055001",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0002302"
@@ -58010,11 +58155,19 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0055005",
       "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0015004"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0055005",
+      "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0050001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0055006",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000911"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0055006",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0015003"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0055006",
       "pred" : "is_a",
@@ -58271,6 +58424,10 @@
       "sub" : "http://purl.obolibrary.org/obo/PATO_0095009",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001995"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0103000",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002180",
       "pred" : "subPropertyOf",
