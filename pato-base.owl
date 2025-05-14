@@ -10,9 +10,10 @@
      xmlns:pato="http://purl.obolibrary.org/obo/pato#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:terms1="http://www.geneontology.org/formats/oboInOwl#http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/pato/pato-base.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2025-02-01/pato-base.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2025-05-14/pato-base.owl"/>
         <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
         <dc:description>An ontology of phenotypic qualities (properties, attributes or characteristics).</dc:description>
         <dc:title>PATO - the Phenotype And Trait Ontology</dc:title>
@@ -20,7 +21,7 @@
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
         <oboInOwl:default-namespace>quality</oboInOwl:default-namespace>
         <oboInOwl:hasOBOFormatVersion>1.2</oboInOwl:hasOBOFormatVersion>
-        <owl:versionInfo>2025-02-01</owl:versionInfo>
+        <owl:versionInfo>2025-05-14</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -297,6 +298,12 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#http://purl.org/dc/terms/contributor"/>
     
 
 
@@ -54735,6 +54742,142 @@ height&apos;).</rdfs:comment>
         <oboInOwl:hasDbXref>https://libguides.macalester.edu/c.php?g=527786&amp;p=3608639</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>https://www.nnlm.gov/guides/data-glossary/quantitative-data</oboInOwl:hasDbXref>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0103001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0103001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000125"/>
+        <obo:IAO_0000115>A quantitative quality that represents the sum of all &apos;mass&apos; qualities of the component parts that constitute a whole entity. The total mass quality inheres in the whole entity and reflects the aggregate measure of mass across all its components, such that changes in the mass of individual components may not necessarily correspond to equivalent changes in the total mass of the whole.
+
+Example of usage: &quot;total body mass&quot; represents the sum of the masses of all tissues and organs in the body, while &quot;liver mass&quot; represents only the mass of the liver. An increase in liver mass does not necessarily mean an increase in total body mass, as the mass of other organs or tissues may decrease simultaneously.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-10T16:14:12Z</dc:date>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0103001</oboInOwl:id>
+        <terms1:contributor rdf:resource="https://orcid.org/0000-0001-8314-2140"/>
+        <rdfs:label>total mass</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0103002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0103002">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0103001"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0015007"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000461"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001563"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0103001"/>
+        <obo:IAO_0000115>A total mass which is higher than normal or average.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-10T16:25:35Z</dc:date>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0103002</oboInOwl:id>
+        <terms1:contributor rdf:resource="https://orcid.org/0000-0001-8314-2140"/>
+        <rdfs:label>increased total mass</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0103003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0103003">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0103001"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0015008"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000461"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001562"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0103001"/>
+        <obo:IAO_0000115>A total mass which is lower than normal or average.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-10T16:29:00Z</dc:date>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0103003</oboInOwl:id>
+        <terms1:contributor rdf:resource="https://orcid.org/0000-0001-8314-2140"/>
+        <rdfs:label>decreased total mass</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0103004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0103004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000070"/>
+        <obo:IAO_0000115>A quantitative quality that represents the sum of all &apos;amount&apos; qualities of the component parts that constitute a whole entity. The total amount quality inheres in the whole entity and reflects the aggregate measure across all its components, such that changes in the amount of individual components may not necessarily correspond to equivalent changes in the total amount of the whole.
+
+Example of usage: &quot;blood total protein amount&quot; represents the sum of the amounts of all protein types in blood, while &quot;blood leptin amount&quot; represents only the amount of leptin proteins. An increase in blood leptin amount does not necessarily mean an increase in blood total protein amount, as other protein levels may decrease simultaneously.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-10T16:33:09Z</dc:date>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0103004</oboInOwl:id>
+        <terms1:contributor rdf:resource="https://orcid.org/0000-0001-8314-2140"/>
+        <rdfs:label>total amount</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0103005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0103005">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0103004"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0015008"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000461"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001997"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0103004"/>
+        <obo:IAO_0000115>A total amount which is relatively low.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-10T16:36:36Z</dc:date>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0103005</oboInOwl:id>
+        <terms1:contributor rdf:resource="https://orcid.org/0000-0001-8314-2140"/>
+        <rdfs:label>decreased total amount</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0103006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0103006">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0103004"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0015007"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000461"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000470"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0103004"/>
+        <obo:IAO_0000115>A total amount which is relatively high.</obo:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-10T16:37:33Z</dc:date>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0103006</oboInOwl:id>
+        <terms1:contributor rdf:resource="https://orcid.org/0000-0001-8314-2140"/>
+        <rdfs:label>increased total amount</rdfs:label>
+    </owl:Class>
     
 
 
