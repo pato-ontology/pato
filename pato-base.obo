@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pato/releases/2025-02-01/pato-base.owl
+data-version: pato/releases/2025-05-14/pato-base.owl
 subsetdef: abnormal_slim "Abnormal/normal slim"
 subsetdef: absent_slim "Absent/present slim"
 subsetdef: attribute_slim "Attribute slim"
@@ -14,12 +14,13 @@ default-namespace: quality
 idspace: dc http://purl.org/dc/elements/1.1/ 
 idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
 idspace: terms http://purl.org/dc/terms/ 
+idspace: terms1 http://www.geneontology.org/formats/oboInOwl#http://purl.org/dc/terms/ 
 ontology: pato/pato-base
 property_value: dc:description "An ontology of phenotypic qualities (properties, attributes or characteristics)." xsd:string
 property_value: dc:title "PATO - the Phenotype And Trait Ontology" xsd:string
 property_value: dc:type IAO:8000001
 property_value: IAO:0000700 PATO:0000001
-property_value: owl:versionInfo "2025-02-01" xsd:string
+property_value: owl:versionInfo "2025-05-14" xsd:string
 property_value: terms:license https://creativecommons.org/licenses/by/3.0/
 
 [Term]
@@ -22707,6 +22708,66 @@ name: quantitative
 def: "A quality of an entity that can be represented numerically, including anything that can be counted, measured, or given a numerical value." [https://libguides.macalester.edu/c.php?g=527786&p=3608639, https://www.nnlm.gov/guides/data-glossary/quantitative-data]
 is_a: PATO:0000001 ! quality
 created_by: https://orcid.org/0000-0001-8314-2140
+
+[Term]
+id: PATO:0103001
+name: total mass
+def: "A quantitative quality that represents the sum of all 'mass' qualities of the component parts that constitute a whole entity. The total mass quality inheres in the whole entity and reflects the aggregate measure of mass across all its components, such that changes in the mass of individual components may not necessarily correspond to equivalent changes in the total mass of the whole.\n\nExample of usage: \"total body mass\" represents the sum of the masses of all tissues and organs in the body, while \"liver mass\" represents only the mass of the liver. An increase in liver mass does not necessarily mean an increase in total body mass, as the mass of other organs or tissues may decrease simultaneously." []
+is_a: PATO:0000125 ! mass
+property_value: dc:date "2025-04-10T16:14:12Z" xsd:dateTime
+property_value: terms1:contributor https://orcid.org/0000-0001-8314-2140
+
+[Term]
+id: PATO:0103002
+name: increased total mass
+def: "A total mass which is higher than normal or average." []
+is_a: PATO:0001563 ! increased mass
+is_a: PATO:0103001 ! total mass
+intersection_of: PATO:0103001 ! total mass
+intersection_of: RO:0015007 PATO:0000461 ! normal
+property_value: dc:date "2025-04-10T16:25:35Z" xsd:dateTime
+property_value: terms1:contributor https://orcid.org/0000-0001-8314-2140
+
+[Term]
+id: PATO:0103003
+name: decreased total mass
+def: "A total mass which is lower than normal or average." []
+is_a: PATO:0001562 ! decreased mass
+is_a: PATO:0103001 ! total mass
+intersection_of: PATO:0103001 ! total mass
+intersection_of: RO:0015008 PATO:0000461 ! normal
+property_value: dc:date "2025-04-10T16:29:00Z" xsd:dateTime
+property_value: terms1:contributor https://orcid.org/0000-0001-8314-2140
+
+[Term]
+id: PATO:0103004
+name: total amount
+def: "A quantitative quality that represents the sum of all 'amount' qualities of the component parts that constitute a whole entity. The total amount quality inheres in the whole entity and reflects the aggregate measure across all its components, such that changes in the amount of individual components may not necessarily correspond to equivalent changes in the total amount of the whole.\n\nExample of usage: \"blood total protein amount\" represents the sum of the amounts of all protein types in blood, while \"blood leptin amount\" represents only the amount of leptin proteins. An increase in blood leptin amount does not necessarily mean an increase in blood total protein amount, as other protein levels may decrease simultaneously." []
+is_a: PATO:0000070 ! amount
+property_value: dc:date "2025-04-10T16:33:09Z" xsd:dateTime
+property_value: terms1:contributor https://orcid.org/0000-0001-8314-2140
+
+[Term]
+id: PATO:0103005
+name: decreased total amount
+def: "A total amount which is relatively low." []
+is_a: PATO:0001997 ! decreased amount
+is_a: PATO:0103004 ! total amount
+intersection_of: PATO:0103004 ! total amount
+intersection_of: RO:0015008 PATO:0000461 ! normal
+property_value: dc:date "2025-04-10T16:36:36Z" xsd:dateTime
+property_value: terms1:contributor https://orcid.org/0000-0001-8314-2140
+
+[Term]
+id: PATO:0103006
+name: increased total amount
+def: "A total amount which is relatively high." []
+is_a: PATO:0000470 ! increased amount
+is_a: PATO:0103004 ! total amount
+intersection_of: PATO:0103004 ! total amount
+intersection_of: RO:0015007 PATO:0000461 ! normal
+property_value: dc:date "2025-04-10T16:37:33Z" xsd:dateTime
+property_value: terms1:contributor https://orcid.org/0000-0001-8314-2140
 
 [Typedef]
 id: correlates_with
