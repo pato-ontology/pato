@@ -22,9 +22,9 @@
         "val" : "1.2"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2025-02-01"
+        "val" : "2025-05-14"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/pato/releases/2025-02-01/pato-simple.json"
+      "version" : "http://purl.obolibrary.org/obo/pato/releases/2025-05-14/pato-simple.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/PATO_0000000",
@@ -48595,6 +48595,120 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0103001",
+      "lbl" : "total mass",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A quantitative quality that represents the sum of all 'mass' qualities of the component parts that constitute a whole entity. The total mass quality inheres in the whole entity and reflects the aggregate measure of mass across all its components, such that changes in the mass of individual components may not necessarily correspond to equivalent changes in the total mass of the whole.\n\nExample of usage: \"total body mass\" represents the sum of the masses of all tissues and organs in the body, while \"liver mass\" represents only the mass of the liver. An increase in liver mass does not necessarily mean an increase in total body mass, as the mass of other organs or tissues may decrease simultaneously."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2025-04-10T16:14:12Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8314-2140"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0103002",
+      "lbl" : "increased total mass",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A total mass which is higher than normal or average."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2025-04-10T16:25:35Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8314-2140"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0103003",
+      "lbl" : "decreased total mass",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A total mass which is lower than normal or average."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2025-04-10T16:29:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8314-2140"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0103004",
+      "lbl" : "total amount",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A quantitative quality that represents the sum of all 'amount' qualities of the component parts that constitute a whole entity. The total amount quality inheres in the whole entity and reflects the aggregate measure across all its components, such that changes in the amount of individual components may not necessarily correspond to equivalent changes in the total amount of the whole.\n\nExample of usage: \"blood total protein amount\" represents the sum of the amounts of all protein types in blood, while \"blood leptin amount\" represents only the amount of leptin proteins. An increase in blood leptin amount does not necessarily mean an increase in blood total protein amount, as other protein levels may decrease simultaneously."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2025-04-10T16:33:09Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8314-2140"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0103005",
+      "lbl" : "decreased total amount",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A total amount which is relatively low."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2025-04-10T16:36:36Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8314-2140"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0103006",
+      "lbl" : "increased total amount",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A total amount which is relatively high."
+        },
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/elements/1.1/date",
+          "val" : "2025-04-10T16:37:33Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8314-2140"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000050",
       "lbl" : "part_of",
       "type" : "PROPERTY",
@@ -48608,9 +48722,6 @@
           "val" : "BFO:0000050"
         } ],
         "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "external"
-        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
         }, {
@@ -48633,9 +48744,6 @@
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "external"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
@@ -48650,17 +48758,7 @@
       "meta" : {
         "definition" : {
           "val" : "Inverse of characteristic_of"
-        },
-        "xrefs" : [ {
-          "val" : "RO:0000053"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "external"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
-          "val" : "bearer_of"
-        } ]
+        }
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002100",
@@ -48691,17 +48789,7 @@
         "definition" : {
           "val" : "w 'has component' p if w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type."
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/ro/subsets#ro-eco" ],
-        "xrefs" : [ {
-          "val" : "RO:0002180"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "external"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
-          "val" : "has_component"
-        } ]
+        "subsets" : [ "http://purl.obolibrary.org/obo/ro/subsets#ro-eco" ]
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/RO_0002503",
@@ -49138,27 +49226,8 @@
       "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0000700",
-      "lbl" : "has ontology root term",
       "type" : "PROPERTY",
-      "propertyType" : "ANNOTATION",
-      "meta" : {
-        "xrefs" : [ {
-          "val" : "IAO:0000700"
-        } ],
-        "basicPropertyValues" : [ {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
-          "val" : "external"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_class_level",
-          "val" : "true"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#is_metadata_tag",
-          "val" : "true"
-        }, {
-          "pred" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
-          "val" : "has_ontology_root_term"
-        } ]
-      }
+      "propertyType" : "ANNOTATION"
     }, {
       "id" : "http://purl.obolibrary.org/obo/IAO_0100001",
       "lbl" : "term replaced by",
@@ -49397,6 +49466,10 @@
     }, {
       "id" : "http://www.geneontology.org/formats/oboInOwl#shorthand",
       "lbl" : "shorthand",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://www.geneontology.org/formats/oboInOwl#http://purl.org/dc/terms/contributor",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
@@ -58428,6 +58501,46 @@
       "sub" : "http://purl.obolibrary.org/obo/PATO_0103000",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0103001",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000125"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0103002",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001563"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0103002",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0103001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0103003",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001562"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0103003",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0103001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0103004",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000070"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0103005",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001997"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0103005",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0103004"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0103006",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000470"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0103006",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0103004"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/RO_0002180",
       "pred" : "subPropertyOf",
