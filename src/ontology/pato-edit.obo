@@ -22660,6 +22660,38 @@ intersection_of: RO:0015007 PATO:0000461 ! increased in magnitude relative to no
 property_value: http://purl.org/dc/elements/1.1/date "2025-04-10T16:37:33Z" xsd:dateTime
 property_value: http://www.geneontology.org/formats/oboInOwl#http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8314-2140
 
+[Term]
+id: PATO:0103007
+name: fasting amount
+def: "A quantitative attribute that represents the measurable quantity or concentration of a substance, molecular entity, or biological component present in an organism during a fasting physiological state, typically measured after a specified period of food abstinence to establish baseline metabolic conditions." []
+synonym: "fasting concentration" NARROW []
+synonym: "fasting level" EXACT []
+synonym: "fasting quantity" EXACT []
+is_a: PATO:0000070 ! amount
+property_value: http://purl.org/dc/elements/1.1/date "2025-08-22T16:25:21Z" xsd:dateTime
+property_value: http://www.geneontology.org/formats/oboInOwl#http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8314-2140
+
+[Term]
+id: PATO:0103008
+name: increased fasting amount
+def: "A fasting amount which is relatively high." []
+synonym: "increased fasting level" EXACT []
+intersection_of: PATO:0103007 ! fasting amount
+intersection_of: RO:0015007 PATO:0000461 ! increased in magnitude relative to normal
+property_value: http://purl.org/dc/elements/1.1/date "2025-08-22T16:33:32Z" xsd:dateTime
+property_value: http://www.geneontology.org/formats/oboInOwl#http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8314-2140
+
+[Term]
+id: PATO:0103009
+name: decreased fasting amount
+def: "A fasting amount which is relatively low." []
+synonym: "decreased fasting level" EXACT []
+is_a: PATO:0103007 ! fasting amount
+intersection_of: PATO:0103007 ! fasting amount
+intersection_of: RO:0015008 PATO:0000461 ! decreased in magnitude relative to normal
+property_value: http://purl.org/dc/elements/1.1/date "2025-08-22T16:43:06Z" xsd:dateTime
+property_value: http://www.geneontology.org/formats/oboInOwl#http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8314-2140
+
 [Typedef]
 id: correlates_with
 name: obsolete correlates_with
