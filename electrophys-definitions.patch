@@ -1,0 +1,126 @@
+From fbc48325c192abc6f2eb6d777be81d017dbfeaa5 Mon Sep 17 00:00:00 2001
+From: "copilot-swe-agent[bot]" <198982749+Copilot@users.noreply.github.com>
+Date: Fri, 16 Jan 2026 18:17:38 +0000
+Subject: [PATCH] Add definitions to electrophysiology terms based on Petilla
+ Convention (PMID:20445542)
+
+---
+ src/ontology/pato-edit.obo | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+diff --git a/src/ontology/pato-edit.obo b/src/ontology/pato-edit.obo
+index bdddb46..14d61ca 100644
+--- a/src/ontology/pato-edit.obo
++++ b/src/ontology/pato-edit.obo
+@@ -22259,12 +22259,14 @@ is_a: PATO:0001396 ! cellular quality
+ [Term]
+ id: PATO:0070045
+ name: spiking phenotype
++def: "A cellular electrophysiological quality that inheres in a neuron by virtue of the pattern of action potentials generated in response to a sustained current stimulus." [PMID:20445542]
+ xref: ilxtr:SpikingPhenotype
+ is_a: PATO:0070044 ! cellular electrophysiological quality
+ 
+ [Term]
+ id: PATO:0070046
+ name: regular spiking non pyramidal phenotype
++def: "A spiking phenotype that inheres in non-pyramidal interneurons and is characterized by regular, non-fast-spiking action potential firing patterns with moderate spike frequency adaptation." [PMID:20445542]
+ xref: ilxtr:RegularSpikingNonPyramidalPhenotype
+ is_a: PATO:0070045 ! spiking phenotype
+ disjoint_from: PATO:0070059 ! fast spiking phenotype
+@@ -22272,12 +22274,14 @@ disjoint_from: PATO:0070059 ! fast spiking phenotype
+ [Term]
+ id: PATO:0070047
+ name: sustained spiking phenotype
++def: "A spiking phenotype characterized by the pattern of action potential generation that persists throughout the duration of a sustained depolarizing current stimulus, following any initial transient response." [PMID:20445542]
+ xref: ilxtr:PetillaSustainedSpikingPhenotype
+ is_a: PATO:0070045 ! spiking phenotype
+ 
+ [Term]
+ id: PATO:0070048
+ name: initial spiking phenotype
++def: "A spiking phenotype characterized by the pattern of action potential generation during the initial phase of response to a sustained depolarizing current stimulus, typically within the first 100-300 milliseconds." [PMID:20445542]
+ xref: ilxtr:PetillaInitialSpikingPhenotype
+ is_a: PATO:0070045 ! spiking phenotype
+ property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0001-7258-9596
+@@ -22285,6 +22289,7 @@ property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-00
+ [Term]
+ id: PATO:0070049
+ name: non-accommodating spiking phenotype
++def: "A spiking phenotype characterized by action potential firing at relatively constant interspike intervals throughout a sustained depolarizing current stimulus, without significant spike frequency adaptation." [PMID:20445542]
+ xref: ilxtr:NonAccommodatingSpikingPhenotype
+ is_a: PATO:0070045 ! spiking phenotype
+ disjoint_from: PATO:0070050 ! accommodating spiking phenotype
+@@ -22292,12 +22297,14 @@ disjoint_from: PATO:0070050 ! accommodating spiking phenotype
+ [Term]
+ id: PATO:0070050
+ name: accommodating spiking phenotype
++def: "A spiking phenotype characterized by a progressive increase in interspike intervals during sustained depolarizing current stimulation, reflecting spike frequency adaptation." [PMID:20445542]
+ xref: ilxtr:AccommodatingSpikingPhenotype
+ is_a: PATO:0070045 ! spiking phenotype
+ 
+ [Term]
+ id: PATO:0070051
+ name: initial delayed spiking phenotype
++def: "An initial spiking phenotype characterized by a delay between the onset of a depolarizing current stimulus and the generation of the first action potential." [PMID:20445542]
+ synonym: "Petilla d" EXACT [PMID:18568015]
+ xref: ilxtr:PetillaInitialDelayedSpikingPhenotype
+ is_a: PATO:0070048 ! initial spiking phenotype
+@@ -22307,6 +22314,7 @@ disjoint_from: PATO:0070053 ! initial burst spiking phenotype
+ [Term]
+ id: PATO:0070052
+ name: initial classical spiking phenotype
++def: "An initial spiking phenotype characterized by the generation of a single action potential at or near the onset of a depolarizing current stimulus, without a preceding delay or burst." [PMID:20445542]
+ synonym: "Petilla c" EXACT [PMID:18568015]
+ xref: ilxtr:PetillaInitialClassicalSpikingPhenotype
+ is_a: PATO:0070048 ! initial spiking phenotype
+@@ -22315,6 +22323,7 @@ disjoint_from: PATO:0070053 ! initial burst spiking phenotype
+ [Term]
+ id: PATO:0070053
+ name: initial burst spiking phenotype
++def: "An initial spiking phenotype characterized by the generation of a burst of two or more action potentials at short interspike intervals at the onset of a depolarizing current stimulus." [PMID:20445542]
+ synonym: "Petilla b" EXACT [PMID:18568015]
+ xref: ilxtr:PetillaInitialBurstSpikingPhenotype
+ is_a: PATO:0070048 ! initial spiking phenotype
+@@ -22322,6 +22331,7 @@ is_a: PATO:0070048 ! initial spiking phenotype
+ [Term]
+ id: PATO:0070055
+ name: sustained stuttering phenotype
++def: "A sustained spiking phenotype characterized by alternating periods of action potential generation and silence during sustained depolarizing current stimulation, resulting in intermittent bursts of spikes." [PMID:20445542]
+ synonym: "Petilla stut" EXACT [PMID:18568015]
+ xref: ilxtr:PetillaSustainedStutteringPhenotype
+ is_a: PATO:0070047 ! sustained spiking phenotype
+@@ -22332,6 +22342,7 @@ disjoint_from: PATO:0070058 ! sustained accommodating phenotype
+ [Term]
+ id: PATO:0070056
+ name: sustained non accommodating phenotype
++def: "A sustained spiking phenotype characterized by action potential firing at relatively constant interspike intervals throughout the sustained phase of a depolarizing current stimulus, without significant spike frequency adaptation." [PMID:20445542]
+ synonym: "Petilla nac" EXACT [PMID:18568015]
+ xref: ilxtr:PetillaSustainedNonAccommodatingPhenotype
+ is_a: PATO:0070047 ! sustained spiking phenotype
+@@ -22341,6 +22352,7 @@ disjoint_from: PATO:0070058 ! sustained accommodating phenotype
+ [Term]
+ id: PATO:0070057
+ name: sustained irregular phenotype
++def: "A sustained spiking phenotype characterized by action potential firing with variable and unpredictable interspike intervals during the sustained phase of a depolarizing current stimulus." [PMID:20445542]
+ synonym: "Petilla ir" EXACT [PMID:18568015]
+ xref: ilxtr:PetillaSustainedIrregularPhenotype
+ is_a: PATO:0070047 ! sustained spiking phenotype
+@@ -22349,6 +22361,7 @@ disjoint_from: PATO:0070058 ! sustained accommodating phenotype
+ [Term]
+ id: PATO:0070058
+ name: sustained accommodating phenotype
++def: "A sustained spiking phenotype characterized by a progressive increase in interspike intervals during the sustained phase of a depolarizing current stimulus, reflecting spike frequency adaptation." [PMID:20445542]
+ synonym: "Petilla ac" EXACT [PMID:18568015]
+ xref: ilxtr:PetillaSustainedAccommodatingPhenotype
+ is_a: PATO:0070047 ! sustained spiking phenotype
+@@ -22356,6 +22369,7 @@ is_a: PATO:0070047 ! sustained spiking phenotype
+ [Term]
+ id: PATO:0070059
+ name: fast spiking phenotype
++def: "A spiking phenotype characterized by the ability to sustain high-frequency action potential firing with minimal spike frequency adaptation and narrow action potential waveforms." [PMID:20445542]
+ xref: ilxtr:FastSpikingPhenotype
+ is_a: PATO:0070045 ! spiking phenotype
+ 
+-- 
+2.52.0
+
