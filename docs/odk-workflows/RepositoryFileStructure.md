@@ -16,8 +16,10 @@ These are the current imports in PATO
 
 | Import | URL | Type |
 | ------ | --- | ---- |
+| bfo | http://purl.obolibrary.org/obo/bfo.owl | None |
+| cob | http://purl.obolibrary.org/obo/cob.owl | None |
 | ro | http://purl.obolibrary.org/obo/ro.owl | None |
-| chebi | https://raw.githubusercontent.com/obophenotype/chebi_obo_slim/main/chebi_slim.owl | None |
+| chebi | http://purl.obolibrary.org/obo/upheno/chebi_slim.owl | None |
 | go | http://purl.obolibrary.org/obo/go.owl | None |
 | pco | http://purl.obolibrary.org/obo/pco.owl | None |
 | uberon | http://purl.obolibrary.org/obo/uberon.owl | None |
