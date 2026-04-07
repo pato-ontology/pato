@@ -16,15 +16,14 @@ These are the current imports in PATO
 
 | Import | URL | Type |
 | ------ | --- | ---- |
-| ro | http://purl.obolibrary.org/obo/ro.owl | None |
-| chebi | https://raw.githubusercontent.com/obophenotype/chebi_obo_slim/main/chebi_slim.owl | None |
-| go | http://purl.obolibrary.org/obo/go.owl | None |
-| pco | http://purl.obolibrary.org/obo/pco.owl | None |
-| uberon | http://purl.obolibrary.org/obo/uberon.owl | None |
-| cl | http://purl.obolibrary.org/obo/cl.owl | None |
-| ncbitaxon | http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl | None |
-| pr | https://raw.githubusercontent.com/obophenotype/pro_obo_slim/master/pr_slim.owl | None |
-
+| ro | http://purl.obolibrary.org/obo/ro.owl | slme |
+| chebi | http://purl.obolibrary.org/obo/upheno/chebi_slim.owl | slme |
+| go | http://purl.obolibrary.org/obo/go.owl | slme |
+| pco | http://purl.obolibrary.org/obo/pco.owl | slme |
+| uberon | http://purl.obolibrary.org/obo/uberon.owl | slme |
+| cl | http://purl.obolibrary.org/obo/cl.owl | slme |
+| ncbitaxon | http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl | slme |
+| pr | https://raw.githubusercontent.com/obophenotype/pro_obo_slim/master/pr_slim.owl | slme |
 ## Components
 Components, in contrast to imports, are considered full members of the ontology. This means that any axiom in a component is also included in the ontology base - which means it is considered _native_ to the ontology. While this sounds complicated, consider this: conceptually, no component should be part of more than one ontology. If that seems to be the case, we are most likely talking about an import. Components are often not needed for ontologies, but there are some use cases:
 
