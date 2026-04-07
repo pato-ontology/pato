@@ -16,7 +16,7 @@ ontology: pato
 property_value: http://purl.org/dc/elements/1.1/description "An ontology of phenotypic qualities (properties, attributes or characteristics)." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And Trait Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
-property_value: IAO:0000700 PATO:0000001
+property_value: IAO:0000700 COB:0000502
 
 [Term]
 id: PATO:0000000
@@ -25,9 +25,12 @@ is_obsolete: true
 
 [Term]
 id: PATO:0000001
-name: quality
+name: obsolete quality
 alt_id: PATO:0000072
-def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
+def: "OBSOLETE. A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
+comment: This term was obsoleted in favor of COB:0000502 (characteristic) as part of the PATO to COB alignment. See https://github.com/OBOFoundry/COB/issues/315.
+is_obsolete: true
+replaced_by: COB:0000502
 
 [Term]
 id: PATO:0000002
@@ -470,7 +473,7 @@ id: PATO:0000068
 name: qualitative
 def: "A quality of an entity that is descriptive or observational, typically not represented numerically." [https://libguides.macalester.edu/c.php?g=527786&p=3608639, https://www.ncbi.nlm.nih.gov/books/NBK470395/]
 comment: TODO: define this or obsolete it and move children somewhere else.
-is_a: PATO:0000001 ! quality
+is_a: COB:0000502
 
 [Term]
 id: PATO:0000069
@@ -7612,7 +7615,7 @@ synonym: "quality of a process" EXACT []
 synonym: "quality of occurrent" EXACT []
 synonym: "quality of process" EXACT []
 synonym: "relational quality of occurrent" EXACT []
-is_a: PATO:0000001 ! quality
+is_a: COB:0000502
 disjoint_from: PATO:0001241 ! physical object quality
 
 [Term]
@@ -7631,7 +7634,7 @@ synonym: "quality of a single physical entity" EXACT []
 synonym: "quality of an object" EXACT []
 synonym: "quality of continuant" EXACT []
 xref: snap:Quality
-is_a: PATO:0000001 ! quality
+is_a: COB:0000502
 
 [Term]
 id: PATO:0001242
@@ -8110,7 +8113,7 @@ name: variability
 def: "A quality inhering in a bearer by virtue of the bearer's disposition to varying or changing." [Dictionary:http\://dictionary.reference.com/]
 subset: attribute_slim
 synonym: "variability of a physical quality" RELATED []
-is_a: PATO:0000001 ! quality
+is_a: COB:0000502
 
 [Term]
 id: PATO:0001304
@@ -17174,7 +17177,7 @@ id: PATO:0002300
 name: increased quality
 def: "A quality that has a value that is increased compared to normal or average." [PATOC:GVG]
 is_a: PATO:0000069 ! deviation (from_normal)
-intersection_of: PATO:0000001 ! quality
+intersection_of: COB:0000502
 intersection_of: RO:0015007 PATO:0000461 ! increased in magnitude relative to normal
 relationship: is_opposite_of PATO:0002301 ! decreased quality
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
@@ -17185,7 +17188,7 @@ id: PATO:0002301
 name: decreased quality
 def: "A quality that has a value that is decreased compared to normal or average." [PATOC:GVG]
 is_a: PATO:0000069 ! deviation (from_normal)
-intersection_of: PATO:0000001 ! quality
+intersection_of: COB:0000502
 intersection_of: RO:0015008 PATO:0000461 ! decreased in magnitude relative to normal
 relationship: is_opposite_of PATO:0002300 ! increased quality
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
@@ -22391,7 +22394,7 @@ id: PATO:0070036
 name: dendrite quality
 def: "A quality inhering in a neuron's dendrites by virtue of the bearer's physical composition." []
 xref: ILX:0103022
-is_a: PATO:0000001 ! quality
+is_a: COB:0000502
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -22601,7 +22604,7 @@ property_value: http://purl.org/dc/elements/1.1/date "2021-05-17T13:28:41Z" xsd:
 id: PATO:0103000
 name: quantitative
 def: "A quality of an entity that can be represented numerically, including anything that can be counted, measured, or given a numerical value." [https://libguides.macalester.edu/c.php?g=527786&p=3608639, https://www.nnlm.gov/guides/data-glossary/quantitative-data]
-is_a: PATO:0000001 ! quality
+is_a: COB:0000502
 created_by: https://orcid.org/0000-0001-8314-2140
 
 [Term]
@@ -22672,8 +22675,8 @@ id: decreased_in_magnitude_relative_to
 name: obsolete decreased_in_magnitude_relative_to
 def: "OBSOLETE. q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) < magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
 comment: Refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason. This relation is used to determine the 'directionality' of relative qualities such as 'decreased strength', relative to the parent type, 'strength'.
-domain: PATO:0000001 ! quality
-range: PATO:0000001 ! quality
+domain: COB:0000502
+range: COB:0000502
 is_transitive: true
 is_obsolete: true
 replaced_by: RO:0015008
@@ -22683,8 +22686,8 @@ id: different_in_magnitude_relative_to
 name: obsolete different_in_magnitude_relative_to
 def: "OBSOLETE. q1 different_in_magnitude_relative_to q2 if and only if magnitude(q1) NOT =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
 comment: Refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
-domain: PATO:0000001 ! quality
-range: PATO:0000001 ! quality
+domain: COB:0000502
+range: COB:0000502
 is_obsolete: true
 replaced_by: RO:0015006
 
@@ -22752,8 +22755,8 @@ id: increased_in_magnitude_relative_to
 name: obsolete increased_in_magnitude_relative_to
 def: "OBSOLETE. q1 increased_in_magnitude_relative_to q2 if and only if magnitude(q1) > magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
 comment: Refer to https://github.com/pato-ontology/pato/issues/454. This relation is used to determine the 'directionality' of relative qualities such as 'increased strength', relative to the parent type, 'strength'.
-domain: PATO:0000001 ! quality
-range: PATO:0000001 ! quality
+domain: COB:0000502
+range: COB:0000502
 is_transitive: true
 is_obsolete: true
 replaced_by: RO:0015007
@@ -22820,8 +22823,8 @@ id: similar_in_magnitude_relative_to
 name: obsolete similar_in_magnitude_relative_to
 def: "OBSOLETE. q1 similar_in_magnitude_relative_to q2 if and only if magnitude(q1) =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
 comment: Refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
-domain: PATO:0000001 ! quality
-range: PATO:0000001 ! quality
+domain: COB:0000502
+range: COB:0000502
 is_obsolete: true
 replaced_by: RO:0015009
 
