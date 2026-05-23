@@ -13,7 +13,7 @@ default-namespace: quality
 import: http://purl.obolibrary.org/obo/pato/components/pato_ext.owl
 import: http://purl.obolibrary.org/obo/pato/imports/merged_import.owl
 ontology: pato
-property_value: http://purl.org/dc/elements/1.1/description "An ontology of phenotypic qualities (properties, attributes or characteristics)." xsd:string
+property_value: http://purl.org/dc/elements/1.1/description "An ontology of characteristics (properties, attributes, or modifiers). These are intended to be used in combination with terms from other ontologies to construct characteristic-entity combinations that describe traits or phenotypes of organisms, chemicals, environments, and other entities." xsd:string
 property_value: http://purl.org/dc/elements/1.1/title "PATO - the Phenotype And Trait Ontology" xsd:string
 property_value: http://purl.org/dc/terms/license https://creativecommons.org/licenses/by/3.0/
 property_value: IAO:0000700 PATO:0000001
@@ -25,9 +25,10 @@ is_obsolete: true
 
 [Term]
 id: PATO:0000001
-name: quality
+name: characteristic
 alt_id: PATO:0000072
-def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
+def: "The properties, attributes, or modifiers used to describe an entity or process or some aspect of an entity or process." [https://github.com/pato-ontology/pato/issues/602]
+synonym: "quality" EXACT [OBO:legacy]
 
 [Term]
 id: PATO:0000002
@@ -47,7 +48,7 @@ comment: Should be defined using translocation.
 subset: attribute_slim
 subset: disposition_slim
 subset: scalar_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0000005
@@ -258,7 +259,7 @@ def: "A physical quality inhering in a bearer by virtue of the bearer's density,
 subset: attribute_slim
 subset: mpath_slim
 synonym: "firmness" RELATED []
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0000038
@@ -271,7 +272,7 @@ name: direction
 def: "A physical quality inhering in a bearer by virtue of the bearer's orientation in space." [thesaurus.maths:thesaurus.maths]
 comment: TODO: consider merging with angular placement.
 subset: attribute_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0000040
@@ -280,7 +281,7 @@ def: "A quality that is the extent of space between two entities." [PATOC:GVG]
 subset: attribute_slim
 subset: relational_slim
 subset: scalar_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0000041
@@ -298,7 +299,7 @@ name: flavor
 def: "A quality of a physical entity inhering in a bearer by virtue of whether the bearer's molecules are being perceived by a taste and odorant receptors." [PATOC:GVG]
 subset: attribute_slim
 subset: relational_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0000044
@@ -338,10 +339,10 @@ is_a: PATO:0001546 ! quality of a solid
 [Term]
 id: PATO:0000049
 name: intensity
-def: "A quality inhering in a bearer by virtue of the bearer's possessing or displaying a distinctive feature in type or degree or effect or force." [PATOC:GVG]
+def: "A characteristic inhering in a bearer by virtue of the bearer's possessing or displaying a distinctive feature in type or degree or effect or force." [PATOC:GVG]
 subset: attribute_slim
 subset: hpo_slim
-is_a: PATO:0000068 ! qualitative
+is_a: PATO:0102001 ! modifier characteristic
 
 [Term]
 id: PATO:0000050
@@ -355,7 +356,7 @@ id: PATO:0000051
 name: morphology
 def: "A quality of a single physical entity inhering in the bearer by virtue of the bearer's size or shape or structure." [PATOC:GVG]
 subset: attribute_slim
-is_a: PATO:0001241 ! physical object quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0000052
@@ -403,7 +404,7 @@ id: PATO:0000058
 name: odor
 def: "A physical quality inhering in a bearer by virtue of the bearer's molecules being are aerially dispersed and perceived by an odorant receptor." [PATOC:GVG]
 subset: attribute_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0000059
@@ -467,17 +468,19 @@ is_obsolete: true
 
 [Term]
 id: PATO:0000068
-name: qualitative
-def: "A quality of an entity that is descriptive or observational, typically not represented numerically." [https://libguides.macalester.edu/c.php?g=527786&p=3608639, https://www.ncbi.nlm.nih.gov/books/NBK470395/]
-comment: TODO: define this or obsolete it and move children somewhere else.
-is_a: PATO:0000001 ! quality
+name: obsolete qualitative
+def: "OBSOLETE. A quality of an entity that is descriptive or observational, typically not represented numerically." [https://libguides.macalester.edu/c.php?g=527786&p=3608639, https://www.ncbi.nlm.nih.gov/books/NBK470395/]
+comment: Obsoleted in https://github.com/pato-ontology/pato/issues/602. The qualitative/quantitative dichotomy has no role in the new upper model. Children have been reclassified: intensity, magnitude, secondary -> modifier characteristic; conspicuousness -> physical object characteristic; normal -> comparative modifier characteristic; deviation (from_normal) -> obsoleted (replaced_by abnormal).
+is_obsolete: true
 
 [Term]
 id: PATO:0000069
-name: deviation (from_normal)
-def: "A quality inhering in a bearer by virtue of the whether the bearer differs from normal or average." [PATOC:GVG]
-subset: attribute_slim
-is_a: PATO:0000068 ! qualitative
+name: obsolete deviation (from_normal)
+def: "OBSOLETE. A quality inhering in a bearer by virtue of the whether the bearer differs from normal or average." [PATOC:GVG]
+comment: Obsoleted in https://github.com/pato-ontology/pato/issues/602. Functionally identical to PATO:0000460 abnormal; replaced_by abnormal. Prior label kept as exact synonym on abnormal.
+synonym: "deviation (from_normal)" EXACT [OBO:legacy]
+is_obsolete: true
+replaced_by: PATO:0000460
 
 [Term]
 id: PATO:0000070
@@ -494,7 +497,7 @@ synonym: "number" RELATED []
 synonym: "presence" RELATED []
 synonym: "presence or absence in organism" EXACT []
 synonym: "quantitative" EXACT []
-is_a: PATO:0103000 ! quantitative
+is_a: PATO:0001241 ! physical object characteristic
 relationship: RO:0015012 PATO:0001555 ! reciprocal of has number of
 
 [Term]
@@ -793,7 +796,7 @@ comment: For any biological use of PATO, the concept that should be used is 'mas
 subset: attribute_slim
 subset: relational_slim
 subset: scalar_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0000126
@@ -880,7 +883,7 @@ subset: attribute_slim
 synonym: "location" EXACT []
 synonym: "placement" EXACT []
 synonym: "relational spatial quality" EXACT []
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0000141
@@ -920,7 +923,7 @@ name: temperature
 def: "A physical quality of the thermal energy of a system." [PATOC:GVG]
 subset: attribute_slim
 subset: scalar_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0000147
@@ -1017,7 +1020,7 @@ name: time
 def: "A quality in which events occur in sequence." [PATOC:GVG]
 subset: attribute_slim
 subset: scalar_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0000166
@@ -2809,7 +2812,7 @@ is_obsolete: true
 [Term]
 id: PATO:0000460
 name: abnormal
-def: "A quality inhering in a bearer by virtue of the bearer's deviation from normal or average." [PATOC:GVG]
+def: "A characteristic inhering in a bearer by virtue of the bearer's deviation from normal or average." [PATOC:GVG]
 subset: abnormal_slim
 subset: mpath_slim
 subset: value_slim
@@ -2817,18 +2820,20 @@ synonym: "aberrant" RELATED []
 synonym: "atypia" RELATED []
 synonym: "atypical" RELATED []
 synonym: "defective" RELATED []
-is_a: PATO:0000069 ! deviation (from_normal)
+synonym: "deviation (from_normal)" EXACT [OBO:legacy]
+synonym: "deviation from normal" EXACT []
+is_a: PATO:0102002 ! comparative modifier characteristic
 relationship: is_opposite_of PATO:0000461 ! normal
 
 [Term]
 id: PATO:0000461
 name: normal
-def: "A quality inhering in a bearer by virtue of the bearer's exhibiting no deviation from normal or average." [PATOC:GVG]
+def: "A characteristic inhering in a bearer by virtue of the bearer's exhibiting no deviation from normal or average." [PATOC:GVG]
 subset: abnormal_slim
 subset: mpath_slim
 subset: value_slim
 synonym: "average" RELATED []
-is_a: PATO:0000068 ! qualitative
+is_a: PATO:0102002 ! comparative modifier characteristic
 relationship: is_opposite_of PATO:0000460 ! abnormal
 
 [Term]
@@ -2906,7 +2911,6 @@ synonym: "increased number" EXACT []
 synonym: "present in greater numbers in organism" EXACT []
 synonym: "supernumerary" EXACT []
 is_a: PATO:0000467 ! present
-is_a: PATO:0002300 ! increased quality
 intersection_of: PATO:0000070 ! amount
 intersection_of: RO:0015007 PATO:0000461 ! increased in magnitude relative to normal
 relationship: is_opposite_of PATO:0001997 ! decreased amount
@@ -6298,13 +6302,15 @@ is_obsolete: true
 
 [Term]
 id: PATO:0001018
-name: physical quality
+name: obsolete physical quality
 alt_id: PATO:0002079
-def: "A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities." [PATOC:GVG]
-subset: attribute_slim
+def: "OBSOLETE. A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities." [PATOC:GVG]
+comment: Obsoleted in https://github.com/pato-ontology/pato/issues/602. The 'physical level of organisation in relation to other entities' criterion has never been operationalised, and existing classification was haphazard (time, flavor, odor, movement quality, neuron projection quality all sat under physical quality despite not being 'physical level' in any defensible sense). Children have been moved up to physical object characteristic; outliers (time, movement quality, neuron projection quality) require a follow-up sweep to find more appropriate parents.
 synonym: "relational physical quality" EXACT []
+synonym: "physical quality" EXACT [OBO:legacy]
 xref: Wikipedia:Physical_property
-is_a: PATO:0001241 ! physical object quality
+is_obsolete: true
+replaced_by: PATO:0001241
 
 [Term]
 id: PATO:0001019
@@ -6313,7 +6319,7 @@ def: "A physical quality which inheres in a bearer by virtue of some influence i
 subset: attribute_slim
 subset: scalar_slim
 synonym: "density" RELATED []
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001020
@@ -6328,7 +6334,7 @@ name: energy
 def: "A physical quality inhering in a bearer by virtue of the bearer's capacity to do work." [Wikipedia:http\://en.wikipedia.org/wiki/Energy]
 subset: attribute_slim
 subset: scalar_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001022
@@ -6336,7 +6342,7 @@ name: impulse
 def: "A physical quality inhering in a bearer by virtue of the amount of momentum caused a certain force will produce over time." [url:http\://www.wikipremed.com/home_resources/010104_momentum_concepts.pdf]
 subset: attribute_slim
 subset: scalar_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001023
@@ -6351,14 +6357,14 @@ id: PATO:0001024
 name: power
 def: "A physical quality inhering in a bearer by virtue of the bearer's rate of doing work." [Wikipedia:http\://en.wikipedia.org/wiki/Power]
 subset: attribute_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001025
 name: pressure
 def: "A physical quality that inheres in a bearer by virtue of the bearer's amount of force per unit area it exerts." [PATOC:GVG]
 subset: attribute_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001026
@@ -6366,7 +6372,7 @@ name: work
 def: "A physical quality which is equal to the energy transferred by a force to a moving object." [Wikipedia:http\://en.wikipedia.org/wiki/Work]
 subset: attribute_slim
 synonym: "W" EXACT []
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001027
@@ -6386,7 +6392,7 @@ id: PATO:0001029
 name: efficiency
 def: "A physical quality inhering in a bearer by virtue of ratio of the bearer's output to the bearer's input." [WordNet:WordNet]
 subset: attribute_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001030
@@ -6403,7 +6409,7 @@ def: "A physical quality inhering in a bearer by virtue of the bearer's disposit
 subset: attribute_slim
 subset: disposition_slim
 subset: scalar_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001033
@@ -6415,7 +6421,7 @@ id: PATO:0001034
 name: strain
 def: "A physical quality inhering in a bearer by virtue of the relative change in the bearer's length or the bearer's volume when being stretched or squashed." [PATOC:GVG]
 subset: attribute_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001035
@@ -6424,7 +6430,7 @@ def: "A physical quality inhering in a bearer by virtue of the bearer's rate of 
 subset: attribute_slim
 subset: scalar_slim
 synonym: "force amplitude" EXACT []
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001036
@@ -7561,7 +7567,7 @@ name: strength
 def: "A quality inhering in a bearer by virtue of the bearer's power or force." [thefreedictionary.com:thefreedictionary.com]
 subset: attribute_slim
 subset: scalar_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001231
@@ -7603,35 +7609,36 @@ is_obsolete: true
 
 [Term]
 id: PATO:0001236
-name: process quality
+name: process characteristic
 alt_id: PATO:0001239
 alt_id: PATO:0001240
-def: "A quality which inheres in an process." [PATOC:GVG]
-comment: See comments of relational quality of a physical entity.
+def: "A characteristic which inheres in a process." [PATOC:GVG]
+comment: See comments of relational characteristic of a physical entity.
+synonym: "process quality" EXACT [OBO:legacy]
 synonym: "quality of a process" EXACT []
 synonym: "quality of occurrent" EXACT []
 synonym: "quality of process" EXACT []
 synonym: "relational quality of occurrent" EXACT []
-is_a: PATO:0000001 ! quality
-disjoint_from: PATO:0001241 ! physical object quality
+is_a: PATO:0000001 ! characteristic
+disjoint_from: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001241
-name: physical object quality
+name: physical object characteristic
 alt_id: PATO:0001237
 alt_id: PATO:0001238
-def: "A quality which inheres in a continuant." [PATOC:GVG]
-comment: Relational qualities are qualities that hold between multiple entities. Normal (monadic) qualities such as the shape of a eyeball exist purely as a quality of that eyeball. A relational quality such as sensitivity to light is a quality of that eyeball (and connecting nervous system) as it relates to incoming light waves/particles.
+def: "A characteristic which inheres in a continuant." [PATOC:GVG]
+comment: Relational characteristics are characteristics that hold between multiple entities. Normal (monadic) characteristics such as the shape of a eyeball exist purely as a characteristic of that eyeball. A relational characteristic such as sensitivity to light is a characteristic of that eyeball (and connecting nervous system) as it relates to incoming light waves/particles.
 synonym: "monadic quality of a continuant" EXACT []
 synonym: "monadic quality of an object" NARROW []
 synonym: "monadic quality of continuant" NARROW []
 synonym: "multiply inhering quality of a physical entity" EXACT []
+synonym: "physical object quality" EXACT [OBO:legacy]
 synonym: "quality of a continuant" EXACT []
 synonym: "quality of a single physical entity" EXACT []
 synonym: "quality of an object" EXACT []
 synonym: "quality of continuant" EXACT []
-xref: snap:Quality
-is_a: PATO:0000001 ! quality
+is_a: PATO:0000001 ! characteristic
 
 [Term]
 id: PATO:0001242
@@ -7639,7 +7646,7 @@ name: wavelength
 def: "A physical quality which is equal to the distance between repeating units of a wave pattern." [PATOC:GVG]
 subset: attribute_slim
 subset: scalar_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001243
@@ -8110,7 +8117,7 @@ name: variability
 def: "A quality inhering in a bearer by virtue of the bearer's disposition to varying or changing." [Dictionary:http\://dictionary.reference.com/]
 subset: attribute_slim
 synonym: "variability of a physical quality" RELATED []
-is_a: PATO:0000001 ! quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001304
@@ -9038,7 +9045,7 @@ name: catalytic activity
 def: "A physical quality inhering in a catalyst by virtue of the amount of the catalyst's action." [PATOC:GVG]
 subset: attribute_slim
 subset: scalar_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001415
@@ -9086,7 +9093,7 @@ def: "A physical quality inhering in a bearer by virtue of the bearer's disposit
 subset: attribute_slim
 subset: disposition_slim
 subset: scalar_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001421
@@ -9173,7 +9180,7 @@ subset: disposition_slim
 subset: relational_slim
 synonym: "adhesiveness" EXACT []
 synonym: "stickiness" RELATED []
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001432
@@ -9190,7 +9197,7 @@ def: "A quality of a single process which describes the growth of an organism, s
 subset: attribute_slim
 synonym: "growth quality of a process" RELATED []
 synonym: "growth timing quality" RELATED []
-is_a: PATO:0001236 ! process quality
+is_a: PATO:0001236 ! process characteristic
 
 [Term]
 id: PATO:0001434
@@ -9428,7 +9435,7 @@ def: "A physical quality inhering in a liquid by virtue of the bearer's ability 
 subset: attribute_slim
 subset: disposition_slim
 subset: scalar_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001462
@@ -9452,7 +9459,7 @@ name: electric potential
 def: "A quality that is equal to the potential energy per unit charge associated with a static (time-invariant) electric field, also called the electrostatic potential." [Wikipedia:http\://en.wikipedia.org/wiki/Electric_potential]
 subset: attribute_slim
 subset: scalar_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001465
@@ -9509,7 +9516,7 @@ synonym: "proportionality" EXACT []
 synonym: "proportionality to" EXACT []
 synonym: "quotient" EXACT []
 synonym: "rate" RELATED []
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001472
@@ -9821,7 +9828,7 @@ def: "A quality of a single physical entity that arises by virtue of whether the
 subset: attribute_slim
 subset: disposition_slim
 subset: scalar_slim
-is_a: PATO:0001241 ! physical object quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001510
@@ -9899,7 +9906,7 @@ id: PATO:0001519
 name: sound quality
 def: "A quality inhering in a bearer by virtue of vibration, as perceived by the sense of hearing." [Wikipedia:http\://en.wikipedia.org/wiki/Sound_quality]
 subset: attribute_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001520
@@ -9973,7 +9980,7 @@ id: PATO:0001529
 name: cellular spatiotemporal quality
 def: "A spatiotemporal quality inhering in a cell." [PATOC:GVG]
 subset: attribute_slim
-is_a: PATO:0001236 ! process quality
+is_a: PATO:0001236 ! process characteristic
 
 [Term]
 id: PATO:0001530
@@ -9981,7 +9988,7 @@ name: behavioral quality of a process
 def: "A quality of a single process inhering in a bearer by virtue of the bearer's behavior." [PATOC:GVG]
 subset: attribute_slim
 synonym: "behavioral quality of occurrent" EXACT []
-is_a: PATO:0001236 ! process quality
+is_a: PATO:0001236 ! process characteristic
 
 [Term]
 id: PATO:0001531
@@ -10304,7 +10311,7 @@ id: PATO:0001564
 name: extra or missing processual parts
 def: "A quality of a process inhering in a bearer by virtue of the bearer's processual parts." [PATOC:GVG]
 subset: relational_slim
-is_a: PATO:0001236 ! process quality
+is_a: PATO:0001236 ! process characteristic
 
 [Term]
 id: PATO:0001566
@@ -10416,7 +10423,7 @@ def: "A physical quality that is the ability to contract or shrink." [WordNet:Wo
 subset: attribute_slim
 subset: disposition_slim
 subset: scalar_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001580
@@ -10479,7 +10486,7 @@ comment: Examples could be heat or electricity or sound.
 subset: attribute_slim
 subset: disposition_slim
 subset: scalar_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001586
@@ -10599,7 +10606,7 @@ def: "A quality inhering in a bearer by virtue of the bearer's extending out abo
 subset: value_slim
 synonym: "protruding" EXACT []
 synonym: "relational protruding quality" EXACT []
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001599
@@ -10950,7 +10957,7 @@ id: PATO:0001637
 name: necessity of occurrent
 def: "A quality of single process inhering in a bearer by virtue of whether the bearer is essential or indispensable." [PATO:GVG]
 subset: attribute_slim
-is_a: PATO:0001236 ! process quality
+is_a: PATO:0001236 ! process characteristic
 
 [Term]
 id: PATO:0001638
@@ -11352,7 +11359,7 @@ def: "A physical quality inhering in a bearer by virtue of the bearer's disposit
 subset: attribute_slim
 subset: disposition_slim
 subset: scalar_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001683
@@ -11791,7 +11798,7 @@ subset: attribute_slim
 subset: disposition_slim
 subset: relational_slim
 synonym: "tendency" RELATED []
-is_a: PATO:0001241 ! physical object quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001728
@@ -11892,7 +11899,7 @@ name: radiation quality
 def: "A quality of radiation that reflects the fluence spectrum of charged and neutral particles within the material or medium where dose is being deposited." [DOI:10.20348/STOREDB/1173/1250, https://orcid.org/0000-0002-5111-7263]
 comment: Radiation quality is often expressed in terms of the linear energy transfer of the ionising particles that deliver the absorbed dose, but this is an over simplification. {xref="DOI:10.2307/3570787"}
 subset: attribute_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001740
@@ -12277,7 +12284,6 @@ def: "An intensity which is relatively high." [PATOC:GVG]
 subset: value_slim
 synonym: "high intensity" EXACT []
 is_a: PATO:0000049 ! intensity
-is_a: PATO:0002300 ! increased quality
 intersection_of: PATO:0000049 ! intensity
 intersection_of: RO:0015007 PATO:0000461 ! increased in magnitude relative to normal
 relationship: is_opposite_of PATO:0001783 ! decreased intensity
@@ -12289,7 +12295,6 @@ def: "An intensity which is relatively low." [PATOC:GVG]
 subset: value_slim
 synonym: "low intensity" EXACT []
 is_a: PATO:0000049 ! intensity
-is_a: PATO:0002301 ! decreased quality
 intersection_of: PATO:0000049 ! intensity
 intersection_of: RO:0015008 PATO:0000461 ! decreased in magnitude relative to normal
 relationship: is_opposite_of PATO:0001782 ! increased intensity
@@ -12651,7 +12656,7 @@ def: "A quality inhering in a bearer by virtue of whether the bearer's being cov
 subset: attribute_slim
 subset: mpath_slim
 subset: scalar_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001823
@@ -13237,7 +13242,7 @@ name: hydrophobicity
 def: "A physical quality inhering in a bearer by virtue the bearer's disposition to being water-repellent; tending to repel and not absorb water." [WordNet:WordNet]
 subset: attribute_slim
 subset: disposition_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 disjoint_from: PATO:0001886 ! hydrophilicity
 relationship: is_opposite_of PATO:0001886 ! hydrophilicity
 
@@ -13256,7 +13261,7 @@ name: hydrophilicity
 def: "A physical quality inhering in a bearer by virtue the bearer's disposition to having an affinity for water; it is readily absorbing or dissolving in water." [answers.com:answers.com]
 subset: attribute_slim
 subset: disposition_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 relationship: is_opposite_of PATO:0001884 ! hydrophobicity
 
 [Term]
@@ -13436,7 +13441,7 @@ id: PATO:0001906
 name: movement quality
 def: "A physical quality inhering in a bearer by virtue of the bearer's participation in movement." [PATOC:GVG]
 subset: attribute_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001907
@@ -13479,7 +13484,7 @@ is_a: PATO:0002076 ! movement behavioral quality
 id: PATO:0001912
 name: physiological state
 def: "A quality of a single process inhering in a bearer by virtue of the state of bearer's mechanical, physical, and biochemical processes." [PATOC:mb]
-is_a: PATO:0001236 ! process quality
+is_a: PATO:0001236 ! process characteristic
 
 [Term]
 id: PATO:0001913
@@ -14109,7 +14114,7 @@ is_a: PATO:0001992 ! cellularity
 id: PATO:0001995
 name: organismal quality
 def: "A quality that inheres in an entire organism or part of an organism." [PATOC:CJM]
-is_a: PATO:0001241 ! physical object quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001997
@@ -14124,7 +14129,6 @@ synonym: "present in fewer numbers in organism" EXACT []
 synonym: "reduced" RELATED []
 synonym: "subnumerary" RELATED []
 is_a: PATO:0000467 ! present
-is_a: PATO:0002301 ! decreased quality
 intersection_of: PATO:0000070 ! amount
 intersection_of: RO:0015008 PATO:0000461 ! decreased in magnitude relative to normal
 relationship: is_opposite_of PATO:0000470 ! increased amount
@@ -14132,9 +14136,9 @@ relationship: is_opposite_of PATO:0000470 ! increased amount
 [Term]
 id: PATO:0001998
 name: conspicuousness
-def: "A quality inhering in a bearer by virtue of its visibility." [PATOC:MAH]
+def: "A characteristic inhering in a bearer by virtue of its visibility." [PATOC:MAH]
 comment: This term was created as a grouping term for the 2 terms "conspicuous" and "inconspicuous". However, it is not clear if these terms should even remain in PATO.
-is_a: PATO:0000068 ! qualitative
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0001999
@@ -14195,7 +14199,7 @@ id: PATO:0002003
 name: population quality
 def: "A quality that inheres in an entire population or part of a population." [PATOC:GVG]
 subset: attribute_slim
-is_a: PATO:0001241 ! physical object quality
+is_a: PATO:0001241 ! physical object characteristic
 disjoint_from: PATO:0040057 ! population process quality
 
 [Term]
@@ -14292,7 +14296,7 @@ is_a: PATO:0000141 ! structure
 [Term]
 id: PATO:0002016
 name: magnitude
-is_a: PATO:0000068 ! qualitative
+is_a: PATO:0102001 ! modifier characteristic
 
 [Term]
 id: PATO:0002017
@@ -14748,7 +14752,7 @@ creation_date: 2009-05-27T02:33:32Z
 id: PATO:0002062
 name: physical quality of a process
 subset: attribute_slim
-is_a: PATO:0001236 ! process quality
+is_a: PATO:0001236 ! process characteristic
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2009-06-05T09:16:46Z
 
@@ -15538,7 +15542,7 @@ subset: attribute_slim
 subset: disposition_slim
 subset: relational_slim
 synonym: "edibleness" EXACT []
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2009-10-26T01:20:24Z
 
@@ -15960,7 +15964,7 @@ name: molecular quality
 alt_id: PATO:0002061
 def: "A quality which inheres in a molecular entity, a single molecule, atom, ion, radical etc." [PATOC:GVG]
 synonym: "relational molecular quality" EXACT []
-is_a: PATO:0001241 ! physical object quality
+is_a: PATO:0001241 ! physical object characteristic
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2010-03-10T03:18:15Z
 
@@ -16119,7 +16123,7 @@ id: PATO:0002198
 name: quality of a substance
 def: "A quality inhering in a bearer by virtue of its constitution." [PATOC:GVG]
 subset: attribute_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2010-03-15T04:35:27Z
 
@@ -17010,7 +17014,7 @@ name: tension
 def: "A physical quality that pertains by virtue of a pulling force that is directed away from the bearer and attempts to stretch or elongate the bearer." [PATOC:GVG]
 subset: attribute_slim
 subset: scalar_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2011-03-10T08:41:21Z
 
@@ -17075,7 +17079,7 @@ id: PATO:0002290
 name: aplastic/hypoplastic
 def: "Decreased size or absence of organ, tissue or cell due to a reduction in cell numbers." [https://orcid.org/0000-0003-4606-0597]
 synonym: "aplasia/hypoplasia" EXACT []
-is_a: PATO:0001241 ! physical object quality
+is_a: PATO:0001241 ! physical object characteristic
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2011-04-18T05:11:33Z
 
@@ -17171,23 +17175,21 @@ creation_date: 2011-06-08T06:33:50Z
 
 [Term]
 id: PATO:0002300
-name: increased quality
-def: "A quality that has a value that is increased compared to normal or average." [PATOC:GVG]
-is_a: PATO:0000069 ! deviation (from_normal)
-intersection_of: PATO:0000001 ! quality
-intersection_of: RO:0015007 PATO:0000461 ! increased in magnitude relative to normal
-relationship: is_opposite_of PATO:0002301 ! decreased quality
+name: obsolete increased quality
+def: "OBSOLETE. A characteristic that has a value that is increased compared to normal or average." [PATOC:GVG]
+comment: Obsoleted in https://github.com/pato-ontology/pato/issues/602 (section 5). This was a grouping class for pre-coordinated physical/process qualities, not a modifier characteristic. The new modifier term is PATO:0102003 (increased), to be used post-coordinatively via has_modifier (RO:0002573).
+is_obsolete: true
+replaced_by: PATO:0102003
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2011-06-16T06:39:43Z
 
 [Term]
 id: PATO:0002301
-name: decreased quality
-def: "A quality that has a value that is decreased compared to normal or average." [PATOC:GVG]
-is_a: PATO:0000069 ! deviation (from_normal)
-intersection_of: PATO:0000001 ! quality
-intersection_of: RO:0015008 PATO:0000461 ! decreased in magnitude relative to normal
-relationship: is_opposite_of PATO:0002300 ! increased quality
+name: obsolete decreased quality
+def: "OBSOLETE. A characteristic that has a value that is decreased compared to normal or average." [PATOC:GVG]
+comment: Obsoleted in https://github.com/pato-ontology/pato/issues/602 (section 5). This was a grouping class for pre-coordinated physical/process qualities, not a modifier characteristic. The new modifier term is PATO:0102004 (decreased), to be used post-coordinatively via has_modifier (RO:0002573).
+is_obsolete: true
+replaced_by: PATO:0102004
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2011-06-16T06:40:15Z
 
@@ -17195,9 +17197,8 @@ creation_date: 2011-06-16T06:40:15Z
 id: PATO:0002302
 name: decreased process quality
 def: "A quality of a process that has a value that is decreased compared to normal or average." [PATOC:GVG]
-is_a: PATO:0001236 ! process quality
-is_a: PATO:0002301 ! decreased quality
-intersection_of: PATO:0001236 ! process quality
+is_a: PATO:0001236 ! process characteristic
+intersection_of: PATO:0001236 ! process characteristic
 intersection_of: RO:0015008 PATO:0000461 ! decreased in magnitude relative to normal
 relationship: is_opposite_of PATO:0002304 ! increased process quality
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
@@ -17207,9 +17208,8 @@ creation_date: 2011-06-16T06:50:59Z
 id: PATO:0002303
 name: decreased object quality
 def: "A quality of an object that has a value that is decreased compared to normal or average." [PATOC:GVG]
-is_a: PATO:0001241 ! physical object quality
-is_a: PATO:0002301 ! decreased quality
-intersection_of: PATO:0001241 ! physical object quality
+is_a: PATO:0001241 ! physical object characteristic
+intersection_of: PATO:0001241 ! physical object characteristic
 intersection_of: RO:0015008 PATO:0000461 ! decreased in magnitude relative to normal
 relationship: is_opposite_of PATO:0002305 ! increased object quality
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
@@ -17219,9 +17219,8 @@ creation_date: 2011-06-16T06:51:54Z
 id: PATO:0002304
 name: increased process quality
 def: "A quality of a process that has a value that is increased compared to normal or average." [PATOC:GVG]
-is_a: PATO:0001236 ! process quality
-is_a: PATO:0002300 ! increased quality
-intersection_of: PATO:0001236 ! process quality
+is_a: PATO:0001236 ! process characteristic
+intersection_of: PATO:0001236 ! process characteristic
 intersection_of: RO:0015007 PATO:0000461 ! increased in magnitude relative to normal
 relationship: is_opposite_of PATO:0002302 ! decreased process quality
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
@@ -17231,9 +17230,8 @@ creation_date: 2011-06-16T06:53:08Z
 id: PATO:0002305
 name: increased object quality
 def: "A quality of an object that has a value that is increased compared to normal or average." [PATOC:GVG]
-is_a: PATO:0001241 ! physical object quality
-is_a: PATO:0002300 ! increased quality
-intersection_of: PATO:0001241 ! physical object quality
+is_a: PATO:0001241 ! physical object characteristic
+intersection_of: PATO:0001241 ! physical object characteristic
 intersection_of: RO:0015007 PATO:0000461 ! increased in magnitude relative to normal
 relationship: is_opposite_of PATO:0002303 ! decreased object quality
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
@@ -19003,7 +19001,7 @@ id: PATO:0002486
 name: multi-organismal process quality
 def: "A quality inhering in a process by virtue of that process having two or more organisms as participants." [PATOC:DS]
 subset: attribute_slim
-is_a: PATO:0001236 ! process quality
+is_a: PATO:0001236 ! process characteristic
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2013-10-10T04:08:44Z
 
@@ -19012,7 +19010,7 @@ id: PATO:0002487
 name: single organismal process quality
 def: "A quality inhering in a process by virtue of that process having exactly one organism as a participant." [PATOC:DS]
 subset: attribute_slim
-is_a: PATO:0001236 ! process quality
+is_a: PATO:0001236 ! process characteristic
 disjoint_from: PATO:0040057 ! population process quality
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2013-10-10T04:09:51Z
@@ -19568,9 +19566,10 @@ creation_date: 2014-05-26T13:09:29Z
 [Term]
 id: PATO:0002632
 name: secondary
-def: "A quality in which the effect or outcome is not primary or the focus of the observation." [PATO:MAH]
+def: "A characteristic in which the effect or outcome is not primary or the focus of the observation." [PATO:MAH]
+comment: Distinct from the developmental-stage sense of "secondary" (e.g. "secondary oocyte"); this term is a modifier characteristic, not a stage descriptor.
 subset: hpo_slim
-is_a: PATO:0000068 ! qualitative
+is_a: PATO:0102001 ! modifier characteristic
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-9114-8737
 creation_date: 2014-05-26T13:17:45Z
 
@@ -19956,7 +19955,7 @@ id: PATO:0015007
 name: prominence
 def: "A quality inhering in a bearer by virtue of the degree to which the bearers stands out or projects beyond a surface or line." [GOC:CJM]
 subset: attribute_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0015008
@@ -20064,7 +20063,7 @@ id: PATO:0015021
 name: combustibility
 def: "The propensity of a material to undergo combustion. Combustion encompasses smouldering and flaming combustion. Combustibility is usually applied to solids." [https://en.wikipedia.org/wiki/Combustibility, https://github.com/EnvironmentOntology/envo/issues/384]
 subset: attribute_slim
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 
 [Term]
 id: PATO:0015022
@@ -20202,7 +20201,7 @@ id: PATO:0025000
 name: potability
 def: "A physical quality inhering in a bearer by virtue of the bearer's disposition to being fit to be used as a safe means of hydration." [Wikipedia:https\://en.wikipedia.org/wiki/Drinking_water]
 synonym: "drinkability" EXACT []
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-4366-3088
 creation_date: 2015-09-01T16:16:44Z
 
@@ -20548,7 +20547,7 @@ name: structurally discontinuous
 def: "A structural quality inhering in a bearer by virtue of the bearer's being marked by interruptions or gaps." []
 comment: This term is intended for use for terms such as MP:0010461 discontinuous pulmonary artery and MP:0004157 interrupted aortic arch.
 synonym: "structurally interrupted" EXACT []
-is_a: PATO:0001241 ! physical object quality
+is_a: PATO:0001241 ! physical object characteristic
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-5208-3432
 
 [Term]
@@ -20572,7 +20571,7 @@ id: PATO:0040029
 name: shaded
 def: "A physical quality inhering in a bearer by virtue of that bearer being shielded from visible light." [https://orcid.org/0000-0002-4366-3088]
 comment: Shaded does not refer to radiation more generally, as this would be more shielded than shaded.
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-5208-3432
 
 [Term]
@@ -20688,7 +20687,7 @@ synonym: "decreased proportionality" EXACT []
 synonym: "decreased proportionality to" EXACT []
 synonym: "decreased quotient" EXACT []
 intersection_of: PATO:0001470 ! ratio
-intersection_of: PATO:0002301 ! decreased quality
+intersection_of: RO:0015008 PATO:0000461 ! decreased in magnitude relative to normal
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-5208-3432
 
 [Term]
@@ -20702,7 +20701,7 @@ synonym: "increased proportionality" EXACT []
 synonym: "increased proportionality to" EXACT []
 synonym: "increased quotient" EXACT []
 intersection_of: PATO:0001470 ! ratio
-intersection_of: PATO:0002300 ! increased quality
+intersection_of: RO:0015007 PATO:0000461 ! increased in magnitude relative to normal
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-5208-3432
 
 [Term]
@@ -20823,7 +20822,7 @@ created_by: http://orcid.org/0000-0001-5208-3432
 id: PATO:0040057
 name: population process quality
 def: "A quality inhering in a process by virtue of that process having a population or part of a population, where population is defined as a collection of individuals from the same taxonomic class distinguished by one or more characteristics, as participants." [https://www.alliancegenome.org/glossary]
-is_a: PATO:0001236 ! process quality
+is_a: PATO:0001236 ! process characteristic
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
@@ -20832,7 +20831,7 @@ name: absence of physical object
 def: "A quality denoting the lack of a physical entity or object, such as a chemical." [thefreedictionary.:thefreedictionary.]
 subset: absent_slim
 synonym: "physical absence" EXACT []
-is_a: PATO:0001241 ! physical object quality
+is_a: PATO:0001241 ! physical object characteristic
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
@@ -20842,7 +20841,7 @@ def: "A quality denoting the lack of a process or function." []
 subset: absent_slim
 synonym: "Process absence" EXACT []
 xref: thefreedictionary.:thefreedictionary.
-is_a: PATO:0001236 ! process quality
+is_a: PATO:0001236 ! process characteristic
 created_by: http://orcid.org/0000-0001-5208-3432
 
 [Term]
@@ -20860,7 +20859,7 @@ created_by: http://orcid.org/0000-0001-5208-3432
 id: PATO:0040070
 name: thermoplastic
 def: "A physical quality inhering in a bearer by virtue of the bearer's disposition to deform by heating." [http://www.gesamp.org/publications/guidelines-for-the-monitoring-and-assessment-of-plastic-litter-in-the-ocean, https://orcid.org/0000-0002-8166-0486]
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-5208-3432
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2996-719X
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-8166-0486
@@ -20898,8 +20897,8 @@ intersection_of: RO:0015010 PATO:0000461 ! has relative magnitude normal
 id: PATO:0045001
 name: normal object quality
 def: "A quality of an object that has a value that is normal or average." []
-is_a: PATO:0001241 ! physical object quality
-intersection_of: PATO:0001241 ! physical object quality
+is_a: PATO:0001241 ! physical object characteristic
+intersection_of: PATO:0001241 ! physical object characteristic
 intersection_of: RO:0015010 PATO:0000461 ! has relative magnitude normal
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-9227-0670
 creation_date: 2017-12-21T14:11:01Z
@@ -21794,8 +21793,8 @@ creation_date: 2017-12-22T14:16:43Z
 id: PATO:0045073
 name: normal process quality
 def: "A quality of a process that has a value that is normal or average." []
-is_a: PATO:0001236 ! process quality
-intersection_of: PATO:0001236 ! process quality
+is_a: PATO:0001236 ! process characteristic
+intersection_of: PATO:0001236 ! process characteristic
 intersection_of: RO:0015010 PATO:0000461 ! has relative magnitude normal
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-9227-0670
 creation_date: 2017-12-21T14:11:01Z
@@ -22374,7 +22373,7 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001
 id: PATO:0070033
 name: neuron projection quality
 def: "A physical quality inhering in a neuron by virtue of the relative location of its soma and the regions to which it projects and makes synaptic contacts in." [DOI:10.1101/2020.10.19.343129]
-is_a: PATO:0001018 ! physical quality
+is_a: PATO:0001241 ! physical object characteristic
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -22391,7 +22390,7 @@ id: PATO:0070036
 name: dendrite quality
 def: "A quality inhering in a neuron's dendrites by virtue of the bearer's physical composition." []
 xref: ILX:0103022
-is_a: PATO:0000001 ! quality
+is_a: PATO:0001241 ! physical object characteristic
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -22441,7 +22440,7 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001
 id: PATO:0070044
 name: anatomical structure quality
 def: "A quality of continuant that exist at the anatomical level of organisation and anything under it. This includes, but is not limited to, cells , tissues, and components." []
-is_a: PATO:0001241 ! physical object quality
+is_a: PATO:0001241 ! physical object characteristic
 created_by: http://orcid.org/0000-0001-7258-9596
 
 [Term]
@@ -22561,7 +22560,7 @@ property_value: http://purl.org/dc/elements/1.1/date "2021-05-17T13:20:31Z" xsd:
 id: PATO:0095005
 name: crepuscular
 def: "A quality of a process that happens during dawn and dusk." []
-is_a: PATO:0001236 ! process quality
+is_a: PATO:0001236 ! process characteristic
 property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-2908-3327
 property_value: http://purl.org/dc/elements/1.1/date "2021-05-17T13:22:18Z" xsd:dateTime
 
@@ -22569,7 +22568,7 @@ property_value: http://purl.org/dc/elements/1.1/date "2021-05-17T13:22:18Z" xsd:
 id: PATO:0095006
 name: nocturnal
 def: "A quality of a process that happens during the hours of darkness." []
-is_a: PATO:0001236 ! process quality
+is_a: PATO:0001236 ! process characteristic
 property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-2908-3327
 property_value: http://purl.org/dc/elements/1.1/date "2021-05-17T13:26:38Z" xsd:dateTime
 
@@ -22577,7 +22576,7 @@ property_value: http://purl.org/dc/elements/1.1/date "2021-05-17T13:26:38Z" xsd:
 id: PATO:0095007
 name: diurnal
 def: "A quality of a process that happens during the hours of daylight." []
-is_a: PATO:0001236 ! process quality
+is_a: PATO:0001236 ! process characteristic
 property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-0002-2908-3327
 property_value: http://purl.org/dc/elements/1.1/date "2021-05-17T13:27:09Z" xsd:dateTime
 
@@ -22598,10 +22597,52 @@ property_value: http://purl.org/dc/elements/1.1/creator http://orcid.org/0000-00
 property_value: http://purl.org/dc/elements/1.1/date "2021-05-17T13:28:41Z" xsd:dateTime
 
 [Term]
+id: PATO:0102001
+name: modifier characteristic
+def: "A characteristic used to describe another characteristic." [https://github.com/pato-ontology/pato/issues/602]
+comment: Instances of modifier characteristic should NOT be linked to their bearers via 'characteristic of' (RO:0000052) or its inverse 'has characteristic' (RO:0000053). Use 'has modifier' (RO:0002573) to connect a modifier characteristic to the characteristic it modifies. This keeps 'characteristic of' / 'has characteristic' restricted to entity-or-process-to-characteristic relations.
+synonym: "meta characteristic" RELATED [OBO:earlier-draft]
+is_a: PATO:0000001 ! characteristic
+created_by: https://orcid.org/0000-0002-7356-1779
+creation_date: 2026-05-05T00:00:00Z
+
+[Term]
+id: PATO:0102002
+name: comparative modifier characteristic
+def: "A modifier characteristic determined by comparison to a reference." [https://github.com/pato-ontology/pato/issues/602]
+comment: A comparative modifier characteristic is relational - its identity (e.g. increased vs decreased, abnormal vs normal) is fixed by comparison to a reference. The broader 'modifier characteristic' also covers non-comparative modifiers (intensity, magnitude, secondary).
+synonym: "state modifier" RELATED [OBO:earlier-draft]
+synonym: "comparison modifier" RELATED [OBO:earlier-draft]
+is_a: PATO:0102001 ! modifier characteristic
+created_by: https://orcid.org/0000-0002-7356-1779
+creation_date: 2026-05-05T00:00:00Z
+
+[Term]
+id: PATO:0102003
+name: increased
+def: "A comparative modifier characteristic indicating that the bearer characteristic has a value greater than a reference." [https://github.com/pato-ontology/pato/issues/602]
+comment: Used post-coordinatively via 'has modifier' (RO:0002573), e.g. 'weight and has_modifier some increased'. Distinct from the now-obsolete PATO:0002300 (increased quality), which was a grouping class for pre-coordinated physical/process qualities.
+is_a: PATO:0102002 ! comparative modifier characteristic
+relationship: is_opposite_of PATO:0102004 ! decreased
+created_by: https://orcid.org/0000-0002-7356-1779
+creation_date: 2026-05-05T00:00:00Z
+
+[Term]
+id: PATO:0102004
+name: decreased
+def: "A comparative modifier characteristic indicating that the bearer characteristic has a value less than a reference." [https://github.com/pato-ontology/pato/issues/602]
+comment: Used post-coordinatively via 'has modifier' (RO:0002573), e.g. 'weight and has_modifier some decreased'. Distinct from the now-obsolete PATO:0002301 (decreased quality), which was a grouping class for pre-coordinated physical/process qualities.
+is_a: PATO:0102002 ! comparative modifier characteristic
+relationship: is_opposite_of PATO:0102003 ! increased
+created_by: https://orcid.org/0000-0002-7356-1779
+creation_date: 2026-05-05T00:00:00Z
+
+[Term]
 id: PATO:0103000
-name: quantitative
-def: "A quality of an entity that can be represented numerically, including anything that can be counted, measured, or given a numerical value." [https://libguides.macalester.edu/c.php?g=527786&p=3608639, https://www.nnlm.gov/guides/data-glossary/quantitative-data]
-is_a: PATO:0000001 ! quality
+name: obsolete quantitative
+def: "OBSOLETE. A quality of an entity that can be represented numerically, including anything that can be counted, measured, or given a numerical value." [https://libguides.macalester.edu/c.php?g=527786&p=3608639, https://www.nnlm.gov/guides/data-glossary/quantitative-data]
+comment: Obsoleted in https://github.com/pato-ontology/pato/issues/602. The qualitative/quantitative dichotomy has no role in the new upper model. The single direct child (amount, PATO:0000070) has been moved under physical object characteristic.
+is_obsolete: true
 created_by: https://orcid.org/0000-0001-8314-2140
 
 [Term]
@@ -22672,8 +22713,8 @@ id: decreased_in_magnitude_relative_to
 name: obsolete decreased_in_magnitude_relative_to
 def: "OBSOLETE. q1 decreased_in_magnitude_relative_to q2 if and only if magnitude(q1) < magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
 comment: Refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason. This relation is used to determine the 'directionality' of relative qualities such as 'decreased strength', relative to the parent type, 'strength'.
-domain: PATO:0000001 ! quality
-range: PATO:0000001 ! quality
+domain: PATO:0000001 ! characteristic
+range: PATO:0000001 ! characteristic
 is_transitive: true
 is_obsolete: true
 replaced_by: RO:0015008
@@ -22683,8 +22724,8 @@ id: different_in_magnitude_relative_to
 name: obsolete different_in_magnitude_relative_to
 def: "OBSOLETE. q1 different_in_magnitude_relative_to q2 if and only if magnitude(q1) NOT =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
 comment: Refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
-domain: PATO:0000001 ! quality
-range: PATO:0000001 ! quality
+domain: PATO:0000001 ! characteristic
+range: PATO:0000001 ! characteristic
 is_obsolete: true
 replaced_by: RO:0015006
 
@@ -22752,8 +22793,8 @@ id: increased_in_magnitude_relative_to
 name: obsolete increased_in_magnitude_relative_to
 def: "OBSOLETE. q1 increased_in_magnitude_relative_to q2 if and only if magnitude(q1) > magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
 comment: Refer to https://github.com/pato-ontology/pato/issues/454. This relation is used to determine the 'directionality' of relative qualities such as 'increased strength', relative to the parent type, 'strength'.
-domain: PATO:0000001 ! quality
-range: PATO:0000001 ! quality
+domain: PATO:0000001 ! characteristic
+range: PATO:0000001 ! characteristic
 is_transitive: true
 is_obsolete: true
 replaced_by: RO:0015007
@@ -22820,8 +22861,8 @@ id: similar_in_magnitude_relative_to
 name: obsolete similar_in_magnitude_relative_to
 def: "OBSOLETE. q1 similar_in_magnitude_relative_to q2 if and only if magnitude(q1) =~ magnitude(q2). Here, magnitude(q) is a function that maps a quality to a unit-invariant scale." [PATOC:CJM]
 comment: Refer to https://github.com/pato-ontology/pato/issues/454 for obsoletion reason.
-domain: PATO:0000001 ! quality
-range: PATO:0000001 ! quality
+domain: PATO:0000001 ! characteristic
+range: PATO:0000001 ! characteristic
 is_obsolete: true
 replaced_by: RO:0015009
 
