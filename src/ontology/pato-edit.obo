@@ -22621,7 +22621,7 @@ creation_date: 2026-05-05T00:00:00Z
 id: PATO:0102003
 name: increased
 def: "A comparative modifier characteristic indicating that the bearer characteristic has a value greater than a reference." [https://github.com/pato-ontology/pato/issues/602]
-comment: Used post-coordinatively via 'has modifier' (RO:0002573), e.g. 'weight and has_modifier some increased'. Distinct from the now-obsolete PATO:0002300 (increased quality), which was a grouping class for pre-coordinated physical/process qualities.
+comment: Usage (agreed uPheno call 2026-06-12): 'increased' is only to be used to define pre-coordinated value terms via 'has modifier' (RO:0002573), e.g. 'increased weight' EquivalentTo 'weight and has_modifier some increased'. Do NOT use 'increased' directly in phenotype patterns, and do NOT use it as an is_a parent of a domain characteristic. If a pre-coordinated value term exists for the bearer and direction, use that term; if none exists, request that it be added. Distinct from the now-obsolete PATO:0002300 (increased quality), which was a grouping class for pre-coordinated physical/process qualities.
 is_a: PATO:0102002 ! comparative modifier characteristic
 relationship: is_opposite_of PATO:0102004 ! decreased
 created_by: https://orcid.org/0000-0002-7356-1779
@@ -22631,7 +22631,7 @@ creation_date: 2026-05-05T00:00:00Z
 id: PATO:0102004
 name: decreased
 def: "A comparative modifier characteristic indicating that the bearer characteristic has a value less than a reference." [https://github.com/pato-ontology/pato/issues/602]
-comment: Used post-coordinatively via 'has modifier' (RO:0002573), e.g. 'weight and has_modifier some decreased'. Distinct from the now-obsolete PATO:0002301 (decreased quality), which was a grouping class for pre-coordinated physical/process qualities.
+comment: Usage (agreed uPheno call 2026-06-12): 'decreased' is only to be used to define pre-coordinated value terms via 'has modifier' (RO:0002573), e.g. 'decreased weight' EquivalentTo 'weight and has_modifier some decreased'. Do NOT use 'decreased' directly in phenotype patterns, and do NOT use it as an is_a parent of a domain characteristic. If a pre-coordinated value term exists for the bearer and direction, use that term; if none exists, request that it be added. Distinct from the now-obsolete PATO:0002301 (decreased quality), which was a grouping class for pre-coordinated physical/process qualities.
 is_a: PATO:0102002 ! comparative modifier characteristic
 relationship: is_opposite_of PATO:0102003 ! increased
 created_by: https://orcid.org/0000-0002-7356-1779
