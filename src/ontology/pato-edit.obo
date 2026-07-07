@@ -354,7 +354,7 @@ is_a: PATO:0000165 ! time
 [Term]
 id: PATO:0000051
 name: morphology
-def: "A quality of a single physical entity inhering in the bearer by virtue of the bearer's size or shape or structure." [PATOC:GVG]
+def: "A characterisitic of a single physical entity inhering in the bearer by virtue of the bearer's size or shape or structure." [PATOC:GVG]
 subset: attribute_slim
 is_a: PATO:0001241 ! physical object characteristic
 
@@ -6306,8 +6306,8 @@ name: obsolete physical quality
 alt_id: PATO:0002079
 def: "OBSOLETE. A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities." [PATOC:GVG]
 comment: Obsoleted in https://github.com/pato-ontology/pato/issues/602. The 'physical level of organisation in relation to other entities' criterion has never been operationalised, and existing classification was haphazard (time, flavor, odor, movement quality, neuron projection quality all sat under physical quality despite not being 'physical level' in any defensible sense). Children have been moved up to physical object characteristic; outliers (time, movement quality, neuron projection quality) require a follow-up sweep to find more appropriate parents.
-synonym: "relational physical quality" EXACT []
 synonym: "physical quality" EXACT [OBO:legacy]
+synonym: "relational physical quality" EXACT []
 xref: Wikipedia:Physical_property
 is_obsolete: true
 replaced_by: PATO:0001241
@@ -17178,9 +17178,9 @@ id: PATO:0002300
 name: obsolete increased quality
 def: "OBSOLETE. A characteristic that has a value that is increased compared to normal or average." [PATOC:GVG]
 comment: Obsoleted in https://github.com/pato-ontology/pato/issues/602 (section 5). This was a grouping class for pre-coordinated physical/process qualities, not a modifier characteristic. The new modifier term is PATO:0102003 (increased), to be used post-coordinatively via has_modifier (RO:0002573).
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 is_obsolete: true
 replaced_by: PATO:0102003
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2011-06-16T06:39:43Z
 
 [Term]
@@ -17188,9 +17188,9 @@ id: PATO:0002301
 name: obsolete decreased quality
 def: "OBSOLETE. A characteristic that has a value that is decreased compared to normal or average." [PATOC:GVG]
 comment: Obsoleted in https://github.com/pato-ontology/pato/issues/602 (section 5). This was a grouping class for pre-coordinated physical/process qualities, not a modifier characteristic. The new modifier term is PATO:0102004 (decreased), to be used post-coordinatively via has_modifier (RO:0002573).
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 is_obsolete: true
 replaced_by: PATO:0102004
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2011-06-16T06:40:15Z
 
 [Term]
@@ -19567,7 +19567,7 @@ creation_date: 2014-05-26T13:09:29Z
 id: PATO:0002632
 name: secondary
 def: "A characteristic in which the effect or outcome is not primary or the focus of the observation." [PATO:MAH]
-comment: Distinct from the developmental-stage sense of "secondary" (e.g. "secondary oocyte"); this term is a modifier characteristic, not a stage descriptor.
+comment: Distinct from the developmental-stage sense of "secondary" (e.g. "secondary oocyte"); this term is a modifier characteristic, not a stage descriptor (e.g Secondary hyperparathyroidism, HP:0000867).
 subset: hpo_slim
 is_a: PATO:0102001 ! modifier characteristic
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-9114-8737
@@ -19866,7 +19866,7 @@ creation_date: 2019-07-18T18:49:08Z
 [Term]
 id: PATO:0010006
 name: cell morphology
-def: "A quality of a single cell inhering in the bearer by virtue of the bearer's size or shape or structure." [https://orcid.org/0000-0002-7073-9172]
+def: "A characteristic of a single cell inhering in the bearer by virtue of the bearer's size or shape or structure." [https://orcid.org/0000-0002-7073-9172]
 comment: Use this term for morphologies that can *only* inhere in a cell, e.g. morphological qualities inhering in a cell by virtue of the presence, location or shape of one or more cell parts.
 is_a: PATO:0000051 ! morphology
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-7073-9172
@@ -20679,7 +20679,7 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001
 [Term]
 id: PATO:0040042
 name: decreased ratio
-def: "A decreased quality inhering in a bearer by virtue of the bearer's decreased magnitude in proportion to the magnitude of another entity." [] {http://purl.org/dc/terms/contributor="https://orcid.org/0000-0001-8314-2140", http://purl.org/dc/terms/contributor="https://orcid.org/0000-0001-5208-3432"}
+def: "A decreased quality inhering in a bearer by virtue of the bearer's decreased magnitude in proportion to the magnitude of another entity." [] {http://purl.org/dc/terms/contributor="https://orcid.org/0000-0001-5208-3432", http://purl.org/dc/terms/contributor="https://orcid.org/0000-0001-8314-2140"}
 comment: Example: decreased proportion of CD4 T cells relative to total T cells.
 subset: relational_slim
 synonym: "decreased proportion" EXACT []
@@ -20693,7 +20693,7 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001
 [Term]
 id: PATO:0040043
 name: increased ratio
-def: "An increased quality inhering in a bearer by virtue of the bearer's increased magnitude in proportion to the magnitude of another entity." [] {http://purl.org/dc/terms/contributor="https://orcid.org/0000-0001-8314-2140", http://purl.org/dc/terms/contributor="https://orcid.org/0000-0001-5208-3432"}
+def: "An increased quality inhering in a bearer by virtue of the bearer's increased magnitude in proportion to the magnitude of another entity." [] {http://purl.org/dc/terms/contributor="https://orcid.org/0000-0001-5208-3432", http://purl.org/dc/terms/contributor="https://orcid.org/0000-0001-8314-2140"}
 comment: Example: increased proportion of CD4 T cells relative to total T cells.
 subset: relational_slim
 synonym: "increased proportion" EXACT []
@@ -22611,8 +22611,8 @@ id: PATO:0102002
 name: comparative modifier characteristic
 def: "A modifier characteristic determined by comparison to a reference." [https://github.com/pato-ontology/pato/issues/602]
 comment: A comparative modifier characteristic is relational - its identity (e.g. increased vs decreased, abnormal vs normal) is fixed by comparison to a reference. The broader 'modifier characteristic' also covers non-comparative modifiers (intensity, magnitude, secondary).
-synonym: "state modifier" RELATED [OBO:earlier-draft]
 synonym: "comparison modifier" RELATED [OBO:earlier-draft]
+synonym: "state modifier" RELATED [OBO:earlier-draft]
 is_a: PATO:0102001 ! modifier characteristic
 created_by: https://orcid.org/0000-0002-7356-1779
 creation_date: 2026-05-05T00:00:00Z
