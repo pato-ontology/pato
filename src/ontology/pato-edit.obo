@@ -22701,6 +22701,53 @@ intersection_of: RO:0015007 PATO:0000461 ! increased in magnitude relative to no
 property_value: http://purl.org/dc/elements/1.1/date "2025-04-10T16:37:33Z" xsd:dateTime
 property_value: http://www.geneontology.org/formats/oboInOwl#http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8314-2140
 
+[Term]
+id: PATO:0103301
+name: octoploid
+def: "A polyploidy quality inhering in a bearer by virtue of the bearer's containing eight homologous sets of chromosomes." [Wikipedia:http\://en.wikipedia.org/wiki/Octoploid]
+comment: Cultivated strawberry is octoploid (2n=8x=56).
+subset: cell_quality
+subset: value_slim
+synonym: "octaploid" EXACT []
+is_a: PATO:0001377 ! polyploid
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-9076-6066
+creation_date: 2026-06-17T22:04:36Z
+
+[Term]
+id: PATO:0103302
+name: allotetraploid
+def: "A polyploidy quality inhering in a bearer by virtue of the bearer's containing four sets of chromosomes derived from two or more different species." []
+comment: Examples include cotton and quinoa.
+subset: cell_quality
+subset: value_slim
+is_a: PATO:0001379 ! allopolyploidy
+is_a: PATO:0001382 ! tetraploid
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-9076-6066
+creation_date: 2026-06-17T22:04:36Z
+
+[Term]
+id: PATO:0103303
+name: allohexaploid
+def: "A polyploidy quality inhering in a bearer by virtue of the bearer's containing six sets of chromosomes derived from two or more different species." []
+comment: Examples include bread wheat (Triticum aestivum) and triticale.
+subset: cell_quality
+subset: value_slim
+is_a: PATO:0001379 ! allopolyploidy
+is_a: PATO:0001384 ! hexaploid
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-9076-6066
+creation_date: 2026-06-17T22:04:36Z
+
+[Term]
+id: PATO:0103304
+name: segmental allotetraploid
+def: "An allotetraploid quality inhering in a bearer by virtue of the bearer's two parental subgenomes being only partially differentiated (partially homeologous)." [PMID:33005183, PMID:29985538]
+comment: The two parental subgenomes are partially homeologous, producing inconsistent chromosome pairing. Cultivated peanut (Arachis hypogaea) is an example.
+subset: cell_quality
+subset: value_slim
+is_a: PATO:0103302 ! allotetraploid
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-9076-6066
+creation_date: 2026-06-17T22:04:36Z
+
 [Typedef]
 id: correlates_with
 name: obsolete correlates_with
