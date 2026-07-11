@@ -1866,6 +1866,7 @@ name: black
 def: "A color that lacks any hues as parts." [PATOC:GVG]
 subset: mpath_slim
 subset: value_slim
+synonym: "blackish" RELATED [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
 is_a: PATO:0000014 ! color
 
 [Term]
@@ -1874,6 +1875,7 @@ name: blue
 def: "A color hue with low wavelength of that portion of the visible spectrum lying between green and indigo, evoked in the human observer by radiant energy with wavelengths of approximately 420 to 490 nanometers." [Dictionary:http\://dictionary.reference.com/]
 subset: mpath_slim
 subset: value_slim
+synonym: "bluish" RELATED [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
 is_a: PATO:0000014 ! color
 
 [Term]
@@ -1889,6 +1891,7 @@ name: green
 def: "A color hue with medium-low wavelength of that portion of the visible spectrum lying between yellow and blue, evoked in the human observer by radiant energy with wavelengths of approximately 490 to 570 nanometers." [Dictionary:http\://dictionary.reference.com/]
 subset: mpath_slim
 subset: value_slim
+synonym: "greenish" RELATED [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
 is_a: PATO:0000014 ! color
 
 [Term]
@@ -1905,6 +1908,7 @@ name: red
 def: "A color hue with high wavelength of the long-wave end of the visible spectrum, evoked in the human observer by radiant energy with wavelengths of approximately 630 to 750 nanometers." [Dictionary:http\://dictionary.reference.com/]
 subset: mpath_slim
 subset: value_slim
+synonym: "reddish" RELATED [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
 is_a: PATO:0000014 ! color
 
 [Term]
@@ -1922,6 +1926,7 @@ name: yellow
 def: "A color hue with medium wavelength of that portion of the visible spectrum lying between orange and green, evoked in the human observer by radiant energy with wavelengths of approximately 570 to 590 nanometers." [Dictionary:http\://dictionary.reference.com/]
 subset: mpath_slim
 subset: value_slim
+synonym: "yellowish" RELATED [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
 is_a: PATO:0000014 ! color
 
 [Term]
@@ -5870,6 +5875,7 @@ name: grey
 def: "A color between white and black colors." [http://en.wikipedia.org/wiki/Grey]
 subset: mpath_slim
 subset: value_slim
+synonym: "greyish" RELATED [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
 synonym: "plumbeous" RELATED []
 is_a: PATO:0000014 ! color
 
@@ -5879,6 +5885,7 @@ name: purple
 def: "A color that falls about midway between red and blue in hue." [Dictionary:http\://dictionary.reference.com/]
 subset: mpath_slim
 subset: value_slim
+synonym: "purplish" RELATED [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
 is_a: PATO:0000014 ! color
 
 [Term]
@@ -5887,6 +5894,7 @@ name: brown
 def: "A color consisting of dark orange, red, of very low intensity." [Wikipedia:http\://en.wikipedia.org/wiki/Brown]
 subset: mpath_slim
 subset: value_slim
+synonym: "brownish" RELATED [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
 is_a: PATO:0000014 ! color
 
 [Term]
@@ -5903,6 +5911,7 @@ name: pink
 def: "Red color having medium to high brightness and low to moderate saturation." [PATOC:MAH]
 subset: mpath_slim
 subset: value_slim
+synonym: "pinkish" RELATED [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
 is_a: PATO:0000322 ! red
 
 [Term]
@@ -7697,9 +7706,10 @@ is_a: PATO:0000319 ! cyan
 [Term]
 id: PATO:0001249
 name: dark green
-def: "A color consisting of green hue and low brightness." [PATOC:GVG]
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 146 (dark green), for which the published central prototype is 6.0G 2.7/5.0." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
 subset: mpath_slim
 subset: value_slim
+synonym: "dark-green" EXACT []
 is_a: PATO:0000320 ! green
 
 [Term]
@@ -7996,9 +8006,11 @@ is_a: PATO:0000324 ! yellow
 [Term]
 id: PATO:0001287
 name: red brown
-def: "A color consisting of red and brown hue." [PATOC:GVG]
+def: "A color whose Munsell coordinates fall within the continuous ISCC-NBS reddish-brown sector represented by color-name blocks 40 through 47; moderate reddish brown (block 43, centroid 9.6R 3.4/5.2) is a central prototype." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
 subset: mpath_slim
 subset: value_slim
+synonym: "reddish brown" EXACT []
+synonym: "reddish-brown" EXACT []
 is_a: PATO:0000952 ! brown
 
 [Term]
@@ -13701,9 +13713,11 @@ is_a: PATO:0000586 ! increased size
 [Term]
 id: PATO:0001941
 name: yellow green
-def: "A color consisting of yellow and green hues." [PATOC:GVG]
+def: "A color whose Munsell coordinates fall within the continuous ISCC-NBS yellowish-green sector represented by color-name blocks 129 through 138; moderate yellowish green (block 136, centroid 0.5G 5.5/5.1) is a central prototype." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
 subset: mpath_slim
 subset: value_slim
+synonym: "yellowish green" EXACT []
+synonym: "yellowish-green" EXACT []
 is_a: PATO:0000320 ! green
 
 [Term]
@@ -14004,6 +14018,7 @@ id: PATO:0001980
 name: digitate
 def: "A shape quality inhering in a bearer by virtue of the bearer's having distinct parts arising from a common point or center." [thefreedictionary:thefreedictionary]
 subset: value_slim
+synonym: "palmate" EXACT [https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?alpha=P&glossary=yes&page=nswfl]
 is_a: PATO:0000052 ! shape
 
 [Term]
@@ -17070,7 +17085,7 @@ name: setose
 def: "A hairy quality inhering in a bearer by virtue of the bearer's being covered with setae." [ISBN:0913424137]
 comment: Setose as a label is used extensively to describe insect phenotypes that have hairy-like appearances (i.e., they are covered in setae, not the hairs of mammals). A bristle is a type of seta.
 subset: value_slim
-is_a: PATO:0000454 ! hairy
+is_a: PATO:0104117 ! bristly
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2011-04-04T08:44:10Z
 
@@ -17568,7 +17583,7 @@ id: PATO:0002339
 name: hispid
 def: "A quality of being covered with stiff or rough hairs." [PATOC:GVG]
 subset: value_slim
-is_a: PATO:0000454 ! hairy
+is_a: PATO:0104117 ! bristly
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2012-01-31T02:51:37Z
 
@@ -19674,6 +19689,7 @@ id: PATO:0005010
 name: plumose
 def: "A branched quality inhering in a bearer by virtue of the bearer's having many fine filaments or branches that give a feathery appearance: for example, resembling a feather." [www.oxforddictionaries.com:http\://www.oxforddictionaries.com/us/definition/american_english/plumose]
 subset: value_slim
+synonym: "feathery" EXACT [https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?alpha=P&glossary=yes&page=nswfl]
 is_a: PATO:0000402 ! branched
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-3162-7490
 creation_date: 2014-09-25T15:03:17Z
@@ -20679,7 +20695,7 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001
 [Term]
 id: PATO:0040042
 name: decreased ratio
-def: "A decreased quality inhering in a bearer by virtue of the bearer's decreased magnitude in proportion to the magnitude of another entity." [] {http://purl.org/dc/terms/contributor="https://orcid.org/0000-0001-8314-2140", http://purl.org/dc/terms/contributor="https://orcid.org/0000-0001-5208-3432"}
+def: "A decreased quality inhering in a bearer by virtue of the bearer's decreased magnitude in proportion to the magnitude of another entity." [] {http://purl.org/dc/terms/contributor="https://orcid.org/0000-0001-5208-3432", http://purl.org/dc/terms/contributor="https://orcid.org/0000-0001-8314-2140"}
 comment: Example: decreased proportion of CD4 T cells relative to total T cells.
 subset: relational_slim
 synonym: "decreased proportion" EXACT []
@@ -20693,7 +20709,7 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001
 [Term]
 id: PATO:0040043
 name: increased ratio
-def: "An increased quality inhering in a bearer by virtue of the bearer's increased magnitude in proportion to the magnitude of another entity." [] {http://purl.org/dc/terms/contributor="https://orcid.org/0000-0001-8314-2140", http://purl.org/dc/terms/contributor="https://orcid.org/0000-0001-5208-3432"}
+def: "An increased quality inhering in a bearer by virtue of the bearer's increased magnitude in proportion to the magnitude of another entity." [] {http://purl.org/dc/terms/contributor="https://orcid.org/0000-0001-5208-3432", http://purl.org/dc/terms/contributor="https://orcid.org/0000-0001-8314-2140"}
 comment: Example: increased proportion of CD4 T cells relative to total T cells.
 subset: relational_slim
 synonym: "increased proportion" EXACT []
@@ -22740,7 +22756,7 @@ creation_date: 2026-06-17T22:04:36Z
 [Term]
 id: PATO:0103304
 name: segmental allotetraploid
-def: "An allotetraploid quality inhering in a bearer by virtue of the bearer's two parental subgenomes being only partially differentiated (partially homeologous)." [PMID:29985538, PMID:33005183]
+def: "An allotetraploid quality inhering in a bearer by virtue of the bearer's two parental subgenomes being only partially differentiated (partially homeologous)." [PMID:33005183, PMID:29985538]
 comment: The two parental subgenomes are partially homeologous, producing inconsistent chromosome pairing. Cultivated peanut (Arachis hypogaea) is an example.
 subset: cell_quality
 subset: value_slim
@@ -22749,3563 +22765,395 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001
 creation_date: 2026-06-17T22:04:36Z
 
 [Term]
-id: PATO:0104001
-name: creamy
-def: "A color value described as creamy in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980084.
-is_a: PATO:0000323 ! white
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104002
-name: greenish
-def: "A color value described as greenish in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980085.
-is_a: PATO:0000320 ! green
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104003
-name: reddish
-def: "A color value described as reddish in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980086.
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104004
-name: pale lilac
-def: "A color value described as pale lilac in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980087.
-synonym: "pale-lilac" EXACT []
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
 id: PATO:0104005
 name: deep yellow
-def: "A color value described as deep yellow in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980088.
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 85 (deep yellow), for which the published central prototype is 4.0Y 6.0/9.5." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980088.
+subset: value_slim
 synonym: "deep-yellow" EXACT []
 is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104006
-name: greyish
-def: "A color value described as greyish in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980089.
-is_a: PATO:0000950 ! grey
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104007
-name: grey-green
-def: "A color value described as grey-green in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980090.
+name: grayish green
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 150 (grayish green), for which the published central prototype is 9.0G 4.5/1.8." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980090.
+subset: value_slim
+synonym: "gray-green" EXACT []
+synonym: "gray green" EXACT []
+synonym: "grey-green" EXACT []
 synonym: "grey green" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000950 ! grey
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104008
-name: rosy-lilac
-def: "A color value described as rosy-lilac in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980091.
-synonym: "rosy lilac" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000954 ! pink
-is_a: PATO:0001425 ! rosy
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104009
-name: silvery
-def: "A color value described as silvery in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980092.
-is_a: PATO:0000950 ! grey
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+synonym: "greyish green" EXACT []
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104010
-name: papery
-def: "A texture value described as papery in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980093.
+name: papyraceous
+def: "A texture quality inhering in a bearer by virtue of the bearer being thin and somewhat opaque, with the consistency of paper." [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980093.
+subset: value_slim
+synonym: "chartaceous" EXACT [https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?alpha=C&glossary=yes&page=nswfl]
+synonym: "papery" EXACT []
 is_a: PATO:0000150 ! texture
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104011
-name: yellowish
-def: "A color value described as yellowish in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980094.
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104012
-name: long narrow
-def: "A shape value described as long narrow in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980095.
-synonym: "long-narrow" EXACT []
-is_a: PATO:0000599 ! decreased width
-is_a: PATO:0001154 ! elongated
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104013
 name: greenish yellow
-def: "A color value described as greenish yellow in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980096.
+def: "A color whose Munsell coordinates fall within the continuous ISCC-NBS greenish-yellow sector represented by color-name blocks 97 through 105; moderate greenish yellow (block 102, centroid 9.5Y 7.2/6.6) is a central prototype." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary classes: FLOPO_0980096 and FLOPO_0980178.
+subset: value_slim
 synonym: "greenish-yellow" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104014
-name: pinkish
-def: "A color value described as pinkish in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980097.
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104015
-name: creamy-white
-def: "A color value described as creamy-white in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980098.
-synonym: "creamy white" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104016
 name: terete
-def: "A shape value described as terete in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980099.
+def: "A shape quality inhering in a bearer by virtue of the bearer being long and slender, tapering toward the apex, and circular in transverse section." [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980099.
+subset: value_slim
 is_a: PATO:0000052 ! shape
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104017
-name: purplish
-def: "A color value described as purplish in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980100.
-is_a: PATO:0000951 ! purple
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104018
-name: pale greenish
-def: "A color value described as pale greenish in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980101.
-synonym: "pale-greenish" EXACT []
-is_a: PATO:0000320 ! green
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104019
 name: succulent
-def: "A texture value described as succulent in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980102.
-is_a: PATO:0002351 ! fleshy
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+def: "A structural quality inhering in a plant or plant organ by virtue of the bearer containing living water-storage tissue whose stored water can support physiological function while external water is unavailable." [DOI:10.1111/j.1365-3040.2012.02503.x]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980102. This is a water-storage quality, not merely a synonym of fleshy.
+subset: value_slim
+is_a: PATO:0000025 ! composition
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104020
-name: blue-green
-def: "A color value described as blue-green in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980103.
-synonym: "blue green" EXACT []
-is_a: PATO:0000318 ! blue
-is_a: PATO:0000320 ! green
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104021
-name: pure white
-def: "A color value described as pure white in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980104.
-synonym: "pure-white" EXACT []
-is_a: PATO:0000323 ! white
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104022
-name: scarlet
-def: "A color value described as scarlet in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980105.
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104023
-name: crimson
-def: "A color value described as crimson in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980106.
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104024
-name: palmate
-def: "A shape value described as palmate in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980107.
-is_a: PATO:0000052 ! shape
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104025
-name: deep rosy-lilac
-def: "A color value described as deep rosy-lilac in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980108.
-synonym: "deep rosy lilac" EXACT []
-synonym: "deep-rosy-lilac" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000954 ! pink
-is_a: PATO:0001425 ! rosy
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104026
-name: bright scarlet
-def: "A color value described as bright scarlet in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980109.
-synonym: "bright-scarlet" EXACT []
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104027
-name: flushed with pink
-def: "A color value described as flushed with pink in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980110.
-synonym: "flushed-with-pink" EXACT []
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104028
-name: deep lilac
-def: "A color value described as deep lilac in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980111.
-synonym: "deep-lilac" EXACT []
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104029
-name: bluish
-def: "A color value described as bluish in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980112.
-is_a: PATO:0000318 ! blue
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104030
-name: lilac-blue
-def: "A color value described as lilac-blue in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980113.
-synonym: "lilac blue" EXACT []
-is_a: PATO:0000318 ! blue
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+name: blue green
+def: "A color whose Munsell coordinates fall within the continuous ISCC-NBS bluish-green sector represented by color-name blocks 158 through 166; moderate bluish green (block 164, centroid 4.5BG 4.5/5.0) is a central prototype." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: This corresponds to the botanical blue green group in UPOV TGP/14/6 and to FLOPO temporary class FLOPO_0980103.
+subset: value_slim
+synonym: "blue-green" EXACT [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
+synonym: "bluish green" EXACT []
+synonym: "bluish-green" EXACT []
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104031
 name: cream
-def: "A color value described as cream in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980114.
-is_a: PATO:0000323 ! white
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+def: "A color for which RHS Colour Chart chip 158A or 158B in the fifth edition (2007) is the closest visual match when the specimen is compared against a white background under artificial daylight conforming to CIE D6500; those chips serve as physical prototypes for cream in a botanical description." [https://www.rhs.org.uk/about-the-rhs/pdfs/publications/hanburyana/vol-3-june-2008/complete-version.pdf, https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
+comment: Requested for FLOPO; corresponding temporary classes: FLOPO_0980084 (creamy) and FLOPO_0980114 (cream). The RHS swatches are the normative physical prototypes; display RGB values are not normative.
+subset: value_slim
+synonym: "creamy" EXACT []
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104032
-name: leathery
-def: "A texture value described as leathery in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980115.
+name: coriaceous
+def: "A texture quality inhering in a bearer by virtue of the bearer being thick, tough, and flexible, with the consistency of leather." [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980115.
+subset: value_slim
+synonym: "leathery" EXACT []
 is_a: PATO:0000150 ! texture
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104033
-name: deep crimson
-def: "A color value described as deep crimson in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980116.
-synonym: "deep-crimson" EXACT []
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104034
-name: pale cream
-def: "A color value described as pale cream in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980117.
-synonym: "pale-cream" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104035
 name: pendent
-def: "An orientation value described as pendent in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980118.
+def: "An orientation quality inhering in a bearer by virtue of the bearer hanging downward under its own weight." [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980118. Pendent is distinguished from pendulous, which denotes hanging downward because the support is weak.
+subset: value_slim
 is_a: PATO:0000133 ! orientation
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104036
-name: pale scarlet
-def: "A color value described as pale scarlet in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980119.
-synonym: "pale-scarlet" EXACT []
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104037
-name: soft-spiny
-def: "A texture value described as soft-spiny in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980120.
-synonym: "soft spiny" EXACT []
-is_a: PATO:0000387 ! soft
-is_a: PATO:0001365 ! spiny
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104038
-name: pale bluish lilac
-def: "A color value described as pale bluish lilac in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980121.
-synonym: "pale-bluish-lilac" EXACT []
-is_a: PATO:0000318 ! blue
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104039
-name: feathery
-def: "A texture value described as feathery in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980122.
-is_a: PATO:0000150 ! texture
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104040
-name: deeply lobed palmate
-def: "A shape value described as deeply lobed palmate in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980123.
-synonym: "deeply-lobed-palmate" EXACT []
-is_a: PATO:0000052 ! shape
-is_a: PATO:0001979 ! lobed
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104041
-name: velvety
-def: "A texture value described as velvety in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980124.
-is_a: PATO:0000150 ! texture
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104042
-name: pale pinkish lilac
-def: "A color value described as pale pinkish lilac in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980125.
-synonym: "pale-pinkish-lilac" EXACT []
-is_a: PATO:0000954 ! pink
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104043
-name: very slender
-def: "A phenotype value described as very slender in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980126.
-synonym: "very-slender" EXACT []
-is_a: PATO:0000592 ! decreased thickness
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104044
-name: blackish
-def: "A color value described as blackish in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980127.
-is_a: PATO:0000317 ! black
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104045
-name: deep magenta
-def: "A color value described as deep magenta in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980128.
-synonym: "deep-magenta" EXACT []
-is_a: PATO:0000321 ! magenta
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104046
-name: deeply lobed
-def: "A shape value described as deeply lobed in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980129.
-synonym: "deeply-lobed" EXACT []
-is_a: PATO:0001979 ! lobed
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104047
-name: brownish
-def: "A color value described as brownish in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980130.
-is_a: PATO:0000952 ! brown
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104048
-name: rose-pink
-def: "A color value described as rose-pink in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980131.
-synonym: "rose pink" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104049
-name: pale pinkish
-def: "A color value described as pale pinkish in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980132.
-synonym: "pale-pinkish" EXACT []
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104050
-name: deep lilac-blue
-def: "A color value described as deep lilac-blue in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980133.
-synonym: "deep lilac blue" EXACT []
-synonym: "deep-lilac-blue" EXACT []
-is_a: PATO:0000318 ! blue
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+name: velutinous
+def: "A hairy quality inhering in a bearer by virtue of the bearer being covered with long, dense, straight trichomes that produce a velvet-like surface." [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980124.
+subset: value_slim
+synonym: "velvety" EXACT []
+is_a: PATO:0000454 ! hairy
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104051
 name: pale greenish yellow
-def: "A color value described as pale greenish yellow in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980134.
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 104 (pale greenish yellow), for which the published central prototype is 9.5Y 8.9/4.1." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980134.
+subset: value_slim
 synonym: "pale-greenish-yellow" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104052
-name: narrow cylindrical
-def: "A shape value described as narrow cylindrical in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980135.
-synonym: "narrow-cylindrical" EXACT []
-is_a: PATO:0000599 ! decreased width
-is_a: PATO:0001873 ! cylindrical
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104053
-name: pinkish lilac
-def: "A color value described as pinkish lilac in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980136.
-synonym: "pinkish-lilac" EXACT []
-is_a: PATO:0000954 ! pink
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+is_a: PATO:0104013 ! greenish yellow
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104054
-name: orange-yellow
-def: "A color value described as orange-yellow in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980137.
-synonym: "orange yellow" EXACT []
-is_a: PATO:0000324 ! yellow
-is_a: PATO:0000953 ! orange
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104055
-name: purplish-brown
-def: "A color value described as purplish-brown in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980138.
-synonym: "purplish brown" EXACT []
-is_a: PATO:0000951 ! purple
-is_a: PATO:0000952 ! brown
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104056
-name: creamy-yellow
-def: "A color value described as creamy-yellow in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980139.
-synonym: "creamy yellow" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104057
-name: very wide
-def: "A phenotype value described as very wide in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980140.
-synonym: "very-wide" EXACT []
-is_a: PATO:0000600 ! increased width
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104058
-name: white flushed pink
-def: "A color value described as white flushed pink in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980141.
-synonym: "white-flushed-pink" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+name: orange yellow
+def: "A color whose Munsell coordinates fall within the continuous ISCC-NBS orange-yellow sector represented by color-name blocks 66 through 73; moderate orange yellow (block 71, centroid 9.0YR 7.2/8.1) is a central prototype." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980137. This is predominantly yellow and is distinct from PATO:0001944 yellow orange, which is predominantly orange.
+subset: value_slim
+synonym: "orange-yellow" EXACT []
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104059
 name: pinkish white
-def: "A color value described as pinkish white in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980142.
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 9 (pinkish white), for which the published central prototype is 7.6R 9.2/1.0." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980142.
+subset: value_slim
 synonym: "pinkish-white" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104060
-name: almost circular
-def: "A phenotype value described as almost circular in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980143.
-synonym: "almost-circular" EXACT []
-is_a: PATO:0000411 ! circular
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104061
-name: pinkish fawn
-def: "A color value described as pinkish fawn in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980144.
-synonym: "pinkish-fawn" EXACT []
-is_a: PATO:0000324 ! yellow
-is_a: PATO:0000952 ! brown
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104062
-name: white flushed with pink
-def: "A color value described as white flushed with pink in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980145.
-synonym: "white-flushed-with-pink" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104063
-name: narrow dentate
-def: "A shape value described as narrow dentate in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980146.
-synonym: "narrow-dentate" EXACT []
-is_a: PATO:0000599 ! decreased width
-is_a: PATO:0001205 ! dentated
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104064
 name: deep blue
-def: "A color value described as deep blue in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980147.
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 179 (deep blue), for which the published central prototype is 3.0PB 2.0/9.0." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980147.
+subset: value_slim
 synonym: "deep-blue" EXACT []
 is_a: PATO:0000318 ! blue
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104065
-name: relatively large
-def: "A phenotype value described as relatively large in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980148.
-synonym: "relatively-large" EXACT []
-is_a: PATO:0000586 ! increased size
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104066
-name: flat-sided
-def: "A phenotype value described as flat-sided in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980149.
-synonym: "flat sided" EXACT []
-is_a: PATO:0000407 ! flat
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104067
 name: greenish white
-def: "A color value described as greenish white in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980150.
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 153 (greenish white), for which the published central prototype is 7.0G 9.2/0.8." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980150.
+subset: value_slim
 synonym: "greenish-white" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000323 ! white
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104068
-name: deep violet-blue
-def: "A color value described as deep violet-blue in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980151.
-synonym: "deep violet blue" EXACT []
-synonym: "deep-violet-blue" EXACT []
-is_a: PATO:0000318 ! blue
-is_a: PATO:0001424 ! violet
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104069
-name: pale blue-lilac
-def: "A color value described as pale blue-lilac in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980152.
-synonym: "pale blue lilac" EXACT []
-synonym: "pale-blue-lilac" EXACT []
-is_a: PATO:0000318 ! blue
-is_a: PATO:0001266 ! desaturated blue
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104070
-name: light scarlet
-def: "A color value described as light scarlet in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980153.
-synonym: "light-scarlet" EXACT []
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104071
-name: mahogany-red
-def: "A color value described as mahogany-red in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980154.
-synonym: "mahogany red" EXACT []
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104072
-name: green and grey mottled
-def: "A color value described as green and grey mottled in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980155.
-synonym: "green-and-grey-mottled" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000950 ! grey
-is_a: PATO:0002274 ! mottled
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104073
 name: deep orange
-def: "A color value described as deep orange in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980156.
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 51 (deep orange), for which the published central prototype is 4.5YR 5.0/12.1." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980156.
+subset: value_slim
 synonym: "deep-orange" EXACT []
 is_a: PATO:0000953 ! orange
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104074
-name: narrow lobed
-def: "A shape value described as narrow lobed in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980157.
-synonym: "narrow-lobed" EXACT []
-is_a: PATO:0000599 ! decreased width
-is_a: PATO:0001979 ! lobed
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104075
-name: spotted with crimson
-def: "A color value described as spotted with crimson in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980158.
-synonym: "spotted-with-crimson" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000333 ! spotted
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104076
-name: lemon-yellow
-def: "A color value described as lemon-yellow in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980159.
-synonym: "lemon yellow" EXACT []
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104077
 name: very pale blue
-def: "A color value described as very pale blue in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980160.
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 184 (very pale blue), for which the published central prototype is 0.9PB 8.4/3.0." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980160.
+subset: value_slim
 synonym: "very-pale-blue" EXACT []
 is_a: PATO:0000318 ! blue
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104078
-name: bright magenta-pink
-def: "A color value described as bright magenta-pink in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980161.
-synonym: "bright magenta pink" EXACT []
-synonym: "bright-magenta-pink" EXACT []
-is_a: PATO:0000321 ! magenta
-is_a: PATO:0000954 ! pink
-is_a: PATO:0001275 ! saturated magenta
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104079
-name: reddish-purple
-def: "A color value described as reddish-purple in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980162.
-synonym: "reddish purple" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000951 ! purple
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104080
-name: three-angled
-def: "A phenotype value described as three-angled in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980163.
-synonym: "three angled" EXACT []
-is_a: PATO:0000617 ! bent
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104081
-name: deep rosy-pink
-def: "A color value described as deep rosy-pink in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980164.
-synonym: "deep rosy pink" EXACT []
-synonym: "deep-rosy-pink" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000954 ! pink
-is_a: PATO:0001425 ! rosy
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104082
-name: green and brown
-def: "A color value described as green and brown in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980165.
-synonym: "green-and-brown" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000952 ! brown
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104083
-name: rolled back at the tip
-def: "A phenotype value described as rolled back at the tip in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980166.
-synonym: "rolled-back-at-the-tip" EXACT []
-is_a: PATO:0001901 ! back
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104084
-name: apricot-yellow
-def: "A color value described as apricot-yellow in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980167.
-synonym: "apricot yellow" EXACT []
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+name: reddish purple
+def: "A color whose Munsell coordinates fall within the continuous ISCC-NBS reddish-purple sector represented by color-name blocks 236 through 245; moderate reddish purple (block 241, centroid 1.0RP 4.5/7.2) is a central prototype." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary classes: FLOPO_0980162 and FLOPO_0980413.
+subset: value_slim
+synonym: "reddish-purple" EXACT []
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104085
 name: deep purple
-def: "A color value described as deep purple in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980168.
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 219 (deep purple), for which the published central prototype is 6.0P 2.8/10.2." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980168.
+subset: value_slim
 synonym: "deep-purple" EXACT []
 is_a: PATO:0000951 ! purple
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104086
-name: fairly large
-def: "A phenotype value described as fairly large in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980169.
-synonym: "fairly-large" EXACT []
-is_a: PATO:0000586 ! increased size
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104087
 name: deep purplish red
-def: "A color value described as deep purplish red in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980170.
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 256 (deep purplish red), for which the published central prototype is 7.0RP 2.8/11.0." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980170.
+subset: value_slim
 synonym: "deep-purplish-red" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000951 ! purple
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104088
-name: slightly curved
-def: "A phenotype value described as slightly curved in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980171.
-synonym: "slightly-curved" EXACT []
-is_a: PATO:0000406 ! curved
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104089
-name: very large
-def: "A phenotype value described as very large in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980172.
-synonym: "very-large" EXACT []
-is_a: PATO:0000586 ! increased size
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104090
-name: narrow flat
-def: "A shape value described as narrow flat in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980173.
-synonym: "narrow-flat" EXACT []
-is_a: PATO:0000407 ! flat
-is_a: PATO:0000599 ! decreased width
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104091
-name: golden
-def: "A color value described as golden in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980174.
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104092
-name: pale lilac and white
-def: "A color value described as pale lilac and white in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980175.
-synonym: "pale-lilac-and-white" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104093
-name: almost round
-def: "A phenotype value described as almost round in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980176.
-synonym: "almost-round" EXACT []
-is_a: PATO:0000411 ! circular
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104094
-name: white flushed with lilac
-def: "A color value described as white flushed with lilac in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980177.
-synonym: "white-flushed-with-lilac" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104095
-name: greenish-yellow
-def: "A color value described as greenish-yellow in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980178.
-synonym: "greenish yellow" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104096
-name: pink and red
-def: "A color value described as pink and red in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980179.
-synonym: "pink-and-red" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104097
-name: banded and tessellated yellow and blue-green
-def: "A color value described as banded and tessellated yellow and blue-green in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980180.
-synonym: "banded and tessellated yellow and blue green" EXACT []
-synonym: "banded-and-tessellated-yellow-and-blue-green" EXACT []
-is_a: PATO:0000318 ! blue
-is_a: PATO:0000320 ! green
-is_a: PATO:0000324 ! yellow
-is_a: PATO:0001946 ! banded
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104098
-name: flat oval
-def: "A phenotype value described as flat oval in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980181.
-synonym: "flat-oval" EXACT []
-is_a: PATO:0000407 ! flat
-is_a: PATO:0000947 ! elliptic
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104099
-name: glaucous blue-green
-def: "A color value described as glaucous blue-green in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980182.
-synonym: "glaucous blue green" EXACT []
-synonym: "glaucous-blue-green" EXACT []
-is_a: PATO:0000014 ! color
-is_a: PATO:0000318 ! blue
-is_a: PATO:0000320 ! green
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104100
-name: slender cylindrical
-def: "A shape value described as slender cylindrical in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980183.
-synonym: "slender-cylindrical" EXACT []
-is_a: PATO:0000592 ! decreased thickness
-is_a: PATO:0001873 ! cylindrical
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104101
-name: long straight
-def: "A shape value described as long straight in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980184.
-synonym: "long-straight" EXACT []
-is_a: PATO:0001154 ! elongated
-is_a: PATO:0002180 ! straight
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104102
-name: golden-yellow
-def: "A color value described as golden-yellow in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980185.
-synonym: "golden yellow" EXACT []
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104103
-name: slightly twisted
-def: "A phenotype value described as slightly twisted in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980186.
-synonym: "slightly-twisted" EXACT []
-is_a: PATO:0001798 ! kinked
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104104
-name: white, cream, or yellow
-def: "A color value described as white, cream, or yellow in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980187.
-synonym: "white,-cream,-or-yellow" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104105
-name: peeling papery
-def: "A texture value described as peeling papery in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980188.
-synonym: "peeling-papery" EXACT []
-is_a: PATO:0000150 ! texture
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104106
-name: slightly blue-green
-def: "A color value described as slightly blue-green in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980189.
-synonym: "slightly blue green" EXACT []
-synonym: "slightly-blue-green" EXACT []
-is_a: PATO:0000318 ! blue
-is_a: PATO:0000320 ! green
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104107
-name: fawn
-def: "A color value described as fawn in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980190.
-is_a: PATO:0000324 ! yellow
-is_a: PATO:0000952 ! brown
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104108
-name: glossy orange
-def: "A color value described as glossy orange in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980191.
-synonym: "glossy-orange" EXACT []
-is_a: PATO:0000953 ! orange
-is_a: PATO:0001373 ! glistening
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104109
-name: dying fawn
-def: "A color value described as dying fawn in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980192.
-synonym: "dying-fawn" EXACT []
-is_a: PATO:0000324 ! yellow
-is_a: PATO:0000952 ! brown
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104110
-name: green and white
-def: "A color value described as green and white in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980193.
-synonym: "green-and-white" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000323 ! white
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104111
-name: deep pinkish red
-def: "A color value described as deep pinkish red in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980194.
-synonym: "deep-pinkish-red" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+is_a: PATO:0104311 ! purplish red
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104112
-name: orange-red
-def: "A color value described as orange-red in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980195.
-synonym: "orange red" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000953 ! orange
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104113
-name: red or yellow
-def: "A color value described as red or yellow in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980196.
-synonym: "red-or-yellow" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104114
-name: yellowish-green
-def: "A color value described as yellowish-green in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980197.
-synonym: "yellowish green" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104115
-name: greenish cream
-def: "A color value described as greenish cream in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980198.
-synonym: "greenish-cream" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000323 ! white
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104116
-name: greenish or pinkish
-def: "A color value described as greenish or pinkish in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980199.
-synonym: "greenish-or-pinkish" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+name: orange red
+def: "A color assigned to UPOV color group 33 (orange red) by comparison with the RHS Colour Chart; RHS 33B in the 2015 edition is a physical prototype." [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980195.
+subset: value_slim
+synonym: "orange-red" EXACT []
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104117
 name: bristly
-def: "A texture value described as bristly in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980200.
-is_a: PATO:0000150 ! texture
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104118
-name: pale yellowish
-def: "A color value described as pale yellowish in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980201.
-synonym: "pale-yellowish" EXACT []
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104119
-name: very red
-def: "A color value described as very red in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980202.
-synonym: "very-red" EXACT []
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104120
-name: apricot-yellow with deep crimson centre
-def: "A color value described as apricot-yellow with deep crimson centre in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980203.
-synonym: "apricot yellow with deep crimson centre" EXACT []
-synonym: "apricot-yellow-with-deep-crimson-centre" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104121
-name: brilliant deep blue
-def: "A color value described as brilliant deep blue in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980204.
-synonym: "brilliant-deep-blue" EXACT []
-is_a: PATO:0000318 ! blue
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104122
-name: pale rose-pink
-def: "A color value described as pale rose-pink in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980205.
-synonym: "pale rose pink" EXACT []
-synonym: "pale-rose-pink" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+def: "A hairy quality inhering in a bearer by virtue of the bearer being covered with stiff, strong trichomes." [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980200. UPOV treats hispid (harsh to the touch) and setose (spiny to the touch) as narrower kinds of bristly.
+subset: value_slim
+is_a: PATO:0000454 ! hairy
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104123
 name: deep green
-def: "A color value described as deep green in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980206.
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 142 (deep green), for which the published central prototype is 6.0G 2.3/9.1." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980206.
+subset: value_slim
 synonym: "deep-green" EXACT []
 is_a: PATO:0000320 ! green
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104124
-name: lilac or deep blue
-def: "A color value described as lilac or deep blue in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980207.
-synonym: "lilac-or-deep-blue" EXACT []
-is_a: PATO:0000318 ! blue
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104125
-name: deep lilac purple
-def: "A color value described as deep lilac purple in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980208.
-synonym: "deep-lilac-purple" EXACT []
-is_a: PATO:0000951 ! purple
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104126
-name: greenish golden
-def: "A color value described as greenish golden in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980209.
-synonym: "greenish-golden" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104127
-name: upper ones tiny
-def: "A phenotype value described as upper ones tiny in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980210.
-synonym: "upper-ones-tiny" EXACT []
-is_a: PATO:0000587 ! decreased size
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104128
-name: bright dark green
-def: "A color value described as bright dark green in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980211.
-synonym: "bright-dark-green" EXACT []
-is_a: PATO:0000320 ! green
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104129
-name: very feathery
-def: "A texture value described as very feathery in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980212.
-synonym: "very-feathery" EXACT []
-is_a: PATO:0000150 ! texture
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104130
-name: reddish line
-def: "A color value described as reddish line in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980213.
-synonym: "reddish-line" EXACT []
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104131
-name: flat-sided curved
-def: "A phenotype value described as flat-sided curved in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980214.
-synonym: "flat sided curved" EXACT []
-synonym: "flat-sided-curved" EXACT []
-is_a: PATO:0000406 ! curved
-is_a: PATO:0000407 ! flat
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104132
-name: lilac flushed
-def: "A color value described as lilac flushed in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980215.
-synonym: "lilac-flushed" EXACT []
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104133
-name: white, lilac flushed
-def: "A color value described as white, lilac flushed in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980216.
-synonym: "white,-lilac-flushed" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104134
-name: pink (occasionally flushed)
-def: "A color value described as pink (occasionally flushed) in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980217.
-synonym: "pink-(occasionally-flushed)" EXACT []
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104135
-name: short plump erect
-def: "A phenotype value described as short plump erect in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980218.
-synonym: "short-plump-erect" EXACT []
-is_a: PATO:0000569 ! decreased height
-is_a: PATO:0000622 ! erect
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104136
-name: fat spherical
-def: "A phenotype value described as fat spherical in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980219.
-synonym: "fat-spherical" EXACT []
-is_a: PATO:0001499 ! spherical
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104137
-name: slender curved spiny
-def: "A texture value described as slender curved spiny in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980220.
-synonym: "slender-curved-spiny" EXACT []
-is_a: PATO:0000406 ! curved
-is_a: PATO:0000592 ! decreased thickness
-is_a: PATO:0001365 ! spiny
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104138
-name: slender curved
-def: "A phenotype value described as slender curved in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980221.
-synonym: "slender-curved" EXACT []
-is_a: PATO:0000406 ! curved
-is_a: PATO:0000592 ! decreased thickness
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104139
-name: lobed dentate
-def: "A shape value described as lobed dentate in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980222.
-synonym: "lobed-dentate" EXACT []
-is_a: PATO:0001205 ! dentated
-is_a: PATO:0001979 ! lobed
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104140
-name: flat-sided mangoshaped
-def: "A phenotype value described as flat-sided mangoshaped in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980223.
-synonym: "flat sided mangoshaped" EXACT []
-synonym: "flat-sided-mangoshaped" EXACT []
-is_a: PATO:0000407 ! flat
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104141
-name: oval pear-shaped
-def: "A phenotype value described as oval pear-shaped in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980224.
-synonym: "oval pear shaped" EXACT []
-synonym: "oval-pear-shaped" EXACT []
-is_a: PATO:0000947 ! elliptic
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104142
-name: slender tubular
-def: "A phenotype value described as slender tubular in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980225.
-synonym: "slender-tubular" EXACT []
-is_a: PATO:0000592 ! decreased thickness
-is_a: PATO:0002299 ! tubular
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104143
-name: pale lilac-blue
-def: "A color value described as pale lilac-blue in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980226.
-synonym: "pale lilac blue" EXACT []
-synonym: "pale-lilac-blue" EXACT []
-is_a: PATO:0000318 ! blue
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104144
-name: deep glowing orange
-def: "A color value described as deep glowing orange in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980227.
-synonym: "deep-glowing-orange" EXACT []
-is_a: PATO:0000953 ! orange
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104145
-name: deep maroon-purple
-def: "A color value described as deep maroon-purple in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980228.
-synonym: "deep maroon purple" EXACT []
-synonym: "deep-maroon-purple" EXACT []
-is_a: PATO:0000951 ! purple
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104146
-name: deep bright blue to almost white
-def: "A color value described as deep bright blue to almost white in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980229.
-synonym: "deep-bright-blue-to-almost-white" EXACT []
-is_a: PATO:0000318 ! blue
-is_a: PATO:0000323 ! white
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104147
-name: long exserted
-def: "A shape value described as long exserted in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980230.
-synonym: "long-exserted" EXACT []
-is_a: PATO:0000623 ! exserted
-is_a: PATO:0001154 ! elongated
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104148
-name: cordate wavy-edged
-def: "A phenotype value described as cordate wavy-edged in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980231.
-synonym: "cordate wavy edged" EXACT []
-synonym: "cordate-wavy-edged" EXACT []
-is_a: PATO:0000948 ! heart shaped
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104149
-name: simple grass-like
-def: "A phenotype value described as simple grass-like in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980232.
-synonym: "simple grass like" EXACT []
-synonym: "simple-grass-like" EXACT []
-is_a: PATO:0001503 ! simple
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104150
-name: brilliant deep red
-def: "A color value described as brilliant deep red in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980233.
-synonym: "brilliant-deep-red" EXACT []
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104151
 name: dark pink
-def: "A color value described as dark pink in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980234.
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 6 (dark pink), for which the published central prototype is 2.5R 6.0/6.0." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980234.
+subset: value_slim
 synonym: "dark-pink" EXACT []
 is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104152
-name: hard curved
-def: "A phenotype value described as hard curved in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980235.
-synonym: "hard-curved" EXACT []
-is_a: PATO:0000386 ! hard
-is_a: PATO:0000406 ! curved
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104153
-name: more rounded
-def: "A phenotype value described as more rounded in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980236.
-synonym: "more-rounded" EXACT []
-is_a: PATO:0000411 ! circular
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104154
-name: fading white
-def: "A color value described as fading white in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980237.
-synonym: "fading-white" EXACT []
-is_a: PATO:0000323 ! white
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104155
-name: flat shallow mahogany-red
-def: "A color value described as flat shallow mahogany-red in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980238.
-synonym: "flat shallow mahogany red" EXACT []
-synonym: "flat-shallow-mahogany-red" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000407 ! flat
-is_a: PATO:0001472 ! decreased depth
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104156
-name: very deep purplish-black
-def: "A color value described as very deep purplish-black in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980239.
-synonym: "very deep purplish black" EXACT []
-synonym: "very-deep-purplish-black" EXACT []
-is_a: PATO:0000317 ! black
-is_a: PATO:0000951 ! purple
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104157
-name: purplish-black
-def: "A color value described as purplish-black in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980240.
-synonym: "purplish black" EXACT []
-is_a: PATO:0000317 ! black
-is_a: PATO:0000951 ! purple
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104158
-name: pale greenish-fawn
-def: "A color value described as pale greenish-fawn in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980241.
-synonym: "pale greenish fawn" EXACT []
-synonym: "pale-greenish-fawn" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000324 ! yellow
-is_a: PATO:0000952 ! brown
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+name: purplish black
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 235 (purplish black), for which the published central prototype is 10.0P 1.0/0.7." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980240.
+subset: value_slim
+synonym: "purplish-black" EXACT []
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104159
-name: dark purplish-red
-def: "A color value described as dark purplish-red in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980242.
-synonym: "dark purplish red" EXACT []
+name: dark purplish red
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 259 (dark purplish red), for which the published central prototype is 7.0RP 2.7/6.3." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980242.
+subset: value_slim
 synonym: "dark-purplish-red" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000951 ! purple
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104160
-name: green-backed with red freckles
-def: "A color value described as green-backed with red freckles in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980243.
-synonym: "green backed with red freckles" EXACT []
-synonym: "green-backed-with-red-freckles" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104161
-name: green-backed
-def: "A color value described as green-backed in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980244.
-synonym: "green backed" EXACT []
-is_a: PATO:0000320 ! green
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104162
-name: wide flat curved
-def: "A phenotype value described as wide flat curved in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980245.
-synonym: "wide-flat-curved" EXACT []
-is_a: PATO:0000406 ! curved
-is_a: PATO:0000407 ! flat
-is_a: PATO:0000600 ! increased width
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104163
-name: pink and white
-def: "A color value described as pink and white in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980246.
-synonym: "pink-and-white" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104164
-name: reddish green
-def: "A color value described as reddish green in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980247.
-synonym: "reddish-green" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104165
-name: pale creamy
-def: "A color value described as pale creamy in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980248.
-synonym: "pale-creamy" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104166
-name: cream freckled with crimson spots
-def: "A color value described as cream freckled with crimson spots in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980249.
-synonym: "cream-freckled-with-crimson-spots" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000323 ! white
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104167
-name: creamy with palegreen longitudinal lines
-def: "A color value described as creamy with palegreen longitudinal lines in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980250.
-synonym: "creamy-with-palegreen-longitudinal-lines" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104168
-name: pale greygreen with red streaks and freckles
-def: "A color value described as pale greygreen with red streaks and freckles in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980251.
-synonym: "pale-greygreen-with-red-streaks-and-freckles" EXACT []
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104169
-name: flat, round
-def: "A phenotype value described as flat, round in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980252.
-synonym: "flat,-round" EXACT []
-is_a: PATO:0000407 ! flat
-is_a: PATO:0000411 ! circular
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104170
-name: rough cylindrical
-def: "A shape value described as rough cylindrical in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980253.
-synonym: "rough-cylindrical" EXACT []
-is_a: PATO:0000700 ! rough
-is_a: PATO:0001873 ! cylindrical
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104171
-name: blue-lilac
-def: "A color value described as blue-lilac in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980254.
-synonym: "blue lilac" EXACT []
-is_a: PATO:0000318 ! blue
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104172
-name: bright rich blue
-def: "A color value described as bright rich blue in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980255.
-synonym: "bright-rich-blue" EXACT []
-is_a: PATO:0000318 ! blue
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104173
-name: sky-blue
-def: "A color value described as sky-blue in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980256.
-synonym: "sky blue" EXACT []
-is_a: PATO:0000318 ! blue
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104174
-name: sky blue
-def: "A color value described as sky blue in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980257.
-synonym: "sky-blue" EXACT []
-is_a: PATO:0000318 ! blue
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104175
-name: almost orbicular
-def: "A phenotype value described as almost orbicular in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980258.
-synonym: "almost-orbicular" EXACT []
-is_a: PATO:0001934 ! orbicular
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104176
-name: smooth round
-def: "A phenotype value described as smooth round in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980259.
-synonym: "smooth-round" EXACT []
-is_a: PATO:0000411 ! circular
-is_a: PATO:0000701 ! smooth
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104177
-name: brown and white
-def: "A color value described as brown and white in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980260.
-synonym: "brown-and-white" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0000952 ! brown
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104178
-name: sandy-yellow
-def: "A color value described as sandy-yellow in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980261.
-synonym: "sandy yellow" EXACT []
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104179
-name: chestnut-brown
-def: "A color value described as chestnut-brown in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980262.
-synonym: "chestnut brown" EXACT []
-is_a: PATO:0000952 ! brown
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104180
-name: cream flushed with red
-def: "A color value described as cream flushed with red in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980263.
-synonym: "cream-flushed-with-red" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000323 ! white
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104181
-name: dark-green
-def: "A color value described as dark-green in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980264.
-synonym: "dark green" EXACT []
-is_a: PATO:0000320 ! green
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104182
-name: pale bluish-lilac
-def: "A color value described as pale bluish-lilac in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980265.
-synonym: "pale bluish lilac" EXACT []
-synonym: "pale-bluish-lilac" EXACT []
-is_a: PATO:0000318 ! blue
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104183
-name: pale rose-lilac
-def: "A color value described as pale rose-lilac in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980266.
-synonym: "pale rose lilac" EXACT []
-synonym: "pale-rose-lilac" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000954 ! pink
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104184
-name: pink-flushed
-def: "A color value described as pink-flushed in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980267.
-synonym: "pink flushed" EXACT []
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104185
-name: almost globular
-def: "A phenotype value described as almost globular in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980268.
-synonym: "almost-globular" EXACT []
-is_a: PATO:0001499 ! spherical
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104186
-name: creamy-pink
-def: "A color value described as creamy-pink in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980269.
-synonym: "creamy pink" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0000324 ! yellow
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104187
-name: red flushed green
-def: "A color value described as red flushed green in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980270.
-synonym: "red-flushed-green" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104188
-name: oval mango-shaped
-def: "A phenotype value described as oval mango-shaped in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980271.
-synonym: "oval mango shaped" EXACT []
-synonym: "oval-mango-shaped" EXACT []
-is_a: PATO:0000947 ! elliptic
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+is_a: PATO:0104311 ! purplish red
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104189
 name: deep red
-def: "A color value described as deep red in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980272.
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 13 (deep red), for which the published central prototype is 5.0R 2.8/9.9." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980272.
+subset: value_slim
 synonym: "deep-red" EXACT []
 is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104190
-name: almost spherical
-def: "A phenotype value described as almost spherical in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980273.
-synonym: "almost-spherical" EXACT []
-is_a: PATO:0001499 ! spherical
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104191
-name: greenish yellow inside
-def: "A color value described as greenish yellow inside in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980274.
-synonym: "greenish-yellow-inside" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104192
-name: pink streaked
-def: "A color value described as pink streaked in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980275.
-synonym: "pink-streaked" EXACT []
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104193
-name: streaked with pink behind
-def: "A color value described as streaked with pink behind in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980276.
-synonym: "streaked-with-pink-behind" EXACT []
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104194
-name: inflated oval
-def: "A phenotype value described as inflated oval in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980277.
-synonym: "inflated-oval" EXACT []
-is_a: PATO:0000947 ! elliptic
-is_a: PATO:0002376 ! inflated
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104195
-name: slightly rounded
-def: "A phenotype value described as slightly rounded in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980278.
-synonym: "slightly-rounded" EXACT []
-is_a: PATO:0000411 ! circular
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104196
-name: clustered along the apical portion
-def: "A phenotype value described as clustered along the apical portion in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980279.
-synonym: "clustered-along-the-apical-portion" EXACT []
-is_a: PATO:0001629 ! aggregated
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104197
-name: smooth oval
-def: "A phenotype value described as smooth oval in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980280.
-synonym: "smooth-oval" EXACT []
-is_a: PATO:0000701 ! smooth
-is_a: PATO:0000947 ! elliptic
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104198
-name: white-hairy
-def: "A color value described as white-hairy in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980281.
-synonym: "white hairy" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0000454 ! hairy
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104199
-name: green-striped
-def: "A color value described as green-striped in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980282.
-synonym: "green striped" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0001946 ! banded
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104200
-name: yellow green-veined
-def: "A color value described as yellow green-veined in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980283.
-synonym: "yellow green veined" EXACT []
-synonym: "yellow-green-veined" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000324 ! yellow
-is_a: PATO:0001941 ! yellow green
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104201
-name: bluish-lilac
-def: "A color value described as bluish-lilac in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980284.
-synonym: "bluish lilac" EXACT []
-is_a: PATO:0000318 ! blue
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104202
-name: chestnut-red
-def: "A color value described as chestnut-red in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980285.
-synonym: "chestnut red" EXACT []
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104203
-name: cream or white
-def: "A color value described as cream or white in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980286.
-synonym: "cream-or-white" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104204
-name: pointed black
-def: "A color value described as pointed black in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980287.
-synonym: "pointed-black" EXACT []
-is_a: PATO:0000317 ! black
-is_a: PATO:0002258 ! pointed
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104205
-name: four-petalled bulbous
-def: "A phenotype value described as four-petalled bulbous in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980288.
-synonym: "four petalled bulbous" EXACT []
-synonym: "four-petalled-bulbous" EXACT []
-is_a: PATO:0002210 ! bulbous
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104206
-name: unevenly lobed
-def: "A shape value described as unevenly lobed in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980289.
-synonym: "unevenly-lobed" EXACT []
-is_a: PATO:0001979 ! lobed
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104207
-name: pale blue flushed with purple
-def: "A color value described as pale blue flushed with purple in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980290.
-synonym: "pale-blue-flushed-with-purple" EXACT []
-is_a: PATO:0000318 ! blue
-is_a: PATO:0000951 ! purple
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104208
-name: flushed with purple
-def: "A color value described as flushed with purple in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980291.
-synonym: "flushed-with-purple" EXACT []
-is_a: PATO:0000951 ! purple
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104209
-name: segmented pod-like
-def: "A phenotype value described as segmented pod-like in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980292.
-synonym: "segmented pod like" EXACT []
-synonym: "segmented-pod-like" EXACT []
-is_a: PATO:0002312 ! segmented
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104210
-name: tangled spirally curved
-def: "A phenotype value described as tangled spirally curved in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980293.
-synonym: "tangled-spirally-curved" EXACT []
-is_a: PATO:0000406 ! curved
-is_a: PATO:0001846 ! tangled
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104211
-name: spirally curved
-def: "A phenotype value described as spirally curved in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980294.
-synonym: "spirally-curved" EXACT []
-is_a: PATO:0000406 ! curved
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104212
-name: greenish brown
-def: "A color value described as greenish brown in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980295.
-synonym: "greenish-brown" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000952 ! brown
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104213
-name: scarlet-flushed
-def: "A color value described as scarlet-flushed in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980296.
-synonym: "scarlet flushed" EXACT []
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104214
-name: green and purplish
-def: "A color value described as green and purplish in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980297.
-synonym: "green-and-purplish" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000951 ! purple
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104215
-name: pale greenish red
-def: "A color value described as pale greenish red in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980298.
-synonym: "pale-greenish-red" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104216
-name: pale brownish
-def: "A color value described as pale brownish in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980299.
-synonym: "pale-brownish" EXACT []
-is_a: PATO:0000952 ! brown
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104217
-name: long distinctive
-def: "A shape value described as long distinctive in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980300.
-synonym: "long-distinctive" EXACT []
-is_a: PATO:0001154 ! elongated
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104218
-name: white and lilac
-def: "A color value described as white and lilac in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980301.
-synonym: "white-and-lilac" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104219
-name: white, lilac
-def: "A color value described as white, lilac in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980302.
-synonym: "white,-lilac" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104220
-name: bright lilac-blue
-def: "A color value described as bright lilac-blue in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980303.
-synonym: "bright lilac blue" EXACT []
-synonym: "bright-lilac-blue" EXACT []
-is_a: PATO:0000318 ! blue
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104221
-name: narrow deeply lobed
-def: "A shape value described as narrow deeply lobed in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980304.
-synonym: "narrow-deeply-lobed" EXACT []
-is_a: PATO:0000599 ! decreased width
-is_a: PATO:0001979 ! lobed
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104222
-name: large pale cream
-def: "A color value described as large pale cream in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980305.
-synonym: "large-pale-cream" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0000324 ! yellow
-is_a: PATO:0000586 ! increased size
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104223
 name: very pale green
-def: "A color value described as very pale green in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980306.
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 148 (very pale green), for which the published central prototype is 9.0G 8.7/1.8." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980306.
+subset: value_slim
 synonym: "very-pale-green" EXACT []
 is_a: PATO:0000320 ! green
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104224
-name: four-angled
-def: "A phenotype value described as four-angled in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980307.
-synonym: "four angled" EXACT []
-is_a: PATO:0000617 ! bent
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104225
-name: constricted at intervals
-def: "A phenotype value described as constricted at intervals in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980308.
-synonym: "constricted-at-intervals" EXACT []
-is_a: PATO:0001847 ! constricted
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104226
-name: pale lilac-pink
-def: "A color value described as pale lilac-pink in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980309.
-synonym: "pale lilac pink" EXACT []
-synonym: "pale-lilac-pink" EXACT []
-is_a: PATO:0000954 ! pink
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104227
-name: flat, almost re circular
-def: "A phenotype value described as flat, almost re circular in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980310.
-synonym: "flat,-almost-re-circular" EXACT []
-is_a: PATO:0000407 ! flat
-is_a: PATO:0000411 ! circular
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104228
-name: white rosy-lilac
-def: "A color value described as white rosy-lilac in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980311.
-synonym: "white rosy lilac" EXACT []
-synonym: "white-rosy-lilac" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000323 ! white
-is_a: PATO:0000954 ! pink
-is_a: PATO:0001425 ! rosy
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104229
-name: green flushed red
-def: "A color value described as green flushed red in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980312.
-synonym: "green-flushed-red" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104230
-name: pinkish green
-def: "A color value described as pinkish green in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980313.
-synonym: "pinkish-green" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104231
-name: reddish-brown
-def: "A color value described as reddish-brown in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980314.
-synonym: "reddish brown" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000952 ! brown
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104232
-name: pale creamy-white
-def: "A color value described as pale creamy-white in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980315.
-synonym: "pale creamy white" EXACT []
-synonym: "pale-creamy-white" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104233
-name: small round dentate
-def: "A phenotype value described as small round dentate in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980316.
-synonym: "small-round-dentate" EXACT []
-is_a: PATO:0000411 ! circular
-is_a: PATO:0000587 ! decreased size
-is_a: PATO:0001205 ! dentated
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104234
-name: white flushed with pale lilac
-def: "A color value described as white flushed with pale lilac in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980317.
-synonym: "white-flushed-with-pale-lilac" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104235
-name: lobed palmate
-def: "A shape value described as lobed palmate in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980318.
-synonym: "lobed-palmate" EXACT []
-is_a: PATO:0000052 ! shape
-is_a: PATO:0001979 ! lobed
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104236
-name: reduced to yellow stamens
-def: "A color value described as reduced to yellow stamens in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980319.
-synonym: "reduced-to-yellow-stamens" EXACT []
-is_a: PATO:0000324 ! yellow
-is_a: PATO:0000587 ! decreased size
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104237
-name: silver-grey
-def: "A color value described as silver-grey in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980320.
-synonym: "silver grey" EXACT []
-is_a: PATO:0000950 ! grey
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104238
-name: papery yellow
-def: "A color value described as papery yellow in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980321.
-synonym: "papery-yellow" EXACT []
-is_a: PATO:0000150 ! texture
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104239
-name: very brittle
-def: "A phenotype value described as very brittle in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980322.
-synonym: "very-brittle" EXACT []
-is_a: PATO:0002477 ! brittle
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104240
-name: dark crimson-red
-def: "A color value described as dark crimson-red in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980323.
-synonym: "dark crimson red" EXACT []
-synonym: "dark-crimson-red" EXACT []
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104241
-name: long slender
-def: "A shape value described as long slender in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980324.
-synonym: "long-slender" EXACT []
-is_a: PATO:0000592 ! decreased thickness
-is_a: PATO:0001154 ! elongated
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104242
-name: soft felted
-def: "A texture value described as soft felted in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980325.
-synonym: "soft-felted" EXACT []
-is_a: PATO:0000387 ! soft
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104243
-name: large round winged
-def: "A phenotype value described as large round winged in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980326.
-synonym: "large-round-winged" EXACT []
-is_a: PATO:0000411 ! circular
-is_a: PATO:0000586 ! increased size
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104244
-name: whitish lilac
-def: "A color value described as whitish lilac in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980327.
-synonym: "whitish-lilac" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104245
-name: large toothed
-def: "A phenotype value described as large toothed in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980328.
-synonym: "large-toothed" EXACT []
-is_a: PATO:0000586 ! increased size
-is_a: PATO:0001205 ! dentated
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104246
-name: reddish brown
-def: "A color value described as reddish brown in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980329.
-synonym: "reddish-brown" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000952 ! brown
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104247
-name: long and narrow
-def: "A shape value described as long and narrow in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980330.
-synonym: "long-and-narrow" EXACT []
-is_a: PATO:0000599 ! decreased width
-is_a: PATO:0001154 ! elongated
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104248
-name: greatly reduced
-def: "A phenotype value described as greatly reduced in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980331.
-synonym: "greatly-reduced" EXACT []
-is_a: PATO:0000587 ! decreased size
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104249
-name: rosy-pink
-def: "A color value described as rosy-pink in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980332.
-synonym: "rosy pink" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000954 ! pink
-is_a: PATO:0001425 ! rosy
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104250
-name: short pagoda-like
-def: "A phenotype value described as short pagoda-like in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980333.
-synonym: "short pagoda like" EXACT []
-synonym: "short-pagoda-like" EXACT []
-is_a: PATO:0000569 ! decreased height
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104251
-name: narrow heart-shaped
-def: "A shape value described as narrow heart-shaped in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980334.
-synonym: "narrow heart shaped" EXACT []
-synonym: "narrow-heart-shaped" EXACT []
-is_a: PATO:0000599 ! decreased width
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104252
-name: greenish-gold
-def: "A color value described as greenish-gold in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980335.
-synonym: "greenish gold" EXACT []
-is_a: PATO:0000320 ! green
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104253
-name: greenish red
-def: "A color value described as greenish red in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980336.
-synonym: "greenish-red" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104254
-name: slightly variable
-def: "A phenotype value described as slightly variable in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980337.
-synonym: "slightly-variable" EXACT []
-is_a: PATO:0001227 ! variant
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104255
-name: pinkish red
-def: "A color value described as pinkish red in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980338.
-synonym: "pinkish-red" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104256
-name: curved, separated claw-shaped
-def: "A phenotype value described as curved, separated claw-shaped in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980339.
-synonym: "curved, separated claw shaped" EXACT []
-synonym: "curved,-separated-claw-shaped" EXACT []
-is_a: PATO:0000406 ! curved
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104257
-name: bright lilac and pink
-def: "A color value described as bright lilac and pink in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980340.
-synonym: "bright-lilac-and-pink" EXACT []
-is_a: PATO:0000954 ! pink
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104258
-name: narrow grass-like
-def: "A shape value described as narrow grass-like in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980341.
-synonym: "narrow grass like" EXACT []
-synonym: "narrow-grass-like" EXACT []
-is_a: PATO:0000599 ! decreased width
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104259
-name: cottony
-def: "A texture value described as cottony in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980342.
-is_a: PATO:0000150 ! texture
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104260
-name: blue or lilac
-def: "A color value described as blue or lilac in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980343.
-synonym: "blue-or-lilac" EXACT []
-is_a: PATO:0000318 ! blue
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104261
-name: flat circular
-def: "A phenotype value described as flat circular in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980344.
-synonym: "flat-circular" EXACT []
-is_a: PATO:0000407 ! flat
-is_a: PATO:0000411 ! circular
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104262
-name: tubular creamy
-def: "A color value described as tubular creamy in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980345.
-synonym: "tubular-creamy" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0000324 ! yellow
-is_a: PATO:0002299 ! tubular
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104263
-name: yellow or reddish orange
-def: "A color value described as yellow or reddish orange in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980346.
-synonym: "yellow-or-reddish-orange" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000324 ! yellow
-is_a: PATO:0000953 ! orange
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104264
-name: dense thicket
-def: "A phenotype value described as dense thicket in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980347.
-synonym: "dense-thicket" EXACT []
-is_a: PATO:0001164 ! dense
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104265
-name: lilac-pink
-def: "A color value described as lilac-pink in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980348.
-synonym: "lilac pink" EXACT []
-is_a: PATO:0000954 ! pink
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104266
-name: several metres long
-def: "A shape value described as several metres long in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980349.
-synonym: "several-metres-long" EXACT []
-is_a: PATO:0001154 ! elongated
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104267
-name: yellowish green
-def: "A color value described as yellowish green in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980350.
-synonym: "yellowish-green" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104268
-name: white tinged with pink
-def: "A color value described as white tinged with pink in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980351.
-synonym: "white-tinged-with-pink" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104269
-name: very pale pink
-def: "A color value described as very pale pink in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980352.
-synonym: "very-pale-pink" EXACT []
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104270
-name: red flushed pale yellowish
-def: "A color value described as red flushed pale yellowish in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980353.
-synonym: "red-flushed-pale-yellowish" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104271
-name: slightly spatulate
-def: "A phenotype value described as slightly spatulate in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980354.
-synonym: "slightly-spatulate" EXACT []
-is_a: PATO:0001937 ! spatulate
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104272
-name: green flushed with red
-def: "A color value described as green flushed with red in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980355.
-synonym: "green-flushed-with-red" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104273
-name: creamy-green
-def: "A color value described as creamy-green in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980356.
-synonym: "creamy green" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000323 ! white
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104274
-name: spirally coiled
-def: "A phenotype value described as spirally coiled in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980357.
-synonym: "spirally-coiled" EXACT []
-is_a: PATO:0000404 ! coiled
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104275
-name: flat spirally coiled
-def: "A phenotype value described as flat spirally coiled in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980358.
-synonym: "flat-spirally-coiled" EXACT []
-is_a: PATO:0000404 ! coiled
-is_a: PATO:0000407 ! flat
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104276
-name: pale salmon-pink
-def: "A color value described as pale salmon-pink in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980359.
-synonym: "pale salmon pink" EXACT []
-synonym: "pale-salmon-pink" EXACT []
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+name: pannose
+def: "A hairy quality inhering in a bearer by virtue of the bearer being densely covered with short, matted, intertwined hairs that produce a felt-like surface." [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
+comment: Atomic quality extracted from FLOPO_0980325 (soft felted); the FLOPO class should compose pannose with soft rather than pre-coordinate the conjunction in PATO.
+subset: value_slim
+synonym: "felted" EXACT []
+is_a: PATO:0000454 ! hairy
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104277
 name: glaucous
-def: "A color value described as glaucous in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980360.
-is_a: PATO:0000014 ! color
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104278
-name: thick brittle
-def: "A phenotype value described as thick brittle in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980361.
-synonym: "thick-brittle" EXACT []
-is_a: PATO:0000591 ! increased thickness
-is_a: PATO:0002477 ! brittle
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104279
-name: small narrow
-def: "A shape value described as small narrow in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980362.
-synonym: "small-narrow" EXACT []
-is_a: PATO:0000587 ! decreased size
-is_a: PATO:0000599 ! decreased width
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104280
-name: bright sky-blue
-def: "A color value described as bright sky-blue in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980363.
-synonym: "bright sky blue" EXACT []
-synonym: "bright-sky-blue" EXACT []
-is_a: PATO:0000318 ! blue
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104281
-name: dark purplish
-def: "A color value described as dark purplish in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980364.
-synonym: "dark-purplish" EXACT []
-is_a: PATO:0000951 ! purple
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104282
-name: dead white
-def: "A color value described as dead white in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980365.
-synonym: "dead-white" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0001422 ! dead
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104283
-name: purple-magenta
-def: "A color value described as purple-magenta in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980366.
-synonym: "purple magenta" EXACT []
-is_a: PATO:0000321 ! magenta
-is_a: PATO:0000951 ! purple
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104284
-name: blue and white
-def: "A color value described as blue and white in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980367.
-synonym: "blue-and-white" EXACT []
-is_a: PATO:0000318 ! blue
-is_a: PATO:0000323 ! white
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104285
-name: white flushed with purplish
-def: "A color value described as white flushed with purplish in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980368.
-synonym: "white-flushed-with-purplish" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0000951 ! purple
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104286
-name: variable, white flushed with purplish
-def: "A color value described as variable, white flushed with purplish in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980369.
-synonym: "variable,-white-flushed-with-purplish" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0000951 ! purple
-is_a: PATO:0001227 ! variant
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104287
-name: slightly hairy
-def: "A phenotype value described as slightly hairy in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980370.
-synonym: "slightly-hairy" EXACT []
-is_a: PATO:0000454 ! hairy
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104288
-name: very long
-def: "A shape value described as very long in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980371.
-synonym: "very-long" EXACT []
-is_a: PATO:0001154 ! elongated
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104289
-name: pale greenish-white
-def: "A color value described as pale greenish-white in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980372.
-synonym: "pale greenish white" EXACT []
-synonym: "pale-greenish-white" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000323 ! white
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104290
-name: slender spidery
-def: "A phenotype value described as slender spidery in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980373.
-synonym: "slender-spidery" EXACT []
-is_a: PATO:0000592 ! decreased thickness
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104291
-name: pale reddish
-def: "A color value described as pale reddish in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980374.
-synonym: "pale-reddish" EXACT []
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104292
-name: greyish heart-shaped
-def: "A color value described as greyish heart-shaped in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980375.
-synonym: "greyish heart shaped" EXACT []
-synonym: "greyish-heart-shaped" EXACT []
-is_a: PATO:0000950 ! grey
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104293
-name: bright deep blue
-def: "A color value described as bright deep blue in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980376.
-synonym: "bright-deep-blue" EXACT []
-is_a: PATO:0000318 ! blue
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+def: "A waxy quality of a plant surface in which a whitish bloom, often removable by rubbing, produces a dull blue-green appearance." [https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?alpha=F-H&glossary=yes&page=nswfl]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980360. This is classified by the surface bloom, not simultaneously as blue and green.
+subset: value_slim
+is_a: PATO:0002384 ! waxy
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104294
 name: deep violet
-def: "A color value described as deep violet in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980377.
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 208 (deep violet), for which the published central prototype is 1.0P 1.4/10.3." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980377.
+subset: value_slim
 synonym: "deep-violet" EXACT []
 is_a: PATO:0001424 ! violet
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104295
-name: fleshy green
-def: "A color value described as fleshy green in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980378.
-synonym: "fleshy-green" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0002351 ! fleshy
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104296
-name: flattened oval
-def: "A phenotype value described as flattened oval in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980379.
-synonym: "flattened-oval" EXACT []
-is_a: PATO:0000947 ! elliptic
-is_a: PATO:0002254 ! flattened
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104297
-name: pointed tip
-def: "A phenotype value described as pointed tip in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980380.
-synonym: "pointed-tip" EXACT []
-is_a: PATO:0002258 ! pointed
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104298
-name: purple-brown
-def: "A color value described as purple-brown in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980381.
-synonym: "purple brown" EXACT []
-is_a: PATO:0000951 ! purple
-is_a: PATO:0000952 ! brown
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104299
-name: pale grey
-def: "A color value described as pale grey in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980382.
-synonym: "pale-grey" EXACT []
-is_a: PATO:0000950 ! grey
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104300
-name: rounded pointed
-def: "A phenotype value described as rounded pointed in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980383.
-synonym: "rounded-pointed" EXACT []
-is_a: PATO:0000411 ! circular
-is_a: PATO:0002258 ! pointed
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104301
-name: shiny green
-def: "A color value described as shiny green in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980384.
-synonym: "shiny-green" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0001373 ! glistening
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104302
-name: short, flat
-def: "A phenotype value described as short, flat in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980385.
-synonym: "short,-flat" EXACT []
-is_a: PATO:0000407 ! flat
-is_a: PATO:0000569 ! decreased height
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104303
-name: dark pinkish purple
-def: "A color value described as dark pinkish purple in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980386.
-synonym: "dark-pinkish-purple" EXACT []
-is_a: PATO:0000951 ! purple
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104304
-name: pale blue to almost white
-def: "A color value described as pale blue to almost white in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980387.
-synonym: "pale-blue-to-almost-white" EXACT []
-is_a: PATO:0000318 ! blue
-is_a: PATO:0000323 ! white
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104305
-name: blue-grey
-def: "A color value described as blue-grey in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980388.
+name: bluish gray
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 191 (bluish gray), for which the published central prototype is 9.5B 5.5/1.0." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980388.
+subset: value_slim
+synonym: "blue-gray" EXACT []
+synonym: "blue gray" EXACT []
+synonym: "blue-grey" EXACT []
 synonym: "blue grey" EXACT []
-is_a: PATO:0000318 ! blue
-is_a: PATO:0000950 ! grey
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104306
-name: yellow and blue-green
-def: "A color value described as yellow and blue-green in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980389.
-synonym: "yellow and blue green" EXACT []
-synonym: "yellow-and-blue-green" EXACT []
-is_a: PATO:0000318 ! blue
-is_a: PATO:0000320 ! green
-is_a: PATO:0000324 ! yellow
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+synonym: "bluish grey" EXACT []
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104307
-name: banded and tessellated
-def: "A phenotype value described as banded and tessellated in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980390.
-synonym: "banded-and-tessellated" EXACT []
-is_a: PATO:0001946 ! banded
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104308
-name: fairly wide
-def: "A phenotype value described as fairly wide in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980391.
-synonym: "fairly-wide" EXACT []
-is_a: PATO:0000600 ! increased width
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104309
-name: almost round flat
-def: "A phenotype value described as almost round flat in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980392.
-synonym: "almost-round-flat" EXACT []
-is_a: PATO:0000407 ! flat
-is_a: PATO:0000411 ! circular
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104310
-name: narrow oval
-def: "A shape value described as narrow oval in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980393.
-synonym: "narrow-oval" EXACT []
-is_a: PATO:0000599 ! decreased width
-is_a: PATO:0000947 ! elliptic
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+name: tessellated
+def: "A spatial pattern in which colors or structural elements are arranged in quadrilateral units that produce a chequered appearance." [https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?alpha=T-U&glossary=yes&page=nswfl]
+comment: Atomic quality extracted from FLOPO_0980180 and FLOPO_0980390; banded-and-tessellated combinations should remain compositional in FLOPO.
+subset: value_slim
+synonym: "tesselated" EXACT []
+is_a: PATO:0000060 ! spatial pattern
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104311
 name: purplish red
-def: "A color value described as purplish red in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980394.
+def: "A color whose Munsell coordinates fall within the continuous ISCC-NBS purplish-red sector represented by color-name blocks 254 through 262; moderate purplish red (block 258, centroid 7.0RP 4.5/9.0) is a central prototype." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980394.
+subset: value_slim
 synonym: "purplish-red" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000951 ! purple
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104312
-name: deep rosy
-def: "A color value described as deep rosy in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980395.
-synonym: "deep-rosy" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000954 ! pink
-is_a: PATO:0001425 ! rosy
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104313
-name: almost round dentate
-def: "A phenotype value described as almost round dentate in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980396.
-synonym: "almost-round-dentate" EXACT []
-is_a: PATO:0000411 ! circular
-is_a: PATO:0001205 ! dentated
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104314
-name: broadly oval
-def: "A phenotype value described as broadly oval in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980397.
-synonym: "broadly-oval" EXACT []
-is_a: PATO:0000947 ! elliptic
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104315
-name: brilliant deep pink
-def: "A color value described as brilliant deep pink in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980398.
-synonym: "brilliant-deep-pink" EXACT []
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104316
-name: inflated in fruit
-def: "A phenotype value described as inflated in fruit in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980399.
-synonym: "inflated-in-fruit" EXACT []
-is_a: PATO:0002376 ! inflated
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104317
-name: white flushed with deep pink
-def: "A color value described as white flushed with deep pink in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980400.
-synonym: "white-flushed-with-deep-pink" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104318
-name: almost terete
-def: "A shape value described as almost terete in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980401.
-synonym: "almost-terete" EXACT []
-is_a: PATO:0000052 ! shape
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104319
-name: orange ripe
-def: "A color value described as orange ripe in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980402.
-synonym: "orange-ripe" EXACT []
-is_a: PATO:0000953 ! orange
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104320
-name: bright lilac
-def: "A color value described as bright lilac in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980403.
-synonym: "bright-lilac" EXACT []
-is_a: PATO:0001943 ! lilac
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104321
-name: small cylindrical succulent
-def: "A texture value described as small cylindrical succulent in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980404.
-synonym: "small-cylindrical-succulent" EXACT []
-is_a: PATO:0000587 ! decreased size
-is_a: PATO:0001873 ! cylindrical
-is_a: PATO:0002351 ! fleshy
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104322
-name: pale pinkish white
-def: "A color value described as pale pinkish white in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980405.
-synonym: "pale-pinkish-white" EXACT []
-is_a: PATO:0000323 ! white
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104323
-name: crimson tipped
-def: "A color value described as crimson tipped in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980406.
-synonym: "crimson-tipped" EXACT []
-is_a: PATO:0000322 ! red
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104324
-name: silvery-green
-def: "A color value described as silvery-green in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980407.
-synonym: "silvery green" EXACT []
-is_a: PATO:0000320 ! green
-is_a: PATO:0000950 ! grey
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104325
-name: deep rosy-red
-def: "A color value described as deep rosy-red in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980408.
-synonym: "deep rosy red" EXACT []
-synonym: "deep-rosy-red" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000954 ! pink
-is_a: PATO:0001425 ! rosy
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104326
-name: bright reddish purple
-def: "A color value described as bright reddish purple in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980409.
-synonym: "bright-reddish-purple" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000951 ! purple
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104327
-name: flat heads
-def: "A phenotype value described as flat heads in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980410.
-synonym: "flat-heads" EXACT []
-is_a: PATO:0000407 ! flat
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104328
-name: dense club-shaped
-def: "A phenotype value described as dense club-shaped in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980411.
-synonym: "dense club shaped" EXACT []
-synonym: "dense-club-shaped" EXACT []
-is_a: PATO:0001164 ! dense
-is_a: PATO:0001883 ! clavate
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104329
-name: sometimes lobed
-def: "A shape value described as sometimes lobed in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980412.
-synonym: "sometimes-lobed" EXACT []
-is_a: PATO:0001979 ! lobed
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104330
-name: reddish purple
-def: "A color value described as reddish purple in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980413.
-synonym: "reddish-purple" EXACT []
-is_a: PATO:0000322 ! red
-is_a: PATO:0000951 ! purple
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104331
-name: deep magenta-pink
-def: "A color value described as deep magenta-pink in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980414.
-synonym: "deep magenta pink" EXACT []
-synonym: "deep-magenta-pink" EXACT []
-is_a: PATO:0000321 ! magenta
-is_a: PATO:0000954 ! pink
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
-
-[Term]
-id: PATO:0104332
-name: narrow pointed
-def: "A shape value described as narrow pointed in botanical flora descriptions." []
-comment: Botanical phenotype value requested for FLOPO v2; see https://github.com/pato-ontology/pato/issues/614. FLOPO temporary class: FLOPO_0980415.
-synonym: "narrow-pointed" EXACT []
-is_a: PATO:0000599 ! decreased width
-is_a: PATO:0002258 ! pointed
-created_by: leechuck
-creation_date: 2026-07-09T04:50:15Z
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
 
 [Typedef]
 id: correlates_with
@@ -26485,4 +23333,3 @@ name: obsolete towards
 comment: Consider using RO:0002503 instead. See https://github.com/pato-ontology/pato/issues/454
 is_obsolete: true
 replaced_by: RO:0002503
-
