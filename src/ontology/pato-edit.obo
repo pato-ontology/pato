@@ -1866,6 +1866,7 @@ name: black
 def: "A color that lacks any hues as parts." [PATOC:GVG]
 subset: mpath_slim
 subset: value_slim
+synonym: "blackish" RELATED [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
 is_a: PATO:0000014 ! color
 
 [Term]
@@ -1874,6 +1875,7 @@ name: blue
 def: "A color hue with low wavelength of that portion of the visible spectrum lying between green and indigo, evoked in the human observer by radiant energy with wavelengths of approximately 420 to 490 nanometers." [Dictionary:http\://dictionary.reference.com/]
 subset: mpath_slim
 subset: value_slim
+synonym: "bluish" RELATED [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
 is_a: PATO:0000014 ! color
 
 [Term]
@@ -1889,6 +1891,7 @@ name: green
 def: "A color hue with medium-low wavelength of that portion of the visible spectrum lying between yellow and blue, evoked in the human observer by radiant energy with wavelengths of approximately 490 to 570 nanometers." [Dictionary:http\://dictionary.reference.com/]
 subset: mpath_slim
 subset: value_slim
+synonym: "greenish" RELATED [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
 is_a: PATO:0000014 ! color
 
 [Term]
@@ -1905,6 +1908,7 @@ name: red
 def: "A color hue with high wavelength of the long-wave end of the visible spectrum, evoked in the human observer by radiant energy with wavelengths of approximately 630 to 750 nanometers." [Dictionary:http\://dictionary.reference.com/]
 subset: mpath_slim
 subset: value_slim
+synonym: "reddish" RELATED [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
 is_a: PATO:0000014 ! color
 
 [Term]
@@ -1922,6 +1926,7 @@ name: yellow
 def: "A color hue with medium wavelength of that portion of the visible spectrum lying between orange and green, evoked in the human observer by radiant energy with wavelengths of approximately 570 to 590 nanometers." [Dictionary:http\://dictionary.reference.com/]
 subset: mpath_slim
 subset: value_slim
+synonym: "yellowish" RELATED [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
 is_a: PATO:0000014 ! color
 
 [Term]
@@ -5870,6 +5875,7 @@ name: grey
 def: "A color between white and black colors." [http://en.wikipedia.org/wiki/Grey]
 subset: mpath_slim
 subset: value_slim
+synonym: "greyish" RELATED [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
 synonym: "plumbeous" RELATED []
 is_a: PATO:0000014 ! color
 
@@ -5879,6 +5885,7 @@ name: purple
 def: "A color that falls about midway between red and blue in hue." [Dictionary:http\://dictionary.reference.com/]
 subset: mpath_slim
 subset: value_slim
+synonym: "purplish" RELATED [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
 is_a: PATO:0000014 ! color
 
 [Term]
@@ -5887,6 +5894,7 @@ name: brown
 def: "A color consisting of dark orange, red, of very low intensity." [Wikipedia:http\://en.wikipedia.org/wiki/Brown]
 subset: mpath_slim
 subset: value_slim
+synonym: "brownish" RELATED [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
 is_a: PATO:0000014 ! color
 
 [Term]
@@ -5903,6 +5911,7 @@ name: pink
 def: "Red color having medium to high brightness and low to moderate saturation." [PATOC:MAH]
 subset: mpath_slim
 subset: value_slim
+synonym: "pinkish" RELATED [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
 is_a: PATO:0000322 ! red
 
 [Term]
@@ -7697,9 +7706,10 @@ is_a: PATO:0000319 ! cyan
 [Term]
 id: PATO:0001249
 name: dark green
-def: "A color consisting of green hue and low brightness." [PATOC:GVG]
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 146 (dark green), for which the published central prototype is 6.0G 2.7/5.0." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
 subset: mpath_slim
 subset: value_slim
+synonym: "dark-green" EXACT []
 is_a: PATO:0000320 ! green
 
 [Term]
@@ -7996,9 +8006,11 @@ is_a: PATO:0000324 ! yellow
 [Term]
 id: PATO:0001287
 name: red brown
-def: "A color consisting of red and brown hue." [PATOC:GVG]
+def: "A color whose Munsell coordinates fall within the continuous ISCC-NBS reddish-brown sector represented by color-name blocks 40 through 47; moderate reddish brown (block 43, centroid 9.6R 3.4/5.2) is a central prototype." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
 subset: mpath_slim
 subset: value_slim
+synonym: "reddish brown" EXACT []
+synonym: "reddish-brown" EXACT []
 is_a: PATO:0000952 ! brown
 
 [Term]
@@ -13701,7 +13713,7 @@ is_a: PATO:0000586 ! increased size
 [Term]
 id: PATO:0001941
 name: yellow green
-def: "A color consisting of yellow and green hues." [PATOC:GVG]
+def: "A color whose Munsell coordinates fall within the continuous ISCC-NBS yellow-green sector represented by color-name blocks 115 through 122; moderate yellow green (block 120, centroid 5.0GY 6.0/5.2) is a central prototype." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
 subset: mpath_slim
 subset: value_slim
 is_a: PATO:0000320 ! green
@@ -14004,6 +14016,7 @@ id: PATO:0001980
 name: digitate
 def: "A shape quality inhering in a bearer by virtue of the bearer's having distinct parts arising from a common point or center." [thefreedictionary:thefreedictionary]
 subset: value_slim
+synonym: "palmate" RELATED [https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?alpha=P&glossary=yes&page=nswfl, https://sweetgum.nybg.org/science/glossary/glossary-details/?irn=600, https://sweetgum.nybg.org/science/glossary/glossary-details/?irn=1144]
 is_a: PATO:0000052 ! shape
 
 [Term]
@@ -17568,7 +17581,7 @@ id: PATO:0002339
 name: hispid
 def: "A quality of being covered with stiff or rough hairs." [PATOC:GVG]
 subset: value_slim
-is_a: PATO:0000454 ! hairy
+is_a: PATO:0104117 ! bristly
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
 creation_date: 2012-01-31T02:51:37Z
 
@@ -19674,6 +19687,7 @@ id: PATO:0005010
 name: plumose
 def: "A branched quality inhering in a bearer by virtue of the bearer's having many fine filaments or branches that give a feathery appearance: for example, resembling a feather." [www.oxforddictionaries.com:http\://www.oxforddictionaries.com/us/definition/american_english/plumose]
 subset: value_slim
+synonym: "feathery" EXACT [https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?alpha=P&glossary=yes&page=nswfl]
 is_a: PATO:0000402 ! branched
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0003-3162-7490
 creation_date: 2014-09-25T15:03:17Z
@@ -22748,6 +22762,408 @@ is_a: PATO:0103302 ! allotetraploid
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-9076-6066
 creation_date: 2026-06-17T22:04:36Z
 
+[Term]
+id: PATO:0104005
+name: deep yellow
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 85 (deep yellow), for which the published central prototype is 4.0Y 6.0/9.5." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980088.
+subset: value_slim
+synonym: "deep-yellow" EXACT []
+is_a: PATO:0000324 ! yellow
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104007
+name: greyish green
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 150 (grayish green), for which the published central prototype is 9.0G 4.5/1.8." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980090.
+subset: value_slim
+synonym: "gray-green" EXACT []
+synonym: "gray green" EXACT []
+synonym: "grayish green" EXACT []
+synonym: "grey-green" EXACT []
+synonym: "grey green" EXACT []
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104010
+name: papyraceous
+def: "A texture quality inhering in a bearer by virtue of the bearer being thin and somewhat opaque, with the consistency of paper." [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980093.
+subset: value_slim
+synonym: "chartaceous" EXACT [https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?alpha=C&glossary=yes&page=nswfl]
+synonym: "papery" EXACT []
+is_a: PATO:0000150 ! texture
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104013
+name: greenish yellow
+def: "A color whose Munsell coordinates fall within the continuous ISCC-NBS greenish-yellow sector represented by color-name blocks 97 through 105; moderate greenish yellow (block 102, centroid 9.5Y 7.2/6.6) is a central prototype." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary classes: FLOPO_0980096 and FLOPO_0980178.
+subset: value_slim
+synonym: "greenish-yellow" EXACT []
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104016
+name: terete
+def: "A shape quality inhering in a bearer by virtue of the bearer being long and slender, tapering toward the apex, and circular in transverse section." [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980099.
+subset: value_slim
+is_a: PATO:0000052 ! shape
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104019
+name: succulent
+def: "A composition quality inhering in a plant or plant organ by virtue of the bearer containing living water-storage tissue whose relative capacitance and volume enable stored water to support physiological function while external water is unavailable." [PMID:22380538, DOI:10.1111/j.1365-3040.2012.02503.x]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980102. This is a water-storage quality, not merely a synonym of fleshy.
+subset: value_slim
+is_a: PATO:0000025 ! composition
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104020
+name: blue green
+def: "A color whose Munsell coordinates fall within the continuous ISCC-NBS bluish-green sector represented by color-name blocks 158 through 166; moderate bluish green (block 164, centroid 4.5BG 4.5/5.0) is a central prototype." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: This corresponds to the botanical blue green group in UPOV TGP/14/6 and to FLOPO temporary class FLOPO_0980103.
+subset: value_slim
+synonym: "blue-green" EXACT [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
+synonym: "bluish green" EXACT []
+synonym: "bluish-green" EXACT []
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104031
+name: cream
+def: "A color for which RHS Colour Chart chip 158A or 158B in the fifth edition (2007) is the closest visual match when the specimen is compared against a white background under artificial daylight conforming to CIE D6500; those chips serve as physical prototypes for cream in a botanical description." [https://www.rhs.org.uk/about-the-rhs/pdfs/publications/hanburyana/vol-3-june-2008/complete-version.pdf, https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
+comment: Requested for FLOPO; corresponding temporary classes: FLOPO_0980084 (creamy) and FLOPO_0980114 (cream). The RHS swatches are the normative physical prototypes; display RGB values are not normative.
+subset: value_slim
+synonym: "creamy" EXACT []
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104032
+name: coriaceous
+def: "A texture quality inhering in a bearer by virtue of the bearer being thick, tough, and flexible, with the consistency of leather." [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980115.
+subset: value_slim
+synonym: "leathery" EXACT []
+is_a: PATO:0000150 ! texture
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104035
+name: pendent
+def: "An orientation quality inhering in a bearer by virtue of the bearer hanging downward under its own weight." [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980118. Pendent is distinguished from pendulous, which denotes hanging downward because the support is weak.
+subset: value_slim
+is_a: PATO:0000133 ! orientation
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104041
+name: velutinous
+def: "A hairy quality inhering in a bearer by virtue of the bearer being covered with long, dense, straight trichomes that produce a velvet-like surface." [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980124.
+subset: value_slim
+synonym: "velvety" EXACT []
+is_a: PATO:0000454 ! hairy
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104051
+name: pale greenish yellow
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 104 (pale greenish yellow), for which the published central prototype is 9.5Y 8.9/4.1." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980134.
+subset: value_slim
+synonym: "pale-greenish-yellow" EXACT []
+is_a: PATO:0104013 ! greenish yellow
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104054
+name: orange yellow
+def: "A color whose Munsell coordinates fall within the continuous ISCC-NBS orange-yellow sector represented by color-name blocks 66 through 73; moderate orange yellow (block 71, centroid 9.0YR 7.2/8.1) is a central prototype." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980137. This is predominantly yellow and is distinct from PATO:0001944 yellow orange, which is predominantly orange.
+subset: value_slim
+synonym: "orange-yellow" EXACT []
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104059
+name: pinkish white
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 9 (pinkish white), for which the published central prototype is 7.6R 9.2/1.0." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980142.
+subset: value_slim
+synonym: "pinkish-white" EXACT []
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104064
+name: deep blue
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 179 (deep blue), for which the published central prototype is 3.0PB 2.0/9.0." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980147.
+subset: value_slim
+synonym: "deep-blue" EXACT []
+is_a: PATO:0000318 ! blue
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104067
+name: greenish white
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 153 (greenish white), for which the published central prototype is 7.0G 9.2/0.8." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980150.
+subset: value_slim
+synonym: "greenish-white" EXACT []
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104073
+name: deep orange
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 51 (deep orange), for which the published central prototype is 4.5YR 5.0/12.1." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980156.
+subset: value_slim
+synonym: "deep-orange" EXACT []
+is_a: PATO:0000953 ! orange
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104077
+name: very pale blue
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 184 (very pale blue), for which the published central prototype is 0.9PB 8.4/3.0." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980160.
+subset: value_slim
+synonym: "very-pale-blue" EXACT []
+is_a: PATO:0000318 ! blue
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104079
+name: reddish purple
+def: "A color whose Munsell coordinates fall within the continuous ISCC-NBS reddish-purple sector represented by color-name blocks 236 through 245; moderate reddish purple (block 241, centroid 1.0RP 4.5/7.2) is a central prototype." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary classes: FLOPO_0980162 and FLOPO_0980413.
+subset: value_slim
+synonym: "reddish-purple" EXACT []
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104085
+name: deep purple
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 219 (deep purple), for which the published central prototype is 6.0P 2.8/10.2." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980168.
+subset: value_slim
+synonym: "deep-purple" EXACT []
+is_a: PATO:0000951 ! purple
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104087
+name: deep purplish red
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 256 (deep purplish red), for which the published central prototype is 7.0RP 2.8/11.0." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980170.
+subset: value_slim
+synonym: "deep-purplish-red" EXACT []
+is_a: PATO:0104311 ! purplish red
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104112
+name: orange red
+def: "A color assigned to UPOV color group 33 (orange red) by comparison with the RHS Colour Chart; RHS 33B in the 2015 edition is a physical prototype." [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980195.
+subset: value_slim
+synonym: "orange-red" EXACT []
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104114
+name: yellowish green
+def: "A color whose Munsell coordinates fall within the continuous ISCC-NBS yellowish-green sector represented by color-name blocks 129 through 138; moderate yellowish green (block 136, centroid 0.5G 5.5/5.1) is a central prototype." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary classes: FLOPO_0980197 and FLOPO_0980350.
+subset: value_slim
+synonym: "yellowish-green" EXACT []
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-09T04:50:15Z
+
+[Term]
+id: PATO:0104117
+name: bristly
+def: "A hairy quality inhering in a bearer by virtue of the bearer being covered with stiff, strong hairs or hairlike projections; in plants, these projections are trichomes." [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980200. UPOV treats hispid and setose as narrower botanical indumentum terms, but PATO:0002289 setose remains directly under hairy because its cross-taxon use includes insect setae, which are not all bristles.
+subset: value_slim
+is_a: PATO:0000454 ! hairy
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104123
+name: deep green
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 142 (deep green), for which the published central prototype is 6.0G 2.3/9.1." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980206.
+subset: value_slim
+synonym: "deep-green" EXACT []
+is_a: PATO:0000320 ! green
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104151
+name: dark pink
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 6 (dark pink), for which the published central prototype is 2.5R 6.0/6.0." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980234.
+subset: value_slim
+synonym: "dark-pink" EXACT []
+is_a: PATO:0000954 ! pink
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104157
+name: purplish black
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 235 (purplish black), for which the published central prototype is 10.0P 1.0/0.7." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980240.
+subset: value_slim
+synonym: "purplish-black" EXACT []
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104159
+name: dark purplish red
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 259 (dark purplish red), for which the published central prototype is 7.0RP 2.7/6.3." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980242.
+subset: value_slim
+synonym: "dark-purplish-red" EXACT []
+is_a: PATO:0104311 ! purplish red
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104189
+name: deep red
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 13 (deep red), for which the published central prototype is 5.0R 2.8/9.9." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980272.
+subset: value_slim
+synonym: "deep-red" EXACT []
+is_a: PATO:0000322 ! red
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104223
+name: very pale green
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 148 (very pale green), for which the published central prototype is 9.0G 8.7/1.8." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980306.
+subset: value_slim
+synonym: "very-pale-green" EXACT []
+is_a: PATO:0000320 ! green
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104242
+name: pannose
+def: "A hairy quality inhering in a bearer by virtue of the bearer being densely covered with short, matted, intertwined hairs that produce a felt-like surface." [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
+comment: Atomic quality extracted from FLOPO_0980325 (soft felted); the FLOPO class should compose pannose with soft rather than pre-coordinate the conjunction in PATO.
+subset: value_slim
+synonym: "felted" EXACT []
+is_a: PATO:0000454 ! hairy
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104277
+name: glaucous
+def: "A waxy quality of a plant surface in which a whitish bloom, often removable by rubbing, produces a dull blue-green appearance." [https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?alpha=F-H&glossary=yes&page=nswfl]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980360. This is classified by the surface bloom, not simultaneously as blue and green.
+subset: value_slim
+is_a: PATO:0002384 ! waxy
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104294
+name: deep violet
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 208 (deep violet), for which the published central prototype is 1.0P 1.4/10.3." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980377.
+subset: value_slim
+synonym: "deep-violet" EXACT []
+is_a: PATO:0001424 ! violet
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104305
+name: bluish grey
+def: "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 191 (bluish gray), for which the published central prototype is 9.5B 5.5/1.0." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980388.
+subset: value_slim
+synonym: "blue-gray" EXACT []
+synonym: "blue gray" EXACT []
+synonym: "bluish gray" EXACT []
+synonym: "blue-grey" EXACT []
+synonym: "blue grey" EXACT []
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104307
+name: tessellated
+def: "A spatial pattern in which colors or structural elements are arranged in quadrilateral units that produce a chequered appearance." [https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?alpha=T-U&glossary=yes&page=nswfl]
+comment: Atomic quality extracted from FLOPO_0980180 and FLOPO_0980390; banded-and-tessellated combinations should remain compositional in FLOPO.
+subset: value_slim
+synonym: "tesselated" EXACT []
+is_a: PATO:0000060 ! spatial pattern
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
+[Term]
+id: PATO:0104311
+name: purplish red
+def: "A color whose Munsell coordinates fall within the continuous ISCC-NBS purplish-red sector represented by color-name blocks 254 through 262; moderate purplish red (block 258, centroid 7.0RP 4.5/9.0) is a central prototype." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0980394.
+subset: value_slim
+synonym: "purplish-red" EXACT []
+is_a: PATO:0000014 ! color
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-07-11T18:39:19Z
+
 [Typedef]
 id: correlates_with
 name: obsolete correlates_with
@@ -22926,4 +23342,3 @@ name: obsolete towards
 comment: Consider using RO:0002503 instead. See https://github.com/pato-ontology/pato/issues/454
 is_obsolete: true
 replaced_by: RO:0002503
-
