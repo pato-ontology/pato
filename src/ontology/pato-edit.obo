@@ -22852,11 +22852,12 @@ creation_date: 2026-07-11T18:39:19Z
 
 [Term]
 id: PATO:0104031
-name: cream sensu RHS Colour Chart fifth edition
-def: "A colour quality for which RHS Colour Chart fifth-edition chip 158A or 158B is the specimen's closest visual match against a white background under artificial daylight conforming to CIE D6500." [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
-comment: Use only when the observation or protocol names RHS fifth-edition chip 158A or 158B. The physical RHS chips are normative; unqualified cream or creamy annotations should use PATO:0104312. Requested for FLOPO; corresponding temporary classes: FLOPO_0980084 (creamy) and FLOPO_0980114 (cream).
+name: cream
+def: "A colour quality that satisfies at least one documented source-specific operational sense conventionally designated cream." [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf, https://archive.org/details/chromotaxiaseuno00sacc]
+comment: Map an unqualified cream or creamy colour observation here. Source-qualified cream standards are represented by FLOPO-local subclasses, not by additional PATO classes.
 subset: value_slim
-is_a: PATO:0104312 ! cream
+synonym: "creamy" EXACT []
+is_a: PATO:0000014 ! color
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
 creation_date: 2026-07-11T18:39:19Z
 
@@ -23170,27 +23171,6 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001
 creation_date: 2026-07-11T18:39:19Z
 
 [Term]
-id: PATO:0104312
-name: cream
-def: "A colour quality that satisfies at least one documented source-specific operational sense conventionally designated cream." [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf, https://archive.org/details/chromotaxiaseuno00sacc]
-comment: Map an unqualified cream or creamy colour observation here. PATO:0104031 retains the narrower RHS fifth-edition sense.
-subset: value_slim
-synonym: "creamy" EXACT []
-is_a: PATO:0000014 ! color
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
-id: PATO:0104313
-name: cream sensu Saccardo (1891)
-def: "A colour quality recognized according to Saccardo's Chromotaxia as category 27, represented by cow-milk cream and described as white tinged faintly with yellow." [https://archive.org/details/chromotaxiaseuno00sacc]
-comment: Use only when Saccardo's nomenclature or category 27 is specified. The natural exemplar varies; the historical plate/category is the source-specific reference.
-subset: value_slim
-is_a: PATO:0104312 ! cream
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
 id: PATO:0104314
 name: crimson
 def: "A colour quality that satisfies at least one documented source-specific operational sense conventionally designated crimson." [DOI:10.6028/NBS.SP.440, DOI:10.5962/bhl.title.144788]
@@ -23201,62 +23181,12 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001
 creation_date: 2026-07-15T00:00:00Z
 
 [Term]
-id: PATO:0104315
-name: crimson sensu Wilson Horticultural Colour Chart (1938/1940)
-def: "A colour quality recognized according to the Wilson Horticultural Colour Chart by closest match to chip H22, which the NIST source concordance places in ISCC-NBS block 11 vivid red." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
-comment: Use only when the Wilson chart or H22 is specified. ISCC-NBS block 11 is a concordance classification, not a replacement for the physical H22 prototype.
-subset: value_slim
-is_a: PATO:0104314 ! crimson
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
-id: PATO:0104316
-name: crimson sensu Textile Color Card Association of the USA
-def: "A colour quality recognized according to the Textile Color Card Association of the USA by closest match to card 65013, which the NIST source concordance places in ISCC-NBS block 256 deep purplish red." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
-comment: Use only when TCCA card 65013 is specified. This sense demonstrates why crimson cannot be assigned one unrestricted red prototype.
-subset: value_slim
-is_a: PATO:0104314 ! crimson
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
 id: PATO:0104317
 name: scarlet
 def: "A colour quality that satisfies at least one documented source-specific operational sense conventionally designated scarlet." [https://archive.org/details/chromotaxiaseuno00sacc, DOI:10.5962/bhl.title.144788, DOI:10.6028/NBS.SP.440]
 comment: Map an unqualified scarlet colour observation here. Do not infer a narrower core-hue parent merely from the English label.
 subset: value_slim
 is_a: PATO:0000014 ! color
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
-id: PATO:0104318
-name: scarlet sensu Saccardo (1891)
-def: "A colour quality recognized according to Saccardo's Chromotaxia as category 15, represented by minium and pomegranate flowers and described as vivid red inclining slightly toward orange." [https://archive.org/details/chromotaxiaseuno00sacc]
-comment: Use only when Saccardo's nomenclature or category 15 is specified. The physical plate and stated exemplars define this historical sense.
-subset: value_slim
-is_a: PATO:0104317 ! scarlet
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
-id: PATO:0104319
-name: scarlet sensu Ridgway (1912)
-def: "A colour quality recognized according to Ridgway's 1912 standard by the specimen's closest match to the physical Scarlet chip on plate I at coordinate 5." [DOI:10.5962/bhl.title.144788]
-comment: Use only when Ridgway 1912 or chip I 5 is specified. Ridgway distinguishes Scarlet I 5 from Scarlet-Red I 3.
-subset: value_slim
-is_a: PATO:0104317 ! scarlet
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
-id: PATO:0104320
-name: scarlet sensu Wilson Horticultural Colour Chart (1938/1940)
-def: "A colour quality recognized according to the Wilson Horticultural Colour Chart by closest match to chip H19, which the NIST source concordance places in ISCC-NBS block 11 vivid red." [DOI:10.6028/NBS.SP.440, DOI:10.6028/jres.061.035]
-comment: Use only when the Wilson chart or H19 is specified. ISCC-NBS block 11 is a concordance classification, not a replacement for the physical H19 prototype.
-subset: value_slim
-is_a: PATO:0104317 ! scarlet
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
 creation_date: 2026-07-15T00:00:00Z
 
@@ -23273,26 +23203,6 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001
 creation_date: 2026-07-15T00:00:00Z
 
 [Term]
-id: PATO:0104322
-name: lemon yellow sensu Saccardo (1891)
-def: "A colour quality recognized according to Saccardo's Chromotaxia as category 24 by resemblance to the epicarp of Citrus medica or Citrus limon." [https://archive.org/details/chromotaxiaseuno00sacc]
-comment: Use only when Saccardo's nomenclature or category 24 is specified. Natural citrus epicarp varies, so the botanical exemplar does not define a source-independent colour.
-subset: value_slim
-is_a: PATO:0104321 ! lemon yellow
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
-id: PATO:0104323
-name: lemon yellow sensu Ridgway (1912)
-def: "A colour quality recognized according to Ridgway's 1912 standard by closest match to Lemon Yellow chip IV 23; Hamly gives the approximate legacy conversion Munsell 7.5Y 8.0/10.5." [DOI:10.5962/bhl.title.144788, DOI:10.1364/JOSA.39.000592]
-comment: Use only when Ridgway 1912 or chip IV 23 is specified. The Ridgway chip is normative; Hamly's coordinate is approximate and not recommended for new observations.
-subset: value_slim
-is_a: PATO:0104321 ! lemon yellow
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
 id: PATO:0104324
 name: mahogany red
 def: "A colour quality that satisfies at least one documented source-specific operational sense conventionally designated mahogany red." [DOI:10.5962/bhl.title.144788]
@@ -23301,16 +23211,6 @@ subset: value_slim
 synonym: "mahogany" EXACT []
 synonym: "mahogany-red" EXACT []
 is_a: PATO:0000014 ! color
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
-id: PATO:0104325
-name: mahogany red sensu Ridgway (1912)
-def: "A colour quality recognized according to Ridgway's 1912 standard by closest match to Mahogany Red chip II 7k; Hamly gives the approximate legacy conversion Munsell 10R 3.5/6.0." [DOI:10.5962/bhl.title.144788, DOI:10.1364/JOSA.39.000592]
-comment: Use only when Ridgway 1912 or chip II 7k is specified. The physical chip remains normative.
-subset: value_slim
-is_a: PATO:0104324 ! mahogany red
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
 creation_date: 2026-07-15T00:00:00Z
 
@@ -23324,26 +23224,6 @@ synonym: "salmon" EXACT []
 synonym: "salmon-coloured" EXACT []
 synonym: "salmon color" EXACT []
 is_a: PATO:0000014 ! color
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
-id: PATO:0104327
-name: salmon colour sensu Saccardo (1891)
-def: "A colour quality recognized according to Saccardo's Chromotaxia within category 16 by resemblance to salmon flesh." [https://archive.org/details/chromotaxiaseuno00sacc]
-comment: Use only when Saccardo's nomenclature or category 16 is specified. Salmon flesh varies; retain the exemplar within this source-specific sense.
-subset: value_slim
-is_a: PATO:0104326 ! salmon colour
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
-id: PATO:0104328
-name: salmon colour sensu Ridgway (1912)
-def: "A colour quality recognized according to Ridgway's 1912 standard by closest match to Salmon Color chip XIV 9-prime-d; Hamly gives the approximate legacy conversion Munsell 5YR 7.5/6.0." [DOI:10.5962/bhl.title.144788, DOI:10.1364/JOSA.39.000592]
-comment: Use only when Ridgway 1912 or the named chip is specified. The physical chip remains normative.
-subset: value_slim
-is_a: PATO:0104326 ! salmon colour
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
 creation_date: 2026-07-15T00:00:00Z
 
@@ -23362,36 +23242,6 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001
 creation_date: 2026-07-15T00:00:00Z
 
 [Term]
-id: PATO:0104330
-name: chestnut colour sensu Saccardo (1891)
-def: "A colour quality recognized according to Saccardo's Chromotaxia within category 10 by resemblance to the pericarp or seed coat of Castanea sativa." [https://archive.org/details/chromotaxiaseuno00sacc]
-comment: Use only when Saccardo's nomenclature or category 10 is specified. The natural exemplar varies and Saccardo groups several brown names in category 10.
-subset: value_slim
-is_a: PATO:0104329 ! chestnut colour
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
-id: PATO:0104331
-name: chestnut sensu Ridgway (1912)
-def: "A colour quality recognized according to Ridgway's 1912 standard by closest match to Chestnut chip II 9m; Hamly gives the approximate legacy conversion Munsell 10R 3.0/5.0." [DOI:10.5962/bhl.title.144788, DOI:10.1364/JOSA.39.000592]
-comment: Use only when Ridgway 1912 or chip II 9m is specified. Ridgway's Chestnut is distinct from his Chestnut-Brown.
-subset: value_slim
-is_a: PATO:0104329 ! chestnut colour
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
-id: PATO:0104332
-name: chestnut-brown sensu Ridgway (1912)
-def: "A colour quality recognized according to Ridgway's 1912 standard by closest match to Chestnut-Brown chip XIV 11-prime-m; Hamly gives the approximate legacy conversion Munsell 2.5YR 3.4/3.0." [DOI:10.5962/bhl.title.144788, DOI:10.1364/JOSA.39.000592]
-comment: Use only when Ridgway 1912 or the named chip is specified. Do not merge this browner chip with Chestnut II 9m.
-subset: value_slim
-is_a: PATO:0104329 ! chestnut colour
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
 id: PATO:0104333
 name: chocolate brown
 def: "A colour quality that satisfies at least one documented source-specific operational sense conventionally designated chocolate brown." [https://archive.org/details/chromotaxiaseuno00sacc, DOI:10.5962/bhl.title.144788]
@@ -23404,95 +23254,15 @@ property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001
 creation_date: 2026-07-15T00:00:00Z
 
 [Term]
-id: PATO:0104334
-name: chocolate brown sensu Saccardo (1891)
-def: "A colour quality recognized according to Saccardo's Chromotaxia within category 10 by resemblance to roasted seeds of Theobroma cacao." [https://archive.org/details/chromotaxiaseuno00sacc]
-comment: Use only when Saccardo's nomenclature or category 10 chocolate-brown is specified. The natural exemplar is source-specific and Saccardo groups several brown names in category 10.
-subset: value_slim
-is_a: PATO:0104333 ! chocolate brown
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
-id: PATO:0104335
-name: chocolate sensu Ridgway (1912)
-def: "A colour quality recognized according to Ridgway's 1912 standard by closest match to Chocolate chip XXVIII 7-double-prime-m; Hamly gives the approximate legacy conversion Munsell 2.5YR 2.6/2.5." [DOI:10.5962/bhl.title.144788, DOI:10.1364/JOSA.39.000592]
-comment: Use only when Ridgway 1912 or the named chip is specified. The physical chip remains normative.
-subset: value_slim
-is_a: PATO:0104333 ! chocolate brown
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
 id: PATO:0104336
 name: olive colour
 def: "A colour quality that satisfies at least one documented source-specific operational sense conventionally designated olive or olive green." [https://archive.org/details/chromotaxiaseuno00sacc, DOI:10.5962/bhl.title.144788]
-comment: Map an unqualified olive colour observation here only in explicit colour context. Saccardo and Ridgway distinguish multiple olive and olive-green standards, so this umbrella is not classified under a core hue.
+comment: Map an unqualified olive colour observation here only in explicit colour context. Do not automatically reuse PATO:0001942 until its brown-green extension is compared with every source region; olive can also be a taxon, fruit, or resemblance shape.
 subset: value_slim
 synonym: "olive" EXACT []
 synonym: "olive-green" EXACT []
 synonym: "olive color" EXACT []
 is_a: PATO:0000014 ! color
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
-id: PATO:0104337
-name: olive-green sensu Saccardo (1891)
-def: "A colour quality recognized according to Saccardo's Chromotaxia as category 39 olive-green." [https://archive.org/details/chromotaxiaseuno00sacc]
-comment: Use only when Saccardo's nomenclature or category 39 is specified. Do not infer identity with every modern use of olive green.
-subset: value_slim
-is_a: PATO:0104336 ! olive colour
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
-id: PATO:0104338
-name: olive sensu Ridgway (1912)
-def: "A colour quality recognized according to Ridgway's 1912 standard by closest match to Olive chip XXX 21-double-prime-m; Hamly gives the approximate legacy conversion Munsell 5Y 3.8/3.0." [DOI:10.5962/bhl.title.144788, DOI:10.1364/JOSA.39.000592]
-comment: Use only when Ridgway 1912 or the named Olive chip is specified. Ridgway distinguishes Olive from Olive-Green.
-subset: value_slim
-is_a: PATO:0104336 ! olive colour
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
-id: PATO:0104339
-name: olive-green sensu Ridgway (1912)
-def: "A colour quality recognized according to Ridgway's 1912 standard by closest match to Olive-Green chip IV 23m; Hamly gives the approximate legacy conversion Munsell 7.5Y 4.0/3.5." [DOI:10.5962/bhl.title.144788, DOI:10.1364/JOSA.39.000592]
-comment: Use only when Ridgway 1912 or the named Olive-Green chip is specified. Do not merge this with Ridgway Olive XXX 21-double-prime-m.
-subset: value_slim
-is_a: PATO:0104336 ! olive colour
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
-id: PATO:0104340
-name: rose colour sensu Saccardo (1891)
-def: "A colour quality recognized according to Saccardo's Chromotaxia as category 17 by resemblance to petals of a typical Rosa centifolia." [https://archive.org/details/chromotaxiaseuno00sacc]
-comment: Use only when Saccardo's nomenclature or category 17 is specified. Actual rose petals vary; the stated exemplar belongs only to this historical sense.
-subset: value_slim
-is_a: PATO:0001425 ! rose colour
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
-id: PATO:0104341
-name: rose color sensu Ridgway (1912)
-def: "A colour quality recognized according to Ridgway's 1912 standard by closest match to Rose Color chip XII 71b; Hamly gives the approximate legacy conversion Munsell 5RP 5.5/14.0." [DOI:10.5962/bhl.title.144788, DOI:10.1364/JOSA.39.000592]
-comment: Use only when Ridgway 1912 or the named Rose Color chip is specified. Ridgway distinguishes Rose Color from the lighter Rose Pink.
-subset: value_slim
-is_a: PATO:0001425 ! rose colour
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
-id: PATO:0104342
-name: rose pink sensu Ridgway (1912)
-def: "A colour quality recognized according to Ridgway's 1912 standard by closest match to Rose Pink chip XII 71f; Hamly gives the approximate legacy conversion Munsell 5RP 8.0/8.0." [DOI:10.5962/bhl.title.144788, DOI:10.1364/JOSA.39.000592]
-comment: Use only when Ridgway 1912 or the named Rose Pink chip is specified. Do not model this as conjunctive subclassing under generic red and pink solely from the compound label.
-subset: value_slim
-is_a: PATO:0001425 ! rose colour
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
 creation_date: 2026-07-15T00:00:00Z
 
@@ -23506,26 +23276,6 @@ synonym: "straw" EXACT []
 synonym: "straw-coloured" EXACT []
 synonym: "straw-yellow" EXACT []
 is_a: PATO:0000014 ! color
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
-id: PATO:0104344
-name: straw colour sensu Saccardo (1891)
-def: "A colour quality recognized according to Saccardo's Chromotaxia as category 26 by resemblance to freshly dried culms of wheat or rice." [https://archive.org/details/chromotaxiaseuno00sacc]
-comment: Use only when Saccardo's nomenclature or category 26 is specified. The botanical exemplar is source-specific and naturally variable.
-subset: value_slim
-is_a: PATO:0104343 ! straw yellow
-property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
-creation_date: 2026-07-15T00:00:00Z
-
-[Term]
-id: PATO:0104345
-name: straw yellow sensu Ridgway (1912)
-def: "A colour quality recognized according to Ridgway's 1912 standard by closest match to Straw Yellow chip XVI 21-prime-d; Hamly gives the approximate legacy conversion Munsell 6Y 8.4/6.0." [DOI:10.5962/bhl.title.144788, DOI:10.1364/JOSA.39.000592]
-comment: Use only when Ridgway 1912 or the named Straw Yellow chip is specified. The physical chip remains normative.
-subset: value_slim
-is_a: PATO:0104343 ! straw yellow
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
 creation_date: 2026-07-15T00:00:00Z
 
