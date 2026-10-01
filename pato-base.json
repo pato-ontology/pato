@@ -7,7 +7,7 @@
         "val" : "http://purl.obolibrary.org/obo/PATO_0000001"
       }, {
         "pred" : "http://purl.org/dc/elements/1.1/description",
-        "val" : "An ontology of phenotypic qualities (properties, attributes or characteristics)."
+        "val" : "An ontology of characteristics (properties, attributes, or modifiers). These are intended to be used in combination with terms from other ontologies to construct characteristic-entity combinations that describe traits or phenotypes of organisms, chemicals, environments, and other entities."
       }, {
         "pred" : "http://purl.org/dc/elements/1.1/title",
         "val" : "PATO - the Phenotype And Trait Ontology"
@@ -25,14 +25,11 @@
         "val" : "1.2"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2025-05-14"
+        "val" : "2026-10-01"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/pato/releases/2025-05-14/pato-base.json"
+      "version" : "http://purl.obolibrary.org/obo/pato/releases/2026-10-01/pato-base.json"
     },
     "nodes" : [ {
-      "id" : "http://purl.obolibrary.org/obo/BFO_0000020",
-      "type" : "CLASS"
-    }, {
       "id" : "http://purl.obolibrary.org/obo/CL_0000000",
       "type" : "CLASS"
     }, {
@@ -54,13 +51,18 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0000001",
-      "lbl" : "quality",
+      "lbl" : "characteristic",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities",
-          "xrefs" : [ "PATOC:GVG" ]
+          "val" : "The properties, attributes, or modifiers used to describe an entity or process or some aspect of an entity or process.",
+          "xrefs" : [ "https://github.com/pato-ontology/pato/issues/602" ]
         },
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "quality",
+          "xrefs" : [ "OBO:legacy" ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "PATO:0000072"
@@ -731,7 +733,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A quality inhering in a bearer by virtue of the bearer's possessing or displaying a distinctive feature in type or degree or effect or force.",
+          "val" : "A characteristic inhering in a bearer by virtue of the bearer's possessing or displaying a distinctive feature in type or degree or effect or force.",
           "xrefs" : [ "PATOC:GVG" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim", "http://purl.obolibrary.org/obo/pato#hpo_slim" ],
@@ -761,7 +763,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A quality of a single physical entity inhering in the bearer by virtue of the bearer's size or shape or structure.",
+          "val" : "A characterisitic of a single physical entity inhering in the bearer by virtue of the bearer's size or shape or structure.",
           "xrefs" : [ "PATOC:GVG" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim" ],
@@ -1025,33 +1027,43 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0000068",
-      "lbl" : "qualitative",
+      "lbl" : "obsolete qualitative",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A quality of an entity that is descriptive or observational, typically not represented numerically.",
+          "val" : "OBSOLETE. A quality of an entity that is descriptive or observational, typically not represented numerically.",
           "xrefs" : [ "https://libguides.macalester.edu/c.php?g=527786&p=3608639", "https://www.ncbi.nlm.nih.gov/books/NBK470395/" ]
         },
-        "comments" : [ "TODO: define this or obsolete it and move children somewhere else." ],
+        "comments" : [ "Obsoleted in https://github.com/pato-ontology/pato/issues/602. The qualitative/quantitative dichotomy has no role in the new upper model. Children have been reclassified: intensity, magnitude, secondary -> modifier characteristic; conspicuousness -> physical object characteristic; normal -> comparative modifier characteristic; deviation (from_normal) -> obsoleted (replaced_by abnormal)." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
-        } ]
+        } ],
+        "deprecated" : true
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0000069",
-      "lbl" : "deviation (from_normal)",
+      "lbl" : "obsolete deviation (from_normal)",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A quality inhering in a bearer by virtue of the whether the bearer differs from normal or average.",
+          "val" : "OBSOLETE. A quality inhering in a bearer by virtue of the whether the bearer differs from normal or average.",
           "xrefs" : [ "PATOC:GVG" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim" ],
+        "comments" : [ "Obsoleted in https://github.com/pato-ontology/pato/issues/602. Functionally identical to PATO:0000460 abnormal; replaced_by abnormal. Prior label kept as exact synonym on abnormal." ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "deviation (from_normal)",
+          "xrefs" : [ "OBO:legacy" ]
+        } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
+          "val" : "http://purl.obolibrary.org/obo/PATO_0000460"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
-        } ]
+        } ],
+        "deprecated" : true
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0000070",
@@ -4120,6 +4132,11 @@
           "xrefs" : [ "PATOC:GVG" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#mpath_slim", "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "blackish",
+          "xrefs" : [ "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -4135,6 +4152,11 @@
           "xrefs" : [ "Dictionary:http://dictionary.reference.com/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#mpath_slim", "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "bluish",
+          "xrefs" : [ "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -4165,6 +4187,11 @@
           "xrefs" : [ "Dictionary:http://dictionary.reference.com/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#mpath_slim", "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "greenish",
+          "xrefs" : [ "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -4195,6 +4222,11 @@
           "xrefs" : [ "Dictionary:http://dictionary.reference.com/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#mpath_slim", "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "reddish",
+          "xrefs" : [ "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -4229,6 +4261,11 @@
           "xrefs" : [ "Dictionary:http://dictionary.reference.com/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#mpath_slim", "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "yellowish",
+          "xrefs" : [ "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -6165,11 +6202,18 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A quality inhering in a bearer by virtue of the bearer's deviation from normal or average.",
+          "val" : "A characteristic inhering in a bearer by virtue of the bearer's deviation from normal or average.",
           "xrefs" : [ "PATOC:GVG" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#abnormal_slim", "http://purl.obolibrary.org/obo/pato#mpath_slim", "http://purl.obolibrary.org/obo/pato#value_slim" ],
         "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "deviation (from_normal)",
+          "xrefs" : [ "OBO:legacy" ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "deviation from normal"
+        }, {
           "pred" : "hasRelatedSynonym",
           "val" : "aberrant"
         }, {
@@ -6196,7 +6240,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A quality inhering in a bearer by virtue of the bearer's exhibiting no deviation from normal or average.",
+          "val" : "A characteristic inhering in a bearer by virtue of the bearer's exhibiting no deviation from normal or average.",
           "xrefs" : [ "PATOC:GVG" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#abnormal_slim", "http://purl.obolibrary.org/obo/pato#mpath_slim", "http://purl.obolibrary.org/obo/pato#value_slim" ],
@@ -12892,6 +12936,10 @@
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#mpath_slim", "http://purl.obolibrary.org/obo/pato#value_slim" ],
         "synonyms" : [ {
           "pred" : "hasRelatedSynonym",
+          "val" : "greyish",
+          "xrefs" : [ "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        }, {
+          "pred" : "hasRelatedSynonym",
           "val" : "plumbeous"
         } ],
         "basicPropertyValues" : [ {
@@ -12909,6 +12957,11 @@
           "xrefs" : [ "Dictionary:http://dictionary.reference.com/" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#mpath_slim", "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "purplish",
+          "xrefs" : [ "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -12924,6 +12977,11 @@
           "xrefs" : [ "Wikipedia:http://en.wikipedia.org/wiki/Brown" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#mpath_slim", "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "brownish",
+          "xrefs" : [ "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -12954,6 +13012,11 @@
           "xrefs" : [ "PATOC:MAH" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#mpath_slim", "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "pinkish",
+          "xrefs" : [ "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -13801,15 +13864,19 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0001018",
-      "lbl" : "physical quality",
+      "lbl" : "obsolete physical quality",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities.",
+          "val" : "OBSOLETE. A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities.",
           "xrefs" : [ "PATOC:GVG" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim" ],
+        "comments" : [ "Obsoleted in https://github.com/pato-ontology/pato/issues/602. The 'physical level of organisation in relation to other entities' criterion has never been operationalised, and existing classification was haphazard (time, flavor, odor, movement quality, neuron projection quality all sat under physical quality despite not being 'physical level' in any defensible sense). Children have been moved up to physical object characteristic; outliers (time, movement quality, neuron projection quality) require a follow-up sweep to find more appropriate parents." ],
         "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "physical quality",
+          "xrefs" : [ "OBO:legacy" ]
+        }, {
           "pred" : "hasExactSynonym",
           "val" : "relational physical quality"
         } ],
@@ -13817,12 +13884,16 @@
           "val" : "Wikipedia:Physical_property"
         } ],
         "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
+          "val" : "http://purl.obolibrary.org/obo/PATO_0001241"
+        }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
           "val" : "PATO:0002079"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
-        } ]
+        } ],
+        "deprecated" : true
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0001019",
@@ -16600,15 +16671,19 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0001236",
-      "lbl" : "process quality",
+      "lbl" : "process characteristic",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A quality which inheres in an process.",
+          "val" : "A characteristic which inheres in a process.",
           "xrefs" : [ "PATOC:GVG" ]
         },
-        "comments" : [ "See comments of relational quality of a physical entity." ],
+        "comments" : [ "See comments of relational characteristic of a physical entity." ],
         "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "process quality",
+          "xrefs" : [ "OBO:legacy" ]
+        }, {
           "pred" : "hasExactSynonym",
           "val" : "quality of a process"
         }, {
@@ -16686,20 +16761,24 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0001241",
-      "lbl" : "physical object quality",
+      "lbl" : "physical object characteristic",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A quality which inheres in a continuant.",
+          "val" : "A characteristic which inheres in a continuant.",
           "xrefs" : [ "PATOC:GVG" ]
         },
-        "comments" : [ "Relational qualities are qualities that hold between multiple entities. Normal (monadic) qualities such as the shape of a eyeball exist purely as a quality of that eyeball. A relational quality such as sensitivity to light is a quality of that eyeball (and connecting nervous system) as it relates to incoming light waves/particles." ],
+        "comments" : [ "Relational characteristics are characteristics that hold between multiple entities. Normal (monadic) characteristics such as the shape of a eyeball exist purely as a characteristic of that eyeball. A relational characteristic such as sensitivity to light is a characteristic of that eyeball (and connecting nervous system) as it relates to incoming light waves/particles." ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "monadic quality of a continuant"
         }, {
           "pred" : "hasExactSynonym",
           "val" : "multiply inhering quality of a physical entity"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "physical object quality",
+          "xrefs" : [ "OBO:legacy" ]
         }, {
           "pred" : "hasExactSynonym",
           "val" : "quality of a continuant"
@@ -16718,9 +16797,6 @@
         }, {
           "pred" : "hasNarrowSynonym",
           "val" : "monadic quality of continuant"
-        } ],
-        "xrefs" : [ {
-          "val" : "snap:Quality"
         } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasAlternativeId",
@@ -16844,10 +16920,14 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A color consisting of green hue and low brightness.",
-          "xrefs" : [ "PATOC:GVG" ]
+          "val" : "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 146 (dark green), for which the published central prototype is 6.0G 2.7/5.0.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#mpath_slim", "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "dark-green"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -17497,10 +17577,17 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A color consisting of red and brown hue.",
-          "xrefs" : [ "PATOC:GVG" ]
+          "val" : "A color whose Munsell coordinates fall within the continuous ISCC-NBS reddish-brown sector represented by color-name blocks 40 through 47; moderate reddish brown (block 43, centroid 9.6R 3.4/5.2) is a central prototype.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#mpath_slim", "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "reddish brown"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "reddish-brown"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -18078,6 +18165,13 @@
           "xrefs" : [ "PATOC:GVG" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "downy"
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "pubescent"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -18254,6 +18348,10 @@
           "xrefs" : [ "PATOC:GVG" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "scented"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -19919,10 +20017,14 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "An attachment quality inhering in a flower by virtue of the bearer's lacking a stalk, as in flowers or leaves that grow directly from the stem.",
+          "val" : "An attachment quality inhering in a bearer by virtue of the bearer's lacking a stalk and being attached directly by its base, as in flowers or leaves that grow directly from the stem.",
           "xrefs" : [ "Wikipedia:http://en.wikipedia.org/wiki/Sessility_(botany)" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#relational_slim", "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "sessile"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -20544,7 +20646,13 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A quality inhering in a bearer by virtue of the bearer's magnitude in proportion to the magnitude of another entity."
+          "val" : "A quality inhering in a bearer by virtue of the bearer's magnitude in proportion to the magnitude of another entity.",
+          "meta" : {
+            "basicPropertyValues" : [ {
+              "pred" : "http://purl.org/dc/terms/contributor",
+              "val" : "https://orcid.org/0000-0001-8314-2140"
+            } ]
+          }
         },
         "comments" : [ "Examples: height to weight; brain size to body size; root to shoot ratio; urinary sodium to potassium ratio. waist-hip ratio." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#attribute_slim", "http://purl.obolibrary.org/obo/pato#relational_slim" ],
@@ -22828,6 +22936,10 @@
           "xrefs" : [ "WordNet:WordNet" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#cell_quality" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "arching"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -26686,6 +26798,10 @@
           "xrefs" : [ "answers.com:answers.com" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "lax"
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -29198,8 +29314,8 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A color consisting of yellow and green hues.",
-          "xrefs" : [ "PATOC:GVG" ]
+          "val" : "A color whose Munsell coordinates fall within the continuous ISCC-NBS yellow-green sector represented by color-name blocks 115 through 122; moderate yellow green (block 120, centroid 5.0GY 6.0/5.2) is a central prototype.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#mpath_slim", "http://purl.obolibrary.org/obo/pato#value_slim" ],
         "basicPropertyValues" : [ {
@@ -29281,7 +29397,7 @@
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
         "synonyms" : [ {
-          "pred" : "hasExactSynonym",
+          "pred" : "hasRelatedSynonym",
           "val" : "striped"
         } ],
         "basicPropertyValues" : [ {
@@ -29862,6 +29978,11 @@
           "xrefs" : [ "thefreedictionary:thefreedictionary" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "palmate",
+          "xrefs" : [ "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?alpha=P&glossary=yes&page=nswfl", "https://sweetgum.nybg.org/science/glossary/glossary-details/?irn=1144", "https://sweetgum.nybg.org/science/glossary/glossary-details/?irn=600" ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -30158,10 +30279,10 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A quality inhering in a bearer by virtue of its visibility.",
+          "val" : "A characteristic inhering in a bearer by virtue of its visibility.",
           "xrefs" : [ "PATOC:MAH" ]
         },
-        "comments" : [ "This term was created as a grouping term for the 2 terms \"conspicuous\" and \"inconspicuous\". However, it is not clear if these terms should even remain in PATO." ],
+        "comments" : [ "This term is a grouping term for the 2 terms \"conspicuous\" and \"inconspicuous\"." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
@@ -33756,7 +33877,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "To bent or hang downwards.",
+          "val" : "A shape quality inhering in a bearer by virtue of the bearer's bending or hanging downwards.",
           "xrefs" : [ "thefreedictionary.:thefreedictionary." ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
@@ -36855,16 +36976,17 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0002300",
-      "lbl" : "increased quality",
+      "lbl" : "obsolete increased quality",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A quality that has a value that is increased compared to normal or average.",
+          "val" : "OBSOLETE. A characteristic that has a value that is increased compared to normal or average.",
           "xrefs" : [ "PATOC:GVG" ]
         },
+        "comments" : [ "Obsoleted in https://github.com/pato-ontology/pato/issues/602 (section 5). This was a grouping class for pre-coordinated physical/process qualities, not a modifier characteristic. The new modifier term is PATO:0102003 (increased), to be used post-coordinatively via has_modifier (RO:0002573)." ],
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/RO_0002604",
-          "val" : "http://purl.obolibrary.org/obo/PATO_0002301"
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
+          "val" : "http://purl.obolibrary.org/obo/PATO_0102003"
         }, {
           "pred" : "http://purl.org/dc/terms/contributor",
           "val" : "https://orcid.org/0000-0002-2061-091X"
@@ -36874,20 +36996,22 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
-        } ]
+        } ],
+        "deprecated" : true
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0002301",
-      "lbl" : "decreased quality",
+      "lbl" : "obsolete decreased quality",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A quality that has a value that is decreased compared to normal or average.",
+          "val" : "OBSOLETE. A characteristic that has a value that is decreased compared to normal or average.",
           "xrefs" : [ "PATOC:GVG" ]
         },
+        "comments" : [ "Obsoleted in https://github.com/pato-ontology/pato/issues/602 (section 5). This was a grouping class for pre-coordinated physical/process qualities, not a modifier characteristic. The new modifier term is PATO:0102004 (decreased), to be used post-coordinatively via has_modifier (RO:0002573)." ],
         "basicPropertyValues" : [ {
-          "pred" : "http://purl.obolibrary.org/obo/RO_0002604",
-          "val" : "http://purl.obolibrary.org/obo/PATO_0002300"
+          "pred" : "http://purl.obolibrary.org/obo/IAO_0100001",
+          "val" : "http://purl.obolibrary.org/obo/PATO_0102004"
         }, {
           "pred" : "http://purl.org/dc/terms/contributor",
           "val" : "https://orcid.org/0000-0002-2061-091X"
@@ -36897,7 +37021,8 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
-        } ]
+        } ],
+        "deprecated" : true
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0002302",
@@ -42253,9 +42378,10 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A quality in which the effect or outcome is not primary or the focus of the observation.",
+          "val" : "A characteristic in which the effect or outcome is not primary or the focus of the observation.",
           "xrefs" : [ "PATO:MAH" ]
         },
+        "comments" : [ "Distinct from the developmental-stage sense of \"secondary\" (e.g. \"secondary oocyte\"); this term is a modifier characteristic, not a stage descriptor (e.g Secondary hyperparathyroidism, HP:0000867)." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#hpo_slim" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/terms/contributor",
@@ -42498,6 +42624,11 @@
           "xrefs" : [ "www.oxforddictionaries.com:http://www.oxforddictionaries.com/us/definition/american_english/plumose" ]
         },
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "feathery",
+          "xrefs" : [ "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?alpha=P&glossary=yes&page=nswfl" ]
+        } ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/terms/contributor",
           "val" : "https://orcid.org/0000-0003-3162-7490"
@@ -42945,7 +43076,7 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A quality of a single cell inhering in the bearer by virtue of the bearer's size or shape or structure.",
+          "val" : "A characteristic of a single cell inhering in the bearer by virtue of the bearer's size or shape or structure.",
           "xrefs" : [ "https://orcid.org/0000-0002-7073-9172" ]
         },
         "comments" : [ "Use this term for morphologies that can *only* inhere in a cell, e.g. morphological qualities inhering in a cell by virtue of the presence, location or shape of one or more cell parts." ],
@@ -44845,7 +44976,16 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A decreased quality inhering in a bearer by virtue of the bearer's decreased magnitude in proportion to the magnitude of another entity."
+          "val" : "A decreased quality inhering in a bearer by virtue of the bearer's decreased magnitude in proportion to the magnitude of another entity.",
+          "meta" : {
+            "basicPropertyValues" : [ {
+              "pred" : "http://purl.org/dc/terms/contributor",
+              "val" : "https://orcid.org/0000-0001-5208-3432"
+            }, {
+              "pred" : "http://purl.org/dc/terms/contributor",
+              "val" : "https://orcid.org/0000-0001-8314-2140"
+            } ]
+          }
         },
         "comments" : [ "Example: decreased proportion of CD4 T cells relative to total T cells." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#relational_slim" ],
@@ -44876,7 +45016,16 @@
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "An increased quality inhering in a bearer by virtue of the bearer's increased magnitude in proportion to the magnitude of another entity."
+          "val" : "An increased quality inhering in a bearer by virtue of the bearer's increased magnitude in proportion to the magnitude of another entity.",
+          "meta" : {
+            "basicPropertyValues" : [ {
+              "pred" : "http://purl.org/dc/terms/contributor",
+              "val" : "https://orcid.org/0000-0001-5208-3432"
+            }, {
+              "pred" : "http://purl.org/dc/terms/contributor",
+              "val" : "https://orcid.org/0000-0001-8314-2140"
+            } ]
+          }
         },
         "comments" : [ "Example: increased proportion of CD4 T cells relative to total T cells." ],
         "subsets" : [ "http://purl.obolibrary.org/obo/pato#relational_slim" ],
@@ -45038,7 +45187,13 @@
       "meta" : {
         "definition" : {
           "val" : "A phenotypic sex quality inhering in a  plant organism or a population of plants in which the flowers have two stamens.",
-          "xrefs" : [ "http://orcid.org/0000-0002-2908-3327" ]
+          "xrefs" : [ "http://orcid.org/0000-0002-2908-3327" ],
+          "meta" : {
+            "basicPropertyValues" : [ {
+              "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+              "val" : "https://orcid.org/0000-0001-8815-0078"
+            } ]
+          }
         },
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/terms/contributor",
@@ -45072,7 +45227,13 @@
       "meta" : {
         "definition" : {
           "val" : "A sequential hermaphroditic quality whereby organisms start out as female and change to male at a later life stage.",
-          "xrefs" : [ "https://en.wikipedia.org/wiki/Sequential_hermaphroditism" ]
+          "xrefs" : [ "https://en.wikipedia.org/wiki/Sequential_hermaphroditism" ],
+          "meta" : {
+            "basicPropertyValues" : [ {
+              "pred" : "http://www.w3.org/2000/01/rdf-schema#comment",
+              "val" : "http://orcid.org/0000-0002-2908-3327"
+            } ]
+          }
         },
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
@@ -48593,21 +48754,127 @@
         } ]
       }
     }, {
-      "id" : "http://purl.obolibrary.org/obo/PATO_0103000",
-      "lbl" : "quantitative",
+      "id" : "http://purl.obolibrary.org/obo/PATO_0102001",
+      "lbl" : "modifier characteristic",
       "type" : "CLASS",
       "meta" : {
         "definition" : {
-          "val" : "A quality of an entity that can be represented numerically, including anything that can be counted, measured, or given a numerical value.",
+          "val" : "A characteristic used to describe another characteristic.",
+          "xrefs" : [ "https://github.com/pato-ontology/pato/issues/602" ]
+        },
+        "comments" : [ "Instances of modifier characteristic should NOT be linked to their bearers via 'characteristic of' (RO:0000052) or its inverse 'has characteristic' (RO:0000053). Use 'has modifier' (RO:0002573) to connect a modifier characteristic to the characteristic it modifies. This keeps 'characteristic of' / 'has characteristic' restricted to entity-or-process-to-characteristic relations." ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "meta characteristic",
+          "xrefs" : [ "OBO:earlier-draft" ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-7356-1779"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-05-05T00:00:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0102002",
+      "lbl" : "comparative modifier characteristic",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A modifier characteristic determined by comparison to a reference.",
+          "xrefs" : [ "https://github.com/pato-ontology/pato/issues/602" ]
+        },
+        "comments" : [ "A comparative modifier characteristic is relational - its identity (e.g. increased vs decreased, abnormal vs normal) is fixed by comparison to a reference. The broader 'modifier characteristic' also covers non-comparative modifiers (intensity, magnitude, secondary)." ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "comparison modifier",
+          "xrefs" : [ "OBO:earlier-draft" ]
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "state modifier",
+          "xrefs" : [ "OBO:earlier-draft" ]
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-7356-1779"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-05-05T00:00:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0102003",
+      "lbl" : "increased",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A comparative modifier characteristic indicating that the bearer characteristic has a value greater than a reference.",
+          "xrefs" : [ "https://github.com/pato-ontology/pato/issues/602" ]
+        },
+        "comments" : [ "Usage (agreed uPheno call 2026-06-12): 'increased' is only to be used to define pre-coordinated value terms via 'has modifier' (RO:0002573), e.g. 'increased weight' EquivalentTo 'weight and has_modifier some increased'. Do NOT use 'increased' directly in phenotype patterns, and do NOT use it as an is_a parent of a domain characteristic. If a pre-coordinated value term exists for the bearer and direction, use that term; if none exists, request that it be added. Distinct from the now-obsolete PATO:0002300 (increased quality), which was a grouping class for pre-coordinated physical/process qualities." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/RO_0002604",
+          "val" : "http://purl.obolibrary.org/obo/PATO_0102004"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-7356-1779"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-05-05T00:00:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0102004",
+      "lbl" : "decreased",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A comparative modifier characteristic indicating that the bearer characteristic has a value less than a reference.",
+          "xrefs" : [ "https://github.com/pato-ontology/pato/issues/602" ]
+        },
+        "comments" : [ "Usage (agreed uPheno call 2026-06-12): 'decreased' is only to be used to define pre-coordinated value terms via 'has modifier' (RO:0002573), e.g. 'decreased weight' EquivalentTo 'weight and has_modifier some decreased'. Do NOT use 'decreased' directly in phenotype patterns, and do NOT use it as an is_a parent of a domain characteristic. If a pre-coordinated value term exists for the bearer and direction, use that term; if none exists, request that it be added. Distinct from the now-obsolete PATO:0002301 (decreased quality), which was a grouping class for pre-coordinated physical/process qualities." ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.obolibrary.org/obo/RO_0002604",
+          "val" : "http://purl.obolibrary.org/obo/PATO_0102003"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
+          "val" : "https://orcid.org/0000-0002-7356-1779"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-05-05T00:00:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0103000",
+      "lbl" : "obsolete quantitative",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "OBSOLETE. A quality of an entity that can be represented numerically, including anything that can be counted, measured, or given a numerical value.",
           "xrefs" : [ "https://libguides.macalester.edu/c.php?g=527786&p=3608639", "https://www.nnlm.gov/guides/data-glossary/quantitative-data" ]
         },
+        "comments" : [ "Obsoleted in https://github.com/pato-ontology/pato/issues/602. The qualitative/quantitative dichotomy has no role in the new upper model. The single direct child (amount, PATO:0000070) has been moved under physical object characteristic." ],
         "basicPropertyValues" : [ {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#created_by",
           "val" : "https://orcid.org/0000-0001-8314-2140"
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
           "val" : "quality"
-        } ]
+        } ],
+        "deprecated" : true
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/PATO_0103001",
@@ -48721,6 +48988,1490 @@
         }, {
           "pred" : "http://www.geneontology.org/formats/oboInOwl#http://purl.org/dc/terms/contributor",
           "val" : "https://orcid.org/0000-0001-8314-2140"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0103301",
+      "lbl" : "octoploid",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A polyploidy quality inhering in a bearer by virtue of the bearer's containing eight homologous sets of chromosomes.",
+          "xrefs" : [ "Wikipedia:http://en.wikipedia.org/wiki/Octoploid" ]
+        },
+        "comments" : [ "Cultivated strawberry is octoploid (2n=8x=56)." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#cell_quality", "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "octaploid"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-9076-6066"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-06-17T22:04:36Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0103302",
+      "lbl" : "allotetraploid",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A polyploidy quality inhering in a bearer by virtue of the bearer's containing four sets of chromosomes derived from two or more different species."
+        },
+        "comments" : [ "Examples include cotton and quinoa." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#cell_quality", "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-9076-6066"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-06-17T22:04:36Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0103303",
+      "lbl" : "allohexaploid",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A polyploidy quality inhering in a bearer by virtue of the bearer's containing six sets of chromosomes derived from two or more different species."
+        },
+        "comments" : [ "Examples include bread wheat (Triticum aestivum) and triticale." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#cell_quality", "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-9076-6066"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-06-17T22:04:36Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0103304",
+      "lbl" : "segmental allotetraploid",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An allotetraploid quality inhering in a bearer by virtue of the bearer's two parental subgenomes being only partially differentiated (partially homeologous).",
+          "xrefs" : [ "PMID:29985538", "PMID:33005183" ]
+        },
+        "comments" : [ "The two parental subgenomes are partially homeologous, producing inconsistent chromosome pairing. Cultivated peanut (Arachis hypogaea) is an example." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#cell_quality", "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-9076-6066"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-06-17T22:04:36Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104005",
+      "lbl" : "deep yellow",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 85 (deep yellow), for which the published central prototype is 4.0Y 6.0/9.5.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980088." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "deep-yellow"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104007",
+      "lbl" : "greyish green",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 150 (grayish green), for which the published central prototype is 9.0G 4.5/1.8.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980090." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "gray green"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "gray-green"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "grayish green"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "grey green"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "grey-green"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104010",
+      "lbl" : "papyraceous",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A texture quality inhering in a bearer by virtue of the bearer being thin and somewhat opaque, with the consistency of paper.",
+          "xrefs" : [ "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980093." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "chartaceous",
+          "xrefs" : [ "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?alpha=C&glossary=yes&page=nswfl" ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "papery"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104013",
+      "lbl" : "greenish yellow",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell coordinates fall within the continuous ISCC-NBS greenish-yellow sector represented by color-name blocks 97 through 105; moderate greenish yellow (block 102, centroid 9.5Y 7.2/6.6) is a central prototype.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary classes: FLOPO_0980096 and FLOPO_0980178." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "greenish-yellow"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104016",
+      "lbl" : "terete",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A shape quality inhering in a bearer by virtue of the bearer being long and slender, tapering toward the apex, and circular in transverse section.",
+          "xrefs" : [ "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980099." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104019",
+      "lbl" : "succulent",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A composition quality inhering in a plant or plant organ by virtue of the bearer containing living water-storage tissue whose relative capacitance and volume enable stored water to support physiological function while external water is unavailable.",
+          "xrefs" : [ "DOI:10.1111/j.1365-3040.2012.02503.x", "PMID:22380538" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980102. This is a water-storage quality, not merely a synonym of fleshy." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104020",
+      "lbl" : "blue green",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell coordinates fall within the continuous ISCC-NBS bluish-green sector represented by color-name blocks 158 through 166; moderate bluish green (block 164, centroid 4.5BG 4.5/5.0) is a central prototype.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "This corresponds to the botanical blue green group in UPOV TGP/14/6 and to FLOPO temporary class FLOPO_0980103." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "blue-green",
+          "xrefs" : [ "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "bluish green"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "bluish-green"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104031",
+      "lbl" : "cream",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color for which RHS Colour Chart chip 158A or 158B in the fifth edition (2007) is the closest visual match when the specimen is compared against a white background under artificial daylight conforming to CIE D6500; those chips serve as physical prototypes for cream in a botanical description.",
+          "xrefs" : [ "https://www.rhs.org.uk/about-the-rhs/pdfs/publications/hanburyana/vol-3-june-2008/complete-version.pdf", "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary classes: FLOPO_0980084 (creamy) and FLOPO_0980114 (cream). The RHS swatches are the normative physical prototypes; display RGB values are not normative." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "creamy"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104032",
+      "lbl" : "coriaceous",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A texture quality inhering in a bearer by virtue of the bearer being thick, tough, and flexible, with the consistency of leather.",
+          "xrefs" : [ "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980115." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "leathery"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104035",
+      "lbl" : "pendent",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An orientation quality inhering in a bearer by virtue of the bearer hanging downward under its own weight.",
+          "xrefs" : [ "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980118. Pendent is distinguished from pendulous, which denotes hanging downward because the support is weak." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104041",
+      "lbl" : "velutinous",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A hairy quality inhering in a bearer by virtue of the bearer being covered with long, dense, straight trichomes that produce a velvet-like surface.",
+          "xrefs" : [ "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980124." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "velvety"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104051",
+      "lbl" : "pale greenish yellow",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 104 (pale greenish yellow), for which the published central prototype is 9.5Y 8.9/4.1.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980134." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "pale-greenish-yellow"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104054",
+      "lbl" : "orange yellow",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell coordinates fall within the continuous ISCC-NBS orange-yellow sector represented by color-name blocks 66 through 73; moderate orange yellow (block 71, centroid 9.0YR 7.2/8.1) is a central prototype.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980137. This is predominantly yellow and is distinct from PATO:0001944 yellow orange, which is predominantly orange." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "orange-yellow"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104059",
+      "lbl" : "pinkish white",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 9 (pinkish white), for which the published central prototype is 7.6R 9.2/1.0.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980142." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "pinkish-white"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104064",
+      "lbl" : "deep blue",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 179 (deep blue), for which the published central prototype is 3.0PB 2.0/9.0.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980147." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "deep-blue"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104067",
+      "lbl" : "greenish white",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 153 (greenish white), for which the published central prototype is 7.0G 9.2/0.8.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980150." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "greenish-white"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104073",
+      "lbl" : "deep orange",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 51 (deep orange), for which the published central prototype is 4.5YR 5.0/12.1.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980156." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "deep-orange"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104077",
+      "lbl" : "very pale blue",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 184 (very pale blue), for which the published central prototype is 0.9PB 8.4/3.0.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980160." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "very-pale-blue"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104079",
+      "lbl" : "reddish purple",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell coordinates fall within the continuous ISCC-NBS reddish-purple sector represented by color-name blocks 236 through 245; moderate reddish purple (block 241, centroid 1.0RP 4.5/7.2) is a central prototype.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary classes: FLOPO_0980162 and FLOPO_0980413." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "reddish-purple"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104085",
+      "lbl" : "deep purple",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 219 (deep purple), for which the published central prototype is 6.0P 2.8/10.2.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980168." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "deep-purple"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104087",
+      "lbl" : "deep purplish red",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 256 (deep purplish red), for which the published central prototype is 7.0RP 2.8/11.0.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980170." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "deep-purplish-red"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104112",
+      "lbl" : "orange red",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color assigned to UPOV color group 33 (orange red) by comparison with the RHS Colour Chart; RHS 33B in the 2015 edition is a physical prototype.",
+          "xrefs" : [ "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980195." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "orange-red"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104114",
+      "lbl" : "yellowish green",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell coordinates fall within the continuous ISCC-NBS yellowish-green sector represented by color-name blocks 129 through 138; moderate yellowish green (block 136, centroid 0.5G 5.5/5.1) is a central prototype.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary classes: FLOPO_0980197 and FLOPO_0980350." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "yellowish-green"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-09T04:50:15Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104117",
+      "lbl" : "bristly",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A hairy quality inhering in a bearer by virtue of the bearer being covered with stiff, strong hairs or hairlike projections; in plants, these projections are trichomes.",
+          "xrefs" : [ "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980200. UPOV treats hispid and setose as narrower botanical indumentum terms, but PATO:0002289 setose remains directly under hairy because its cross-taxon use includes insect setae, which are not all bristles." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104123",
+      "lbl" : "deep green",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 142 (deep green), for which the published central prototype is 6.0G 2.3/9.1.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980206." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "deep-green"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104151",
+      "lbl" : "dark pink",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 6 (dark pink), for which the published central prototype is 2.5R 6.0/6.0.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980234." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "dark-pink"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104157",
+      "lbl" : "purplish black",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 235 (purplish black), for which the published central prototype is 10.0P 1.0/0.7.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980240." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "purplish-black"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104159",
+      "lbl" : "dark purplish red",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 259 (dark purplish red), for which the published central prototype is 7.0RP 2.7/6.3.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980242." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "dark-purplish-red"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104189",
+      "lbl" : "deep red",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 13 (deep red), for which the published central prototype is 5.0R 2.8/9.9.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980272." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "deep-red"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104223",
+      "lbl" : "very pale green",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 148 (very pale green), for which the published central prototype is 9.0G 8.7/1.8.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980306." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "very-pale-green"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104242",
+      "lbl" : "pannose",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A hairy quality inhering in a bearer by virtue of the bearer being densely covered with short, matted, intertwined hairs that produce a felt-like surface.",
+          "xrefs" : [ "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        },
+        "comments" : [ "Atomic quality extracted from FLOPO_0980325 (soft felted); the FLOPO class should compose pannose with soft rather than pre-coordinate the conjunction in PATO." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "felted"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104277",
+      "lbl" : "glaucous",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A waxy quality of a plant surface in which a whitish bloom, often removable by rubbing, produces a dull blue-green appearance.",
+          "xrefs" : [ "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?alpha=F-H&glossary=yes&page=nswfl" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980360. This is classified by the surface bloom, not simultaneously as blue and green." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104294",
+      "lbl" : "deep violet",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 208 (deep violet), for which the published central prototype is 1.0P 1.4/10.3.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980377." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "deep-violet"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104305",
+      "lbl" : "bluish grey",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell hue, value, and chroma fall within ISCC-NBS color-name block 191 (bluish gray), for which the published central prototype is 9.5B 5.5/1.0.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980388." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "blue gray"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "blue grey"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "blue-gray"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "blue-grey"
+        }, {
+          "pred" : "hasExactSynonym",
+          "val" : "bluish gray"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104307",
+      "lbl" : "tessellated",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A spatial pattern in which colors or structural elements are arranged in quadrilateral units that produce a chequered appearance.",
+          "xrefs" : [ "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?alpha=T-U&glossary=yes&page=nswfl" ]
+        },
+        "comments" : [ "Atomic quality extracted from FLOPO_0980180 and FLOPO_0980390; banded-and-tessellated combinations should remain compositional in FLOPO." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "tesselated"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104311",
+      "lbl" : "purplish red",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A color whose Munsell coordinates fall within the continuous ISCC-NBS purplish-red sector represented by color-name blocks 254 through 262; moderate purplish red (block 258, centroid 7.0RP 4.5/9.0) is a central prototype.",
+          "xrefs" : [ "DOI:10.6028/NBS.SP.440", "DOI:10.6028/jres.061.035" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0980394." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "purplish-red"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-07-11T18:39:19Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104350",
+      "lbl" : "campanulate",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A shape quality inhering in a bearer by virtue of the bearer having an inflated tubular basal portion that widens gradually toward a distal limb or lobes.",
+          "xrefs" : [ "https://www.mobot.org/mobot/latindict/keyDetail.aspx?keyWord=campanulatus", "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0985000." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "bell-shaped"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-09-18T00:00:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104351",
+      "lbl" : "filiform",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A shape quality inhering in a bearer by virtue of the bearer being long, very slender, and circular or nearly circular in transverse section, thereby resembling a thread.",
+          "xrefs" : [ "https://www.mobot.org/mobot/latindict/keyDetail.aspx?keyWord=filiform", "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0985001." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-09-18T00:00:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104352",
+      "lbl" : "hastate",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A shape quality inhering in a bearer by virtue of the bearer being flat and having two approximately triangular basal lobes directed outward to either side of the main axis.",
+          "xrefs" : [ "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?glossary=yes&ill=Fig.+7+I&page=nswfl&term=hastate", "https://www.mobot.org/mobot/latindict/keyDetail.aspx?keyWord=hastatus", "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0985002. Distinguished from arrow-shaped (PATO:0001881; synonym sagittate), whose basal lobes point backward rather than outward." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-09-18T00:00:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104353",
+      "lbl" : "reflexed",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A shape quality inhering in a bearer by virtue of the bearer being abruptly bent backward or abaxially downward.",
+          "xrefs" : [ "https://sweetgum.nybg.org/science/glossary/glossary-details/?irn=1363", "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0985003. Distinguished from the curvature qualities recurved (PATO:0002211) and retrorse (PATO:0002237): a reflexed bearer is bent at an angle rather than curved." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-09-18T00:00:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104354",
+      "lbl" : "winged",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A shape quality inhering in a bearer by virtue of the bearer having one or more conspicuous, thin, flattened extensions that project from its main body.",
+          "xrefs" : [ "https://sweetgum.nybg.org/science/glossary/glossary-details/?irn=2950", "https://www.aos.org/orchids/orchid-basics/orchid-glossary" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0985004." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "alate"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-09-18T00:00:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104355",
+      "lbl" : "ascending",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An oblique orientation quality inhering in a bearer by virtue of the bearer being directed gradually upward at an oblique angle.",
+          "xrefs" : [ "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0985005. Some sources restrict ascending to a bearer with an initially horizontal or spreading base; that restriction is not part of this definition." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-09-18T00:00:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104356",
+      "lbl" : "spreading",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An orientation quality inhering in a bearer by virtue of the bearer being directed outward and diverging from a principal axis.",
+          "xrefs" : [ "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0985006. Distinguished from radiating (PATO:0005005), which requires expansion from a centre point, and from divergent from (PATO:0002424), which inheres in a bearer whose parts extend in different directions. Not a relational quality: like ascending and the other orientation qualities, spreading describes the direction of the bearer itself within its frame of reference (the axis from which it arises), and does not relate the bearer to a second, independent entity." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-09-18T00:00:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104357",
+      "lbl" : "lanate",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A pilosity quality inhering in a bearer by virtue of the bearer being covered with long, somewhat matted and tangled trichomes that give a wool-like appearance.",
+          "xrefs" : [ "https://sweetgum.nybg.org/science/glossary/glossary-details/?irn=939", "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0985007. Distinguished from tomentose (PATO:0002341), whose hairs are shorter, denser and more closely matted." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "woolly"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-09-18T00:00:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104358",
+      "lbl" : "sericeous",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A pilosity quality inhering in a bearer by virtue of the bearer being covered with long, soft, slender, appressed trichomes that give a silk-like appearance.",
+          "xrefs" : [ "https://sweetgum.nybg.org/science/glossary/glossary-details/?irn=1450", "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0985008." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "silky"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-09-18T00:00:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104359",
+      "lbl" : "entire",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An edge shape quality inhering in a bearer by virtue of the bearer's edge being continuous and even, without teeth, lobes, or other incisions.",
+          "xrefs" : [ "https://sweetgum.nybg.org/science/glossary/glossary-details/?irn=626", "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0985009. Narrower than unserrated (PATO:0001975): an entire edge also lacks lobes and crenations." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "entire margin"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-09-18T00:00:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104360",
+      "lbl" : "annual life span",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A life span quality inhering in a bearer by virtue of the bearer's expected natural life span being no more than one year.",
+          "xrefs" : [ "https://sweetgum.nybg.org/science/glossary/glossary-details/?irn=272", "https://www.rhs.org.uk/advice/beginners-guide/glossary" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0985010. Annual, biennial and perennial life span are absolute-duration qualities and together partition expected natural life span; the existing siblings increased, decreased and normal life span are relative-magnitude qualities. The synonym annual is RELATED because outside life-history descriptions the word denotes a yearly frequency." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "annual"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-09-18T00:00:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104361",
+      "lbl" : "perennial life span",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A life span quality inhering in a bearer by virtue of the bearer's expected natural life span being more than two years.",
+          "xrefs" : [ "https://sweetgum.nybg.org/science/glossary/glossary-details/?irn=1182", "https://www.rhs.org.uk/advice/beginners-guide/glossary" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0985011. Absolute-duration quality; see annual life span (PATO:0104360) for the partition with biennial life span (PATO:0104367)." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "perennial"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-09-18T00:00:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104362",
+      "lbl" : "dissected",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A split quality inhering in a bearer by virtue of the bearer being divided, at least partially, by incisions into visibly distinct segments that may remain connected.",
+          "xrefs" : [ "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?glossary=yes&page=nswfl&alpha=D-E" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0985012. Distinguished from cut (PATO:0001978), which requires regular, deep incisions, and from lobed (PATO:0001979). No incision-depth threshold is implied." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-09-18T00:00:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104363",
+      "lbl" : "clasping",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "An attachment quality inhering in a bearer by virtue of the bearer at least partially enclosing an axis to which it is attached.",
+          "xrefs" : [ "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?glossary=yes&page=nswfl&alpha=C", "https://sweetgum.nybg.org/science/glossary/glossary-details/?irn=467" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0985013. Amplexicaul (a leaf base clasping the stem) is a narrower botanical use. Relational quality: the definition refers to a second entity, the axis to which the bearer is attached, so the term lives under attachment quality with sessile (sensu botany) (PATO:0001436) rather than under position." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#relational_slim", "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasNarrowSynonym",
+          "val" : "amplexicaul"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-09-18T00:00:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104364",
+      "lbl" : "mealy",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A texture quality inhering in a bearer by virtue of the bearer being covered with a coarse, flour-like powder.",
+          "xrefs" : [ "https://ausflora.net/wp-content/uploads/2017/06/flora-of-australia-glossary-e28094-ferns-cycads-conifers-and-vascular-plants.pdf", "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?glossary=yes&page=nswfl&alpha=F-H", "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?glossary=yes&page=nswfl&alpha=M-O" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0985014. Some glossaries distinguish coarse mealy powder from fine farina (farinose); farinose is therefore not added as a synonym." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-09-18T00:00:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104365",
+      "lbl" : "plicate",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A folded quality inhering in a bearer by virtue of the bearer being folded back and forth longitudinally like a fan.",
+          "xrefs" : [ "https://ausflora.net/wp-content/uploads/2017/06/flora-of-australia-glossary-e28094-ferns-cycads-conifers-and-vascular-plants.pdf", "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?glossary=yes&page=nswfl&alpha=P" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0985015. A single longitudinal fold does not satisfy the definition." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "pleated"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-09-18T00:00:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104366",
+      "lbl" : "floccose",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A pilosity quality inhering in a bearer by virtue of the bearer having tufts of long, soft hairs that tend to rub off as small wool-like masses.",
+          "xrefs" : [ "https://ausflora.net/wp-content/uploads/2017/06/flora-of-australia-glossary-e28094-ferns-cycads-conifers-and-vascular-plants.pdf", "https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?glossary=yes&page=nswfl&alpha=F-H", "https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0985016. Cottony does not by itself imply that the hairs rub off, so it is a related synonym only." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasNarrowSynonym",
+          "val" : "flocculose"
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "cottony"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-09-18T00:00:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
+        } ]
+      }
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/PATO_0104367",
+      "lbl" : "biennial life span",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A life span quality inhering in a bearer by virtue of the bearer's expected natural life span being more than one year and no more than two years.",
+          "xrefs" : [ "https://ausflora.net/wp-content/uploads/2017/06/flora-of-australia-glossary-e28094-ferns-cycads-conifers-and-vascular-plants.pdf", "https://www.rhs.org.uk/advice/beginners-guide/glossary" ]
+        },
+        "comments" : [ "Requested for FLOPO; corresponding temporary class: FLOPO_0987000. Absolute-duration quality; see annual life span (PATO:0104360) for the partition with perennial life span (PATO:0104361). The synonym biennial is RELATED because outside life-history descriptions the word denotes a two-yearly frequency." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/pato#value_slim" ],
+        "synonyms" : [ {
+          "pred" : "hasRelatedSynonym",
+          "val" : "biennial"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0001-8149-5890"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#creation_date",
+          "val" : "2026-10-01T00:00:00Z"
+        }, {
+          "pred" : "http://www.geneontology.org/formats/oboInOwl#hasOBONamespace",
+          "val" : "quality"
         } ]
       }
     }, {
@@ -49326,13 +51077,9 @@
       "propertyType" : "ANNOTATION"
     } ],
     "edges" : [ {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0000001",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/BFO_0000020"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000004",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000008",
       "pred" : "is_a",
@@ -49384,19 +51131,19 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000037",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000039",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000040",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000043",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000044",
       "pred" : "is_a",
@@ -49412,7 +51159,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000049",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000068"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0102001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000050",
       "pred" : "is_a",
@@ -49436,7 +51183,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000058",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000060",
       "pred" : "is_a",
@@ -49450,17 +51197,9 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000150"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0000068",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000001"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0000069",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000068"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000070",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0103000"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000070",
       "pred" : "http://purl.obolibrary.org/obo/RO_0015012",
@@ -49504,7 +51243,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000125",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000128",
       "pred" : "is_a",
@@ -49520,7 +51259,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000140",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000141",
       "pred" : "is_a",
@@ -49528,7 +51267,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000146",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000150",
       "pred" : "is_a",
@@ -49544,7 +51283,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000165",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000169",
       "pred" : "is_a",
@@ -49880,11 +51619,11 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000460",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000069"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0102002"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000461",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000068"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0102002"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000462",
       "pred" : "is_a",
@@ -49916,7 +51655,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000470",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002300"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0002305"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0000487",
       "pred" : "is_a",
@@ -50570,13 +52309,9 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000502"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0001018",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001019",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001020",
       "pred" : "is_a",
@@ -50584,11 +52319,11 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001021",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001022",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001023",
       "pred" : "is_a",
@@ -50596,15 +52331,15 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001024",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001025",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001026",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001028",
       "pred" : "is_a",
@@ -50612,7 +52347,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001029",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001030",
       "pred" : "is_a",
@@ -50620,15 +52355,15 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001031",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001034",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001035",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001043",
       "pred" : "is_a",
@@ -50686,10 +52421,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001159"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0001162",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002305"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001163",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001159"
@@ -50697,10 +52428,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001163",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001997"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0001163",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002303"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001164",
       "pred" : "is_a",
@@ -50816,7 +52543,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001230",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001233",
       "pred" : "is_a",
@@ -50836,7 +52563,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001242",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001243",
       "pred" : "is_a",
@@ -51064,7 +52791,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001303",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000001"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001304",
       "pred" : "is_a",
@@ -51096,7 +52823,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001307",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002301"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0002303"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001308",
       "pred" : "is_a",
@@ -51104,7 +52831,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001308",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002300"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0002305"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001309",
       "pred" : "is_a",
@@ -51528,7 +53255,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001414",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001415",
       "pred" : "is_a",
@@ -51552,7 +53279,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001420",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001421",
       "pred" : "is_a",
@@ -51596,7 +53323,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001431",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001432",
       "pred" : "is_a",
@@ -51704,7 +53431,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001461",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001462",
       "pred" : "is_a",
@@ -51716,7 +53443,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001464",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001465",
       "pred" : "is_a",
@@ -51740,7 +53467,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001470",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001472",
       "pred" : "is_a",
@@ -51940,7 +53667,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001519",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001520",
       "pred" : "is_a",
@@ -52212,7 +53939,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001579",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001580",
       "pred" : "is_a",
@@ -52236,7 +53963,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001583",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002301"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0002303"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001584",
       "pred" : "is_a",
@@ -52244,11 +53971,11 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001584",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002300"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0002305"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001585",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001586",
       "pred" : "is_a",
@@ -52264,7 +53991,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001587",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002300"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0002305"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001588",
       "pred" : "is_a",
@@ -52272,7 +53999,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001588",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002301"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0002303"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001590",
       "pred" : "is_a",
@@ -52320,7 +54047,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001598",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001599",
       "pred" : "is_a",
@@ -52388,7 +54115,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001612",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002300"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0002305"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001613",
       "pred" : "is_a",
@@ -52396,7 +54123,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001613",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002301"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0002303"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001614",
       "pred" : "is_a",
@@ -52582,10 +54309,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001997"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0001656",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002303"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001657",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000470"
@@ -52593,10 +54316,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001657",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001655"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0001657",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002305"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001658",
       "pred" : "is_a",
@@ -52716,7 +54435,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001682",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001683",
       "pred" : "is_a",
@@ -53008,7 +54727,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001739",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001740",
       "pred" : "is_a",
@@ -53195,16 +54914,16 @@
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000049"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001782",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002300"
+      "pred" : "http://purl.obolibrary.org/obo/RO_0015007",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000461"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001783",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000049"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001783",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002301"
+      "pred" : "http://purl.obolibrary.org/obo/RO_0015008",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000461"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001784",
       "pred" : "is_a",
@@ -53384,7 +55103,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001822",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001823",
       "pred" : "is_a",
@@ -53506,10 +55225,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001997"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0001843",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002303"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001844",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000470"
@@ -53517,10 +55232,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001844",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001842"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0001844",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002305"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001845",
       "pred" : "is_a",
@@ -53700,7 +55411,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001884",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001885",
       "pred" : "is_a",
@@ -53708,7 +55419,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001886",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001887",
       "pred" : "is_a",
@@ -53816,7 +55527,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001906",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001907",
       "pred" : "is_a",
@@ -54036,7 +55747,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001957",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002301"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0002303"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001958",
       "pred" : "is_a",
@@ -54044,7 +55755,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001958",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002300"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0002305"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001959",
       "pred" : "is_a",
@@ -54200,11 +55911,11 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001997",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002301"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0002303"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001998",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000068"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0001999",
       "pred" : "is_a",
@@ -54226,10 +55937,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001999"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0002001",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002303"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002002",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000470"
@@ -54237,10 +55944,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002002",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0002083"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0002002",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002305"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002003",
       "pred" : "is_a",
@@ -54296,7 +55999,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002016",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000068"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0102001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002017",
       "pred" : "is_a",
@@ -54350,10 +56053,6 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0002027"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0002028",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002303"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002029",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000470"
@@ -54361,10 +56060,6 @@
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002029",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0002027"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0002029",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002305"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002030",
       "pred" : "is_a",
@@ -54832,7 +56527,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002138",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002139",
       "pred" : "is_a",
@@ -55080,7 +56775,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002198",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002199",
       "pred" : "is_a",
@@ -55460,7 +57155,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002284",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002285",
       "pred" : "is_a",
@@ -55542,53 +57237,37 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0002078"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0002300",
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0002302",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000069"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001236"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0002300",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0015007",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000461"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0002301",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000069"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0002301",
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0002302",
       "pred" : "http://purl.obolibrary.org/obo/RO_0015008",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000461"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0002302",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001236"
-    }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0002302",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002301"
-    }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002303",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002303",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002301"
+      "pred" : "http://purl.obolibrary.org/obo/RO_0015008",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000461"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002304",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001236"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002304",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002300"
+      "pred" : "http://purl.obolibrary.org/obo/RO_0015007",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000461"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002305",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002305",
-      "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0002300"
+      "pred" : "http://purl.obolibrary.org/obo/RO_0015007",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000461"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002306",
       "pred" : "is_a",
@@ -55740,7 +57419,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002339",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000454"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0104117"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002340",
       "pred" : "is_a",
@@ -56580,7 +58259,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0002632",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000068"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0102001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0005000",
       "pred" : "is_a",
@@ -56776,7 +58455,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0015007",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0015008",
       "pred" : "is_a",
@@ -56848,7 +58527,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0015021",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0015022",
       "pred" : "is_a",
@@ -56944,7 +58623,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0025000",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0025001",
       "pred" : "is_a",
@@ -57120,7 +58799,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0040029",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0040030",
       "pred" : "is_a",
@@ -57272,7 +58951,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0040070",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0040071",
       "pred" : "is_a",
@@ -57879,40 +59558,40 @@
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001227"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0045074",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0015010",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000461"
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0045001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0045075",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001615"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0045075",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0015010",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000461"
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0045001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0045076",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001586"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0045076",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0015010",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000461"
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0045001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0045077",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001956"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0045077",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0015010",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000461"
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0045001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0045078",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001314"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0045078",
-      "pred" : "http://purl.obolibrary.org/obo/RO_0015010",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000461"
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0045001"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0045079",
       "pred" : "is_a",
@@ -58224,7 +59903,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0070033",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0001018"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0070034",
       "pred" : "is_a",
@@ -58232,7 +59911,7 @@
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0070036",
       "pred" : "is_a",
-      "obj" : "http://purl.obolibrary.org/obo/PATO_0000001"
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001241"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0070038",
       "pred" : "is_a",
@@ -58342,9 +60021,21 @@
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0001995"
     }, {
-      "sub" : "http://purl.obolibrary.org/obo/PATO_0103000",
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0102001",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0000001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0102002",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0102001"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0102003",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0102002"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0102004",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0102002"
     }, {
       "sub" : "http://purl.obolibrary.org/obo/PATO_0103001",
       "pred" : "is_a",
@@ -58385,6 +60076,246 @@
       "sub" : "http://purl.obolibrary.org/obo/PATO_0103006",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/PATO_0103004"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0103301",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001377"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0103302",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001379"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0103302",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001382"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0103303",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001379"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0103303",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001384"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0103304",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0103302"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104005",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000324"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104007",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000014"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104010",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000150"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104013",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000014"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104016",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000052"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104019",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000025"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104020",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000014"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104031",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000014"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104032",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000150"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104035",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000133"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104041",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000454"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104051",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0104013"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104054",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000014"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104059",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000014"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104064",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000318"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104067",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000014"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104073",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000953"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104077",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000318"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104079",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000014"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104085",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000951"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104087",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0104311"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104112",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000014"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104114",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000014"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104117",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000454"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104123",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000320"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104151",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000954"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104157",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000014"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104159",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0104311"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104189",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000322"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104223",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000320"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104242",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000454"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104277",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0002384"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104294",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001424"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104305",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000014"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104307",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000060"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104311",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000014"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104350",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000052"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104351",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000052"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104352",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000052"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104353",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000617"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104354",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000052"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104355",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0002481"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104356",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000133"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104357",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000454"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104358",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000454"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104359",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001975"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104360",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000050"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104361",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000050"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104362",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001786"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104363",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001435"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104364",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000150"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104365",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0001910"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104366",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000454"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/PATO_0104367",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/PATO_0000050"
     } ],
     "logicalDefinitionAxioms" : [ {
       "definedClassId" : "http://purl.obolibrary.org/obo/PATO_0000303",
@@ -59650,20 +61581,6 @@
         "fillerId" : "http://purl.obolibrary.org/obo/PATO_0000461"
       } ]
     }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/PATO_0002300",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/PATO_0000001" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0015007",
-        "fillerId" : "http://purl.obolibrary.org/obo/PATO_0000461"
-      } ]
-    }, {
-      "definedClassId" : "http://purl.obolibrary.org/obo/PATO_0002301",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/PATO_0000001" ],
-      "restrictions" : [ {
-        "propertyId" : "http://purl.obolibrary.org/obo/RO_0015008",
-        "fillerId" : "http://purl.obolibrary.org/obo/PATO_0000461"
-      } ]
-    }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/PATO_0002302",
       "genusIds" : [ "http://purl.obolibrary.org/obo/PATO_0001236" ],
       "restrictions" : [ {
@@ -59892,10 +61809,18 @@
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/PATO_0040042",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/PATO_0001470", "http://purl.obolibrary.org/obo/PATO_0002301" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/PATO_0001470" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0015008",
+        "fillerId" : "http://purl.obolibrary.org/obo/PATO_0000461"
+      } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/PATO_0040043",
-      "genusIds" : [ "http://purl.obolibrary.org/obo/PATO_0001470", "http://purl.obolibrary.org/obo/PATO_0002300" ]
+      "genusIds" : [ "http://purl.obolibrary.org/obo/PATO_0001470" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/RO_0015007",
+        "fillerId" : "http://purl.obolibrary.org/obo/PATO_0000461"
+      } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/PATO_0045000",
       "genusIds" : [ "http://purl.obolibrary.org/obo/PATO_0000161" ],
