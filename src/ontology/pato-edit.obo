@@ -23167,7 +23167,7 @@ creation_date: 2026-07-11T18:39:19Z
 [Term]
 id: PATO:0104350
 name: campanulate
-def: "A shape quality inhering in a bearer by virtue of having an inflated tubular basal portion that widens gradually toward a distal limb or lobes." [https://www.mobot.org/mobot/latindict/keyDetail.aspx?keyWord=campanulatus, https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
+def: "A shape quality inhering in a bearer by virtue of the bearer having an inflated tubular basal portion that widens gradually toward a distal limb or lobes." [https://www.mobot.org/mobot/latindict/keyDetail.aspx?keyWord=campanulatus, https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
 comment: Requested for FLOPO; corresponding temporary class: FLOPO_0985000.
 subset: value_slim
 synonym: "bell-shaped" RELATED []
@@ -23188,7 +23188,7 @@ creation_date: 2026-09-18T00:00:00Z
 [Term]
 id: PATO:0104352
 name: hastate
-def: "A shape quality inhering in a flat bearer by virtue of having two approximately triangular basal lobes directed outward to either side of the main axis." [https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?glossary=yes&ill=Fig.+7+I&page=nswfl&term=hastate, https://www.mobot.org/mobot/latindict/keyDetail.aspx?keyWord=hastatus, https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
+def: "A shape quality inhering in a bearer by virtue of the bearer being flat and having two approximately triangular basal lobes directed outward to either side of the main axis." [https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?glossary=yes&ill=Fig.+7+I&page=nswfl&term=hastate, https://www.mobot.org/mobot/latindict/keyDetail.aspx?keyWord=hastatus, https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
 comment: Requested for FLOPO; corresponding temporary class: FLOPO_0985002. Distinguished from arrow-shaped (PATO:0001881; synonym sagittate), whose basal lobes point backward rather than outward.
 subset: value_slim
 is_a: PATO:0000052 ! shape
@@ -23230,7 +23230,7 @@ creation_date: 2026-09-18T00:00:00Z
 id: PATO:0104356
 name: spreading
 def: "An orientation quality inhering in a bearer by virtue of the bearer being directed outward and diverging from a principal axis." [https://www.upov.int/documents/d/upov/tgp-documents-en-tgp_14.pdf]
-comment: Requested for FLOPO; corresponding temporary class: FLOPO_0985006. Distinguished from radiating (PATO:0005005), which requires expansion from a centre point, and from divergent from (PATO:0002424), which inheres in a bearer whose parts extend in different directions.
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0985006. Distinguished from radiating (PATO:0005005), which requires expansion from a centre point, and from divergent from (PATO:0002424), which inheres in a bearer whose parts extend in different directions. Not a relational quality: like ascending and the other orientation qualities, spreading describes the direction of the bearer itself within its frame of reference (the axis from which it arises), and does not relate the bearer to a second, independent entity.
 subset: value_slim
 is_a: PATO:0000133 ! orientation
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
@@ -23273,9 +23273,9 @@ creation_date: 2026-09-18T00:00:00Z
 id: PATO:0104360
 name: annual life span
 def: "A life span quality inhering in a bearer by virtue of the bearer's expected natural life span being no more than one year." [https://sweetgum.nybg.org/science/glossary/glossary-details/?irn=272, https://www.rhs.org.uk/advice/beginners-guide/glossary]
-comment: Requested for FLOPO; corresponding temporary class: FLOPO_0985010.
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0985010. Annual, biennial and perennial life span are absolute-duration qualities and together partition expected natural life span; the existing siblings increased, decreased and normal life span are relative-magnitude qualities. The synonym annual is RELATED because outside life-history descriptions the word denotes a yearly frequency.
 subset: value_slim
-synonym: "annual" EXACT []
+synonym: "annual" RELATED []
 is_a: PATO:0000050 ! life span
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
 creation_date: 2026-09-18T00:00:00Z
@@ -23284,12 +23284,23 @@ creation_date: 2026-09-18T00:00:00Z
 id: PATO:0104361
 name: perennial life span
 def: "A life span quality inhering in a bearer by virtue of the bearer's expected natural life span being more than two years." [https://sweetgum.nybg.org/science/glossary/glossary-details/?irn=1182, https://www.rhs.org.uk/advice/beginners-guide/glossary]
-comment: Requested for FLOPO; corresponding temporary class: FLOPO_0985011.
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0985011. Absolute-duration quality; see annual life span (PATO:0104360) for the partition with biennial life span (PATO:0104367).
 subset: value_slim
 synonym: "perennial" EXACT []
 is_a: PATO:0000050 ! life span
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
 creation_date: 2026-09-18T00:00:00Z
+
+[Term]
+id: PATO:0104367
+name: biennial life span
+def: "A life span quality inhering in a bearer by virtue of the bearer's expected natural life span being more than one year and no more than two years." [https://ausflora.net/wp-content/uploads/2017/06/flora-of-australia-glossary-e28094-ferns-cycads-conifers-and-vascular-plants.pdf, https://www.rhs.org.uk/advice/beginners-guide/glossary]
+comment: Requested for FLOPO. Absolute-duration quality; see annual life span (PATO:0104360) for the partition with perennial life span (PATO:0104361). The synonym biennial is RELATED because outside life-history descriptions the word denotes a two-yearly frequency.
+subset: value_slim
+synonym: "biennial" RELATED []
+is_a: PATO:0000050 ! life span
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-10-01T00:00:00Z
 
 [Term]
 id: PATO:0104362
@@ -23304,18 +23315,19 @@ creation_date: 2026-09-18T00:00:00Z
 [Term]
 id: PATO:0104363
 name: clasping
-def: "A positional quality inhering in a bearer by virtue of the bearer at least partially enclosing an axis to which it is attached." [https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?glossary=yes&page=nswfl&alpha=C, https://sweetgum.nybg.org/science/glossary/glossary-details/?irn=467]
-comment: Requested for FLOPO; corresponding temporary class: FLOPO_0985013. Amplexicaul (a leaf base clasping the stem) is a narrower botanical use.
+def: "An attachment quality inhering in a bearer by virtue of the bearer at least partially enclosing an axis to which it is attached." [https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?glossary=yes&page=nswfl&alpha=C, https://sweetgum.nybg.org/science/glossary/glossary-details/?irn=467]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0985013. Amplexicaul (a leaf base clasping the stem) is a narrower botanical use. Relational quality: the definition refers to a second entity, the axis to which the bearer is attached, so the term lives under attachment quality with sessile (sensu botany) (PATO:0001436) rather than under position.
+subset: relational_slim
 subset: value_slim
 synonym: "amplexicaul" NARROW []
-is_a: PATO:0000140 ! position
+is_a: PATO:0001435 ! attachment quality
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
 creation_date: 2026-09-18T00:00:00Z
 
 [Term]
 id: PATO:0104364
 name: mealy
-def: "A surface texture quality inhering in a bearer by virtue of the bearer being covered with a coarse, flour-like powder." [https://ausflora.net/wp-content/uploads/2017/06/flora-of-australia-glossary-e28094-ferns-cycads-conifers-and-vascular-plants.pdf, https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?glossary=yes&page=nswfl&alpha=F-H, https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?glossary=yes&page=nswfl&alpha=M-O]
+def: "A texture quality inhering in a bearer by virtue of the bearer being covered with a coarse, flour-like powder." [https://ausflora.net/wp-content/uploads/2017/06/flora-of-australia-glossary-e28094-ferns-cycads-conifers-and-vascular-plants.pdf, https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?glossary=yes&page=nswfl&alpha=F-H, https://plantnet.rbgsyd.nsw.gov.au/cgi-bin/NSWfl.pl?glossary=yes&page=nswfl&alpha=M-O]
 comment: Requested for FLOPO; corresponding temporary class: FLOPO_0985014. Some glossaries distinguish coarse mealy powder from fine farina (farinose); farinose is therefore not added as a synonym.
 subset: value_slim
 is_a: PATO:0000150 ! texture
