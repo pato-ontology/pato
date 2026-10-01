@@ -23,6 +23,7 @@ import_group:
     - <http://www.informatics.jax.org/marker/MGI:*>
     - <http://purl.obolibrary.org/obo/OBA_*>
     - <http://purl.obolibrary.org/obo/CARO_*>
+    - <http://purl.obolibrary.org/obo/PR_*>
   slme_individuals: exclude
   mirror_max_time_download: 400
   products:
@@ -45,9 +46,6 @@ import_group:
       use_base: TRUE
     - id: ncbitaxon
       mirror_from: http://purl.obolibrary.org/obo/ncbitaxon/subsets/taxslim.owl
-    - id: pr
-      make_base: TRUE
-      mirror_from: https://raw.githubusercontent.com/obophenotype/pro_obo_slim/master/pr_slim.owl
 documentation:
   documentation_system: mkdocs
 components:
