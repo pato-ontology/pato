@@ -1,0 +1,112 @@
+name: 'Create ROBOT diffs on Pull requests'
+
+on:
+  # Triggers the workflow on pull request events for the master branch
+  pull_request:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  edit_file:
+    runs-on: ubuntu-latest
+    container: obolibrary/odklite:v1.6.1
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      # Checks-out main branch under "main" directory
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: master
+          path: master
+      - name: Diff classification
+        run: export ROBOT_JAVA_ARGS=-Xmx6G; robot diff --labels True --left master/src/ontology/pato-edit.obo --left-catalog master/src/ontology/catalog-v001.xml --right src/ontology/pato-edit.obo --right-catalog src/ontology/catalog-v001.xml -f markdown -o edit-diff.md
+      - name: Upload diff
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: edit-diff.md
+          path: edit-diff.md
+  classify_branch:
+    runs-on: ubuntu-latest
+    container: obolibrary/odklite:v1.6.1
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Classify ontology
+        run: cd src/ontology; make IMP=FALSE PAT=FALSE MIR=FALSE pato.owl
+      - name: Upload PR pato.owl
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: pato-pr.owl
+          path: src/ontology/pato.owl
+          retention-days: 1
+  classify_main:
+    runs-on: ubuntu-latest
+    container: obolibrary/odklite:v1.6.1
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: master
+      - name: Classify ontology
+        run: cd src/ontology; make IMP=FALSE PAT=FALSE MIR=FALSE pato.owl
+      - name: Upload master pato.owl
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: pato-master.owl
+          path: src/ontology/pato.owl
+          retention-days: 1
+  diff_classification:
+    needs:
+      - classify_branch
+      - classify_main
+    runs-on: ubuntu-latest
+    container: obolibrary/odklite:v1.6.1
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Download master classification
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: pato-master.owl
+          path: src/ontology/pato-master.owl
+      - name: Download PR classification
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: pato-pr.owl
+          path: src/ontology/pato-pr.owl
+      - name: Diff classification
+        run: export ROBOT_JAVA_ARGS=-Xmx6G; cd src/ontology; robot diff --labels True --left pato-master.owl/pato.owl --left-catalog catalog-v001.xml --right pato-pr.owl/pato.owl --right-catalog catalog-v001.xml -f markdown -o classification-diff.md
+      - name: Upload diff
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: classification-diff.md
+          path: src/ontology/classification-diff.md
+  post_comment:
+    needs: [diff_classification, edit_file]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Download reasoned diff
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: classification-diff.md
+          path: classification-diff.md
+      - name: Prepare reasoned comment
+        run: "echo \"<details>\n <summary> Here's a diff of how these changes impact the classified ontology: </summary> \n\" >comment.md; cat classification-diff.md/classification-diff.md >>comment.md"
+      - name: Post reasoned comment
+        uses: marocchino/sticky-pull-request-comment@5770ad5eb8f42dd2c4f34da00c94c5381e49af88 # v3.0.5
+        with:
+          path: "comment.md"
+          header: "REASONED"
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Download edit diff
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: edit-diff.md
+          path: edit-diff.md
+      - name: Prepare edit file comment
+        run: "echo \"<details>\n <summary> Here's a diff of your edit file (unreasoned) </summary> \n\" >edit-comment.md; cat edit-diff.md/edit-diff.md >>edit-comment.md"
+      - name: Post comment
+        uses: marocchino/sticky-pull-request-comment@5770ad5eb8f42dd2c4f34da00c94c5381e49af88 # v3.0.5
+        with:
+          path: "edit-comment.md"
+          header: "UNREASONED"
