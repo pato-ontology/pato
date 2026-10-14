@@ -5838,15 +5838,14 @@ is_a: PATO:0002006 ! 2-D shape
 [Term]
 id: PATO:0000947
 name: elliptic
-def: "A spheroid quality inhering in a bearer by virtue of the bearer's being oval with two axes of symmetry, as produced by a conical section." [PATOC:GVG]
+def: "A superelliptic quality inhering in a bearer by virtue of the bearer's outline being oval with two axes of symmetry, as produced by a conical section." [PATOC:GVG]
+comment: Plane (2-D) shape. For the solid shape (ellipsoid in botanical usage) see prolate (PATO:0001866).
 subset: cell_quality
 subset: mpath_slim
 subset: value_slim
 synonym: "ellipse-shaped" EXACT []
-synonym: "ellipsoid" EXACT []
 synonym: "elliptical" EXACT []
 synonym: "oval" RELATED []
-synonym: "ovoid" RELATED []
 is_a: PATO:0002318 ! superelliptic
 
 [Term]
@@ -13084,6 +13083,7 @@ name: prolate
 def: "A spheroid quality inhering in a bearer by virtue of the bearer's exhibiting a polar diameter longer than its equatorial diameter." [Wikipedia:http\://en.wikipedia.org/wiki/Prolate]
 subset: cell_quality
 subset: value_slim
+synonym: "ellipsoid" RELATED []
 synonym: "prolate spheroid" RELATED []
 xref: Image:http\://upload.wikimedia.org/wikipedia/commons/8/88/ProlateSpheroid.png
 is_a: PATO:0001865 ! spheroid
@@ -13321,15 +13321,15 @@ is_a: PATO:0002008 ! concave 3-D shape
 
 [Term]
 id: PATO:0001891
-name: ovate
+name: ovoid
 def: "A spheroid quality inhering in a bearer by virtue of the bearer's exhibiting a continuous convex surface with an axis of symmetry and one axis longer than the other; egg-shaped." [PATOC:mc]
+comment: Solid (3-D) shape. For the plane (2-D) shape see ovate (PATO:0104368).
 subset: cell_quality
 subset: mpath_slim
 subset: value_slim
 synonym: "eccentric" RELATED []
 synonym: "egg-shaped" EXACT []
-synonym: "oval" EXACT []
-synonym: "ovoid" EXACT []
+synonym: "oval" RELATED []
 is_a: PATO:0001865 ! spheroid
 relationship: RO:0015011 PATO:0000946 ! has cross section oblong
 
@@ -13688,10 +13688,10 @@ is_a: PATO:0000411 ! circular
 [Term]
 id: PATO:0001936
 name: obovate
-def: "A spheroid quality inhering in a bearer by virtue of the bearer's being egg-shaped and flat, with the narrow end attached to the base." [wordreference:wordreference]
+def: "A 2-D shape quality inhering in a bearer by virtue of the bearer's outline being egg-shaped and broadest above the middle, with the narrow end towards the base." [https://www.upov.int/edocs/tgpdocs/en/tgp_14.pdf, wordreference:wordreference]
+comment: Plane (2-D) shape. For the solid shape see obovoid (PATO:0104369).
 subset: value_slim
-synonym: "obovoid" RELATED []
-is_a: PATO:0001891 ! ovate
+is_a: PATO:0002006 ! 2-D shape
 
 [Term]
 id: PATO:0001937
@@ -17567,7 +17567,7 @@ creation_date: 2012-01-31T02:35:02Z
 [Term]
 id: PATO:0002337
 name: lance-ovate
-def: "A spheroid quality inhering in a bearer by virtue of the bearer's exhibiting a continuous convex surface with an axis of symmetry and one axis longer than the other; characterized with an egg-shaped form crossed with a lance-head shaped form." [PATOC:DD]
+def: "A lanceolate quality inhering in a bearer by virtue of the bearer's outline being intermediate between lanceolate and ovate." [PATOC:DD]
 subset: value_slim
 is_a: PATO:0001877 ! lanceolate
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0002-2061-091X
@@ -23362,6 +23362,26 @@ synonym: "biennial" RELATED []
 is_a: PATO:0000050 ! life span
 property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
 creation_date: 2026-10-01T00:00:00Z
+
+[Term]
+id: PATO:0104368
+name: ovate
+def: "A 2-D shape quality inhering in a bearer by virtue of the bearer's outline being egg-shaped, entirely convex and broadest below the middle, towards the base." [DOI:10.2307/1216718, https://www.upov.int/edocs/tgpdocs/en/tgp_14.pdf]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0991024. Plane (2-D) shape, as of a leaf or petal. For the solid shape see ovoid (PATO:0001891).
+subset: value_slim
+is_a: PATO:0002006 ! 2-D shape
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-10-14T00:00:00Z
+
+[Term]
+id: PATO:0104369
+name: obovoid
+def: "A spheroid quality inhering in a bearer by virtue of the bearer's being egg-shaped and broadest above the middle, with the narrow end towards the base." [https://www.upov.int/edocs/tgpdocs/en/tgp_14.pdf]
+comment: Requested for FLOPO; corresponding temporary class: FLOPO_0991025. Solid (3-D) shape, as of a fruit or seed. For the plane shape see obovate (PATO:0001936).
+subset: value_slim
+is_a: PATO:0001865 ! spheroid
+property_value: http://purl.org/dc/terms/contributor https://orcid.org/0000-0001-8149-5890
+creation_date: 2026-10-14T00:00:00Z
 
 [Typedef]
 id: correlates_with
