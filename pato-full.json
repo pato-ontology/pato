@@ -22,9 +22,9 @@
         "val" : "1.2"
       }, {
         "pred" : "http://www.w3.org/2002/07/owl#versionInfo",
-        "val" : "2026-10-01"
+        "val" : "2026-11-01"
       } ],
-      "version" : "http://purl.obolibrary.org/obo/pato/releases/2026-10-01/pato-full.json"
+      "version" : "http://purl.obolibrary.org/obo/pato/releases/2026-11-01/pato-full.json"
     },
     "nodes" : [ {
       "id" : "http://purl.obolibrary.org/obo/BFO_0000002",
@@ -195020,7 +195020,7 @@
           "val" : "A part of a wall of an organ that forms a layer.",
           "xrefs" : [ "http://orcid.org/0000-0002-6601-2165" ]
         },
-        "subsets" : [ "http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas", "http://purl.obolibrary.org/obo/uberon/core#upper_level" ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/uberon/core#upper_level" ],
         "xrefs" : [ {
           "val" : "FMA:82485"
         } ]
@@ -212719,6 +212719,34 @@
         } ]
       }
     }, {
+      "id" : "http://purl.obolibrary.org/obo/UBERON_1200342",
+      "lbl" : "bone marrow of skull",
+      "type" : "CLASS",
+      "meta" : {
+        "definition" : {
+          "val" : "A bone marrow that is located within the bones of the skull. In mammals, skull bone marrow is haematopoietically active and communicates directly with the dura mater through osseous skull channels, which permit the exchange of cerebrospinal fluid, central nervous system-derived antigens and immune cells; it acts as a local reservoir of myeloid cells and B cells for the meninges and the central nervous system.",
+          "xrefs" : [ "PMID:30150661", "PMID:34083447", "PMID:35301477", "PMID:37996526", "PMID:42618784" ]
+        },
+        "comments" : [ "Distinguished from other bone marrow sites (for example sternal, femoral, tibial or vertebral marrow) by its direct osseous connection to the dura mater. Reported to contain lymphoid structures with germinal-centre-like features that respond to central nervous system-derived antigens (PMID:42618784)." ],
+        "synonyms" : [ {
+          "pred" : "hasExactSynonym",
+          "val" : "skull bone marrow"
+        }, {
+          "pred" : "hasRelatedSynonym",
+          "val" : "cranial bone marrow"
+        } ],
+        "xrefs" : [ {
+          "val" : "SCTID:712962003"
+        } ],
+        "basicPropertyValues" : [ {
+          "pred" : "http://purl.org/dc/terms/contributor",
+          "val" : "https://orcid.org/0000-0002-6601-2165"
+        }, {
+          "pred" : "http://purl.org/dc/terms/date",
+          "val" : "2026-08-20T04:59:35Z"
+        } ]
+      }
+    }, {
       "id" : "http://purl.obolibrary.org/obo/UBERON_2001053",
       "lbl" : "future internal carotid artery",
       "type" : "CLASS",
@@ -213113,6 +213141,7 @@
           "xrefs" : [ "BTO:0002780", "CLAO:0001295" ]
         },
         "comments" : [ "It is quite common to refer to visceral muscles as smooth muscles, by analogy with vertebrates; however, most visceral muscles in arthropods are actually striated." ],
+        "subsets" : [ "http://purl.obolibrary.org/obo/uberon/core#added_by_HRA" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "visceral muscle",
@@ -213140,6 +213169,7 @@
           "val" : "A striated muscle tissue that is associated with soft internal organs (viscera).",
           "xrefs" : [ "PMID:8720463", "https://pressbooks.pub/rbtallitsch/chapter/chapter-6-muscle-tissue/" ]
         },
+        "subsets" : [ "http://purl.obolibrary.org/obo/uberon/core#added_by_HRA" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "striated visceral muscle tissue"
@@ -213161,6 +213191,7 @@
           "val" : "A venule that is part of a lung and drains oxygenated blood from pulmonary capillaries. A pulmonary venule merges into a pulmonary vein branch that runs in the pulmonary interlobular septa.",
           "xrefs" : [ "PMID:22283705", "PMID:30247823" ]
         },
+        "subsets" : [ "http://purl.obolibrary.org/obo/uberon/core#added_by_HRA" ],
         "basicPropertyValues" : [ {
           "pred" : "http://purl.org/dc/terms/contributor",
           "val" : "https://orcid.org/0000-0001-6677-8489"
@@ -213178,6 +213209,7 @@
           "val" : "A parasympathetic ganglion that is located within the airway walls of the lower respiratory tract. This ganglion is responsible for controlling the constriction of the airway by stimulating smooth muscle contraction in the lower respiratory tract to regulate airflow.",
           "xrefs" : [ "ILX:0793573", "PMID:35965034", "doi:10.1016/B978-008045046-9.00635-5" ]
         },
+        "subsets" : [ "http://purl.obolibrary.org/obo/uberon/core#added_by_HRA" ],
         "synonyms" : [ {
           "pred" : "hasExactSynonym",
           "val" : "lower airway parasympathetic ganglion",
@@ -216326,6 +216358,10 @@
       }
     }, {
       "id" : "http://purl.obolibrary.org/obo/ro/subsets#ro-eco",
+      "type" : "PROPERTY",
+      "propertyType" : "ANNOTATION"
+    }, {
+      "id" : "http://purl.obolibrary.org/obo/uberon/core#added_by_HRA",
       "type" : "PROPERTY",
       "propertyType" : "ANNOTATION"
     }, {
@@ -289153,6 +289189,14 @@
       "pred" : "http://purl.obolibrary.org/obo/RO_0002176",
       "obj" : "http://purl.obolibrary.org/obo/UBERON_0004921"
     }, {
+      "sub" : "http://purl.obolibrary.org/obo/UBERON_1200342",
+      "pred" : "is_a",
+      "obj" : "http://purl.obolibrary.org/obo/UBERON_0002371"
+    }, {
+      "sub" : "http://purl.obolibrary.org/obo/UBERON_1200342",
+      "pred" : "http://purl.obolibrary.org/obo/BFO_0000050",
+      "obj" : "http://purl.obolibrary.org/obo/UBERON_0003129"
+    }, {
       "sub" : "http://purl.obolibrary.org/obo/UBERON_2001053",
       "pred" : "is_a",
       "obj" : "http://purl.obolibrary.org/obo/UBERON_0004573"
@@ -323501,6 +323545,13 @@
       "restrictions" : [ {
         "propertyId" : "http://purl.obolibrary.org/obo/RO_0002176",
         "fillerId" : "http://purl.obolibrary.org/obo/UBERON_0004921"
+      } ]
+    }, {
+      "definedClassId" : "http://purl.obolibrary.org/obo/UBERON_1200342",
+      "genusIds" : [ "http://purl.obolibrary.org/obo/UBERON_0002371" ],
+      "restrictions" : [ {
+        "propertyId" : "http://purl.obolibrary.org/obo/BFO_0000050",
+        "fillerId" : "http://purl.obolibrary.org/obo/UBERON_0003129"
       } ]
     }, {
       "definedClassId" : "http://purl.obolibrary.org/obo/UBERON_2001457",

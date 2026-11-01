@@ -21,14 +21,14 @@
      xmlns:subsets="http://purl.obolibrary.org/obo/ro/subsets#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/pato.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2026-10-01/pato.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/pato/releases/2026-11-01/pato.owl"/>
         <obo:IAO_0000700 rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
         <dc:description>An ontology of characteristics (properties, attributes, or modifiers). These are intended to be used in combination with terms from other ontologies to construct characteristic-entity combinations that describe traits or phenotypes of organisms, chemicals, environments, and other entities.</dc:description>
         <dc:title>PATO - the Phenotype And Trait Ontology</dc:title>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
         <oboInOwl:default-namespace>quality</oboInOwl:default-namespace>
         <oboInOwl:hasOBOFormatVersion>1.2</oboInOwl:hasOBOFormatVersion>
-        <owl:versionInfo>2026-10-01</owl:versionInfo>
+        <owl:versionInfo>2026-11-01</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -459,6 +459,14 @@
     <!-- http://purl.obolibrary.org/obo/ro/subsets#ro-eco -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/ro/subsets#ro-eco">
+        <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/uberon/core#added_by_HRA -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/uberon/core#added_by_HRA">
         <rdfs:subPropertyOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#SubsetProperty"/>
     </owl:AnnotationProperty>
     
@@ -309311,7 +309319,6 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <obo:IAO_0000115>A part of a wall of an organ that forms a layer.</obo:IAO_0000115>
         <oboInOwl:hasDbXref>FMA:82485</oboInOwl:hasDbXref>
         <oboInOwl:id>UBERON:0004923</oboInOwl:id>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas"/>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#upper_level"/>
         <rdfs:label>organ component layer</rdfs:label>
     </owl:Class>
@@ -344106,6 +344113,50 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
     
 
 
+    <!-- http://purl.obolibrary.org/obo/UBERON_1200342 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_1200342">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UBERON_0002371"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0003129"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002371"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0003129"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A bone marrow that is located within the bones of the skull. In mammals, skull bone marrow is haematopoietically active and communicates directly with the dura mater through osseous skull channels, which permit the exchange of cerebrospinal fluid, central nervous system-derived antigens and immune cells; it acts as a local reservoir of myeloid cells and B cells for the meninges and the central nervous system.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-6601-2165"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-08-20T04:59:35Z</terms:date>
+        <oboInOwl:hasDbXref>SCTID:712962003</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>skull bone marrow</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>cranial bone marrow</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id>UBERON:1200342</oboInOwl:id>
+        <rdfs:comment>Distinguished from other bone marrow sites (for example sternal, femoral, tibial or vertebral marrow) by its direct osseous connection to the dura mater. Reported to contain lymphoid structures with germinal-centre-like features that respond to central nervous system-derived antigens (PMID:42618784).</rdfs:comment>
+        <rdfs:label>bone marrow of skull</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/UBERON_1200342"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A bone marrow that is located within the bones of the skull. In mammals, skull bone marrow is haematopoietically active and communicates directly with the dura mater through osseous skull channels, which permit the exchange of cerebrospinal fluid, central nervous system-derived antigens and immune cells; it acts as a local reservoir of myeloid cells and B cells for the meninges and the central nervous system.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:30150661</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:34083447</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:35301477</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:37996526</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:42618784</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/UBERON_2001053 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_2001053">
@@ -344992,6 +345043,7 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-02-16T10:17:46Z</terms:date>
         <oboInOwl:hasExactSynonym>visceral muscle</oboInOwl:hasExactSynonym>
         <oboInOwl:id>UBERON:8600004</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#added_by_HRA"/>
         <rdfs:comment>It is quite common to refer to visceral muscles as smooth muscles, by analogy with vertebrates; however, most visceral muscles in arthropods are actually striated.</rdfs:comment>
         <rdfs:label>visceral muscle tissue</rdfs:label>
     </owl:Class>
@@ -345029,6 +345081,7 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-02-16T10:34:43Z</terms:date>
         <oboInOwl:hasExactSynonym>striated visceral muscle tissue</oboInOwl:hasExactSynonym>
         <oboInOwl:id>UBERON:8600006</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#added_by_HRA"/>
         <rdfs:label>visceral striated muscle tissue</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -345079,6 +345132,7 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <terms:contributor rdf:resource="https://orcid.org/0000-0001-6677-8489"/>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-24T11:26:27Z</terms:date>
         <oboInOwl:id>UBERON:8600024</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#added_by_HRA"/>
         <rdfs:label>pulmonary venule</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -345118,6 +345172,7 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
         <oboInOwl:hasDbXref>ILX:0793573</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>lower airway parasympathetic ganglion</oboInOwl:hasExactSynonym>
         <oboInOwl:id>UBERON:8600123</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/uberon/core#added_by_HRA"/>
         <rdfs:label>lower airway ganglion</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -345361,14 +345416,14 @@ Classes for population already  exist in IDO (&apos;organism population&apos;, I
                         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_7742"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
-                <rdfs:subClassOf rdf:nodeID="genid43049"/>
+                <rdfs:subClassOf rdf:nodeID="genid43055"/>
             </owl:Class>
         </owl:annotatedSource>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
-        <owl:annotatedTarget rdf:nodeID="genid43049"/>
+        <owl:annotatedTarget rdf:nodeID="genid43055"/>
         <oboInOwl:hasDbXref rdf:resource="https://github.com/obophenotype/cell-ontology/issues/757"/>
     </owl:Axiom>
-    <owl:Restriction rdf:nodeID="genid43049">
+    <owl:Restriction rdf:nodeID="genid43055">
         <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002202"/>
         <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CL_0000031"/>
     </owl:Restriction>

@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pato/releases/2026-10-01/pato-full.owl
+data-version: pato/releases/2026-11-01/pato-full.owl
 subsetdef: 1:STAR ""
 subsetdef: 2:STAR ""
 subsetdef: 3:STAR ""
@@ -75,7 +75,7 @@ ontology: pato/pato-full
 property_value: dc:description "An ontology of characteristics (properties, attributes, or modifiers). These are intended to be used in combination with terms from other ontologies to construct characteristic-entity combinations that describe traits or phenotypes of organisms, chemicals, environments, and other entities." xsd:string
 property_value: dc:title "PATO - the Phenotype And Trait Ontology" xsd:string
 property_value: IAO:0000700 PATO:0000001
-property_value: owl:versionInfo "2026-10-01" xsd:string
+property_value: owl:versionInfo "2026-11-01" xsd:string
 property_value: terms:license https://creativecommons.org/licenses/by/3.0/
 
 [Term]
@@ -101145,7 +101145,6 @@ relationship: subdivision_of UBERON:0001555 ! digestive tract
 id: UBERON:0004923
 name: organ component layer
 def: "A part of a wall of an organ that forms a layer." [http://orcid.org/0000-0002-6601-2165]
-subset: human_reference_atlas
 subset: upper_level
 xref: FMA:82485
 is_a: UBERON:0000064 ! organ part
@@ -111955,6 +111954,21 @@ property_value: terms:contributor https://orcid.org/0000-0002-7073-9172
 creation_date: 2021-02-05T11:19:31Z
 
 [Term]
+id: UBERON:1200342
+name: bone marrow of skull
+def: "A bone marrow that is located within the bones of the skull. In mammals, skull bone marrow is haematopoietically active and communicates directly with the dura mater through osseous skull channels, which permit the exchange of cerebrospinal fluid, central nervous system-derived antigens and immune cells; it acts as a local reservoir of myeloid cells and B cells for the meninges and the central nervous system." [PMID:30150661, PMID:34083447, PMID:35301477, PMID:37996526, PMID:42618784]
+comment: Distinguished from other bone marrow sites (for example sternal, femoral, tibial or vertebral marrow) by its direct osseous connection to the dura mater. Reported to contain lymphoid structures with germinal-centre-like features that respond to central nervous system-derived antigens (PMID:42618784).
+synonym: "cranial bone marrow" RELATED []
+synonym: "skull bone marrow" EXACT []
+xref: SCTID:712962003
+is_a: UBERON:0002371 ! bone marrow
+intersection_of: UBERON:0002371 ! bone marrow
+intersection_of: part_of UBERON:0003129 ! skull
+relationship: part_of UBERON:0003129 ! skull
+property_value: terms:contributor https://orcid.org/0000-0002-6601-2165
+property_value: terms:date "2026-08-20T04:59:35Z" xsd:dateTime
+
+[Term]
 id: UBERON:2001053
 name: future internal carotid artery
 synonym: "PICA" EXACT [TAO:0001053]
@@ -112227,6 +112241,7 @@ id: UBERON:8600004
 name: visceral muscle tissue
 def: "A muscle tissue that is associated with soft internal organs (viscera)." [BTO:0002780, CLAO:0001295]
 comment: It is quite common to refer to visceral muscles as smooth muscles, by analogy with vertebrates; however, most visceral muscles in arthropods are actually striated. {xref="https://en.wikipedia.org/wiki/Smooth_muscle", xref="FBbt:00005070", comment="PMID:8720463"}
+subset: added_by_HRA
 synonym: "visceral muscle" EXACT [] {comment="BTO:0002780"}
 is_a: UBERON:0002385 ! muscle tissue
 relationship: RO:0002473 CL:0008007 ! composed primarily of visceral muscle cell
@@ -112237,6 +112252,7 @@ property_value: terms:date "2023-02-16T10:17:46Z" xsd:dateTime
 id: UBERON:8600006
 name: visceral striated muscle tissue
 def: "A striated muscle tissue that is associated with soft internal organs (viscera)." [https://pressbooks.pub/rbtallitsch/chapter/chapter-6-muscle-tissue/, PMID:8720463]
+subset: added_by_HRA
 synonym: "striated visceral muscle tissue" EXACT []
 is_a: UBERON:0002036 ! striated muscle tissue
 is_a: UBERON:8600004 ! visceral muscle tissue
@@ -112247,6 +112263,7 @@ property_value: terms:date "2023-02-16T10:34:43Z" xsd:dateTime
 id: UBERON:8600024
 name: pulmonary venule
 def: "A venule that is part of a lung and drains oxygenated blood from pulmonary capillaries. A pulmonary venule merges into a pulmonary vein branch that runs in the pulmonary interlobular septa." [PMID:22283705, PMID:30247823]
+subset: added_by_HRA
 is_a: UBERON:0003494 ! respiratory system venule
 is_a: UBERON:0003512 ! lung blood vessel
 intersection_of: UBERON:0001979 ! venule
@@ -112261,6 +112278,7 @@ property_value: terms:date "2023-10-24T11:26:27Z" xsd:dateTime
 id: UBERON:8600123
 name: lower airway ganglion
 def: "A parasympathetic ganglion that is located within the airway walls of the lower respiratory tract. This ganglion is responsible for controlling the constriction of the airway by stimulating smooth muscle contraction in the lower respiratory tract to regulate airflow." [doi:10.1016/B978-008045046-9.00635-5, ILX:0793573, PMID:35965034]
+subset: added_by_HRA
 synonym: "lower airway parasympathetic ganglion" EXACT [ILX:0793573]
 xref: ILX:0793573
 is_a: UBERON:0001808 ! parasympathetic ganglion
