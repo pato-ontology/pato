@@ -7,8 +7,8 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo/pato/imports/merged_import.owl>
-<http://purl.obolibrary.org/obo/pato/releases/2026-10-01/imports/merged_import.owl>
-Annotation(owl:versionInfo "2026-10-01")
+<http://purl.obolibrary.org/obo/pato/releases/2026-11-01/imports/merged_import.owl>
+Annotation(owl:versionInfo "2026-11-01")
 
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
 Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000003>))
@@ -5902,6 +5902,7 @@ Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0039856>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_0039857>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_1000021>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_1100000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_1200342>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_2001053>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_2001457>))
 Declaration(Class(<http://purl.obolibrary.org/obo/UBERON_2005260>))
@@ -6207,6 +6208,7 @@ Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_prokary
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_synapse>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/go#goslim_yeast>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/ro/subsets#ro-eco>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/uberon/core#added_by_HRA>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/uberon/core#common_anatomy>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/uberon/core#cumbo>))
 Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/uberon/core#developmental_classification>))
@@ -6406,6 +6408,10 @@ SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/go#goslim_yeast> <http:/
 # Annotation Property: <http://purl.obolibrary.org/obo/ro/subsets#ro-eco> (<http://purl.obolibrary.org/obo/ro/subsets#ro-eco>)
 
 SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/ro/subsets#ro-eco> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
+
+# Annotation Property: <http://purl.obolibrary.org/obo/uberon/core#added_by_HRA> (<http://purl.obolibrary.org/obo/uberon/core#added_by_HRA>)
+
+SubAnnotationPropertyOf(<http://purl.obolibrary.org/obo/uberon/core#added_by_HRA> <http://www.geneontology.org/formats/oboInOwl#SubsetProperty>)
 
 # Annotation Property: <http://purl.obolibrary.org/obo/uberon/core#common_anatomy> (<http://purl.obolibrary.org/obo/uberon/core#common_anatomy>)
 
@@ -88072,7 +88078,6 @@ SubClassOf(<http://purl.obolibrary.org/obo/UBERON_0004921> ObjectSomeValuesFrom(
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://orcid.org/0000-0002-6601-2165") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/UBERON_0004923> "A part of a wall of an organ that forms a layer.")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/UBERON_0004923> "FMA:82485")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/UBERON_0004923> "UBERON:0004923")
-AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/UBERON_0004923> <http://purl.obolibrary.org/obo/uberon/core#human_reference_atlas>)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/UBERON_0004923> <http://purl.obolibrary.org/obo/uberon/core#upper_level>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UBERON_0004923> "organ component layer")
 SubClassOf(<http://purl.obolibrary.org/obo/UBERON_0004923> <http://purl.obolibrary.org/obo/UBERON_0000064>)
@@ -98935,6 +98940,21 @@ EquivalentClasses(<http://purl.obolibrary.org/obo/UBERON_1100000> ObjectIntersec
 SubClassOf(<http://purl.obolibrary.org/obo/UBERON_1100000> <http://purl.obolibrary.org/obo/UBERON_0007651>)
 SubClassOf(<http://purl.obolibrary.org/obo/UBERON_1100000> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002176> <http://purl.obolibrary.org/obo/UBERON_0004921>))
 
+# Class: <http://purl.obolibrary.org/obo/UBERON_1200342> (bone marrow of skull)
+
+AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:30150661") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:34083447") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:35301477") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:37996526") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "PMID:42618784") <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/UBERON_1200342> "A bone marrow that is located within the bones of the skull. In mammals, skull bone marrow is haematopoietically active and communicates directly with the dura mater through osseous skull channels, which permit the exchange of cerebrospinal fluid, central nervous system-derived antigens and immune cells; it acts as a local reservoir of myeloid cells and B cells for the meninges and the central nervous system.")
+AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/UBERON_1200342> <https://orcid.org/0000-0002-6601-2165>)
+AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/obo/UBERON_1200342> "2026-08-20T04:59:35Z"^^xsd:dateTime)
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/UBERON_1200342> "SCTID:712962003")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UBERON_1200342> "skull bone marrow")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> <http://purl.obolibrary.org/obo/UBERON_1200342> "cranial bone marrow")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/UBERON_1200342> "UBERON:1200342")
+AnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/UBERON_1200342> "Distinguished from other bone marrow sites (for example sternal, femoral, tibial or vertebral marrow) by its direct osseous connection to the dura mater. Reported to contain lymphoid structures with germinal-centre-like features that respond to central nervous system-derived antigens (PMID:42618784).")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UBERON_1200342> "bone marrow of skull")
+EquivalentClasses(<http://purl.obolibrary.org/obo/UBERON_1200342> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/UBERON_0002371> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0003129>)))
+SubClassOf(<http://purl.obolibrary.org/obo/UBERON_1200342> <http://purl.obolibrary.org/obo/UBERON_0002371>)
+SubClassOf(<http://purl.obolibrary.org/obo/UBERON_1200342> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0003129>))
+
 # Class: <http://purl.obolibrary.org/obo/UBERON_2001053> (future internal carotid artery)
 
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/UBERON_2001053> "EFO:0003612")
@@ -99216,6 +99236,7 @@ AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibra
 AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/obo/UBERON_8600004> "2023-02-16T10:17:46Z"^^xsd:dateTime)
 AnnotationAssertion(Annotation(rdfs:comment "BTO:0002780") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UBERON_8600004> "visceral muscle")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/UBERON_8600004> "UBERON:8600004")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/UBERON_8600004> <http://purl.obolibrary.org/obo/uberon/core#added_by_HRA>)
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "FBbt:00005070") Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Smooth_muscle") Annotation(rdfs:comment "PMID:8720463") rdfs:comment <http://purl.obolibrary.org/obo/UBERON_8600004> "It is quite common to refer to visceral muscles as smooth muscles, by analogy with vertebrates; however, most visceral muscles in arthropods are actually striated.")
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UBERON_8600004> "visceral muscle tissue")
 SubClassOf(<http://purl.obolibrary.org/obo/UBERON_8600004> <http://purl.obolibrary.org/obo/UBERON_0002385>)
@@ -99228,6 +99249,7 @@ AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibra
 AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/obo/UBERON_8600006> "2023-02-16T10:34:43Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UBERON_8600006> "striated visceral muscle tissue")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/UBERON_8600006> "UBERON:8600006")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/UBERON_8600006> <http://purl.obolibrary.org/obo/uberon/core#added_by_HRA>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UBERON_8600006> "visceral striated muscle tissue")
 SubClassOf(<http://purl.obolibrary.org/obo/UBERON_8600006> <http://purl.obolibrary.org/obo/UBERON_0002036>)
 SubClassOf(<http://purl.obolibrary.org/obo/UBERON_8600006> <http://purl.obolibrary.org/obo/UBERON_8600004>)
@@ -99238,6 +99260,7 @@ AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#has
 AnnotationAssertion(<http://purl.org/dc/terms/contributor> <http://purl.obolibrary.org/obo/UBERON_8600024> <https://orcid.org/0000-0001-6677-8489>)
 AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/obo/UBERON_8600024> "2023-10-24T11:26:27Z"^^xsd:dateTime)
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/UBERON_8600024> "UBERON:8600024")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/UBERON_8600024> <http://purl.obolibrary.org/obo/uberon/core#added_by_HRA>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UBERON_8600024> "pulmonary venule")
 EquivalentClasses(<http://purl.obolibrary.org/obo/UBERON_8600024> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/UBERON_0001979> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0002048>)))
 SubClassOf(<http://purl.obolibrary.org/obo/UBERON_8600024> <http://purl.obolibrary.org/obo/UBERON_0003494>)
@@ -99254,6 +99277,7 @@ AnnotationAssertion(<http://purl.org/dc/terms/date> <http://purl.obolibrary.org/
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/UBERON_8600123> "ILX:0793573")
 AnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ILX:0793573") <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> <http://purl.obolibrary.org/obo/UBERON_8600123> "lower airway parasympathetic ganglion")
 AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/UBERON_8600123> "UBERON:8600123")
+AnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/UBERON_8600123> <http://purl.obolibrary.org/obo/uberon/core#added_by_HRA>)
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/UBERON_8600123> "lower airway ganglion")
 EquivalentClasses(<http://purl.obolibrary.org/obo/UBERON_8600123> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/UBERON_0001808> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/UBERON_0001558>)))
 SubClassOf(<http://purl.obolibrary.org/obo/UBERON_8600123> <http://purl.obolibrary.org/obo/UBERON_0001808>)
