@@ -82,6 +82,10 @@ jobs:
           path: src/ontology/classification-diff.md
   post_comment:
     needs: [diff_classification, edit_file]
+    # A pull request from a fork runs with a read-only token, so the comment cannot be posted
+    # ("Resource not accessible by integration") and the job failed on every such pull request.
+    # The diffs are still built and uploaded as artifacts by the jobs above.
+    if: github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
